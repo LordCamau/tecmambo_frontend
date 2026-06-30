@@ -5,6 +5,7 @@ import { getAfricanArticles, getArticlesForRegion } from "@/lib/content";
 import { africaLeadRegionSlugs, africanRegions, getRegion, regionPath, relatedRegionTopics } from "@/lib/regions";
 import { siteUrl } from "@/lib/formats";
 import { breadcrumbJsonLd, collectionPageJsonLd } from "@/lib/seo";
+import { sitePreviewImage } from "@/lib/site-metadata";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { StoryCard } from "@/components/cards/StoryCard";
 import styles from "../africa.module.css";
@@ -40,7 +41,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       title: `${region.name} tech news, tecMAMBO`,
       description: region.description,
       type: "website",
-      url: regionPath(region)
+      url: regionPath(region),
+      images: [sitePreviewImage]
     }
   };
 }

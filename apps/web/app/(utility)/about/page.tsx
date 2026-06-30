@@ -5,6 +5,7 @@ import { FormatBadge } from "@/components/signature/FormatBadge";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getArticles, getAuthors, getGlossaryTerms } from "@/lib/content";
 import { aboutPageJsonLd, organizationJsonLd, personJsonLd } from "@/lib/seo";
+import { sitePreviewImage } from "@/lib/site-metadata";
 import type { Format } from "@/lib/types";
 import styles from "./about.module.css";
 
@@ -23,13 +24,14 @@ export const metadata: Metadata = {
     description:
       "We're the tech publication for everyone the other tech sites forgot to write for, without boring the people who already love this stuff.",
     url: "/about",
-    images: [{ url: "/brand/tecMAMBO-favicon.jpg", alt: "tecMAMBO" }]
+    images: [sitePreviewImage]
   },
   twitter: {
     card: "summary_large_image",
     title: "About tecMAMBO - Made to be understood",
     description:
-      "We're the tech publication for everyone the other tech sites forgot to write for, without boring the people who already love this stuff."
+      "We're the tech publication for everyone the other tech sites forgot to write for, without boring the people who already love this stuff.",
+    images: [sitePreviewImage.url]
   }
 };
 

@@ -4,6 +4,7 @@ import { ArrowDown, Download, ShieldCheck } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { advertiseSettings, populatedAudienceStats } from "@/lib/advertise";
 import { absoluteUrl, breadcrumbJsonLd, faqJsonLd, organizationJsonLd } from "@/lib/seo";
+import { sitePreviewImage } from "@/lib/site-metadata";
 import { AdvertiseLeadForm, MediaKitGate } from "./AdvertiseForms";
 import styles from "./page.module.css";
 
@@ -17,7 +18,8 @@ export const metadata: Metadata = {
     description:
       "Reach people who are actively trying to understand technology and make better buying decisions with trusted tecMAMBO partnerships.",
     url: "/advertise",
-    type: "website"
+    type: "website",
+    images: [sitePreviewImage]
   }
 };
 

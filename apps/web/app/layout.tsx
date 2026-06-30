@@ -9,6 +9,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { consentModeDenied } from "@/lib/cookie-consent";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
+import { siteDescription, sitePreviewImage, siteTitle } from "@/lib/site-metadata";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -34,10 +35,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.SITE_URL ?? "https://tecmambo.com"),
   title: {
-    default: "tecMAMBO - Made to be understood.",
+    default: siteTitle,
     template: "%s | tecMAMBO"
   },
-  description: "Plain-English technology journalism with depth when you want it.",
+  description: siteDescription,
   icons: {
     icon: [
       {
@@ -56,11 +57,18 @@ export const metadata: Metadata = {
     canonical: "/"
   },
   openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    url: "/",
     siteName: "tecMAMBO",
-    type: "website"
+    type: "website",
+    images: [sitePreviewImage]
   },
   twitter: {
-    card: "summary_large_image"
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: [sitePreviewImage.url]
   }
 };
 
