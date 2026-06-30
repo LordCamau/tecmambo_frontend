@@ -124,7 +124,7 @@
 .submitButton:hover,
 .mediaKitButton:hover,
 .downloadReady:hover {
-  background: var(--orange-deep);
+  background: var(--button-accent-hover-bg);
   color: var(--button-accent-fg);
 }
 
@@ -420,7 +420,7 @@
 
 .form input[aria-invalid="true"],
 .mediaKitForm input[aria-invalid="true"] {
-  border-color: var(--orange);
+  border-color: var(--purple);
 }
 
 .chipGroup {
@@ -495,7 +495,7 @@
 
 .errorText,
 .errorState {
-  color: var(--orange-deep);
+  color: var(--purple-dark);
 }
 
 .successState {

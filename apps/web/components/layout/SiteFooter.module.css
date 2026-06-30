@@ -11,7 +11,7 @@
 .accent {
   height: 3px;
   background-color: var(--gradient-fallback);
-  background-image: var(--gradient-deep);
+  background-image: var(--gradient-brand);
 }
 
 .inner {
@@ -217,7 +217,7 @@
 .footer a:focus-visible,
 .footer button:focus-visible,
 .footer input:focus-visible {
-  outline: 3px solid var(--brand-orange);
+  outline: 3px solid var(--footer-accent);
   outline-offset: 3px;
 }
 

@@ -106,7 +106,7 @@
 }
 
 .closingLine {
-  border-left: 4px solid var(--orange);
+  border-left: 4px solid var(--purple);
   padding-left: 16px;
   color: var(--text-secondary);
   font-family: var(--font-display), system-ui, sans-serif;
@@ -137,9 +137,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  border: 1px solid color-mix(in srgb, var(--orange) 50%, var(--line));
+  border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  background: color-mix(in srgb, var(--orange) 14%, var(--surface));
+  background: color-mix(in srgb, var(--accent) 16%, var(--surface));
   padding: 18px;
 }
 

@@ -20,7 +20,7 @@ export default function Image() {
           display: "flex",
           alignItems: "stretch",
           backgroundColor: brandGradients.fallback,
-          backgroundImage: brandGradients.aurora,
+          backgroundImage: brandGradients.brand,
           color: "#FFFFFF",
           fontFamily: "Arial, Helvetica, sans-serif"
         }}
@@ -50,7 +50,7 @@ export default function Image() {
                 width: 84,
                 height: 6,
                 borderRadius: 999,
-                background: "#FF8A00"
+                background: "#FF6FAE"
               }}
             />
             <h1

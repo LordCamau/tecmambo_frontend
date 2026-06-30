@@ -23,25 +23,36 @@ describe("text-on-colour contrast tokens", () => {
         expect.objectContaining({ name: "badge real life", theme: "dark", fg: contrastColors.white, bg: contrastColors.brandPurpleDark }),
         expect.objectContaining({ name: "badge news", theme: "light", fg: contrastColors.white, bg: contrastColors.brandInk }),
         expect.objectContaining({ name: "badge news", theme: "dark", fg: contrastColors.white, bg: contrastColors.brandInk }),
-        expect.objectContaining({ name: "badge wallet", theme: "light", fg: contrastColors.onOrange, bg: contrastColors.brandOrange }),
-        expect.objectContaining({ name: "badge wallet", theme: "dark", fg: contrastColors.onOrange, bg: contrastColors.brandOrange })
+        expect.objectContaining({ name: "badge wallet", theme: "light", fg: contrastColors.onAccent, bg: contrastColors.accentPink }),
+        expect.objectContaining({ name: "badge wallet", theme: "dark", fg: contrastColors.onAccent, bg: contrastColors.accentPink })
       ])
     );
   });
 
-  it("never registers white text on orange surfaces", () => {
-    const whiteOnOrange = contrastPairs.filter(
-      (pair) => pair.bg.toLowerCase() === contrastColors.brandOrange.toLowerCase() && pair.fg.toLowerCase() === contrastColors.white.toLowerCase()
+  it("never registers white text on pink accent surfaces", () => {
+    const whiteOnPink = contrastPairs.filter(
+      (pair) => pair.bg.toLowerCase() === contrastColors.accentPink.toLowerCase() && pair.fg.toLowerCase() === contrastColors.white.toLowerCase()
     );
 
-    expect(whiteOnOrange).toEqual([]);
+    expect(whiteOnPink).toEqual([]);
+  });
+
+  it("registers pink as dark-ink fills in both themes", () => {
+    expect(contrastPairs).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ name: "price pill", theme: "light", fg: contrastColors.onAccent, bg: contrastColors.accentPink }),
+        expect.objectContaining({ name: "price pill", theme: "dark", fg: contrastColors.onAccent, bg: contrastColors.accentPink }),
+        expect.objectContaining({ name: "accent button", theme: "light", fg: contrastColors.onAccent, bg: contrastColors.accentPink }),
+        expect.objectContaining({ name: "accent button", theme: "dark", fg: contrastColors.onAccent, bg: contrastColors.accentPink })
+      ])
+    );
   });
 
   it("covers approved gradient text surfaces at their lightest tested point", () => {
     expect(contrastPairs).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ name: "newsletter gradient lightest stop", theme: "light", fg: contrastColors.white, bg: contrastColors.spark }),
-        expect.objectContaining({ name: "newsletter gradient lightest stop", theme: "dark", fg: contrastColors.white, bg: contrastColors.spark }),
+        expect.objectContaining({ name: "newsletter aurora scrim worst stop", theme: "light", fg: contrastColors.white, bg: contrastColors.ogScrimOverAuroraCyan }),
+        expect.objectContaining({ name: "newsletter aurora scrim worst stop", theme: "dark", fg: contrastColors.white, bg: contrastColors.ogScrimOverAuroraCyan }),
         expect.objectContaining({ name: "og aurora scrim worst stop", theme: "light", fg: contrastColors.white, bg: contrastColors.ogScrimOverAuroraCyan }),
         expect.objectContaining({ name: "og aurora scrim worst stop", theme: "dark", fg: contrastColors.white, bg: contrastColors.ogScrimOverAuroraCyan })
       ])
