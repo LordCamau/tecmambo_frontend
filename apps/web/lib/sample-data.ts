@@ -9,7 +9,7 @@ export const authors: Author[] = [
     slug: "tim-humphreys",
     role: "tecMAMBO writer",
     bio: "Tim writes plain-English technology stories that connect specs, prices, products, and policy to everyday decisions.",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop",
+    avatar: "/authors/tim-humphreys.png",
     expertise: ["Phones", "Power & batteries", "Connectivity", "Reviews"]
   },
   {
@@ -17,7 +17,7 @@ export const authors: Author[] = [
     slug: "lulu-kiritu",
     role: "Senior Writer and Editor",
     bio: "Lulu Kiritu is a Senior Writer and Editor at tecMAMBO, covering artificial intelligence. She is happiest turning a dense research paper into something you can actually use over lunch, and she writes about how AI shows up in real life, not just on stage at a launch. Based in Nairobi.",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop",
+    avatar: "/authors/lulu-kiritu.jpg",
     expertise: ["Artificial intelligence"]
   }
 ];

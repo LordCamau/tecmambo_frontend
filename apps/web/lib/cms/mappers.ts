@@ -150,7 +150,7 @@ function wpAuthorToAuthor(author?: WpAuthor | null): Author {
     slug: author?.slug ?? "tim-humphreys",
     role: author?.authorFields?.role ?? "tecMAMBO writer",
     bio: text(author?.description, "Plain-English technology writing for tecMAMBO."),
-    avatar: author?.avatar?.url ?? "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop",
+    avatar: author?.avatar?.url ?? "/authors/tim-humphreys.png",
     expertise: author?.authorFields?.expertise?.map((item) => item.item).filter((item): item is string => Boolean(item)) ?? []
   };
 }
