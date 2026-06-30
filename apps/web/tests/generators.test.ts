@@ -64,7 +64,8 @@ describe("content generators", () => {
     expect(story?.tags.map((tag) => tag.slug)).toEqual(expect.arrayContaining(["apps", "whatsapp", "meta"]));
     expect(story?.faq).toHaveLength(5);
     expect(story?.sources?.[0]?.url).toBe("https://blog.whatsapp.com/its-time-to-reserve-your-whatsapp-username");
-    expect(story?.image.alt).toBe("A person using WhatsApp on a smartphone.");
+    expect(story?.image.src).toBe("/articles/whatsapp-usernames-reserve-now.jpg");
+    expect(story?.image.alt).toBe("Two people holding a large WhatsApp logo.");
 
     const markdown = articleToMarkdown(story!);
     expect(markdown).toContain("## Sources");

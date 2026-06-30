@@ -103,9 +103,9 @@ const appNewsArticles: Article[] = [
     updatedAt: new Date(Date.UTC(2026, 5, 30, 7, 0, 0)).toISOString(),
     readTime: "5 min read",
     image: {
-      src: "https://images.unsplash.com/photo-1602177281687-c8900253495b?q=80&w=1800&auto=format&fit=crop",
-      alt: "A person using WhatsApp on a smartphone.",
-      credit: "Chad Madden / Unsplash"
+      src: "/articles/whatsapp-usernames-reserve-now.jpg",
+      alt: "Two people holding a large WhatsApp logo.",
+      credit: "tecMAMBO image library"
     },
     tags: [appsTopic, whatsappBrand, metaBrand],
     faq: [
