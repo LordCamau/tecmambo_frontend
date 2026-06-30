@@ -89,6 +89,7 @@ export type Article = {
   tags: Tag[];
   regions?: RegionTerm[];
   faq?: Array<{ question: string; answer: string }>;
+  sources?: Array<{ label: string; url: string }>;
   itemList?: string[];
   sponsored?: boolean;
   deal?: Deal;

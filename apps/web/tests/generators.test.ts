@@ -56,6 +56,26 @@ describe("content generators", () => {
     expect(() => assertArticlesArePublishable(articles)).not.toThrow();
   });
 
+  it("publishes the WhatsApp usernames story across news, apps, brands, markdown, RSS, and llms.txt", () => {
+    const story = articles.find((article) => article.slug === "whatsapp-usernames-reserve-now");
+    expect(story).toBeTruthy();
+    expect(story?.author.slug).toBe("tim-humphreys");
+    expect(story?.format).toBe("news");
+    expect(story?.tags.map((tag) => tag.slug)).toEqual(expect.arrayContaining(["apps", "whatsapp", "meta"]));
+    expect(story?.faq).toHaveLength(5);
+    expect(story?.sources?.[0]?.url).toBe("https://blog.whatsapp.com/its-time-to-reserve-your-whatsapp-username");
+    expect(story?.image.alt).toBe("A person using WhatsApp on a smartphone.");
+
+    const markdown = articleToMarkdown(story!);
+    expect(markdown).toContain("## Sources");
+    expect(markdown).toContain("[WhatsApp Blog: It's time to reserve your WhatsApp username]");
+
+    expect(buildRssFeed(articles.filter((article) => article.format === "news"), "tecMAMBO News", "/news/feed.xml")).toContain(
+      "whatsapp-usernames-reserve-now"
+    );
+    expect(buildLlmsTxt(articles, glossaryTerms)).toContain("WhatsApp is adding usernames, and you can reserve yours now");
+  });
+
   it("publishes the AI package with the requested authors, tags, and rich fields", () => {
     const aiPackage = articles.filter((article) => article.id.startsWith("ai-"));
     const uniqueImages = new Set(aiPackage.map((article) => article.image.src));

@@ -24,6 +24,9 @@ export function articleToMarkdown(article: Article) {
       ? ["## Go deeper", "", article.goDeeper.intro, "", ...article.goDeeper.specs.map((spec) => `- ${spec.label}: ${spec.value}`)].join("\n")
       : "",
     article.faq?.length ? ["## FAQ", "", ...article.faq.flatMap((faq) => [`### ${faq.question}`, "", faq.answer, ""])].join("\n") : "",
+    article.sources?.length
+      ? ["## Sources", "", ...article.sources.map((source) => `- [${source.label}](${source.url})`)].join("\n")
+      : "",
     article.itemList?.length ? ["## Picks", "", ...article.itemList.map((item) => `- ${item}`)].join("\n") : "",
     article.closingLine ? ["", article.closingLine].join("\n") : ""
   ].join("\n");

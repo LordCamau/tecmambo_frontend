@@ -261,6 +261,36 @@
   color: var(--text-secondary);
 }
 
+.sources {
+  display: grid;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  padding: 18px 20px;
+}
+
+.sources h2 {
+  margin: 0;
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sources ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.sources a {
+  color: var(--purple-dark);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
 .ask p {
   margin: 8px 0 16px;
   color: var(--text-secondary);

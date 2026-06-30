@@ -224,6 +224,20 @@ export default async function ArticlePage({ params }: { params: Params }) {
             ))}
           </section>
         ) : null}
+        {article.sources?.length ? (
+          <section className={styles.sources} aria-labelledby="article-sources-title">
+            <h2 id="article-sources-title">Sources</h2>
+            <ul>
+              {article.sources.map((source) => (
+                <li key={source.url}>
+                  <a href={source.url} rel="noreferrer" target="_blank">
+                    {source.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
         {article.closingLine ? <p className={styles.closingLine}>{article.closingLine}</p> : null}
         <TagList tags={article.tags} />
         <section className={styles.ask}>

@@ -27,6 +27,7 @@ export function renderedArticleFields(article: Article) {
     ...(article.faq?.flatMap((faq) => [faq.question, faq.answer]) ?? []),
     ...(article.itemList ?? []),
     article.image.alt,
+    ...(article.sources?.flatMap((source) => [source.label, source.url]) ?? []),
     ...(article.regions?.flatMap((region) => [region.name, region.description]) ?? [])
   ];
 }

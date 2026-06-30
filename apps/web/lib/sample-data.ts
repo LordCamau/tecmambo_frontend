@@ -50,7 +50,9 @@ export const brands: Tag[] = [
   { name: "Anthropic", slug: "anthropic", kind: "brand" },
   { name: "OpenAI", slug: "openai", kind: "brand" },
   { name: "Google", slug: "google", kind: "brand" },
-  { name: "Microsoft", slug: "microsoft", kind: "brand" }
+  { name: "Microsoft", slug: "microsoft", kind: "brand" },
+  { name: "WhatsApp", slug: "whatsapp", kind: "brand" },
+  { name: "Meta", slug: "meta", kind: "brand" }
 ];
 
 const startupTopic = topics.find((topic) => topic.slug === "startups")!;
@@ -60,10 +62,85 @@ const connectivityTopic = topics.find((topic) => topic.slug === "connectivity")!
 const smartphoneTopic = topics.find((topic) => topic.slug === "smartphones")!;
 const mobilityTopic = topics.find((topic) => topic.slug === "evs-mobility")!;
 const powerTopic = topics.find((topic) => topic.slug === "power-batteries")!;
+const whatsappBrand = brands.find((brand) => brand.slug === "whatsapp")!;
+const metaBrand = brands.find((brand) => brand.slug === "meta")!;
 const kenyaRegion = getRegion("kenya")!;
 const nigeriaRegion = getRegion("nigeria")!;
 const southAfricaRegion = getRegion("south-africa")!;
 const rwandaRegion = getRegion("rwanda")!;
+
+const appNewsArticles: Article[] = [
+  {
+    id: "news-whatsapp-usernames",
+    slug: "whatsapp-usernames-reserve-now",
+    format: "news",
+    title: "WhatsApp is adding usernames, and you can reserve yours now",
+    seo: {
+      title: "WhatsApp adds usernames: reserve yours now",
+      description:
+        "WhatsApp is introducing usernames so you can chat without sharing your phone number. Reservations are open now, ahead of a full launch later in 2026."
+    },
+    subhead:
+      "Reservations open this week. The feature itself arrives later in the year. Here is what a WhatsApp username actually does, and why grabbing yours early is worth a couple of minutes.",
+    excerpt:
+      "WhatsApp username reservations are open before the full launch later in 2026, letting you claim a handle that can help people reach you without showing your phone number.",
+    whyItMatters:
+      "For the millions of Kenyans who run work, groups, and side hustles on WhatsApp, this is the first time you can give someone a way to reach you without handing over your actual phone number.",
+    body: [
+      "WhatsApp is introducing usernames, and starting this week you can reserve the one you want ahead of a full launch later in 2026. The reservation is optional and takes a few seconds, but with billions of people likely to want a clean, memorable handle, the good ones will go fast.",
+      "Here is the simple version of what this changes. Today, to message someone on WhatsApp you generally need their phone number. A number is personal, it is tied to a lot of your life, and handing it to a classmate, a neighbour, a Marketplace buyer, or a group admin you have never met can feel like more than you want to share. A username lets people reach you without ever seeing your number.",
+      "That matters in group chats too. You might want to join the parents' chat or a community group without giving your number to a room full of strangers. With a username, you can.",
+      "WhatsApp says more than three billion people use the app, so a lot of names overlap. That is why reservations are opening early, to give everyone a fair shot at the handle they want before someone else takes it. If you are stuck for ideas, WhatsApp offers a username generator to suggest one.",
+      "The privacy design is the interesting part. There is no public directory to browse and no suggestions, so people will need to know your exact username to contact you for the first time. WhatsApp has also built an optional username key, an extra detail someone must know before they can message you, so you stay in control of who can reach you. Once usernames launch, the first time you message a person or business, they will no longer see your phone number, as long as you have turned your username on.",
+      "For creators, small businesses, and organisations that want a consistent identity across apps, WhatsApp has reserved an option to claim your existing Instagram or Facebook username on WhatsApp, so your handle can match the one people already know.",
+      "To reserve yours, update to the latest version of WhatsApp and go to Settings, then Account, then Username. WhatsApp says it will roll the feature out gradually over the coming months and will notify you in the app when usernames go live in your country.",
+      "So, should you care? If you value your privacy, or if you run anything on WhatsApp, a business, a hustle, a community, this is one of the more useful changes the app has made in a while, because it finally separates let me reach you from here is my number."
+    ],
+    closingLine:
+      "Reserve the handle you want now, then wait for the feature to switch on where you are. Keep your expectations calm on timing: reserving is live now, the full feature lands later in the year, and the rollout is gradual by country.",
+    author: authors[0]!,
+    publishedAt: new Date(Date.UTC(2026, 5, 30, 7, 0, 0)).toISOString(),
+    updatedAt: new Date(Date.UTC(2026, 5, 30, 7, 0, 0)).toISOString(),
+    readTime: "5 min read",
+    image: {
+      src: "https://images.unsplash.com/photo-1602177281687-c8900253495b?q=80&w=1800&auto=format&fit=crop",
+      alt: "A person using WhatsApp on a smartphone.",
+      credit: "Chad Madden / Unsplash"
+    },
+    tags: [appsTopic, whatsappBrand, metaBrand],
+    faq: [
+      {
+        question: "What is a WhatsApp username?",
+        answer: "A unique handle that lets people message you on WhatsApp without knowing your phone number."
+      },
+      {
+        question: "How do I reserve a WhatsApp username?",
+        answer: "Update to the latest version of WhatsApp, then go to Settings, then Account, then Username. It takes a few seconds."
+      },
+      {
+        question: "Do I have to use a username?",
+        answer: "No. Usernames are optional, and so is the extra username key."
+      },
+      {
+        question: "When does the feature launch?",
+        answer:
+          "Reservations are open now. WhatsApp says usernames will roll out gradually over the coming months, later in 2026, and you will be notified in the app when they reach your country."
+      },
+      {
+        question: "Will people still see my phone number?",
+        answer:
+          "Once usernames launch and you enable yours, people you message for the first time will reach you by username without seeing your number."
+      }
+    ],
+    sources: [
+      {
+        label: "WhatsApp Blog: It's time to reserve your WhatsApp username",
+        url: "https://blog.whatsapp.com/its-time-to-reserve-your-whatsapp-username"
+      }
+    ],
+    regions: [kenyaRegion]
+  }
+];
 
 const regionalArticles: Article[] = [
   {
@@ -373,7 +450,7 @@ function attachRegions(article: Article): Article {
   return assigned?.length ? { ...article, regions: assigned } : article;
 }
 
-export const articles: Article[] = [...regionalArticles, ...mobilityArticles, ...businessArticles, ...aiArticles, ...loadDraftArticles({ authors, topics, brands })].map(attachRegions).sort(
+export const articles: Article[] = [...appNewsArticles, ...regionalArticles, ...mobilityArticles, ...businessArticles, ...aiArticles, ...loadDraftArticles({ authors, topics, brands })].map(attachRegions).sort(
   (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
 );
 

@@ -177,6 +177,7 @@ export function articleJsonLd(article: Article): WithContext<SchemaArticle | Rev
       url: article.image.src,
       caption: article.image.credit
     },
+    citation: article.sources?.map((source) => source.url),
     ...regionSchema
   } as WithContext<SchemaArticle>;
 }
