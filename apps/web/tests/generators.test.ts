@@ -109,8 +109,20 @@ describe("content generators", () => {
     }
   });
 
-  it("publishes the 17 country-tagged African tech news stories across feeds and markdown", () => {
+  it("publishes the 29 country-tagged African tech news stories across feeds and markdown", () => {
     const africaNewsSlugs = [
+      "south-africa-digital-economy-pillars-strategy",
+      "south-africa-debut-4-ai-creative-fund",
+      "volkswagen-south-africa-new-energy-vehicle-crossroads",
+      "sars-ai-auto-assessments-2026",
+      "rwanda-egypt-ai-partnership",
+      "rwanda-digital-public-infrastructure-strategy",
+      "smart-africa-ai-council-data-governance",
+      "nigeria-airtime-credit-restored-fccpc",
+      "nigeria-nimc-act-2026-digital-identity",
+      "nigeria-local-smartphone-manufacturing-drive",
+      "africa-technology-expo-2026-lagos",
+      "nsia-npi-4-startup-prize",
       "openai-academy-nairobi-ruto-altman",
       "cbk-microfinance-capital-squeeze",
       "kenya-national-ai-policy",
@@ -134,12 +146,52 @@ describe("content generators", () => {
     const uniqueImages = new Set(africaNews.map((article) => article?.image.src));
 
     expect(africaNews.every(Boolean)).toBe(true);
-    expect(africaNews).toHaveLength(17);
+    expect(africaNews).toHaveLength(29);
     expect(africaNews.every((article) => article?.author.slug === "tim-humphreys")).toBe(true);
+    expect(africaNews.every((article) => article?.seo?.title && article.seo.description)).toBe(true);
     expect(africaNews.every((article) => article?.sources?.length)).toBe(true);
     expect(africaNews.every((article) => article?.regions?.length)).toBe(true);
-    expect(uniqueImages.size).toBe(17);
+    expect(uniqueImages.size).toBe(29);
     expect(countrySlugs).toEqual(new Set(["kenya", "nigeria", "rwanda", "south-africa"]));
+    expect(africaNews.find((article) => article?.slug === "volkswagen-south-africa-new-energy-vehicle-crossroads")?.tags).toEqual(
+      expect.arrayContaining([expect.objectContaining({ slug: "volkswagen" })])
+    );
+    expect(africaNews.find((article) => article?.slug === "nigeria-airtime-credit-restored-fccpc")?.tags).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ slug: "optasia" }),
+        expect.objectContaining({ slug: "mtn" }),
+        expect.objectContaining({ slug: "airtel" })
+      ])
+    );
+    expect(africaNews.find((article) => article?.slug === "rwanda-digital-public-infrastructure-strategy")?.faq?.length).toBe(2);
+    expect(articleJsonLd(africaNews.find((article) => article?.slug === "nigeria-nimc-act-2026-digital-identity")!)["@type"]).toBe(
+      "NewsArticle"
+    );
+
+    const expectedAfricanImageUpdates = [
+      ["south-africa-digital-economy-pillars-strategy", "/articles/south-africa-digital-economy-pillars.jpg", "GovernmentZA / x.com"],
+      ["south-africa-debut-4-ai-creative-fund", "/articles/south-africa-debut-4-ai-creative-fund.jpg", "BASA"],
+      ["volkswagen-south-africa-new-energy-vehicle-crossroads", "/articles/volkswagen-south-africa-kariega.jpg", "Volkswagen SA"],
+      ["sars-ai-auto-assessments-2026", "/articles/sars-ai-auto-assessments-2026.jpg", "Golegal"],
+      ["rwanda-egypt-ai-partnership", "/articles/rwanda-egypt-ai-partnership.jpg", "RwandaICT / x.com"],
+      ["rwanda-digital-public-infrastructure-strategy", "/articles/rwanda-digital-public-infrastructure.jpg", "AFRwanda / x.com"],
+      ["smart-africa-ai-council-data-governance", "/articles/smart-africa-ai-data-governance.jpg", "Smart Africa"],
+      ["nigeria-airtime-credit-restored-fccpc", "/articles/nigeria-airtime-credit-restored.jpg", "Webphatic"],
+      ["nigeria-nimc-act-2026-digital-identity", "/articles/nigeria-nimc-act-2026.jpg", "NIMC"],
+      ["nigeria-local-smartphone-manufacturing-drive", "/articles/nigeria-local-smartphone-manufacturing.jpg", "Billy Ogada | Nation Media Group"],
+      ["africa-technology-expo-2026-lagos", "/articles/nigeria-africa-technology-expo-2026.jpg", "CloudsaAfrica / x.com"],
+      ["nsia-npi-4-startup-prize", "/articles/nigeria-nsia-npi-4-startup-prize.jpg", "NSIA"],
+      ["microsoft-south-africa-cloud-ai-investment", "/articles/microsoft-south-africa-data-centre.jpg", "Microsoft South Africa"]
+    ];
+    for (const [slug, src, credit] of expectedAfricanImageUpdates) {
+      expect(africaNews.find((article) => article?.slug === slug)?.image).toMatchObject({
+        src,
+        credit,
+        width: 1040,
+        height: 520,
+        type: "image/jpeg"
+      });
+    }
 
     const firstStory = africaNews.find((article) => article?.slug === "openai-academy-nairobi-ruto-altman")!;
     const markdown = articleToMarkdown(firstStory);
@@ -172,13 +224,6 @@ describe("content generators", () => {
       height: 520,
       type: "image/jpeg"
     });
-    expect(africaNews.find((article) => article?.slug === "microsoft-south-africa-cloud-ai-investment")?.image).toMatchObject({
-      src: "/articles/microsoft-south-africa-data-centre.jpg",
-      credit: "Microsoft South Africa",
-      width: 1040,
-      height: 520,
-      type: "image/jpeg"
-    });
     expect(africaNews.find((article) => article?.slug === "spiro-electric-mobility-funding-round")?.image).toMatchObject({
       src: "/articles/spiro-electric-mobility.jpg",
       credit: "Spiro",
@@ -189,7 +234,7 @@ describe("content generators", () => {
     expect(buildRssFeed(getAfricaArticles(articles), "tecMAMBO African tech", "/africa/feed.xml")).toContain(
       "openai-academy-nairobi-ruto-altman"
     );
-    expect(buildLlmsTxt(articles, glossaryTerms)).toContain("Ruto and Altman tease an OpenAI Academy for Nairobi");
+    expect(buildLlmsTxt(articles, glossaryTerms)).toContain("South Africa sets six pillars for its digital economy");
   });
 
   it("publishes the four SEO-ready Kenya tech news stories across regional and answer surfaces", () => {
