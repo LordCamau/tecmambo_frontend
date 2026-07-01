@@ -13,8 +13,24 @@ import { advertiseSettings, populatedAudienceStats } from "../lib/advertise";
 import { africaLeadRegionSlugs, africanRegions, getAfricaArticles } from "../lib/regions";
 import { africaHubToMarkdown, countryHubToMarkdown } from "../content/region-markdown";
 import { articleJsonLd, articleSocialImage } from "../lib/seo";
+import { megaNavItems, moreLinks } from "../lib/nav";
 
 describe("content generators", () => {
+  it("keeps Africa and Compare Phones as first-level navigation items", () => {
+    expect(megaNavItems.map((item) => item.label)).toEqual([
+      "Latest",
+      "News",
+      "Reviews",
+      "Wallet Watch",
+      "Africa",
+      "Business",
+      "Compare Phones",
+      "Glossary",
+      "More"
+    ]);
+    expect(moreLinks.map((link) => link.label)).not.toEqual(expect.arrayContaining(["Africa", "Compare Phones"]));
+  });
+
   it("builds RSS with canonical article links", () => {
     const rss = buildRssFeed(articles);
     expect(rss).toContain("<rss version=\"2.0\">");

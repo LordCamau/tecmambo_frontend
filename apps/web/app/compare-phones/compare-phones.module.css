@@ -226,7 +226,7 @@
 
 .summary {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(520px, 1.1fr);
   gap: 18px;
   padding: 20px;
 }
@@ -247,34 +247,40 @@
 
 .summaryCards {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: 12px;
+  align-items: stretch;
 }
 
 .summaryCards article {
   display: grid;
-  grid-template-columns: 68px minmax(0, 1fr);
+  grid-template-columns: 82px minmax(0, 1fr);
   gap: 12px;
   align-items: start;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   background: var(--bg);
   padding: 14px;
+  min-width: 0;
+}
+
+.summaryCards article > div:last-child {
+  min-width: 0;
 }
 
 .summaryPhoneImage {
   display: grid;
   place-items: center;
-  width: 68px;
-  height: 86px;
+  width: 82px;
+  height: 104px;
   border-radius: var(--radius-sm);
   background: var(--surface);
   overflow: hidden;
 }
 
 .summaryPhoneImage img {
-  width: 58px;
-  height: 78px;
+  width: 72px;
+  height: 96px;
   object-fit: contain;
 }
 
@@ -290,6 +296,17 @@
   font-family: var(--font-display), system-ui, sans-serif;
   font-weight: 500;
   line-height: 1.2;
+  overflow-wrap: normal;
+}
+
+.summaryCards p {
+  margin: 0 0 14px;
+  line-height: 1.45;
+}
+
+.summaryCards small {
+  display: block;
+  line-height: 1.35;
 }
 
 .summaryCards small,
@@ -478,9 +495,12 @@
   }
 
   .phoneGrid,
-  .summaryCards,
   .sliders {
     grid-template-columns: 1fr;
+  }
+
+  .summaryCards {
+    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
   }
 }
 

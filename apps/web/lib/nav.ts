@@ -12,14 +12,14 @@ export const megaNavItems: TopNavItem[] = [
   { kind: "mega", label: "News", path: "/news", key: "news", children: topicArchives.news },
   { kind: "mega", label: "Reviews", path: "/reviews", key: "reviews", children: topicArchives.reviews },
   { kind: "mega", label: "Wallet Watch", path: "/wallet-watch", key: "wallet-watch", children: topicArchives["wallet-watch"] },
+  { kind: "link", label: "Africa", path: "/africa" },
   { kind: "mega", label: "Business", path: "/business", key: "business", children: topicArchives.business },
+  { kind: "link", label: "Compare Phones", path: "/compare-phones" },
   { kind: "link", label: "Glossary", path: "/glossary" },
   { kind: "more", label: "More", key: "more" }
 ];
 
 export const moreLinks = [
-  { label: "Africa", path: "/africa" },
-  { label: "Compare Phones", path: "/compare-phones" },
   { label: "About", path: "/about" },
   { label: "Editorial standards", path: "/editorial-standards" },
   { label: "Contact", path: "/contact" },
@@ -53,7 +53,6 @@ export const wearableTabLinks = wearableFilters
 
 export const footerReadLinks = [
   ...megaNavItems.flatMap((item) => (item.kind === "more" ? [] : [{ label: item.label, path: item.path }])),
-  { label: "Africa", path: "/africa" },
   { label: formats.explainer.shortLabel, path: formats.explainer.path },
   { label: formats["real-life"].shortLabel, path: formats["real-life"].path },
   { label: formats.opinion.shortLabel, path: formats.opinion.path }
