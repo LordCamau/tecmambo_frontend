@@ -87,6 +87,47 @@ describe("content generators", () => {
     }
   });
 
+  it("publishes the 17 country-tagged African tech news stories across feeds and markdown", () => {
+    const africaNewsSlugs = [
+      "openai-academy-nairobi-ruto-altman",
+      "cbk-microfinance-capital-squeeze",
+      "kenya-national-ai-policy",
+      "samsung-galaxy-a27-5g-kenya",
+      "tecno-ellaclaw-ai-agent-beta",
+      "kenya-space-expo-global-data-festival",
+      "aions-ventures-seed-fund-south-africa",
+      "holocene-southern-africa-climate-tech-fund",
+      "microsoft-south-africa-cloud-ai-investment",
+      "livestock-wealth-liquidation",
+      "spiro-electric-mobility-funding-round",
+      "shuttlers-google-maps-nigeria",
+      "nigeria-startup-market-maturing-2026",
+      "ai-driven-layoffs-african-tech-nigeria",
+      "ayute-rwanda-agritech-challenge-2026",
+      "kigali-innovation-city-progress-2026",
+      "rwanda-brd-early-stage-tech-debt-fund"
+    ];
+    const africaNews = africaNewsSlugs.map((slug) => articles.find((article) => article.slug === slug));
+    const countrySlugs = new Set(africaNews.flatMap((article) => article?.regions?.map((region) => region.slug) ?? []));
+    const uniqueImages = new Set(africaNews.map((article) => article?.image.src));
+
+    expect(africaNews.every(Boolean)).toBe(true);
+    expect(africaNews).toHaveLength(17);
+    expect(africaNews.every((article) => article?.author.slug === "tim-humphreys")).toBe(true);
+    expect(africaNews.every((article) => article?.sources?.length)).toBe(true);
+    expect(africaNews.every((article) => article?.regions?.length)).toBe(true);
+    expect(uniqueImages.size).toBe(17);
+    expect(countrySlugs).toEqual(new Set(["kenya", "nigeria", "rwanda", "south-africa"]));
+
+    const firstStory = africaNews.find((article) => article?.slug === "openai-academy-nairobi-ruto-altman")!;
+    const markdown = articleToMarkdown(firstStory);
+    expect(markdown).toContain("## Sources");
+    expect(buildRssFeed(getAfricaArticles(articles), "tecMAMBO African tech", "/africa/feed.xml")).toContain(
+      "openai-academy-nairobi-ruto-altman"
+    );
+    expect(buildLlmsTxt(articles, glossaryTerms)).toContain("Ruto and Altman tease an OpenAI Academy for Nairobi");
+  });
+
   it("publishes the AI package with the requested authors, tags, and rich fields", () => {
     const aiPackage = articles.filter((article) => article.id.startsWith("ai-"));
     const uniqueImages = new Set(aiPackage.map((article) => article.image.src));

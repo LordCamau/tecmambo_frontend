@@ -52,6 +52,11 @@ const images = {
     alt: "An abstract image suggesting something not quite real.",
     credit: "Unsplash"
   },
+  aiHallucination: {
+    src: "/articles/why-ai-hallucinates-and-how-to-catch-it.jpg",
+    alt: "AI hallucination graphic attributed to mongmong_Studio on shutterstock.com.",
+    credit: "mongmong_Studio - shutterstock.com"
+  },
   textTiles: {
     src: "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1800&auto=format&fit=crop",
     alt: "An abstract of small text tiles.",
@@ -76,6 +81,11 @@ const images = {
     src: "https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1800&auto=format&fit=crop",
     alt: "A phone showing a personal assistant managing tasks.",
     credit: "Unsplash"
+  },
+  geminiSpark: {
+    src: "/articles/gemini-spark-review.jpg",
+    alt: "Gemini Spark shown during the Google I/O 2026 Keynote.",
+    credit: "Google I/O 2026 Keynote"
   },
   moneyPhone: {
     src: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?q=80&w=1800&auto=format&fit=crop",
@@ -292,7 +302,7 @@ export function buildAiArticles({ authors, topics, brands }: ArticleFactoryInput
       author: lulu,
       publishedAt: iso(26, 7),
       updatedAt: iso(26, 7),
-      image: images.mirage,
+      image: images.aiHallucination,
       tags: [ai]
     },
     {
@@ -463,7 +473,7 @@ export function buildAiArticles({ authors, topics, brands }: ArticleFactoryInput
       author: lulu,
       publishedAt: iso(25, 9),
       updatedAt: iso(25, 9),
-      image: images.taskPhone,
+      image: images.geminiSpark,
       tags: [ai, google]
     },
     {
