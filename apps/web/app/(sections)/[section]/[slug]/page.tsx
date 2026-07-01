@@ -7,7 +7,7 @@ import type { GlossaryTerm } from "@/lib/types";
 import { formats, articlePath } from "@/lib/formats";
 import { getArticleBySlug, getArticles, getGlossaryTerms, getRelatedArticles } from "@/lib/content";
 import { getCmsArticleBySlug } from "@/lib/cms/source";
-import { articleJsonLd, breadcrumbJsonLd, dealProductJsonLd, faqJsonLd, itemListJsonLd } from "@/lib/seo";
+import { articleJsonLd, articleSocialImage, breadcrumbJsonLd, dealProductJsonLd, faqJsonLd, itemListJsonLd } from "@/lib/seo";
 import { renderGlossaryText, type GlossaryLinkState } from "@/lib/glossary-linking";
 import { filterArticlesByCanonicalTopic, getTopicArchive, sectionFormatMap } from "@/lib/site-structure";
 import { FormatBadge } from "@/components/signature/FormatBadge";
@@ -65,6 +65,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const path = articlePath(article.format, article.slug);
   const title = article.seo?.title ?? article.title;
   const description = article.seo?.description ?? article.subhead;
+  const previewImage = articleSocialImage(article);
   return {
     title,
     description,
@@ -79,12 +80,18 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       description,
       type: "article",
       url: path,
-      images: [{ url: article.image.src, alt: article.image.alt }],
+      images: [previewImage],
       publishedTime: article.publishedAt,
       modifiedTime: article.updatedAt,
       authors: [article.author.name],
       section: formats[article.format].section,
       tags: article.tags.map((tag) => tag.name)
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [previewImage.url]
     }
   };
 }

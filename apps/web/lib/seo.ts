@@ -21,6 +21,13 @@ export function absoluteUrl(path: string) {
   return new URL(path, siteUrl).toString();
 }
 
+export function articleSocialImage(article: Article) {
+  return {
+    url: absoluteUrl(article.image.src),
+    alt: article.image.alt
+  };
+}
+
 export function organizationJsonLd(): WithContext<NewsMediaOrganization> {
   const editorialStandardsUrl = absoluteUrl("/editorial-standards");
   return {
@@ -174,7 +181,7 @@ export function articleJsonLd(article: Article): WithContext<SchemaArticle | Rev
     publisher: organizationJsonLd(),
     image: {
       "@type": "ImageObject",
-      url: article.image.src,
+      url: articleSocialImage(article).url,
       caption: article.image.credit
     },
     citation: article.sources?.map((source) => source.url),
@@ -203,7 +210,7 @@ export function dealProductJsonLd(article: Article): WithContext<Product> | null
     "@context": "https://schema.org",
     "@type": "Product",
     name: article.deal.productName,
-    image: article.image.src,
+    image: articleSocialImage(article).url,
     offers: {
       "@type": "Offer",
       price: article.deal.priceCurrent,

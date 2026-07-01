@@ -12,6 +12,7 @@ import { consentCategories, consentModeDenied } from "../lib/cookie-consent";
 import { advertiseSettings, populatedAudienceStats } from "../lib/advertise";
 import { africaLeadRegionSlugs, africanRegions, getAfricaArticles } from "../lib/regions";
 import { africaHubToMarkdown, countryHubToMarkdown } from "../content/region-markdown";
+import { articleSocialImage } from "../lib/seo";
 
 describe("content generators", () => {
   it("builds RSS with canonical article links", () => {
@@ -75,6 +76,15 @@ describe("content generators", () => {
       "whatsapp-usernames-reserve-now"
     );
     expect(buildLlmsTxt(articles, glossaryTerms)).toContain("WhatsApp is adding usernames, and you can reserve yours now");
+  });
+
+  it("uses each article image as its absolute social preview image", () => {
+    for (const article of articles) {
+      const socialImage = articleSocialImage(article);
+      expect(socialImage.alt).toBe(article.image.alt);
+      expect(socialImage.url).toMatch(/^https:\/\//);
+      expect(socialImage.url).toContain(article.image.src.startsWith("/") ? `tecmambo.com${article.image.src}` : article.image.src);
+    }
   });
 
   it("publishes the AI package with the requested authors, tags, and rich fields", () => {
