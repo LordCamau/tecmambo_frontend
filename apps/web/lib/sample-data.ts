@@ -2,6 +2,7 @@ import type { Article, Author, Tag } from "@/lib/types";
 import { loadDraftArticles } from "@/lib/article-drafts";
 import { buildAiArticles } from "@/lib/ai-articles";
 import { buildAfricanTechNewsArticles } from "@/lib/african-tech-news-2026";
+import { buildKenyaTechNewsArticles } from "@/lib/kenya-tech-news-july-2026";
 import { getRegion } from "@/lib/regions";
 
 export const authors: Author[] = [
@@ -35,6 +36,7 @@ export const topics: Tag[] = [
   { name: "Wearables", slug: "wearables", kind: "topic" },
   { name: "Smart Homes", slug: "smart-homes", kind: "topic" },
   { name: "Startups", slug: "startups", kind: "topic" },
+  { name: "Business", slug: "business", kind: "topic" },
   { name: "Fintech", slug: "fintech", kind: "topic" },
   { name: "Audio", slug: "audio", kind: "topic" },
   { name: "Connectivity", slug: "connectivity", kind: "topic" },
@@ -56,6 +58,7 @@ export const brands: Tag[] = [
   { name: "WhatsApp", slug: "whatsapp", kind: "brand" },
   { name: "Meta", slug: "meta", kind: "brand" },
   { name: "Safaricom", slug: "safaricom", kind: "brand" },
+  { name: "Vodacom", slug: "vodacom", kind: "brand" },
   { name: "TECNO", slug: "tecno", kind: "brand" },
   { name: "Spiro", slug: "spiro", kind: "brand" },
   { name: "Shuttlers", slug: "shuttlers", kind: "brand" },
@@ -450,6 +453,12 @@ const businessArticles: Article[] = [
 ];
 
 const aiArticles = buildAiArticles({ authors, topics, brands });
+const kenyaTechNewsArticles = buildKenyaTechNewsArticles({
+  authors,
+  topics,
+  brands,
+  kenya: kenyaRegion
+});
 const africanTechNewsArticles = buildAfricanTechNewsArticles({
   authors,
   topics,
@@ -477,6 +486,7 @@ function attachRegions(article: Article): Article {
 
 export const articles: Article[] = [
   ...appNewsArticles,
+  ...kenyaTechNewsArticles,
   ...africanTechNewsArticles,
   ...regionalArticles,
   ...mobilityArticles,

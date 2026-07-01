@@ -137,6 +137,46 @@ export function articleJsonLd(article: Article): WithContext<SchemaArticle | Rev
   const url = absoluteUrl(articlePath(article.format, article.slug));
   const description = article.seo?.description ?? article.subhead;
   const regionSchema = regionalArticleSchema(article);
+  const image = articleSocialImage(article);
+  const articleImage = {
+    "@type": "ImageObject",
+    url: image.url,
+    caption: article.image.credit,
+    ...(image.width ? { width: image.width } : {}),
+    ...(image.height ? { height: image.height } : {})
+  };
+  const wordCount = [
+    article.title,
+    article.subhead,
+    article.excerpt,
+    article.whyItMatters,
+    ...article.body,
+    article.closingLine ?? ""
+  ]
+    .join(" ")
+    .split(/\s+/)
+    .filter(Boolean).length;
+  const sharedArticleFields = {
+    mainEntityOfPage: url,
+    datePublished: article.publishedAt,
+    dateModified: article.updatedAt,
+    inLanguage: "en",
+    isAccessibleForFree: true,
+    articleSection: formats[article.format].section,
+    keywords: [...article.tags.map((tag) => tag.name), ...(article.regions?.map((region) => region.name) ?? [])].join(", "),
+    abstract: article.whyItMatters,
+    image: articleImage,
+    thumbnailUrl: image.url,
+    wordCount,
+    author: {
+      "@type": "Person",
+      name: article.author.name,
+      url: absoluteUrl(`/authors/${article.author.slug}`)
+    },
+    publisher: organizationJsonLd(),
+    citation: article.sources?.map((source) => source.url),
+    ...regionSchema
+  };
   if (article.format === "review" && article.verdict) {
     return {
       "@context": "https://schema.org",
@@ -145,10 +185,7 @@ export function articleJsonLd(article: Article): WithContext<SchemaArticle | Rev
       name: article.title,
       description,
       url,
-      datePublished: article.publishedAt,
-      dateModified: article.updatedAt,
-      author: { "@type": "Person", name: article.author.name, url: absoluteUrl(`/authors/${article.author.slug}`) },
-      publisher: organizationJsonLd(),
+      ...sharedArticleFields,
       itemReviewed: { "@type": "Product", name: article.title.replace(/\sreview:.+$/i, "") },
       reviewRating: {
         "@type": "Rating",
@@ -162,33 +199,16 @@ export function articleJsonLd(article: Article): WithContext<SchemaArticle | Rev
       negativeNotes: {
         "@type": "ItemList",
         itemListElement: article.verdict.cons.map((item, index) => ({ "@type": "ListItem", position: index + 1, name: item }))
-      },
-      ...regionSchema
+      }
     } as WithContext<Review>;
   }
   return {
     "@context": "https://schema.org",
-    "@type": article.format === "news" ? "NewsArticle" : article.format === "opinion" ? "OpinionNewsArticle" : "Article",
+    "@type": article.format === "news" || article.format === "business" ? "NewsArticle" : article.format === "opinion" ? "OpinionNewsArticle" : "Article",
     headline: article.title,
     description,
     url,
-    mainEntityOfPage: url,
-    datePublished: article.publishedAt,
-    dateModified: article.updatedAt,
-    articleSection: formats[article.format].section,
-    author: {
-      "@type": "Person",
-      name: article.author.name,
-      url: absoluteUrl(`/authors/${article.author.slug}`)
-    },
-    publisher: organizationJsonLd(),
-    image: {
-      "@type": "ImageObject",
-      url: articleSocialImage(article).url,
-      caption: article.image.credit
-    },
-    citation: article.sources?.map((source) => source.url),
-    ...regionSchema
+    ...sharedArticleFields
   } as WithContext<SchemaArticle>;
 }
 

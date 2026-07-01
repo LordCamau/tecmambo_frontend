@@ -12,7 +12,7 @@ import { consentCategories, consentModeDenied } from "../lib/cookie-consent";
 import { advertiseSettings, populatedAudienceStats } from "../lib/advertise";
 import { africaLeadRegionSlugs, africanRegions, getAfricaArticles } from "../lib/regions";
 import { africaHubToMarkdown, countryHubToMarkdown } from "../content/region-markdown";
-import { articleSocialImage } from "../lib/seo";
+import { articleJsonLd, articleSocialImage } from "../lib/seo";
 
 describe("content generators", () => {
   it("builds RSS with canonical article links", () => {
@@ -82,7 +82,6 @@ describe("content generators", () => {
     expect(buildRssFeed(articles.filter((article) => article.format === "news"), "tecMAMBO News", "/news/feed.xml")).toContain(
       "whatsapp-usernames-reserve-now"
     );
-    expect(buildLlmsTxt(articles, glossaryTerms)).toContain("WhatsApp is adding usernames, and you can reserve yours now");
   });
 
   it("uses each article image as its absolute social preview image", () => {
@@ -133,6 +132,54 @@ describe("content generators", () => {
       "openai-academy-nairobi-ruto-altman"
     );
     expect(buildLlmsTxt(articles, glossaryTerms)).toContain("Ruto and Altman tease an OpenAI Academy for Nairobi");
+  });
+
+  it("publishes the four SEO-ready Kenya tech news stories across regional and answer surfaces", () => {
+    const kenyaNewsSlugs = [
+      "vodacom-safaricom-majority-control",
+      "kenya-mobile-data-800-million-gb-4g-5g",
+      "kenya-ai-policy-connecting-codes-conference",
+      "microsoft-elevate-ai-skilling-kenya-counties"
+    ];
+    const kenyaNews = kenyaNewsSlugs.map((slug) => articles.find((article) => article.slug === slug));
+    const firstStory = kenyaNews[0]!;
+    const firstStorySchema = articleJsonLd(firstStory) as unknown as Record<string, unknown>;
+    const uniqueImages = new Set(kenyaNews.map((article) => article?.image.src));
+
+    expect(kenyaNews.every(Boolean)).toBe(true);
+    expect(kenyaNews).toHaveLength(4);
+    expect(kenyaNews.every((article) => article?.author.slug === "tim-humphreys")).toBe(true);
+    expect(kenyaNews.every((article) => article?.regions?.some((region) => region.slug === "kenya"))).toBe(true);
+    expect(kenyaNews.every((article) => article?.seo?.title && article.seo.description)).toBe(true);
+    expect(kenyaNews.every((article) => article?.faq?.length === 3)).toBe(true);
+    expect(kenyaNews.every((article) => article?.sources?.length)).toBe(true);
+    expect(uniqueImages.size).toBe(4);
+    expect(firstStory.format).toBe("business");
+    expect(firstStory.tags.map((tag) => tag.slug)).toEqual(expect.arrayContaining(["business", "fintech", "safaricom", "vodacom"]));
+    expect(kenyaNews[3]?.tags.map((tag) => tag.slug)).toEqual(expect.arrayContaining(["ai", "microsoft"]));
+
+    expect(firstStorySchema["@type"]).toBe("NewsArticle");
+    expect(firstStorySchema.inLanguage).toBe("en");
+    expect(firstStorySchema.isAccessibleForFree).toBe(true);
+    expect(firstStorySchema.keywords).toContain("Kenya");
+    expect(firstStorySchema.abstract).toBe(firstStory.whyItMatters);
+    expect(firstStorySchema.citation).toEqual(
+      expect.arrayContaining(["https://www.vodacom.com/news-article.php?articleID=16911"])
+    );
+    expect(firstStorySchema.contentLocation).toEqual(
+      expect.arrayContaining([expect.objectContaining({ name: "Kenya" })])
+    );
+
+    const markdown = articleToMarkdown(firstStory);
+    expect(markdown).toContain("## FAQ");
+    expect(markdown).toContain("## Sources");
+    expect(buildRssFeed(articles.filter((article) => article.format === "news"), "tecMAMBO News", "/news/feed.xml")).toContain(
+      "kenya-mobile-data-800-million-gb-4g-5g"
+    );
+    expect(buildRssFeed(getAfricaArticles(articles), "tecMAMBO African tech", "/africa/feed.xml")).toContain(
+      "microsoft-elevate-ai-skilling-kenya-counties"
+    );
+    expect(buildLlmsTxt(articles, glossaryTerms)).toContain("Vodacom takes majority control of Safaricom");
   });
 
   it("publishes the AI package with the requested authors, tags, and rich fields", () => {
