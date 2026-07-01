@@ -21,6 +21,10 @@ function iso(day: number, hour = 7) {
   return new Date(Date.UTC(2026, 5, day, hour, 0, 0)).toISOString();
 }
 
+function isoJuly(day: number, hour = 7) {
+  return new Date(Date.UTC(2026, 6, day, hour, 0, 0)).toISOString();
+}
+
 const images = {
   dataCentre: {
     src: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1800&auto=format&fit=crop",
@@ -91,6 +95,14 @@ const images = {
     src: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?q=80&w=1800&auto=format&fit=crop",
     alt: "Shilling notes beside a smartphone.",
     credit: "Unsplash"
+  },
+  frontierAi: {
+    src: "/articles/anthropic-redeploys-fable-5.jpg",
+    alt: "Claude shown on a phone in front of Anthropic signage. Credit: Claude Security.",
+    credit: "Claude Security",
+    width: 1040,
+    height: 520,
+    type: "image/jpeg"
   }
 } satisfies Record<string, Article["image"]>;
 
@@ -99,6 +111,8 @@ export function buildAiArticles({ authors, topics, brands }: ArticleFactoryInput
   const lulu = bySlug(authors, "lulu-kiritu");
   const ai = bySlug(topics, "ai");
   const anthropic = bySlug(brands, "anthropic");
+  const amazon = bySlug(brands, "amazon");
+  const microsoft = bySlug(brands, "microsoft");
   const openai = bySlug(brands, "openai");
   const google = bySlug(brands, "google");
 
@@ -125,13 +139,91 @@ export function buildAiArticles({ authors, topics, brands }: ArticleFactoryInput
         "If you use Claude through the app or through everyday tools, this most likely does not change your day. The models ordinary users reach are unaffected. So why pay attention?",
         "Because it tells you how governments now see frontier AI. The most capable models are being treated less like ordinary software and more like strategic technology, in the same bracket as advanced chips, where a single policy decision can switch off access overnight. That logic does not stop at one company or one country.",
         "For anyone building on AI in Kenya, there is a quiet lesson in here. If a tool can be switched off by a decision made far away, it is risky to wire your most important work to one top-tier model from one provider. The teams that cope best will be the ones that can swap models without rebuilding everything, and that keep a sensible fallback.",
-        "This is a developing story, and the exact access status for the top models may continue to change. The bigger point is already clear: frontier AI is now part product, part policy question."
+        "This is a developing story, and the exact access status for the top models may continue to change. The bigger point is already clear: frontier AI is now part product, part policy question.",
+        "Update: Anthropic later said the export controls were lifted and that Claude Fable 5 would return worldwide on July 1, 2026. Read the follow-up at /news/anthropic-redeploys-fable-5."
       ],
       author: tim,
       publishedAt: iso(27, 6),
-      updatedAt: iso(27, 6),
+      updatedAt: isoJuly(1, 11),
       image: images.dataCentre,
-      tags: [ai, anthropic]
+      tags: [ai, anthropic],
+      sources: [
+        {
+          label: "Follow-up: Claude Fable 5 returns after export controls lifted",
+          url: "/news/anthropic-redeploys-fable-5"
+        }
+      ]
+    },
+    {
+      id: "ai-13",
+      slug: "anthropic-redeploys-fable-5",
+      format: "news",
+      title: "Claude's most powerful model is back, and the saga says a lot about who controls AI",
+      seo: {
+        title: "Claude Fable 5 returns after export controls lifted",
+        description:
+          "Anthropic is redeploying Claude Fable 5 on July 1 after the US lifted export controls. Here is the full story, and why it matters for anyone relying on AI."
+      },
+      subhead:
+        "The United States has lifted the export controls that forced Anthropic to pull Claude Fable 5 and Mythos 5. The model returns on July 1 with new safeguards. The whole episode is a lesson in how fragile access to frontier AI has become.",
+      excerpt:
+        "Anthropic says Claude Fable 5 returns worldwide on July 1 after the United States lifted export controls that had forced the company to suspend its top models.",
+      whyItMatters:
+        "For nearly three weeks, the most powerful AI models on the market could be switched off worldwide by a single government order. That is the real story here, and it is bigger than one model.",
+      body: [
+        "Anthropic is bringing back Claude Fable 5, its most capable model, on Wednesday, July 1, after the United States government lifted the export controls that had forced the company to switch it off. The move ends a suspension that lasted nearly three weeks and, along the way, offered a rare public look at how governments, AI companies, and cybersecurity fears now collide at the frontier of the technology.",
+        "Here is the short version of what happened before we get into why it matters.",
+        "On June 9, Anthropic released two new top-tier models, Fable 5 and Mythos 5, sitting above its established Opus line. According to Anthropic, the two share the same underlying model, but Fable 5 shipped with heavy safety measures for general use, while Mythos 5, which has fewer guardrails, went only to a small set of trusted partners for defensive cybersecurity work.",
+        "Three days later, on June 12, the US government applied export controls to both models. Export controls are rules that restrict who, by nationality or country, can access a technology, the same tool governments use for things like advanced weapons and cutting-edge chips. Because the order took effect immediately and Anthropic said it had no way to check every user's nationality in real time, the company suspended both models for everyone. On June 30, the controls were lifted, and Fable 5 returns the next day.",
+        "So why did a single AI model trigger a national-security response? Anthropic says the trigger was a report from Amazon researchers who found a way to get around Fable 5's safety systems. In plain terms, they found a jailbreak, a prompt trick that coaxes an AI into doing something it is built to refuse. In this case, Anthropic says the trick got the model to identify software vulnerabilities and, in one instance, to produce code showing how a vulnerability could be exploited. To a government worried about AI supercharging cyberattacks, that reads like an alarm bell.",
+        "The interesting part is what Anthropic says it found when it dug in. Its testing showed that plenty of weaker, widely available models could identify the same vulnerabilities, and that every model it tested, including older Claude versions and rival systems, could produce the same exploit demonstration. In other words, Anthropic argues that the technique did not unlock a unique frontier-level cyber capability. It was a borderline case involving routine defensive security work, the kind of thing Fable 5's cautious safeguards were blocking anyway just to be safe.",
+        "To understand that claim, it helps to know how these safety systems work. Anthropic uses what it calls defense in depth, several overlapping layers rather than one wall. A key layer is a set of classifiers, smaller AI systems that watch each request and block anything that looks like it could help with a dangerous cyber task. To stay on the safe side, the company deliberately sets these classifiers to also block some requests that are probably harmless, a cushion it calls a safety margin. Fable 5 launched with a bigger safety margin than any model before it, which is why users sometimes found it refusing reasonable coding requests.",
+        "In response to the Amazon report, Anthropic says it trained a new classifier that blocks the specific technique in more than 99% of cases, and now reroutes blocked requests to its Opus 4.8 model instead. Researchers at the US Department of Commerce's Center for AI Standards and Innovation independently tested the old and new safeguards and, according to Anthropic, found them extraordinarily strong. The tradeoff, which the company admits, is more false alarms during ordinary coding and debugging, a real cost to developers that it says it will keep tuning.",
+        "On availability, Fable 5 returns July 1 for users worldwide across Anthropic's apps and developer platform, with generous access for paying plans through July 7 and usage credits after that. Mythos 5, the less-restricted sibling, has been restored to a set of US organisations following government approval on June 26, with wider access to come.",
+        "Now, the bigger picture, which is where this story earns its place beyond the AI-industry bubble.",
+        "The first lesson is fragility. For nearly three weeks, the most powerful commercial AI models on earth were unavailable to everyone, everywhere, because of one government order. If you are a business, a developer, or a researcher anywhere in the world, that is a sharp reminder that access to frontier AI can be switched off overnight by decisions made far from you. For anyone outside the United States, including here in Kenya, the lesson from our earlier coverage still stands: it is risky to wire your most important work to a single top-tier model from a single provider you might suddenly lose. Read that earlier piece at /news/anthropic-mythos-models-export-control.",
+        "The second lesson is that the industry is quietly building new rules of the road. Anthropic says it is working with Amazon, Microsoft, Google, and other partners on a shared framework for scoring how serious an AI jailbreak actually is, judged on things like how much new capability it unlocks and how easy it is to pull off. It is also deepening its cooperation with the US government, including giving officials early access to test powerful models before release, under a new executive order on AI security signed on June 2.",
+        "That deeper government involvement cuts both ways, and it is worth watching with clear eyes. On one hand, independent testing and shared standards could make powerful AI safer and its release less chaotic. On the other, a handful of large companies helping to write the standards they will be judged by, with governments deciding who gets access to the best models, raises real questions about competition, transparency, and who ends up in control of the most consequential technology of the decade.",
+        "Anthropic, to its credit, was unusually open about the timeline and even argued the original control may have been an overreaction to a borderline case. But the episode makes one thing plain: frontier AI is now treated as strategic infrastructure, and the rules for who may use it are being written in real time."
+      ],
+      faq: [
+        {
+          question: "What is Claude Fable 5?",
+          answer: "It is one of Anthropic's most capable AI models, part of a new top tier released in June 2026, built for general use with heavy safety measures."
+        },
+        {
+          question: "Why was Claude Fable 5 suspended?",
+          answer: "On June 12, the US government applied export controls after a report showed a way to bypass its safeguards. Anthropic said it could not verify users' nationality in real time, so it switched the model off for everyone."
+        },
+        {
+          question: "What is an AI jailbreak?",
+          answer: "A jailbreak is a prompt trick that gets an AI model to bypass its safety rules and do something it is designed to refuse."
+        },
+        {
+          question: "Is Claude Fable 5 available now?",
+          answer: "Yes. Anthropic says Fable 5 returns on July 1, 2026 for users worldwide across its apps and developer platform."
+        },
+        {
+          question: "What changed before Claude Fable 5 came back?",
+          answer: "Anthropic says it added a new safeguard that blocks the reported technique in more than 99% of cases and reroutes blocked requests to Opus 4.8."
+        }
+      ],
+      author: tim,
+      publishedAt: isoJuly(1, 12),
+      updatedAt: isoJuly(1, 12),
+      readTime: "7 min read",
+      image: images.frontierAi,
+      tags: [ai, anthropic, amazon, microsoft, google],
+      sources: [
+        {
+          label: "Anthropic: Redeploying Fable 5",
+          url: "https://www.anthropic.com/news/redeploying-fable-5"
+        },
+        {
+          label: "Earlier tecMAMBO coverage: Anthropic's top AI models pulled over a US export order",
+          url: "/news/anthropic-mythos-models-export-control"
+        }
+      ]
     },
     {
       id: "ai-2",

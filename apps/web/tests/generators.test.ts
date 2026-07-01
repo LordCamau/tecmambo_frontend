@@ -4,7 +4,7 @@ import { join } from "node:path";
 import { buildGoogleNewsSitemap, buildJsonFeed, buildRssFeed } from "../content/feeds";
 import { buildLlmsTxt } from "../content/llms";
 import { articleToMarkdown, glossaryToMarkdown } from "../content/markdown";
-import { articles, glossaryTerms } from "../lib/sample-data";
+import { articles, brands, glossaryTerms } from "../lib/sample-data";
 import { assertAdvertisePageIsPublishable, assertArticlesArePublishable, assertLegalPagesArePublishable, assertNoEditorialTodos } from "../lib/content-guard";
 import { legalPageToMarkdown } from "../content/legal-markdown";
 import { cookiePage, editorialStandardsPage, legalPages, privacyPage, termsPage } from "../lib/legal-pages";
@@ -185,12 +185,31 @@ describe("content generators", () => {
   it("publishes the AI package with the requested authors, tags, and rich fields", () => {
     const aiPackage = articles.filter((article) => article.id.startsWith("ai-"));
     const uniqueImages = new Set(aiPackage.map((article) => article.image.src));
+    const fableFollowUp = aiPackage.find((article) => article.slug === "anthropic-redeploys-fable-5");
+    const fableSchema = articleJsonLd(fableFollowUp!) as unknown as Record<string, unknown>;
+    const earlierStory = aiPackage.find((article) => article.slug === "anthropic-mythos-models-export-control");
 
-    expect(aiPackage).toHaveLength(12);
-    expect(aiPackage.filter((article) => article.author.slug === "tim-humphreys")).toHaveLength(4);
+    expect(aiPackage).toHaveLength(13);
+    expect(aiPackage.filter((article) => article.author.slug === "tim-humphreys")).toHaveLength(5);
     expect(aiPackage.filter((article) => article.author.slug === "lulu-kiritu")).toHaveLength(8);
     expect(aiPackage.every((article) => article.tags.some((tag) => tag.slug === "ai"))).toBe(true);
     expect(uniqueImages.size).toBe(aiPackage.length);
+    expect(brands.find((brand) => brand.slug === "amazon")).toBeTruthy();
+    expect(fableFollowUp?.author.slug).toBe("tim-humphreys");
+    expect(fableFollowUp?.format).toBe("news");
+    expect(fableFollowUp?.faq).toHaveLength(5);
+    expect(fableFollowUp?.image.alt).toBe("Claude shown on a phone in front of Anthropic signage. Credit: Claude Security.");
+    expect(fableFollowUp?.tags.map((tag) => tag.slug)).toEqual(expect.arrayContaining(["ai", "anthropic", "amazon", "microsoft", "google"]));
+    expect(fableFollowUp?.sources?.[0]?.url).toBe("https://www.anthropic.com/news/redeploying-fable-5");
+    expect(earlierStory?.body.join(" ")).toContain("/news/anthropic-redeploys-fable-5");
+    expect(fableFollowUp?.body.join(" ")).toContain("/news/anthropic-mythos-models-export-control");
+    expect(fableSchema["@type"]).toBe("NewsArticle");
+    expect(fableSchema.keywords).toContain("Anthropic");
+    expect(fableSchema.citation).toEqual(expect.arrayContaining(["https://www.anthropic.com/news/redeploying-fable-5"]));
+    expect(buildRssFeed(articles.filter((article) => article.format === "news"), "tecMAMBO News", "/news/feed.xml")).toContain(
+      "anthropic-redeploys-fable-5"
+    );
+    expect(buildLlmsTxt(articles, glossaryTerms)).toContain("Claude's most powerful model is back");
     expect(aiPackage.find((article) => article.slug === "what-is-an-ai-agent-really")?.faq).toHaveLength(3);
     expect(aiPackage.find((article) => article.slug === "why-ai-hallucinates-and-how-to-catch-it")?.faq).toHaveLength(3);
     expect(aiPackage.find((article) => article.slug === "gemini-spark-review")?.verdict?.score).toBe("3.5/5");

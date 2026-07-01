@@ -52,6 +52,7 @@ export const brands: Tag[] = [
   { name: "Apple", slug: "apple", kind: "brand" },
   { name: "Vivo", slug: "vivo", kind: "brand" },
   { name: "Anthropic", slug: "anthropic", kind: "brand" },
+  { name: "Amazon", slug: "amazon", kind: "brand" },
   { name: "OpenAI", slug: "openai", kind: "brand" },
   { name: "Google", slug: "google", kind: "brand" },
   { name: "Microsoft", slug: "microsoft", kind: "brand" },
