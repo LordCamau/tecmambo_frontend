@@ -85,6 +85,9 @@ export type Article = {
     src: string;
     alt: string;
     credit: string;
+    width?: number;
+    height?: number;
+    type?: string;
   };
   tags: Tag[];
   regions?: RegionTerm[];

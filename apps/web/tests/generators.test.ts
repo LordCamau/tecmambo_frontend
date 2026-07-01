@@ -67,6 +67,13 @@ describe("content generators", () => {
     expect(story?.sources?.[0]?.url).toBe("https://blog.whatsapp.com/its-time-to-reserve-your-whatsapp-username");
     expect(story?.image.src).toBe("/articles/whatsapp-usernames-reserve-now.jpg");
     expect(story?.image.alt).toBe("Two people holding a large WhatsApp logo.");
+    expect(articleSocialImage(story!)).toEqual({
+      url: "https://tecmambo.com/articles/whatsapp-usernames-reserve-now.jpg",
+      alt: "Two people holding a large WhatsApp logo.",
+      width: 2000,
+      height: 1201,
+      type: "image/jpeg"
+    });
 
     const markdown = articleToMarkdown(story!);
     expect(markdown).toContain("## Sources");

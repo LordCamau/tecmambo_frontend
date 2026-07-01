@@ -116,7 +116,10 @@ const appNewsArticles: Article[] = [
     image: {
       src: "/articles/whatsapp-usernames-reserve-now.jpg",
       alt: "Two people holding a large WhatsApp logo.",
-      credit: "tecMAMBO image library"
+      credit: "tecMAMBO image library",
+      width: 2000,
+      height: 1201,
+      type: "image/jpeg"
     },
     tags: [appsTopic, whatsappBrand, metaBrand],
     faq: [

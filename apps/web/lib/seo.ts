@@ -24,7 +24,10 @@ export function absoluteUrl(path: string) {
 export function articleSocialImage(article: Article) {
   return {
     url: absoluteUrl(article.image.src),
-    alt: article.image.alt
+    alt: article.image.alt,
+    ...(article.image.width ? { width: article.image.width } : {}),
+    ...(article.image.height ? { height: article.image.height } : {}),
+    ...(article.image.type ? { type: article.image.type } : {})
   };
 }
 
