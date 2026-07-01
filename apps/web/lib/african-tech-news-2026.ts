@@ -281,9 +281,12 @@ export function buildAfricanTechNewsArticles({ authors, topics, brands, regions 
       updatedAt: published(28, 12),
       readTime: "4 min read",
       image: {
-        src: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1800&auto=format&fit=crop",
-        alt: "A satellite against a sky.",
-        credit: "Unsplash"
+        src: "/articles/kenya-space-expo-conference-2026.jpg",
+        alt: "Kenya Space Agency exhibition booth at the Kenya Space Expo and Conference. Credit: expo.ksa.go.ke.",
+        credit: "expo.ksa.go.ke",
+        width: 1040,
+        height: 520,
+        type: "image/jpeg"
       },
       tags: [connectivity],
       regions: [regions.kenya],
@@ -324,9 +327,12 @@ export function buildAfricanTechNewsArticles({ authors, topics, brands, regions 
       updatedAt: published(28, 10),
       readTime: "3 min read",
       image: {
-        src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1800&auto=format&fit=crop",
-        alt: "A South African city skyline.",
-        credit: "Unsplash"
+        src: "/articles/south-africa-r100m-startup-fund.jpg",
+        alt: "South African flag in front of a Cape Town business district skyline. Credit: HERE Technologies.",
+        credit: "HERE Technologies",
+        width: 1040,
+        height: 520,
+        type: "image/jpeg"
       },
       tags: [startups, aions],
       regions: [regions.southAfrica],
@@ -363,9 +369,12 @@ export function buildAfricanTechNewsArticles({ authors, topics, brands, regions 
       updatedAt: published(27, 15),
       readTime: "3 min read",
       image: {
-        src: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1800&auto=format&fit=crop",
-        alt: "Solar panels under a clear sky.",
-        credit: "Unsplash"
+        src: "/articles/holocene-southern-africa-climate-tech-fund.jpg",
+        alt: "Holocene team members pictured in front of a Holocene Investments Solutions sign. Credit: holocene.africa / Instagram.",
+        credit: "holocene.africa / Instagram",
+        width: 1040,
+        height: 520,
+        type: "image/jpeg"
       },
       tags: [startups, holocene],
       regions: [regions.southAfrica],
@@ -402,9 +411,12 @@ export function buildAfricanTechNewsArticles({ authors, topics, brands, regions 
       updatedAt: published(27, 12),
       readTime: "4 min read",
       image: {
-        src: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1801&auto=format&fit=crop",
-        alt: "A data centre building.",
-        credit: "Unsplash"
+        src: "/articles/microsoft-south-africa-data-centre.jpg",
+        alt: "People seated outside a Microsoft South Africa office. Credit: Microsoft South Africa.",
+        credit: "Microsoft South Africa",
+        width: 1040,
+        height: 520,
+        type: "image/jpeg"
       },
       tags: [ai, connectivity, microsoft],
       regions: [regions.southAfrica],
@@ -485,9 +497,12 @@ export function buildAfricanTechNewsArticles({ authors, topics, brands, regions 
       updatedAt: published(26, 15),
       readTime: "3 min read",
       image: {
-        src: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1800&auto=format&fit=crop",
-        alt: "An electric motorcycle at a swap station.",
-        credit: "Unsplash"
+        src: "/articles/spiro-electric-mobility.jpg",
+        alt: "A red Spiro electric motorcycle inside a workshop. Credit: Spiro.",
+        credit: "Spiro",
+        width: 1040,
+        height: 520,
+        type: "image/jpeg"
       },
       tags: [mobility, spiro],
       regions: [regions.nigeria, regions.kenya, regions.rwanda],
@@ -528,9 +543,12 @@ export function buildAfricanTechNewsArticles({ authors, topics, brands, regions 
       updatedAt: published(26, 12),
       readTime: "3 min read",
       image: {
-        src: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1800&auto=format&fit=crop",
-        alt: "A commuter bus on a city road.",
-        credit: "Unsplash"
+        src: "/articles/shuttlers-google-maps-nigeria.jpg",
+        alt: "A Shuttlers bus route shown on Google Maps beside Shuttlers buses. Credit: tecMAMBO Media.",
+        credit: "tecMAMBO Media",
+        width: 1040,
+        height: 520,
+        type: "image/jpeg"
       },
       tags: [apps, mobility, google, shuttlers],
       regions: [regions.nigeria],

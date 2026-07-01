@@ -144,6 +144,48 @@ describe("content generators", () => {
     const firstStory = africaNews.find((article) => article?.slug === "openai-academy-nairobi-ruto-altman")!;
     const markdown = articleToMarkdown(firstStory);
     expect(markdown).toContain("## Sources");
+    expect(africaNews.find((article) => article?.slug === "shuttlers-google-maps-nigeria")?.image).toMatchObject({
+      src: "/articles/shuttlers-google-maps-nigeria.jpg",
+      credit: "tecMAMBO Media",
+      width: 1040,
+      height: 520,
+      type: "image/jpeg"
+    });
+    expect(africaNews.find((article) => article?.slug === "kenya-space-expo-global-data-festival")?.image).toMatchObject({
+      src: "/articles/kenya-space-expo-conference-2026.jpg",
+      credit: "expo.ksa.go.ke",
+      width: 1040,
+      height: 520,
+      type: "image/jpeg"
+    });
+    expect(africaNews.find((article) => article?.slug === "aions-ventures-seed-fund-south-africa")?.image).toMatchObject({
+      src: "/articles/south-africa-r100m-startup-fund.jpg",
+      credit: "HERE Technologies",
+      width: 1040,
+      height: 520,
+      type: "image/jpeg"
+    });
+    expect(africaNews.find((article) => article?.slug === "holocene-southern-africa-climate-tech-fund")?.image).toMatchObject({
+      src: "/articles/holocene-southern-africa-climate-tech-fund.jpg",
+      credit: "holocene.africa / Instagram",
+      width: 1040,
+      height: 520,
+      type: "image/jpeg"
+    });
+    expect(africaNews.find((article) => article?.slug === "microsoft-south-africa-cloud-ai-investment")?.image).toMatchObject({
+      src: "/articles/microsoft-south-africa-data-centre.jpg",
+      credit: "Microsoft South Africa",
+      width: 1040,
+      height: 520,
+      type: "image/jpeg"
+    });
+    expect(africaNews.find((article) => article?.slug === "spiro-electric-mobility-funding-round")?.image).toMatchObject({
+      src: "/articles/spiro-electric-mobility.jpg",
+      credit: "Spiro",
+      width: 1040,
+      height: 520,
+      type: "image/jpeg"
+    });
     expect(buildRssFeed(getAfricaArticles(articles), "tecMAMBO African tech", "/africa/feed.xml")).toContain(
       "openai-academy-nairobi-ruto-altman"
     );
