@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter, Space_Grotesk, Space_Mono } from "next/font/google";
 import Script from "next/script";
 import "@/styles/globals.css";
@@ -114,6 +115,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               strategy="beforeInteractive"
             />
           ) : null}
+          <GoogleAnalytics gaId="G-6S7F1VKH5M" />
           <span id="top" className="visually-hidden" tabIndex={-1}>
             Top
           </span>
