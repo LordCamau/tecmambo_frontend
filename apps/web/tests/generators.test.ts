@@ -179,6 +179,124 @@ describe("content generators", () => {
     expect(schema.itemReviewed).toMatchObject({ "@type": "Product", name: "Apple iPhone Air" });
   });
 
+  it("publishes the Samsung Galaxy A37 5G review with the requested thumbnail and review schema", () => {
+    const story = articles.find((article) => article.slug === "samsung-galaxy-a37-5g-review");
+    const schema = articleJsonLd(story!) as unknown as Record<string, unknown>;
+    const markdown = articleToMarkdown(story!);
+
+    expect(story).toBeTruthy();
+    expect(story?.title).toBe("Samsung Galaxy A37 5G review: a dependable mid-ranger that plays it safe");
+    expect(story?.author.name).toBe("Tim Humphreys");
+    expect(story?.format).toBe("review");
+    expect(story?.tags.map((tag) => tag.slug)).toEqual(expect.arrayContaining(["smartphones", "samsung", "android", "power-batteries"]));
+    expect(story?.seo).toEqual({
+      title: "Samsung Galaxy A37 5G review: solid, safe, and best on a deal",
+      description:
+        "The Galaxy A37 5G nails the basics, a great screen, all-day battery, and six years of updates, but plays it safe and cost too much at launch. Our verdict."
+    });
+    expect(story?.image).toMatchObject({
+      src: "/articles/samsung-galaxy-a37-5g-review.jpg",
+      alt: "Samsung Galaxy A37 5G product image. Credit: Samsung.",
+      credit: "Samsung",
+      width: 1040,
+      height: 520,
+      type: "image/jpeg"
+    });
+    expect(story?.verdict).toMatchObject({ score: "3.5/5" });
+    expect(story?.verdict?.pros).toHaveLength(6);
+    expect(story?.verdict?.cons).toHaveLength(5);
+    expect(story?.faq).toHaveLength(5);
+    expect(story?.inlineImages).toHaveLength(4);
+    expect(story?.inlineImages).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          id: "galaxy-a37-design",
+          src: "/articles/galaxy-a37-5g-options.jpg",
+          alt: "Samsung Galaxy A37 5G colour options laid out on a table. Credit: Daniel Schmidt.",
+          credit: "Daniel Schmidt",
+          width: 720,
+          height: 480
+        }),
+        expect.objectContaining({
+          id: "galaxy-a37-display",
+          src: "/articles/galaxy-a37-5g-display.jpg",
+          alt: "Samsung Galaxy A37 5G display viewed from the front. Credit: Daniel Schmidt.",
+          credit: "Daniel Schmidt",
+          width: 720,
+          height: 480
+        }),
+        expect.objectContaining({
+          id: "galaxy-a37-camera",
+          src: "/articles/galaxy-a37-5g-camera.jpg",
+          alt: "Samsung Galaxy A37 5G rear camera in close-up. Credit: Daniel Schmidt.",
+          credit: "Daniel Schmidt",
+          width: 720,
+          height: 480
+        }),
+        expect.objectContaining({
+          id: "galaxy-a37-battery",
+          src: "/articles/galaxy-a37-5g-charging.jpg",
+          alt: "Samsung Galaxy A37 5G USB-C charging ports stacked together. Credit: Daniel Schmidt.",
+          credit: "Daniel Schmidt",
+          width: 720,
+          height: 480
+        })
+      ])
+    );
+    expect(story?.body).toEqual(
+      expect.arrayContaining([
+        "## Design and thinness",
+        "## Display",
+        "## Performance",
+        "## Camera",
+        "## Battery life",
+        "## Software and updates",
+        "## Price and value",
+        "## The verdict"
+      ])
+    );
+    expect(story?.goDeeper?.specs).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ label: "Display", value: expect.stringContaining("6.7-inch Super AMOLED") }),
+        expect.objectContaining({ label: "Updates", value: "Six OS upgrades and six years of security updates" }),
+        expect.objectContaining({ label: "Price", value: expect.stringContaining("KSh39,999") })
+      ])
+    );
+    expect(markdown).toContain("![Samsung Galaxy A37 5G colour options laid out on a table. Credit: Daniel Schmidt.]");
+    expect(markdown).toContain("![Samsung Galaxy A37 5G display viewed from the front. Credit: Daniel Schmidt.]");
+    expect(markdown).toContain("Image credit: Daniel Schmidt");
+    expect(markdown).toContain("KSh39,999");
+    expect(markdown).toContain("## FAQ");
+    expect(markdown).toContain("## Sources");
+    expect(articleSocialImage(story!)).toEqual({
+      url: "https://tecmambo.com/articles/samsung-galaxy-a37-5g-review.jpg",
+      alt: "Samsung Galaxy A37 5G product image. Credit: Samsung.",
+      width: 1040,
+      height: 520,
+      type: "image/jpeg"
+    });
+    expect(schema["@type"]).toBe("Review");
+    expect(schema.reviewRating).toMatchObject({
+      "@type": "Rating",
+      ratingValue: "3.5",
+      bestRating: "5"
+    });
+    expect(schema.itemReviewed).toMatchObject({ "@type": "Product", name: "Samsung Galaxy A37 5G" });
+    expect(schema.citation).toEqual(expect.arrayContaining(["https://www.gsmarena.com/samsung_galaxy_a37-14378.php"]));
+  });
+
+  it("keeps review pricing useful for Kenyan readers", () => {
+    const reviewArticles = articles.filter((article) => article.format === "review");
+
+    expect(reviewArticles.length).toBeGreaterThanOrEqual(3);
+    reviewArticles.forEach((article) => {
+      const reviewText = [article.body.join(" "), article.goDeeper?.specs.map((spec) => spec.value).join(" ") ?? ""].join(" ");
+
+      expect(reviewText).toMatch(/\bUS dollars\b|\bdollars\b/i);
+      expect(reviewText).toMatch(/\bKSh[\d,]+/);
+    });
+  });
+
   it("builds JSON Feed items", () => {
     const feed = buildJsonFeed(articles);
     expect(feed.version).toBe("https://jsonfeed.org/version/1.1");

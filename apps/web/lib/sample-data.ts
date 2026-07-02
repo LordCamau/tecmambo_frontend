@@ -26,6 +26,7 @@ export const authors: Author[] = [
 
 export const topics: Tag[] = [
   { name: "AI", slug: "ai", kind: "topic" },
+  { name: "Android", slug: "android", kind: "topic" },
   { name: "Apps", slug: "apps", kind: "topic" },
   { name: "Smartphones", slug: "smartphones", kind: "topic" },
   { name: "Computing", slug: "computing", kind: "topic" },
@@ -76,6 +77,7 @@ export const brands: Tag[] = [
 
 const startupTopic = topics.find((topic) => topic.slug === "startups")!;
 const aiTopic = topics.find((topic) => topic.slug === "ai")!;
+const androidTopic = topics.find((topic) => topic.slug === "android")!;
 const appsTopic = topics.find((topic) => topic.slug === "apps")!;
 const connectivityTopic = topics.find((topic) => topic.slug === "connectivity")!;
 const smartphoneTopic = topics.find((topic) => topic.slug === "smartphones")!;
@@ -83,6 +85,7 @@ const mobilityTopic = topics.find((topic) => topic.slug === "evs-mobility")!;
 const powerTopic = topics.find((topic) => topic.slug === "power-batteries")!;
 const whatsappBrand = brands.find((brand) => brand.slug === "whatsapp")!;
 const metaBrand = brands.find((brand) => brand.slug === "meta")!;
+const samsungBrand = brands.find((brand) => brand.slug === "samsung")!;
 const kenyaRegion = getRegion("kenya")!;
 const nigeriaRegion = getRegion("nigeria")!;
 const southAfricaRegion = getRegion("south-africa")!;
@@ -161,6 +164,168 @@ const appNewsArticles: Article[] = [
       }
     ],
     regions: [kenyaRegion]
+  }
+];
+
+const reviewArticles: Article[] = [
+  {
+    id: "review-samsung-galaxy-a37-5g",
+    slug: "samsung-galaxy-a37-5g-review",
+    format: "review",
+    title: "Samsung Galaxy A37 5G review: a dependable mid-ranger that plays it safe",
+    seo: {
+      title: "Samsung Galaxy A37 5G review: solid, safe, and best on a deal",
+      description:
+        "The Galaxy A37 5G nails the basics, a great screen, all-day battery, and six years of updates, but plays it safe and cost too much at launch. Our verdict."
+    },
+    subhead:
+      "The Galaxy A37 5G is a sensible Samsung mid-ranger with a great screen, long support, and dependable battery life, but it is much better when discounted.",
+    excerpt:
+      "The Samsung Galaxy A37 5G gets the important things right, a bright screen, all-day battery, and years of updates, without trying anything bold.",
+    whyItMatters:
+      "In the mid-range, the smart questions are not about headline specs but about the boring things that decide whether a phone is worth it: does it last the day, last the years, and cost the right price?",
+    body: [
+      "The Samsung Galaxy A37 5G is a mid-range Android phone that gets the important things right, a big bright screen, long battery, and years of software support, without trying anything bold. It launched in April 2026 as the successor to the popular A36, and the honest summary is right there in how familiar it feels. This is a safe, sensible phone. Whether that is exactly what you want, or a little too little, is the whole review.",
+      "## Design and thinness",
+      "The A37 is clean, modern, and almost indistinguishable from last year's A36. It has a plastic frame with a glass back protected by Gorilla Glass Victus+, and the same triple-camera island as before. At 7.4mm and 196 grams it is slim enough but not especially light. The meaningful upgrade is durability: it moves up to an IP68 rating for dust and water resistance, which is reassuring at this price. Two practical notes: there is no microSD card slot, and like most phones now, there is no charger in the box. It is an unshowy, solidly built design that will not turn heads but will not let you down either.",
+      "[[image:galaxy-a37-design]]",
+      "## Display",
+      "No complaints here, and this is a highlight. The 6.7-inch Super AMOLED runs at a smooth 120Hz, hits up to 1,900 nits at peak so it stays readable in sunlight, and shows the bold, punchy colours Samsung screens are known for. It is unchanged from the A36, but it remains one of the best displays you will find at this price. Watching video and scrolling both feel great.",
+      "[[image:galaxy-a37-display]]",
+      "## Performance",
+      "The A37 runs Samsung's Exynos 1480 chip with 6 to 12GB of memory depending on the model. It is not new silicon, and the gains over the last generation are modest, but Samsung has added a vapour chamber to keep temperatures in check. In everyday use, apps, browsing, social media, and casual games, it is smooth and responsive. Push it with heavy gaming and it is merely adequate rather than impressive. This is competent mid-range performance, not a leap forward, and if raw speed is your priority, you can do better for the money.",
+      "## Camera",
+      "The A37 has a triple rear camera: a 50-megapixel main lens with optical stabilisation, an 8-megapixel ultrawide, and a 5-megapixel macro, plus a 12-megapixel front camera, with video up to 4K. The main camera is the one that matters, and it is good for the price, producing bright, detailed, colourful shots in daylight and handling low light reasonably well with Samsung's Nightography. Samsung improved the sensor and processing over the A36, and it shows. The ultrawide is ordinary, and the 5-megapixel macro is more of a spec-sheet entry than a lens you will actually use. For everyday photos and social media, though, this setup covers the basics comfortably.",
+      "[[image:galaxy-a37-camera]]",
+      "## Battery life",
+      "The 5,000mAh battery is a reliable all-day performer. Samsung markets it as a two-day phone, which is optimistic; in real use you get a comfortable full day, often stretching to a day and a half with lighter use, and you will still be charging it most nights. It supports 45W fast charging, roughly 60 percent in half an hour, but remember there is no charger included, so you will need to supply a compatible fast charger to hit those speeds. Endurance is one of this phone's quiet strengths.",
+      "[[image:galaxy-a37-battery]]",
+      "## Software and updates",
+      "This is the A37's real superpower, and the reason to take it seriously. It ships with Android 16 and Samsung's polished One UI 8.5, and it promises six major Android upgrades and six years of security updates, which keeps it current and safe into 2032. It also includes a useful slice of Samsung's Galaxy AI tools, such as Circle to Search, Object Eraser, and voice transcription. Support of that length is genuinely rare at this price, and it changes the maths: this is a phone you can confidently keep for years rather than replace in two, which quietly makes it better value the longer you own it.",
+      "## Price and value",
+      "Here is the deciding factor. The A37 launched at around 449 US dollars, and at that price it was hard to recommend, because it competes with strong rivals that offer more character or more phone for similar money. Samsung effectively conceded the misjudgement, and the price has since fallen closer to 350 dollars, where it becomes a genuinely sensible buy. For Kenyan buyers, current retail checks put it around KSh39,999 for the 6GB/128GB model, KSh44,999 for 8GB/256GB, and KSh49,999 for 12GB/256GB. The lesson is simple: the A37 is worth it on a deal and overpriced at full launch price. Watch the price before you buy.",
+      "## The verdict",
+      "The Galaxy A37 5G is the definition of a safe choice. It nails the fundamentals, the screen, the battery, the software support, and the reliability, and it will serve most people well for years. It just does not excite, and it leans heavily on last year's phone. If you value dependability, long support, and the Samsung experience, and you buy it at a sensible price, it is easy to live with and easy to recommend. If you want the newest performance or the best raw value, check the discounts and the rivals first. A dependable 3.5 out of 5."
+    ],
+    goDeeper: {
+      intro: "A concise spec sheet for the Samsung Galaxy A37 5G.",
+      specs: [
+        { label: "Display", value: "6.7-inch Super AMOLED, 120Hz, up to 1,900 nits" },
+        { label: "Chip", value: "Exynos 1480" },
+        { label: "Memory and storage", value: "6 to 12GB RAM, 128 or 256GB storage, no microSD" },
+        { label: "Rear cameras", value: "50MP main with OIS, 8MP ultrawide, 5MP macro" },
+        { label: "Front camera", value: "12MP" },
+        { label: "Battery and charging", value: "5,000mAh, 45W wired" },
+        { label: "Build", value: "Plastic frame, Gorilla Glass Victus+, IP68" },
+        { label: "Software", value: "Android 16 with One UI 8.5" },
+        { label: "Updates", value: "Six OS upgrades and six years of security updates" },
+        { label: "Price", value: "Launch price about 449 US dollars, now typically lower. Current Kenya retail checks show roughly KSh39,999 to KSh49,999 depending on RAM and storage." }
+      ]
+    },
+    verdict: {
+      score: "3.5/5",
+      summary:
+        "The Samsung Galaxy A37 5G is a dependable, sensible mid-range phone that does almost everything well and almost nothing surprising. You get a lovely 6.7-inch AMOLED screen, all-day battery, capable cameras, and a genuinely outstanding promise of six years of updates. The catch is that it looks and performs much like last year's model, leans on familiar hardware, and launched at a price that asked too much. Catch it on a deal and it is easy to recommend, especially if you want a phone that lasts. At full launch price, rivals give you more.",
+      pros: [
+        "Bright, smooth 6.7-inch 120Hz AMOLED display",
+        "Reliable all-day 5,000mAh battery",
+        "Six OS upgrades and six years of security updates",
+        "Polished One UI software",
+        "IP68 durability",
+        "Solid main camera"
+      ],
+      cons: [
+        "Nearly identical to the A36",
+        "Familiar mid-range chip, so no real leap in speed",
+        "Ordinary ultrawide and macro cameras",
+        "No charger in the box",
+        "Overpriced at launch and much better on discount"
+      ]
+    },
+    itemReviewed: "Samsung Galaxy A37 5G",
+    inlineImages: [
+      {
+        id: "galaxy-a37-design",
+        src: "/articles/galaxy-a37-5g-options.jpg",
+        alt: "Samsung Galaxy A37 5G colour options laid out on a table. Credit: Daniel Schmidt.",
+        credit: "Daniel Schmidt",
+        width: 720,
+        height: 480,
+        type: "image/jpeg"
+      },
+      {
+        id: "galaxy-a37-display",
+        src: "/articles/galaxy-a37-5g-display.jpg",
+        alt: "Samsung Galaxy A37 5G display viewed from the front. Credit: Daniel Schmidt.",
+        credit: "Daniel Schmidt",
+        width: 720,
+        height: 480,
+        type: "image/jpeg"
+      },
+      {
+        id: "galaxy-a37-camera",
+        src: "/articles/galaxy-a37-5g-camera.jpg",
+        alt: "Samsung Galaxy A37 5G rear camera in close-up. Credit: Daniel Schmidt.",
+        credit: "Daniel Schmidt",
+        width: 720,
+        height: 480,
+        type: "image/jpeg"
+      },
+      {
+        id: "galaxy-a37-battery",
+        src: "/articles/galaxy-a37-5g-charging.jpg",
+        alt: "Samsung Galaxy A37 5G USB-C charging ports stacked together. Credit: Daniel Schmidt.",
+        credit: "Daniel Schmidt",
+        width: 720,
+        height: 480,
+        type: "image/jpeg"
+      }
+    ],
+    author: authors[0]!,
+    publishedAt: new Date(Date.UTC(2026, 6, 2, 7, 0, 0)).toISOString(),
+    updatedAt: new Date(Date.UTC(2026, 6, 2, 7, 0, 0)).toISOString(),
+    readTime: "8 min read",
+    image: {
+      src: "/articles/samsung-galaxy-a37-5g-review.jpg",
+      alt: "Samsung Galaxy A37 5G product image. Credit: Samsung.",
+      credit: "Samsung",
+      width: 1040,
+      height: 520,
+      type: "image/jpeg"
+    },
+    tags: [smartphoneTopic, samsungBrand, androidTopic, powerTopic],
+    faq: [
+      {
+        question: "Is the Samsung Galaxy A37 5G a good phone?",
+        answer:
+          "Yes, it is a dependable mid-ranger with a great screen, all-day battery, and six years of updates. It is best value on a discount rather than at full launch price."
+      },
+      {
+        question: "How long will the Galaxy A37 5G get updates?",
+        answer: "Six major Android upgrades and six years of security updates, keeping it supported into 2032."
+      },
+      {
+        question: "Does the Galaxy A37 5G have a good camera?",
+        answer:
+          "The 50-megapixel main camera is solid for the price, with good daylight and night shots. The ultrawide and macro are ordinary."
+      },
+      {
+        question: "What is the Galaxy A37 5G battery life like?",
+        answer:
+          "A comfortable full day, sometimes a day and a half with light use, with 45W fast charging. Samsung's two-day claim is optimistic."
+      },
+      {
+        question: "Galaxy A37 5G vs A36?",
+        answer:
+          "The A37 is very similar, with the same design and display and a familiar chip, plus small camera and IP68 improvements. Existing A36 owners do not need to upgrade."
+      }
+    ],
+    sources: [
+      { label: "Samsung Galaxy A37 5G", url: "https://www.samsung.com/" },
+      { label: "GSMArena Samsung Galaxy A37 5G specs", url: "https://www.gsmarena.com/samsung_galaxy_a37-14378.php" },
+      { label: "Tech Advisor Samsung Galaxy A37 5G review", url: "https://www.techadvisor.com/article/2785937/samsung-galaxy-a37-5g-review.html" },
+      { label: "Avechi Samsung Galaxy A37 5G Kenya pricing", url: "https://avechi.co.ke/product-tag/samsung-galaxy-a37/" }
+    ]
   }
 ];
 
@@ -491,6 +656,7 @@ function attachRegions(article: Article): Article {
 
 export const articles: Article[] = [
   ...appNewsArticles,
+  ...reviewArticles,
   ...kenyaTechNewsArticles,
   ...africanTechNewsArticles,
   ...regionalArticles,

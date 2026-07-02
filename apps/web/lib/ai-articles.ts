@@ -548,6 +548,8 @@ export function buildAiArticles({ authors, topics, brands }: ArticleFactoryInput
         "The core promise lands more often than I expected. For routine, low-stakes tasks, organising and triaging, drafting and queuing things up, pulling together information from across your day, Spark can genuinely take work off your plate and keep going in the background. When it works, it feels less like using an app and more like having handed something to a capable assistant. That is a real shift, and at consumer scale it is new.",
         "## Where it stumbles",
         "The trouble is the same trouble every agent has: it acts, and acting means it can act wrongly. A few times it confidently did the not-quite-right thing, which meant I could never fully stop watching, and an agent you have to supervise constantly is only half an agent. It is also early in obvious ways, with rough edges and behaviour that varies. And it sits behind Google's premium subscription, so you are paying top prices to use something that still asks for your patience.",
+        "## Price and value",
+        "Gemini Spark sits inside Google's AI Ultra tier rather than the cheaper Pro plan. Internationally, Google lists AI Ultra from 99.99 US dollars a month, with a higher-allowance tier in some markets at 219.99 dollars a month. For Kenyan readers, that works out to roughly KSh12,930 to KSh28,450 a month before card fees and taxes, using the Central Bank of Kenya's 2 July 2026 indicative dollar rate of 129.30. One important caveat: Google currently describes Spark as coming to AI Ultra subscribers in the US, so Kenya pricing is a conversion guide for now, not a local availability promise.",
         "## Who it is for",
         "Spark is for the curious and the comfortable: people who enjoy being early, already pay for Google's top AI tier, and have low-stakes tasks they are happy to delegate and double-check. If you want something dependable that you can set and forget, wait. This is a first chapter, and a promising one, but it is not the finished book."
       ],
@@ -560,13 +562,24 @@ export function buildAiArticles({ authors, topics, brands }: ArticleFactoryInput
       goDeeper: {
         intro:
           "Spark runs as a cloud-based agent in the Gemini app and is offered to Google's top-tier AI subscribers. Because it acts on your behalf, it needs access to the apps and data it works with, so treat its permissions as a real decision and start it on low-stakes tasks. As with any agent, keep a human check on anything that sends messages, spends money, or cannot be undone.",
-        specs: []
+        specs: [
+          {
+            label: "Pricing",
+            value:
+              "Google AI Ultra starts at 99.99 US dollars a month internationally, about KSh12,930 at the 2 July 2026 CBK rate. Higher-allowance Ultra tiers can reach 219.99 dollars, about KSh28,450."
+          }
+        ]
       },
       author: lulu,
       publishedAt: iso(25, 9),
       updatedAt: iso(25, 9),
       image: images.geminiSpark,
-      tags: [ai, google]
+      tags: [ai, google],
+      sources: [
+        { label: "Google AI plans", url: "https://one.google.com/intl/en_us/about/google-ai-plans/" },
+        { label: "Google One Help: Google AI Ultra benefits", url: "https://support.google.com/googleone/answer/16286513?hl=en" },
+        { label: "Central Bank of Kenya exchange rates", url: "https://www.centralbank.go.ke/category/exchange-rates/" }
+      ]
     },
     {
       id: "ai-12",

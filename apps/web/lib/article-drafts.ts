@@ -163,7 +163,7 @@ const articleOverrides: Record<string, Partial<Article>> = {
       "## Durability and longevity",
       "Despite how thin it looks, the titanium frame holds up, and the Air has passed the bend tests that sank a certain older iPhone. It feels solid. Two longevity notes matter more than the frame, though. First, the single camera and lone speaker will feel more limiting over a four or five year life than they do on day one, as expectations climb. Second, the Air sold below Apple's expectations, and Apple has reportedly held back the next version to redesign it, possibly adding a second camera, with a launch not expected before 2027. For resale, an underperforming model that is due a significant revision is a mild risk. If you keep phones for years, the fixed single camera is the limit you will feel.",
       "## Price and value",
-      "Here is the squeeze that decides it. The Air starts at 999 US dollars. The standard iPhone 17 costs 200 dollars less and gives you a second camera and near-identical everyday performance. The iPhone 17 Pro costs just 100 dollars more and adds three cameras, a bigger battery, and the better cooling. In other words, you are paying a premium to lose features, in exchange for thinness alone. Whether that trade is worth it is the entire question, and for most buyers the maths points elsewhere.",
+      "Here is the squeeze that decides it. The Air starts at 999 US dollars. The standard iPhone 17 costs 200 dollars less and gives you a second camera and near-identical everyday performance. The iPhone 17 Pro costs just 100 dollars more and adds three cameras, a bigger battery, and the better cooling. In Kenya, current listings put the 256GB iPhone Air from roughly KSh117,000 to KSh129,999, with some retailers showing wider ranges depending on storage and stock. In other words, you are paying a premium to lose features, in exchange for thinness alone. Whether that trade is worth it is the entire question, and for most buyers the maths points elsewhere.",
       "## The verdict",
       "The iPhone Air is a beautiful, deliberate, niche phone, not the default iPhone. Buy it if thin and light is your single highest priority and you are a light to moderate user who lives on the main camera. If you want the best value, the iPhone 17 is the smarter buy. If you want the most capable phone, the 17 Pro is only slightly dearer. The Air asks what you are willing to give up. For the right person the answer is not much, and gladly. For most people, it is more than I should have to. 3.5 out of 5."
     ],
@@ -179,7 +179,7 @@ const articleOverrides: Record<string, Partial<Article>> = {
         { label: "Battery", value: "3,149mAh, USB-C, MagSafe" },
         { label: "Frame and resistance", value: "Grade 5 titanium, IP68" },
         { label: "SIM", value: "eSIM only" },
-        { label: "Starting price", value: "999 US dollars for 256GB. Check current local pricing in Kenya before buying, because retailer prices move quickly." }
+        { label: "Starting price", value: "999 US dollars for 256GB. Current Kenya retail checks put the 256GB model around KSh117,000 to KSh129,999, depending on retailer and stock." }
       ]
     },
     verdict: {
@@ -259,7 +259,9 @@ const articleOverrides: Record<string, Partial<Article>> = {
     sources: [
       { label: "Apple iPhone Air", url: "https://www.apple.com/iphone-air/" },
       { label: "Apple iPhone comparison", url: "https://www.apple.com/iphone/compare/" },
-      { label: "Tom's Guide iPhone Air review", url: "https://www.tomsguide.com/phones/iphones/iphone-air-review" }
+      { label: "Tom's Guide iPhone Air review", url: "https://www.tomsguide.com/phones/iphones/iphone-air-review" },
+      { label: "Price in Kenya iPhone price list", url: "https://www.priceinkenya.com/price-list/phones/apple" },
+      { label: "iTey Store iPhone Air 256GB Kenya pricing", url: "https://iteystore.co.ke/product/iphone-17-air-256gb" }
     ],
     updatedAt: new Date(Date.UTC(2026, 6, 2, 6, 0, 0)).toISOString(),
     readTime: "8 min read"

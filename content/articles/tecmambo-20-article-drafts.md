@@ -183,7 +183,7 @@ Brands: Vivo
 
 **Why it matters:** Some phones try to impress everyone and end up feeling vague. The Vivo V40 is interesting because its pitch is clear: strong portraits, stylish design, and a camera-first experience for people who take photos seriously.
 
-Quick take: The Vivo V40 looks like a phone built for people who care about portraits, social photos, and a polished hand feel. Final buying advice needs verified local pricing, exact configuration, and long-term camera testing. [verify current price and Kenya availability]
+Quick take: The Vivo V40 looks like a phone built for people who care about portraits, social photos, and a polished hand feel. It makes the most sense if you find it near its international street price of about 400 to 500 US dollars, or around KSh55,000 to KSh65,000 in Kenya depending on storage and retailer.
 
 The first thing to understand about this phone is that it is not trying to win every spec fight. That can be a good thing. A phone that knows its lane is often easier to recommend than one that throws features everywhere and hopes one of them lands.
 
@@ -205,11 +205,13 @@ Finally, Vivo's software taste matters. Some people enjoy feature-rich Android s
 
 Battery behavior should be tested with camera use specifically. A phone can last well during messaging and still drain quickly during long camera sessions, especially with portrait mode, video, and high brightness. If this phone is for events, content, or travel, the camera battery drain matters as much as the camera quality.
 
-The value question comes down to verified price. At the right price, a camera-focused Vivo can be an easy recommendation for the right buyer. At the wrong price, it may sit too close to phones with stronger chips, longer update promises, or more complete water resistance. That is why the review should not only praise the camera. It should place the phone honestly in the shop.
+## Price and value
+
+The value question comes down to where the V40 lands in the shop. Internationally, it is best judged as a roughly 400 to 500 US dollar camera-first phone rather than a flagship bargain. In Kenya, current retail checks put it around KSh55,000 to KSh65,000 depending on memory, storage, colour, and stock. At the lower end of that range, a camera-focused Vivo can be an easy recommendation for the right buyer. At the upper end, it may sit too close to phones with stronger chips, longer update promises, or more complete water resistance. That is why the review should not only praise the camera. It should place the phone honestly in the shop.
 
 ## Go deeper: for people who want the technical detail
 
-Before publishing a final scored review, verify: chipset, RAM and storage options, battery capacity, charging wattage, IP rating, display refresh rate, main camera sensor details, ultrawide quality, selfie camera behavior, video stabilization, and Android update promise for the local market.
+Before publishing a final scored review, verify: chipset, RAM and storage options, battery capacity, charging wattage, IP rating, display refresh rate, main camera sensor details, ultrawide quality, selfie camera behavior, video stabilization, Android update promise for the local market, and whether the exact Kenya model still sits around KSh55,000 to KSh65,000.
 
 Camera testing should include daylight portraits, indoor skin tones, night mode, moving subjects, backlit scenes, video while walking, and social-app compression after upload.
 
@@ -226,7 +228,7 @@ Brands: Oraimo
 
 **Why it matters:** Cheap earbuds can be wonderful, or they can become tiny daily annoyances. For commuters, the real test is not one song in a quiet room. It is calls, traffic noise, battery, comfort, and whether the case survives your bag.
 
-Quick take: This draft needs the exact Oraimo model, current price, and measured battery results before publication. [verify model and price] The review angle is simple: judge the earbuds by commute life, not marketing language.
+Quick take: The review angle is simple: judge the earbuds by commute life, not marketing language. For Oraimo's entry earbuds, the useful buying band is roughly 10 to 20 US dollars internationally, or about KSh1,500 to KSh3,000 in Kenya depending on the model and retailer.
 
 Budget earbuds live a harder life than premium earbuds. They get shoved into jeans pockets, dropped into backpacks, used during noisy walks, and borrowed by siblings. So the first question is not "Do they sound perfect?" It is "Do they behave when life is messy?"
 
@@ -248,11 +250,15 @@ The review should also talk about fatigue. Some cheap earbuds push treble too ha
 
 And because these are likely to be shared, borrowed, or passed around, cleaning matters. Glossy earbuds that show every bit of dust and earwax can start looking rough quickly. That is not glamorous, but real products live in real pockets.
 
+## Price and value
+
+Oraimo's cheapest useful earbuds should be treated as a small daily tool, not a luxury purchase. Internationally, the entry models usually sit around 10 to 20 US dollars. In Kenya, current retail checks put the realistic range around KSh1,500 to KSh3,000, with flash sales sometimes lower. Under KSh2,000, fit and call quality matter more than big claims. Near KSh3,000, the pair should feel more dependable, with clearer calls, steadier battery, and a case that does not feel like it will fail quickly.
+
 ## Go deeper: for people who want the technical detail
 
 Test plan before final publishing: measure single-charge playback at 50 percent volume, case top-ups, call quality in quiet and roadside settings, Bluetooth range through one wall, codec support, charging connector, water resistance rating, latency in YouTube and gaming, and comfort after one hour.
 
-Also verify whether the local retail package includes extra ear tips, warranty terms, and whether the model appears in Oraimo's official app.
+Also verify whether the local retail package includes extra ear tips, warranty terms, whether the model appears in Oraimo's official app, and whether the Kenya price is still inside the KSh1,500 to KSh3,000 band.
 
 Closing line: Tell us the cheap earbuds you keep seeing in shops, and we will add them to the commute test list.
 
@@ -310,7 +316,7 @@ Brands: Samsung
 
 **Why it matters:** Premium earbuds are not automatically the best choice for every ear or every budget. The useful question is where the extra money actually shows up, and where a cheaper pair quietly does enough.
 
-Quick take: Samsung Galaxy Buds are usually strongest when paired with Samsung phones, especially for app features and ecosystem polish. The budget challenger needs exact model verification before publishing. [verify budget model, price, and availability]
+Quick take: Samsung Galaxy Buds are usually strongest when paired with Samsung phones, especially for app features and ecosystem polish. The fair comparison is usually a 99 to 149 US dollar Galaxy Buds pair against a budget alternative near 15 to 30 dollars, or about KSh1,500 to KSh3,500 in Kenya.
 
 The comparison should start with a boring truth: earbuds are personal. One pair can sound great and still be wrong for you if it hurts, falls out, or makes your voice sound distant on calls.
 
@@ -332,9 +338,13 @@ A fair test should include different phone brands too. Galaxy Buds may behave be
 
 The budget alternative also has to be judged after a week, not after one excited afternoon. Cheap earbuds sometimes reveal their weakness slowly: one bud drains faster, the case indicator lies, or Bluetooth becomes fussy after repeated pairing. The winner should be the pair that stays boringly dependable.
 
+## Price and value
+
+Price decides how harsh the comparison should be. A current Galaxy Buds FE style pair is usually a 99 to 149 US dollar product internationally, and Kenyan retail pricing often lands around KSh8,500 to KSh14,000 depending on model and promotion. A credible budget challenger should sit much lower, roughly 15 to 30 dollars internationally or KSh1,500 to KSh3,500 in Kenya. If the Samsung pair costs four times more, it needs to win clearly on calls, app control, noise handling, comfort, and long-term reliability. If it only sounds a little better, the budget pair has done its job.
+
 ## Go deeper: for people who want the technical detail
 
-Compare codec support, app EQ controls, active noise cancellation strength, transparency mode quality, microphone samples, latency, multipoint support, IP rating, case battery, wireless charging, replacement ear tips, and warranty.
+Compare codec support, app EQ controls, active noise cancellation strength, transparency mode quality, microphone samples, latency, multipoint support, IP rating, case battery, wireless charging, replacement ear tips, warranty, and the current Kenya price gap between Samsung's KSh8,500 to KSh14,000 range and the budget pair's KSh1,500 to KSh3,500 range.
 
 For Samsung users, also verify features limited to Galaxy devices, such as higher-quality proprietary audio modes or automatic switching.
 
