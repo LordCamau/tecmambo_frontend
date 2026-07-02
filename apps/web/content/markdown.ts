@@ -1,6 +1,13 @@
 import type { Article, GlossaryTerm } from "@/lib/types";
 import { articlePath } from "@/lib/formats";
 
+function articleBodyBlockToMarkdown(article: Article, block: string) {
+  const inlineImageId = block.match(/^\[\[image:([a-z0-9-]+)\]\]$/)?.[1];
+  const inlineImage = inlineImageId ? article.inlineImages?.find((image) => image.id === inlineImageId) : undefined;
+  if (!inlineImage) return block;
+  return [`![${inlineImage.alt}](${inlineImage.src})`, "", `Image credit: ${inlineImage.credit}`].join("\n");
+}
+
 export function articleToMarkdown(article: Article) {
   return [
     `# ${article.title}`,
@@ -19,7 +26,7 @@ export function articleToMarkdown(article: Article) {
     "",
     "## Story",
     "",
-    ...article.body.flatMap((paragraph) => [paragraph, ""]),
+    ...article.body.flatMap((paragraph) => [articleBodyBlockToMarkdown(article, paragraph), ""]),
     article.goDeeper
       ? ["## Go deeper", "", article.goDeeper.intro, "", ...article.goDeeper.specs.map((spec) => `- ${spec.label}: ${spec.value}`)].join("\n")
       : "",

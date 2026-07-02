@@ -113,6 +113,159 @@ const imagePools: Record<string, Article["image"][]> = {
   ]
 };
 
+const imageOverrides: Record<string, Article["image"]> = {
+  "why-your-phone-gets-hot-when-you-charge-and-use-it-at-the-same-time": {
+    src: "/articles/phone-overheating-while-charging.jpg",
+    alt: "A person looking concerned while using a charging phone. Credit: Google Glow.",
+    credit: "Google Glow",
+    width: 1040,
+    height: 520,
+    type: "image/jpeg"
+  }
+};
+
+const articleOverrides: Record<string, Partial<Article>> = {
+  "iphone-air-review-the-iphone-that-asks-what-you-re-willing-to-give-up": {
+    seo: {
+      title: "iPhone Air review: the iPhone that asks what you're willing to give up",
+      description:
+        "The iPhone Air is Apple's thinnest, most beautiful iPhone. After the hype, our verdict on the camera, battery, and whether it is worth the price."
+    },
+    image: {
+      src: "/articles/iphone-air-review.jpg",
+      alt: "Apple iPhone Air product image. Credit: MyAppleStore.",
+      credit: "MyAppleStore",
+      width: 1040,
+      height: 520,
+      type: "image/jpeg"
+    },
+    subhead:
+      "The iPhone Air is Apple's thinnest and most comfortable iPhone, but the camera, battery, speaker, and price trade-offs make it a niche buy.",
+    excerpt:
+      "The iPhone Air is Apple's thinnest phone ever, at 5.6mm and 165 grams, and its beauty is paid for with camera, battery, and speaker compromises.",
+    whyItMatters:
+      "The iPhone Air is the most beautiful iPhone Apple has made, but beauty this thin is paid for in cameras, battery, and sound. Knowing exactly what you give up is the whole decision.",
+    body: [
+      "The iPhone Air is Apple's thinnest phone ever, at 5.6mm and 165 grams, and holding it is genuinely a small event. The catch, and the whole story of this phone, is everything Apple removed to get there. Thinness is never free. So rather than ask whether the Air is beautiful, which it plainly is, the useful question is whether the things Apple sacrificed are things you will miss.",
+      "## Design and thinness",
+      "This is the reason the Air exists, and it delivers. At 5.6mm and 165 grams it is around 30 percent thinner and 25 percent lighter than the standard iPhone 17, and the way the weight spreads across the body makes it feel even lighter than the number suggests. The Grade 5 titanium frame and Ceramic Shield glass make it feel premium and reassuringly solid, not fragile. Almost all the internals, including the single camera and the chip, live in a raised bar across the top that Apple calls the plateau, which means the phone rocks on a table and the camera area is much thicker than the rest. It is also eSIM only worldwide, with no SIM tray, and charges over USB-C. In the hand, though, none of that matters. It is the nicest iPhone Apple has ever made to hold, and if that is what you are buying, it does not disappoint.",
+      "[[image:iphone-air-thin-design]]",
+      "## Display",
+      "No compromise here. The 6.5-inch OLED runs at a smooth 120Hz, gets bright enough to read in hard sunlight, and sits neatly between the iPhone 17 and the Pro Max in size. It is one of the best screens on any phone, full stop.",
+      "## Performance and heat",
+      "The Air runs the A19 Pro chip with 12GB of memory, so for everyday use, apps, browsing, photos, and light games, it is fast and fluid. The honest asterisk is heat. To stay this thin, the Air drops the vapour chamber cooling found in the Pro and uses a chip with one fewer graphics core, so under sustained load, long gaming sessions or extended 4K video, it warms up and throttles back. For normal daily use you will never notice. If you are a heavy gamer, you will.",
+      "## Camera",
+      "This is the biggest and least fixable compromise. The Air has a single 48-megapixel rear camera that covers 1x and a 2x crop, and an 18-megapixel front camera. Photos from that main lens are genuinely very good. But there is no ultrawide for landscapes and tight spaces, no telephoto for real zoom, and no macro. If you mostly point and shoot with the main camera, you may never feel the gap. If you regularly reach for the 0.5x ultrawide or zoom in on anything, this alone is a dealbreaker, and no software update will add a lens the phone does not have. In camera scope, the Air is closer to the entry-level iPhone than to the iPhone 17.",
+      "[[image:iphone-air-camera]]",
+      "## Battery life",
+      "The Air carries the smallest battery in the lineup at 3,149mAh, and this was the pre-launch worry. The reality is better than feared: it comfortably gets through a day of light to moderate use, and it is not far off the standard iPhone 17. But it trails the Pro models by a few hours, and if you are a heavy user or travelling, you will find yourself reaching for Apple's MagSafe Battery, an accessory made specifically for the Air that costs extra. That is worth naming plainly, because a thin phone that sends you back to a battery pack is not really the lightest option in your bag anymore. For most people, though, a day of normal use is a day covered.",
+      "[[image:iphone-air-battery]]",
+      "## Durability and longevity",
+      "Despite how thin it looks, the titanium frame holds up, and the Air has passed the bend tests that sank a certain older iPhone. It feels solid. Two longevity notes matter more than the frame, though. First, the single camera and lone speaker will feel more limiting over a four or five year life than they do on day one, as expectations climb. Second, the Air sold below Apple's expectations, and Apple has reportedly held back the next version to redesign it, possibly adding a second camera, with a launch not expected before 2027. For resale, an underperforming model that is due a significant revision is a mild risk. If you keep phones for years, the fixed single camera is the limit you will feel.",
+      "## Price and value",
+      "Here is the squeeze that decides it. The Air starts at 999 US dollars. The standard iPhone 17 costs 200 dollars less and gives you a second camera and near-identical everyday performance. The iPhone 17 Pro costs just 100 dollars more and adds three cameras, a bigger battery, and the better cooling. In other words, you are paying a premium to lose features, in exchange for thinness alone. Whether that trade is worth it is the entire question, and for most buyers the maths points elsewhere.",
+      "## The verdict",
+      "The iPhone Air is a beautiful, deliberate, niche phone, not the default iPhone. Buy it if thin and light is your single highest priority and you are a light to moderate user who lives on the main camera. If you want the best value, the iPhone 17 is the smarter buy. If you want the most capable phone, the 17 Pro is only slightly dearer. The Air asks what you are willing to give up. For the right person the answer is not much, and gladly. For most people, it is more than I should have to. 3.5 out of 5."
+    ],
+    goDeeper: {
+      intro: "A concise spec sheet for the iPhone Air.",
+      specs: [
+        { label: "Thickness", value: "5.6mm" },
+        { label: "Weight", value: "165g" },
+        { label: "Display", value: "6.5-inch OLED, 120Hz" },
+        { label: "Chip", value: "A19 Pro, 12GB RAM" },
+        { label: "Rear camera", value: "Single 48MP camera with 1x and 2x crop" },
+        { label: "Front camera", value: "18MP" },
+        { label: "Battery", value: "3,149mAh, USB-C, MagSafe" },
+        { label: "Frame and resistance", value: "Grade 5 titanium, IP68" },
+        { label: "SIM", value: "eSIM only" },
+        { label: "Starting price", value: "999 US dollars for 256GB. Check current local pricing in Kenya before buying, because retailer prices move quickly." }
+      ]
+    },
+    verdict: {
+      score: "3.5/5",
+      summary:
+        "The iPhone Air is the most beautiful iPhone Apple has ever made and the nicest to hold, a genuine engineering achievement at 5.6mm and 165 grams. It is also a phone built on sacrifice: a single rear camera, the smallest battery in the range, and one speaker, at a price that sits awkwardly between two better options. Buy it if you are a light to moderate user who prizes design, comfort, and a phone that disappears in the pocket. Skip it if you are a photographer, gamer, heavy traveller, or power user.",
+      pros: [
+        "Stunning, genuinely thin and light design",
+        "Premium, durable titanium build",
+        "Bright 6.5-inch 120Hz display",
+        "Fast A19 Pro performance",
+        "Better battery than the pre-launch fear suggested"
+      ],
+      cons: [
+        "Only one rear camera, so no ultrawide, telephoto, or macro",
+        "Battery is fine but not for power users",
+        "A single speaker",
+        "Runs warm under sustained load",
+        "Priced too close to the iPhone 17 Pro"
+      ]
+    },
+    itemReviewed: "Apple iPhone Air",
+    inlineImages: [
+      {
+        id: "iphone-air-thin-design",
+        src: "/articles/iphone-air-display-and-thinness.jpg",
+        alt: "An iPhone Air standing upright to show its display and thin profile. Credit: Sam Rutherford.",
+        credit: "Sam Rutherford",
+        width: 720,
+        height: 480,
+        type: "image/jpeg"
+      },
+      {
+        id: "iphone-air-camera",
+        src: "/articles/iphone-air-camera.jpg",
+        alt: "The iPhone Air rear camera in close-up. Credit: Sam Rutherford.",
+        credit: "Sam Rutherford",
+        width: 720,
+        height: 480,
+        type: "image/jpeg"
+      },
+      {
+        id: "iphone-air-battery",
+        src: "/articles/iphone-air-charging.jpg",
+        alt: "An iPhone Air next to Apple battery accessories. Credit: Sam Rutherford.",
+        credit: "Sam Rutherford",
+        width: 720,
+        height: 480,
+        type: "image/jpeg"
+      }
+    ],
+    faq: [
+      {
+        question: "Is the iPhone Air worth it?",
+        answer:
+          "It is worth it if thinness and comfort are your top priority and you are a light to moderate user. Most people get better value from the iPhone 17 or more capability from the 17 Pro."
+      },
+      {
+        question: "Does the iPhone Air have good battery life?",
+        answer:
+          "It lasts a day of moderate use, better than many feared, but it trails the Pro models. Heavy users will want Apple's Air MagSafe Battery."
+      },
+      {
+        question: "How many cameras does the iPhone Air have?",
+        answer: "One 48-megapixel rear camera with 1x and 2x framing, with no ultrawide or telephoto, plus an 18-megapixel front camera."
+      },
+      {
+        question: "How thin is the iPhone Air?",
+        answer: "It is 5.6mm thick and weighs 165 grams, making it Apple's thinnest and lightest iPhone."
+      },
+      {
+        question: "iPhone Air vs iPhone 17 vs 17 Pro?",
+        answer:
+          "The iPhone 17 costs 200 dollars less with two cameras. The 17 Pro costs 100 dollars more with three cameras, a bigger battery, and better cooling. The Air's real advantage is thinness and weight."
+      }
+    ],
+    sources: [
+      { label: "Apple iPhone Air", url: "https://www.apple.com/iphone-air/" },
+      { label: "Apple iPhone comparison", url: "https://www.apple.com/iphone/compare/" },
+      { label: "Tom's Guide iPhone Air review", url: "https://www.tomsguide.com/phones/iphones/iphone-air-review" }
+    ],
+    updatedAt: new Date(Date.UTC(2026, 6, 2, 6, 0, 0)).toISOString(),
+    readTime: "8 min read"
+  }
+};
+
 function slugify(value: string) {
   return value
     .toLowerCase()
@@ -162,6 +315,8 @@ function stableIndex(value: string, size: number) {
 }
 
 function imageForArticle(slug: string, tags: Tag[]) {
+  const override = imageOverrides[slug];
+  if (override) return override;
   const topic = tags.find((tag) => tag.kind === "topic")?.slug ?? "fallback";
   const pool = imagePools[topic] ?? imagePools.fallback;
   return pool[stableIndex(slug, pool.length)]!;
@@ -270,8 +425,9 @@ export function loadDraftArticles({
       const excerpt = stripEditorialNotes(firstSentence(body[0] ?? rawWhyItMatters));
       const subhead = stripEditorialNotes(firstSentence(rawWhyItMatters));
       const whyItMatters = conciseWhyItMatters(rawWhyItMatters, subhead);
+      const articleOverride = articleOverrides[slug];
 
-      return {
+      const article: Article = {
         id: String(200 + index + 1),
         slug,
         format,
@@ -290,5 +446,6 @@ export function loadDraftArticles({
         tags,
         deal: dealForArticle(title, slug, format)
       };
+      return articleOverride ? { ...article, ...articleOverride } : article;
     });
 }

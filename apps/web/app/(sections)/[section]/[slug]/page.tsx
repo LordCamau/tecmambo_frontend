@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { draftMode } from "next/headers";
-import type { GlossaryTerm } from "@/lib/types";
+import type { Article, GlossaryTerm } from "@/lib/types";
 import { formats, articlePath } from "@/lib/formats";
 import { getArticleBySlug, getArticles, getGlossaryTerms, getRelatedArticles } from "@/lib/content";
 import { getCmsArticleBySlug } from "@/lib/cms/source";
@@ -28,13 +28,31 @@ export const revalidate = 300;
 
 function ArticleBodyBlock({
   paragraph,
+  inlineImages,
   glossaryTerms,
   glossaryState
 }: {
   paragraph: string;
+  inlineImages?: Article["inlineImages"];
   glossaryTerms: GlossaryTerm[];
   glossaryState: GlossaryLinkState;
 }) {
+  const inlineImageId = paragraph.match(/^\[\[image:([a-z0-9-]+)\]\]$/)?.[1];
+  const inlineImage = inlineImageId ? inlineImages?.find((image) => image.id === inlineImageId) : undefined;
+  if (inlineImage) {
+    return (
+      <figure className={styles.inlineImage}>
+        <Image
+          src={inlineImage.src}
+          alt={inlineImage.alt}
+          width={inlineImage.width ?? 1200}
+          height={inlineImage.height ?? 675}
+          sizes="(min-width: 920px) 720px, calc(100vw - 32px)"
+        />
+        <figcaption>{inlineImage.credit}</figcaption>
+      </figure>
+    );
+  }
   if (paragraph.startsWith("## ")) {
     return <h2>{paragraph.slice(3)}</h2>;
   }
@@ -217,7 +235,13 @@ export default async function ArticlePage({ params }: { params: Params }) {
           </section>
         ) : null}
         {article.body.map((paragraph) => (
-          <ArticleBodyBlock paragraph={paragraph} glossaryTerms={glossaryTerms} glossaryState={glossaryState} key={paragraph} />
+          <ArticleBodyBlock
+            paragraph={paragraph}
+            inlineImages={article.inlineImages}
+            glossaryTerms={glossaryTerms}
+            glossaryState={glossaryState}
+            key={paragraph}
+          />
         ))}
         {article.goDeeper ? <GoDeeper intro={article.goDeeper.intro} specs={article.goDeeper.specs} /> : null}
         {article.faq?.length ? (

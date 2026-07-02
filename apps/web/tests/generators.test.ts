@@ -39,6 +39,101 @@ describe("content generators", () => {
     );
   });
 
+  it("uses the Google Glow image for the phone overheating explainer", () => {
+    const story = articles.find((article) => article.slug === "why-your-phone-gets-hot-when-you-charge-and-use-it-at-the-same-time");
+    expect(story?.image).toMatchObject({
+      src: "/articles/phone-overheating-while-charging.jpg",
+      credit: "Google Glow",
+      width: 1040,
+      height: 520,
+      type: "image/jpeg"
+    });
+    expect(articleSocialImage(story!)).toEqual({
+      url: "https://tecmambo.com/articles/phone-overheating-while-charging.jpg",
+      alt: "A person looking concerned while using a charging phone. Credit: Google Glow.",
+      width: 1040,
+      height: 520,
+      type: "image/jpeg"
+    });
+  });
+
+  it("publishes the conclusive iPhone Air review with verdict, FAQs, specs, and inline images", () => {
+    const story = articles.find((article) => article.slug === "iphone-air-review-the-iphone-that-asks-what-you-re-willing-to-give-up");
+    const schema = articleJsonLd(story!) as unknown as Record<string, unknown>;
+    const markdown = articleToMarkdown(story!);
+
+    expect(story).toBeTruthy();
+    expect(story?.title).toBe("iPhone Air review: the iPhone that asks what you're willing to give up");
+    expect(story?.author.name).toBe("Tim Humphreys");
+    expect(story?.format).toBe("review");
+    expect(story?.seo?.description).toBe(
+      "The iPhone Air is Apple's thinnest, most beautiful iPhone. After the hype, our verdict on the camera, battery, and whether it is worth the price."
+    );
+    expect(story?.whyItMatters).toBe(
+      "The iPhone Air is the most beautiful iPhone Apple has made, but beauty this thin is paid for in cameras, battery, and sound. Knowing exactly what you give up is the whole decision."
+    );
+    expect(story?.verdict).toMatchObject({ score: "3.5/5" });
+    expect(story?.verdict?.pros).toHaveLength(5);
+    expect(story?.verdict?.cons).toHaveLength(5);
+    expect(story?.faq).toHaveLength(5);
+    expect(story?.image).toMatchObject({
+      src: "/articles/iphone-air-review.jpg",
+      alt: "Apple iPhone Air product image. Credit: MyAppleStore.",
+      credit: "MyAppleStore",
+      width: 1040,
+      height: 520,
+      type: "image/jpeg"
+    });
+    expect(story?.inlineImages).toHaveLength(3);
+    expect(story?.inlineImages).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          src: "/articles/iphone-air-display-and-thinness.jpg",
+          credit: "Sam Rutherford",
+          width: 720,
+          height: 480
+        }),
+        expect.objectContaining({
+          src: "/articles/iphone-air-camera.jpg",
+          credit: "Sam Rutherford",
+          width: 720,
+          height: 480
+        }),
+        expect.objectContaining({
+          src: "/articles/iphone-air-charging.jpg",
+          credit: "Sam Rutherford",
+          width: 720,
+          height: 480
+        })
+      ])
+    );
+    expect(story?.goDeeper?.specs).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ label: "Thickness", value: "5.6mm" }),
+        expect.objectContaining({ label: "Starting price", value: expect.stringContaining("999 US dollars") })
+      ])
+    );
+    expect(story?.body).toEqual(expect.arrayContaining(["## Design and thinness", "## Camera", "## Battery life", "## The verdict"]));
+    expect(story?.body.join(" ")).not.toMatch(/must be treated as a draft|first thing to test|second question|third question/i);
+    expect(markdown).toContain("![An iPhone Air standing upright to show its display and thin profile. Credit: Sam Rutherford.]");
+    expect(markdown).toContain("Image credit: Sam Rutherford");
+    expect(markdown).not.toContain("[[image:");
+    expect(articleSocialImage(story!)).toEqual({
+      url: "https://tecmambo.com/articles/iphone-air-review.jpg",
+      alt: "Apple iPhone Air product image. Credit: MyAppleStore.",
+      width: 1040,
+      height: 520,
+      type: "image/jpeg"
+    });
+    expect(schema["@type"]).toBe("Review");
+    expect(schema.reviewRating).toMatchObject({
+      "@type": "Rating",
+      ratingValue: "3.5",
+      bestRating: "5"
+    });
+    expect(schema.itemReviewed).toMatchObject({ "@type": "Product", name: "Apple iPhone Air" });
+  });
+
   it("builds JSON Feed items", () => {
     const feed = buildJsonFeed(articles);
     expect(feed.version).toBe("https://jsonfeed.org/version/1.1");

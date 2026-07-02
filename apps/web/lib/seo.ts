@@ -186,7 +186,7 @@ export function articleJsonLd(article: Article): WithContext<SchemaArticle | Rev
       description,
       url,
       ...sharedArticleFields,
-      itemReviewed: { "@type": "Product", name: article.title.replace(/\sreview:.+$/i, "") },
+      itemReviewed: { "@type": "Product", name: article.itemReviewed ?? article.title.replace(/\sreview:.+$/i, "") },
       reviewRating: {
         "@type": "Rating",
         ratingValue: firstNumeric(article.verdict.score),

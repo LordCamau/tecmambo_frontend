@@ -24,9 +24,11 @@ export function renderedArticleFields(article: Article) {
     article.verdict?.summary ?? "",
     ...(article.verdict?.pros ?? []),
     ...(article.verdict?.cons ?? []),
+    article.itemReviewed ?? "",
     ...(article.faq?.flatMap((faq) => [faq.question, faq.answer]) ?? []),
     ...(article.itemList ?? []),
     article.image.alt,
+    ...(article.inlineImages?.flatMap((image) => [image.alt, image.credit]) ?? []),
     ...(article.sources?.flatMap((source) => [source.label, source.url]) ?? []),
     ...(article.regions?.flatMap((region) => [region.name, region.description]) ?? [])
   ];

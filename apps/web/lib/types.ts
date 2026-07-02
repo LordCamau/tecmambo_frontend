@@ -77,6 +77,7 @@ export type Article = {
     pros: string[];
     cons: string[];
   };
+  itemReviewed?: string;
   author: Author;
   publishedAt: string;
   updatedAt: string;
@@ -89,6 +90,15 @@ export type Article = {
     height?: number;
     type?: string;
   };
+  inlineImages?: Array<{
+    id: string;
+    src: string;
+    alt: string;
+    credit: string;
+    width?: number;
+    height?: number;
+    type?: string;
+  }>;
   tags: Tag[];
   regions?: RegionTerm[];
   faq?: Array<{ question: string; answer: string }>;
