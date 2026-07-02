@@ -91,8 +91,8 @@ function FeatureLane({ lane }: { lane: HomeLane }) {
 export default async function HomePage() {
   const curation = await getHomeCuration();
   const { hero } = curation;
-  const supportingStories = curation.latestRail.slice(0, 2);
-  const topStories = curation.latestRail.slice(2, 7);
+  const supportingStories = curation.supportingStories;
+  const topStories = curation.latestRail;
   const laneByKey = new Map(curation.lanes.map((lane) => [lane.key, lane]));
   const renderLane = (key: string) => {
     const lane = laneByKey.get(key);
@@ -188,10 +188,7 @@ export default async function HomePage() {
         {renderLane("news")}
         {renderLane("smartphones")}
         {renderLane("reviews")}
-      </Suspense>
-
-      <Suspense>
-        {renderLane("africa")}
+        {renderLane("mobility")}
       </Suspense>
 
       <section className={`container ${styles.teachingLane}`}>
@@ -221,6 +218,7 @@ export default async function HomePage() {
       </section>
 
       <Suspense>
+        {renderLane("africa")}
         {renderLane("wallet")}
         {renderLane("business")}
       </Suspense>
@@ -234,7 +232,6 @@ export default async function HomePage() {
         {renderLane("real-life")}
         {renderLane("ai")}
         {renderLane("evergreen")}
-        {renderLane("mobility")}
       </Suspense>
     </div>
   );

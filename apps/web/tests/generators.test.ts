@@ -14,6 +14,7 @@ import { africaLeadRegionSlugs, africanRegions, getAfricaArticles } from "../lib
 import { africaHubToMarkdown, countryHubToMarkdown } from "../content/region-markdown";
 import { articleJsonLd, articleSocialImage } from "../lib/seo";
 import { megaNavItems, moreLinks } from "../lib/nav";
+import { curateHomeContent } from "../lib/home-curation";
 
 describe("content generators", () => {
   it("keeps Africa and Compare Phones as first-level navigation items", () => {
@@ -29,6 +30,50 @@ describe("content generators", () => {
       "More"
     ]);
     expect(moreLinks.map((link) => link.label)).not.toEqual(expect.arrayContaining(["Africa", "Compare Phones"]));
+  });
+
+  it("curates the homepage in the requested order without repeating highlighted articles", () => {
+    const curation = curateHomeContent(articles, glossaryTerms);
+    const uniqueLatestArticles = articles.filter((article, index, source) => source.findIndex((item) => item.image.src === article.image.src) === index);
+    const homepageArticleIds = [
+      curation.hero.id,
+      ...curation.supportingStories.map((article) => article.id),
+      ...curation.latestRail.map((article) => article.id),
+      ...curation.lanes.flatMap((lane) => lane.articles.map((article) => article.id))
+    ];
+
+    expect([curation.hero, ...curation.supportingStories].map((article) => article.id)).toEqual(
+      uniqueLatestArticles.slice(0, 3).map((article) => article.id)
+    );
+    expect(curation.supportingStories).toHaveLength(2);
+    expect(curation.latestRail).toHaveLength(5);
+    expect(curation.lanes.map((lane) => lane.key)).toEqual([
+      "news",
+      "smartphones",
+      "reviews",
+      "mobility",
+      "explains",
+      "africa",
+      "wallet",
+      "business",
+      "real-life",
+      "ai",
+      "evergreen"
+    ]);
+    expect(curation.lanes.map((lane) => `${lane.eyebrow}: ${lane.title}`)).toEqual([
+      "Should you care?: News that changes what you do next",
+      "Smartphones: Phones in plain English",
+      "Reviews: Verdicts first, specs second",
+      "EVs & Mobility: How transport tech moves in real life",
+      "MAMBO Explains + Glossary: Start with the words, then the idea",
+      "Region layer: Tech across Africa",
+      "Wallet Watch: Useful deals and budget picks",
+      "Business: Startups and the industry behind the screen",
+      "MAMBO vs Real Life: Field tests after the promise",
+      "AI: Useful AI, without the stage smoke",
+      "In case you missed it: More from tecMAMBO"
+    ]);
+    expect(new Set(homepageArticleIds).size).toBe(homepageArticleIds.length);
   });
 
   it("builds RSS with canonical article links", () => {
