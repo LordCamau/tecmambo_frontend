@@ -84,6 +84,13 @@ const cookiebotId = process.env.NEXT_PUBLIC_COOKIEBOT_ID;
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2185730745955280"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className={`${spaceGrotesk.variable} ${spaceMono.variable} ${inter.variable}`}>
         <ThemeProvider>
           <Script
