@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -26,16 +27,52 @@ type Params = Promise<{ section: string; slug: string }>;
 export const dynamicParams = true;
 export const revalidate = 300;
 
+const pricePattern =
+  /(?:\b(?:KSh|KES|USD)\s?\d[\d,]*(?:\.\d+)?\b|\b\d[\d,.]*(?:\s+to\s+\d[\d,.]*)?\s+(?:US\s+dollars?|dollars?)\b)/g;
+
+function highlightPriceText(text: string, keyPrefix: string): ReactNode[] {
+  const nodes: ReactNode[] = [];
+  let cursor = 0;
+
+  for (const match of text.matchAll(pricePattern)) {
+    const value = match[0];
+    const start = match.index ?? 0;
+    const end = start + value.length;
+
+    if (start > cursor) nodes.push(text.slice(cursor, start));
+    nodes.push(
+      <span className={styles.priceHighlight} key={`${keyPrefix}-price-${start}`}>
+        {value}
+      </span>
+    );
+    cursor = end;
+  }
+
+  if (cursor < text.length) nodes.push(text.slice(cursor));
+  return nodes.length ? nodes : [text];
+}
+
+function highlightPriceNodes(nodes: ReactNode[], enabled: boolean, keyPrefix: string): ReactNode[] {
+  if (!enabled) return nodes;
+  return nodes.flatMap((node, index) => (typeof node === "string" ? highlightPriceText(node, `${keyPrefix}-${index}`) : [node]));
+}
+
+function isPhoneReview(article: Article) {
+  return article.format === "review" && article.tags.some((tag) => tag.kind === "topic" && ["phones", "smartphones"].includes(tag.slug));
+}
+
 function ArticleBodyBlock({
   paragraph,
   inlineImages,
   glossaryTerms,
-  glossaryState
+  glossaryState,
+  highlightPrices
 }: {
   paragraph: string;
   inlineImages?: Article["inlineImages"];
   glossaryTerms: GlossaryTerm[];
   glossaryState: GlossaryLinkState;
+  highlightPrices: boolean;
 }) {
   const inlineImageId = paragraph.match(/^\[\[image:([a-z0-9-]+)\]\]$/)?.[1];
   const inlineImage = inlineImageId ? inlineImages?.find((image) => image.id === inlineImageId) : undefined;
@@ -59,7 +96,7 @@ function ArticleBodyBlock({
   if (paragraph.startsWith("### ")) {
     return <h3>{paragraph.slice(4)}</h3>;
   }
-  return <p>{renderGlossaryText(paragraph, glossaryTerms, glossaryState)}</p>;
+  return <p>{highlightPriceNodes(renderGlossaryText(paragraph, glossaryTerms, glossaryState), highlightPrices, paragraph)}</p>;
 }
 
 export async function generateStaticParams() {
@@ -160,6 +197,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
   const [related, glossaryTerms] = await Promise.all([getRelatedArticles(article), getGlossaryTerms()]);
   const format = formats[article.format];
   const glossaryState: GlossaryLinkState = { seen: new Set(), count: 0, max: 12 };
+  const highlightReviewPrices = isPhoneReview(article);
 
   return (
     <article className={styles.article}>
@@ -240,10 +278,17 @@ export default async function ArticlePage({ params }: { params: Params }) {
             inlineImages={article.inlineImages}
             glossaryTerms={glossaryTerms}
             glossaryState={glossaryState}
+            highlightPrices={highlightReviewPrices}
             key={paragraph}
           />
         ))}
-        {article.goDeeper ? <GoDeeper intro={article.goDeeper.intro} specs={article.goDeeper.specs} /> : null}
+        {article.goDeeper ? (
+          <GoDeeper
+            intro={article.goDeeper.intro}
+            specs={article.goDeeper.specs}
+            renderText={highlightReviewPrices ? highlightPriceText : undefined}
+          />
+        ) : null}
         {article.faq?.length ? (
           <section className={styles.faq} aria-labelledby="article-faq-title">
             <h2 id="article-faq-title">FAQ</h2>
