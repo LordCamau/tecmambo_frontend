@@ -5,10 +5,10 @@ import { useEffect, useState } from "react";
 import styles from "./AuroraIntro.module.css";
 
 const INTRO_STORAGE_KEY = "tecmambo_intro_seen";
-const INTRO_SEQUENCE_MS = 2260;
-const INTRO_REDUCED_MS = 420;
-const INTRO_MAX_MS = 2500;
-const INTRO_EXIT_MS = 260;
+const INTRO_SEQUENCE_MS = 5900;
+const INTRO_REDUCED_MS = 1200;
+const INTRO_MAX_MS = 7000;
+const INTRO_EXIT_MS = 500;
 
 export function AuroraIntro() {
   const [mounted, setMounted] = useState(true);
@@ -45,6 +45,8 @@ export function AuroraIntro() {
       }, INTRO_EXIT_MS);
     };
 
+    const skipIntro = () => dismiss();
+
     const dismissWhenReady = () => {
       if (!ready) return;
       const elapsed = performance.now() - startedAt;
@@ -58,6 +60,8 @@ export function AuroraIntro() {
 
     const hardCap = window.setTimeout(dismiss, Math.max(0, INTRO_MAX_MS - (performance.now() - startedAt)));
     const sequenceDone = window.setTimeout(dismissWhenReady, Math.max(0, minimumDuration - (performance.now() - startedAt)));
+    window.addEventListener("pointerdown", skipIntro, { passive: true });
+    window.addEventListener("keydown", skipIntro);
 
     if (ready) {
       dismissWhenReady();
@@ -69,6 +73,8 @@ export function AuroraIntro() {
       window.clearTimeout(hardCap);
       window.clearTimeout(sequenceDone);
       window.removeEventListener("load", revealWhenReady);
+      window.removeEventListener("pointerdown", skipIntro);
+      window.removeEventListener("keydown", skipIntro);
     };
   }, []);
 
@@ -82,7 +88,7 @@ export function AuroraIntro() {
           <span className={styles.auroraResolve} />
         </div>
         <p className={styles.tagline}>
-          <span>Made to be</span>
+          <span className={styles.fixedPhrase}>Made to be</span>
           <span className={styles.wordViewport}>
             <span className={styles.wordStack}>
               <span>clear</span>
