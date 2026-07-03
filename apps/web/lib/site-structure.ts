@@ -55,6 +55,8 @@ export const topicArchives: Record<string, TopicArchive[]> = {
     { label: "Social Media", slug: "social-media", canonicalTopic: "social-media", description: "Social platform changes translated into everyday impact." },
     { label: "Entertainment", slug: "entertainment", canonicalTopic: "entertainment", description: "Streaming, games, and culture-adjacent tech news." },
     { label: "EVs & Mobility", slug: "evs-mobility", canonicalTopic: "evs-mobility", description: "Electric mobility and transport tech, calmly sorted." },
+    { label: "Wearables", slug: "wearables", canonicalTopic: "wearables", description: "Watch and wearable news, translated into practical buying context." },
+    { label: "Audio", slug: "audio", canonicalTopic: "audio", description: "Earbuds, headphones, codecs, and listening tech without the spec fog." },
     { label: "Cybersecurity", slug: "cybersecurity", canonicalTopic: "cybersecurity", description: "Security, scams, privacy, and digital safety explained plainly." }
   ],
   reviews: [
