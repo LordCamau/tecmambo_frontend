@@ -26,6 +26,8 @@ export const topicAliases: Record<string, string[]> = {
   wearables: ["wearables", "audio"],
   "smart-homes": ["smart-homes", "smart-home"],
   startups: ["startups"],
+  fintech: ["fintech"],
+  cybersecurity: ["cybersecurity"],
   audio: ["audio"],
   connectivity: ["connectivity"],
   "power-batteries": ["power-batteries"],
@@ -52,7 +54,8 @@ export const topicArchives: Record<string, TopicArchive[]> = {
     { label: "Computing", slug: "computing", canonicalTopic: "computing", description: "Laptop, PC, chip, and work-device news." },
     { label: "Social Media", slug: "social-media", canonicalTopic: "social-media", description: "Social platform changes translated into everyday impact." },
     { label: "Entertainment", slug: "entertainment", canonicalTopic: "entertainment", description: "Streaming, games, and culture-adjacent tech news." },
-    { label: "EVs & Mobility", slug: "evs-mobility", canonicalTopic: "evs-mobility", description: "Electric mobility and transport tech, calmly sorted." }
+    { label: "EVs & Mobility", slug: "evs-mobility", canonicalTopic: "evs-mobility", description: "Electric mobility and transport tech, calmly sorted." },
+    { label: "Cybersecurity", slug: "cybersecurity", canonicalTopic: "cybersecurity", description: "Security, scams, privacy, and digital safety explained plainly." }
   ],
   reviews: [
     { label: "Smartphones", slug: "smartphones", canonicalTopic: "smartphones", description: "Phone reviews with practical verdicts first." },
@@ -66,7 +69,12 @@ export const topicArchives: Record<string, TopicArchive[]> = {
     { label: "Smart Homes", slug: "smart-homes", canonicalTopic: "smart-homes", description: "Smart home gear worth paying attention to." },
     { label: "Wearables", slug: "wearables", canonicalTopic: "wearables", description: "Wearables and audio deals with the hype removed." }
   ],
-  business: [{ label: "Startups", slug: "startups", canonicalTopic: "startups", description: "Startup and industry stories for builders and buyers." }]
+  business: [
+    { label: "Startups", slug: "startups", canonicalTopic: "startups", description: "Startup and industry stories for builders and buyers." },
+    { label: "Fintech", slug: "fintech", canonicalTopic: "fintech", description: "Digital finance, payments, and the companies moving money around." },
+    { label: "AI", slug: "ai", canonicalTopic: "ai", description: "AI business stories with the pitch deck translated into plain English." },
+    { label: "Connectivity", slug: "connectivity", canonicalTopic: "connectivity", description: "Telecoms, networks, and the infrastructure behind digital life." }
+  ]
 };
 
 export const wearableFilters: TopicArchive[] = [

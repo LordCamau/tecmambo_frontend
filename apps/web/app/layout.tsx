@@ -7,6 +7,7 @@ import { AuroraIntro } from "@/components/brand/AuroraIntro";
 import { CookieConsent } from "@/components/consent/CookieConsent";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
+import { ImageProtection } from "@/components/media/ImageProtection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { consentModeDenied } from "@/lib/cookie-consent";
@@ -140,6 +141,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main id="main">{children}</main>
           <SiteFooter />
           <CookieConsent />
+          <ImageProtection />
         </ThemeProvider>
         <JsonLd data={organizationJsonLd()} />
         <JsonLd data={websiteJsonLd()} />

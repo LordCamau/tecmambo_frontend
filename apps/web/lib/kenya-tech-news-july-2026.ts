@@ -20,10 +20,15 @@ function published(hour: number) {
 export function buildKenyaTechNewsArticles({ authors, topics, brands, kenya }: BuildKenyaTechNewsArgs): Article[] {
   const tim = bySlug(authors, "tim-humphreys");
   const ai = bySlug(topics, "ai");
+  const apps = bySlug(topics, "apps");
   const business = bySlug(topics, "business");
   const connectivity = bySlug(topics, "connectivity");
+  const cybersecurity = bySlug(topics, "cybersecurity");
   const fintech = bySlug(topics, "fintech");
   const smartphones = bySlug(topics, "smartphones");
+  const startups = bySlug(topics, "startups");
+  const airtel = bySlug(brands, "airtel");
+  const google = bySlug(brands, "google");
   const microsoft = bySlug(brands, "microsoft");
   const safaricom = bySlug(brands, "safaricom");
   const vodacom = bySlug(brands, "vodacom");
@@ -78,8 +83,8 @@ export function buildKenyaTechNewsArticles({ authors, topics, brands, kenya }: B
       readTime: "5 min read",
       image: {
         src: "/articles/vodacom-safaricom-majority-control.jpg",
-        alt: "Safaricom headquarters beside the Vodacom logo. Credit: Safaricom.co.ke.",
-        credit: "Safaricom.co.ke",
+        alt: "Safaricom and Vodacom branding in a modern office lobby. Credit: tecMAMBO.",
+        credit: "tecMAMBO",
         width: 1040,
         height: 520,
         type: "image/jpeg"
@@ -309,6 +314,365 @@ export function buildKenyaTechNewsArticles({ authors, topics, brands, kenya }: B
         {
           label: "Pathways Technologies: AI National Skilling Programme",
           url: "https://pathwaystechnologies.com/ai-national-skilling-program/"
+        }
+      ]
+    },
+    {
+      id: "kenya-news-nifc-certifies-15-tech-ai-firms",
+      slug: "nifc-certifies-15-tech-ai-firms",
+      format: "business",
+      title: "Nairobi hub certifies 15 tech and AI firms, eyes Sh26bn",
+      seo: {
+        title: "Nairobi hub certifies 15 tech and AI firms, eyes Sh26bn",
+        description:
+          "The Nairobi International Financial Centre has certified 15 new firms in AI, fintech and digital assets, targeting Sh25.9 billion and 1,000 jobs."
+      },
+      subhead:
+        "The Nairobi International Financial Centre added 15 firms in one go, weighted toward AI, fintech, and digital assets, as Kenya pitches itself as the continent's financial gateway.",
+      excerpt:
+        "Kenya's Nairobi International Financial Centre has certified 15 firms in AI, fintech, digital assets, and capital markets, with projected investment of about Sh25.9 billion.",
+      whyItMatters:
+        "Kenya is trying to become the place advanced digital finance and AI companies choose to set up in Africa. Who those firms are, and whether they deliver, shapes the jobs and investment that follow.",
+      body: [
+        "Kenya's Nairobi International Financial Centre has certified 15 new firms in a single move, in a push to position Nairobi as a regulated home for advanced digital finance and artificial intelligence in Africa.",
+        "The certified companies are expected to mobilise more than 200 million US dollars, about Sh25.9 billion, and create over 1,000 direct and indirect jobs if the promised activity turns into offices, hires, and operating businesses.",
+        "The new cohort leans heavily toward the technologies shaping modern finance. It spans artificial intelligence, fintech, digital payments, digital assets and tokenised securities, carbon and climate finance, insurance, investment management, and capital markets infrastructure.",
+        "Among the names in the cohort are the digital asset platform Valor Capital, ReportsAI, Afrex Technologies, and Onfon Mobile, alongside firms such as Bupa Global Insurance, Etica Capital, Giraffe Bioenergy, and Africa First Exchange.",
+        "Certification is not just a badge. Firms admitted to the NIFC set up physical offices in Kenya and gain access to state incentives, including tax holidays, in exchange for basing operations in the country.",
+        "NIFC Chief Executive Daniel Mainda framed each certification as a vote of confidence in Kenya's regulatory environment and its ambition to build the ecosystem that will define the next generation of finance in Africa.",
+        "The context is a country moving deliberately. Established under a 2017 law but slow to start, the NIFC now has dozens of firms on its books after new incentives introduced last year drew fresh interest, and it has signed cooperation agreements with financial centres in Qatar, Kazakhstan, and Morocco.",
+        "The clear intent is to make Nairobi a regulated safe harbour for the parts of finance, digital assets and AI-powered services that many markets are still nervous about.",
+        "The honest caveat is the one that applies to every investment-target headline: certified commitments are projections, not banked capital. The real measure will be how quickly these firms turn certification into offices, hires, and activity that reaches the wider economy."
+      ],
+      closingLine:
+        "For now, the direction is confident, and the concentration of AI and digital-asset firms is a useful signal of where Kenya wants to compete.",
+      faq: [
+        {
+          question: "What did the NIFC announce?",
+          answer:
+            "It certified 15 new firms expected to mobilise more than 200 million US dollars, about Sh25.9 billion, and create over 1,000 jobs, weighted toward AI, fintech, and digital assets."
+        },
+        {
+          question: "What do certified NIFC firms get?",
+          answer:
+            "Certified firms can access state incentives, including tax holidays, in return for setting up physical operations in Kenya."
+        }
+      ],
+      author: tim,
+      publishedAt: new Date(Date.UTC(2026, 6, 2, 12, 0, 0)).toISOString(),
+      updatedAt: new Date(Date.UTC(2026, 6, 2, 12, 0, 0)).toISOString(),
+      readTime: "4 min read",
+      image: {
+        src: "/articles/nifc-certifies-15-tech-ai-firms.jpg",
+        alt: "A Nairobi International Financial Centre official speaking at a podium. Credit: Francis Nderitu | NMG.",
+        credit: "Francis Nderitu | NMG",
+        width: 1040,
+        height: 520,
+        type: "image/jpeg"
+      },
+      tags: [fintech, ai, startups],
+      regions: [kenya],
+      sources: [
+        {
+          label: "Nairobi International Financial Centre",
+          url: "https://nifc.ke/"
+        },
+        {
+          label: "Business Daily",
+          url: "https://www.businessdailyafrica.com/"
+        },
+        {
+          label: "Capital FM",
+          url: "https://www.capitalfm.co.ke/business/"
+        },
+        {
+          label: "Citizen Digital",
+          url: "https://www.citizen.digital/"
+        }
+      ]
+    },
+    {
+      id: "kenya-news-safaricom-sale-infrastructure-fund",
+      slug: "safaricom-sale-244-billion-infrastructure-fund",
+      format: "business",
+      title: "Government banks Sh244.5bn from the Safaricom sale",
+      seo: {
+        title: "Government banks Sh244.5bn from the Safaricom sale",
+        description:
+          "Kenya has received Sh244.5 billion from the Vodacom Safaricom deal, seeding a new National Infrastructure Fund. Here is the breakdown, and the controversy."
+      },
+      subhead:
+        "The completed Vodacom takeover has delivered Sh244.5 billion to the Treasury, earmarked for roads, energy, water, and airports. Not everyone agrees it was a good deal.",
+      excerpt:
+        "Kenya has received about Sh244.5 billion from the Vodacom Safaricom transaction, with the money headed into the National Infrastructure Fund.",
+      whyItMatters:
+        "This is one of the largest cash injections the Kenyan state has ever received in one go. Where it goes, and whether the country got fair value, affects every taxpayer.",
+      body: [
+        "The Kenyan government has received about Sh244.5 billion from the sale of part of its Safaricom stake to South Africa's Vodacom, one of the largest single cash injections the state has ever banked.",
+        "The money is being channelled into the newly created National Infrastructure Fund, the same vehicle that received about Sh103 billion from the Kenya Pipeline Company listing.",
+        "The figure breaks down in two parts. The government sold roughly 6 billion Safaricom shares, a 15% stake, at Sh34 each, raising about Sh204.3 billion.",
+        "On top of that, Vodacom paid an advance dividend of about Sh40.2 billion, a prepayment tied to the government's remaining shares, bringing the total to Sh244.5 billion.",
+        "The share sale was executed as a block trade on the Nairobi Securities Exchange on June 30, the largest single transaction in the bourse's history, pushing that day's turnover to around Sh208 billion.",
+        "With the deal done, Vodacom's effective stake in Safaricom rises to 55%, giving it majority control, while the government keeps 20%. Safaricom remains listed on the NSE.",
+        "The Treasury says the proceeds will fund roads, energy, water, and airports, part of President William Ruto's ambition to raise money for infrastructure without piling on more debt. Cabinet Secretary John Mbadi has stressed that Kenya remains Safaricom's home.",
+        "It was not a smooth sale. The transaction was contested in court over both its price and the wisdom of handing majority control of a strategic national asset to a foreign company.",
+        "Petitioners argued the state undervalued Safaricom, and an expert affidavit filed in a constitutional petition alleged the country left a very large sum on the table. That remains an attributed court allegation, not a settled finding.",
+        "The government rejects the criticism, pointing to a share price it says carried a premium over the recent market average, and to conditions it secured, including keeping Safaricom's data in Kenya, retaining board seats, and requiring a Kenyan chief executive.",
+        "For ownership context, this follows Vodacom's completed move to majority control of Safaricom. The headline is simple, and the questions underneath it are not: the state has a rare windfall, but fair value and disciplined spending are what deserve scrutiny next."
+      ],
+      closingLine:
+        "The next test is not whether the money arrived. It is whether the infrastructure fund spends it in a way Kenyans can actually see and measure.",
+      faq: [
+        {
+          question: "How much did the government get from the Safaricom sale?",
+          answer:
+            "About Sh244.5 billion, made up of roughly Sh204.3 billion for the 15% stake plus about Sh40.2 billion in advance dividend."
+        },
+        {
+          question: "Where is the Safaricom sale money going?",
+          answer: "Into the National Infrastructure Fund, earmarked for roads, energy, water, and airports."
+        },
+        {
+          question: "Does the government still own part of Safaricom?",
+          answer: "Yes. The Government of Kenya retains a 20% stake, and Safaricom remains listed on the Nairobi Securities Exchange."
+        }
+      ],
+      author: tim,
+      publishedAt: new Date(Date.UTC(2026, 6, 2, 11, 0, 0)).toISOString(),
+      updatedAt: new Date(Date.UTC(2026, 6, 2, 11, 0, 0)).toISOString(),
+      readTime: "5 min read",
+      image: {
+        src: "/articles/safaricom-sale-244-billion-infrastructure-fund.jpg",
+        alt: "Safaricom and Vodacom branding beside the Kenyan coat of arms. Credit: tecMAMBO.",
+        credit: "tecMAMBO",
+        width: 1040,
+        height: 520,
+        type: "image/jpeg"
+      },
+      tags: [business, fintech, safaricom, vodacom],
+      regions: [kenya],
+      sources: [
+        {
+          label: "Business Daily",
+          url: "https://www.businessdailyafrica.com/"
+        },
+        {
+          label: "The Standard",
+          url: "https://www.standardmedia.co.ke/business"
+        },
+        {
+          label: "Vodacom Group",
+          url: "https://www.vodacom.com/"
+        }
+      ]
+    },
+    {
+      id: "kenya-news-google-play-indie-games-fund-africa",
+      slug: "google-play-indie-games-fund-kenya",
+      format: "business",
+      title: "Google Play launches a Sh129m indie games fund for Africa",
+      seo: {
+        title: "Google Play launches a Sh129m indie games fund for Africa",
+        description:
+          "Google Play's first Indie Games Fund offers African studios, Kenya included, equity-free grants of up to Sh25.8 million. Here is how it works and how to apply."
+      },
+      subhead:
+        "Google Play's first Indie Games Fund for Africa puts 1 million dollars behind independent studios across 32 countries, Kenya among them, with grants that do not take a stake.",
+      excerpt:
+        "Google Play's first Indie Games Fund for Africa offers equity-free grants of 50,000 to 200,000 dollars to independent studios, with Kenya among eligible countries.",
+      whyItMatters:
+        "African game studios have the talent but rarely the capital. Equity-free money and mentorship, without giving up ownership, is exactly the gap this tries to fill.",
+      body: [
+        "Google Play has launched its first Indie Games Fund for Africa, committing 1 million US dollars, about Sh129 million, to help independent game studios across the continent grow their games and reach a global audience.",
+        "Kenyan developers are among those eligible, and applications are open now.",
+        "The appeal is in the structure. The money is equity-free, meaning selected studios keep full ownership of their businesses, and it comes with technical support and mentorship rather than just a cheque.",
+        "Individual studios can receive between 50,000 and 200,000 dollars, roughly Sh6.5 million to Sh25.8 million, to refine their games, strengthen their technical setup, and improve how discoverable they are on the platform.",
+        "The fund is pan-African, open to independent studios in 32 countries including Kenya, Nigeria, South Africa, Ghana, Tanzania, and Uganda.",
+        "To qualify, a studio must be registered in an eligible country, have 50 or fewer employees, and have already published at least one mobile, PC, or console game.",
+        "Successful applicants commit to putting their games on Google Play and joining the Google Play Pass programme for two years. Applications close on July 31, 2026, with the 10 chosen studios expected to be announced in September.",
+        "Google frames the initiative as tackling the biggest thing holding African studios back, which is not talent but access to capital. That is a fair diagnosis.",
+        "The continent has a lively, creative game-development scene and a strong storytelling culture, and the recurring obstacle has been money to turn a promising game into a sustainable business.",
+        "Whether 1 million dollars spread across ten studios moves the needle for the wider ecosystem is a fair question. For the developers who win backing, and for African stories reaching a global audience, it is still a real and welcome door."
+      ],
+      closingLine:
+        "If you already have a published game and a small studio, this is worth checking now, not the week applications close.",
+      faq: [
+        {
+          question: "What is the Google Play Indie Games Fund?",
+          answer:
+            "It is Google Play's first Africa-focused fund for independent game studios, offering equity-free grants of 50,000 to 200,000 dollars plus mentorship."
+        },
+        {
+          question: "Can Kenyan game developers apply?",
+          answer:
+            "Yes. Kenya is one of the eligible African countries. Studios need 50 or fewer employees and at least one published game."
+        },
+        {
+          question: "When is the application deadline?",
+          answer: "Applications close on July 31, 2026, with 10 selected studios expected to be announced in September."
+        }
+      ],
+      author: tim,
+      publishedAt: new Date(Date.UTC(2026, 6, 2, 10, 0, 0)).toISOString(),
+      updatedAt: new Date(Date.UTC(2026, 6, 2, 10, 0, 0)).toISOString(),
+      readTime: "4 min read",
+      image: {
+        src: "/articles/google-play-indie-games-fund-kenya.jpg",
+        alt: "A Google logo installation photographed from above. Credit: Avicena Fily A Kako.",
+        credit: "Avicena Fily A Kako",
+        width: 1040,
+        height: 520,
+        type: "image/jpeg"
+      },
+      tags: [apps, startups, google],
+      regions: [kenya],
+      sources: [
+        {
+          label: "Google Play",
+          url: "https://play.google.com/"
+        },
+        {
+          label: "Capital FM",
+          url: "https://www.capitalfm.co.ke/business/"
+        },
+        {
+          label: "Kenyans.co.ke",
+          url: "https://www.kenyans.co.ke/"
+        }
+      ]
+    },
+    {
+      id: "kenya-news-national-cybersecurity-agency-ai-threats",
+      slug: "kenya-national-cybersecurity-agency-ai-threats",
+      format: "news",
+      title: "Kenya backs a Cybersecurity Agency as AI fraud rises",
+      seo: {
+        title: "Kenya backs a Cybersecurity Agency as AI fraud rises",
+        description:
+          "As AI deepfakes and digital fraud grow, Kenya is standing up a National Cybersecurity Agency to protect eCitizen and critical systems. What it means."
+      },
+      subhead:
+        "With Parliament clearing a new National Cybersecurity Agency, the government is sharpening its defences against AI-generated deepfakes and fraud aimed at the digital economy.",
+      excerpt:
+        "Kenya is backing a National Cybersecurity Agency as AI-generated deepfakes, online fraud, and attacks on public digital services grow more sophisticated.",
+      whyItMatters:
+        "More of Kenyan life now runs through digital government platforms like eCitizen, so the systems protecting your data and money are national infrastructure, and they are under growing, smarter attack.",
+      body: [
+        "Kenya is moving to strengthen its digital defences as AI-powered threats grow, with the government backing the creation of a new National Cybersecurity Agency.",
+        "The plans were set out by Internal Security and National Administration Principal Secretary Raymond Omollo at the sixth annual Information Security Management Systems conference in Naivasha, held on July 1 and organised by the National Computer and Cybercrimes Coordination Committee and the Kenya Bureau of Standards.",
+        "Omollo welcomed Parliament's approval of the agency, saying it will improve national coordination, strengthen resilience, and sharpen Kenya's preparedness against evolving cyber threats.",
+        "His warning was pointed: as technology advances, the country is seeing AI-generated deepfakes, sophisticated misinformation campaigns, online fraud, and identity manipulation that threaten public trust and national security.",
+        "The stakes are clearest in how much of Kenyan life now runs online. Omollo pointed to the eCitizen platform, which now hosts more than 24,000 government services, serves over 15 million users, and processes about 500,000 transactions a day.",
+        "National security is no longer just about physical infrastructure. It now means protecting cloud systems, payment platforms, telecoms networks, and critical information that citizens depend on daily.",
+        "Existing measures already include the Computer Misuse and Cybercrimes Act and the 2024 critical infrastructure regulations, but the new agency is meant to give Kenya a more coordinated national response.",
+        "Omollo also pressed for Kenya to build and export its own cybersecurity solutions rather than only importing them.",
+        "The direction is sensible, because a coordinating agency is exactly what a fast-digitising country needs as its attack surface widens.",
+        "The real work is in the doing: staffing the agency, funding it, and turning conference commitments into protection that ordinary Kenyans feel when they log in to a government service or face a convincing AI-made scam."
+      ],
+      closingLine:
+        "The agency will be judged by whether it makes digital public services safer, not by how serious the launch language sounds.",
+      faq: [
+        {
+          question: "What is Kenya's National Cybersecurity Agency?",
+          answer:
+            "It is a newly approved body meant to coordinate the country's cyber defences, strengthen resilience, and improve preparedness against cyber threats."
+        },
+        {
+          question: "Why is Kenya creating it now?",
+          answer:
+            "Because AI-generated deepfakes, online fraud, misinformation, and attacks on digital platforms like eCitizen are rising as more of government and daily life moves online."
+        }
+      ],
+      author: tim,
+      publishedAt: new Date(Date.UTC(2026, 6, 2, 9, 0, 0)).toISOString(),
+      updatedAt: new Date(Date.UTC(2026, 6, 2, 9, 0, 0)).toISOString(),
+      readTime: "4 min read",
+      image: {
+        src: "/articles/kenya-national-cybersecurity-agency-ai-threats.jpg",
+        alt: "Dr. Raymond Omollo speaking at an information security conference. Credit: Dr. Raymond Omollo - CBS / x.com.",
+        credit: "Dr. Raymond Omollo - CBS / x.com",
+        width: 1040,
+        height: 520,
+        type: "image/jpeg"
+      },
+      tags: [cybersecurity, ai],
+      regions: [kenya],
+      sources: [
+        {
+          label: "Citizen Digital",
+          url: "https://www.citizen.digital/"
+        },
+        {
+          label: "The Star",
+          url: "https://www.the-star.co.ke/"
+        },
+        {
+          label: "People Daily",
+          url: "https://peopledaily.digital/"
+        }
+      ]
+    },
+    {
+      id: "kenya-news-nse-airtel-leadership-changes",
+      slug: "nse-airtel-kenya-leadership-changes",
+      format: "business",
+      title: "New leaders at the NSE and Airtel Kenya",
+      seo: {
+        title: "New leaders at the NSE and Airtel Kenya",
+        description:
+          "A big week of corporate change: Tom Mulwa takes over as NSE chairman and Djibril Tobe becomes Airtel Kenya's MD. Here is what each transition means."
+      },
+      subhead:
+        "Tom Mulwa becomes chairman of the Nairobi Securities Exchange, and Djibril Tobe takes over as Airtel Kenya's managing director, two changes at the top of Kenya's tech-business world.",
+      excerpt:
+        "The Nairobi Securities Exchange and Airtel Kenya have new leaders, with Tom Mulwa named NSE chairman and Djibril Tobe taking over as Airtel Kenya managing director.",
+      whyItMatters:
+        "The bourse where Kenya's biggest companies raise money, and the telco fighting hardest to challenge Safaricom, both just changed hands. New leaders set new directions.",
+      body: [
+        "A busy week of corporate reshuffles has put new leaders atop two institutions central to Kenya's technology and business landscape: the Nairobi Securities Exchange and Airtel Kenya.",
+        "At the NSE, Tom Mulwa has been appointed chairman of the board, effective July 13, 2026, succeeding Kiprono Kittony. The board approved the move on June 30.",
+        "Mulwa brings more than three decades in financial services as the long-serving chief executive of Liaison Group, which he built into a pan-African non-banking financial services firm.",
+        "He also chairs Kenya National REITs, sits on the National Investment Council, and joined the NSE board in September 2025.",
+        "He takes over from Kittony, who chaired the exchange for six years, a period in which the NSE ended an 11-year drought in new share listings and pushed products meant to draw in more retail investors.",
+        "Mulwa inherits an exchange focused on attracting more listings, deepening the market, and widening participation.",
+        "At Airtel Kenya, Senegalese executive Djibril Tobe has become managing director, effective June 30, succeeding Ashish Malhotra.",
+        "Tobe arrives with more than 20 years across telecoms, consumer goods, and consulting, most recently as managing director of Airtel Congo Brazzaville, with earlier leadership roles at Airtel Chad and Airtel Burkina Faso.",
+        "He takes over a company that grew sharply under Malhotra, who rolled out more than 2,000 network sites, lifted Airtel Money's market share from 2% to 11%, doubled revenue, and grew subscribers from 16 million to more than 24 million.",
+        "Malhotra leaves to become chief executive of Indus Towers Africa.",
+        "The timing matters. The NSE is trying to turn recent momentum into a deeper, busier market that more companies, including tech firms, choose to list on. Airtel, Kenya's second-largest operator, is pressing its network expansion to keep chipping away at Safaricom's dominance."
+      ],
+      closingLine:
+        "Both new leaders step in at a moment when execution, not just ambition, will decide how far each institution goes next.",
+      author: tim,
+      publishedAt: new Date(Date.UTC(2026, 6, 2, 8, 0, 0)).toISOString(),
+      updatedAt: new Date(Date.UTC(2026, 6, 2, 8, 0, 0)).toISOString(),
+      readTime: "4 min read",
+      image: {
+        src: "/articles/nse-airtel-kenya-leadership-changes.jpg",
+        alt: "Airtel Kenya executive portrait in front of Airtel branding. Credit: tecMAMBO.",
+        credit: "tecMAMBO",
+        width: 1040,
+        height: 520,
+        type: "image/jpeg"
+      },
+      tags: [business, connectivity, airtel],
+      regions: [kenya],
+      sources: [
+        {
+          label: "Nairobi Securities Exchange",
+          url: "https://www.nse.co.ke/"
+        },
+        {
+          label: "Business Daily",
+          url: "https://www.businessdailyafrica.com/"
+        },
+        {
+          label: "Capital FM",
+          url: "https://www.capitalfm.co.ke/business/"
+        },
+        {
+          label: "Airtel Kenya",
+          url: "https://www.airtelkenya.com/"
         }
       ]
     }
