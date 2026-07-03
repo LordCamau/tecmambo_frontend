@@ -3,6 +3,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter, Space_Grotesk, Space_Mono } from "next/font/google";
 import Script from "next/script";
 import "@/styles/globals.css";
+import { AuroraIntro } from "@/components/brand/AuroraIntro";
 import { CookieConsent } from "@/components/consent/CookieConsent";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
@@ -81,11 +82,23 @@ export const viewport: Viewport = {
 };
 
 const cookiebotId = process.env.NEXT_PUBLIC_COOKIEBOT_ID;
+const auroraIntroScript = `
+  (function () {
+    try {
+      var key = "tecmambo_intro_seen";
+      if (window.sessionStorage.getItem(key) === "1") return;
+      var root = document.documentElement;
+      root.dataset.introStartedAt = String(window.performance && performance.now ? performance.now() : Date.now());
+      root.classList.add("js-intro");
+    } catch (error) {}
+  })();
+`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: auroraIntroScript }} />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2185730745955280"
@@ -119,6 +132,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <span id="top" className="visually-hidden" tabIndex={-1}>
             Top
           </span>
+          <AuroraIntro />
           <a className="skip-link" href="#main">
             Skip to content
           </a>
