@@ -5,13 +5,14 @@ import { useEffect, useState } from "react";
 import styles from "./AuroraIntro.module.css";
 
 const INTRO_STORAGE_KEY = "tecmambo_intro_seen";
-const INTRO_SEQUENCE_MS = 5900;
+const INTRO_SEQUENCE_MS = 6500;
 const INTRO_REDUCED_MS = 1200;
-const INTRO_MAX_MS = 7000;
+const INTRO_MAX_MS = 7600;
 const INTRO_EXIT_MS = 500;
 
 export function AuroraIntro() {
   const [mounted, setMounted] = useState(true);
+  const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -23,9 +24,16 @@ export function AuroraIntro() {
 
     let dismissed = false;
     let ready = document.readyState === "complete";
-    const startedAt = Number(root.dataset.introStartedAt) || performance.now();
+    const startedAt = performance.now();
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const minimumDuration = prefersReducedMotion ? INTRO_REDUCED_MS : INTRO_SEQUENCE_MS;
+    const wordTimers = prefersReducedMotion
+      ? [window.setTimeout(() => setWordIndex(3), 0)]
+      : [
+          window.setTimeout(() => setWordIndex(1), 1060),
+          window.setTimeout(() => setWordIndex(2), 2120),
+          window.setTimeout(() => setWordIndex(3), 3180)
+        ];
 
     const dismiss = () => {
       if (dismissed) return;
@@ -45,8 +53,6 @@ export function AuroraIntro() {
       }, INTRO_EXIT_MS);
     };
 
-    const skipIntro = () => dismiss();
-
     const dismissWhenReady = () => {
       if (!ready) return;
       const elapsed = performance.now() - startedAt;
@@ -60,8 +66,6 @@ export function AuroraIntro() {
 
     const hardCap = window.setTimeout(dismiss, Math.max(0, INTRO_MAX_MS - (performance.now() - startedAt)));
     const sequenceDone = window.setTimeout(dismissWhenReady, Math.max(0, minimumDuration - (performance.now() - startedAt)));
-    window.addEventListener("pointerdown", skipIntro, { passive: true });
-    window.addEventListener("keydown", skipIntro);
 
     if (ready) {
       dismissWhenReady();
@@ -72,9 +76,8 @@ export function AuroraIntro() {
     return () => {
       window.clearTimeout(hardCap);
       window.clearTimeout(sequenceDone);
+      wordTimers.forEach((timer) => window.clearTimeout(timer));
       window.removeEventListener("load", revealWhenReady);
-      window.removeEventListener("pointerdown", skipIntro);
-      window.removeEventListener("keydown", skipIntro);
     };
   }, []);
 
@@ -90,7 +93,17 @@ export function AuroraIntro() {
         <p className={styles.tagline}>
           <span className={styles.fixedPhrase}>Made to be</span>
           <span className={styles.wordViewport}>
-            <span className={styles.wordStack}>
+            <span
+              className={`${styles.wordStack} ${
+                wordIndex === 1
+                  ? styles.wordStackKnown
+                  : wordIndex === 2
+                    ? styles.wordStackUseful
+                    : wordIndex === 3
+                      ? styles.wordStackUnderstood
+                      : styles.wordStackClear
+              }`}
+            >
               <span>clear</span>
               <span>known</span>
               <span>useful</span>
