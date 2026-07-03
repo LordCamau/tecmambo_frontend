@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CookiePreferencesButton } from "@/components/legal/CookiePreferencesButton";
 import { Wordmark } from "@/components/signature/Wordmark";
 import { footerCompanyLinks, footerLegalLinks, footerReadLinks, socialLinks } from "@/lib/nav";
+import { FooterCopyright } from "./FooterCopyright";
 import styles from "./SiteFooter.module.css";
 
 const socialIconPaths: Record<string, string> = {
@@ -41,7 +42,6 @@ function LinkColumn({ title, links }: { title: string; links: Array<{ label: str
 }
 
 export function SiteFooter() {
-  const year = new Date().getFullYear();
   const footerSocialLinks = socialLinks.filter((link) => link.external);
 
   return (
@@ -107,7 +107,7 @@ export function SiteFooter() {
         </div>
 
         <div className={styles.bottomBar}>
-          <p>© {year} tecMAMBO. All rights reserved.</p>
+          <FooterCopyright />
           <p>Made in Nairobi, Kenya.</p>
           <p>Plain English first. Always.</p>
           <div className={styles.utilityLinks}>
