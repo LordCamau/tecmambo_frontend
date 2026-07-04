@@ -2,6 +2,7 @@ import type { Article, Author, Tag } from "@/lib/types";
 import { loadDraftArticles } from "@/lib/article-drafts";
 import { buildAiArticles } from "@/lib/ai-articles";
 import { buildAfricanTechNewsArticles } from "@/lib/african-tech-news-2026";
+import { buildEvMobilityNewsArticles } from "@/lib/ev-mobility-news-2026";
 import { buildHardwareGadgetsNewsArticles } from "@/lib/hardware-gadgets-news-2026";
 import { buildKenyaTechNewsArticles } from "@/lib/kenya-tech-news-july-2026";
 import { getRegion } from "@/lib/regions";
@@ -62,6 +63,10 @@ export const brands: Tag[] = [
   { name: "Google", slug: "google", kind: "brand" },
   { name: "Microsoft", slug: "microsoft", kind: "brand" },
   { name: "Volkswagen", slug: "volkswagen", kind: "brand" },
+  { name: "Toyota", slug: "toyota", kind: "brand" },
+  { name: "BYD", slug: "byd", kind: "brand" },
+  { name: "Tesla", slug: "tesla", kind: "brand" },
+  { name: "NIO", slug: "nio", kind: "brand" },
   { name: "MTN", slug: "mtn", kind: "brand" },
   { name: "Airtel", slug: "airtel", kind: "brand" },
   { name: "Optasia", slug: "optasia", kind: "brand" },
@@ -628,6 +633,17 @@ const businessArticles: Article[] = [
 
 const aiArticles = buildAiArticles({ authors, topics, brands });
 const hardwareGadgetsNewsArticles = buildHardwareGadgetsNewsArticles({ authors, topics, brands });
+const evMobilityNewsArticles = buildEvMobilityNewsArticles({
+  authors,
+  topics,
+  brands,
+  regions: {
+    kenya: kenyaRegion,
+    nigeria: nigeriaRegion,
+    southAfrica: southAfricaRegion,
+    rwanda: rwandaRegion
+  }
+});
 const kenyaTechNewsArticles = buildKenyaTechNewsArticles({
   authors,
   topics,
@@ -662,6 +678,7 @@ function attachRegions(article: Article): Article {
 export const articles: Article[] = [
   ...appNewsArticles,
   ...hardwareGadgetsNewsArticles,
+  ...evMobilityNewsArticles,
   ...reviewArticles,
   ...kenyaTechNewsArticles,
   ...africanTechNewsArticles,

@@ -75,6 +75,7 @@ export const topicArchives: Record<string, TopicArchive[]> = {
     { label: "Startups", slug: "startups", canonicalTopic: "startups", description: "Startup and industry stories for builders and buyers." },
     { label: "Fintech", slug: "fintech", canonicalTopic: "fintech", description: "Digital finance, payments, and the companies moving money around." },
     { label: "AI", slug: "ai", canonicalTopic: "ai", description: "AI business stories with the pitch deck translated into plain English." },
+    { label: "EVs & Mobility", slug: "evs-mobility", canonicalTopic: "evs-mobility", description: "Transport, EV, and mobility business stories with the market context included." },
     { label: "Connectivity", slug: "connectivity", canonicalTopic: "connectivity", description: "Telecoms, networks, and the infrastructure behind digital life." }
   ]
 };

@@ -34,7 +34,18 @@ describe("content generators", () => {
 
   it("curates the homepage in the requested order without repeating highlighted articles", () => {
     const curation = curateHomeContent(articles, glossaryTerms);
-    const uniqueLatestArticles = articles.filter((article, index, source) => source.findIndex((item) => item.image.src === article.image.src) === index);
+    const heroStories = [curation.hero, ...curation.supportingStories];
+    const tagSlugs = (article: (typeof articles)[number]) => article.tags.map((tag) => tag.slug);
+    const hasTag = (article: (typeof articles)[number], slug: string) => tagSlugs(article).includes(slug);
+    const hasAnyTag = (article: (typeof articles)[number], slugs: string[]) => tagSlugs(article).some((slug) => slugs.includes(slug));
+    const isMobility = (article: (typeof articles)[number]) => hasTag(article, "evs-mobility");
+    const isSmartphoneOrHardwareReview = (article: (typeof articles)[number]) =>
+      !isMobility(article) &&
+      article.format !== "business" &&
+      (hasTag(article, "smartphones") ||
+        (article.format === "review" && hasAnyTag(article, ["smartphones", "wearables", "audio", "computing", "gaming", "smart-homes", "headphones", "smart-watches", "vr-ar"])));
+    const isBusinessStartupOrFintech = (article: (typeof articles)[number]) =>
+      !isMobility(article) && (article.format === "business" || hasAnyTag(article, ["business", "startups", "fintech"]));
     const homepageArticleIds = [
       curation.hero.id,
       ...curation.supportingStories.map((article) => article.id),
@@ -42,9 +53,10 @@ describe("content generators", () => {
       ...curation.lanes.flatMap((lane) => lane.articles.map((article) => article.id))
     ];
 
-    expect([curation.hero, ...curation.supportingStories].map((article) => article.id)).toEqual(
-      uniqueLatestArticles.slice(0, 3).map((article) => article.id)
-    );
+    expect(heroStories).toHaveLength(3);
+    expect(heroStories.filter(isSmartphoneOrHardwareReview)).toHaveLength(1);
+    expect(heroStories.filter(isMobility)).toHaveLength(1);
+    expect(heroStories.filter(isBusinessStartupOrFintech)).toHaveLength(1);
     expect(curation.supportingStories).toHaveLength(2);
     expect(curation.latestRail).toHaveLength(5);
     expect(curation.lanes.map((lane) => lane.key)).toEqual([

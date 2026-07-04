@@ -26,6 +26,56 @@ function uniqueByImage(articles: Article[]) {
   });
 }
 
+function hasTag(article: Article, tagSlug: string) {
+  return article.tags.some((tag) => tag.slug === tagSlug);
+}
+
+function hasAnyTag(article: Article, tagSlugs: string[]) {
+  const allowed = new Set(tagSlugs);
+  return article.tags.some((tag) => allowed.has(tag.slug));
+}
+
+function isSmartphoneOrHardwareReview(article: Article) {
+  const hardwareTags = ["smartphones", "wearables", "audio", "computing", "gaming", "smart-homes", "headphones", "smart-watches", "vr-ar"];
+  return !isMobilityArticle(article) && article.format !== "business" && (hasTag(article, "smartphones") || (article.format === "review" && hasAnyTag(article, hardwareTags)));
+}
+
+function isMobilityArticle(article: Article) {
+  return hasTag(article, "evs-mobility");
+}
+
+function isBusinessStartupOrFintechArticle(article: Article) {
+  return !isMobilityArticle(article) && (article.format === "business" || hasAnyTag(article, ["business", "startups", "fintech"]));
+}
+
+function pickHeroStory(candidates: Article[], selected: Article[]) {
+  const selectedIds = new Set(selected.map((article) => article.id));
+  const selectedImages = new Set(selected.map((article) => article.image.src));
+  return candidates.find((article) => !selectedIds.has(article.id) && !selectedImages.has(article.image.src));
+}
+
+function pickHeroStories(articles: Article[]) {
+  const uniqueArticles = uniqueByImage(articles);
+  const selected: Article[] = [];
+  const buckets = [
+    uniqueArticles.filter(isSmartphoneOrHardwareReview),
+    uniqueArticles.filter(isMobilityArticle),
+    uniqueArticles.filter(isBusinessStartupOrFintechArticle)
+  ];
+
+  for (const candidates of buckets) {
+    const article = pickHeroStory(candidates, selected);
+    if (article) selected.push(article);
+  }
+
+  const fallback = uniqueArticles.filter((article) => !selected.some((selectedArticle) => selectedArticle.id === article.id));
+  while (selected.length < 3 && fallback.length) {
+    selected.push(fallback.shift()!);
+  }
+
+  return selected.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()).slice(0, 3);
+}
+
 function lane(
   key: string,
   eyebrow: string,
@@ -45,7 +95,7 @@ function lane(
 
 export function curateHomeContent(articles: Article[], glossaryTerms: GlossaryTerm[]) {
   const usedArticleIds = new Set<string>();
-  const heroStories = uniqueByImage(articles).slice(0, 3);
+  const heroStories = pickHeroStories(articles);
   heroStories.forEach((article) => usedArticleIds.add(article.id));
   const hero = heroStories[0] ?? articles[0]!;
   const supportingStories = heroStories.slice(1, 3);
