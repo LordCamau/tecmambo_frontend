@@ -65,8 +65,8 @@ export function buildEvMobilityNewsArticles({ authors, topics, brands, regions }
       readTime: "5 min read",
       image: {
         src: "/articles/evs-cheaper-than-petrol-africa-financing.jpg",
-        alt: "A white electric SUV in Kenya with doors open. Credit: GTSpirit.",
-        credit: "GTSpirit",
+        alt: "A BasiGo electric bus in Nairobi. Credit: BasiGo.",
+        credit: "BasiGo",
         width: 1040,
         height: 520,
         type: "image/jpeg"
@@ -264,8 +264,8 @@ export function buildEvMobilityNewsArticles({ authors, topics, brands, regions }
       readTime: "4 min read",
       image: {
         src: "/articles/bnef-ev-outlook-2026-record-sales.jpg",
-        alt: "A BYD electric vehicle front close-up. Credit: GreenCars.",
-        credit: "GreenCars",
+        alt: "BYD Dolphin electric cars lined up inside a factory. Credit: Valeria Mongelli / Bloomberg.",
+        credit: "Valeria Mongelli / Bloomberg",
         width: 1040,
         height: 520,
         type: "image/jpeg"
@@ -332,11 +332,11 @@ export function buildEvMobilityNewsArticles({ authors, topics, brands, regions }
       updatedAt: published(11),
       readTime: "4 min read",
       image: {
-        src: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?q=80&w=1800&auto=format&fit=crop",
-        alt: "Electric SUVs on display. Credit: Unsplash.",
-        credit: "Unsplash",
-        width: 1800,
-        height: 1200,
+        src: "/articles/ev-model-explosion-suv-bias.jpg",
+        alt: "A wide selection of electric vehicles gathered in a display lot. Credit: tecMAMBO.",
+        credit: "tecMAMBO",
+        width: 1040,
+        height: 520,
         type: "image/jpeg"
       },
       tags: [mobility],
@@ -385,11 +385,11 @@ export function buildEvMobilityNewsArticles({ authors, topics, brands, regions }
       updatedAt: published(10),
       readTime: "5 min read",
       image: {
-        src: "https://images.unsplash.com/photo-1565688842882-e0b2693d3493?q=80&w=1800&auto=format&fit=crop",
-        alt: "Rows of new electric cars at a distribution lot. Credit: Unsplash.",
-        credit: "Unsplash",
-        width: 1800,
-        height: 1200,
+        src: "/articles/byd-tesla-nio-june-2026-deliveries.jpg",
+        alt: "A BYD electric vehicle front close-up. Credit: GreenCars.",
+        credit: "GreenCars",
+        width: 1040,
+        height: 520,
         type: "image/jpeg"
       },
       tags: [mobility, business, byd, tesla, nio],

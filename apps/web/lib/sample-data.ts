@@ -1,5 +1,6 @@
 import type { Article, Author, Tag } from "@/lib/types";
 import { loadDraftArticles } from "@/lib/article-drafts";
+import { buildAfricanFintechNewsArticles } from "@/lib/african-fintech-news-2026";
 import { buildAiArticles } from "@/lib/ai-articles";
 import { buildAfricanTechNewsArticles } from "@/lib/african-tech-news-2026";
 import { buildEvMobilityNewsArticles } from "@/lib/ev-mobility-news-2026";
@@ -74,6 +75,7 @@ export const brands: Tag[] = [
   { name: "Meta", slug: "meta", kind: "brand" },
   { name: "Safaricom", slug: "safaricom", kind: "brand" },
   { name: "Vodacom", slug: "vodacom", kind: "brand" },
+  { name: "M-Pesa", slug: "m-pesa", kind: "brand" },
   { name: "TECNO", slug: "tecno", kind: "brand" },
   { name: "Spiro", slug: "spiro", kind: "brand" },
   { name: "Shuttlers", slug: "shuttlers", kind: "brand" },
@@ -81,7 +83,10 @@ export const brands: Tag[] = [
   { name: "Holocene", slug: "holocene", kind: "brand" },
   { name: "Livestock Wealth", slug: "livestock-wealth", kind: "brand" },
   { name: "Heifer International", slug: "heifer-international", kind: "brand" },
-  { name: "Development Bank of Rwanda", slug: "development-bank-of-rwanda", kind: "brand" }
+  { name: "Development Bank of Rwanda", slug: "development-bank-of-rwanda", kind: "brand" },
+  { name: "Flutterwave", slug: "flutterwave", kind: "brand" },
+  { name: "Moniepoint", slug: "moniepoint", kind: "brand" },
+  { name: "Paystack", slug: "paystack", kind: "brand" }
 ];
 
 const startupTopic = topics.find((topic) => topic.slug === "startups")!;
@@ -99,6 +104,7 @@ const kenyaRegion = getRegion("kenya")!;
 const nigeriaRegion = getRegion("nigeria")!;
 const southAfricaRegion = getRegion("south-africa")!;
 const rwandaRegion = getRegion("rwanda")!;
+const tanzaniaRegion = getRegion("tanzania")!;
 
 const appNewsArticles: Article[] = [
   {
@@ -661,6 +667,18 @@ const africanTechNewsArticles = buildAfricanTechNewsArticles({
     rwanda: rwandaRegion
   }
 });
+const africanFintechNewsArticles = buildAfricanFintechNewsArticles({
+  authors,
+  topics,
+  brands,
+  regions: {
+    kenya: kenyaRegion,
+    nigeria: nigeriaRegion,
+    southAfrica: southAfricaRegion,
+    rwanda: rwandaRegion,
+    tanzania: tanzaniaRegion
+  }
+});
 
 const regionAssignments: Record<string, string[]> = {
   "kenya-ai-rules-quiet-advantage": ["kenya"],
@@ -682,6 +700,7 @@ export const articles: Article[] = [
   ...reviewArticles,
   ...kenyaTechNewsArticles,
   ...africanTechNewsArticles,
+  ...africanFintechNewsArticles,
   ...regionalArticles,
   ...mobilityArticles,
   ...businessArticles,
