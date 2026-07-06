@@ -5,7 +5,10 @@ import { useEffect, useState } from "react";
 import styles from "./AuroraIntro.module.css";
 
 const INTRO_STORAGE_KEY = "tecmambo_intro_seen";
-const INTRO_SEQUENCE_MS = 6500;
+const INTRO_FINAL_WORD_MS = 3180;
+const INTRO_WORD_TRANSITION_MS = 360;
+const INTRO_FINAL_HOLD_MS = 1800;
+const INTRO_SEQUENCE_MS = INTRO_FINAL_WORD_MS + INTRO_WORD_TRANSITION_MS + INTRO_FINAL_HOLD_MS;
 const INTRO_REDUCED_MS = 1200;
 const INTRO_MAX_MS = 7600;
 const INTRO_EXIT_MS = 500;
@@ -32,7 +35,7 @@ export function AuroraIntro() {
       : [
           window.setTimeout(() => setWordIndex(1), 1060),
           window.setTimeout(() => setWordIndex(2), 2120),
-          window.setTimeout(() => setWordIndex(3), 3180)
+          window.setTimeout(() => setWordIndex(3), INTRO_FINAL_WORD_MS)
         ];
 
     const dismiss = () => {
