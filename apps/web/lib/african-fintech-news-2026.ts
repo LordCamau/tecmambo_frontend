@@ -68,11 +68,11 @@ export function buildAfricanFintechNewsArticles({ authors, topics, brands, regio
       updatedAt: published(13),
       readTime: "5 min read",
       image: {
-        src: "https://images.unsplash.com/photo-1556742111-a301076d9d18?q=80&w=1800&auto=format&fit=crop",
-        alt: "A trader using a phone for a mobile payment. Credit: Unsplash.",
-        credit: "Unsplash",
-        width: 1800,
-        height: 1200,
+        src: "/articles/africa-next-payment-solutions.jpg",
+        alt: "A card payment being accepted with iPhone Tap to Pay. Credit: Yoco iPhone Tap to Pay.",
+        credit: "Yoco iPhone Tap to Pay.",
+        width: 1040,
+        height: 520,
         type: "image/jpeg"
       },
       tags: [fintech, business, mpesa, mtn],
