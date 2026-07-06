@@ -3,6 +3,7 @@ import { loadDraftArticles } from "@/lib/article-drafts";
 import { buildAfricanFintechNewsArticles } from "@/lib/african-fintech-news-2026";
 import { buildAiArticles } from "@/lib/ai-articles";
 import { buildAfricanTechNewsArticles } from "@/lib/african-tech-news-2026";
+import { buildEditorialBundleArticles } from "@/lib/editorial-bundle-july-2026";
 import { buildEvMobilityNewsArticles } from "@/lib/ev-mobility-news-2026";
 import { buildHardwareGadgetsNewsArticles } from "@/lib/hardware-gadgets-news-2026";
 import { buildKenyaTechNewsArticles } from "@/lib/kenya-tech-news-july-2026";
@@ -35,23 +36,34 @@ export const topics: Tag[] = [
   { name: "Computing", slug: "computing", kind: "topic" },
   { name: "Social Media", slug: "social-media", kind: "topic" },
   { name: "Entertainment", slug: "entertainment", kind: "topic" },
+  { name: "Digital Ownership", slug: "digital-ownership", kind: "topic" },
+  { name: "Game Preservation", slug: "game-preservation", kind: "topic" },
   { name: "EVs & Mobility", slug: "evs-mobility", kind: "topic" },
+  { name: "Autonomous Vehicles", slug: "autonomous-vehicles", kind: "topic" },
   { name: "Gaming", slug: "gaming", kind: "topic" },
   { name: "Wearables", slug: "wearables", kind: "topic" },
+  { name: "Health Tech", slug: "health-tech", kind: "topic" },
   { name: "Smart Homes", slug: "smart-homes", kind: "topic" },
   { name: "Startups", slug: "startups", kind: "topic" },
   { name: "Business", slug: "business", kind: "topic" },
   { name: "Fintech", slug: "fintech", kind: "topic" },
   { name: "Cybersecurity", slug: "cybersecurity", kind: "topic" },
+  { name: "Security Updates", slug: "security-updates", kind: "topic" },
   { name: "Audio", slug: "audio", kind: "topic" },
   { name: "Connectivity", slug: "connectivity", kind: "topic" },
+  { name: "Routers", slug: "routers", kind: "topic" },
+  { name: "Home Internet", slug: "home-internet", kind: "topic" },
+  { name: "Networking", slug: "networking", kind: "topic" },
   { name: "Power & batteries", slug: "power-batteries", kind: "topic" },
+  { name: "Accessories", slug: "accessories", kind: "topic" },
   { name: "Headphones", slug: "headphones", kind: "topic" },
   { name: "Smart Watches", slug: "smart-watches", kind: "topic" },
   { name: "VR & AR", slug: "vr-ar", kind: "topic" },
 ];
 
 export const brands: Tag[] = [
+  { name: "Sony", slug: "sony", kind: "brand" },
+  { name: "PlayStation", slug: "playstation", kind: "brand" },
   { name: "Samsung", slug: "samsung", kind: "brand" },
   { name: "Oraimo", slug: "oraimo", kind: "brand" },
   { name: "Apple", slug: "apple", kind: "brand" },
@@ -67,7 +79,10 @@ export const brands: Tag[] = [
   { name: "Toyota", slug: "toyota", kind: "brand" },
   { name: "BYD", slug: "byd", kind: "brand" },
   { name: "Tesla", slug: "tesla", kind: "brand" },
+  { name: "Waymo", slug: "waymo", kind: "brand" },
   { name: "NIO", slug: "nio", kind: "brand" },
+  { name: "Oura", slug: "oura", kind: "brand" },
+  { name: "Wi-Fi Alliance", slug: "wi-fi-alliance", kind: "brand" },
   { name: "MTN", slug: "mtn", kind: "brand" },
   { name: "Airtel", slug: "airtel", kind: "brand" },
   { name: "Optasia", slug: "optasia", kind: "brand" },
@@ -638,6 +653,7 @@ const businessArticles: Article[] = [
 ];
 
 const aiArticles = buildAiArticles({ authors, topics, brands });
+const editorialBundleArticles = buildEditorialBundleArticles({ authors, topics, brands });
 const hardwareGadgetsNewsArticles = buildHardwareGadgetsNewsArticles({ authors, topics, brands });
 const evMobilityNewsArticles = buildEvMobilityNewsArticles({
   authors,
@@ -694,6 +710,7 @@ function attachRegions(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  ...editorialBundleArticles,
   ...appNewsArticles,
   ...hardwareGadgetsNewsArticles,
   ...evMobilityNewsArticles,
