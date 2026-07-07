@@ -45,7 +45,7 @@ function isMobilityArticle(article: Article) {
 }
 
 function isBusinessStartupOrFintechArticle(article: Article) {
-  return !isMobilityArticle(article) && (article.format === "business" || hasAnyTag(article, ["business", "startups", "fintech"]));
+  return !isMobilityArticle(article) && !isSmartphoneOrHardwareReview(article) && (article.format === "business" || hasAnyTag(article, ["business", "startups", "fintech"]));
 }
 
 function pickHeroStory(candidates: Article[], selected: Article[]) {

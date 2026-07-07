@@ -3,6 +3,7 @@ import { loadDraftArticles } from "@/lib/article-drafts";
 import { buildAfricanFintechNewsArticles } from "@/lib/african-fintech-news-2026";
 import { buildAiArticles } from "@/lib/ai-articles";
 import { buildAfricanTechNewsArticles } from "@/lib/african-tech-news-2026";
+import { buildAppleEcosystemArticles } from "@/lib/apple-ecosystem-news-2026";
 import { buildEditorialBundleArticles } from "@/lib/editorial-bundle-july-2026";
 import { buildEvMobilityNewsArticles } from "@/lib/ev-mobility-news-2026";
 import { buildHardwareGadgetsNewsArticles } from "@/lib/hardware-gadgets-news-2026";
@@ -653,6 +654,7 @@ const businessArticles: Article[] = [
 ];
 
 const aiArticles = buildAiArticles({ authors, topics, brands });
+const appleEcosystemArticles = buildAppleEcosystemArticles({ authors, topics, brands });
 const editorialBundleArticles = buildEditorialBundleArticles({ authors, topics, brands });
 const hardwareGadgetsNewsArticles = buildHardwareGadgetsNewsArticles({ authors, topics, brands });
 const evMobilityNewsArticles = buildEvMobilityNewsArticles({
@@ -710,6 +712,7 @@ function attachRegions(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  ...appleEcosystemArticles,
   ...editorialBundleArticles,
   ...appNewsArticles,
   ...hardwareGadgetsNewsArticles,
