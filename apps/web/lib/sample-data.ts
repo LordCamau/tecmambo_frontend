@@ -5,6 +5,7 @@ import { buildAiArticles } from "@/lib/ai-articles";
 import { buildAfricanTechNewsArticles } from "@/lib/african-tech-news-2026";
 import { buildAppleEcosystemArticles } from "@/lib/apple-ecosystem-news-2026";
 import { buildEditorialBundleArticles } from "@/lib/editorial-bundle-july-2026";
+import { buildEditorialJuly7Articles } from "@/lib/editorial-bundle-july-7-2026";
 import { buildEvMobilityNewsArticles } from "@/lib/ev-mobility-news-2026";
 import { buildHardwareGadgetsNewsArticles } from "@/lib/hardware-gadgets-news-2026";
 import { buildKenyaTechNewsArticles } from "@/lib/kenya-tech-news-july-2026";
@@ -68,13 +69,17 @@ export const brands: Tag[] = [
   { name: "Samsung", slug: "samsung", kind: "brand" },
   { name: "Oraimo", slug: "oraimo", kind: "brand" },
   { name: "Apple", slug: "apple", kind: "brand" },
+  { name: "OPPO", slug: "oppo", kind: "brand" },
   { name: "Xiaomi", slug: "xiaomi", kind: "brand" },
   { name: "Nothing", slug: "nothing", kind: "brand" },
   { name: "Vivo", slug: "vivo", kind: "brand" },
   { name: "Anthropic", slug: "anthropic", kind: "brand" },
   { name: "Amazon", slug: "amazon", kind: "brand" },
+  { name: "Starlink", slug: "starlink", kind: "brand" },
   { name: "OpenAI", slug: "openai", kind: "brand" },
   { name: "Google", slug: "google", kind: "brand" },
+  { name: "Visa", slug: "visa", kind: "brand" },
+  { name: "Onafriq", slug: "onafriq", kind: "brand" },
   { name: "Microsoft", slug: "microsoft", kind: "brand" },
   { name: "Volkswagen", slug: "volkswagen", kind: "brand" },
   { name: "Toyota", slug: "toyota", kind: "brand" },
@@ -656,6 +661,17 @@ const businessArticles: Article[] = [
 const aiArticles = buildAiArticles({ authors, topics, brands });
 const appleEcosystemArticles = buildAppleEcosystemArticles({ authors, topics, brands });
 const editorialBundleArticles = buildEditorialBundleArticles({ authors, topics, brands });
+const editorialJuly7Articles = buildEditorialJuly7Articles({
+  authors,
+  topics,
+  brands,
+  regions: {
+    kenya: kenyaRegion,
+    nigeria: nigeriaRegion,
+    southAfrica: southAfricaRegion,
+    rwanda: rwandaRegion
+  }
+});
 const hardwareGadgetsNewsArticles = buildHardwareGadgetsNewsArticles({ authors, topics, brands });
 const evMobilityNewsArticles = buildEvMobilityNewsArticles({
   authors,
@@ -714,6 +730,7 @@ function attachRegions(article: Article): Article {
 export const articles: Article[] = [
   ...appleEcosystemArticles,
   ...editorialBundleArticles,
+  ...editorialJuly7Articles,
   ...appNewsArticles,
   ...hardwareGadgetsNewsArticles,
   ...evMobilityNewsArticles,

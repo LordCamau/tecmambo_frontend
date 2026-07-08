@@ -14,22 +14,10 @@ export function ImageProtection() {
       }
     };
 
-    const markImagesUndraggable = () => {
-      document.querySelectorAll("img").forEach((image) => {
-        image.draggable = false;
-      });
-    };
-
-    markImagesUndraggable();
-
-    const observer = new MutationObserver(markImagesUndraggable);
-    observer.observe(document.body, { childList: true, subtree: true });
-
     document.addEventListener("contextmenu", protect, { capture: true });
     document.addEventListener("dragstart", protect, { capture: true });
 
     return () => {
-      observer.disconnect();
       document.removeEventListener("contextmenu", protect, { capture: true });
       document.removeEventListener("dragstart", protect, { capture: true });
     };

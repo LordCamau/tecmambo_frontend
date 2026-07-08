@@ -66,13 +66,15 @@ function ArticleBodyBlock({
   inlineImages,
   glossaryTerms,
   glossaryState,
-  highlightPrices
+  highlightPrices,
+  blockKey
 }: {
   paragraph: string;
   inlineImages?: Article["inlineImages"];
   glossaryTerms: GlossaryTerm[];
   glossaryState: GlossaryLinkState;
   highlightPrices: boolean;
+  blockKey: string;
 }) {
   const inlineImageId = paragraph.match(/^\[\[image:([a-z0-9-]+)\]\]$/)?.[1];
   const inlineImage = inlineImageId ? inlineImages?.find((image) => image.id === inlineImageId) : undefined;
@@ -96,7 +98,71 @@ function ArticleBodyBlock({
   if (paragraph.startsWith("### ")) {
     return <h3>{paragraph.slice(4)}</h3>;
   }
-  return <p>{highlightPriceNodes(renderGlossaryText(paragraph, glossaryTerms, glossaryState), highlightPrices, paragraph)}</p>;
+  return <p>{highlightPriceNodes(renderGlossaryText(paragraph, glossaryTerms, glossaryState), highlightPrices, blockKey)}</p>;
+}
+
+function listItem(paragraph: string) {
+  const unordered = paragraph.match(/^-\s+(.+)$/);
+  if (unordered) return { type: "ul" as const, text: unordered[1] };
+  const ordered = paragraph.match(/^\d+\.\s+(.+)$/);
+  if (ordered) return { type: "ol" as const, text: ordered[1] };
+  return null;
+}
+
+function ArticleBodyBlocks({
+  body,
+  inlineImages,
+  glossaryTerms,
+  glossaryState,
+  highlightPrices
+}: {
+  body: string[];
+  inlineImages?: Article["inlineImages"];
+  glossaryTerms: GlossaryTerm[];
+  glossaryState: GlossaryLinkState;
+  highlightPrices: boolean;
+}) {
+  const blocks: ReactNode[] = [];
+
+  for (let index = 0; index < body.length; index += 1) {
+    const item = listItem(body[index]);
+    if (!item) {
+      blocks.push(
+        <ArticleBodyBlock
+          paragraph={body[index]}
+          inlineImages={inlineImages}
+          glossaryTerms={glossaryTerms}
+          glossaryState={glossaryState}
+          highlightPrices={highlightPrices}
+          blockKey={`body-${index}`}
+          key={`body-${index}`}
+        />
+      );
+      continue;
+    }
+
+    const items = [item.text];
+    let nextIndex = index + 1;
+    while (nextIndex < body.length) {
+      const next = listItem(body[nextIndex]);
+      if (!next || next.type !== item.type) break;
+      items.push(next.text);
+      nextIndex += 1;
+    }
+    const ListTag = item.type;
+    blocks.push(
+      <ListTag key={`body-list-${index}`}>
+        {items.map((text, itemIndex) => (
+          <li key={`${text}-${itemIndex}`}>
+            {highlightPriceNodes(renderGlossaryText(text, glossaryTerms, glossaryState), highlightPrices, `body-list-${index}-${itemIndex}`)}
+          </li>
+        ))}
+      </ListTag>
+    );
+    index = nextIndex - 1;
+  }
+
+  return blocks;
 }
 
 export async function generateStaticParams() {
@@ -272,16 +338,13 @@ export default async function ArticlePage({ params }: { params: Params }) {
             </div>
           </section>
         ) : null}
-        {article.body.map((paragraph) => (
-          <ArticleBodyBlock
-            paragraph={paragraph}
-            inlineImages={article.inlineImages}
-            glossaryTerms={glossaryTerms}
-            glossaryState={glossaryState}
-            highlightPrices={highlightReviewPrices}
-            key={paragraph}
-          />
-        ))}
+        <ArticleBodyBlocks
+          body={article.body}
+          inlineImages={article.inlineImages}
+          glossaryTerms={glossaryTerms}
+          glossaryState={glossaryState}
+          highlightPrices={highlightReviewPrices}
+        />
         {article.goDeeper ? (
           <GoDeeper
             intro={article.goDeeper.intro}

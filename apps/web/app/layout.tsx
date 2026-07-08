@@ -3,6 +3,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter, Space_Grotesk, Space_Mono } from "next/font/google";
 import Script from "next/script";
 import "@/styles/globals.css";
+import { AdSenseScript } from "@/components/ads/AdSenseScript";
 import { AuroraIntro } from "@/components/brand/AuroraIntro";
 import { CookieConsent } from "@/components/consent/CookieConsent";
 import { SiteFooter } from "@/components/layout/SiteFooter";
@@ -97,17 +98,14 @@ const auroraIntroScript = `
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: auroraIntroScript }} />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6410608625427921"
-          crossOrigin="anonymous"
-        />
+        <meta name="google-adsense-account" content="ca-pub-6410608625427921" />
       </head>
       <body className={`${spaceGrotesk.variable} ${spaceMono.variable} ${inter.variable}`}>
         <ThemeProvider>
+          <Script id="tecmambo-aurora-intro-boot" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: auroraIntroScript }} />
+          <AdSenseScript />
           <Script
             id="tecmambo-consent-defaults"
             strategy="beforeInteractive"

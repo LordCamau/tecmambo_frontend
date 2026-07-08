@@ -83,6 +83,23 @@
   font-size: 18px;
 }
 
+.body > ul,
+.body > ol {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 24px;
+  color: var(--text-secondary);
+  font-size: 17px;
+}
+
+.body > li::marker,
+.body > ul li::marker,
+.body > ol li::marker {
+  color: var(--purple);
+  font-weight: 700;
+}
+
 .priceHighlight {
   color: #FF6FAE;
   font-weight: 700;
