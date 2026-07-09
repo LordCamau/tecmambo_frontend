@@ -343,6 +343,33 @@ describe("content generators", () => {
     expect(() => assertArticlesArePublishable(articles)).not.toThrow();
   });
 
+  it("publishes the July 9 Kenya news bundle with complete regional metadata", () => {
+    const slugs = [
+      "starlink-kenya-signup-freeze-seven-counties",
+      "safaricom-agm-vodafone-kenya-control",
+      "kenya-internet-metering-bill-explained",
+      "finance-act-2026-software-cloud-costs-kenya",
+      "koko-networks-collapse-assets-sale-carbon-credits",
+      "kenya-betting-rules-family-exclusion-grak"
+    ];
+    const stories = slugs.map((slug) => articles.find((article) => article.slug === slug));
+
+    expect(stories.every(Boolean)).toBe(true);
+    expect(stories.map((story) => story?.author.slug)).toEqual(Array(6).fill("tim-humphreys"));
+    expect(stories.map((story) => story?.format)).toEqual(["news", "business", "news", "business", "business", "news"]);
+    expect(stories.every((story) => story?.regions?.some((region) => region.slug === "kenya"))).toBe(true);
+    expect(new Set(stories.map((story) => story?.image.src)).size).toBe(6);
+    expect(stories.every((story) => story?.faq?.length === 3)).toBe(true);
+    expect(stories.every((story) => JSON.stringify(articleJsonLd(story!)).includes('"contentLocation"'))).toBe(true);
+    expect(
+      getAfricaArticles(articles)
+        .filter((article) => article.regions?.some((region) => region.slug === "kenya"))
+        .map((article) => article.slug)
+    ).toEqual(expect.arrayContaining(slugs));
+    expect(articleToMarkdown(stories[0]!)).toContain("Regions: Kenya");
+    expect(buildRssFeed(stories as (typeof articles)[number][])).toContain(slugs[0]);
+  });
+
   it("publishes the WhatsApp usernames story across news, apps, brands, markdown, RSS, and llms.txt", () => {
     const story = articles.find((article) => article.slug === "whatsapp-usernames-reserve-now");
     expect(story).toBeTruthy();

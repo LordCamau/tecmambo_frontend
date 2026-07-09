@@ -8,6 +8,7 @@ import { buildEditorialBundleArticles } from "@/lib/editorial-bundle-july-2026";
 import { buildEditorialJuly7Articles } from "@/lib/editorial-bundle-july-7-2026";
 import { buildEvMobilityNewsArticles } from "@/lib/ev-mobility-news-2026";
 import { buildHardwareGadgetsNewsArticles } from "@/lib/hardware-gadgets-news-2026";
+import { buildKenyaJuly9NewsArticles } from "@/lib/kenya-tech-news-july-9-2026";
 import { buildKenyaTechNewsArticles } from "@/lib/kenya-tech-news-july-2026";
 import { getRegion } from "@/lib/regions";
 
@@ -690,6 +691,12 @@ const kenyaTechNewsArticles = buildKenyaTechNewsArticles({
   brands,
   kenya: kenyaRegion
 });
+const kenyaJuly9NewsArticles = buildKenyaJuly9NewsArticles({
+  authors,
+  topics,
+  brands,
+  kenya: kenyaRegion
+});
 const africanTechNewsArticles = buildAfricanTechNewsArticles({
   authors,
   topics,
@@ -735,6 +742,7 @@ export const articles: Article[] = [
   ...hardwareGadgetsNewsArticles,
   ...evMobilityNewsArticles,
   ...reviewArticles,
+  ...kenyaJuly9NewsArticles,
   ...kenyaTechNewsArticles,
   ...africanTechNewsArticles,
   ...africanFintechNewsArticles,
