@@ -87,7 +87,7 @@ export function AuroraIntro() {
   if (!mounted) return null;
 
   return (
-    <div aria-hidden="true" className={styles.intro}>
+    <div aria-hidden="true" className={styles.intro} data-aurora-intro>
       <div className={styles.stage}>
         <div className={styles.mark}>
           <Image src="/brand/tecMAMBO-wp.svg" alt="" width={1146} height={293} priority sizes="min(68vw, 380px)" />

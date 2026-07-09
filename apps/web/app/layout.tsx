@@ -86,25 +86,41 @@ export const viewport: Viewport = {
 const cookiebotId = process.env.NEXT_PUBLIC_COOKIEBOT_ID;
 const auroraIntroScript = `
   (function () {
+    var root = document.documentElement;
     try {
       var key = "tecmambo_intro_seen";
-      if (window.sessionStorage.getItem(key) === "1") return;
-      var root = document.documentElement;
+      if (window.sessionStorage.getItem(key) === "1") {
+        root.classList.remove("js-intro");
+        return;
+      }
       root.dataset.introStartedAt = String(window.performance && performance.now ? performance.now() : Date.now());
-      root.classList.add("js-intro");
-    } catch (error) {}
+    } catch (error) {
+      root.dataset.introStartedAt = String(Date.now());
+    }
   })();
 `;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html lang="en" className="js-intro" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <meta name="google-adsense-account" content="ca-pub-6410608625427921" />
+        <style>{`
+          html.js-intro,
+          html.js-intro body {
+            background: #141318;
+            overflow: hidden;
+          }
+
+          html.js-intro:not(.js-intro-lifting) body > *:not([data-aurora-intro]) {
+            visibility: hidden;
+          }
+        `}</style>
+        <Script id="tecmambo-aurora-intro-boot" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: auroraIntroScript }} />
       </head>
       <body className={`${spaceGrotesk.variable} ${spaceMono.variable} ${inter.variable}`}>
+        <AuroraIntro />
         <ThemeProvider>
-          <Script id="tecmambo-aurora-intro-boot" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: auroraIntroScript }} />
           <AdSenseScript />
           <Script
             id="tecmambo-consent-defaults"
@@ -131,7 +147,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <span id="top" className="visually-hidden" tabIndex={-1}>
             Top
           </span>
-          <AuroraIntro />
           <a className="skip-link" href="#main">
             Skip to content
           </a>
