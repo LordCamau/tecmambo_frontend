@@ -7,6 +7,7 @@ import { buildAppleEcosystemArticles } from "@/lib/apple-ecosystem-news-2026";
 import { buildEditorialBundleArticles } from "@/lib/editorial-bundle-july-2026";
 import { buildEditorialJuly7Articles } from "@/lib/editorial-bundle-july-7-2026";
 import { buildEvMobilityNewsArticles } from "@/lib/ev-mobility-news-2026";
+import { buildGlobalOpinionArticles } from "@/lib/global-opinion-essays-2026";
 import { buildHardwareGadgetsNewsArticles } from "@/lib/hardware-gadgets-news-2026";
 import { buildKenyaJuly9NewsArticles } from "@/lib/kenya-tech-news-july-9-2026";
 import { buildKenyaTechNewsArticles } from "@/lib/kenya-tech-news-july-2026";
@@ -77,8 +78,10 @@ export const brands: Tag[] = [
   { name: "Anthropic", slug: "anthropic", kind: "brand" },
   { name: "Amazon", slug: "amazon", kind: "brand" },
   { name: "Starlink", slug: "starlink", kind: "brand" },
+  { name: "SpaceX", slug: "spacex", kind: "brand" },
   { name: "OpenAI", slug: "openai", kind: "brand" },
   { name: "Google", slug: "google", kind: "brand" },
+  { name: "Huawei", slug: "huawei", kind: "brand" },
   { name: "Visa", slug: "visa", kind: "brand" },
   { name: "Onafriq", slug: "onafriq", kind: "brand" },
   { name: "Microsoft", slug: "microsoft", kind: "brand" },
@@ -720,6 +723,7 @@ const africanFintechNewsArticles = buildAfricanFintechNewsArticles({
     tanzania: tanzaniaRegion
   }
 });
+const globalOpinionArticles = buildGlobalOpinionArticles({ authors, topics, brands });
 
 const regionAssignments: Record<string, string[]> = {
   "kenya-ai-rules-quiet-advantage": ["kenya"],
@@ -735,6 +739,7 @@ function attachRegions(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  ...globalOpinionArticles,
   ...appleEcosystemArticles,
   ...editorialBundleArticles,
   ...editorialJuly7Articles,
