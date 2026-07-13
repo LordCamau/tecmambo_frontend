@@ -76,8 +76,8 @@ export function buildGlobalOpinionArticles({ authors, topics, brands }: BuildGlo
       updatedAt: published(7),
       readTime: "10 min read",
       image: {
-        src: "/articles/america-invents-china-perfects-europe-rules-tecmambo.jpg",
-        alt: "A triptych showing a US rocket landing, a Chinese booster recovery, and a European regulation gavel. Credit: tecMAMBO.",
+        src: "/articles/america-invents-china-perfects-europe-rules-tecmambo-updated.jpg",
+        alt: "A labeled triptych showing America, China, and Europe through rocket recovery and technology regulation imagery. Credit: tecMAMBO.",
         credit: "tecMAMBO",
         width: 1040,
         height: 520,

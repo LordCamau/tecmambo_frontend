@@ -1,120 +1,95 @@
 "use client";
 
-import Image from "next/image";
-import { useEffect, useState } from "react";
+/* eslint-disable @next/next/no-img-element */
+import { useEffect, useRef, useState } from "react";
 import styles from "./AuroraIntro.module.css";
 
-const INTRO_STORAGE_KEY = "tecmambo_intro_seen";
-const INTRO_FINAL_WORD_MS = 3180;
-const INTRO_WORD_TRANSITION_MS = 360;
-const INTRO_FINAL_HOLD_MS = 1800;
-const INTRO_SEQUENCE_MS = INTRO_FINAL_WORD_MS + INTRO_WORD_TRANSITION_MS + INTRO_FINAL_HOLD_MS;
-const INTRO_REDUCED_MS = 1200;
-const INTRO_MAX_MS = 7600;
-const INTRO_EXIT_MS = 500;
+const LOADER_STORAGE_KEY = "tm_loader_seen";
+const LOADER_SRC = "/tecmambo-loader.gif";
+const LOADER_PLAY_MS = 13_100;
+const LOADER_EXIT_MS = 500;
+
+function waitForImage(image: HTMLImageElement) {
+  if (image.complete && image.naturalWidth > 0) {
+    return image.decode ? image.decode().catch(() => undefined) : Promise.resolve();
+  }
+
+  return new Promise<void>((resolve, reject) => {
+    image.onload = () => resolve();
+    image.onerror = () => reject(new Error("tecMAMBO loader GIF failed to load."));
+  }).then(() => (image.decode ? image.decode().catch(() => undefined) : undefined));
+}
 
 export function AuroraIntro() {
   const [mounted, setMounted] = useState(true);
-  const [wordIndex, setWordIndex] = useState(0);
+  const [gifReady, setGifReady] = useState(false);
+  const frameRef = useRef<number | null>(null);
+  const timerRef = useRef<number | null>(null);
+  const exitRef = useRef<number | null>(null);
 
   useEffect(() => {
     const root = document.documentElement;
+    const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+    let hasSeenLoader = false;
 
-    if (!root.classList.contains("js-intro")) {
+    try {
+      hasSeenLoader = sessionStorage.getItem(LOADER_STORAGE_KEY) === "1";
+    } catch {
+      hasSeenLoader = false;
+    }
+
+    if (!root.classList.contains("js-intro") || prefersReducedMotion || hasSeenLoader) {
+      root.classList.remove("js-intro", "js-intro-lifting");
       setMounted(false);
       return;
     }
 
-    let dismissed = false;
-    let ready = document.readyState === "complete";
-    const startedAt = performance.now();
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const minimumDuration = prefersReducedMotion ? INTRO_REDUCED_MS : INTRO_SEQUENCE_MS;
-    const wordTimers = prefersReducedMotion
-      ? [window.setTimeout(() => setWordIndex(3), 0)]
-      : [
-          window.setTimeout(() => setWordIndex(1), 1060),
-          window.setTimeout(() => setWordIndex(2), 2120),
-          window.setTimeout(() => setWordIndex(3), INTRO_FINAL_WORD_MS)
-        ];
+    let cancelled = false;
+    const image = new window.Image();
+    image.src = LOADER_SRC;
 
     const dismiss = () => {
-      if (dismissed) return;
-      dismissed = true;
+      if (cancelled) return;
 
       try {
-        sessionStorage.setItem(INTRO_STORAGE_KEY, "1");
+        sessionStorage.setItem(LOADER_STORAGE_KEY, "1");
       } catch {
         // Session storage can be unavailable in strict privacy modes.
       }
 
       root.classList.add("js-intro-lifting");
-      window.setTimeout(() => {
+      exitRef.current = window.setTimeout(() => {
         root.classList.remove("js-intro", "js-intro-lifting");
-        delete root.dataset.introStartedAt;
         setMounted(false);
-      }, INTRO_EXIT_MS);
+      }, LOADER_EXIT_MS);
     };
 
-    const dismissWhenReady = () => {
-      if (!ready) return;
-      const elapsed = performance.now() - startedAt;
-      window.setTimeout(dismiss, Math.max(0, minimumDuration - elapsed));
-    };
-
-    const revealWhenReady = () => {
-      ready = true;
-      dismissWhenReady();
-    };
-
-    const hardCap = window.setTimeout(dismiss, Math.max(0, INTRO_MAX_MS - (performance.now() - startedAt)));
-    const sequenceDone = window.setTimeout(dismissWhenReady, Math.max(0, minimumDuration - (performance.now() - startedAt)));
-
-    if (ready) {
-      dismissWhenReady();
-    } else {
-      window.addEventListener("load", revealWhenReady, { once: true });
-    }
+    waitForImage(image)
+      .then(() => {
+        if (cancelled) return;
+        setGifReady(true);
+        frameRef.current = window.requestAnimationFrame(() => {
+          timerRef.current = window.setTimeout(dismiss, LOADER_PLAY_MS);
+        });
+      })
+      .catch(() => {
+        if (cancelled) return;
+        timerRef.current = window.setTimeout(dismiss, LOADER_EXIT_MS);
+      });
 
     return () => {
-      window.clearTimeout(hardCap);
-      window.clearTimeout(sequenceDone);
-      wordTimers.forEach((timer) => window.clearTimeout(timer));
-      window.removeEventListener("load", revealWhenReady);
+      cancelled = true;
+      if (frameRef.current) window.cancelAnimationFrame(frameRef.current);
+      if (timerRef.current) window.clearTimeout(timerRef.current);
+      if (exitRef.current) window.clearTimeout(exitRef.current);
     };
   }, []);
 
   if (!mounted) return null;
 
   return (
-    <div aria-hidden="true" className={styles.intro} data-aurora-intro>
-      <div className={styles.stage}>
-        <div className={styles.mark}>
-          <Image src="/brand/tecMAMBO-wp.svg" alt="" width={1146} height={293} priority sizes="min(68vw, 380px)" />
-          <span className={styles.auroraResolve} />
-        </div>
-        <p className={styles.tagline}>
-          <span className={styles.fixedPhrase}>Made to be</span>
-          <span className={styles.wordViewport}>
-            <span
-              className={`${styles.wordStack} ${
-                wordIndex === 1
-                  ? styles.wordStackKnown
-                  : wordIndex === 2
-                    ? styles.wordStackUseful
-                    : wordIndex === 3
-                      ? styles.wordStackUnderstood
-                      : styles.wordStackClear
-              }`}
-            >
-              <span>clear</span>
-              <span>known</span>
-              <span>useful</span>
-              <span className={styles.finalWord}>understood.</span>
-            </span>
-          </span>
-        </p>
-      </div>
+    <div aria-hidden="true" role="presentation" className={styles.intro} data-aurora-intro>
+      {gifReady ? <img className={styles.loaderGif} src={LOADER_SRC} alt="" width="450" height="150" draggable={false} /> : null}
     </div>
   );
 }

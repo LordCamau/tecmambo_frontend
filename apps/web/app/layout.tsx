@@ -88,14 +88,14 @@ const auroraIntroScript = `
   (function () {
     var root = document.documentElement;
     try {
-      var key = "tecmambo_intro_seen";
-      if (window.sessionStorage.getItem(key) === "1") {
+      var key = "tm_loader_seen";
+      var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduceMotion || window.sessionStorage.getItem(key) === "1") {
         root.classList.remove("js-intro");
         return;
       }
-      root.dataset.introStartedAt = String(window.performance && performance.now ? performance.now() : Date.now());
     } catch (error) {
-      root.dataset.introStartedAt = String(Date.now());
+      return;
     }
   })();
 `;
@@ -108,12 +108,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <style>{`
           html.js-intro,
           html.js-intro body {
-            background: #141318;
+            background: #07060d;
             overflow: hidden;
-          }
-
-          html.js-intro:not(.js-intro-lifting) body > *:not([data-aurora-intro]) {
-            visibility: hidden;
+            scrollbar-gutter: stable;
           }
         `}</style>
         <Script id="tecmambo-aurora-intro-boot" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: auroraIntroScript }} />
