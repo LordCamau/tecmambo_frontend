@@ -5,6 +5,7 @@ import { buildAiArticles } from "@/lib/ai-articles";
 import { buildAfricanTechNewsArticles } from "@/lib/african-tech-news-2026";
 import { buildAppleEcosystemArticles } from "@/lib/apple-ecosystem-news-2026";
 import { buildEditorialBundleArticles } from "@/lib/editorial-bundle-july-2026";
+import { buildEditorialJuly13Articles } from "@/lib/editorial-bundle-july-13-2026";
 import { buildEditorialJuly7Articles } from "@/lib/editorial-bundle-july-7-2026";
 import { buildEvMobilityNewsArticles } from "@/lib/ev-mobility-news-2026";
 import { buildGlobalOpinionArticles } from "@/lib/global-opinion-essays-2026";
@@ -34,12 +35,19 @@ export const authors: Author[] = [
 
 export const topics: Tag[] = [
   { name: "AI", slug: "ai", kind: "topic" },
+  { name: "AI Shopping", slug: "ai-shopping", kind: "topic" },
+  { name: "Agentic AI", slug: "agentic-ai", kind: "topic" },
   { name: "Android", slug: "android", kind: "topic" },
   { name: "Apps", slug: "apps", kind: "topic" },
   { name: "Smartphones", slug: "smartphones", kind: "topic" },
+  { name: "E-Commerce", slug: "e-commerce", kind: "topic" },
+  { name: "Quick Commerce", slug: "quick-commerce", kind: "topic" },
+  { name: "Privacy", slug: "privacy", kind: "topic" },
   { name: "Computing", slug: "computing", kind: "topic" },
   { name: "Social Media", slug: "social-media", kind: "topic" },
   { name: "Entertainment", slug: "entertainment", kind: "topic" },
+  { name: "TVs", slug: "tvs", kind: "topic" },
+  { name: "Home Entertainment", slug: "home-entertainment", kind: "topic" },
   { name: "Digital Ownership", slug: "digital-ownership", kind: "topic" },
   { name: "Game Preservation", slug: "game-preservation", kind: "topic" },
   { name: "EVs & Mobility", slug: "evs-mobility", kind: "topic" },
@@ -51,6 +59,14 @@ export const topics: Tag[] = [
   { name: "Startups", slug: "startups", kind: "topic" },
   { name: "Business", slug: "business", kind: "topic" },
   { name: "Fintech", slug: "fintech", kind: "topic" },
+  { name: "Banking", slug: "banking", kind: "topic" },
+  { name: "Credit Cards", slug: "credit-cards", kind: "topic" },
+  { name: "Policy", slug: "policy", kind: "topic" },
+  { name: "Climate Policy", slug: "climate-policy", kind: "topic" },
+  { name: "Climate Tech", slug: "climate-tech", kind: "topic" },
+  { name: "Clean Cooking", slug: "clean-cooking", kind: "topic" },
+  { name: "Energy", slug: "energy", kind: "topic" },
+  { name: "Emerging Markets", slug: "emerging-markets", kind: "topic" },
   { name: "Cybersecurity", slug: "cybersecurity", kind: "topic" },
   { name: "Security Updates", slug: "security-updates", kind: "topic" },
   { name: "Audio", slug: "audio", kind: "topic" },
@@ -69,6 +85,10 @@ export const brands: Tag[] = [
   { name: "Sony", slug: "sony", kind: "brand" },
   { name: "PlayStation", slug: "playstation", kind: "brand" },
   { name: "Samsung", slug: "samsung", kind: "brand" },
+  { name: "Glovo", slug: "glovo", kind: "brand" },
+  { name: "I&M Bank", slug: "im-bank", kind: "brand" },
+  { name: "Mastercard", slug: "mastercard", kind: "brand" },
+  { name: "KOKO Networks", slug: "koko-networks", kind: "brand" },
   { name: "Oraimo", slug: "oraimo", kind: "brand" },
   { name: "Apple", slug: "apple", kind: "brand" },
   { name: "OPPO", slug: "oppo", kind: "brand" },
@@ -665,6 +685,14 @@ const businessArticles: Article[] = [
 const aiArticles = buildAiArticles({ authors, topics, brands });
 const appleEcosystemArticles = buildAppleEcosystemArticles({ authors, topics, brands });
 const editorialBundleArticles = buildEditorialBundleArticles({ authors, topics, brands });
+const editorialJuly13Articles = buildEditorialJuly13Articles({
+  authors,
+  topics,
+  brands,
+  regions: {
+    kenya: kenyaRegion
+  }
+});
 const editorialJuly7Articles = buildEditorialJuly7Articles({
   authors,
   topics,
@@ -740,6 +768,7 @@ function attachRegions(article: Article): Article {
 
 export const articles: Article[] = [
   ...globalOpinionArticles,
+  ...editorialJuly13Articles,
   ...appleEcosystemArticles,
   ...editorialBundleArticles,
   ...editorialJuly7Articles,

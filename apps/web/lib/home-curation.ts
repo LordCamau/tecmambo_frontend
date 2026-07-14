@@ -54,9 +54,12 @@ function pickHeroStory(candidates: Article[], selected: Article[]) {
   return candidates.find((article) => !selectedIds.has(article.id) && !selectedImages.has(article.image.src));
 }
 
+const primaryHeroSlug = "america-innovates-china-replicates-europe-regulates";
+
 function pickHeroStories(articles: Article[]) {
   const uniqueArticles = uniqueByImage(articles);
-  const selected: Article[] = [];
+  const forcedHero = uniqueArticles.find((article) => article.slug === primaryHeroSlug);
+  const selected: Article[] = forcedHero ? [forcedHero] : [];
   const buckets = [
     uniqueArticles.filter(isSmartphoneOrHardwareReview),
     uniqueArticles.filter(isMobilityArticle),
@@ -64,6 +67,7 @@ function pickHeroStories(articles: Article[]) {
   ];
 
   for (const candidates of buckets) {
+    if (forcedHero && candidates.some((article) => article.id === forcedHero.id)) continue;
     const article = pickHeroStory(candidates, selected);
     if (article) selected.push(article);
   }
@@ -73,7 +77,8 @@ function pickHeroStories(articles: Article[]) {
     selected.push(fallback.shift()!);
   }
 
-  return selected.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()).slice(0, 3);
+  if (!forcedHero) return selected.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()).slice(0, 3);
+  return [forcedHero, ...selected.filter((article) => article.id !== forcedHero.id).slice(0, 2)];
 }
 
 function lane(
