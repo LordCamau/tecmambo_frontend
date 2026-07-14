@@ -6,7 +6,7 @@ import styles from "./AuroraIntro.module.css";
 
 const LOADER_STORAGE_KEY = "tm_loader_seen";
 const LOADER_SRC = "/tecmambo-loader.gif";
-const LOADER_PLAY_MS = 13_100;
+const LOADER_PLAY_MS = 4_000;
 const LOADER_EXIT_MS = 500;
 
 function waitForImage(image: HTMLImageElement) {
