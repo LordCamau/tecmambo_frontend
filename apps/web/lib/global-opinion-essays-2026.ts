@@ -76,12 +76,12 @@ export function buildGlobalOpinionArticles({ authors, topics, brands }: BuildGlo
       updatedAt: published(7),
       readTime: "10 min read",
       image: {
-        src: "/articles/america-invents-china-perfects-europe-rules-tecmambo-updated.jpg",
+        src: "/articles/america-invents-china-perfects-europe-rules-tecmambo-upscaled.png",
         alt: "A labeled triptych showing America, China, and Europe through rocket recovery and technology regulation imagery. Credit: tecMAMBO.",
         credit: "tecMAMBO",
-        width: 1040,
-        height: 520,
-        type: "image/jpeg"
+        width: 1774,
+        height: 887,
+        type: "image/png"
       },
       tags: [business, ai, mobility, spacex, apple, google, huawei, byd, tesla],
       sources: [
