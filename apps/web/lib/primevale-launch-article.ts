@@ -29,7 +29,7 @@ export function buildPrimeValeArticle({ authors, topics, brands, kenya }: BuildP
     format: "news",
     title: "PrimeVale is betting that informed property buyers are better buyers",
     seo: {
-      title: "What is PrimeVale? Kenya's new property marketplace",
+      title: "PrimeVale: new Kenyan property platform, explained",
       description:
         "PrimeVale, a new Kenyan property marketplace, pairs listings with plain-language guides for first-time buyers. A look at the promise, and the hard questions."
     },

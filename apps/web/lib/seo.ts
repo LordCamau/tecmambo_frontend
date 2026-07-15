@@ -205,6 +205,7 @@ export function articleJsonLd(article: Article): WithContext<SchemaArticle | Rev
   return {
     "@context": "https://schema.org",
     "@type": article.format === "news" || article.format === "business" ? "NewsArticle" : article.format === "opinion" ? "OpinionNewsArticle" : "Article",
+    name: article.seo?.title ?? article.title,
     headline: article.title,
     description,
     url,
