@@ -29,9 +29,9 @@ export function buildPrimeValeArticle({ authors, topics, brands, kenya }: BuildP
     format: "news",
     title: "PrimeVale is betting that informed property buyers are better buyers",
     seo: {
-      title: "PrimeVale: a new Kenyan property platform betting on education",
+      title: "What is PrimeVale? Kenya's new property marketplace",
       description:
-        "PrimeVale, a new Kenyan property marketplace, pairs listings with plain-language guides to close the industry's information gap. A look at the promise and the hard part."
+        "PrimeVale, a new Kenyan property marketplace, pairs listings with plain-language guides for first-time buyers. A look at the promise, and the hard questions."
     },
     subhead:
       "The new marketplace says it wants to teach buyers, not just list to them. It is a genuinely good idea entering a genuinely crowded market. The real questions are execution, and independence.",
