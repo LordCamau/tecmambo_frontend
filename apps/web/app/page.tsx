@@ -5,6 +5,7 @@ import { articlePath, formats } from "@/lib/formats";
 import { getHomeCuration, type HomeLane } from "@/lib/home-curation";
 import { FormatBadge } from "@/components/signature/FormatBadge";
 import { RegionList } from "@/components/signature/RegionChip";
+import { SponsoredBadge } from "@/components/signature/SponsoredBadge";
 import { StoryCard } from "@/components/cards/StoryCard";
 import { NewsletterCard } from "@/components/cards/NewsletterCard";
 import { PartnerCard } from "@/components/cards/PartnerCard";
@@ -41,6 +42,7 @@ function FeaturedArticleCard({ article, level }: { article: HomeLane["articles"]
         <Image src={article.image.src} alt={article.image.alt} fill sizes={level === "lead" ? "(min-width: 980px) 46vw, 100vw" : "(min-width: 980px) 24vw, 100vw"} />
         <span className={styles.featureBadge}>
           <FormatBadge format={article.format} />
+          {article.sponsored ? <SponsoredBadge /> : null}
         </span>
       </Link>
       <div className={styles.featureCopy}>
@@ -109,7 +111,10 @@ export default async function HomePage() {
                 <Image src={hero.image.src} alt={hero.image.alt} fill priority loading="eager" sizes="(min-width: 1180px) 300px, (min-width: 780px) 44vw, 100vw" />
               </Link>
               <div className={styles.heroCopy}>
-                <FormatBadge format={hero.format} />
+                <div className={styles.badgeRow}>
+                  <FormatBadge format={hero.format} />
+                  {hero.sponsored ? <SponsoredBadge /> : null}
+                </div>
                 <h1>
                   <Link href={articlePath(hero.format, hero.slug)}>{hero.title}</Link>
                 </h1>
@@ -128,7 +133,10 @@ export default async function HomePage() {
                     <Image src={article.image.src} alt={article.image.alt} fill sizes="(min-width: 1180px) 300px, (min-width: 780px) 44vw, 100vw" />
                   </Link>
                   <div className={styles.supportBody}>
-                    <FormatBadge format={article.format} />
+                    <div className={styles.badgeRow}>
+                      <FormatBadge format={article.format} />
+                      {article.sponsored ? <SponsoredBadge /> : null}
+                    </div>
                     <h2>
                       <Link href={articlePath(article.format, article.slug)}>{article.title}</Link>
                     </h2>
@@ -151,7 +159,7 @@ export default async function HomePage() {
               <Link className={styles.railItem} href={articlePath(article.format, article.slug)} key={article.id}>
                 <span className={styles.railNumber}>{index + 1}</span>
                 <span className={styles.railCopy}>
-                  <small>{formats[article.format].shortLabel}</small>
+                  <small>{article.sponsored ? `Sponsored ${formats[article.format].shortLabel}` : formats[article.format].shortLabel}</small>
                   <strong>{article.title}</strong>
                 </span>
                 <span className={styles.railThumb}>

@@ -14,6 +14,7 @@ import { filterArticlesByCanonicalTopic, getTopicArchive, sectionFormatMap } fro
 import { FormatBadge } from "@/components/signature/FormatBadge";
 import { GoDeeper } from "@/components/signature/GoDeeper";
 import { RegionList } from "@/components/signature/RegionChip";
+import { SponsoredBadge } from "@/components/signature/SponsoredBadge";
 import { TagList } from "@/components/signature/TagChip";
 import { WhyItMatters } from "@/components/signature/WhyItMatters";
 import { NewsletterCard } from "@/components/cards/NewsletterCard";
@@ -271,6 +272,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
         <div className={styles.kickerRow}>
           <FormatBadge format={article.format} />
           <Link href={format.path}>{format.section}</Link>
+          {article.sponsored ? <SponsoredBadge /> : null}
         </div>
         <RegionList regions={article.regions} />
         <TagList tags={article.tags} />
@@ -291,7 +293,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
       </figure>
 
       <div className={`readable ${styles.body}`}>
-        {article.sponsored ? <p className={styles.disclosure}>Sponsored</p> : null}
+        {article.sponsored ? <p className={styles.disclosure}>Sponsored article. tecMAMBO labels paid partner content plainly.</p> : null}
         {article.format === "wallet-watch" ? (
           <p className={styles.affiliateDisclosure}>
             Wallet Watch may include affiliate links. Prices are manually checked by editors and can change before checkout.

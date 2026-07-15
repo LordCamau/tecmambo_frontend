@@ -27,6 +27,7 @@ export function buildPrimeValeArticle({ authors, topics, brands, kenya }: BuildP
     id: "kenya-business-primevale-property-marketplace",
     slug: "primevale-kenya-property-marketplace",
     format: "news",
+    sponsored: true,
     title: "PrimeVale is betting that informed property buyers are better buyers",
     seo: {
       title: "PrimeVale: new Kenyan property platform, explained",

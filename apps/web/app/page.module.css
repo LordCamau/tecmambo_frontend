@@ -114,6 +114,13 @@
   font-size: 14px;
 }
 
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: center;
+}
+
 :global(.dark) .heroMeta {
   color: var(--g-600);
 }
@@ -415,6 +422,10 @@
   position: absolute;
   top: 14px;
   left: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: center;
 }
 
 .featureCopy {

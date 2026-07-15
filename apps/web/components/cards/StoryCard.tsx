@@ -4,6 +4,7 @@ import { articlePath } from "@/lib/formats";
 import type { Article } from "@/lib/types";
 import { FormatBadge } from "@/components/signature/FormatBadge";
 import { RegionList } from "@/components/signature/RegionChip";
+import { SponsoredBadge } from "@/components/signature/SponsoredBadge";
 import styles from "./StoryCard.module.css";
 
 export function StoryCard({ article, priority = false }: { article: Article; priority?: boolean }) {
@@ -19,6 +20,7 @@ export function StoryCard({ article, priority = false }: { article: Article; pri
         />
         <span className={styles.badge}>
           <FormatBadge format={article.format} />
+          {article.sponsored ? <SponsoredBadge /> : null}
         </span>
       </Link>
       <div className={styles.body}>

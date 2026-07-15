@@ -16,6 +16,7 @@ export function articleToMarkdown(article: Article) {
     "",
     `Author: ${article.author.name}`,
     article.regions?.length ? `Regions: ${article.regions.map((region) => region.name).join(", ")}` : "",
+    article.sponsored ? "Disclosure: Sponsored article" : "",
     `Published: ${article.publishedAt}`,
     `Updated: ${article.updatedAt}`,
     `Canonical: ${articlePath(article.format, article.slug)}`,
