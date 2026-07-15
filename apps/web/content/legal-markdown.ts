@@ -10,6 +10,17 @@ function paragraphToMarkdown(segments: LegalSegment[]) {
 }
 
 export function legalPageToMarkdown(page: LegalPage) {
+  const placeholderSection = page.placeholders.length
+    ? [
+        `## ${page.placeholderTitle ?? "Publishing notes"}`,
+        "",
+        page.placeholderIntro ?? "These notes are for editorial and legal review.",
+        "",
+        ...page.placeholders.map((placeholder) => `- ${placeholder}`),
+        ""
+      ]
+    : [];
+
   return [
     `# ${page.title}`,
     "",
@@ -17,12 +28,7 @@ export function legalPageToMarkdown(page: LegalPage) {
     "",
     `**${page.summaryLabel}** ${segmentsToText(page.summary)}`,
     "",
-    `## ${page.placeholderTitle ?? "Complete before publishing"}`,
-    "",
-    page.placeholderIntro ?? "This template needs legal review and these CMS fields completed before launch.",
-    "",
-    ...page.placeholders.map((placeholder) => `- ${placeholder}`),
-    "",
+    ...placeholderSection,
     ...page.sections.flatMap((section) => [`## ${section.title}`, "", ...section.paragraphs.flatMap((paragraph) => [paragraphToMarkdown(paragraph), ""])])
   ].join("\n");
 }

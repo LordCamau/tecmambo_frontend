@@ -3,6 +3,7 @@ import { getArticles, getAuthors, getGlossaryTerms, getTags } from "@/lib/conten
 import { articlePath, formats, siteUrl } from "@/lib/formats";
 import { allSectionTopicPaths, wearableFilters, wearableFilterPath } from "@/lib/site-structure";
 import { africanRegions, regionPath } from "@/lib/regions";
+import { isSubstantialArticle } from "@/lib/article-quality";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [articles, terms, authors, topics, brands] = await Promise.all([
@@ -59,7 +60,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       { url: `${siteUrl}${regionPath(region)}.md`, lastModified: new Date() },
       { url: `${siteUrl}${regionPath(region)}/feed.xml`, lastModified: new Date() }
     ]),
-    ...articles.map((article) => ({
+    ...articles.filter(isSubstantialArticle).map((article) => ({
       url: `${siteUrl}${articlePath(article.format, article.slug)}`,
       lastModified: new Date(article.updatedAt)
     })),

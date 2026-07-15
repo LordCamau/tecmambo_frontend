@@ -54,15 +54,17 @@ export function LegalPageTemplate({ page, children }: { page: LegalPage; childre
         </aside>
 
         <div className={styles.content}>
-          <section className={styles.placeholderBox} aria-labelledby="legal-review-title">
-            <h2 id="legal-review-title">{page.placeholderTitle ?? "Complete before publishing"}</h2>
-            <p>{page.placeholderIntro ?? "This template needs legal review and these CMS fields completed before launch."}</p>
-            <ul>
-              {page.placeholders.map((placeholder) => (
-                <li key={placeholder}>{placeholder}</li>
-              ))}
-            </ul>
-          </section>
+          {page.placeholders.length > 0 ? (
+            <section className={styles.placeholderBox} aria-labelledby="legal-review-title">
+              <h2 id="legal-review-title">{page.placeholderTitle ?? "Publishing notes"}</h2>
+              <p>{page.placeholderIntro ?? "These notes are for editorial and legal review."}</p>
+              <ul>
+                {page.placeholders.map((placeholder) => (
+                  <li key={placeholder}>{placeholder}</li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
 
           {children}
 

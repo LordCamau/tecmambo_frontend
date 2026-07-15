@@ -9,6 +9,7 @@ import { formats, articlePath } from "@/lib/formats";
 import { getArticleBySlug, getArticles, getGlossaryTerms, getRelatedArticles } from "@/lib/content";
 import { getCmsArticleBySlug } from "@/lib/cms/source";
 import { articleJsonLd, articleSocialImage, breadcrumbJsonLd, dealProductJsonLd, faqJsonLd, itemListJsonLd } from "@/lib/seo";
+import { isSubstantialArticle } from "@/lib/article-quality";
 import { renderGlossaryText, type GlossaryLinkState } from "@/lib/glossary-linking";
 import { filterArticlesByCanonicalTopic, getTopicArchive, sectionFormatMap } from "@/lib/site-structure";
 import { FormatBadge } from "@/components/signature/FormatBadge";
@@ -188,9 +189,16 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const title = article.seo?.title ?? article.title;
   const description = article.seo?.description ?? article.subhead;
   const previewImage = articleSocialImage(article);
+  const substantial = isSubstantialArticle(article);
   return {
     title,
     description,
+    robots: substantial
+      ? undefined
+      : {
+          index: false,
+          follow: true
+        },
     alternates: {
       canonical: path,
       types: {
@@ -265,6 +273,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
   const format = formats[article.format];
   const glossaryState: GlossaryLinkState = { seen: new Set(), count: 0, max: 12 };
   const highlightReviewPrices = isPhoneReview(article);
+  const substantial = isSubstantialArticle(article);
 
   return (
     <article className={styles.article}>
@@ -386,7 +395,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
           <p>Have a plain-English question about this topic? Send it in and we may answer it in a future guide.</p>
           <Link href="/contact">Ask a question</Link>
         </section>
-        <AdSlot />
+        {substantial ? <AdSlot /> : null}
       </div>
 
       <section className={`container ${styles.related}`} aria-labelledby="related-title">

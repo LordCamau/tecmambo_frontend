@@ -35,21 +35,14 @@ export const termsPage: LegalPage = {
   summary: [
     "Welcome to tecMAMBO. By using this website you agree to the terms on this page. In plain English: read and enjoy our content, but do not copy it wholesale or misuse the site; our articles are information, not professional advice, so use your own judgement before spending money or making decisions; some links and content are sponsored or earn us a commission, and we label those; and we do our best to be accurate, but we cannot promise the site will be perfect or always available. The full terms follow, and they are the ones that legally apply."
   ],
-  placeholders: [
-    "[Legal Entity Name]",
-    "[registration number]",
-    "[registered address]",
-    "[legal contact email]",
-    "[general contact email]",
-    "[Note for legal review: confirm whether arbitration under the Arbitration Act of Kenya is preferred, and complete this clause accordingly.]"
-  ],
+  placeholders: [],
   sections: [
     {
       id: "who-we-are",
       title: "1. Who we are and what these terms cover",
       paragraphs: [
         [
-          'tecMAMBO is a technology media publication. This website, including all of its pages, articles, the Glossary, newsletters, and related features (together, the "Service"), is operated by [Legal Entity Name], a company registered in Kenya under registration number [registration number], with its registered office at [registered address] ("we", "us", or "our"). These Terms of Use ("Terms") govern your access to and use of the Service. Please read them carefully. If you do not agree with them, please do not use the Service.'
+          'tecMAMBO is a technology media publication. This website, including all of its pages, articles, the Glossary, newsletters, and related features (together, the "Service"), is operated by Brainerd Media Company, a company registered in Kenya with its registered office at Nairobi, Kenya ("we", "us", or "our"). These Terms of Use ("Terms") govern your access to and use of the Service. Please read them carefully. If you do not agree with them, please do not use the Service.'
         ]
       ]
     },
@@ -145,7 +138,7 @@ export const termsPage: LegalPage = {
       title: "11. Trademarks",
       paragraphs: [
         [
-          '"tecMAMBO", the tecMAMBO wordmark, and our associated logos and brand features are trademarks of [Legal Entity Name]. You may not use them without our prior written consent, except to refer fairly and accurately to tecMAMBO in a way that does not suggest any sponsorship, endorsement, or affiliation that does not exist. All other trademarks, product names, and brand names referenced on the Service, including those of the companies and products we write about, belong to their respective owners, and their use on tecMAMBO is for identification and editorial purposes only and does not imply any affiliation or endorsement.'
+          '"tecMAMBO", the tecMAMBO wordmark, and our associated logos and brand features are trademarks of Brainerd Media Company. You may not use them without our prior written consent, except to refer fairly and accurately to tecMAMBO in a way that does not suggest any sponsorship, endorsement, or affiliation that does not exist. All other trademarks, product names, and brand names referenced on the Service, including those of the companies and products we write about, belong to their respective owners, and their use on tecMAMBO is for identification and editorial purposes only and does not imply any affiliation or endorsement.'
         ]
       ]
     },
@@ -219,7 +212,7 @@ export const termsPage: LegalPage = {
       title: "19. Indemnity",
       paragraphs: [
         [
-          "To the fullest extent permitted by applicable law, you agree to indemnify, defend, and hold harmless tecMAMBO and [Legal Entity Name], together with our directors, employees, contributors, agents, and licensors, from and against any claims, liabilities, damages, losses, costs, and expenses, including reasonable legal fees, arising out of or in any way connected with your breach of these Terms, your misuse of the Service, your User Content, or your violation of any law or the rights of any third party."
+          "To the fullest extent permitted by applicable law, you agree to indemnify, defend, and hold harmless tecMAMBO and Brainerd Media Company, together with our directors, employees, contributors, agents, and licensors, from and against any claims, liabilities, damages, losses, costs, and expenses, including reasonable legal fees, arising out of or in any way connected with your breach of these Terms, your misuse of the Service, your User Content, or your violation of any law or the rights of any third party."
         ]
       ]
     },
@@ -245,7 +238,7 @@ export const termsPage: LegalPage = {
       title: "21. Copyright complaints and takedown",
       paragraphs: [
         [
-          "We respect the intellectual property rights of others and ask you to do the same. If you believe that content on tecMAMBO infringes your copyright or other intellectual property right, please contact us at [legal contact email] with enough detail to identify the work concerned, the location of the material on the Service, your contact details, and a statement of your good-faith belief that the use is not authorised. We will review valid notices and take appropriate action, which may include removing the material in question."
+          "We respect the intellectual property rights of others and ask you to do the same. If you believe that content on tecMAMBO infringes your copyright or other intellectual property right, please contact us through the contact form with enough detail to identify the work concerned, the location of the material on the Service, your contact details, and a statement of your good-faith belief that the use is not authorised. We will review valid notices and take appropriate action, which may include removing the material in question."
         ]
       ]
     },
@@ -272,7 +265,7 @@ export const termsPage: LegalPage = {
       title: "24. Dispute resolution",
       paragraphs: [
         [
-          "If a dispute arises between you and us in connection with the Service or these Terms, we encourage you to contact us first so that we can try to resolve it informally and in good faith. If the dispute cannot be resolved informally within a reasonable period, it will be subject to the governing law and jurisdiction set out above, or to any alternative dispute resolution process that you and we agree to in writing. [Note for legal review: confirm whether arbitration under the Arbitration Act of Kenya is preferred, and complete this clause accordingly.]"
+          "If a dispute arises between you and us in connection with the Service or these Terms, we encourage you to contact us first so that we can try to resolve it informally and in good faith. If the dispute cannot be resolved informally within a reasonable period, it will be subject to the governing law and jurisdiction set out above, or to any alternative dispute resolution process that you and we agree to in writing."
         ]
       ]
     },
@@ -294,7 +287,7 @@ export const termsPage: LegalPage = {
       title: "26. How to contact us",
       paragraphs: [
         [
-          "If you have any questions about these Terms, you can reach us at [general contact email], or by writing to [Legal Entity Name], [registered address]. We are based in Nairobi, Kenya."
+          "If you have any questions about these Terms, you can reach us through the contact form, or by writing to Brainerd Media Company, Nairobi, Kenya. We are based in Nairobi, Kenya."
         ]
       ]
     }
@@ -309,21 +302,14 @@ export const privacyPage: LegalPage = {
   summary: [
     "Your privacy matters to us. This policy explains, in plain English, what personal information tecMAMBO collects, why we collect it, and what you can do about it. In short: if you sign up for a newsletter or message us, we use the details you give us for those purposes; when you browse, we and our partners use cookies and similar tools to keep the site working, understand what is read, and show advertising, and you can control much of this through your cookie choices; we do not sell your personal information for money; and you have rights over your data, including the right to access it, correct it, or ask us to delete it. The full policy follows, and it is the one that legally applies."
   ],
-  placeholders: [
-    "[Legal Entity Name]",
-    "[registration number]",
-    "[registered address]",
-    "[privacy contact email]",
-    "[Data Protection Officer name or role]",
-    "[verify and insert ODPC website and contact details]"
-  ],
+  placeholders: [],
   sections: [
     {
       id: "about-this-policy",
       title: "1. About this policy and who we are",
       paragraphs: [
         [
-          'This Privacy Policy explains how tecMAMBO collects, uses, shares, and protects personal data when you visit our website, read our content, subscribe to our newsletters, or otherwise interact with us (together, the "Service"). For the purposes of the Data Protection Act, 2019 of Kenya (the "Act") and other applicable data protection law, the data controller responsible for your personal data is [Legal Entity Name], a company registered in Kenya under registration number [registration number], with its registered office at [registered address] ("we", "us", or "our"). "Personal data" means any information that relates to an identified or identifiable person. By using the Service, you acknowledge that you have read and understood this policy. This policy should be read together with our ',
+          'This Privacy Policy explains how tecMAMBO collects, uses, shares, and protects personal data when you visit our website, read our content, subscribe to our newsletters, or otherwise interact with us (together, the "Service"). For the purposes of the Data Protection Act, 2019 of Kenya (the "Act") and other applicable data protection law, the data controller responsible for your personal data is Brainerd Media Company, a company registered in Kenya with its registered office at Nairobi, Kenya ("we", "us", or "our"). "Personal data" means any information that relates to an identified or identifiable person. By using the Service, you acknowledge that you have read and understood this policy. This policy should be read together with our ',
           cookiePolicy,
           " and our ",
           termsOfUse,
@@ -529,7 +515,7 @@ export const privacyPage: LegalPage = {
       title: "17. How to contact us and our Data Protection Officer",
       paragraphs: [
         [
-          "If you have any questions about this policy, or if you would like to exercise your data protection rights, you can contact us at [privacy contact email], or by writing to [Legal Entity Name], [registered address]. Our data protection contact is [Data Protection Officer name or role], who can be reached at the same address. We are based in Nairobi, Kenya."
+          "If you have any questions about this policy, or if you would like to exercise your data protection rights, you can contact us through the contact form, or by writing to Brainerd Media Company, Nairobi, Kenya. Our privacy contact can be reached through the same form. We are based in Nairobi, Kenya."
         ]
       ]
     },
@@ -538,7 +524,7 @@ export const privacyPage: LegalPage = {
       title: "18. How to complain",
       paragraphs: [
         [
-          "We hope to resolve any concern you have about how we handle your personal data. If you are not satisfied, you have the right to lodge a complaint with the Office of the Data Protection Commissioner of Kenya, whose current contact details are published on its official website at [verify and insert ODPC website and contact details]. We would, however, appreciate the chance to address your concerns before you approach the regulator, so please consider contacting us first."
+          "We hope to resolve any concern you have about how we handle your personal data. If you are not satisfied, you have the right to lodge a complaint with the Office of the Data Protection Commissioner of Kenya, whose current contact details are published on its official website at https://www.odpc.go.ke. We would, however, appreciate the chance to address your concerns before you approach the regulator, so please consider contacting us first."
         ]
       ]
     }
@@ -553,19 +539,14 @@ export const cookiePage: LegalPage = {
   summary: [
     'When you visit tecMAMBO, we and our partners use cookies and similar technologies. Some are essential to make the site work, and others help us understand what is read, remember your preferences such as light or dark mode, and show and measure advertising. You are in control of the ones that are not essential. You can accept or reject them when you first visit, and you can change your mind at any time using the "Manage cookie preferences" control on this page or in our footer. The full policy below explains what we use, why, and how to manage it.'
   ],
-  placeholders: [
-    "[Legal Entity Name]",
-    "[registered address]",
-    "[privacy contact email]",
-    "[verify and insert ODPC website and contact details]"
-  ],
+  placeholders: [],
   sections: [
     {
       id: "about-this-policy",
       title: "1. About this policy and who we are",
       paragraphs: [
         [
-          'This Cookie Policy explains how tecMAMBO uses cookies and similar technologies when you visit our website (the "Service"), what those technologies are, why we use them, and the choices you have. tecMAMBO is operated by [Legal Entity Name], a company registered in Kenya, with its registered office at [registered address] ("we", "us", or "our"). This Cookie Policy should be read together with our ',
+          'This Cookie Policy explains how tecMAMBO uses cookies and similar technologies when you visit our website (the "Service"), what those technologies are, why we use them, and the choices you have. tecMAMBO is operated by Brainerd Media Company, a company registered in Kenya, with its registered office at Nairobi, Kenya ("we", "us", or "our"). This Cookie Policy should be read together with our ',
           privacyPolicy,
           ", which explains how we handle personal data more generally, and our ",
           termsOfUse,
@@ -679,7 +660,7 @@ export const cookiePage: LegalPage = {
           privacyPolicy,
           ", and for the terms that govern your use of the Service, please see our ",
           termsOfUse,
-          ". If you have any questions about our use of cookies, you can contact us at [privacy contact email], or by writing to [Legal Entity Name], [registered address]. We are based in Nairobi, Kenya. If you have a concern about how we handle your personal data that we are not able to resolve, you have the right to lodge a complaint with the Office of the Data Protection Commissioner of Kenya, whose current contact details are published on its official website at [verify and insert ODPC website and contact details]."
+          ". If you have any questions about our use of cookies, you can contact us through the contact form, or by writing to Brainerd Media Company, Nairobi, Kenya. We are based in Nairobi, Kenya. If you have a concern about how we handle your personal data that we are not able to resolve, you have the right to lodge a complaint with the Office of the Data Protection Commissioner of Kenya, whose current contact details are published on its official website at https://www.odpc.go.ke."
         ]
       ]
     }
@@ -695,10 +676,7 @@ export const editorialStandardsPage: LegalPage = {
   summary: [
     "tecMAMBO exists to make technology genuinely understandable, and that promise only works if you can trust us. So here is how we work: our journalism is independent, and no advertiser, sponsor, or affiliate partner gets to decide what we say. We test products ourselves and write honest verdicts. We label anything sponsored, plainly. People, not machines, write and check our work, and we tell you when we use AI tools. When we get something wrong, we fix it openly. The full standards below explain all of this in detail."
   ],
-  placeholders: ["[Effective date]", "[editorial contact email]", "[Legal Entity Name]", "[registered address]"],
-  placeholderTitle: "Complete before publishing",
-  placeholderIntro:
-    "This trust document must reflect how tecMAMBO actually works. Complete these CMS fields and review every clause before launch.",
+  placeholders: [],
   sections: [
     {
       id: "our-editorial-promise",
@@ -864,7 +842,7 @@ export const editorialStandardsPage: LegalPage = {
       title: "18. Feedback, complaints, and right of reply",
       paragraphs: [
         [
-          "We want to hear from you, including when you think we have got something wrong. If you have a concern, a correction, a complaint, or a request for a right of reply, please contact us at [editorial contact email]. We will consider it seriously and respond fairly. Where a complaint identifies a genuine error, we will correct it. Where it concerns a matter of judgement, we will explain our reasoning."
+          "We want to hear from you, including when you think we have got something wrong. If you have a concern, a correction, a complaint, or a request for a right of reply, please contact us through the contact form. We will consider it seriously and respond fairly. Where a complaint identifies a genuine error, we will correct it. Where it concerns a matter of judgement, we will explain our reasoning."
         ]
       ]
     },
@@ -882,7 +860,7 @@ export const editorialStandardsPage: LegalPage = {
       title: "20. Contact us",
       paragraphs: [
         [
-          "You can reach our editorial team at [editorial contact email], or by writing to [Legal Entity Name], [registered address]. We are based in Nairobi, Kenya. To learn more about who we are, please see our ",
+          "You can reach our editorial team through the contact form, or by writing to Brainerd Media Company, Nairobi, Kenya. We are based in Nairobi, Kenya. To learn more about who we are, please see our ",
           aboutPage,
           "."
         ]
