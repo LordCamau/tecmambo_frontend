@@ -156,17 +156,22 @@
   font-family: var(--font-display), system-ui, sans-serif;
 }
 
-.disclosure {
+.body > .disclosure {
+  display: inline-flex;
+  align-items: center;
   width: fit-content;
+  max-width: 100%;
   border: 1px solid var(--pill-border);
   border-radius: 999px;
   background: var(--pill-bg);
   color: var(--pill-fg);
-  padding: 5px 9px;
+  padding: 10px 16px;
   font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
-  text-transform: uppercase;
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .affiliateDisclosure {
