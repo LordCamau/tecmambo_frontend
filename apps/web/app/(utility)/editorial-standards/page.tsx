@@ -8,12 +8,7 @@ export const metadata: Metadata = {
   title: "Editorial standards, tecMAMBO",
   description:
     "How tecMAMBO protects editorial independence, sourcing, reviews, corrections, AI use, affiliate links, and reader trust.",
-  alternates: {
-    canonical: "/editorial-standards",
-    types: {
-      "text/markdown": "/editorial-standards.md"
-    }
-  }
+  alternates: { canonical: "/editorial-standards" }
 };
 
 export default function EditorialStandardsPage() {

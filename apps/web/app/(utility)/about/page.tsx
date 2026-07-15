@@ -13,12 +13,7 @@ export const metadata: Metadata = {
   title: "About tecMAMBO - Made to be understood",
   description:
     "We're the tech publication for everyone the other tech sites forgot to write for, without boring the people who already love this stuff.",
-  alternates: {
-    canonical: "/about",
-    types: {
-      "text/markdown": "/about.md"
-    }
-  },
+  alternates: { canonical: "/about" },
   openGraph: {
     title: "About tecMAMBO - Made to be understood",
     description:

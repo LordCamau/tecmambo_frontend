@@ -44,8 +44,7 @@
 
 .tabs a,
 .topicChips a,
-.countryList a,
-.feedLink {
+.countryList a {
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--surface);
@@ -58,8 +57,7 @@
 .tabs a[aria-current="page"],
 .tabs a:hover,
 .topicChips a:hover,
-.countryList a:hover,
-.feedLink:hover {
+.countryList a:hover {
   border-color: var(--purple);
   background: var(--purple);
   color: var(--white);

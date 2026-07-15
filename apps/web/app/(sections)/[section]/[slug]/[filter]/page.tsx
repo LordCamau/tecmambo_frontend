@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getArticles } from "@/lib/content";
+import { isSubstantialArticle } from "@/lib/article-quality";
 import { filterArticlesByCanonicalTopic, wearableFilters, wearableFilterPath } from "@/lib/site-structure";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { StoryCard } from "@/components/cards/StoryCard";
@@ -34,7 +35,7 @@ export default async function WearableFilterPage({ params }: { params: Params })
   const articles = filterArticlesByCanonicalTopic(
     (await getArticles()).filter((article) => article.format === "review"),
     active.canonicalTopic
-  );
+  ).filter(isSubstantialArticle);
 
   return (
     <section className={`container ${styles.topicArchive}`}>

@@ -18,9 +18,13 @@ export default function robots(): MetadataRoute.Robots {
 
   return {
     rules: [
-      { userAgent: "*", allow: "/" },
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/api/preview", "/api/revalidate", "/api/search/reindex"]
+      },
       ...allowAnswerBots.map((userAgent) => ({ userAgent, allow: "/" }))
     ],
-    sitemap: [`${siteUrl}/sitemap.xml`, `${siteUrl}/news-sitemap.xml`]
+    sitemap: [`${siteUrl}/sitemap.xml`, `${siteUrl}/news-sitemap.xml`, `${siteUrl}/glossary/sitemap.xml`]
   };
 }

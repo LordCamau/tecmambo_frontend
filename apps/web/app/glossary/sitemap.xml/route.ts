@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getGlossaryTerms } from "@/lib/content";
 import { siteUrl } from "@/lib/formats";
+import { noIndexHeaders } from "@/lib/noindex-response";
 
 export async function GET() {
   const terms = await getGlossaryTerms();
@@ -16,6 +17,7 @@ export async function GET() {
   return new NextResponse(xml, {
     headers: {
       "content-type": "application/xml; charset=utf-8",
+      ...noIndexHeaders,
       "cache-control": "public, s-maxage=300, stale-while-revalidate=86400"
     }
   });

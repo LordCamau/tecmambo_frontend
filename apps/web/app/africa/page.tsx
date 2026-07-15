@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getAfricanArticles } from "@/lib/content";
+import { getSubstantialAfricanArticles } from "@/lib/content";
 import { africaHub, africaLeadRegionSlugs, africanRegions, regionPath, relatedRegionTopics } from "@/lib/regions";
-import { siteUrl } from "@/lib/formats";
 import { breadcrumbJsonLd, collectionPageJsonLd } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { StoryCard } from "@/components/cards/StoryCard";
@@ -12,13 +11,7 @@ export const metadata: Metadata = {
   title: "African tech news, tecMAMBO",
   description:
     "Technology coverage from Kenya, Nigeria, South Africa, Rwanda, and the wider African tech scene, collected as a regional layer inside tecMAMBO.",
-  alternates: {
-    canonical: "/africa",
-    types: {
-      "application/rss+xml": `${siteUrl}/africa/feed.xml`,
-      "text/markdown": `${siteUrl}/africa.md`
-    }
-  }
+  alternates: { canonical: "/africa" }
 };
 
 const leadRegions = africaLeadRegionSlugs
@@ -26,7 +19,7 @@ const leadRegions = africaLeadRegionSlugs
   .filter((region): region is NonNullable<typeof region> => Boolean(region));
 
 export default async function AfricaPage() {
-  const articles = await getAfricanArticles();
+  const articles = await getSubstantialAfricanArticles();
   const topicChips = relatedRegionTopics(articles);
 
   return (
@@ -62,9 +55,6 @@ export default async function AfricaPage() {
               </Link>
             ))}
           </div>
-          <Link className={styles.feedLink} href="/africa/feed.xml">
-            Africa RSS
-          </Link>
         </section>
       ) : null}
 

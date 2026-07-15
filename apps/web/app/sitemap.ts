@@ -24,28 +24,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/",
     "/latest",
     "/glossary",
-    "/glossary/llms.txt",
-    "/glossary/sitemap.xml",
-    "/glossary/feed.xml",
-    "/glossary/feed.json",
     "/africa",
-    "/africa.md",
-    "/africa/feed.xml",
     "/africa/more",
-    "/africa/more.md",
     "/about",
-    "/about.md",
     "/terms",
-    "/terms.md",
     "/advertise",
     "/newsletter",
     "/contact",
     "/editorial-standards",
-    "/editorial-standards.md",
     "/privacy",
-    "/privacy.md",
-    "/cookies",
-    "/cookies.md"
+    "/cookies"
   ];
   const archivePaths = [...allSectionTopicPaths(), ...wearableFilters.map((filter) => wearableFilterPath(filter.slug))].filter(
     (path, index, all) => all.indexOf(path) === index
@@ -55,11 +43,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...glossaryTopicPaths.map((path) => ({ url: `${siteUrl}${path}`, lastModified: new Date() })),
     ...archivePaths.map((path) => ({ url: `${siteUrl}${path}`, lastModified: new Date() })),
     ...Object.values(formats).map((format) => ({ url: `${siteUrl}${format.path}`, lastModified: new Date() })),
-    ...africanRegions.flatMap((region) => [
-      { url: `${siteUrl}${regionPath(region)}`, lastModified: new Date() },
-      { url: `${siteUrl}${regionPath(region)}.md`, lastModified: new Date() },
-      { url: `${siteUrl}${regionPath(region)}/feed.xml`, lastModified: new Date() }
-    ]),
+    ...africanRegions.map((region) => ({ url: `${siteUrl}${regionPath(region)}`, lastModified: new Date() })),
     ...articles.filter(isSubstantialArticle).map((article) => ({
       url: `${siteUrl}${articlePath(article.format, article.slug)}`,
       lastModified: new Date(article.updatedAt)

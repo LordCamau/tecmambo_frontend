@@ -143,8 +143,9 @@ export function curateHomeContent(articles: Article[], glossaryTerms: GlossaryTe
 
 export async function getHomeCuration() {
   const { getArticles, getGlossaryTerms } = await import("@/lib/content");
+  const { isSubstantialArticle } = await import("@/lib/article-quality");
   const [articles, glossaryTerms] = await Promise.all([getArticles(), getGlossaryTerms()]);
-  return curateHomeContent(articles, glossaryTerms);
+  return curateHomeContent(articles.filter(isSubstantialArticle), glossaryTerms);
 }
 
 export type HomeCuration = Awaited<ReturnType<typeof getHomeCuration>>;

@@ -199,12 +199,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
           index: false,
           follow: true
         },
-    alternates: {
-      canonical: path,
-      types: {
-        "text/markdown": `${path}.md`
-      }
-    },
+    alternates: { canonical: path },
     openGraph: {
       title,
       description,
@@ -234,7 +229,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
     if (!formatKey) notFound();
     const format = formats[formatKey];
     const articles = filterArticlesByCanonicalTopic(
-      (await getArticles()).filter((article) => article.format === formatKey),
+      (await getArticles()).filter((article) => article.format === formatKey && isSubstantialArticle(article)),
       topic.canonicalTopic
     );
     return (
@@ -269,7 +264,8 @@ export default async function ArticlePage({ params }: { params: Params }) {
   }
   const article = await getArticleBySlug(slug);
   if (!article || formats[article.format].path.slice(1) !== section) notFound();
-  const [related, glossaryTerms] = await Promise.all([getRelatedArticles(article), getGlossaryTerms()]);
+  const [relatedCandidates, glossaryTerms] = await Promise.all([getRelatedArticles(article, 6), getGlossaryTerms()]);
+  const related = relatedCandidates.filter(isSubstantialArticle).slice(0, 3);
   const format = formats[article.format];
   const glossaryState: GlossaryLinkState = { seen: new Set(), count: 0, max: 12 };
   const highlightReviewPrices = isPhoneReview(article);

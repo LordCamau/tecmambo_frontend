@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { articleToMarkdown } from "@/content/markdown";
 import { getArticleBySlug } from "@/lib/content";
 import { formats } from "@/lib/formats";
+import { noIndexHeaders } from "@/lib/noindex-response";
 
 export async function GET(request: NextRequest) {
   const section = request.nextUrl.searchParams.get("section") ?? "";
@@ -13,6 +14,7 @@ export async function GET(request: NextRequest) {
   return new NextResponse(articleToMarkdown(article), {
     headers: {
       "content-type": "text/markdown; charset=utf-8",
+      ...noIndexHeaders,
       "cache-control": "public, s-maxage=300, stale-while-revalidate=86400"
     }
   });

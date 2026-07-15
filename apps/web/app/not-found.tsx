@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { getArticles } from "@/lib/content";
+import { getSubstantialArticles } from "@/lib/content";
 import { articlePath, formats } from "@/lib/formats";
 import styles from "./not-found.module.css";
 
@@ -38,7 +38,7 @@ function NotFoundIllustration() {
 }
 
 export default async function NotFound() {
-  const latestStories = (await getArticles()).slice(0, 3);
+  const latestStories = (await getSubstantialArticles()).slice(0, 3);
 
   return (
     <main className={styles.page}>

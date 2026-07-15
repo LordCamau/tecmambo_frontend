@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { NextResponse } from "next/server";
 import { legalPageToMarkdown } from "@/content/legal-markdown";
 import { getLegalPage } from "@/lib/legal-pages";
+import { noIndexHeaders } from "@/lib/noindex-response";
 
 type Params = Promise<{ slug: string }>;
 
@@ -13,6 +14,7 @@ export async function GET(_request: Request, { params }: { params: Params }) {
   return new NextResponse(legalPageToMarkdown(page), {
     headers: {
       "content-type": "text/markdown; charset=utf-8",
+      ...noIndexHeaders,
       "cache-control": "public, s-maxage=300, stale-while-revalidate=86400"
     }
   });

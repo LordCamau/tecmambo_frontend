@@ -9,12 +9,7 @@ import styles from "./cookies.module.css";
 export const metadata: Metadata = {
   title: "Cookie Policy, tecMAMBO",
   description: "How tecMAMBO uses cookies and similar technologies, including essential cookies, analytics, advertising, preferences, and reader controls.",
-  alternates: {
-    canonical: "/cookies",
-    types: {
-      "text/markdown": "/cookies.md"
-    }
-  }
+  alternates: { canonical: "/cookies" }
 };
 
 export default function CookiesPage() {

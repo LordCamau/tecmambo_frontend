@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getArticles, getAuthor, getAuthors } from "@/lib/content";
+import { getSubstantialArticles, getAuthor, getAuthors } from "@/lib/content";
 import { StoryCard } from "@/components/cards/StoryCard";
 import styles from "./page.module.css";
 
@@ -15,7 +15,7 @@ export async function generateStaticParams() {
 export default async function AuthorPage({ params }: { params: Params }) {
   const author = await getAuthor((await params).slug);
   if (!author) notFound();
-  const articles = (await getArticles()).filter((article) => article.author.slug === author.slug);
+  const articles = (await getSubstantialArticles()).filter((article) => article.author.slug === author.slug);
   return (
     <section className={`container ${styles.page}`}>
       <header className={styles.header}>

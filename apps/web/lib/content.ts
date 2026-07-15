@@ -1,6 +1,7 @@
 import { articles, authors, brands, glossaryTerms, topics } from "@/lib/sample-data";
 import type { Article, Format } from "@/lib/types";
 import { africanRegions, getAfricaArticles, getArticlesByRegion, getRegion } from "@/lib/regions";
+import { isSubstantialArticle } from "@/lib/article-quality";
 import { shouldUseWordPress } from "@/lib/cms/env";
 import {
   getCmsAfricanArticles,
@@ -28,6 +29,10 @@ export async function getArticles() {
   return articles;
 }
 
+export async function getSubstantialArticles() {
+  return (await getArticles()).filter(isSubstantialArticle);
+}
+
 export async function getArticleBySlug(slug: string) {
   if (shouldUseWordPress()) return withCmsFallback("getArticleBySlug", () => getCmsArticleBySlug(slug), () => articles.find((article) => article.slug === slug) ?? null);
   return articles.find((article) => article.slug === slug) ?? null;
@@ -53,9 +58,17 @@ export async function getAfricanArticles() {
   return getAfricaArticles(articles);
 }
 
+export async function getSubstantialAfricanArticles() {
+  return (await getAfricanArticles()).filter(isSubstantialArticle);
+}
+
 export async function getArticlesForRegion(regionSlug: string) {
   if (shouldUseWordPress()) return withCmsFallback("getArticlesForRegion", () => getCmsArticlesForRegion(regionSlug), () => getArticlesByRegion(articles, regionSlug));
   return getArticlesByRegion(articles, regionSlug);
+}
+
+export async function getSubstantialArticlesForRegion(regionSlug: string) {
+  return (await getArticlesForRegion(regionSlug)).filter(isSubstantialArticle);
 }
 
 export async function getRelatedArticles(article: Article, limit = 3) {

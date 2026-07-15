@@ -1,12 +1,14 @@
 import { NextResponse } from "next/server";
 import { africaHubToMarkdown } from "@/content/region-markdown";
 import { getAfricanArticles } from "@/lib/content";
+import { noIndexHeaders } from "@/lib/noindex-response";
 
 export async function GET() {
   const articles = await getAfricanArticles();
   return new NextResponse(africaHubToMarkdown(articles), {
     headers: {
       "content-type": "text/markdown; charset=utf-8",
+      ...noIndexHeaders,
       "cache-control": "public, s-maxage=300, stale-while-revalidate=86400"
     }
   });

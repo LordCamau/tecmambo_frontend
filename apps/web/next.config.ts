@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+const noIndexHeader = { key: "X-Robots-Tag", value: "noindex, follow" };
+
 const wordpressMediaHost = (() => {
   try {
     return process.env.WORDPRESS_GRAPHQL_ENDPOINT ? new URL(process.env.WORDPRESS_GRAPHQL_ENDPOINT).hostname : "cms.tecmambo.com";
@@ -39,6 +41,42 @@ const nextConfig: NextConfig = {
           { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
           { key: "X-Frame-Options", value: "SAMEORIGIN" }
         ]
+      },
+      {
+        source: "/:path*.md",
+        headers: [noIndexHeader]
+      },
+      {
+        source: "/:path*/feed.xml",
+        headers: [noIndexHeader]
+      },
+      {
+        source: "/:path*/feed.json",
+        headers: [noIndexHeader]
+      },
+      {
+        source: "/feed.xml",
+        headers: [noIndexHeader]
+      },
+      {
+        source: "/feed.json",
+        headers: [noIndexHeader]
+      },
+      {
+        source: "/llms.txt",
+        headers: [noIndexHeader]
+      },
+      {
+        source: "/glossary/llms.txt",
+        headers: [noIndexHeader]
+      },
+      {
+        source: "/glossary/sitemap.xml",
+        headers: [noIndexHeader]
+      },
+      {
+        source: "/api/markdown/:path*",
+        headers: [noIndexHeader]
       }
     ];
   },

@@ -26,12 +26,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return {
     title: `${term.term}, explained`,
     description: term.oneLiner,
-    alternates: {
-      canonical: `/glossary/${term.slug}`,
-      types: {
-        "text/markdown": `/glossary/${term.slug}.md`
-      }
-    }
+    alternates: { canonical: `/glossary/${term.slug}` }
   };
 }
 
@@ -148,7 +143,6 @@ export default async function GlossaryTermPage({ params }: { params: Params }) {
         <p>Send us the bit that still feels unclear and we may turn it into a sharper explanation.</p>
         <div className={styles.pageActions}>
           <Link href="/contact">Ask a question</Link>
-          <Link href={`/glossary/${term.slug}.md`}>Markdown version</Link>
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getGlossaryTerms } from "@/lib/content";
 import { siteUrl } from "@/lib/formats";
+import { noIndexHeaders } from "@/lib/noindex-response";
 
 export async function GET() {
   const terms = (await getGlossaryTerms()).sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()).slice(0, 40);
@@ -21,6 +22,7 @@ export async function GET() {
     },
     {
       headers: {
+        ...noIndexHeaders,
         "cache-control": "public, s-maxage=300, stale-while-revalidate=86400"
       }
     }

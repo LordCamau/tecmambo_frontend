@@ -1,12 +1,14 @@
 import { NextResponse } from "next/server";
 import { aboutToMarkdown } from "@/content/about";
 import { getArticles, getGlossaryTerms } from "@/lib/content";
+import { noIndexHeaders } from "@/lib/noindex-response";
 
 export async function GET() {
   const [articles, terms] = await Promise.all([getArticles(), getGlossaryTerms()]);
   return new NextResponse(aboutToMarkdown(articles, terms), {
     headers: {
       "content-type": "text/markdown; charset=utf-8",
+      ...noIndexHeaders,
       "cache-control": "public, s-maxage=300, stale-while-revalidate=86400"
     }
   });

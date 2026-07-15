@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getGlossaryTerms } from "@/lib/content";
 import { siteUrl } from "@/lib/formats";
+import { noIndexHeaders } from "@/lib/noindex-response";
 
 function escapeXml(value: string) {
   return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -23,6 +24,7 @@ export async function GET() {
   return new NextResponse(xml, {
     headers: {
       "content-type": "application/rss+xml; charset=utf-8",
+      ...noIndexHeaders,
       "cache-control": "public, s-maxage=300, stale-while-revalidate=86400"
     }
   });

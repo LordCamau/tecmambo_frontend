@@ -7,12 +7,7 @@ import { privacyPage } from "@/lib/legal-pages";
 export const metadata: Metadata = {
   title: "Privacy Policy, tecMAMBO",
   description: "How tecMAMBO collects, uses, shares, and protects personal data, including cookies, newsletters, analytics, advertising, and reader rights.",
-  alternates: {
-    canonical: "/privacy",
-    types: {
-      "text/markdown": "/privacy.md"
-    }
-  }
+  alternates: { canonical: "/privacy" }
 };
 
 export default function PrivacyPage() {

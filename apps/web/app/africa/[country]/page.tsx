@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getAfricanArticles, getArticlesForRegion } from "@/lib/content";
+import { getSubstantialAfricanArticles, getSubstantialArticlesForRegion } from "@/lib/content";
 import { africaLeadRegionSlugs, africanRegions, getRegion, regionPath, relatedRegionTopics } from "@/lib/regions";
-import { siteUrl } from "@/lib/formats";
 import { breadcrumbJsonLd, collectionPageJsonLd } from "@/lib/seo";
 import { sitePreviewImage } from "@/lib/site-metadata";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -22,7 +21,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     return {
       title: "African tech country hubs, tecMAMBO",
       description: "Browse tecMAMBO country hubs for African technology coverage.",
-      alternates: { canonical: "/africa/more", types: { "text/markdown": `${siteUrl}/africa/more.md` } }
+      alternates: { canonical: "/africa/more" }
     };
   }
   const region = getRegion(country);
@@ -30,13 +29,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return {
     title: `${region.name} tech news, tecMAMBO`,
     description: region.description,
-    alternates: {
-      canonical: regionPath(region),
-      types: {
-        "application/rss+xml": `${siteUrl}${regionPath(region)}/feed.xml`,
-        "text/markdown": `${siteUrl}${regionPath(region)}.md`
-      }
-    },
+    alternates: { canonical: regionPath(region) },
     openGraph: {
       title: `${region.name} tech news, tecMAMBO`,
       description: region.description,
@@ -73,7 +66,7 @@ export default async function CountryHubPage({ params }: { params: Params }) {
   const { country } = await params;
 
   if (country === "more") {
-    const articles = await getAfricanArticles();
+    const articles = await getSubstantialAfricanArticles();
     const otherRegions = africanRegions.filter((region) => !africaLeadRegionSlugs.includes(region.slug as (typeof africaLeadRegionSlugs)[number]));
     return (
       <section className={`container ${styles.page}`}>
@@ -110,7 +103,7 @@ export default async function CountryHubPage({ params }: { params: Params }) {
 
   const region = getRegion(country);
   if (!region) notFound();
-  const articles = await getArticlesForRegion(region.slug);
+  const articles = await getSubstantialArticlesForRegion(region.slug);
   const topicChips = relatedRegionTopics(articles);
 
   return (
@@ -137,9 +130,6 @@ export default async function CountryHubPage({ params }: { params: Params }) {
             ))}
           </div>
         ) : null}
-        <Link className={styles.feedLink} href={`${regionPath(region)}/feed.xml`}>
-          {region.name} RSS
-        </Link>
       </section>
 
       {articles.length ? (

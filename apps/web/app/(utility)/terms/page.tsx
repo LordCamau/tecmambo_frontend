@@ -7,12 +7,7 @@ import { termsPage } from "@/lib/legal-pages";
 export const metadata: Metadata = {
   title: "Terms of Use, tecMAMBO",
   description: "The plain-English terms for using tecMAMBO, including content use, sponsorships, privacy links, and legal responsibilities.",
-  alternates: {
-    canonical: "/terms",
-    types: {
-      "text/markdown": "/terms.md"
-    }
-  }
+  alternates: { canonical: "/terms" }
 };
 
 export default function TermsPage() {

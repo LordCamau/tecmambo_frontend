@@ -111,7 +111,6 @@ export function SiteFooter() {
           <p>Made in Nairobi, Kenya.</p>
           <p>Plain English first. Always.</p>
           <div className={styles.utilityLinks}>
-            <Link href="/feed.xml">RSS</Link>
             <Link href="#top">Back to top</Link>
           </div>
         </div>

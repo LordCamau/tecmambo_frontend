@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getArticles } from "@/lib/content";
+import { getSubstantialArticles } from "@/lib/content";
 import { formats } from "@/lib/formats";
 import { StoryCard } from "@/components/cards/StoryCard";
 import styles from "./latest.module.css";
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default async function LatestPage() {
-  const articles = await getArticles();
+  const articles = await getSubstantialArticles();
   return (
     <section className={`container ${styles.page}`}>
       <header className={styles.header}>

@@ -1,4 +1,4 @@
-import { getArticles, getGlossaryTerms } from "@/lib/content";
+import { getGlossaryTerms, getSubstantialArticles } from "@/lib/content";
 import { SearchClient } from "./SearchClient";
 import styles from "./search.module.css";
 
@@ -10,7 +10,7 @@ type SearchPageProps = {
 
 export default async function SearchPage({ searchParams }: SearchPageProps) {
   const { q = "" } = await searchParams;
-  const [articles, terms] = await Promise.all([getArticles(), getGlossaryTerms()]);
+  const [articles, terms] = await Promise.all([getSubstantialArticles(), getGlossaryTerms()]);
   return (
     <section className={`container ${styles.page}`}>
       <header className={styles.header}>

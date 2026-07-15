@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { NextResponse } from "next/server";
 import { glossaryToMarkdown } from "@/content/markdown";
 import { getGlossaryTerm } from "@/lib/content";
+import { noIndexHeaders } from "@/lib/noindex-response";
 
 type Params = Promise<{ slug: string }>;
 
@@ -13,6 +14,7 @@ export async function GET(_request: Request, { params }: { params: Params }) {
   return new NextResponse(glossaryToMarkdown(term), {
     headers: {
       "content-type": "text/markdown; charset=utf-8",
+      ...noIndexHeaders,
       "cache-control": "public, s-maxage=300, stale-while-revalidate=86400"
     }
   });
