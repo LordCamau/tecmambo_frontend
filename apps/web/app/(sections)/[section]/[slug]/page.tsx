@@ -368,7 +368,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
             <h2 id="article-sources-title">Sources</h2>
             <ul>
               {article.sources.map((source) => (
-                <li key={source.url}>
+                <li key={`${source.label}-${source.url}`}>
                   <a href={source.url} rel="noreferrer" target="_blank">
                     {source.label}
                   </a>

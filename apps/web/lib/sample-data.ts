@@ -12,6 +12,7 @@ import { buildGlobalOpinionArticles } from "@/lib/global-opinion-essays-2026";
 import { buildHardwareGadgetsNewsArticles } from "@/lib/hardware-gadgets-news-2026";
 import { buildKenyaJuly9NewsArticles } from "@/lib/kenya-tech-news-july-9-2026";
 import { buildKenyaTechNewsArticles } from "@/lib/kenya-tech-news-july-2026";
+import { buildPrimeValeArticle } from "@/lib/primevale-launch-article";
 import { getRegion } from "@/lib/regions";
 
 export const authors: Author[] = [
@@ -131,7 +132,8 @@ export const brands: Tag[] = [
   { name: "Development Bank of Rwanda", slug: "development-bank-of-rwanda", kind: "brand" },
   { name: "Flutterwave", slug: "flutterwave", kind: "brand" },
   { name: "Moniepoint", slug: "moniepoint", kind: "brand" },
-  { name: "Paystack", slug: "paystack", kind: "brand" }
+  { name: "Paystack", slug: "paystack", kind: "brand" },
+  { name: "PrimeVale", slug: "primevale", kind: "brand" }
 ];
 
 const startupTopic = topics.find((topic) => topic.slug === "startups")!;
@@ -752,6 +754,12 @@ const africanFintechNewsArticles = buildAfricanFintechNewsArticles({
   }
 });
 const globalOpinionArticles = buildGlobalOpinionArticles({ authors, topics, brands });
+const primeValeArticle = buildPrimeValeArticle({
+  authors,
+  topics,
+  brands,
+  kenya: kenyaRegion
+});
 
 const regionAssignments: Record<string, string[]> = {
   "kenya-ai-rules-quiet-advantage": ["kenya"],
@@ -767,6 +775,7 @@ function attachRegions(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  primeValeArticle,
   ...globalOpinionArticles,
   ...editorialJuly13Articles,
   ...appleEcosystemArticles,

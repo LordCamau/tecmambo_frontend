@@ -156,7 +156,7 @@ export default async function GlossaryTermPage({ params }: { params: Params }) {
         <section className={styles.sourceList} aria-labelledby="sources-title">
           <h2 id="sources-title">Sources</h2>
           {term.sources.map((source) => (
-            <a href={source.url} key={source.url} rel="nofollow">
+            <a href={source.url} key={`${source.label}-${source.url}`} rel="nofollow">
               {source.label}
             </a>
           ))}
