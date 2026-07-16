@@ -4,6 +4,7 @@ import { buildAfricanFintechNewsArticles } from "@/lib/african-fintech-news-2026
 import { buildAiArticles } from "@/lib/ai-articles";
 import { buildAfricanTechNewsArticles } from "@/lib/african-tech-news-2026";
 import { buildAppleEcosystemArticles } from "@/lib/apple-ecosystem-news-2026";
+import { buildComputingLaptopNewsArticles } from "@/lib/computing-laptop-news-2026";
 import { buildEditorialBundleArticles } from "@/lib/editorial-bundle-july-2026";
 import { buildEditorialJuly13Articles } from "@/lib/editorial-bundle-july-13-2026";
 import { buildEditorialJuly7Articles } from "@/lib/editorial-bundle-july-7-2026";
@@ -106,6 +107,12 @@ export const brands: Tag[] = [
   { name: "Visa", slug: "visa", kind: "brand" },
   { name: "Onafriq", slug: "onafriq", kind: "brand" },
   { name: "Microsoft", slug: "microsoft", kind: "brand" },
+  { name: "Windows", slug: "windows", kind: "brand" },
+  { name: "Dell", slug: "dell", kind: "brand" },
+  { name: "Intel", slug: "intel", kind: "brand" },
+  { name: "AMD", slug: "amd", kind: "brand" },
+  { name: "NVIDIA", slug: "nvidia", kind: "brand" },
+  { name: "Lenovo", slug: "lenovo", kind: "brand" },
   { name: "Volkswagen", slug: "volkswagen", kind: "brand" },
   { name: "Toyota", slug: "toyota", kind: "brand" },
   { name: "BYD", slug: "byd", kind: "brand" },
@@ -707,6 +714,7 @@ const editorialJuly7Articles = buildEditorialJuly7Articles({
   }
 });
 const hardwareGadgetsNewsArticles = buildHardwareGadgetsNewsArticles({ authors, topics, brands });
+const computingLaptopNewsArticles = buildComputingLaptopNewsArticles({ authors, topics, brands });
 const evMobilityNewsArticles = buildEvMobilityNewsArticles({
   authors,
   topics,
@@ -783,6 +791,7 @@ export const articles: Article[] = [
   ...editorialJuly7Articles,
   ...appNewsArticles,
   ...hardwareGadgetsNewsArticles,
+  ...computingLaptopNewsArticles,
   ...evMobilityNewsArticles,
   ...reviewArticles,
   ...kenyaJuly9NewsArticles,

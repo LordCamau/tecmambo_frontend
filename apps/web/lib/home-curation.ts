@@ -35,6 +35,26 @@ function hasAnyTag(article: Article, tagSlugs: string[]) {
   return article.tags.some((tag) => allowed.has(tag.slug));
 }
 
+function isComputingArticle(article: Article) {
+  return hasTag(article, "computing");
+}
+
+function takeWithTagCap(articles: Article[], tagSlug: string, maxTagged: number, limit: number) {
+  const selected: Article[] = [];
+  let taggedCount = 0;
+
+  for (const article of articles) {
+    const matchesTag = hasTag(article, tagSlug);
+    if (matchesTag && taggedCount >= maxTagged) continue;
+
+    selected.push(article);
+    if (matchesTag) taggedCount += 1;
+    if (selected.length >= limit) break;
+  }
+
+  return selected;
+}
+
 function isSmartphoneOrHardwareReview(article: Article) {
   const hardwareTags = ["smartphones", "wearables", "audio", "computing", "gaming", "smart-homes", "headphones", "smart-watches", "vr-ar"];
   return !isMobilityArticle(article) && article.format !== "business" && (hasTag(article, "smartphones") || (article.format === "review" && hasAnyTag(article, hardwareTags)));
@@ -45,7 +65,7 @@ function isMobilityArticle(article: Article) {
 }
 
 function isBusinessStartupOrFintechArticle(article: Article) {
-  return !isMobilityArticle(article) && !isSmartphoneOrHardwareReview(article) && (article.format === "business" || hasAnyTag(article, ["business", "startups", "fintech"]));
+  return !isComputingArticle(article) && !isMobilityArticle(article) && !isSmartphoneOrHardwareReview(article) && (article.format === "business" || hasAnyTag(article, ["business", "startups", "fintech"]));
 }
 
 function pickHeroStory(candidates: Article[], selected: Article[]) {
@@ -55,6 +75,7 @@ function pickHeroStory(candidates: Article[], selected: Article[]) {
 }
 
 const primaryHeroSlug = "america-innovates-china-replicates-europe-regulates";
+const computingCappedLaneKeys = new Set(["news", "business", "ai", "explains", "evergreen"]);
 
 function pickHeroStories(articles: Article[]) {
   const uniqueArticles = uniqueByImage(articles);
@@ -92,7 +113,10 @@ function lane(
   layout: HomeLane["layout"] = "grid",
   limit = layout === "feature" ? 4 : 3
 ) {
-  const capped = uniqueByImage(articles.filter((article) => !usedArticleIds.has(article.id))).slice(0, limit);
+  const availableArticles = uniqueByImage(articles.filter((article) => !usedArticleIds.has(article.id)));
+  const capped = computingCappedLaneKeys.has(key)
+    ? takeWithTagCap(availableArticles, "computing", 1, limit)
+    : availableArticles.slice(0, limit);
   capped.forEach((article) => usedArticleIds.add(article.id));
   uniqueImagesWithinLane(key, capped);
   return { key, eyebrow, title, href, linkLabel, layout, articles: capped };
@@ -104,7 +128,7 @@ export function curateHomeContent(articles: Article[], glossaryTerms: GlossaryTe
   heroStories.forEach((article) => usedArticleIds.add(article.id));
   const hero = heroStories[0] ?? articles[0]!;
   const supportingStories = heroStories.slice(1, 3);
-  const latestRail = uniqueByImage(articles.filter((article) => !usedArticleIds.has(article.id))).slice(0, 5);
+  const latestRail = takeWithTagCap(uniqueByImage(articles.filter((article) => !usedArticleIds.has(article.id))), "computing", 1, 5);
   latestRail.forEach((article) => usedArticleIds.add(article.id));
   const reviewArticles = byFormat(articles, "review");
   const explainers = byFormat(articles, "explainer");

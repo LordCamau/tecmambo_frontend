@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="520" viewBox="0 0 1040 520" role="img" aria-label="A slim business laptop on a desk">
+  <rect width="1040" height="520" fill="#111116"/>
+  <rect x="150" y="105" width="740" height="330" rx="28" fill="#1f1f2a"/>
+  <rect x="230" y="155" width="580" height="210" rx="16" fill="#0b0b10" stroke="#7c3aed" stroke-width="3"/>
+  <rect x="185" y="388" width="670" height="24" rx="12" fill="#2f2f3d"/>
+  <g fill="none" stroke="#a78bfa" stroke-width="8" stroke-linecap="round">
+    <path d="M350 220h180v90H350z"/>
+    <path d="M562 220h128v90H562z"/>
+    <path d="M390 200v-32"/>
+    <path d="M650 200v-32"/>
+    <path d="M410 330v32"/>
+    <path d="M625 330v32"/>
+  </g>
+  <text x="353" y="282" fill="#f8fafc" font-family="Arial, sans-serif" font-size="38" font-weight="700">repairable</text>
+  <circle cx="740" cy="202" r="34" fill="#ff6fae"/>
+  <path d="M724 202h32M740 186v32" stroke="#111116" stroke-width="7" stroke-linecap="round"/>
+</svg>

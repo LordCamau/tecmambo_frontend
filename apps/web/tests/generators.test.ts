@@ -668,7 +668,7 @@ describe("content generators", () => {
     expect(markdown).toContain("## 20. Contact us");
     expect(markdown).toContain("[Terms of Use](/terms)");
     expect(markdown).toContain("[About page](/about)");
-    expect(markdown).toContain("[editorial contact email]");
+    expect(markdown).toContain("contact us through the contact form");
   });
 
   it("keeps Consent Mode defaults privacy-first", () => {

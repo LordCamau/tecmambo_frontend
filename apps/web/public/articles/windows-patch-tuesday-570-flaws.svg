@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="520" viewBox="0 0 1040 520" role="img" aria-label="A laptop installing a system update">
+  <rect width="1040" height="520" fill="#0b1020"/>
+  <rect x="170" y="90" width="700" height="360" rx="24" fill="#131a33"/>
+  <rect x="210" y="130" width="620" height="250" rx="16" fill="#e9f2ff"/>
+  <rect x="260" y="165" width="130" height="130" rx="12" fill="#0078d4"/>
+  <rect x="405" y="165" width="130" height="130" rx="12" fill="#0fb5ff"/>
+  <rect x="260" y="310" width="130" height="30" rx="8" fill="#60a5fa"/>
+  <rect x="405" y="310" width="130" height="30" rx="8" fill="#60a5fa"/>
+  <text x="575" y="205" fill="#151622" font-family="Arial, sans-serif" font-size="34" font-weight="700">570 fixes</text>
+  <text x="575" y="252" fill="#4b5563" font-family="Arial, sans-serif" font-size="24">Patch Tuesday</text>
+  <rect x="575" y="285" width="205" height="18" rx="9" fill="#d1d5db"/>
+  <rect x="575" y="285" width="144" height="18" rx="9" fill="#7c3aed"/>
+  <rect x="135" y="430" width="770" height="26" rx="13" fill="#27304f"/>
+  <circle cx="810" cy="126" r="42" fill="#ff6fae"/>
+  <text x="796" y="140" fill="#0b1020" font-family="Arial, sans-serif" font-size="44" font-weight="700">!</text>
+</svg>

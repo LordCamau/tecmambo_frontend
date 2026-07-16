@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="520" viewBox="0 0 1040 520" role="img" aria-label="A person checking a laptop's performance">
+  <rect width="1040" height="520" fill="#101018"/>
+  <rect x="190" y="120" width="640" height="310" rx="28" fill="#202033" stroke="#6d5dfc" stroke-width="4"/>
+  <rect x="235" y="165" width="300" height="210" rx="18" fill="#f5f3ff"/>
+  <rect x="570" y="165" width="215" height="42" rx="21" fill="#7c3aed"/>
+  <rect x="570" y="230" width="160" height="26" rx="13" fill="#a78bfa"/>
+  <rect x="570" y="278" width="190" height="26" rx="13" fill="#a78bfa"/>
+  <rect x="570" y="326" width="125" height="26" rx="13" fill="#a78bfa"/>
+  <path d="M292 325c46-116 92-58 135-124 26 22 39 58 48 101" fill="none" stroke="#ff6fae" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="425" cy="199" r="22" fill="#28d4ff"/>
+  <text x="275" y="240" fill="#161622" font-family="Arial, sans-serif" font-size="32" font-weight="700">PC Insights</text>
+</svg>
