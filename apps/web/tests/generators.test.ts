@@ -397,6 +397,45 @@ describe("content generators", () => {
     );
   });
 
+  it("publishes the Apple v OpenAI lawsuit story with legal-care framing", () => {
+    const story = articles.find((article) => article.slug === "apple-sues-openai-trade-secrets");
+    expect(story).toBeTruthy();
+    expect(story?.author.slug).toBe("tim-humphreys");
+    expect(story?.format).toBe("news");
+    expect(story?.seo?.title).toBe("Apple sues OpenAI over alleged trade secret theft");
+    expect(story?.seo?.description).toBe(
+      "Apple has filed a blockbuster lawsuit accusing OpenAI of a coordinated campaign to steal hardware secrets for its AI devices. The allegations, the denial, and what it means."
+    );
+    expect(story?.regions).toBeUndefined();
+    expect(story?.tags.map((tag) => tag.slug)).toEqual(expect.arrayContaining(["ai", "business", "apple", "openai", "google"]));
+    expect(story?.faq).toHaveLength(5);
+    expect(story?.image).toMatchObject({
+      src: "/articles/apple-sues-openai-trade-secrets.jpg",
+      credit: "tecMAMBO",
+      width: 1040,
+      height: 520,
+      type: "image/jpeg"
+    });
+
+    const schema = articleJsonLd(story!) as unknown as Record<string, unknown>;
+    expect(schema["@type"]).toBe("NewsArticle");
+    expect(schema.name).toBe("Apple sues OpenAI over alleged trade secret theft");
+    expect(schema.headline).toBe("Apple sues OpenAI, and the age of polite AI partnerships is over");
+    expect(schema.description).toBe(story?.seo?.description);
+
+    const markdown = articleToMarkdown(story!);
+    expect(markdown).toContain("OpenAI denies");
+    expect(markdown).toContain("/news/anthropic-redeploys-fable-5");
+    expect(markdown).toContain("/business/apple-foldable-iphone-ultra-2500-luxury");
+    expect(markdown).toContain("/opinion/america-innovates-china-replicates-europe-regulates");
+    expect(markdown).not.toContain("EDITOR VERIFY");
+    expect(JSON.stringify(story)).not.toContain("\u2014");
+    expect(buildRssFeed(articles.filter((article) => article.format === "news"), "tecMAMBO News", "/news/feed.xml")).toContain(
+      "apple-sues-openai-trade-secrets"
+    );
+    expect(buildLlmsTxt(articles, glossaryTerms)).toContain("Apple sues OpenAI, and the age of polite AI partnerships is over");
+  });
+
   it("uses each article image as its absolute social preview image", () => {
     for (const article of articles) {
       const socialImage = articleSocialImage(article);
