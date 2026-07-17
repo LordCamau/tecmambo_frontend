@@ -74,13 +74,20 @@ function pickHeroStory(candidates: Article[], selected: Article[]) {
   return candidates.find((article) => !selectedIds.has(article.id) && !selectedImages.has(article.image.src));
 }
 
-const primaryHeroSlug = "america-innovates-china-replicates-europe-regulates";
+const primaryHeroSlug = "apple-hardware-price-increases-ai-memory-tax";
+const supportingHeroSlugs = ["basigo-electric-bus-expansion-grid-question"];
 const computingCappedLaneKeys = new Set(["news", "business", "ai", "explains", "evergreen"]);
 
 function pickHeroStories(articles: Article[]) {
   const uniqueArticles = uniqueByImage(articles);
   const forcedHero = uniqueArticles.find((article) => article.slug === primaryHeroSlug);
   const selected: Article[] = forcedHero ? [forcedHero] : [];
+
+  for (const slug of supportingHeroSlugs) {
+    const article = uniqueArticles.find((candidate) => candidate.slug === slug);
+    if (article && pickHeroStory([article], selected)) selected.push(article);
+  }
+
   const buckets = [
     uniqueArticles.filter(isSmartphoneOrHardwareReview),
     uniqueArticles.filter(isMobilityArticle),

@@ -3,10 +3,14 @@ import type { LegalPage } from "@/lib/legal-pages";
 import { legalPageText } from "@/lib/legal-pages";
 import type { AdvertiseSettings } from "@/lib/advertise";
 
-export const editorialTodoPattern = /\[(verify|todo|draft|tk|confirm)\b[^\]]*\]/i;
+export const editorialTodoPattern = /\[(verify|todo|draft|tk|confirm)\b[^\]]*\]|EDITOR VERIFY BEFORE PUBLISH/i;
 
 export function stripEditorialNotes(value: string) {
-  return value.replace(/\[(verify|todo|draft|tk|confirm)\b[^\]]*\]/gi, "").replace(/\s{2,}/g, " ").trim();
+  return value
+    .replace(/\[(verify|todo|draft|tk|confirm)\b[^\]]*\]/gi, "")
+    .replace(/EDITOR VERIFY BEFORE PUBLISH/gi, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
 }
 
 export function renderedArticleFields(article: Article) {

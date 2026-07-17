@@ -13,6 +13,7 @@ import { buildEvMobilityNewsArticles } from "@/lib/ev-mobility-news-2026";
 import { buildGlobalOpinionArticles } from "@/lib/global-opinion-essays-2026";
 import { buildHardwareGadgetsNewsArticles } from "@/lib/hardware-gadgets-news-2026";
 import { buildKenyaJuly9NewsArticles } from "@/lib/kenya-tech-news-july-9-2026";
+import { buildKenyaJuly17NewsArticles } from "@/lib/kenya-tech-news-july-17-2026";
 import { buildKenyaTechNewsArticles } from "@/lib/kenya-tech-news-july-2026";
 import { buildPrimeValeArticle } from "@/lib/primevale-launch-article";
 import { getRegion } from "@/lib/regions";
@@ -89,6 +90,7 @@ export const brands: Tag[] = [
   { name: "PlayStation", slug: "playstation", kind: "brand" },
   { name: "Samsung", slug: "samsung", kind: "brand" },
   { name: "Glovo", slug: "glovo", kind: "brand" },
+  { name: "Uber", slug: "uber", kind: "brand" },
   { name: "I&M Bank", slug: "im-bank", kind: "brand" },
   { name: "Mastercard", slug: "mastercard", kind: "brand" },
   { name: "KOKO Networks", slug: "koko-networks", kind: "brand" },
@@ -118,6 +120,7 @@ export const brands: Tag[] = [
   { name: "Toyota", slug: "toyota", kind: "brand" },
   { name: "BYD", slug: "byd", kind: "brand" },
   { name: "Tesla", slug: "tesla", kind: "brand" },
+  { name: "BasiGo", slug: "basigo", kind: "brand" },
   { name: "Waymo", slug: "waymo", kind: "brand" },
   { name: "NIO", slug: "nio", kind: "brand" },
   { name: "Oura", slug: "oura", kind: "brand" },
@@ -740,6 +743,12 @@ const kenyaJuly9NewsArticles = buildKenyaJuly9NewsArticles({
   brands,
   kenya: kenyaRegion
 });
+const kenyaJuly17NewsArticles = buildKenyaJuly17NewsArticles({
+  authors,
+  topics,
+  brands,
+  kenya: kenyaRegion
+});
 const africanTechNewsArticles = buildAfricanTechNewsArticles({
   authors,
   topics,
@@ -797,6 +806,7 @@ export const articles: Article[] = [
   ...computingLaptopNewsArticles,
   ...evMobilityNewsArticles,
   ...reviewArticles,
+  ...kenyaJuly17NewsArticles,
   ...kenyaJuly9NewsArticles,
   ...kenyaTechNewsArticles,
   ...africanTechNewsArticles,

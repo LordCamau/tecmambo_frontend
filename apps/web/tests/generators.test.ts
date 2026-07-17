@@ -618,7 +618,7 @@ describe("content generators", () => {
     expect(buildRssFeed(getAfricaArticles(articles), "tecMAMBO African tech", "/africa/feed.xml")).toContain(
       "microsoft-elevate-ai-skilling-kenya-counties"
     );
-    expect(buildLlmsTxt(articles, glossaryTerms)).toContain("Vodacom takes majority control of Safaricom");
+    expect(buildLlmsTxt(articles, glossaryTerms)).toContain("Uber is buying Glovo's owner. What it means for Kenya");
   });
 
   it("publishes the AI package with the requested authors, tags, and rich fields", () => {
