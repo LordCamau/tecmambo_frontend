@@ -41,8 +41,7 @@
 .heroCard {
   overflow: clip;
   display: grid;
-  grid-template-columns: minmax(250px, 0.9fr) minmax(0, 1fr);
-  gap: 0;
+  grid-template-columns: 1fr;
   border-radius: var(--radius-md);
   border: 1px solid var(--line);
   background: var(--surface);
@@ -72,8 +71,9 @@
 .heroImage {
   position: relative;
   display: block;
-  min-height: 318px;
-  margin: 12px 0 12px 12px;
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+  margin: 12px 12px 0;
   overflow: hidden;
   border-radius: var(--radius-sm);
   background: var(--g-100);
@@ -95,8 +95,8 @@
 .heroCopy {
   display: grid;
   align-content: space-between;
-  gap: 18px;
-  padding: 24px 22px 22px 26px;
+  gap: 16px;
+  padding: 24px 28px 26px;
 }
 
 .heroCopy h1 {
@@ -562,7 +562,7 @@
   }
 
   .heroCard {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .cardGrid,
@@ -616,7 +616,6 @@
   }
 
   .heroImage {
-    min-height: 270px;
     margin: 10px 10px 0;
   }
 
