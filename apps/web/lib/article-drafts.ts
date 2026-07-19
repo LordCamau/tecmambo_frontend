@@ -125,6 +125,20 @@ const imageOverrides: Record<string, Article["image"]> = {
 };
 
 const articleOverrides: Record<string, Partial<Article>> = {
+  "the-cheapest-laptop-that-won-t-frustrate-a-university-student": {
+    seo: {
+      title: "Cheapest student laptop that will not frustrate you",
+      description:
+        "A plain-English guide to choosing the cheapest student laptop that still handles notes, browser tabs, video calls, and campus work without misery."
+    }
+  },
+  "can-a-budget-phone-survive-a-year-of-matatu-commutes-we-asked-five-people": {
+    seo: {
+      title: "Can a budget phone survive matatu commutes?",
+      description:
+        "We asked five daily commuters what survives after a year of real Kenyan use, from battery life and cracked screens to cameras, repairs, and resale value."
+    }
+  },
   "iphone-air-review-the-iphone-that-asks-what-you-re-willing-to-give-up": {
     seo: {
       title: "iPhone Air review: the iPhone that asks what you're willing to give up",

@@ -1,8 +1,10 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 import { articlePath, formats } from "@/lib/formats";
 import { getHomeCuration, type HomeLane } from "@/lib/home-curation";
+import { siteDescription, sitePreviewImage, siteTitle } from "@/lib/site-metadata";
 import { FormatBadge } from "@/components/signature/FormatBadge";
 import { RegionList } from "@/components/signature/RegionChip";
 import { SponsoredBadge } from "@/components/signature/SponsoredBadge";
@@ -11,6 +13,26 @@ import { NewsletterCard } from "@/components/cards/NewsletterCard";
 import { PartnerCard } from "@/components/cards/PartnerCard";
 import { RegionPreferencePanel } from "@/components/regions/RegionPreferencePanel";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: siteTitle,
+  description: siteDescription,
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    url: "/",
+    siteName: "tecMAMBO",
+    type: "website",
+    images: [sitePreviewImage]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: [sitePreviewImage.url]
+  }
+};
 
 function Lane({ lane }: { lane: HomeLane }) {
   if (!lane.articles.length) return null;
@@ -169,6 +191,13 @@ export default async function HomePage() {
             ))}
           </aside>
         </div>
+      </section>
+
+      <section className={`container ${styles.siteIntro}`} aria-label="About tecMAMBO">
+        <p>
+          tecMAMBO is a technology publication in Nairobi, Kenya covering tech news, reviews, and plain-English
+          explainers for Kenya, Africa, and readers everywhere.
+        </p>
       </section>
 
       <section className={`container ${styles.threeWays}`}>

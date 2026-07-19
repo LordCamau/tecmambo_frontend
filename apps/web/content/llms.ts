@@ -27,7 +27,7 @@ export function buildLlmsTxt(articles: Article[], terms: GlossaryTerm[]) {
   return [
     "# tecMAMBO",
     "",
-    "> tecMAMBO is a plain-English technology publication. It explains consumer technology clearly first, with optional technical depth for readers and agents that need more context.",
+    "> tecMAMBO is a technology publication in Nairobi, Kenya, founded in 2016. It explains consumer technology clearly first, with optional technical depth for readers and agents that need more context.",
     "",
     "## Sections",
     "",
@@ -35,7 +35,7 @@ export function buildLlmsTxt(articles: Article[], terms: GlossaryTerm[]) {
     "",
     "## About tecMAMBO",
     "",
-    `- [About tecMAMBO](${siteUrl}/about) - Founded in 2016 by Tim Humphreys in Nairobi. Tech, made to be understood.`,
+    `- [About tecMAMBO](${siteUrl}/about) - Founded in 2016 by Tim Humphreys in Nairobi, Kenya. Tech, made to be understood.`,
     `- ${siteUrl}/about.md`,
     "",
     "## Navigation and topic archives",

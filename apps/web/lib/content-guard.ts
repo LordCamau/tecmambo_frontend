@@ -67,6 +67,41 @@ export function assertArticlesArePublishable(articles: Article[]) {
   }
 }
 
+export function assertArticleSeoMetadata(articles: Article[]) {
+  const failures = articles.flatMap((article) => {
+    const title = stripEditorialNotes(article.seo?.title ?? article.title);
+    const description = stripEditorialNotes(article.seo?.description ?? article.subhead);
+    const issues: string[] = [];
+    if (title.length < 20) issues.push("meta title too short");
+    if (title.length > 90) issues.push("meta title too long");
+    if (description.length < 50) issues.push("meta description too short");
+    if (description.length > 240) issues.push("meta description too long");
+    return issues.map((issue) => `${article.slug}: ${issue}`);
+  });
+
+  if (failures.length > 0) {
+    throw new Error(`Article SEO metadata guard failed: ${failures.join("; ")}`);
+  }
+}
+
+export function assertArticleImageMetadata(articles: Article[]) {
+  const failures = articles.flatMap((article) => {
+    const allImages = [article.image, ...(article.inlineImages ?? [])];
+    return allImages.flatMap((image) => {
+      const label = `${article.slug}: ${image.src}`;
+      const issues: string[] = [];
+      if (!image.src.trim()) issues.push("missing src");
+      if (!image.alt.trim()) issues.push("missing alt");
+      if (!image.credit.trim()) issues.push("missing credit");
+      return issues.map((issue) => `${label}: ${issue}`);
+    });
+  });
+
+  if (failures.length > 0) {
+    throw new Error(`Article image metadata guard failed: ${failures.join("; ")}`);
+  }
+}
+
 export function assertLegalPagesArePublishable(pages: LegalPage[]) {
   const emDashPattern = /\u2014|&mdash;|&#8212;|&#x2014;/i;
   const wrongBrandPattern = /\b(?:Tecmambo|TecMAMBO|TECMAMBO|tecmambo)\b/g;

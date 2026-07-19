@@ -5,7 +5,14 @@ import { buildGoogleNewsSitemap, buildJsonFeed, buildRssFeed } from "../content/
 import { buildLlmsTxt } from "../content/llms";
 import { articleToMarkdown, glossaryToMarkdown } from "../content/markdown";
 import { articles, brands, glossaryTerms } from "../lib/sample-data";
-import { assertAdvertisePageIsPublishable, assertArticlesArePublishable, assertLegalPagesArePublishable, assertNoEditorialTodos } from "../lib/content-guard";
+import {
+  assertAdvertisePageIsPublishable,
+  assertArticleImageMetadata,
+  assertArticleSeoMetadata,
+  assertArticlesArePublishable,
+  assertLegalPagesArePublishable,
+  assertNoEditorialTodos
+} from "../lib/content-guard";
 import { legalPageToMarkdown } from "../content/legal-markdown";
 import { cookiePage, editorialStandardsPage, legalPages, privacyPage, termsPage } from "../lib/legal-pages";
 import { consentCategories, consentModeDenied } from "../lib/cookie-consent";
@@ -341,6 +348,8 @@ describe("content generators", () => {
   it("blocks editorial TODO notes from rendered article fields", () => {
     expect(() => assertNoEditorialTodos(articles)).not.toThrow();
     expect(() => assertArticlesArePublishable(articles)).not.toThrow();
+    expect(() => assertArticleSeoMetadata(articles)).not.toThrow();
+    expect(() => assertArticleImageMetadata(articles)).not.toThrow();
   });
 
   it("publishes the July 9 Kenya news bundle with complete regional metadata", () => {

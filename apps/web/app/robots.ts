@@ -25,6 +25,15 @@ export default function robots(): MetadataRoute.Robots {
       },
       ...allowAnswerBots.map((userAgent) => ({ userAgent, allow: "/" }))
     ],
-    sitemap: [`${siteUrl}/sitemap.xml`, `${siteUrl}/news-sitemap.xml`, `${siteUrl}/glossary/sitemap.xml`]
+    sitemap: [
+      `${siteUrl}/sitemap-index.xml`,
+      `${siteUrl}/sitemap.xml`,
+      `${siteUrl}/pages-sitemap.xml`,
+      `${siteUrl}/hubs-sitemap.xml`,
+      `${siteUrl}/articles-sitemap.xml`,
+      `${siteUrl}/image-sitemap.xml`,
+      `${siteUrl}/news-sitemap.xml`,
+      `${siteUrl}/glossary/sitemap.xml`
+    ]
   };
 }

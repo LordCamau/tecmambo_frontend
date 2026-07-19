@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { formats } from "@/lib/formats";
 import { getArticlesByFormat } from "@/lib/content";
+import { breadcrumbJsonLd, collectionPageJsonLd } from "@/lib/seo";
 import type { Format } from "@/lib/types";
 import { sectionFormatMap, topicArchives } from "@/lib/site-structure";
 import { StoryCard } from "@/components/cards/StoryCard";
+import { JsonLd } from "@/components/seo/JsonLd";
 import styles from "./page.module.css";
 
 type Params = Promise<{ section: string }>;
@@ -22,8 +24,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (!formatKey) return {};
   const format = formats[formatKey];
   return {
-    title: format.section,
-    description: format.description,
+    title: `${format.section} | tecMAMBO`,
+    description: `${format.description} Browse this tecMAMBO archive from Nairobi, Kenya for clear context, useful reviews, and related explainers.`,
     alternates: { canonical: format.path }
   };
 }
@@ -35,30 +37,34 @@ export default async function SectionPage({ params }: { params: Params }) {
   const format = formats[formatKey];
   const articles = await getArticlesByFormat(formatKey);
   return (
-    <section className={`container ${styles.archive}`}>
-      <header className={styles.header}>
-        <p>{format.label}</p>
-        <h1>{format.section}</h1>
-        <span>{format.description}</span>
-      </header>
-      {topicArchives[section]?.length ? (
-        <nav className={styles.topicTabs} aria-label={`${format.section} topics`}>
-          {topicArchives[section]?.map((topic) => (
-            <a href={`${format.path}/${topic.slug}`} key={topic.slug}>
-              {topic.label}
-            </a>
+    <>
+      <section className={`container ${styles.archive}`}>
+        <header className={styles.header}>
+          <p>{format.label}</p>
+          <h1>{format.section}</h1>
+          <span>{format.description}</span>
+        </header>
+        {topicArchives[section]?.length ? (
+          <nav className={styles.topicTabs} aria-label={`${format.section} topics`}>
+            {topicArchives[section]?.map((topic) => (
+              <a href={`${format.path}/${topic.slug}`} key={topic.slug}>
+                {topic.label}
+              </a>
+            ))}
+          </nav>
+        ) : null}
+        <div className={styles.grid}>
+          {articles.map((article) => (
+            <StoryCard article={article} key={article.id} />
           ))}
-        </nav>
-      ) : null}
-      <div className={styles.grid}>
-        {articles.map((article) => (
-          <StoryCard article={article} key={article.id} />
-        ))}
-      </div>
-      <div className={styles.seoCopy}>
-        tecMAMBO section archives are built as collection pages with stable links, plain descriptions, and room for
-        editorial picks as the newsroom grows.
-      </div>
-    </section>
+        </div>
+        <div className={styles.seoCopy}>
+          tecMAMBO section archives are built as collection pages with stable links, plain descriptions, and room for
+          editorial picks as the newsroom grows.
+        </div>
+      </section>
+      <JsonLd data={collectionPageJsonLd({ name: format.section, description: format.description, path: format.path, articles })} />
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: format.section, path: format.path }])} />
+    </>
   );
 }

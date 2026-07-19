@@ -1,7 +1,7 @@
-export const siteTitle = "tecMAMBO - Tech Made to Be Understood";
+export const siteTitle = "tecMAMBO | Technology News, Reviews and Explainers from Kenya";
 
 export const siteDescription =
-  "Plain-English tech news, reviews, explainers, and buying advice for people who want clarity without the jargon.";
+  "tecMAMBO is a technology publication in Nairobi, Kenya covering tech news, reviews, plain-English explainers, AI, fintech, and African technology.";
 
 export const sitePreviewImage = {
   url: "/brand/tecMAMBO-OGT-image.png",

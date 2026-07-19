@@ -8,7 +8,15 @@ import type { Article, GlossaryTerm } from "@/lib/types";
 import { formats, articlePath } from "@/lib/formats";
 import { getArticleBySlug, getArticles, getGlossaryTerms, getRelatedArticles } from "@/lib/content";
 import { getCmsArticleBySlug } from "@/lib/cms/source";
-import { articleJsonLd, articleSocialImage, breadcrumbJsonLd, dealProductJsonLd, faqJsonLd, itemListJsonLd } from "@/lib/seo";
+import {
+  articleJsonLd,
+  articleSocialImage,
+  breadcrumbJsonLd,
+  collectionPageJsonLd,
+  dealProductJsonLd,
+  faqJsonLd,
+  itemListJsonLd
+} from "@/lib/seo";
 import { isSubstantialArticle } from "@/lib/article-quality";
 import { renderGlossaryText, type GlossaryLinkState } from "@/lib/glossary-linking";
 import { filterArticlesByCanonicalTopic, getTopicArchive, sectionFormatMap } from "@/lib/site-structure";
@@ -233,25 +241,28 @@ export default async function ArticlePage({ params }: { params: Params }) {
       topic.canonicalTopic
     );
     return (
-      <section className={`container ${styles.topicArchive}`}>
-        <header className={styles.topicHeader}>
-          <p>{format.section}</p>
-          <h1>{topic.label}</h1>
-          <span>{topic.description}</span>
-        </header>
-        {section === "reviews" && slug === "wearables" ? (
-          <nav className={styles.wearableTabs} aria-label="Wearables review filters">
-            <Link aria-current="page" href="/reviews/wearables">
-              All
-            </Link>
-            <Link href="/reviews/wearables/headphones">Headphones</Link>
-            <Link href="/reviews/wearables/smart-watches">Smart Watches</Link>
-            <Link href="/reviews/wearables/vr-ar">VR & AR</Link>
-          </nav>
-        ) : null}
-        <div className={styles.relatedGrid}>
-          {articles.length ? articles.map((item) => <StoryCard article={item} key={item.id} />) : <p>No stories in this lane yet.</p>}
-        </div>
+      <>
+        <section className={`container ${styles.topicArchive}`}>
+          <header className={styles.topicHeader}>
+            <p>{format.section}</p>
+            <h1>{topic.label}</h1>
+            <span>{topic.description}</span>
+          </header>
+          {section === "reviews" && slug === "wearables" ? (
+            <nav className={styles.wearableTabs} aria-label="Wearables review filters">
+              <Link aria-current="page" href="/reviews/wearables">
+                All
+              </Link>
+              <Link href="/reviews/wearables/headphones">Headphones</Link>
+              <Link href="/reviews/wearables/smart-watches">Smart Watches</Link>
+              <Link href="/reviews/wearables/vr-ar">VR & AR</Link>
+            </nav>
+          ) : null}
+          <div className={styles.relatedGrid}>
+            {articles.length ? articles.map((item) => <StoryCard article={item} key={item.id} />) : <p>No stories in this lane yet.</p>}
+          </div>
+        </section>
+        <JsonLd data={collectionPageJsonLd({ name: topic.label, description: topic.description, path: `/${section}/${slug}`, articles })} />
         <JsonLd
           data={breadcrumbJsonLd([
             { name: "Home", path: "/" },
@@ -259,7 +270,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
             { name: topic.label, path: `/${section}/${slug}` }
           ])}
         />
-      </section>
+      </>
     );
   }
   const article = await getArticleBySlug(slug);
