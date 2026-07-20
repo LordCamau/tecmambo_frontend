@@ -130,7 +130,7 @@ export default async function HomePage() {
           <div className={styles.storyStack}>
             <article className={styles.heroCard}>
               <Link className={styles.heroImage} href={articlePath(hero.format, hero.slug)}>
-                <Image src={hero.image.src} alt={hero.image.alt} fill priority loading="eager" sizes="(min-width: 1180px) 720px, (min-width: 780px) 60vw, calc(100vw - 32px)" />
+                <Image src={hero.image.src} alt={hero.image.alt} fill priority loading="eager" sizes="(min-width: 1180px) 610px, (min-width: 780px) 54vw, calc(100vw - 32px)" />
               </Link>
               <div className={styles.heroCopy}>
                 <div className={styles.badgeRow}>
@@ -152,7 +152,7 @@ export default async function HomePage() {
               {supportingStories.map((article) => (
                 <article className={styles.supportCard} key={article.id}>
                   <Link className={styles.supportImage} href={articlePath(article.format, article.slug)}>
-                    <Image src={article.image.src} alt={article.image.alt} fill sizes="(min-width: 1180px) 300px, (min-width: 780px) 44vw, 100vw" />
+                    <Image src={article.image.src} alt={article.image.alt} fill sizes="(min-width: 1180px) 360px, (min-width: 780px) 42vw, 100vw" />
                   </Link>
                   <div className={styles.supportBody}>
                     <div className={styles.badgeRow}>
@@ -183,9 +183,6 @@ export default async function HomePage() {
                 <span className={styles.railCopy}>
                   <small>{article.sponsored ? `Sponsored ${formats[article.format].shortLabel}` : formats[article.format].shortLabel}</small>
                   <strong>{article.title}</strong>
-                </span>
-                <span className={styles.railThumb}>
-                  <Image src={article.image.src} alt="" fill sizes="118px" />
                 </span>
               </Link>
             ))}

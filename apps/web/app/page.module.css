@@ -5,7 +5,7 @@
 .heroStage {
   background: var(--bg);
   color: var(--text);
-  padding: 54px 0 58px;
+  padding: clamp(18px, 2.8vh, 34px) 0 clamp(18px, 3vh, 36px);
 }
 
 :global(.dark) .heroStage {
@@ -15,8 +15,8 @@
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.36fr) minmax(300px, 0.84fr);
-  gap: 28px;
+  grid-template-columns: minmax(0, 2.15fr) minmax(300px, 0.85fr);
+  gap: 22px;
   align-items: stretch;
   width: min(100% - 32px, 1250px);
 }
@@ -35,13 +35,21 @@
 
 .storyStack {
   display: grid;
-  gap: 18px;
+  grid-template-columns: minmax(0, 1.62fr) minmax(255px, 0.72fr);
+  gap: 16px;
+  align-items: stretch;
+  min-height: 0;
 }
 
 .heroCard {
   overflow: clip;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  align-self: stretch;
+  align-content: start;
+  align-items: start;
+  height: 100%;
   border-radius: var(--radius-md);
   border: 1px solid var(--line);
   background: var(--surface);
@@ -71,47 +79,49 @@
 .heroImage {
   position: relative;
   display: block;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 8.15;
   min-height: 0;
-  margin: 12px 12px 0;
+  margin: 10px 10px 0;
   overflow: hidden;
   border-radius: var(--radius-sm);
-  background: var(--g-100);
+  background: #050507;
 }
 
 .heroImage img,
-.supportImage img,
-.railThumb img {
+.supportImage img {
   object-fit: cover;
   transition: transform 240ms ease;
 }
 
+.heroImage img {
+  object-fit: contain;
+}
+
 .heroCard:hover .heroImage img,
-.supportCard:hover .supportImage img,
-.railItem:hover .railThumb img {
+.supportCard:hover .supportImage img {
   transform: scale(1.035);
 }
 
 .heroCopy {
   display: grid;
-  align-content: space-between;
-  gap: 16px;
-  padding: 24px 28px 26px;
+  align-content: start;
+  gap: 11px;
+  padding: 20px 22px 22px;
 }
 
 .heroCopy h1 {
   margin: 0;
   font-family: var(--font-display), system-ui, sans-serif;
-  font-size: clamp(32px, 3.35vw, 42px);
+  font-size: clamp(32px, 3.1vw, 46px);
   font-weight: 500;
-  line-height: 1.06;
+  line-height: 1.04;
 }
 
 .subhead {
   margin: 0;
   color: var(--text-secondary);
-  font-size: 16px;
-  line-height: 1.45;
+  font-size: 15px;
+  line-height: 1.42;
 }
 
 :global(.dark) .subhead {
@@ -139,12 +149,22 @@
 
 .supportGrid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
   gap: 16px;
+  align-self: stretch;
+  height: 100%;
+  min-height: 0;
 }
 
 .supportCard {
   overflow: clip;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  align-content: start;
+  min-height: 0;
+  height: 100%;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: var(--surface);
@@ -174,7 +194,8 @@
 .supportImage {
   position: relative;
   display: block;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 8;
+  min-height: 0;
   overflow: hidden;
   background: var(--surface-raised);
 }
@@ -185,14 +206,16 @@
 
 .supportBody {
   display: grid;
-  gap: 14px;
-  padding: 16px;
+  align-content: start;
+  gap: 9px;
+  padding: 12px 14px 14px;
+  min-height: 0;
 }
 
 .supportBody h2 {
   margin: 0;
   font-family: var(--font-display), system-ui, sans-serif;
-  font-size: clamp(20px, 2.05vw, 24px);
+  font-size: clamp(18px, 1.48vw, 21px);
   font-weight: 500;
   line-height: 1.12;
 }
@@ -210,6 +233,7 @@
   grid-template-rows: auto repeat(5, minmax(0, 1fr));
   align-content: stretch;
   gap: 0;
+  height: 100%;
   min-height: 0;
   color: var(--text);
 }
@@ -235,13 +259,13 @@
 }
 
 .railHead {
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .railHead p {
   color: var(--purple);
   font-family: var(--font-display), system-ui, sans-serif;
-  font-size: clamp(28px, 2.6vw, 36px);
+  font-size: clamp(31px, 2.75vw, 40px);
   font-weight: 500;
   line-height: 1;
 }
@@ -260,12 +284,12 @@
 
 .railItem {
   display: grid;
-  grid-template-columns: 32px minmax(0, 1fr) 104px;
-  gap: 14px;
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 12px;
   align-items: center;
   border-top: 1px solid var(--line);
   min-height: 0;
-  padding: 16px 0;
+  padding: 15px 0;
   transition:
     transform 180ms ease,
     color 180ms ease;
@@ -282,8 +306,8 @@
 .railNumber {
   display: grid;
   place-items: center;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: 999px;
   background: var(--button-primary-bg);
   color: var(--button-primary-fg);
@@ -292,29 +316,17 @@
   line-height: 1;
 }
 
-.railThumb {
-  position: relative;
-  min-height: 82px;
-  overflow: clip;
-  border-radius: var(--radius-sm);
-  background: var(--surface-raised);
-}
-
-:global(.dark) .railThumb {
-  background: #24242a;
-}
-
 .railItem small {
   color: var(--purple);
   font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .railItem strong {
   display: block;
-  margin-top: 6px;
+  margin-top: 5px;
   font-family: var(--font-display), system-ui, sans-serif;
-  font-size: clamp(19px, 1.65vw, 23px);
+  font-size: clamp(16px, 1.18vw, 19px);
   font-weight: 600;
   line-height: 1.12;
 }
@@ -556,13 +568,38 @@
     grid-template-columns: 1fr;
   }
 
-  .latestRail {
-    grid-template-rows: none;
-    margin-top: 8px;
+  .storyStack {
+    grid-template-columns: 1fr;
   }
 
   .heroCard {
     grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .heroImage {
+    aspect-ratio: 16 / 9;
+    margin: 12px 12px 0;
+  }
+
+  .heroCopy {
+    align-content: start;
+  }
+
+  .latestRail {
+    grid-template-rows: none;
+    height: auto;
+    margin-top: 8px;
+  }
+
+  .supportGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+    height: auto;
+  }
+
+  .supportCard {
+    height: auto;
   }
 
   .cardGrid,
@@ -581,6 +618,92 @@
   }
 }
 
+@media (min-width: 981px) and (max-height: 920px) {
+  .heroStage {
+    padding: 12px 0;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 2.08fr) minmax(300px, 0.92fr);
+    gap: 18px;
+  }
+
+  .storyStack {
+    grid-template-columns: minmax(0, 1.66fr) minmax(240px, 0.7fr);
+    grid-template-rows: none;
+  }
+
+  .storyStack,
+  .supportGrid {
+    gap: 14px;
+  }
+
+  .heroCopy {
+    align-content: start;
+    gap: 8px;
+    padding: 16px 18px 18px;
+  }
+
+  .heroCopy h1 {
+    font-size: clamp(28px, 2.45vw, 36px);
+    line-height: 1.03;
+  }
+
+  .heroImage {
+    aspect-ratio: 16 / 7.9;
+    margin: 8px 8px 0;
+  }
+
+  .subhead {
+    font-size: 14px;
+    line-height: 1.36;
+  }
+
+  .heroMeta {
+    font-size: 13px;
+  }
+
+  .supportBody .heroMeta {
+    display: none;
+  }
+
+  .supportBody {
+    gap: 8px;
+    padding: 10px 12px 12px;
+  }
+
+  .supportBody h2 {
+    font-size: clamp(16px, 1.28vw, 18px);
+  }
+
+  .supportImage {
+    aspect-ratio: 16 / 7.2;
+  }
+
+  .railHead {
+    margin-bottom: 6px;
+  }
+
+  .railHead p {
+    font-size: clamp(28px, 2.45vw, 34px);
+  }
+
+  .railItem {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 11px;
+    padding: 13px 0;
+  }
+
+  .railItem strong {
+    font-size: clamp(16px, 1.22vw, 19px);
+  }
+
+  .railNumber {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 @media (max-width: 640px) {
   .heroStage {
     padding: 28px 0 38px;
@@ -591,10 +714,16 @@
   }
 
   .heroCard,
+  .supportCard,
   .supportGrid,
   .featureSecond,
   .featureSmall {
     grid-template-columns: 1fr;
+  }
+
+  .supportImage {
+    aspect-ratio: 16 / 9;
+    min-height: 0;
   }
 
   .featureLead {
@@ -624,12 +753,8 @@
   }
 
   .railItem {
-    grid-template-columns: 32px minmax(0, 1fr) 96px;
+    grid-template-columns: 32px minmax(0, 1fr);
     gap: 12px;
-  }
-
-  .railThumb {
-    min-height: 74px;
   }
 
   .railItem strong {
