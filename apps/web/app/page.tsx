@@ -12,6 +12,7 @@ import { StoryCard } from "@/components/cards/StoryCard";
 import { NewsletterCard } from "@/components/cards/NewsletterCard";
 import { PartnerCard } from "@/components/cards/PartnerCard";
 import { RegionPreferencePanel } from "@/components/regions/RegionPreferencePanel";
+import { HeroSlider } from "./HeroSlider";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -114,7 +115,6 @@ function FeatureLane({ lane }: { lane: HomeLane }) {
 
 export default async function HomePage() {
   const curation = await getHomeCuration();
-  const { hero } = curation;
   const supportingStories = curation.supportingStories;
   const topStories = curation.latestRail;
   const laneByKey = new Map(curation.lanes.map((lane) => [lane.key, lane]));
@@ -128,25 +128,7 @@ export default async function HomePage() {
       <section className={styles.heroStage}>
         <div className={`container ${styles.hero}`}>
           <div className={styles.storyStack}>
-            <article className={styles.heroCard}>
-              <Link className={styles.heroImage} href={articlePath(hero.format, hero.slug)}>
-                <Image src={hero.image.src} alt={hero.image.alt} fill priority loading="eager" sizes="(min-width: 1180px) 610px, (min-width: 780px) 54vw, calc(100vw - 32px)" />
-              </Link>
-              <div className={styles.heroCopy}>
-                <div className={styles.badgeRow}>
-                  <FormatBadge format={hero.format} />
-                  {hero.sponsored ? <SponsoredBadge /> : null}
-                </div>
-                <h1>
-                  <Link href={articlePath(hero.format, hero.slug)}>{hero.title}</Link>
-                </h1>
-                <p className={styles.subhead}>{hero.subhead}</p>
-                <div className={styles.heroMeta}>
-                  <span>{hero.author.name}</span>
-                  <span>{hero.readTime}</span>
-                </div>
-              </div>
-            </article>
+            <HeroSlider slides={curation.heroStories} />
 
             <div className={styles.supportGrid}>
               {supportingStories.map((article) => (

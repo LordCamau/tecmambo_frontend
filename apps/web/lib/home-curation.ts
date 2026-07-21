@@ -74,39 +74,33 @@ function pickHeroStory(candidates: Article[], selected: Article[]) {
   return candidates.find((article) => !selectedIds.has(article.id) && !selectedImages.has(article.image.src));
 }
 
-const primaryHeroSlug = "apple-hardware-price-increases-ai-memory-tax";
-const supportingHeroSlugs = ["basigo-electric-bus-expansion-grid-question"];
 const computingCappedLaneKeys = new Set(["news", "business", "ai", "explains", "evergreen"]);
 
-function pickHeroStories(articles: Article[]) {
-  const uniqueArticles = uniqueByImage(articles);
-  const forcedHero = uniqueArticles.find((article) => article.slug === primaryHeroSlug);
-  const selected: Article[] = forcedHero ? [forcedHero] : [];
+function newestFirst(articles: Article[]) {
+  return [...articles].sort((first, second) => new Date(second.publishedAt).getTime() - new Date(first.publishedAt).getTime());
+}
 
-  for (const slug of supportingHeroSlugs) {
-    const article = uniqueArticles.find((candidate) => candidate.slug === slug);
-    if (article && pickHeroStory([article], selected)) selected.push(article);
-  }
+function pickHeroStories(articles: Article[]) {
+  const uniqueArticles = uniqueByImage(newestFirst(articles));
+  const selected: Article[] = [];
 
   const buckets = [
+    uniqueArticles.filter(isBusinessStartupOrFintechArticle),
     uniqueArticles.filter(isSmartphoneOrHardwareReview),
-    uniqueArticles.filter(isMobilityArticle),
-    uniqueArticles.filter(isBusinessStartupOrFintechArticle)
+    uniqueArticles.filter(isMobilityArticle)
   ];
 
   for (const candidates of buckets) {
-    if (forcedHero && candidates.some((article) => article.id === forcedHero.id)) continue;
     const article = pickHeroStory(candidates, selected);
     if (article) selected.push(article);
   }
 
-  const fallback = uniqueArticles.filter((article) => !selected.some((selectedArticle) => selectedArticle.id === article.id));
-  while (selected.length < 3 && fallback.length) {
-    selected.push(fallback.shift()!);
+  for (const article of uniqueArticles) {
+    if (selected.length >= 3) break;
+    if (pickHeroStory([article], selected)) selected.push(article);
   }
 
-  if (!forcedHero) return selected.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()).slice(0, 3);
-  return [forcedHero, ...selected.filter((article) => article.id !== forcedHero.id).slice(0, 2)];
+  return selected.slice(0, 3);
 }
 
 function lane(
@@ -134,7 +128,8 @@ export function curateHomeContent(articles: Article[], glossaryTerms: GlossaryTe
   const heroStories = pickHeroStories(articles);
   heroStories.forEach((article) => usedArticleIds.add(article.id));
   const hero = heroStories[0] ?? articles[0]!;
-  const supportingStories = heroStories.slice(1, 3);
+  const supportingStories = takeWithTagCap(uniqueByImage(articles.filter((article) => !usedArticleIds.has(article.id))), "computing", 1, 2);
+  supportingStories.forEach((article) => usedArticleIds.add(article.id));
   const latestRail = takeWithTagCap(uniqueByImage(articles.filter((article) => !usedArticleIds.has(article.id))), "computing", 1, 5);
   latestRail.forEach((article) => usedArticleIds.add(article.id));
   const reviewArticles = byFormat(articles, "review");
@@ -150,6 +145,7 @@ export function curateHomeContent(articles: Article[], glossaryTerms: GlossaryTe
   const mobility = filterArticlesByCanonicalTopic(articles, "evs-mobility");
 
   return {
+    heroStories,
     hero,
     supportingStories,
     latestRail,
