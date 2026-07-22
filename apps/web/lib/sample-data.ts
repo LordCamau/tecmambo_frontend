@@ -16,6 +16,7 @@ import { buildKenyaJuly9NewsArticles } from "@/lib/kenya-tech-news-july-9-2026";
 import { buildKenyaJuly17NewsArticles } from "@/lib/kenya-tech-news-july-17-2026";
 import { buildKenyaTechNewsArticles } from "@/lib/kenya-tech-news-july-2026";
 import { buildPrimeValeArticle } from "@/lib/primevale-launch-article";
+import { buildVlcFreeSoftwareArticle } from "@/lib/vlc-free-software-story";
 import { getRegion } from "@/lib/regions";
 
 export const authors: Author[] = [
@@ -86,6 +87,7 @@ export const topics: Tag[] = [
 ];
 
 export const brands: Tag[] = [
+  { name: "VLC", slug: "vlc", kind: "brand" },
   { name: "Sony", slug: "sony", kind: "brand" },
   { name: "PlayStation", slug: "playstation", kind: "brand" },
   { name: "Samsung", slug: "samsung", kind: "brand" },
@@ -779,6 +781,7 @@ const primeValeArticle = buildPrimeValeArticle({
   brands,
   kenya: kenyaRegion
 });
+const vlcFreeSoftwareArticle = buildVlcFreeSoftwareArticle({ authors, topics, brands });
 
 const regionAssignments: Record<string, string[]> = {
   "kenya-ai-rules-quiet-advantage": ["kenya"],
@@ -795,6 +798,7 @@ function attachRegions(article: Article): Article {
 
 export const articles: Article[] = [
   primeValeArticle,
+  vlcFreeSoftwareArticle,
   ...globalOpinionArticles,
   ...appleOpenAiLawsuitNewsArticles,
   ...editorialJuly13Articles,
