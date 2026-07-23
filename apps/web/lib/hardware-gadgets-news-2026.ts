@@ -44,6 +44,7 @@ export function buildHardwareGadgetsNewsArticles({ authors, topics, brands }: Bu
       whyItMatters:
         "Foldables are where phone design is actually moving, and this launch will set the bar, and the prices, that every rival gets measured against for the next year.",
       body: [
+        "Update, July 22, 2026: The event has happened and the rumors are now facts. Samsung announced the Galaxy Z Fold8 Ultra, a reshaped Galaxy Z Fold8, the Z Flip8, the Galaxy Watch Ultra2 and Watch9, and Gemini-powered smart glasses. For the confirmed products, prices, and specifications, read our full report at /news/samsung-galaxy-unpacked-july-2026-everything-announced. The original rumor roundup is preserved below for the record.",
         "Samsung's next Galaxy Unpacked is widely expected on July 22, 2026, in London, and its next foldables have leaked so thoroughly that the reveal risks feeling like a formality. A quick honesty note before the details: Samsung has not fully confirmed every product detail, so treat this as a strong rumor picture rather than fact.",
         "The consistent story across supply-chain leaks is that the Galaxy Z Fold 8 generation is about doing more with less thickness. Some reports put the slimmest model near 4.1mm unfolded, while newer leaks around the wider model point closer to 4.5mm, which is why the exact number should stay in rumor territory until launch day.",
         "Camera leaks are split too. Some reports point to a 200MP main camera on the premium Fold tier, while others describe a dual 50MP setup for the wider model. That disagreement matters because it suggests Samsung may be preparing more than one book-style Fold, not merely one direct successor.",
@@ -59,7 +60,7 @@ export function buildHardwareGadgetsNewsArticles({ authors, topics, brands }: Bu
         "If the July 22 date holds, pre-orders will likely open around the event, and we will replace the rumor picture with confirmed facts once Samsung says them on stage.",
       author: tim,
       publishedAt: published(11),
-      updatedAt: published(11),
+      updatedAt: new Date(Date.UTC(2026, 6, 22, 15, 0, 0)).toISOString(),
       readTime: "5 min read",
       image: {
         src: "/articles/samsung-unpacked-z-fold-8-leaks.jpg",

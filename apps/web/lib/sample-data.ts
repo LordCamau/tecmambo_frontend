@@ -16,6 +16,7 @@ import { buildKenyaJuly9NewsArticles } from "@/lib/kenya-tech-news-july-9-2026";
 import { buildKenyaJuly17NewsArticles } from "@/lib/kenya-tech-news-july-17-2026";
 import { buildKenyaTechNewsArticles } from "@/lib/kenya-tech-news-july-2026";
 import { buildPrimeValeArticle } from "@/lib/primevale-launch-article";
+import { buildSamsungUnpackedJuly2026Article } from "@/lib/samsung-unpacked-july-2026-article";
 import { buildVlcFreeSoftwareArticle } from "@/lib/vlc-free-software-story";
 import { getRegion } from "@/lib/regions";
 
@@ -721,6 +722,7 @@ const editorialJuly7Articles = buildEditorialJuly7Articles({
   }
 });
 const hardwareGadgetsNewsArticles = buildHardwareGadgetsNewsArticles({ authors, topics, brands });
+const samsungUnpackedJuly2026Article = buildSamsungUnpackedJuly2026Article({ authors, topics, brands });
 const computingLaptopNewsArticles = buildComputingLaptopNewsArticles({ authors, topics, brands });
 const evMobilityNewsArticles = buildEvMobilityNewsArticles({
   authors,
@@ -806,6 +808,7 @@ export const articles: Article[] = [
   ...editorialBundleArticles,
   ...editorialJuly7Articles,
   ...appNewsArticles,
+  samsungUnpackedJuly2026Article,
   ...hardwareGadgetsNewsArticles,
   ...computingLaptopNewsArticles,
   ...evMobilityNewsArticles,
