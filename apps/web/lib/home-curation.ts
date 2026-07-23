@@ -103,6 +103,36 @@ function pickHeroStories(articles: Article[]) {
   return selected.slice(0, 3);
 }
 
+// Editorially pinned hero slider order. These run first, in this exact sequence;
+// any that are missing fall back to the automatic category picks below.
+const pinnedHeroSlugs = [
+  "samsung-galaxy-unpacked-july-2026-everything-announced",
+  "basigo-electric-bus-expansion-grid-question",
+  "kenya-stablecoin-economy-freelancers"
+];
+
+function orderHeroStories(articles: Article[]) {
+  const bySlug = new Map(articles.map((article) => [article.slug, article]));
+  const ordered: Article[] = [];
+  const usedIds = new Set<string>();
+  const usedImages = new Set<string>();
+
+  const add = (article: Article | undefined) => {
+    if (!article || usedIds.has(article.id) || usedImages.has(article.image.src)) return;
+    ordered.push(article);
+    usedIds.add(article.id);
+    usedImages.add(article.image.src);
+  };
+
+  for (const slug of pinnedHeroSlugs) add(bySlug.get(slug));
+  for (const article of pickHeroStories(articles)) {
+    if (ordered.length >= 3) break;
+    add(article);
+  }
+
+  return ordered.slice(0, 3);
+}
+
 function lane(
   key: string,
   eyebrow: string,
@@ -125,7 +155,7 @@ function lane(
 
 export function curateHomeContent(articles: Article[], glossaryTerms: GlossaryTerm[]) {
   const usedArticleIds = new Set<string>();
-  const heroStories = pickHeroStories(articles);
+  const heroStories = orderHeroStories(articles);
   heroStories.forEach((article) => usedArticleIds.add(article.id));
   const hero = heroStories[0] ?? articles[0]!;
   const supportingStories = takeWithTagCap(uniqueByImage(articles.filter((article) => !usedArticleIds.has(article.id))), "computing", 1, 2);

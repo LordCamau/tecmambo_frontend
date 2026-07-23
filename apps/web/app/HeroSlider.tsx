@@ -41,10 +41,7 @@ export function HeroSlider({ slides }: HeroSliderProps) {
   const activeSlide = carouselSlides[activeIndex] ?? carouselSlides[0];
   if (!activeSlide) return null;
 
-  const activeHref = articlePath(activeSlide.format, activeSlide.slug);
   const slideCount = carouselSlides.length;
-  const activePage = String(activeIndex + 1).padStart(2, "0");
-  const totalPages = String(slideCount).padStart(2, "0");
 
   function showPreviousSlide() {
     setActiveIndex((currentIndex) => (currentIndex - 1 + slideCount) % slideCount);
@@ -93,18 +90,35 @@ export function HeroSlider({ slides }: HeroSliderProps) {
         })}
       </div>
 
-      <div className={`${styles.heroCopy} ${styles.heroSlideCopy}`} key={activeSlide.id}>
-        <div className={styles.badgeRow}>
-          <FormatBadge format={activeSlide.format} />
-          {activeSlide.sponsored ? <SponsoredBadge /> : null}
-        </div>
-        <h1>
-          <Link href={activeHref}>{activeSlide.title}</Link>
-        </h1>
-        <p className={styles.subhead}>{activeSlide.subhead}</p>
-        <div className={styles.heroMeta}>
-          <span>{activeSlide.author.name}</span>
-          <span>{activeSlide.readTime}</span>
+      <div className={styles.heroSlideCopy}>
+        <div className={styles.heroCopyDeck}>
+          {carouselSlides.map((slide, index) => {
+            const isActive = index === activeIndex;
+
+            return (
+              <div
+                aria-hidden={isActive ? undefined : true}
+                className={styles.heroCopy}
+                data-active={isActive}
+                key={slide.id}
+              >
+                <div className={styles.badgeRow}>
+                  <FormatBadge format={slide.format} />
+                  {slide.sponsored ? <SponsoredBadge /> : null}
+                </div>
+                <h1>
+                  <Link href={articlePath(slide.format, slide.slug)} tabIndex={isActive ? 0 : -1}>
+                    {slide.title}
+                  </Link>
+                </h1>
+                <p className={styles.subhead}>{slide.subhead}</p>
+                <div className={styles.heroMeta}>
+                  <span>{slide.author.name}</span>
+                  <span>{slide.readTime}</span>
+                </div>
+              </div>
+            );
+          })}
         </div>
         {slideCount > 1 ? (
           <div aria-label="Featured story pagination" className={styles.heroSliderControls}>
@@ -114,13 +128,13 @@ export function HeroSlider({ slides }: HeroSliderProps) {
               onClick={showPreviousSlide}
               type="button"
             >
-              <ChevronLeft aria-hidden="true" size={16} strokeWidth={2.4} />
+              <ChevronLeft aria-hidden="true" size={14} strokeWidth={2} />
             </button>
             <div className={styles.heroSliderDots}>
               {carouselSlides.map((slide, index) => (
                 <button
                   aria-current={index === activeIndex ? "step" : undefined}
-                  aria-label={`Show featured story ${index + 1}: ${slide.title}`}
+                  aria-label={`Show featured story ${index + 1} of ${slideCount}: ${slide.title}`}
                   className={styles.heroSliderDot}
                   key={slide.id}
                   onClick={() => setActiveIndex(index)}
@@ -128,16 +142,13 @@ export function HeroSlider({ slides }: HeroSliderProps) {
                 />
               ))}
             </div>
-            <span aria-label={`Featured story ${activeIndex + 1} of ${slideCount}`} className={styles.heroSliderCounter}>
-              {activePage} / {totalPages}
-            </span>
             <button
               aria-label="Show next featured story"
               className={styles.heroSliderArrow}
               onClick={showNextSlide}
               type="button"
             >
-              <ChevronRight aria-hidden="true" size={16} strokeWidth={2.4} />
+              <ChevronRight aria-hidden="true" size={14} strokeWidth={2} />
             </button>
           </div>
         ) : null}
