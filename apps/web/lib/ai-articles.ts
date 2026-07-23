@@ -77,9 +77,12 @@ const images = {
     credit: "Unsplash"
   },
   nairobiPhone: {
-    src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1800&auto=format&fit=crop",
-    alt: "A person using a phone on a busy Nairobi street.",
-    credit: "Unsplash"
+    src: "/articles/We_Tested_3_AI_Agents_tecMAMBO.jpg",
+    alt: "A man working at a laptop with the ChatGPT, Claude, and Gemini AI logos glowing above him. Credit: Pexels.",
+    credit: "Pexels",
+    width: 2080,
+    height: 1040,
+    type: "image/jpeg"
   },
   taskPhone: {
     src: "https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=1800&auto=format&fit=crop",
@@ -503,29 +506,84 @@ export function buildAiArticles({ authors, topics, brands }: ArticleFactoryInput
       whyItMatters:
         "The demos always work. We wanted to know how the big AI assistants cope with patchy data, local context, and the messy way people actually ask things.",
       body: [
-        "The demos always work. That is their job. So instead of trusting the stage, I spent a normal week in Nairobi leaning on three of the most popular AI assistants, ChatGPT, Gemini, and Claude, for the ordinary tasks I would have done anyway. Drafting messages, working out a budget, getting directions, checking facts, switching between English and Kiswahili the way people actually talk. I was less interested in which is smartest on a benchmark and more interested in which is least annoying when life is normal and the connection is not.",
-        "A note before the findings: this is a field test, not a lab. I used each assistant as a regular person would, on a phone, on regular data, over one week. Your mileage will vary with the version, the day, and your questions. With that said, here is what held up and what did not.",
-        "## Everyday writing and thinking",
-        "For drafting and tidying up text, all three were genuinely good, and honestly close enough that preference came down to tone. Each could turn a rough WhatsApp rant into a polite message, summarise a long document, and rough out a plan. If your main use is writing help, you almost cannot go wrong, and the free tiers are already strong enough for most of it.",
+        "The demos always work. That is their entire job. On a launch stage the lighting is perfect, the wifi never drops, and the question has been rehearsed a hundred times. A Nairobi week is none of those things. So instead of trusting the slideshow, I spent seven ordinary days leaning on the three assistants most people here actually reach for, ChatGPT, Gemini, and Claude, for the real tasks that filled my week. Drafting messages, sorting out a budget, finding my way across town, checking facts, and switching between English and Kiswahili the way people genuinely talk. The question I cared about was not which one wins a benchmark. It was which one is least annoying when the day is normal, the matatu is late, and the signal keeps cutting out.",
+        "A note on method before the findings, because it matters. This is a field test, not a laboratory. I used each assistant the way a regular person would, on a mid-range Android phone, on ordinary prepaid data, mostly on the free or standard tiers, over a single week. I did not run controlled benchmarks, time answers with a stopwatch, or unlock paid enterprise features. I asked messy questions in the middle of doing other things. Your experience will differ with the version, the day, and how you ask. Treat the specifics as a snapshot from one Nairobi week, not a verdict carved in stone.",
+        "## The week, the phone, and the plan",
+        "To keep it honest I set one rule: no task was invented for the test. If it came up in my actual week, an assistant got a crack at it, and so did I. That covered a landlord message I did not want to send angry, a monthly budget that had quietly slipped, a cross-town trip to a part of the city I rarely visit, a document I needed summarised before a meeting, and a steady drip of small factual questions. I rotated between the three through the day, sometimes asking all three the same thing to compare, more often just grabbing whichever was already open. Data came from normal daily and weekly bundles, which turned out to matter far more than I expected.",
+        "## Everyday writing and thinking: the closest race",
+        "For writing and tidying up thoughts, all three were genuinely strong, and close enough that preference came down to tone rather than ability. I fed each the same overheated WhatsApp message to my landlord about a broken water pump and asked for something firm but calm. ChatGPT leaned warm and slightly wordy. Gemini was brisk and practical. Claude landed the most measured version, the one I actually sent. Summarising a long PDF before a meeting, drafting a short proposal, turning scattered bullet points into a clean paragraph, planning a birthday on a budget: all three handled these without fuss. If writing help is your main use, you almost cannot go wrong, and the free tiers are already good enough for most of it. This is the part of the demo that survives contact with real life intact.",
+        "## Money and budgeting: useful helper, unreliable accountant",
+        "Budgeting was where usefulness and danger sat side by side. As a thinking partner the assistants were good. I described my income and rough monthly costs in round figures, rent, transport, data, food, and a chama contribution, and each produced a sensible breakdown, spotted where the money was leaking, and suggested a realistic savings target. Claude and ChatGPT were both strong on the reasoning. Where they wobbled was anything that needed a current local number. Ask for the exact M-Pesa withdrawal charge on a given amount, or today's fuel price, or the current SHA contribution, and confident, out-of-date figures appeared. The lesson was clear: let them structure your budget and pressure-test your plan, but never trust them for a live tariff or fee. Check the real number at the source before you rely on it. And a hard rule I set on day one, do not paste your actual M-Pesa statement, ID number, or account details into any of them. The privacy trade is not worth it.",
+        "## Getting around: where the street beats the stage",
+        "Directions were the sharpest reminder that a world-class generalist can be a shaky local. Heading to a part of Nairobi I did not know well, I asked all three for the route, the right matatu, and the fare. The answers were fluent, plausible, and often wrong in the small ways that matter. Route numbers were mixed up, a stage was placed on the wrong road, and a fare was quoted with a confidence the figure did not earn. Gemini had a mild edge here thanks to its link to Google Maps, but for actually getting somewhere, Maps itself, or a quick word with a person, still beat asking an assistant. Traffic, closures, and the daily improvisation of matatu routes are exactly the kind of fast-changing local truth these tools do not hold. For the shape of a plan they were fine. For the turn-by-turn reality of the city, I put the phone back on Maps.",
         "## Local knowledge, the weak spot",
-        "This is where the gap between the stage and the street showed. Ask about a global topic and the answers were solid. Ask about a specific Nairobi neighbourhood, a local fee, a small Kenyan company, or a current matatu route, and the confident wrong answers crept in. None of them should be trusted on hyper-local detail without a check. They are world-class generalists and shaky locals.",
+        "The directions problem was one case of a wider pattern. Ask about a global subject and the answers were solid, well organised, genuinely helpful. Narrow the question to a specific Nairobi neighbourhood, a small Kenyan company, a local government fee, a shop's prices, or a piece of this week's local news, and the confident wrong answers crept back in. They rarely said I am not sure. They guessed in a fluent voice, which is more dangerous than a blank, because a smooth wrong answer is easy to believe. My working rule by midweek was simple: the more local and the more specific a question, the less I trusted the answer, and the more I treated it as a lead to check rather than a fact to use. They are excellent generalists and unreliable witnesses on the hyper-local detail that daily life in Nairobi is actually made of.",
         "## Language and code-switching",
-        "Kiswahili was handled better than I expected, and basic code-switching between English and Kiswahili mostly worked. Sheng and very colloquial phrasing were hit and miss. For formal Kiswahili they were useful; for the way people actually text, results wobbled.",
+        "Kiswahili held up better than I expected. For formal, standard Kiswahili, translating a heartfelt message to a rural relative, or cleaning up a semi-formal note, all three were useful, and Claude and ChatGPT read most naturally to me. The trouble started with the way people actually text. Sheng and heavy code-switching, the natural mix of English, Kiswahili, and slang in a single sentence, were hit and miss. Casual openers and street phrasing sometimes came back slightly stiff, or over-translated into a textbook register nobody speaks. They understood mambo and poa, but the living, shifting edge of Nairobi speech is still beyond them. Useful for formal Kiswahili, wobbly for the real thing.",
         "## The unglamorous bit: data and connection",
-        "Here is the part no launch mentions. These tools live in the cloud, so they eat data and they need a signal. On a strong connection they felt instant. On a weak one, or when the network dropped, they stalled, and a long back-and-forth quietly chews through a bundle. If you are on a tight data plan, that is a real cost, and it shaped how I used them: shorter exchanges, fewer giant pastes.",
+        "Here is the cost no launch mentions. These tools live in the cloud, so they eat data and they need a signal. On a strong connection they felt instant and almost magical. On a weak one, in a lift, deep inside a building, or on a moving matatu, they stalled, spun, and sometimes lost the thread entirely. A long back-and-forth quietly chews through a bundle, and voice features and image uploads chew faster. On a tight data plan that is a real, recurring cost, and it changed how I used them: shorter exchanges, fewer giant pastes, more finishing a thought in one clear prompt instead of ten sloppy ones. The assistant that helps you most is partly the one you can afford to keep talking to. None of the three does much of anything useful fully offline, and in a city where the signal is not a given, that is a genuine limitation, not a footnote.",
+        "## Where each one pulled ahead",
+        "By the end of the week the honest picture was that they are closer than the marketing suggests, with small, real differences in character. ChatGPT was the most all-round comfortable, quick, friendly, and rarely stuck, the safe default if you only want one. Gemini was strongest when a task touched the rest of Google, pulling in Maps, Gmail, and search context more naturally, which is a real advantage if you already live in that ecosystem, and its move toward agents that act on your behalf is worth watching, as we found in our Gemini Spark review at /reviews/gemini-spark-review. Claude was the one I trusted most with longer documents, careful reasoning, and tone, the calmest writer and the least likely to be glib, though it leans more on plain text than on live web extras. None of these gaps is dramatic. On the everyday stuff, tone and habit matter more than any spec.",
+        "## The trust problem, in one line",
+        "If there is a single lesson from the week, it is about the gap between confidence and correctness. All three speak with the same steady authority whether they are right or guessing, and that is the trap. On general reasoning and writing you can lean on them heavily. On anything local, current, financial, or irreversible, treat the answer as a first draft to verify, never a fact to act on. Pair that habit with basic privacy sense, no real financial or identity details pasted in, and they become genuinely powerful. Skip it, and a fluent wrong answer will eventually cost you.",
         "## So, the verdict",
-        "Treat any of the three as a sharp, fast assistant for thinking, writing, and getting started, and treat all three as unreliable witnesses on local specifics. Use them to draft and to reason, then verify anything local or anything that matters before you act on it. Pick the one whose tone you like, because on the everyday stuff they are closer than the marketing suggests."
+        "After a real Nairobi week, my advice is practical. Treat any of the three as a fast, sharp assistant for thinking, writing, and getting started, and treat all three as unreliable on local specifics until you check. The free tiers are already strong enough for most people, so start there before paying anyone in dollars, and our guide to the best AI subscription for your money in 2026 breaks down when free is genuinely enough at /wallet-watch/best-ai-subscription-value-2026. Pick the one whose tone you like and whose ecosystem you already use, because on the everyday tasks that fill an ordinary week they are far closer than any launch stage would have you believe. The demos always work. The point of a week like this is to find out what happens when the demo ends and the matatu is still late.",
+        "One last honest note. Behaviour, versions, and even names change fast in this space, so a rerun in three months could shuffle the details. What I do not expect to change is the shape of the thing: strong general help, shaky local memory, a real data appetite, and a confident tone that hides both the best and the worst answers. Use them for that, and check the rest."
       ],
       goDeeper: {
         intro:
-          "Over seven days I used each assistant for the same real tasks as they came up, on a mobile phone and ordinary mobile data, without special prompting tricks, and noted where each was strong, weak, or wrong. I did not run controlled benchmarks, time responses with a stopwatch, or test paid enterprise features. This is meant to reflect a normal person's week, not a laboratory. Versions and behaviour change often, so treat the specifics as a snapshot.",
-        specs: []
+          "Over seven days I used each assistant for the same real tasks as they came up, on a mid-range Android phone and ordinary prepaid data, without special prompting tricks, and noted where each was strong, weak, or wrong. I did not run controlled benchmarks, time responses with a stopwatch, or test paid enterprise features. This reflects a normal person's week, not a laboratory, and versions change often, so treat the specifics as a snapshot. The quick comparison below is my subjective read from that week, not a scored benchmark.",
+        specs: [
+          { label: "Everyday writing", value: "All three strong and close. Claude calmest, ChatGPT warmest, Gemini most concise." },
+          { label: "Budgeting and reasoning", value: "Good as a thinking partner. Do not trust it for live local fees, tariffs, or fuel prices without checking." },
+          { label: "Nairobi directions and routes", value: "Weakest area. Confident but often wrong on stages and fares. Google Maps still better; Gemini has a slight Maps edge." },
+          { label: "Local knowledge", value: "Shaky. The more specific and local the question, the less reliable the answer." },
+          { label: "Kiswahili and Sheng", value: "Formal Kiswahili good across all three. Sheng and heavy code-switching hit and miss." },
+          { label: "Data and offline", value: "All cloud-based. They eat data, need a signal, and do little useful offline." },
+          { label: "Best all-round", value: "ChatGPT, for a single friendly default." },
+          { label: "Best with Google apps", value: "Gemini, for Maps, Gmail, and search context." },
+          { label: "Best for documents and tone", value: "Claude, for longer text, careful reasoning, and a measured voice." }
+        ]
       },
+      closingLine:
+        "The stage sells certainty. A Nairobi week sells something more useful, a clear sense of exactly where these tools help and where you still have to think for yourself.",
+      faq: [
+        {
+          question: "Which AI assistant is best for someone in Nairobi?",
+          answer:
+            "On everyday writing and thinking the three are very close, so pick by tone and by the ecosystem you already use: ChatGPT as a friendly all-rounder, Gemini if you live in Google's apps, and Claude for longer documents and a careful voice. None is reliably better for local Nairobi detail, so verify anything local yourself."
+        },
+        {
+          question: "Can ChatGPT, Gemini, or Claude give accurate matatu routes and fares?",
+          answer:
+            "Not reliably. In the test they were fluent but frequently wrong about route numbers, stages, and fares, which change too often for them to track. Use Google Maps or ask a person for real directions, and treat any assistant's route as a rough guess to confirm."
+        },
+        {
+          question: "Do these AI assistants understand Kiswahili and Sheng?",
+          answer:
+            "Formal, standard Kiswahili is handled well by all three. Sheng and heavy code-switching between English and Kiswahili are hit and miss, and casual street phrasing often comes back stiff or over-formal."
+        },
+        {
+          question: "How much mobile data do AI assistants use?",
+          answer:
+            "More than people expect. They run in the cloud, so long text chats steadily consume a bundle, and voice and image features consume it faster. On a tight data plan, keep exchanges short, and remember they do little useful when the signal drops."
+        },
+        {
+          question: "Are the free versions good enough, or should I pay?",
+          answer:
+            "For most people the free tiers already cover everyday writing, summarising, and quick questions. Pay only if you use AI hard every day, and remember the prices are usually in dollars, so the real cost in shillings moves with the exchange rate."
+        }
+      ],
       author: lulu,
       publishedAt: iso(25, 8),
       updatedAt: iso(25, 8),
       image: images.nairobiPhone,
-      tags: [ai, openai, google, anthropic]
+      tags: [ai, openai, google, anthropic],
+      sources: [
+        { label: "OpenAI: ChatGPT", url: "https://openai.com/chatgpt" },
+        { label: "Google: Gemini", url: "https://gemini.google.com" },
+        { label: "Anthropic: Claude", url: "https://claude.ai" }
+      ]
     },
     {
       id: "ai-11",

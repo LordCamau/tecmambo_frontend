@@ -412,6 +412,13 @@ function readTimeFor(articleText: string) {
   return `${Math.max(3, Math.ceil(words / 180))} min read`;
 }
 
+// Articles pulled from the draft set that should not be published anywhere on the site.
+const excludedDraftSlugs = new Set([
+  "vivo-v40-review-a-great-camera-phone-that-knows-exactly-who-it-s-for",
+  "oraimo-s-cheapest-earbuds-tested-for-a-full-week-of-real-commutes",
+  "samsung-galaxy-buds-vs-the-budget-alternative-nobody-talks-about"
+]);
+
 export function loadDraftArticles({
   authors,
   topics,
@@ -463,5 +470,6 @@ export function loadDraftArticles({
         deal: dealForArticle(title, slug, format)
       };
       return articleOverride ? { ...article, ...articleOverride } : article;
-    });
+    })
+    .filter((article) => !excludedDraftSlugs.has(article.slug));
 }
