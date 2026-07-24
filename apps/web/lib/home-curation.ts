@@ -153,14 +153,18 @@ function lane(
   return { key, eyebrow, title, href, linkLabel, layout, articles: capped };
 }
 
-// Force a specific article to the front of a lane list so it becomes the lane's lead card.
-function pinLeadFirst(list: Article[], slug: string) {
-  const index = list.findIndex((article) => article.slug === slug);
-  if (index <= 0) return list;
-  const reordered = [...list];
-  const [pinned] = reordered.splice(index, 1);
-  reordered.unshift(pinned);
-  return reordered;
+// Curate a lane's order: force pinnedSlugs to the front (in the given order), drop excludedSlugs
+// entirely, then keep the remaining articles in their existing order.
+function curateLaneOrder(list: Article[], pinnedSlugs: string[], excludedSlugs: string[] = []) {
+  const excluded = new Set(excludedSlugs);
+  const bySlug = new Map(list.map((article) => [article.slug, article]));
+  const pinned = pinnedSlugs
+    .map((slug) => bySlug.get(slug))
+    .filter((article): article is Article => Boolean(article))
+    .filter((article) => !excluded.has(article.slug));
+  const pinnedIds = new Set(pinned.map((article) => article.id));
+  const rest = list.filter((article) => !pinnedIds.has(article.id) && !excluded.has(article.slug));
+  return [...pinned, ...rest];
 }
 
 export function curateHomeContent(articles: Article[], glossaryTerms: GlossaryTerm[]) {
@@ -182,9 +186,10 @@ export function curateHomeContent(articles: Article[], glossaryTerms: GlossaryTe
   const africa = getAfricaArticles(articles);
   const ai = filterArticlesByCanonicalTopic(articles, "ai");
   const smartphones = filterArticlesByCanonicalTopic(articles, "smartphones");
-  const mobility = pinLeadFirst(
+  const mobility = curateLaneOrder(
     filterArticlesByCanonicalTopic(articles, "evs-mobility"),
-    "why-electric-motorbikes-matter-more-than-flashy-ev-launches"
+    ["why-electric-motorbikes-matter-more-than-flashy-ev-launches", "ev-model-explosion-suv-bias"],
+    ["kenya-annual-vehicle-emissions-testing-bill-gig-workers"]
   );
 
   return {
