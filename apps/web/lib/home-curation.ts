@@ -153,6 +153,16 @@ function lane(
   return { key, eyebrow, title, href, linkLabel, layout, articles: capped };
 }
 
+// Force a specific article to the front of a lane list so it becomes the lane's lead card.
+function pinLeadFirst(list: Article[], slug: string) {
+  const index = list.findIndex((article) => article.slug === slug);
+  if (index <= 0) return list;
+  const reordered = [...list];
+  const [pinned] = reordered.splice(index, 1);
+  reordered.unshift(pinned);
+  return reordered;
+}
+
 export function curateHomeContent(articles: Article[], glossaryTerms: GlossaryTerm[]) {
   const usedArticleIds = new Set<string>();
   const heroStories = orderHeroStories(articles);
@@ -172,7 +182,10 @@ export function curateHomeContent(articles: Article[], glossaryTerms: GlossaryTe
   const africa = getAfricaArticles(articles);
   const ai = filterArticlesByCanonicalTopic(articles, "ai");
   const smartphones = filterArticlesByCanonicalTopic(articles, "smartphones");
-  const mobility = filterArticlesByCanonicalTopic(articles, "evs-mobility");
+  const mobility = pinLeadFirst(
+    filterArticlesByCanonicalTopic(articles, "evs-mobility"),
+    "why-electric-motorbikes-matter-more-than-flashy-ev-launches"
+  );
 
   return {
     heroStories,

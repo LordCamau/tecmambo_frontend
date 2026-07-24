@@ -518,26 +518,114 @@ const mobilityArticles: Article[] = [
     slug: "why-electric-motorbikes-matter-more-than-flashy-ev-launches",
     format: "real-life",
     title: "Why electric motorbikes matter more than flashy EV launches",
+    seo: {
+      title: "Why electric motorbikes matter more than flashy EV launches",
+      description:
+        "Electric boda bodas, not premium EVs, are the real electric-vehicle revolution in Kenya. The economics, battery swapping, the e-mobility tariff, and what it means for riders."
+    },
     subhead: "The most important electric vehicles may be the ones that lower daily running costs, not the ones on glossy stages.",
     excerpt: "Electric motorbikes are a practical mobility story: battery swaps, charging access, repair networks, and daily earnings all matter more than hype.",
     whyItMatters:
-      "If electric mobility is going to work for more people, it has to make the everyday commute and delivery shift cheaper, simpler, and easier to maintain.",
+      "If electric mobility is going to work for more people, it has to make the everyday commute and delivery shift cheaper, simpler, and easier to maintain. In Kenya that shift is already happening, and it is happening on two wheels.",
     body: [
-      "Electric cars get the dramatic photos, but electric motorbikes may be the more interesting test of whether EVs can fit real urban life. They are cheaper to buy, easier to park, and closer to the daily economics of riders who count every shilling spent on fuel and repairs.",
-      "The challenge is not only the bike. It is the system around it: charging, battery swaps, spare parts, financing, and technicians who can keep the fleet moving when something breaks.",
-      "That is why the best electric mobility story is not a single launch. It is a network that makes the cheaper choice feel reliable enough to trust every morning."
+      "Electric cars get the dramatic photos: the sculpted bodywork, the countdown clock, the founder pacing a stage. But in Kenya, and across much of Africa, the electric vehicle quietly changing the most lives is far humbler. It is the boda boda, the motorcycle taxi that threads people and parcels through every town and estate in the country. There are millions of them, and for a huge number of young Kenyans a bike is not a lifestyle choice but a livelihood. That is exactly why the move to electric two-wheelers matters more than any glossy car launch: it changes the daily maths of how people earn.",
+      "The scale makes the point. By the end of 2025, electric motorcycles made up the overwhelming majority of Kenya's registered electric vehicles, roughly 31,900 of about 43,300 by registration data, most of them boda bodas. Electric cars are a rounding error next to the electric boda. When people ask whether EVs are working in Kenya, they are usually looking at the wrong vehicle. The revolution is on two wheels, and it is commercial, not aspirational.",
+      "## The number that actually moves a rider",
+      "For a boda rider, the decision is not about the planet first. It is about what is left at the end of the day. A petrol boda commonly burns 500 to 1,000 shillings of fuel a day, often 700 to 800 on a busy one. Electricity is not in the same league. A full charge can cost as little as 8 to 15 shillings and carry a bike 25 to 50 kilometres, and the ride-hailing firm Bolt estimates riders save 300 to 500 shillings a day by switching to electric, which it puts at around 182,500 shillings a year. Put plainly, the fuel line on a rider's day can shrink from the biggest cost to almost a footnote, and that money goes straight into rent, school fees, and food.",
+      "Two honest qualifiers. First, those are headline figures from operators and vary with the bike, the route, and the day. Second, the fuel saving is partly offset by what you pay for the battery, whether you rent it, swap it, or finance it. The electric boda is cheaper to run. The industry's real achievement has been making it affordable to start.",
+      "## Why the battery, not the bike, is the real product",
+      "The single most expensive part of an electric motorcycle is its battery, as Ecobodaa co-founder Steve Juma has put plainly. Ask a rider to pay for the bike and the battery upfront and the sums collapse, because the people who most need the savings are the ones with the least cash to put down. The move that unlocked the market was to separate the two. Under a battery-as-a-service or swap model, the rider buys or finances a cheaper bike without the battery, then pays to trade a depleted pack for a charged one at a station in the couple of minutes it takes to refuel a petrol bike. No waiting hours to charge, no anxiety about being stranded far from a socket, and no huge battery cost on day one. For a commercial rider whose income depends on staying on the road, swapping is not a convenience. It is the thing that makes electric viable at all.",
+      "There is a genuine split in approach. Swap networks such as Spiro, ARC Ride, and Ampersand bet that riders want to trade batteries like refuelling and never think about charging. Others, including the Kenyan firm Roam, lean toward riders owning dual-battery packs they charge themselves, trading swap-station convenience for full ownership and no per-swap fee. Neither is obviously right. Swapping wins on uptime and low entry cost; ownership wins for riders who can charge at home or base and would rather not pay a network forever. The decider in any given neighbourhood is whoever's station, or whoever's home socket, is actually within reach. That is the same lesson as car charging, where the charger you can reach beats the faster one across town, which we get into at /explainers/the-real-test-for-ev-charging-isnt-speed-its-location.",
+      "## A launch is a moment. A network is the product",
+      "This is why the most important electric-mobility news is rarely a single glamorous unveiling. It is the slow, unglamorous build-out of the system around the bike: swap stations dense enough to trust, spare parts on the shelf, technicians trained to fix a motor instead of a carburettor, and financing a rider on a cash income can actually service. The money is following that logic. Spiro, which operates across Kenya, Benin, Togo, Rwanda, and Uganda, has talked of thousands of swap stations and raised well over 100 million dollars in the past year to build them. Ampersand, which came to Kenya in 2022, has raised again to push its fleet toward five figures. ARC Ride is wiring Nairobi with hundreds of battery points. Even Yadea, China's largest e-motorbike maker, has entered the Kenyan race. None of that makes a dramatic keynote. All of it decides whether the cheaper choice feels reliable enough to bet your morning on. The scale of the fundraising is a story in itself, as we covered with Spiro at /business/spiro-electric-mobility-funding-round.",
+      "## The quiet role of the grid and the tariff",
+      "Two things make Kenya an unusually good place for this. First, the grid is mostly clean, dominated by geothermal and hydro, so an electric boda is genuinely lower-carbon here in a way it is not everywhere. Second, policy has started to notice. Kenya's energy regulator introduced a dedicated e-mobility electricity tariff, with cheaper power for charging, reported at around 16 shillings a unit at peak and 8 shillings off-peak, which nudges operators to fill batteries when the grid is quiet. The effect shows up on Kenya Power's own books: it has reported EV-charging revenue climbing from under a million shillings a month in mid-2023 to tens of millions by early 2026, cumulatively into the hundreds of millions. When the national utility starts counting boda charging as a real revenue line, the trend has left the pilot stage.",
+      "## Where it still gets hard",
+      "None of this means the transition is finished, and it would be dishonest to pretend otherwise. Swap-station coverage is still thin outside the big towns, so a rider who strays off the network is back to range anxiety. Battery ageing and ownership raise fair questions: who carries the cost when a pack degrades, and what is a used electric boda actually worth at resale, a market that barely exists yet. Riders have pushed back where networks feel too rigid or too pricey, wanting more flexibility in how and where they swap. Financing, for all its cleverness, still loads a monthly obligation onto people with volatile daily incomes. And the informal repair economy that keeps petrol bodas alive, the fundi on every corner, has to be retrained for a very different machine. These are solvable problems, but they are the difference between a good launch and a lasting shift.",
+      "## Why this beats the flashy launch",
+      "Set the electric boda against the premium EV reveal and the contrast is the whole argument. A flagship electric car changes the commute of a few thousand people who could mostly afford a car anyway. An electric boda network changes the take-home pay of hundreds of thousands of riders who count every shilling, cleans the air in the estates where they work, and does it on a grid that is already largely renewable. It is cheaper, it scales faster, and its benefits land on the people with the least room to spare. The stage version of electrification is about desire. The street version is about arithmetic, and arithmetic is what moves a market. For the heavier vehicles working the same logic, our look at electric buses and the strain they put on the grid is a useful companion at /business/basigo-electric-bus-expansion-grid-question.",
+      "## If you are the one deciding",
+      "If you ride for a living, the questions worth asking are practical, not ideological. How dense is the swap or charging network on your actual routes, not on a map. What does a swap or a full charge really cost you per day against the fuel you burn now. Do you own the battery or rent it forever, and what happens to your costs if the pack degrades. Is the monthly financing something your worst week can still cover, not just your best. Are there trained technicians and parts near you when, not if, something breaks. Get honest answers to those and the electric boda usually wins on the only scoreboard a working rider cares about: what is left at the end of the day. Wait for confirmed local pricing and current tariff details before you commit, because both move."
     ],
+    goDeeper: {
+      intro:
+        "A quick, plain-English reference for the electric boda economics above, drawn from operator estimates, Kenya Power figures, and the regulator's e-mobility tariff. Treat the numbers as current-market estimates that shift with fuel prices, exchange rates, and each company's terms, and confirm the specifics locally before deciding.",
+      specs: [
+        { label: "Petrol fuel cost", value: "Roughly KSh500 to KSh1,000 a day, often KSh700 to KSh800 on a busy day." },
+        { label: "Electric charge cost", value: "About KSh8 to KSh15 for a full charge, good for roughly 25 to 50km." },
+        { label: "Reported daily saving", value: "Bolt estimates KSh300 to KSh500 a day, around KSh182,500 a year." },
+        { label: "E-mobility tariff", value: "A dedicated EV rate, reported near KSh16 per unit at peak and KSh8 off-peak." },
+        { label: "The main cost", value: "The battery. Swap and battery-as-a-service models separate it from the bike to cut the upfront price." },
+        { label: "Two models", value: "Swap networks (Spiro, ARC Ride, Ampersand) versus rider-owned dual batteries (Roam)." },
+        { label: "Market share", value: "Electric motorcycles were about 31,900 of roughly 43,300 registered EVs in Kenya by end of 2025." },
+        { label: "Grid", value: "Kenya's power is mostly geothermal and hydro, so charging is genuinely low-carbon here." }
+      ]
+    },
+    closingLine:
+      "The flashy launch sells a feeling. The electric boda sells a smaller fuel bill every single day, and in the end that is the version of the electric future that actually changes how people live.",
     author: authors[0]!,
     publishedAt: new Date(Date.UTC(2026, 5, 25, 7, 0, 0)).toISOString(),
     updatedAt: new Date(Date.UTC(2026, 5, 25, 7, 0, 0)).toISOString(),
-    readTime: "4 min read",
+    readTime: "9 min read",
     image: {
-      src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1800&auto=format&fit=crop",
-      alt: "Motorbike parked on a city street",
-      credit: "Unsplash"
+      src: "/articles/electric_motorbikes_roam_electric_tecMAMBO.jpg",
+      alt: "A man presenting a row of orange ROAM electric motorbikes inside the ROAM assembly facility. Credit: ROAM.",
+      credit: "ROAM",
+      width: 1040,
+      height: 520,
+      type: "image/jpeg"
     },
     tags: [mobilityTopic, powerTopic],
-    regions: [kenyaRegion]
+    regions: [kenyaRegion],
+    faq: [
+      {
+        question: "Why do electric motorbikes matter more than electric cars in Kenya?",
+        answer:
+          "Because boda bodas are a livelihood for hundreds of thousands of riders and made up the large majority of Kenya's registered EVs by the end of 2025. Cutting a rider's daily fuel cost changes real take-home earnings at a scale a premium car launch never reaches."
+      },
+      {
+        question: "How much can an electric boda save a rider?",
+        answer:
+          "Operators put the fuel saving high. A petrol bike can burn KSh500 to KSh1,000 of fuel a day, while a full electric charge can cost as little as KSh8 to KSh15. Bolt estimates riders save KSh300 to KSh500 a day, though the battery you rent or finance offsets part of that."
+      },
+      {
+        question: "What is battery swapping, and why does it matter?",
+        answer:
+          "Instead of waiting to charge, a rider trades a depleted battery for a charged one at a station in minutes, like refuelling. It removes charging downtime and range anxiety, and because the pricey battery is rented rather than bought, it slashes the upfront cost that keeps many riders on petrol."
+      },
+      {
+        question: "Is charging an electric boda actually cheaper and cleaner in Kenya?",
+        answer:
+          "Yes on both counts. Kenya's grid is mostly geothermal and hydro, so charging is low-carbon, and the regulator's e-mobility tariff offers cheaper power, reported around KSh8 per unit off-peak, well below the cost of petrol per kilometre."
+      },
+      {
+        question: "What are the biggest risks before switching?",
+        answer:
+          "Thin swap-station coverage outside major towns, uncertainty over battery ageing and resale value, monthly financing on a volatile income, and whether trained technicians and spare parts are nearby. Check the network on your real routes and confirm current pricing before committing."
+      }
+    ],
+    sources: [
+      {
+        label: "Business Daily: Inside the battery-rental model powering Kenya's electric motorbike uptake",
+        url: "https://www.businessdailyafrica.com/bd/corporate/technology/inside-the-battery-rental-model-powering-kenya-s-electric-motorbike-uptake-5414432"
+      },
+      {
+        label: "The Kenyan Wall Street: Bolt records surge in electric boda use as fuel prices bite",
+        url: "https://kenyanwallstreet.com/bolt-electric-boda-fuel-price"
+      },
+      {
+        label: "Capital Business: Kenya Power moves to regularize EV charging as e-mobility tariff revenues surge",
+        url: "https://www.capitalfm.co.ke/business/2026/06/kenya-power-moves-to-regularize-ev-charging-customers-as-e-mobility-tariff-revenues-surge/"
+      },
+      {
+        label: "Business Daily: China's largest e-motorbike maker Yadea enters Kenya EV race",
+        url: "https://www.businessdailyafrica.com/bd/corporate/shipping-logistics/china-largest-e-motorbike-maker-yadea-enters-kenya-ev-race-5486744"
+      },
+      {
+        label: "Ethical Business Africa: Kenya's electric motorcycle revolution reaches critical threshold",
+        url: "https://ethicalbusiness.africa/2026/02/02/kenyas-electric-motorcycle-revolution-reaches-critical-threshold/"
+      }
+    ]
   },
   {
     id: "mobility-2",
