@@ -106,9 +106,9 @@ function pickHeroStories(articles: Article[]) {
 // Editorially pinned hero slider order. These run first, in this exact sequence;
 // any that are missing fall back to the automatic category picks below.
 const pinnedHeroSlugs = [
+  "africa-laptop-llm-challenge-offline-ai-8gb-ram",
   "samsung-galaxy-unpacked-july-2026-everything-announced",
-  "basigo-electric-bus-expansion-grid-question",
-  "kenya-stablecoin-economy-freelancers"
+  "basigo-electric-bus-expansion-grid-question"
 ];
 
 function orderHeroStories(articles: Article[]) {

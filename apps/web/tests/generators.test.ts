@@ -5,6 +5,7 @@ import { buildGoogleNewsSitemap, buildJsonFeed, buildRssFeed } from "../content/
 import { buildLlmsTxt } from "../content/llms";
 import { articleToMarkdown, glossaryToMarkdown } from "../content/markdown";
 import { articles, brands, glossaryTerms } from "../lib/sample-data";
+import { articleWordCount } from "../lib/article-quality";
 import {
   assertAdvertisePageIsPublishable,
   assertArticleImageMetadata,
@@ -41,7 +42,7 @@ describe("content generators", () => {
 
   it("curates the homepage in the requested order without repeating highlighted articles", () => {
     const curation = curateHomeContent(articles, glossaryTerms);
-    const heroStories = [curation.hero, ...curation.supportingStories];
+    const heroStories = curation.heroStories;
     const tagSlugs = (article: (typeof articles)[number]) => article.tags.map((tag) => tag.slug);
     const hasTag = (article: (typeof articles)[number], slug: string) => tagSlugs(article).includes(slug);
     const hasAnyTag = (article: (typeof articles)[number], slugs: string[]) => tagSlugs(article).some((slug) => slugs.includes(slug));
@@ -320,6 +321,40 @@ describe("content generators", () => {
     const feed = buildJsonFeed(articles);
     expect(feed.version).toBe("https://jsonfeed.org/version/1.1");
     expect(feed.items[0]?.title).toBe(articles[0]?.title);
+  });
+
+  it("publishes the nine July 30 long-form articles across article surfaces", () => {
+    const slugs = [
+      "kenya-ca-emerging-technologies-sandbox-deadline-2026",
+      "kenya-ict-authority-oracle-ai-cloud-vendor-lock-in",
+      "kenya-huawei-ict-competition-2026-winners-digital-talent",
+      "rise-2026-jos-nigeria-tech-ecosystem-lagos-abuja",
+      "airtel-nigeria-single-seater-shops-physical-telecom-retail",
+      "south-africa-ai-scale-huawei-connect-2026",
+      "rentoza-business-rescue-gadget-subscription-risks",
+      "africa-laptop-llm-challenge-offline-ai-8gb-ram",
+      "africa-mrna-vaccine-manufacturing-sovereignty-wits"
+    ];
+    const bundle = slugs.map((slug) => articles.find((article) => article.slug === slug));
+
+    expect(bundle.every(Boolean)).toBe(true);
+    expect(bundle).toHaveLength(9);
+    expect(bundle.every((article) => article?.author.slug === "tim-humphreys")).toBe(true);
+    expect(bundle.every((article) => article?.faq?.length === 5)).toBe(true);
+    expect(bundle.every((article) => (article?.sources?.length ?? 0) >= 2)).toBe(true);
+    expect(bundle.every((article) => article && articleWordCount(article) >= 1000)).toBe(true);
+    expect(bundle.every((article) => article?.publishedAt === article?.updatedAt)).toBe(true);
+    expect(bundle.every((article) => article?.image.width === 1200 && article.image.height === 675)).toBe(true);
+    expect(bundle.every((article) => article?.image.type === "image/webp")).toBe(true);
+    expect(JSON.stringify(bundle)).not.toContain("\u2014");
+
+    const laptopStory = bundle[7]!;
+    expect(articleToMarkdown(laptopStory)).toContain("## What you need to know");
+    expect(articleToMarkdown(laptopStory)).toContain("## FAQ");
+    expect(articleToMarkdown(laptopStory)).toContain("## Sources");
+    expect(articleJsonLd(laptopStory)["@type"]).toBe("Article");
+    expect(buildRssFeed(articles)).toContain(laptopStory.slug);
+    expect(buildLlmsTxt(articles, glossaryTerms)).toContain(laptopStory.title);
   });
 
   it("builds Google News sitemap XML", () => {

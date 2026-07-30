@@ -8,6 +8,7 @@ import { buildAppleOpenAiLawsuitNewsArticles } from "@/lib/apple-openai-lawsuit-
 import { buildComputingLaptopNewsArticles } from "@/lib/computing-laptop-news-2026";
 import { buildEditorialBundleArticles } from "@/lib/editorial-bundle-july-2026";
 import { buildEditorialJuly13Articles } from "@/lib/editorial-bundle-july-13-2026";
+import { buildEditorialJuly30Articles } from "@/lib/editorial-bundle-july-30-2026";
 import { buildEditorialJuly7Articles } from "@/lib/editorial-bundle-july-7-2026";
 import { buildEvMobilityNewsArticles } from "@/lib/ev-mobility-news-2026";
 import { buildGlobalOpinionArticles } from "@/lib/global-opinion-essays-2026";
@@ -798,6 +799,16 @@ const editorialJuly13Articles = buildEditorialJuly13Articles({
     kenya: kenyaRegion
   }
 });
+const editorialJuly30Articles = buildEditorialJuly30Articles({
+  authors,
+  topics,
+  brands,
+  regions: {
+    kenya: kenyaRegion,
+    nigeria: nigeriaRegion,
+    southAfrica: southAfricaRegion
+  }
+});
 const editorialJuly7Articles = buildEditorialJuly7Articles({
   authors,
   topics,
@@ -891,6 +902,7 @@ export const articles: Article[] = [
   vlcFreeSoftwareArticle,
   ...globalOpinionArticles,
   ...appleOpenAiLawsuitNewsArticles,
+  ...editorialJuly30Articles,
   ...editorialJuly13Articles,
   ...appleEcosystemArticles,
   ...editorialBundleArticles,
