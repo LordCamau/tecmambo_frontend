@@ -1124,7 +1124,7 @@ const editorialRecords: EditorialRecord[] = [
     "readTime": "9 min read",
     "image": {
       "src": "/articles/africa-laptop-llm-challenge-offline-ai.webp",
-      "alt": "Developers and technology exhibitors demonstrating laptop projects at an African deep-tech event.",
+      "alt": "Developers and technology exhibitors demonstrating laptop projects at an African deep-tech event. Image credit: Techpoint.",
       "credit": "Techpoint",
       "width": 1040,
       "height": 520,
