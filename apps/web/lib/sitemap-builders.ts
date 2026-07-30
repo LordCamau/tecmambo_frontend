@@ -1,9 +1,8 @@
-import { isSubstantialArticle } from "@/lib/article-quality";
-import { getArticles, getAuthors, getGlossaryTerms, getTags } from "@/lib/content";
+import { getAuthors, getIndexableArticles, getTags } from "@/lib/content";
 import { articlePath, formats, siteUrl } from "@/lib/formats";
 import { africanRegions, regionPath } from "@/lib/regions";
-import { allSectionTopicPaths, wearableFilters, wearableFilterPath } from "@/lib/site-structure";
 import type { Article } from "@/lib/types";
+import { isArchiveIndexable, isAuthorIndexable } from "@/lib/content-quality";
 
 export type UrlSitemapEntry = {
   loc: string;
@@ -83,8 +82,7 @@ export async function pageSitemapEntries(): Promise<UrlSitemapEntry[]> {
     "/editorial-standards",
     "/privacy",
     "/cookies",
-    "/compare-phones",
-    "/search"
+    "/compare-phones"
   ];
   return paths.map((path) => ({
     loc: `${siteUrl}${path}`,
@@ -95,28 +93,23 @@ export async function pageSitemapEntries(): Promise<UrlSitemapEntry[]> {
 }
 
 export async function hubSitemapEntries(): Promise<UrlSitemapEntry[]> {
-  const [articles, terms, authors, topics, brands] = await Promise.all([
-    getArticles(),
-    getGlossaryTerms(),
+  const [articles, authors, topics, brands] = await Promise.all([
+    getIndexableArticles(),
     getAuthors(),
     getTags("topic"),
     getTags("brand")
   ]);
-  const termTopicPaths = uniquePaths(
-    terms.flatMap((term) =>
-      term.topics.map((topic) => `/glossary/topic/${topic.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`)
-    )
-  );
-  const archivePaths = uniquePaths([...allSectionTopicPaths(), ...wearableFilters.map((filter) => wearableFilterPath(filter.slug))]);
+  const qualifiedAuthors = authors.filter((author) => isAuthorIndexable(author, articles.filter((article) => article.author.slug === author.slug).length));
+  const qualifiedTopics = topics.filter((topic) => isArchiveIndexable(articles.filter((article) => article.tags.some((tag) => tag.slug === topic.slug)).length, `Stories, glossary entries, and explainers connected to ${topic.name.toLowerCase()}.`));
+  const qualifiedBrands = brands.filter((brand) => isArchiveIndexable(articles.filter((article) => article.tags.some((tag) => tag.slug === brand.slug)).length, `Independent coverage, buying context, and practical explainers involving ${brand.name}.`));
+  const qualifiedRegions = africanRegions.filter((region) => isArchiveIndexable(articles.filter((article) => article.regions?.some((item) => item.slug === region.slug)).length, region.description));
   const paths = [
     ...Object.values(formats).map((format) => format.path),
-    ...archivePaths,
-    ...termTopicPaths,
     ...glossaryTopicPaths(articles),
-    ...africanRegions.map((region) => regionPath(region)),
-    ...authors.map((author) => `/authors/${author.slug}`),
-    ...topics.map((topic) => `/topics/${topic.slug}`),
-    ...brands.map((brand) => `/brands/${brand.slug}`)
+    ...qualifiedRegions.map((region) => regionPath(region)),
+    ...qualifiedAuthors.map((author) => `/authors/${author.slug}`),
+    ...qualifiedTopics.map((topic) => `/topics/${topic.slug}`),
+    ...qualifiedBrands.map((brand) => `/brands/${brand.slug}`)
   ];
   return uniquePaths(paths).map((path) => ({
     loc: `${siteUrl}${path}`,
@@ -127,8 +120,8 @@ export async function hubSitemapEntries(): Promise<UrlSitemapEntry[]> {
 }
 
 export async function articleSitemapEntries(): Promise<UrlSitemapEntry[]> {
-  const articles = await getArticles();
-  return articles.filter(isSubstantialArticle).map((article) => ({
+  const articles = await getIndexableArticles();
+  return articles.map((article) => ({
     loc: `${siteUrl}${articlePath(article.format, article.slug)}`,
     lastmod: isoDate(article.updatedAt),
     changefreq: article.format === "news" || article.format === "business" ? "weekly" : "monthly",
@@ -137,7 +130,7 @@ export async function articleSitemapEntries(): Promise<UrlSitemapEntry[]> {
 }
 
 export async function imageSitemapXml() {
-  const articles = (await getArticles()).filter(isSubstantialArticle);
+  const articles = await getIndexableArticles();
   const urls = articles
     .map((article) => {
       const pageUrl = `${siteUrl}${articlePath(article.format, article.slug)}`;

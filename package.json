@@ -10,7 +10,11 @@
     "start": "npm --workspace apps/web run start",
     "lint": "npm --workspace apps/web run lint",
     "typecheck": "npm --workspace apps/web run typecheck",
-    "test": "npm --workspace apps/web run test"
+    "test": "npm --workspace apps/web run test",
+    "audit:content": "npm --workspace apps/web run audit:content",
+    "audit:content:ci": "npm --workspace apps/web run audit:content:ci",
+    "audit:links": "npm --workspace apps/web run audit:links",
+    "audit:links:ci": "npm --workspace apps/web run audit:links:ci"
   },
   "engines": {
     "node": "22.x"

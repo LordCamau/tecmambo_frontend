@@ -8,6 +8,7 @@ import { GoDeeper } from "@/components/signature/GoDeeper";
 import { WhyItMatters } from "@/components/signature/WhyItMatters";
 import { JsonLd } from "@/components/seo/JsonLd";
 import styles from "../glossary.module.css";
+import { isGlossaryTermIndexable } from "@/lib/content-quality";
 
 type Params = Promise<{ slug: string }>;
 
@@ -26,7 +27,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return {
     title: `${term.term}, explained`,
     description: term.oneLiner,
-    alternates: { canonical: `/glossary/${term.slug}` }
+    alternates: { canonical: `/glossary/${term.slug}` },
+    robots: isGlossaryTermIndexable(term) ? undefined : { index: false, follow: true }
   };
 }
 
@@ -134,7 +136,7 @@ export default async function GlossaryTermPage({ params }: { params: Params }) {
             ))}
           </div>
         ) : (
-          <p>This term is ready for future stories. The glossary gets there before the jargon does.</p>
+          <p>No related stories are currently linked to this term.</p>
         )}
       </section>
 

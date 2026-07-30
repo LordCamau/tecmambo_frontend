@@ -8,6 +8,13 @@ type SearchPageProps = {
   }>;
 };
 
+export const metadata: Metadata = {
+  title: "Search",
+  description: "Search tecMAMBO articles and plain-English technology definitions.",
+  alternates: { canonical: "/search" },
+  robots: { index: false, follow: true }
+};
+
 export default async function SearchPage({ searchParams }: SearchPageProps) {
   const { q = "" } = await searchParams;
   const [articles, terms] = await Promise.all([getSubstantialArticles(), getGlossaryTerms()]);
@@ -21,3 +28,4 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
     </section>
   );
 }
+import type { Metadata } from "next";

@@ -28,6 +28,7 @@ type WpArticle = {
   date?: string | null;
   modified?: string | null;
   content?: string | null;
+  status?: string | null;
   featuredImage?: {
     node?: {
       sourceUrl?: string | null;
@@ -74,6 +75,17 @@ type WpArticle = {
     } | null;
     faqs?: Array<{ question?: string | null; answer?: string | null }> | null;
     closingLine?: string | null;
+    editorialStatus?: Article["editorialStatus"] | null;
+    indexingStatus?: Article["indexingStatus"] | null;
+    contentFormat?: Article["contentFormat"] | null;
+    reviewMethod?: Article["reviewMethod"] | null;
+    hasOriginalTesting?: boolean | null;
+    hasOriginalPhotography?: boolean | null;
+    testingMethodology?: string | null;
+    productSource?: string | null;
+    testingPeriod?: string | null;
+    sourceDisclosure?: string | null;
+    excludeFromDiscovery?: boolean | null;
   } | null;
 };
 
@@ -214,8 +226,8 @@ export function wpArticleToArticle(node: WpArticle): Article | null {
     seo: node.seo?.title || node.seo?.metaDesc ? { title: node.seo.title ?? text(node.title), description: node.seo.metaDesc ?? excerpt } : undefined,
     subhead: text(fields?.subhead, excerpt),
     excerpt,
-    whyItMatters: text(fields?.whyItMatters, "This story helps readers understand what changes in plain English."),
-    body: body.length ? body : [excerpt],
+    whyItMatters: text(fields?.whyItMatters),
+    body,
     goDeeper: fields?.goDeeper
       ? {
           intro: text(fields.goDeeper.intro),
@@ -247,7 +259,19 @@ export function wpArticleToArticle(node: WpArticle): Article | null {
     regions: regions.length ? regions : undefined,
     faq: fields?.faqs?.map((item) => ({ question: text(item.question), answer: text(item.answer) })).filter((item) => item.question && item.answer),
     sponsored: Boolean(fields?.sponsored),
-    deal: dealFromWp(fields?.deal)
+    deal: dealFromWp(fields?.deal),
+    publicationStatus: node.status?.toLowerCase() === "publish" ? "publish" : node.status?.toLowerCase() as Article["publicationStatus"] | undefined,
+    editorialStatus: fields?.editorialStatus ?? undefined,
+    indexingStatus: fields?.indexingStatus ?? undefined,
+    contentFormat: fields?.contentFormat ?? undefined,
+    reviewMethod: fields?.reviewMethod ?? (format === "review" ? "unknown" : undefined),
+    hasOriginalTesting: fields?.hasOriginalTesting ?? undefined,
+    hasOriginalPhotography: fields?.hasOriginalPhotography ?? undefined,
+    testingMethodology: fields?.testingMethodology ?? undefined,
+    productSource: fields?.productSource ?? undefined,
+    testingPeriod: fields?.testingPeriod ?? undefined,
+    sourceDisclosure: fields?.sourceDisclosure ?? undefined,
+    excludeFromDiscovery: fields?.excludeFromDiscovery ?? undefined
   };
 }
 

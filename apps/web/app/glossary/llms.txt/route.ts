@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
-import { getGlossaryTerms } from "@/lib/content";
+import { getIndexableGlossaryTerms } from "@/lib/content";
 import { siteUrl } from "@/lib/formats";
 import { noIndexHeaders } from "@/lib/noindex-response";
 
 export async function GET() {
-  const terms = await getGlossaryTerms();
+  const terms = await getIndexableGlossaryTerms();
   const body = [
     "# tecMAMBO Glossary",
     "",

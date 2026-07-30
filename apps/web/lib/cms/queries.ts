@@ -1,6 +1,7 @@
 import "server-only";
 
-const articleFragment = /* GraphQL */ `
+function articleFragment(includeEditorialControls = false) {
+  return /* GraphQL */ `
   fragment ArticleFields on Post {
     id
     databaseId
@@ -10,6 +11,7 @@ const articleFragment = /* GraphQL */ `
     date
     modified
     content
+    status
     featuredImage {
       node {
         sourceUrl
@@ -99,12 +101,26 @@ const articleFragment = /* GraphQL */ `
         answer
       }
       closingLine
+      ${includeEditorialControls ? `
+      editorialStatus
+      indexingStatus
+      contentFormat
+      reviewMethod
+      hasOriginalTesting
+      hasOriginalPhotography
+      testingMethodology
+      productSource
+      testingPeriod
+      sourceDisclosure
+      excludeFromDiscovery
+      ` : ""}
     }
   }
 `;
+}
 
 export const ARTICLES_QUERY = /* GraphQL */ `
-  ${articleFragment}
+  ${articleFragment()}
   query Articles($first: Int = 100, $after: String) {
     posts(first: $first, after: $after, where: { status: PUBLISH, orderby: { field: DATE, order: DESC } }) {
       nodes {
@@ -119,7 +135,7 @@ export const ARTICLES_QUERY = /* GraphQL */ `
 `;
 
 export const ARTICLE_BY_SLUG_QUERY = /* GraphQL */ `
-  ${articleFragment}
+  ${articleFragment()}
   query ArticleBySlug($slug: ID!, $asPreview: Boolean = false) {
     post(id: $slug, idType: SLUG, asPreview: $asPreview) {
       ...ArticleFields
@@ -128,13 +144,17 @@ export const ARTICLE_BY_SLUG_QUERY = /* GraphQL */ `
 `;
 
 export const ARTICLE_BY_DATABASE_ID_QUERY = /* GraphQL */ `
-  ${articleFragment}
+  ${articleFragment()}
   query ArticleByDatabaseId($id: ID!, $asPreview: Boolean = true) {
     post(id: $id, idType: DATABASE_ID, asPreview: $asPreview) {
       ...ArticleFields
     }
   }
 `;
+
+export const ARTICLES_WITH_EDITORIAL_CONTROLS_QUERY = ARTICLES_QUERY.replace(articleFragment(), articleFragment(true));
+export const ARTICLE_BY_SLUG_WITH_EDITORIAL_CONTROLS_QUERY = ARTICLE_BY_SLUG_QUERY.replace(articleFragment(), articleFragment(true));
+export const ARTICLE_BY_DATABASE_ID_WITH_EDITORIAL_CONTROLS_QUERY = ARTICLE_BY_DATABASE_ID_QUERY.replace(articleFragment(), articleFragment(true));
 
 export const GLOSSARY_TERMS_QUERY = /* GraphQL */ `
   query GlossaryTerms($first: Int = 200) {

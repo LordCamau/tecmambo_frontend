@@ -19,7 +19,7 @@ export function StoryCard({ article, priority = false }: { article: Article; pri
           priority={priority}
         />
         <span className={styles.badge}>
-          <FormatBadge format={article.format} />
+          <FormatBadge format={article.format} reviewMethod={article.reviewMethod} />
           {article.sponsored ? <SponsoredBadge /> : null}
         </span>
       </Link>

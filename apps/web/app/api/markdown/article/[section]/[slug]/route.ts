@@ -4,13 +4,14 @@ import { articleToMarkdown } from "@/content/markdown";
 import { getArticleBySlug } from "@/lib/content";
 import { formats } from "@/lib/formats";
 import { noIndexHeaders } from "@/lib/noindex-response";
+import { isContentPubliclyEligible } from "@/lib/content-quality";
 
 type Params = Promise<{ section: string; slug: string }>;
 
 export async function GET(_request: Request, { params }: { params: Params }) {
   const { section, slug } = await params;
   const article = await getArticleBySlug(slug);
-  if (!article || formats[article.format].path.slice(1) !== section) notFound();
+  if (!article || !isContentPubliclyEligible(article) || formats[article.format].path.slice(1) !== section) notFound();
 
   return new NextResponse(articleToMarkdown(article), {
     headers: {

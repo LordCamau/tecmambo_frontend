@@ -2,6 +2,7 @@ import type { Article, Format, GlossaryTerm } from "@/lib/types";
 import { filterArticlesByCanonicalTopic } from "@/lib/site-structure";
 import { uniqueImagesWithinLane } from "@/lib/content-guard";
 import { getAfricaArticles } from "@/lib/regions";
+import { isContentPubliclyEligible } from "@/lib/content-quality";
 
 export type HomeLane = {
   key: string;
@@ -168,6 +169,7 @@ function curateLaneOrder(list: Article[], pinnedSlugs: string[], excludedSlugs: 
 }
 
 export function curateHomeContent(articles: Article[], glossaryTerms: GlossaryTerm[]) {
+  articles = articles.filter(isContentPubliclyEligible);
   const usedArticleIds = new Set<string>();
   const heroStories = orderHeroStories(articles);
   heroStories.forEach((article) => usedArticleIds.add(article.id));

@@ -125,6 +125,24 @@ const imageOverrides: Record<string, Article["image"]> = {
 };
 
 const articleOverrides: Record<string, Partial<Article>> = {
+  "best-smartphones-under-ksh-15-000-right-now": {
+    editorialStatus: "needs_revision",
+    indexingStatus: "noindex",
+    contentFormat: "buying_guide",
+    excludeFromDiscovery: true
+  },
+  "five-power-banks-that-actually-last-a-full-day-ranked-by-price": {
+    editorialStatus: "needs_revision",
+    indexingStatus: "noindex",
+    contentFormat: "buying_guide",
+    excludeFromDiscovery: true
+  },
+  "is-a-refurbished-phone-ever-worth-it-we-checked-three-sellers": {
+    editorialStatus: "needs_revision",
+    indexingStatus: "noindex",
+    contentFormat: "buying_guide",
+    excludeFromDiscovery: true
+  },
   "the-cheapest-laptop-that-won-t-frustrate-a-university-student": {
     seo: {
       title: "Cheapest student laptop that will not frustrate you",
@@ -140,10 +158,13 @@ const articleOverrides: Record<string, Partial<Article>> = {
     }
   },
   "iphone-air-review-the-iphone-that-asks-what-you-re-willing-to-give-up": {
+    contentFormat: "research_based_review",
+    reviewMethod: "research_based",
+    hasOriginalTesting: false,
     seo: {
       title: "iPhone Air review: the iPhone that asks what you're willing to give up",
       description:
-        "The iPhone Air is Apple's thinnest, most beautiful iPhone. After the hype, our verdict on the camera, battery, and whether it is worth the price."
+        "The iPhone Air is Apple's thinnest, most beautiful iPhone. After the hype, a research-based assessment of the camera, battery, and whether it is worth the price."
     },
     image: {
       src: "/articles/iphone-air-review.jpg",
@@ -160,9 +181,9 @@ const articleOverrides: Record<string, Partial<Article>> = {
     whyItMatters:
       "The iPhone Air is the most beautiful iPhone Apple has made, but beauty this thin is paid for in cameras, battery, and sound. Knowing exactly what you give up is the whole decision.",
     body: [
-      "The iPhone Air is Apple's thinnest phone ever, at 5.6mm and 165 grams, and holding it is genuinely a small event. The catch, and the whole story of this phone, is everything Apple removed to get there. Thinness is never free. So rather than ask whether the Air is beautiful, which it plainly is, the useful question is whether the things Apple sacrificed are things you will miss.",
+      "The iPhone Air is Apple's thinnest phone ever, at 5.6mm and 165 grams, and published hands-on accounts consistently emphasize how different that feels. The catch, and the whole story of this phone, is everything Apple removed to get there. Thinness is never free. So rather than ask whether the Air is beautiful, which it plainly is, the useful question is whether the things Apple sacrificed are things you will miss.",
       "## Design and thinness",
-      "This is the reason the Air exists, and it delivers. At 5.6mm and 165 grams it is around 30 percent thinner and 25 percent lighter than the standard iPhone 17, and the way the weight spreads across the body makes it feel even lighter than the number suggests. The Grade 5 titanium frame and Ceramic Shield glass make it feel premium and reassuringly solid, not fragile. Almost all the internals, including the single camera and the chip, live in a raised bar across the top that Apple calls the plateau, which means the phone rocks on a table and the camera area is much thicker than the rest. It is also eSIM only worldwide, with no SIM tray, and charges over USB-C. In the hand, though, none of that matters. It is the nicest iPhone Apple has ever made to hold, and if that is what you are buying, it does not disappoint.",
+      "This is the reason the Air exists, and published reviews agree that it delivers. At 5.6mm and 165 grams it is around 30 percent thinner and 25 percent lighter than the standard iPhone 17, and independent reviewers report that the weight distribution makes it feel even lighter than the number suggests. The Grade 5 titanium frame and Ceramic Shield glass are designed to keep the body solid rather than fragile. Almost all the internals, including the single camera and the chip, live in a raised bar across the top that Apple calls the plateau, which means the phone rocks on a table and the camera area is much thicker than the rest. It is also eSIM only worldwide, with no SIM tray, and charges over USB-C. Published hands-on accounts describe it as exceptionally comfortable to hold, which matters if thinness is the main reason you are considering it.",
       "[[image:iphone-air-thin-design]]",
       "## Display",
       "No compromise here. The 6.5-inch OLED runs at a smooth 120Hz, gets bright enough to read in hard sunlight, and sits neatly between the iPhone 17 and the Pro Max in size. It is one of the best screens on any phone, full stop.",
@@ -179,7 +200,7 @@ const articleOverrides: Record<string, Partial<Article>> = {
       "## Price and value",
       "Here is the squeeze that decides it. The Air starts at 999 US dollars. The standard iPhone 17 costs 200 dollars less and gives you a second camera and near-identical everyday performance. The iPhone 17 Pro costs just 100 dollars more and adds three cameras, a bigger battery, and the better cooling. In Kenya, current listings put the 256GB iPhone Air from roughly KSh117,000 to KSh129,999, with some retailers showing wider ranges depending on storage and stock. In other words, you are paying a premium to lose features, in exchange for thinness alone. Whether that trade is worth it is the entire question, and for most buyers the maths points elsewhere.",
       "## The verdict",
-      "The iPhone Air is a beautiful, deliberate, niche phone, not the default iPhone. Buy it if thin and light is your single highest priority and you are a light to moderate user who lives on the main camera. If you want the best value, the iPhone 17 is the smarter buy. If you want the most capable phone, the 17 Pro is only slightly dearer. The Air asks what you are willing to give up. For the right person the answer is not much, and gladly. For most people, it is more than I should have to. 3.5 out of 5."
+      "The iPhone Air is a beautiful, deliberate, niche phone, not the default iPhone. Buy it if thin and light is your single highest priority and you are a light to moderate user who lives on the main camera. If you want the best value, the iPhone 17 is the smarter buy. If you want the most capable phone, the 17 Pro is only slightly dearer. The Air asks what you are willing to give up. For the right person the answer may be not much, and gladly. For most people, the trade-offs are harder to justify."
     ],
     goDeeper: {
       intro: "A concise spec sheet for the iPhone Air.",

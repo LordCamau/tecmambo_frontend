@@ -2,12 +2,22 @@ import { notFound } from "next/navigation";
 import { getArticlesByTag, getTags } from "@/lib/content";
 import { StoryCard } from "@/components/cards/StoryCard";
 import styles from "../../(sections)/[section]/page.module.css";
+import { isArchiveIndexable } from "@/lib/content-quality";
 
 type Params = Promise<{ slug: string }>;
 
 export async function generateStaticParams() {
   const brands = await getTags("brand");
   return brands.map((brand) => ({ slug: brand.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
+  const { slug } = await params;
+  const brand = (await getTags("brand")).find((item) => item.slug === slug);
+  if (!brand) return {};
+  const articles = await getArticlesByTag(slug);
+  const description = `Independent coverage, buying context, and practical explainers involving ${brand.name}.`;
+  return { title: brand.name, description, alternates: { canonical: `/brands/${slug}` }, robots: isArchiveIndexable(articles.length, description) ? undefined : { index: false, follow: true } };
 }
 
 export default async function BrandPage({ params }: { params: Params }) {
@@ -22,8 +32,7 @@ export default async function BrandPage({ params }: { params: Params }) {
         <p>Brand hub</p>
         <h1>{brand.name}</h1>
         <span>
-          Even-handed coverage, buying context, and practical explainers involving {brand.name}. Partnership-friendly,
-          reader-first.
+          Independent coverage, buying context, and practical explainers involving {brand.name}.
         </span>
       </header>
       <div className={styles.grid}>
@@ -34,3 +43,4 @@ export default async function BrandPage({ params }: { params: Params }) {
     </section>
   );
 }
+import type { Metadata } from "next";

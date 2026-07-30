@@ -36,6 +36,8 @@ const inter = Inter({
   display: "swap"
 });
 
+const deploymentAllowsIndexing = process.env.NO_INDEX !== "true" && !["preview", "development"].includes(process.env.VERCEL_ENV ?? "");
+
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.SITE_URL ?? "https://tecmambo.com"),
   title: {
@@ -61,11 +63,11 @@ export const metadata: Metadata = {
     canonical: "/"
   },
   robots: {
-    index: true,
-    follow: true,
+    index: deploymentAllowsIndexing,
+    follow: deploymentAllowsIndexing,
     googleBot: {
-      index: true,
-      follow: true,
+      index: deploymentAllowsIndexing,
+      follow: deploymentAllowsIndexing,
       "max-image-preview": "large",
       "max-snippet": -1,
       "max-video-preview": -1

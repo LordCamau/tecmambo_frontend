@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
-import { getGlossaryTerms } from "@/lib/content";
+import { getIndexableGlossaryTerms } from "@/lib/content";
 import { siteUrl } from "@/lib/formats";
 import { noIndexHeaders } from "@/lib/noindex-response";
 
 export async function GET() {
-  const terms = await getGlossaryTerms();
+  const terms = await getIndexableGlossaryTerms();
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',

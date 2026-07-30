@@ -3,12 +3,22 @@ import Link from "next/link";
 import { getArticlesByTag, getGlossaryTermsByTopic, getTags } from "@/lib/content";
 import { StoryCard } from "@/components/cards/StoryCard";
 import styles from "../../(sections)/[section]/page.module.css";
+import { isArchiveIndexable } from "@/lib/content-quality";
 
 type Params = Promise<{ slug: string }>;
 
 export async function generateStaticParams() {
   const topics = await getTags("topic");
   return topics.map((topic) => ({ slug: topic.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
+  const { slug } = await params;
+  const topic = (await getTags("topic")).find((item) => item.slug === slug);
+  if (!topic) return {};
+  const articles = await getArticlesByTag(slug);
+  const description = `Stories, glossary entries, and explainers connected to ${topic.name.toLowerCase()}.`;
+  return { title: topic.name, description, alternates: { canonical: `/topics/${slug}` }, robots: isArchiveIndexable(articles.length, description) ? undefined : { index: false, follow: true } };
 }
 
 export default async function TopicPage({ params }: { params: Params }) {
@@ -47,3 +57,4 @@ export default async function TopicPage({ params }: { params: Params }) {
     </section>
   );
 }
+import type { Metadata } from "next";

@@ -17,7 +17,7 @@ import {
   faqJsonLd,
   itemListJsonLd
 } from "@/lib/seo";
-import { isSubstantialArticle } from "@/lib/article-quality";
+import { findPlaceholderIssues, isArticleIndexable, isArchiveIndexable, isContentPubliclyEligible, reviewCanShowScore } from "@/lib/content-quality";
 import { renderGlossaryText, type GlossaryLinkState } from "@/lib/glossary-linking";
 import { filterArticlesByCanonicalTopic, getTopicArchive, sectionFormatMap } from "@/lib/site-structure";
 import { FormatBadge } from "@/components/signature/FormatBadge";
@@ -67,6 +67,20 @@ function highlightPriceNodes(nodes: ReactNode[], enabled: boolean, keyPrefix: st
   return nodes.flatMap((node, index) => (typeof node === "string" ? highlightPriceText(node, `${keyPrefix}-${index}`) : [node]));
 }
 
+function renderArticleText(text: string, terms: GlossaryTerm[], state: GlossaryLinkState, keyPrefix: string): ReactNode[] {
+  const nodes: ReactNode[] = [];
+  const pattern = /\[([^\]]+)\]\((\/[a-z0-9_/?#=&.-]+)\)/gi;
+  let cursor = 0;
+  for (const match of text.matchAll(pattern)) {
+    const start = match.index ?? 0;
+    if (start > cursor) nodes.push(...renderGlossaryText(text.slice(cursor, start), terms, state));
+    nodes.push(<Link href={match[2]} key={`${keyPrefix}-link-${start}`}>{match[1]}</Link>);
+    cursor = start + match[0].length;
+  }
+  if (cursor < text.length) nodes.push(...renderGlossaryText(text.slice(cursor), terms, state));
+  return nodes.length ? nodes : renderGlossaryText(text, terms, state);
+}
+
 function isPhoneReview(article: Article) {
   return article.format === "review" && article.tags.some((tag) => tag.kind === "topic" && ["phones", "smartphones"].includes(tag.slug));
 }
@@ -108,7 +122,7 @@ function ArticleBodyBlock({
   if (paragraph.startsWith("### ")) {
     return <h3>{paragraph.slice(4)}</h3>;
   }
-  return <p>{highlightPriceNodes(renderGlossaryText(paragraph, glossaryTerms, glossaryState), highlightPrices, blockKey)}</p>;
+  return <p>{highlightPriceNodes(renderArticleText(paragraph, glossaryTerms, glossaryState, blockKey), highlightPrices, blockKey)}</p>;
 }
 
 function listItem(paragraph: string) {
@@ -164,7 +178,7 @@ function ArticleBodyBlocks({
       <ListTag key={`body-list-${index}`}>
         {items.map((text, itemIndex) => (
           <li key={`${text}-${itemIndex}`}>
-            {highlightPriceNodes(renderGlossaryText(text, glossaryTerms, glossaryState), highlightPrices, `body-list-${index}-${itemIndex}`)}
+            {highlightPriceNodes(renderArticleText(text, glossaryTerms, glossaryState, `body-list-${index}-${itemIndex}`), highlightPrices, `body-list-${index}-${itemIndex}`)}
           </li>
         ))}
       </ListTag>
@@ -184,10 +198,15 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const { section, slug } = await params;
   const topic = getTopicArchive(section, slug);
   if (topic) {
+    const formatKey = sectionFormatMap[section];
+    const topicArticles = formatKey
+      ? filterArticlesByCanonicalTopic((await getArticles()).filter((article) => article.format === formatKey), topic.canonicalTopic)
+      : [];
     return {
       title: `${topic.label} ${sectionFormatMap[section] ? formats[sectionFormatMap[section]].section : ""}`,
       description: topic.description,
-      alternates: { canonical: `/${section}/${slug}` }
+      alternates: { canonical: `/${section}/${slug}` },
+      robots: isArchiveIndexable(topicArticles.length, topic.description) ? undefined : { index: false, follow: true }
     };
   }
   const { isEnabled: previewEnabled } = await draftMode();
@@ -197,16 +216,11 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const title = article.seo?.title ?? article.title;
   const description = article.seo?.description ?? article.subhead;
   const previewImage = articleSocialImage(article);
-  const substantial = isSubstantialArticle(article);
+  const indexable = isArticleIndexable(article);
   return {
     title,
     description,
-    robots: substantial
-      ? undefined
-      : {
-          index: false,
-          follow: true
-        },
+    robots: previewEnabled ? { index: false, follow: false } : indexable ? undefined : { index: false, follow: true },
     alternates: { canonical: path },
     openGraph: {
       title,
@@ -237,7 +251,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
     if (!formatKey) notFound();
     const format = formats[formatKey];
     const articles = filterArticlesByCanonicalTopic(
-      (await getArticles()).filter((article) => article.format === formatKey && isSubstantialArticle(article)),
+      (await getArticles()).filter((article) => article.format === formatKey),
       topic.canonicalTopic
     );
     return (
@@ -273,34 +287,39 @@ export default async function ArticlePage({ params }: { params: Params }) {
       </>
     );
   }
-  const article = await getArticleBySlug(slug);
+  const { isEnabled: previewEnabled } = await draftMode();
+  const article = previewEnabled ? await getCmsArticleBySlug(slug, true) : await getArticleBySlug(slug);
   if (!article || formats[article.format].path.slice(1) !== section) notFound();
   const [relatedCandidates, glossaryTerms] = await Promise.all([getRelatedArticles(article, 6), getGlossaryTerms()]);
-  const related = relatedCandidates.filter(isSubstantialArticle).slice(0, 3);
+  const related = relatedCandidates.filter(isContentPubliclyEligible).slice(0, 3);
   const format = formats[article.format];
   const glossaryState: GlossaryLinkState = { seen: new Set(), count: 0, max: 12 };
   const highlightReviewPrices = isPhoneReview(article);
-  const substantial = isSubstantialArticle(article);
+  const eligible = isContentPubliclyEligible(article);
+  const showScore = reviewCanShowScore(article);
+  const safeSubhead = findPlaceholderIssues(article.subhead).length ? "" : article.subhead;
+  const safeWhyItMatters = findPlaceholderIssues(article.whyItMatters).length ? "" : article.whyItMatters;
+  const safeBody = article.body.filter((block) => findPlaceholderIssues(block).length === 0);
 
   return (
     <article className={styles.article}>
       <header className={`readable ${styles.header}`}>
         <div className={styles.kickerRow}>
-          <FormatBadge format={article.format} />
+          <FormatBadge format={article.format} reviewMethod={article.reviewMethod} />
           <Link href={format.path}>{format.section}</Link>
           {article.sponsored ? <SponsoredBadge /> : null}
         </div>
         <RegionList regions={article.regions} />
         <TagList tags={article.tags} />
         <h1>{article.title}</h1>
-        <p className={styles.subhead}>{article.subhead}</p>
+        {safeSubhead ? <p className={styles.subhead}>{safeSubhead}</p> : null}
         <div className={styles.byline}>
           <Link href={`/authors/${article.author.slug}`}>{article.author.name}</Link>
           <span>Updated {new Intl.DateTimeFormat("en", { dateStyle: "medium" }).format(new Date(article.updatedAt))}</span>
           <span>{article.readTime}</span>
           <Link href="/editorial-standards">How we work</Link>
         </div>
-        <WhyItMatters>{article.whyItMatters}</WhyItMatters>
+        {safeWhyItMatters ? <WhyItMatters>{safeWhyItMatters}</WhyItMatters> : null}
       </header>
 
       <figure className={styles.leadImage}>
@@ -309,6 +328,19 @@ export default async function ArticlePage({ params }: { params: Params }) {
       </figure>
 
       <div className={`readable ${styles.body}`}>
+        {previewEnabled ? <p className={styles.disclosure}>Editorial preview. This page is not available for indexing.</p> : null}
+        {!eligible ? <p className={styles.disclosure}>This article is retained for editorial revision and is excluded from site discovery.</p> : null}
+        {article.format === "review" && article.reviewMethod !== "hands_on" ? (
+          <p className={styles.disclosure}>Research-based analysis. This assessment uses cited product information and independent reporting. tecMAMBO did not conduct an original hands-on test.</p>
+        ) : null}
+        {article.format === "review" && article.reviewMethod === "hands_on" ? (
+          <section className={styles.disclosure} aria-labelledby="testing-title">
+            <h2 id="testing-title">How we tested</h2>
+            <p>{article.testingMethodology}</p>
+            <p>Testing period: {article.testingPeriod}. Product source: {article.productSource}.</p>
+            {article.sourceDisclosure ? <p>{article.sourceDisclosure}</p> : null}
+          </section>
+        ) : null}
         {article.sponsored ? <p className={styles.disclosure}>Sponsored article. tecMAMBO labels paid partner content plainly.</p> : null}
         {article.format === "wallet-watch" ? (
           <p className={styles.affiliateDisclosure}>
@@ -337,9 +369,9 @@ export default async function ArticlePage({ params }: { params: Params }) {
         ) : null}
         {article.verdict ? (
           <section className={styles.verdict} aria-labelledby="verdict-title">
-            <p className={styles.score}>{article.verdict.score}</p>
+            {showScore ? <p className={styles.score}>{article.verdict.score}</p> : null}
             <div>
-              <h2 id="verdict-title">Simple verdict</h2>
+              <h2 id="verdict-title">{showScore ? "Simple verdict" : "Research-based assessment"}</h2>
               <p>{article.verdict.summary}</p>
               <div className={styles.proCon}>
                 <ul>
@@ -357,13 +389,13 @@ export default async function ArticlePage({ params }: { params: Params }) {
           </section>
         ) : null}
         <ArticleBodyBlocks
-          body={article.body}
+          body={safeBody}
           inlineImages={article.inlineImages}
           glossaryTerms={glossaryTerms}
           glossaryState={glossaryState}
           highlightPrices={highlightReviewPrices}
         />
-        {article.goDeeper ? (
+        {article.goDeeper && findPlaceholderIssues(article.goDeeper.intro).length === 0 ? (
           <GoDeeper
             intro={article.goDeeper.intro}
             specs={article.goDeeper.specs}
@@ -402,7 +434,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
           <p>Have a plain-English question about this topic? Send it in and we may answer it in a future guide.</p>
           <Link href="/contact">Ask a question</Link>
         </section>
-        {substantial ? <AdSlot /> : null}
+        {eligible ? <AdSlot /> : null}
       </div>
 
       <section className={`container ${styles.related}`} aria-labelledby="related-title">
@@ -418,10 +450,10 @@ export default async function ArticlePage({ params }: { params: Params }) {
         <NewsletterCard />
       </div>
 
-      <JsonLd data={articleJsonLd(article)} />
-      {dealProductJsonLd(article) ? <JsonLd data={dealProductJsonLd(article)!} /> : null}
-      {article.faq?.length ? <JsonLd data={faqJsonLd(article.faq)} /> : null}
-      {itemListJsonLd(article) ? <JsonLd data={itemListJsonLd(article)!} /> : null}
+      {eligible ? <JsonLd data={articleJsonLd(article)} /> : null}
+      {eligible && dealProductJsonLd(article) ? <JsonLd data={dealProductJsonLd(article)!} /> : null}
+      {eligible && article.faq?.length ? <JsonLd data={faqJsonLd(article.faq)} /> : null}
+      {eligible && itemListJsonLd(article) ? <JsonLd data={itemListJsonLd(article)!} /> : null}
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", path: "/" },

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getArticles } from "@/lib/content";
-import { isSubstantialArticle } from "@/lib/article-quality";
 import { filterArticlesByCanonicalTopic, wearableFilters, wearableFilterPath } from "@/lib/site-structure";
+import { isArchiveIndexable } from "@/lib/content-quality";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { StoryCard } from "@/components/cards/StoryCard";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -21,10 +21,15 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const { section, slug, filter } = await params;
   const active = wearableFilters.find((item) => item.slug === filter);
   if (section !== "reviews" || slug !== "wearables" || !active) return {};
+  const articles = filterArticlesByCanonicalTopic(
+    (await getArticles()).filter((article) => article.format === "review"),
+    active.canonicalTopic
+  );
   return {
     title: `${active.label} reviews`,
     description: active.description,
-    alternates: { canonical: wearableFilterPath(active.slug) }
+    alternates: { canonical: wearableFilterPath(active.slug) },
+    robots: isArchiveIndexable(articles.length, active.description) ? undefined : { index: false, follow: true }
   };
 }
 
@@ -35,7 +40,7 @@ export default async function WearableFilterPage({ params }: { params: Params })
   const articles = filterArticlesByCanonicalTopic(
     (await getArticles()).filter((article) => article.format === "review"),
     active.canonicalTopic
-  ).filter(isSubstantialArticle);
+  );
 
   return (
     <section className={`container ${styles.topicArchive}`}>

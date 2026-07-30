@@ -23,6 +23,10 @@ export function wordpressIsConfigured() {
   return Boolean(wordpressEndpoint());
 }
 
+export function wordpressEditorialControlsAvailable() {
+  return process.env.WORDPRESS_EDITORIAL_CONTROLS_AVAILABLE === "true";
+}
+
 export function cmsWarning(message: string, error?: unknown) {
   if (process.env.NODE_ENV === "test") return;
   const detail = error instanceof Error ? error.message : error ? String(error) : "";

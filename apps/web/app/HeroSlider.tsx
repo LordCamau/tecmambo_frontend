@@ -103,7 +103,7 @@ export function HeroSlider({ slides }: HeroSliderProps) {
                 key={slide.id}
               >
                 <div className={styles.badgeRow}>
-                  <FormatBadge format={slide.format} />
+                  <FormatBadge format={slide.format} reviewMethod={slide.reviewMethod} />
                   {slide.sponsored ? <SponsoredBadge /> : null}
                 </div>
                 <h1>

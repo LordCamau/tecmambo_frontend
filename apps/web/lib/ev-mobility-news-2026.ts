@@ -129,7 +129,7 @@ export function buildEvMobilityNewsArticles({ authors, topics, brands, regions }
         "When the incumbent that least needed to move finally moves, it tells you the pressure is real.",
         "The honest read on the launch itself: this is a statement of intent, not a volume play. At over R1.18 million for an imported crossover, the bZ4X does little to put electric driving within reach of the mass market Toyota has owned for more than forty years.",
         "It also arrives after a wave of cheaper Chinese EVs and after Lexus, Toyota's premium sibling, had already entered the local battery-electric market.",
-        "Still, the direction is unmistakable, and it echoes the financing research we covered on EV costs across Africa: the technology argument is fading, and the contest now is over price, infrastructure, and who moves fastest. See /business/evs-cheaper-than-petrol-africa-financing.",
+        "Still, the direction is unmistakable, and it echoes the financing research we covered on EV costs across Africa: the technology argument is fading, and the contest now is over price, infrastructure, and who moves fastest. See [EVs could soon beat petrol on cost across Africa](/business/evs-cheaper-than-petrol-africa-financing).",
         "Toyota entering the fray, even cautiously, makes electric harder for any South African buyer, or rival, to dismiss."
       ],
       closingLine:
@@ -254,7 +254,7 @@ export function buildEvMobilityNewsArticles({ authors, topics, brands, regions }
         "The drivers BloombergNEF names, escaping oil-import bills, affordable Chinese brands, and EV-centred industrial policy, are available to any country that chooses them. That is exactly the conversation African policymakers are having.",
         "The long game remains long. Electric cars on the road will take years to outnumber petrol ones, and more than a quarter of new cars this year is still a minority.",
         "But the direction has stopped being a debate. The question the report really poses is which markets ride the wave and which watch it pass, and that is decided by policy, not physics.",
-        "For the global EV scoreboard behind those forecasts, see /business/byd-tesla-nio-june-2026-deliveries."
+        "For the global EV scoreboard behind those forecasts, see [BYD retakes the EV crown as June numbers land](/business/byd-tesla-nio-june-2026-deliveries)."
       ],
       closingLine:
         "The EV transition is still global, but it no longer moves like one global market.",
@@ -320,7 +320,7 @@ export function buildEvMobilityNewsArticles({ authors, topics, brands, regions }
         "The striking detail is the shape of demand and supply. Large cars and SUVs accounted for almost 70 percent of the global EV market in 2025, and in the United States, more than 85 percent of electric models were large cars or SUVs.",
         "The economics behind the bias are simple. Big vehicles carry big margins, and batteries are expensive, so carmakers have leaned toward formats where the battery cost hides inside a premium price.",
         "The result is an EV market rich in large family crossovers and thin on the compact, cheap runabouts that many drivers actually need.",
-        "That gap matters everywhere, and it matters acutely in Africa. The IEA repeatedly identifies affordability as a key barrier to EV adoption, while the Africa financing research we covered shows that cost, not battery science, is now the central fight. See /business/evs-cheaper-than-petrol-africa-financing.",
+        "That gap matters everywhere, and it matters acutely in Africa. The IEA repeatedly identifies affordability as a key barrier to EV adoption, while the Africa financing research we covered shows that cost, not battery science, is now the central fight. See [EVs could soon beat petrol on cost across Africa](/business/evs-cheaper-than-petrol-africa-financing).",
         "A catalogue that keeps swelling with large, costly formats does little for markets where the entry price is the entire battle. It also cedes the affordable ground to the handful of players, mostly Chinese brands, actually building small, cheaper EVs at scale.",
         "There are counter-currents worth naming. Chinese manufacturers keep pushing compact models, price competition has dragged EV prices down in several markets, and the used-EV pipeline is starting to reach import-dependent countries.",
         "But the headline stands: the EV model boom is real, and it is still weighted toward buyers who need less help. Watch not only how many EVs exist, but how many exist below the price of a mid-range petrol car."
@@ -376,7 +376,7 @@ export function buildEvMobilityNewsArticles({ authors, topics, brands, regions }
         "The third name worth knowing is NIO. The Chinese smart-EV maker delivered 40,597 vehicles in June, up 62.9 percent year on year and its best month of 2026, powered by its three-brand strategy of NIO, ONVO, and Firefly.",
         "Put together, the reports sketch the state of the race: China's giants are growing abroad faster than at home, Tesla has stabilised sharply, and the second tier of Chinese brands is scaling fast.",
         "For African markets watching from the sidelines, the exports are the story. The vehicles now flooding Australia and Southeast Asia at aggressive prices are the same competitive pressure that will define what electric driving costs here.",
-        "For the broader market forecast, see /news/bnef-ev-outlook-2026-record-sales-divergence and /news/ev-model-explosion-suv-bias."
+        "For the broader market forecast, see [EV sales head for a record 23.3 million, but split world](/news/bnef-ev-outlook-2026-record-sales-divergence) and [EV choice is growing, but the market still tilts big](/news/ev-model-explosion-suv-bias)."
       ],
       closingLine:
         "The EV crown is not just about bragging rights. It tells you whose factories, supply chains, and export ambitions are setting the next price floor.",

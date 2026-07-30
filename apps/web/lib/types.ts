@@ -106,6 +106,18 @@ export type Article = {
   itemList?: string[];
   sponsored?: boolean;
   deal?: Deal;
+  publicationStatus?: "publish" | "draft" | "private" | "scheduled" | "archived";
+  editorialStatus?: "draft" | "editorial_review" | "fact_check" | "ready" | "published" | "needs_revision" | "archived";
+  indexingStatus?: "index" | "noindex" | "inherit";
+  contentFormat?: "news" | "analysis" | "explainer" | "buying_guide" | "hands_on_review" | "research_based_review" | "opinion" | "glossary" | "interview" | "field_test";
+  reviewMethod?: "hands_on" | "research_based" | "unknown";
+  hasOriginalTesting?: boolean;
+  hasOriginalPhotography?: boolean;
+  testingMethodology?: string;
+  productSource?: string;
+  testingPeriod?: string;
+  sourceDisclosure?: string;
+  excludeFromDiscovery?: boolean;
 };
 
 export type GlossaryTerm = {

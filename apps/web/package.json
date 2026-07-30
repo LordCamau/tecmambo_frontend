@@ -13,7 +13,11 @@
     "test:contrast": "vitest run tests/contrast.test.ts",
     "test:badges": "node tests/badge-contrast.playwright.mjs",
     "cms:codegen": "graphql-codegen --config codegen.ts",
-    "cms:migrate": "tsx scripts/migrate-to-wordpress.ts"
+    "cms:migrate": "tsx scripts/migrate-to-wordpress.ts",
+    "audit:content": "tsx scripts/content-quality-audit.ts",
+    "audit:content:ci": "tsx scripts/content-quality-audit.ts --ci",
+    "audit:links": "tsx scripts/link-audit.ts",
+    "audit:links:ci": "tsx scripts/link-audit.ts --ci"
   },
   "dependencies": {
     "@next/third-parties": "16.2.9",

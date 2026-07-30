@@ -113,7 +113,7 @@ describe("content generators", () => {
     });
   });
 
-  it("publishes the conclusive iPhone Air review with verdict, FAQs, specs, and inline images", () => {
+  it("publishes the iPhone Air as research-based analysis with FAQs, specs, and inline images", () => {
     const story = articles.find((article) => article.slug === "iphone-air-review-the-iphone-that-asks-what-you-re-willing-to-give-up");
     const schema = articleJsonLd(story!) as unknown as Record<string, unknown>;
     const markdown = articleToMarkdown(story!);
@@ -123,7 +123,7 @@ describe("content generators", () => {
     expect(story?.author.name).toBe("Tim Humphreys");
     expect(story?.format).toBe("review");
     expect(story?.seo?.description).toBe(
-      "The iPhone Air is Apple's thinnest, most beautiful iPhone. After the hype, our verdict on the camera, battery, and whether it is worth the price."
+      "The iPhone Air is Apple's thinnest, most beautiful iPhone. After the hype, a research-based assessment of the camera, battery, and whether it is worth the price."
     );
     expect(story?.whyItMatters).toBe(
       "The iPhone Air is the most beautiful iPhone Apple has made, but beauty this thin is paid for in cameras, battery, and sound. Knowing exactly what you give up is the whole decision."
@@ -181,16 +181,12 @@ describe("content generators", () => {
       height: 520,
       type: "image/jpeg"
     });
-    expect(schema["@type"]).toBe("Review");
-    expect(schema.reviewRating).toMatchObject({
-      "@type": "Rating",
-      ratingValue: "3.5",
-      bestRating: "5"
-    });
-    expect(schema.itemReviewed).toMatchObject({ "@type": "Product", name: "Apple iPhone Air" });
+    expect(story?.reviewMethod).toBe("research_based");
+    expect(schema["@type"]).toBe("Article");
+    expect(schema.reviewRating).toBeUndefined();
   });
 
-  it("publishes the Samsung Galaxy A37 5G review with the requested thumbnail and review schema", () => {
+  it("publishes the Samsung Galaxy A37 5G as research-based analysis", () => {
     const story = articles.find((article) => article.slug === "samsung-galaxy-a37-5g-review");
     const schema = articleJsonLd(story!) as unknown as Record<string, unknown>;
     const markdown = articleToMarkdown(story!);
@@ -286,13 +282,9 @@ describe("content generators", () => {
       height: 520,
       type: "image/jpeg"
     });
-    expect(schema["@type"]).toBe("Review");
-    expect(schema.reviewRating).toMatchObject({
-      "@type": "Rating",
-      ratingValue: "3.5",
-      bestRating: "5"
-    });
-    expect(schema.itemReviewed).toMatchObject({ "@type": "Product", name: "Samsung Galaxy A37 5G" });
+    expect(story?.reviewMethod).toBe("research_based");
+    expect(schema["@type"]).toBe("Article");
+    expect(schema.reviewRating).toBeUndefined();
     expect(schema.citation).toEqual(expect.arrayContaining(["https://www.gsmarena.com/samsung_galaxy_a37-14378.php"]));
   });
 

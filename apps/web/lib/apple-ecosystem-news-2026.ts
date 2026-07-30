@@ -149,7 +149,7 @@ export function buildAppleEcosystemArticles({ authors, topics, brands }: BuildAp
         'The Ultra name does the same work it does on Apple Watch. It creates a top shelf that makes the rest of the range feel more reasonable. A 1,199-dollar Pro suddenly reads as the sensible choice beside a foldable that costs more than many laptops.',
         "Economists call goods that sell partly because they are expensive Veblen goods. Apple has been edging toward that territory for years, and a foldable iPhone would be its clearest move yet: visible, expensive, unmistakable, and designed to signal that the owner bought the newest thing.",
         "Apple also has an advantage rivals cannot easily copy. Samsung and Chinese brands have spent years absorbing foldable growing pains: creases, hinge anxiety, thickness, dust resistance, repair cost, and awkward app layouts. Apple can arrive late, skip the worst early embarrassment, and enter at the top of the price ladder.",
-        "The counterweights are real. Foldables remain a small slice of the phone market. Durability is still a question for normal buyers. Supply reports suggest the launch could be constrained, which we cover in /opinion/iphone-ultra-scarcity-playbook. And for many readers, 2,500 US dollars is several months of salary.",
+        "The counterweights are real. Foldables remain a small slice of the phone market. Durability is still a question for normal buyers. Supply reports suggest the launch could be constrained, which we cover in [The iPhone Ultra shortage is also a marketing plan](/opinion/iphone-ultra-scarcity-playbook). And for many readers, 2,500 US dollars is several months of salary.",
         "That last point is not a flaw in the strategy. It is the strategy. Apple is not trying to sell this phone to everyone. It is trying to make everyone want the brand that makes it."
       ],
       closingLine:
@@ -215,7 +215,7 @@ export function buildAppleEcosystemArticles({ authors, topics, brands }: BuildAp
         "Companies understand this. Launch quantities are chosen. A company that wanted to avoid sell-out theatre entirely could delay a launch until stock was deep. Almost nobody does, because in stock everywhere has never been the phrase that moves culture.",
         "So the useful skill is reading the signals like an adult. Sold out tells you about the size of the first production run, not the size of the product's merit. A waiting list measures manufacturing yield, not your need. A resale premium is a tax on impatience, paid by people who confused urgency with importance.",
         "The phone will probably exist in healthier supply by the second quarter after launch, at retail price, with early bugs patched. Quietly, that is the best time to buy almost any first-generation device.",
-        "For the wider luxury-pricing context, see /business/apple-foldable-iphone-ultra-2500-luxury. The same story can be read two ways: Apple is building a very expensive foldable, and Apple is building desire around a very expensive foldable.",
+        "For the wider luxury-pricing context, see [The $2,500 iPhone Ultra: Apple's luxury tech gamble](/business/apple-foldable-iphone-ultra-2500-luxury). The same story can be read two ways: Apple is building a very expensive foldable, and Apple is building desire around a very expensive foldable.",
         "The bottom line, from someone who loves new hardware: let the scarcity be Apple's problem. If the foldable is genuinely great, it will still be great in February, cheaper, fixed, and in stock. If it is only great because you could not have it, the waiting list did its real job."
       ],
       closingLine:
@@ -263,7 +263,7 @@ export function buildAppleEcosystemArticles({ authors, topics, brands }: BuildAp
         "Since then, the interesting changes have been internal. Face ID components have been consolidated and shrunk generation by generation. A one-third smaller island would suggest more unglamorous engineering work: combined modules, tighter packaging, optical redesigns, and under-display experiments that rarely become headline features but define the phone's face.",
         "The destination everyone assumes is obvious: Face ID under the glass, then eventually the camera too. Rival brands have attempted under-display cameras, but image quality has often disappointed. Apple's habit is to arrive late and polished rather than first and compromised.",
         "That is why a smaller island, rather than a disappearing one, feels believable. The technology may not be ready to vanish, so Apple makes it smaller until it can.",
-        "There is a rival context too. Samsung's foldable leaks show one path to making phones feel new again, which we cover at /news/samsung-unpacked-july-z-fold-8-leaks. Apple is working the other path: make the front look less interrupted until the phone face finally becomes all screen.",
+        "There is a rival context too. Samsung's foldable leaks show one path to making phones feel new again, which we cover at [Samsung Unpacked lands July 22: Z Fold 8 leaks explained](/news/samsung-unpacked-july-z-fold-8-leaks). Apple is working the other path: make the front look less interrupted until the phone face finally becomes all screen.",
         "Should you care? If you buy phones on looks, a cleaner face is genuinely nice. The honest translation of this leak, though, is about time. The all-screen iPhone still looks generations away. The iPhone 18 Pro, if the report holds, is a waypoint."
       ],
       closingLine:
@@ -312,7 +312,7 @@ export function buildAppleEcosystemArticles({ authors, topics, brands }: BuildAp
         "Why this matters in mobile-money markets is obvious. The coached-fraud pattern is familiar: the urgent call, the fake reversal, the official-sounding voice, the victim walking themselves through a payment they do not understand until it is too late.",
         "The industry often reaches for cloud AI to scan content. Apple's more interesting bet is that behavior processed on the device can catch manipulation without reading messages. If that works, banks, telcos, and wallet providers will have a new security pattern to copy.",
         "The caveats are important. This is beta-era reporting. Real-world accuracy is unproven. False alarms during genuine urgent transactions are possible. A framework only helps users of apps that adopt it. And scammers will adapt.",
-        "Still, the direction is exactly right. Scammers weaponised the phone's intimacy. It is overdue that the phone itself started noticing. For more practical AI coverage, start with /news/ai."
+        "Still, the direction is exactly right. Scammers weaponised the phone's intimacy. It is overdue that the phone itself started noticing. For more practical AI coverage, start with [ai](/news/ai)."
       ],
       closingLine:
         "If Trust Insights works as reported, the iPhone will become less of a silent tool in coached fraud and more of a warning voice in the room.",
@@ -376,7 +376,7 @@ export function buildAppleEcosystemArticles({ authors, topics, brands }: BuildAp
         "For developers, the practical upside is sturdier agent-assisted workflows. Official integrations are less likely to break on every browser update, and Safari has long been one of the more awkward browsers to automate cleanly.",
         "For web teams in Kenya and everywhere else, this matters because Safari-specific testing often comes late, if it comes at all. A browser-native bridge for agents makes it easier to catch layout, console, network, and accessibility issues before users do.",
         "The philosophical shift is larger. The browser is becoming a tool with two kinds of users: humans in front of the glass and agents behind it. Website builders now have to assume both are present.",
-        "That will shape the web. Debugging, accessibility, testing, and search will increasingly be read by software before people ever see the page. For more plain-English AI coverage, see /news/ai."
+        "That will shape the web. Debugging, accessibility, testing, and search will increasingly be read by software before people ever see the page. For more plain-English AI coverage, see [ai](/news/ai)."
       ],
       closingLine:
         "Safari's MCP server is not only a developer convenience. It is a sign that browsers are being rebuilt for agents as first-class users.",

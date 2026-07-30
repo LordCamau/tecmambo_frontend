@@ -7,6 +7,7 @@ import { StoryCard } from "@/components/cards/StoryCard";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { collectionPageJsonLd, personJsonLd } from "@/lib/seo";
 import styles from "./page.module.css";
+import { isAuthorIndexable } from "@/lib/content-quality";
 
 type Params = Promise<{ slug: string }>;
 
@@ -18,11 +19,13 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const author = await getAuthor((await params).slug);
   if (!author) return {};
+  const articleCount = (await getSubstantialArticles()).filter((article) => article.author.slug === author.slug).length;
   const title = `${author.name} | tecMAMBO`;
   return {
     title,
     description: author.bio,
     alternates: { canonical: `/authors/${author.slug}` },
+    robots: isAuthorIndexable(author, articleCount) ? undefined : { index: false, follow: true },
     openGraph: {
       title,
       description: author.bio,

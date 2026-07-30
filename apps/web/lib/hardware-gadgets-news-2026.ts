@@ -44,7 +44,7 @@ export function buildHardwareGadgetsNewsArticles({ authors, topics, brands }: Bu
       whyItMatters:
         "Foldables are where phone design is actually moving, and this launch will set the bar, and the prices, that every rival gets measured against for the next year.",
       body: [
-        "Update, July 22, 2026: The event has happened and the rumors are now facts. Samsung announced the Galaxy Z Fold8 Ultra, a reshaped Galaxy Z Fold8, the Z Flip8, the Galaxy Watch Ultra2 and Watch9, and Gemini-powered smart glasses. For the confirmed products, prices, and specifications, read our full report at /news/samsung-galaxy-unpacked-july-2026-everything-announced. The original rumor roundup is preserved below for the record.",
+        "Update, July 22, 2026: The event has happened and the rumors are now facts. Samsung announced the Galaxy Z Fold8 Ultra, a reshaped Galaxy Z Fold8, the Z Flip8, the Galaxy Watch Ultra2 and Watch9, and Gemini-powered smart glasses. For the confirmed products, prices, and specifications, read our full report at [Samsung goes Ultra: everything announced at the London Unpacked, from a 4.1mm Fold to Gemini glasses](/news/samsung-galaxy-unpacked-july-2026-everything-announced). The original rumor roundup is preserved below for the record.",
         "Samsung's next Galaxy Unpacked is widely expected on July 22, 2026, in London, and its next foldables have leaked so thoroughly that the reveal risks feeling like a formality. A quick honesty note before the details: Samsung has not fully confirmed every product detail, so treat this as a strong rumor picture rather than fact.",
         "The consistent story across supply-chain leaks is that the Galaxy Z Fold 8 generation is about doing more with less thickness. Some reports put the slimmest model near 4.1mm unfolded, while newer leaks around the wider model point closer to 4.5mm, which is why the exact number should stay in rumor territory until launch day.",
         "Camera leaks are split too. Some reports point to a 200MP main camera on the premium Fold tier, while others describe a dual 50MP setup for the wider model. That disagreement matters because it suggests Samsung may be preparing more than one book-style Fold, not merely one direct successor.",
@@ -53,7 +53,7 @@ export function buildHardwareGadgetsNewsArticles({ authors, topics, brands }: Bu
         "Here is where the leaks genuinely disagree: some outlets call the wider phone the standard Fold 8 and the thin, narrow one a premium Fold 8 Ultra, while others use Fold 8 Wide for the squarer model. The naming will only be settled on stage.",
         "Either way, a premium tier makes competitive sense. Chinese rivals such as Honor, Oppo, and Huawei have pushed hard on thinness and battery for two generations, and an expected foldable from Apple looms over the category.",
         "Pricing leaks suggest a starting price around 1,999 US dollars, in line with the Fold 7, with the Galaxy Z Flip 8 expected alongside as a more modest refresh. New Galaxy Watch models and possibly XR or smart-glasses news are also rumored for the event, but the foldables are clearly the main act.",
-        "For more launch-season context, the Apple Watch redesign rumor is a different kind of hardware story, but the same advice applies: wait for the official details before spending around an upgrade cycle. See /news/apple-watch-2027-redesign-band-compatibility.",
+        "For more launch-season context, the Apple Watch redesign rumor is a different kind of hardware story, but the same advice applies: wait for the official details before spending around an upgrade cycle. See [Apple Watch redesign may break your bands in 2027](/news/apple-watch-2027-redesign-band-compatibility).",
         "Should you care? If you are foldable-curious, this is the launch to wait for, since even the rumors reshape the buying maths: a thinner, better-camera Fold at the top, a wider model that behaves more like a normal phone when shut, and last year's excellent Fold 7 about to get cheaper."
       ],
       closingLine:
@@ -130,7 +130,7 @@ export function buildHardwareGadgetsNewsArticles({ authors, topics, brands }: Bu
         "It is also plausible Apple keeps the old band system alive on a cheaper SE model to soften the blow, though that is speculation.",
         "The practical takeaway is worth acting on even at rumor strength. If you own an Apple Watch and plan to upgrade in the next couple of years, do not invest heavily in new bands right now, especially premium ones.",
         "A collection that outvalues the watch itself is common, and if the attachment changes in 2027, none of it carries over. Buy the strap you need, skip the ones you merely want, and wait for the design to settle.",
-        "This sits beside the Samsung foldable rumors as part of a wider 2026 to 2027 hardware reset cycle. See /news/samsung-unpacked-july-z-fold-8-leaks."
+        "This sits beside the Samsung foldable rumors as part of a wider 2026 to 2027 hardware reset cycle. See [Samsung Unpacked lands July 22: Z Fold 8 leaks explained](/news/samsung-unpacked-july-z-fold-8-leaks)."
       ],
       closingLine:
         "The rumor may change, but the shopping advice is sturdy: do not stockpile expensive bands when the connector itself might be headed for a reset.",
@@ -283,7 +283,7 @@ export function buildHardwareGadgetsNewsArticles({ authors, topics, brands }: Bu
         "The context is what makes this launch worth watching. The budget mid-range is the most important segment in most of the world, including Kenya, yet it is usually served with anonymous, interchangeable hardware.",
         "Nothing's bet is that design, personality, and clean software can win there just as they did at higher prices.",
         "Its earlier budget models proved there is real appetite for that; the Phone (4b) has to prove it again against fierce competition from Samsung's A series, Redmi, and Tecno, all of whom fight hard at this price.",
-        "For the wider market, keep an eye on our smartphone archive at /news/smartphones. We will verify availability and pricing for the Kenyan market once the phone is official, since local price is where a budget phone's argument is won or lost."
+        "For the wider market, keep an eye on our smartphone archive at [smartphones](/news/smartphones). We will verify availability and pricing for the Kenyan market once the phone is official, since local price is where a budget phone's argument is won or lost."
       ],
       closingLine:
         "If Nothing gets the price right, the Phone (4b) could be another reminder that affordable phones do not have to feel anonymous.",

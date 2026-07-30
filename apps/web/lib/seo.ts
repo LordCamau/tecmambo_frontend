@@ -17,6 +17,7 @@ import type {
 import { articlePath, formats, siteUrl } from "@/lib/formats";
 import { siteSettings } from "@/lib/nav";
 import type { Article, Author, GlossaryTerm } from "@/lib/types";
+import { isHandsOnReview } from "@/lib/content-quality";
 
 const organizationId = `${siteUrl}/#organization`;
 const organizationLogoId = `${siteUrl}/#logo`;
@@ -252,7 +253,7 @@ export function articleJsonLd(article: Article): WithContext<SchemaArticle | Rev
     citation: article.sources?.map((source) => source.url),
     ...regionSchema
   };
-  if (article.format === "review" && article.verdict) {
+  if (article.verdict && isHandsOnReview(article)) {
     return {
       "@context": "https://schema.org",
       "@type": "Review",

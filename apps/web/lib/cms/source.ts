@@ -2,9 +2,9 @@ import "server-only";
 import { africanRegions, getAfricaArticles, getArticlesByRegion, getRegion } from "@/lib/regions";
 import type { Article, Author, Format, GlossaryTerm, Tag } from "@/lib/types";
 import { cmsTags, tagsForArchive } from "./cache-tags";
-import { cmsWarning } from "./env";
+import { cmsWarning, wordpressEditorialControlsAvailable } from "./env";
 import { wordpressRequest } from "./graphql";
-import { ARTICLES_QUERY, ARTICLE_BY_DATABASE_ID_QUERY, ARTICLE_BY_SLUG_QUERY, AUTHORS_QUERY, GLOSSARY_TERMS_QUERY, TAXONOMIES_QUERY } from "./queries";
+import { ARTICLES_QUERY, ARTICLES_WITH_EDITORIAL_CONTROLS_QUERY, ARTICLE_BY_DATABASE_ID_QUERY, ARTICLE_BY_DATABASE_ID_WITH_EDITORIAL_CONTROLS_QUERY, ARTICLE_BY_SLUG_QUERY, ARTICLE_BY_SLUG_WITH_EDITORIAL_CONTROLS_QUERY, AUTHORS_QUERY, GLOSSARY_TERMS_QUERY, TAXONOMIES_QUERY } from "./queries";
 import { wpArticleToArticle, wpGlossaryTermToTerm, wpRegionToDomainRegion, wpTermToDomainTag, wpUserToAuthor } from "./mappers";
 
 type ArticlesData = {
@@ -47,7 +47,7 @@ export async function getCmsArticles() {
   const all: Article[] = [];
   let after: string | null | undefined;
   for (let page = 0; page < 20; page += 1) {
-    const data = await wordpressRequest<ArticlesData>(ARTICLES_QUERY, {
+    const data = await wordpressRequest<ArticlesData>(wordpressEditorialControlsAvailable() ? ARTICLES_WITH_EDITORIAL_CONTROLS_QUERY : ARTICLES_QUERY, {
       variables: { first: 100, after },
       tags: [cmsTags.all, cmsTags.articles, cmsTags.home, cmsTags.sitemap, cmsTags.rss]
     });
@@ -59,7 +59,7 @@ export async function getCmsArticles() {
 }
 
 export async function getCmsArticleBySlug(slug: string, preview = false) {
-  const data = await wordpressRequest<ArticleData>(ARTICLE_BY_SLUG_QUERY, {
+  const data = await wordpressRequest<ArticleData>(wordpressEditorialControlsAvailable() ? ARTICLE_BY_SLUG_WITH_EDITORIAL_CONTROLS_QUERY : ARTICLE_BY_SLUG_QUERY, {
     variables: { slug, asPreview: preview },
     authenticated: preview,
     tags: [cmsTags.all, cmsTags.articles, cmsTags.article(slug)]
@@ -68,7 +68,7 @@ export async function getCmsArticleBySlug(slug: string, preview = false) {
 }
 
 export async function getCmsArticleByDatabaseId(id: string) {
-  const data = await wordpressRequest<ArticleData>(ARTICLE_BY_DATABASE_ID_QUERY, {
+  const data = await wordpressRequest<ArticleData>(wordpressEditorialControlsAvailable() ? ARTICLE_BY_DATABASE_ID_WITH_EDITORIAL_CONTROLS_QUERY : ARTICLE_BY_DATABASE_ID_QUERY, {
     variables: { id, asPreview: true },
     authenticated: true,
     tags: [cmsTags.all, cmsTags.articles]

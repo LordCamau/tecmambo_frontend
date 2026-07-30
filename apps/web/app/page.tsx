@@ -64,7 +64,7 @@ function FeaturedArticleCard({ article, level }: { article: HomeLane["articles"]
       <Link className={styles.featureImage} href={href} aria-label={article.title}>
         <Image src={article.image.src} alt={article.image.alt} fill sizes={level === "lead" ? "(min-width: 980px) 46vw, 100vw" : "(min-width: 980px) 24vw, 100vw"} />
         <span className={styles.featureBadge}>
-          <FormatBadge format={article.format} />
+          <FormatBadge format={article.format} reviewMethod={article.reviewMethod} />
           {article.sponsored ? <SponsoredBadge /> : null}
         </span>
       </Link>
@@ -138,7 +138,7 @@ export default async function HomePage() {
                   </Link>
                   <div className={styles.supportBody}>
                     <div className={styles.badgeRow}>
-                      <FormatBadge format={article.format} />
+                      <FormatBadge format={article.format} reviewMethod={article.reviewMethod} />
                       {article.sponsored ? <SponsoredBadge /> : null}
                     </div>
                     <h2>

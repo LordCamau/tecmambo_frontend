@@ -1,7 +1,7 @@
 import { articles, authors, brands, glossaryTerms, topics } from "@/lib/sample-data";
 import type { Article, Format } from "@/lib/types";
 import { africanRegions, getAfricaArticles, getArticlesByRegion, getRegion } from "@/lib/regions";
-import { isSubstantialArticle } from "@/lib/article-quality";
+import { isArticleIndexable, isContentPubliclyEligible, isGlossaryTermIndexable } from "@/lib/content-quality";
 import { shouldUseWordPress } from "@/lib/cms/env";
 import {
   getCmsAfricanArticles,
@@ -25,12 +25,20 @@ import {
 } from "@/lib/cms/source";
 
 export async function getArticles() {
+  return (await getAllArticles()).filter(isContentPubliclyEligible);
+}
+
+export async function getAllArticles() {
   if (shouldUseWordPress()) return withCmsFallback("getArticles", getCmsArticles, () => articles);
   return articles;
 }
 
 export async function getSubstantialArticles() {
-  return (await getArticles()).filter(isSubstantialArticle);
+  return (await getArticles()).filter(isArticleIndexable);
+}
+
+export async function getIndexableArticles() {
+  return (await getAllArticles()).filter(isArticleIndexable);
 }
 
 export async function getArticleBySlug(slug: string) {
@@ -39,8 +47,10 @@ export async function getArticleBySlug(slug: string) {
 }
 
 export async function getArticlesByFormat(format: Format) {
-  if (shouldUseWordPress()) return withCmsFallback("getArticlesByFormat", () => getCmsArticlesByFormat(format), () => articles.filter((article) => article.format === format));
-  return articles.filter((article) => article.format === format);
+  const found = shouldUseWordPress()
+    ? await withCmsFallback("getArticlesByFormat", () => getCmsArticlesByFormat(format), () => articles.filter((article) => article.format === format))
+    : articles.filter((article) => article.format === format);
+  return found.filter(isContentPubliclyEligible);
 }
 
 export async function getRegions() {
@@ -54,21 +64,23 @@ export async function getRegionBySlug(slug: string) {
 }
 
 export async function getAfricanArticles() {
-  if (shouldUseWordPress()) return withCmsFallback("getAfricanArticles", getCmsAfricanArticles, () => getAfricaArticles(articles));
-  return getAfricaArticles(articles);
+  const found = shouldUseWordPress() ? await withCmsFallback("getAfricanArticles", getCmsAfricanArticles, () => getAfricaArticles(articles)) : getAfricaArticles(articles);
+  return found.filter(isContentPubliclyEligible);
 }
 
 export async function getSubstantialAfricanArticles() {
-  return (await getAfricanArticles()).filter(isSubstantialArticle);
+  return (await getAfricanArticles()).filter(isArticleIndexable);
 }
 
 export async function getArticlesForRegion(regionSlug: string) {
-  if (shouldUseWordPress()) return withCmsFallback("getArticlesForRegion", () => getCmsArticlesForRegion(regionSlug), () => getArticlesByRegion(articles, regionSlug));
-  return getArticlesByRegion(articles, regionSlug);
+  const found = shouldUseWordPress()
+    ? await withCmsFallback("getArticlesForRegion", () => getCmsArticlesForRegion(regionSlug), () => getArticlesByRegion(articles, regionSlug))
+    : getArticlesByRegion(articles, regionSlug);
+  return found.filter(isContentPubliclyEligible);
 }
 
 export async function getSubstantialArticlesForRegion(regionSlug: string) {
-  return (await getArticlesForRegion(regionSlug)).filter(isSubstantialArticle);
+  return (await getArticlesForRegion(regionSlug)).filter(isArticleIndexable);
 }
 
 export async function getRelatedArticles(article: Article, limit = 3) {
@@ -79,7 +91,7 @@ export async function getRelatedArticles(article: Article, limit = 3) {
 function localRelatedArticles(article: Article, limit = 3) {
   const tagSlugs = new Set(article.tags.map((tag) => tag.slug));
   return articles
-    .filter((candidate) => candidate.id !== article.id)
+    .filter((candidate) => candidate.id !== article.id && isContentPubliclyEligible(candidate))
     .sort((a, b) => {
       const aScore = a.tags.filter((tag) => tagSlugs.has(tag.slug)).length;
       const bScore = b.tags.filter((tag) => tagSlugs.has(tag.slug)).length;
@@ -91,6 +103,10 @@ function localRelatedArticles(article: Article, limit = 3) {
 export async function getGlossaryTerms() {
   if (shouldUseWordPress()) return withCmsFallback("getGlossaryTerms", getCmsGlossaryTerms, () => glossaryTerms);
   return glossaryTerms;
+}
+
+export async function getIndexableGlossaryTerms() {
+  return (await getGlossaryTerms()).filter(isGlossaryTermIndexable);
 }
 
 export async function getGlossaryTerm(slug: string) {
@@ -125,6 +141,7 @@ function localArticlesForGlossaryTerm(slug: string) {
   if (!term) return [];
   const needles = [term.term, ...term.aliases].map((item) => item.toLowerCase());
   return articles
+    .filter(isContentPubliclyEligible)
     .filter((article) => {
       const haystack = [article.title, article.subhead, article.excerpt, article.whyItMatters, ...article.body].join(" ").toLowerCase();
       return needles.some((needle) => haystack.includes(needle));
@@ -148,6 +165,8 @@ export async function getTags(kind: "topic" | "brand") {
 }
 
 export async function getArticlesByTag(slug: string) {
-  if (shouldUseWordPress()) return withCmsFallback("getArticlesByTag", () => getCmsArticlesByTag(slug), () => articles.filter((article) => article.tags.some((tag) => tag.slug === slug)));
-  return articles.filter((article) => article.tags.some((tag) => tag.slug === slug));
+  const found = shouldUseWordPress()
+    ? await withCmsFallback("getArticlesByTag", () => getCmsArticlesByTag(slug), () => articles.filter((article) => article.tags.some((tag) => tag.slug === slug)))
+    : articles.filter((article) => article.tags.some((tag) => tag.slug === slug));
+  return found.filter(isContentPubliclyEligible);
 }

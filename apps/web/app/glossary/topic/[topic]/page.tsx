@@ -5,6 +5,7 @@ import { getGlossaryTerms, getGlossaryTermsByTopic } from "@/lib/content";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import styles from "../../glossary.module.css";
+import { isGlossaryTermIndexable } from "@/lib/content-quality";
 
 type Params = Promise<{ topic: string }>;
 
@@ -20,10 +21,12 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const topic = (await params).topic;
+  const terms = await getGlossaryTermsByTopic(topic);
   return {
     title: `${topic.replace(/-/g, " ")} glossary terms`,
     description: "Plain-English technology definitions grouped by topic.",
-    alternates: { canonical: `/glossary/topic/${topic}` }
+    alternates: { canonical: `/glossary/topic/${topic}` },
+    robots: terms.filter(isGlossaryTermIndexable).length >= 3 ? undefined : { index: false, follow: true }
   };
 }
 

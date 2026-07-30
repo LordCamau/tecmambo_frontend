@@ -8,6 +8,7 @@ import { sectionFormatMap, topicArchives } from "@/lib/site-structure";
 import { StoryCard } from "@/components/cards/StoryCard";
 import { JsonLd } from "@/components/seo/JsonLd";
 import styles from "./page.module.css";
+import { isArchiveIndexable } from "@/lib/content-quality";
 
 type Params = Promise<{ section: string }>;
 
@@ -23,10 +24,13 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const formatKey = formatFromSection((await params).section);
   if (!formatKey) return {};
   const format = formats[formatKey];
+  const articles = await getArticlesByFormat(formatKey);
+  const description = `${format.description} Browse this tecMAMBO archive from Nairobi, Kenya for clear context, useful reviews, and related explainers.`;
   return {
     title: `${format.section} | tecMAMBO`,
-    description: `${format.description} Browse this tecMAMBO archive from Nairobi, Kenya for clear context, useful reviews, and related explainers.`,
-    alternates: { canonical: format.path }
+    description,
+    alternates: { canonical: format.path },
+    robots: isArchiveIndexable(articles.length, description) ? undefined : { index: false, follow: true }
   };
 }
 
@@ -57,10 +61,6 @@ export default async function SectionPage({ params }: { params: Params }) {
           {articles.map((article) => (
             <StoryCard article={article} key={article.id} />
           ))}
-        </div>
-        <div className={styles.seoCopy}>
-          tecMAMBO section archives are built as collection pages with stable links, plain descriptions, and room for
-          editorial picks as the newsroom grows.
         </div>
       </section>
       <JsonLd data={collectionPageJsonLd({ name: format.section, description: format.description, path: format.path, articles })} />

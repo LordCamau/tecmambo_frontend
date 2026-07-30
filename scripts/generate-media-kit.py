@@ -477,7 +477,7 @@ def guard_content() -> None:
             "Let us make your brand understood.",
         ]
     )
-    if "—" in text:
+    if "\u2014" in text:
         raise RuntimeError("Em dash found in media-kit content.")
     for bad in ("Tecmambo", "TecMAMBO", "TECMAMBO"):
         if bad in text:

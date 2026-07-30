@@ -8,6 +8,7 @@ import { sitePreviewImage } from "@/lib/site-metadata";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { StoryCard } from "@/components/cards/StoryCard";
 import styles from "../africa.module.css";
+import { isArchiveIndexable } from "@/lib/content-quality";
 
 type Params = Promise<{ country: string }>;
 
@@ -21,15 +22,18 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     return {
       title: "African tech country hubs, tecMAMBO",
       description: "Browse tecMAMBO country hubs for African technology coverage.",
-      alternates: { canonical: "/africa/more" }
+      alternates: { canonical: "/africa/more" },
+      robots: { index: false, follow: true }
     };
   }
   const region = getRegion(country);
   if (!region) return {};
+  const articles = await getSubstantialArticlesForRegion(region.slug);
   return {
     title: `${region.name} tech news, tecMAMBO`,
     description: region.description,
     alternates: { canonical: regionPath(region) },
+    robots: isArchiveIndexable(articles.length, region.description) ? undefined : { index: false, follow: true },
     openGraph: {
       title: `${region.name} tech news, tecMAMBO`,
       description: region.description,
