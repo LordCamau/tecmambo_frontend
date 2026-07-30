@@ -250,8 +250,8 @@ export function buildAfricanTechNewsJuly24Articles({ authors, topics, brands, re
       readTime: "6 min read",
       image: {
         src: "/articles/nigeria-six-fintechs-top-500.webp",
-        alt: "Flutterwave company signage mounted on the exterior of an office building.",
-        credit: "CIO Africa",
+        alt: "Moniepoint Microfinance Bank signage on the exterior of a Nigerian office building. Image credit: Moniepoint.",
+        credit: "Moniepoint",
         width: 1040,
         height: 520,
         type: "image/webp"

@@ -1,6 +1,6 @@
 # tecMAMBO content quality audit
 
-Generated: 2026-07-30T17:21:28.185Z
+Generated: 2026-07-30T17:53:01.471Z
 
 Items audited: 387
 

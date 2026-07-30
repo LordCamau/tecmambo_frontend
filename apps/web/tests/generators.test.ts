@@ -382,7 +382,7 @@ describe("content generators", () => {
       ],
       "nigeria-six-fintechs-cnbc-statista-top-500-2026": [
         "/articles/nigeria-six-fintechs-top-500.webp",
-        "CIO Africa"
+        "Moniepoint"
       ],
       "abuja-african-telecommunications-union-cpl-26-summit": [
         "/articles/africa-telecom-ministers-abuja-rulebook.webp",
