@@ -344,7 +344,7 @@ describe("content generators", () => {
     expect(bundle.every((article) => (article?.sources?.length ?? 0) >= 2)).toBe(true);
     expect(bundle.every((article) => article && articleWordCount(article) >= 1000)).toBe(true);
     expect(bundle.every((article) => article?.publishedAt === article?.updatedAt)).toBe(true);
-    expect(bundle.every((article) => article?.image.width === 1200 && article.image.height === 675)).toBe(true);
+    expect(bundle.every((article) => article?.image.width === 1040 && article.image.height === 520)).toBe(true);
     expect(bundle.every((article) => article?.image.type === "image/webp")).toBe(true);
     expect(JSON.stringify(bundle)).not.toContain("\u2014");
 
@@ -355,6 +355,68 @@ describe("content generators", () => {
     expect(articleJsonLd(laptopStory)["@type"]).toBe("Article");
     expect(buildRssFeed(articles)).toContain(laptopStory.slug);
     expect(buildLlmsTxt(articles, glossaryTerms)).toContain(laptopStory.title);
+  });
+
+  it("uses the supplied local images and source credits for the updated articles", () => {
+    const expectedImages = {
+      "kenya-ca-emerging-technologies-sandbox-deadline-2026": [
+        "/articles/kenya-ca-emerging-technologies-sandbox-2026.webp",
+        "C.A. Kenya"
+      ],
+      "kenya-ict-authority-oracle-ai-cloud-vendor-lock-in": [
+        "/articles/kenya-ict-authority-oracle-ai-cloud.webp",
+        "Michael Nagle/Bloomberg / Getty Images"
+      ],
+      "kenya-huawei-ict-competition-2026-winners-digital-talent": [
+        "/articles/kenya-huawei-ict-competition-2026.webp",
+        "Citizen Digital"
+      ],
+      "rise-2026-jos-nigeria-tech-ecosystem-lagos-abuja": ["/articles/rise-2026-jos-nigeria-technology.webp", "NCS"],
+      "airtel-nigeria-single-seater-shops-physical-telecom-retail": [
+        "/articles/airtel-nigeria-single-seater-shops.webp",
+        "Brand Communicator"
+      ],
+      "south-africa-ai-scale-huawei-connect-2026": [
+        "/articles/south-africa-industrial-ai-readiness.webp",
+        "SAAIAwards / X"
+      ],
+      "rentoza-business-rescue-gadget-subscription-risks": [
+        "/articles/rentoza-business-rescue-gadget-subscriptions.webp",
+        "Empower Africa"
+      ],
+      "africa-laptop-llm-challenge-offline-ai-8gb-ram": [
+        "/articles/africa-laptop-llm-challenge-offline-ai.webp",
+        "Techpoint"
+      ],
+      "africa-mrna-vaccine-manufacturing-sovereignty-wits": [
+        "/articles/africa-mrna-vaccine-manufacturing.webp",
+        "Healthbeat"
+      ],
+      "uber-glovo-delivery-hero-african-antitrust-reviews": ["/articles/uber-glovo-antitrust-africa.webp", "MWN"],
+      "south-africa-hyperdev-ai-coding-startup-funding-ex-openai-google": [
+        "/articles/south-africa-hyperdev-ai-startup.webp",
+        "HyperDev"
+      ],
+      "nigeria-six-fintechs-cnbc-statista-top-500-2026": [
+        "/articles/nigeria-six-fintechs-top-500.webp",
+        "CIO Africa"
+      ],
+      "abuja-african-telecommunications-union-cpl-26-summit": [
+        "/articles/africa-telecom-ministers-abuja-rulebook.webp",
+        "Top Africa News"
+      ],
+      "kenya-communications-equipment-importer-licence-250000": [
+        "/articles/kenya-communications-equipment-importer-licence.webp",
+        "CAK"
+      ],
+      "kenya-ai-strategy-msmes-artificial-intelligence-bill-2026": ["/articles/kenya-sme-ai-plan-2026.webp", "CapitalFM"]
+    } as const;
+
+    for (const [slug, [src, credit]] of Object.entries(expectedImages)) {
+      const article = articles.find((entry) => entry.slug === slug);
+      expect(article?.image).toMatchObject({ src, credit, width: 1040, height: 520, type: "image/webp" });
+      expect(article?.image.alt.length).toBeGreaterThan(30);
+    }
   });
 
   it("builds Google News sitemap XML", () => {

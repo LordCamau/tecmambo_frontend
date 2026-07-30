@@ -3,6 +3,7 @@ import { loadDraftArticles } from "@/lib/article-drafts";
 import { buildAfricanFintechNewsArticles } from "@/lib/african-fintech-news-2026";
 import { buildAiArticles } from "@/lib/ai-articles";
 import { buildAfricanTechNewsArticles } from "@/lib/african-tech-news-2026";
+import { buildAfricanTechNewsJuly24Articles } from "@/lib/african-tech-news-july-24-2026";
 import { buildAppleEcosystemArticles } from "@/lib/apple-ecosystem-news-2026";
 import { buildAppleOpenAiLawsuitNewsArticles } from "@/lib/apple-openai-lawsuit-news-2026";
 import { buildComputingLaptopNewsArticles } from "@/lib/computing-laptop-news-2026";
@@ -863,6 +864,16 @@ const africanTechNewsArticles = buildAfricanTechNewsArticles({
     rwanda: rwandaRegion
   }
 });
+const africanTechNewsJuly24Articles = buildAfricanTechNewsJuly24Articles({
+  authors,
+  topics,
+  brands,
+  regions: {
+    kenya: kenyaRegion,
+    nigeria: nigeriaRegion,
+    southAfrica: southAfricaRegion
+  }
+});
 const africanFintechNewsArticles = buildAfricanFintechNewsArticles({
   authors,
   topics,
@@ -917,6 +928,7 @@ export const articles: Article[] = [
   ...kenyaJuly9NewsArticles,
   ...kenyaTechNewsArticles,
   ...africanTechNewsArticles,
+  ...africanTechNewsJuly24Articles,
   ...africanFintechNewsArticles,
   ...regionalArticles,
   ...mobilityArticles,

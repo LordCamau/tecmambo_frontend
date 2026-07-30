@@ -85,10 +85,10 @@ const editorialRecords: EditorialRecord[] = [
     "readTime": "8 min read",
     "image": {
       "src": "/articles/kenya-ca-emerging-technologies-sandbox-2026.webp",
-      "alt": "Kenyan technology product entering a regulated sandbox for supervised AI, telecom and cybersecurity testing.",
-      "credit": "AI-generated illustration by tecMAMBO",
-      "width": 1200,
-      "height": 675,
+      "alt": "Entrance to the Communications Authority of Kenya headquarters in Nairobi.",
+      "credit": "C.A. Kenya",
+      "width": 1040,
+      "height": 520,
       "type": "image/webp"
     },
     "tagSlugs": [
@@ -206,10 +206,10 @@ const editorialRecords: EditorialRecord[] = [
     "readTime": "9 min read",
     "image": {
       "src": "/articles/kenya-ict-authority-oracle-ai-cloud.webp",
-      "alt": "Kenya public-sector cloud and AI systems connected through governance, security and interoperability controls.",
-      "credit": "AI-generated illustration by tecMAMBO",
-      "width": 1200,
-      "height": 675,
+      "alt": "Oracle branding displayed on screens at the New York Stock Exchange.",
+      "credit": "Michael Nagle/Bloomberg / Getty Images",
+      "width": 1040,
+      "height": 520,
       "type": "image/webp"
     },
     "tagSlugs": [
@@ -327,10 +327,10 @@ const editorialRecords: EditorialRecord[] = [
     "readTime": "8 min read",
     "image": {
       "src": "/articles/kenya-huawei-ict-competition-2026.webp",
-      "alt": "Kenyan university teams celebrating global awards in cloud computing, networking and computing.",
-      "credit": "AI-generated illustration by tecMAMBO",
-      "width": 1200,
-      "height": 675,
+      "alt": "Kenyan competitors holding a trophy after winning at the Huawei ICT Competition.",
+      "credit": "Citizen Digital",
+      "width": 1040,
+      "height": 520,
       "type": "image/webp"
     },
     "tagSlugs": [
@@ -443,10 +443,10 @@ const editorialRecords: EditorialRecord[] = [
     "readTime": "8 min read",
     "image": {
       "src": "/articles/rise-2026-jos-nigeria-technology.webp",
-      "alt": "Technology leaders meeting in Jos as digital innovation spreads across regions of Nigeria.",
-      "credit": "AI-generated illustration by tecMAMBO",
-      "width": 1200,
-      "height": 675,
+      "alt": "RISE 2026 technology event logo on a green digital background.",
+      "credit": "NCS",
+      "width": 1040,
+      "height": 520,
       "type": "image/webp"
     },
     "tagSlugs": [
@@ -562,10 +562,10 @@ const editorialRecords: EditorialRecord[] = [
     "readTime": "7 min read",
     "image": {
       "src": "/articles/airtel-nigeria-single-seater-shops.webp",
-      "alt": "Compact telecom retail kiosk providing SIM registration, device and mobile-money support.",
-      "credit": "AI-generated illustration by tecMAMBO",
-      "width": 1200,
-      "height": 675,
+      "alt": "Airtel Nigeria team members outside a newly opened Airtel and Smartcash shop.",
+      "credit": "Brand Communicator",
+      "width": 1040,
+      "height": 520,
       "type": "image/webp"
     },
     "tagSlugs": [
@@ -677,10 +677,10 @@ const editorialRecords: EditorialRecord[] = [
     "readTime": "9 min read",
     "image": {
       "src": "/articles/south-africa-industrial-ai-readiness.webp",
-      "alt": "Industrial AI connecting South African energy, banking, telecom and public services while access gaps remain visible.",
-      "credit": "AI-generated illustration by tecMAMBO",
-      "width": 1200,
-      "height": 675,
+      "alt": "Huawei South Africa Connect 2026 event display inside the conference venue.",
+      "credit": "SAAIAwards / X",
+      "width": 1040,
+      "height": 520,
       "type": "image/webp"
     },
     "tagSlugs": [
@@ -893,10 +893,10 @@ const editorialRecords: EditorialRecord[] = [
     "readTime": "10 min read",
     "image": {
       "src": "/articles/rentoza-business-rescue-gadget-subscriptions.webp",
-      "alt": "Gadget subscription platform balancing devices, customer payments, refunds and business-rescue obligations.",
-      "credit": "AI-generated illustration by tecMAMBO",
-      "width": 1200,
-      "height": 675,
+      "alt": "Two Rentoza representatives standing between branded company displays.",
+      "credit": "Empower Africa",
+      "width": 1040,
+      "height": 520,
       "type": "image/webp"
     },
     "tagSlugs": [
@@ -1124,10 +1124,10 @@ const editorialRecords: EditorialRecord[] = [
     "readTime": "9 min read",
     "image": {
       "src": "/articles/africa-laptop-llm-challenge-offline-ai.webp",
-      "alt": "Standard 8GB laptop running a useful language model completely offline for African use cases.",
-      "credit": "AI-generated illustration by tecMAMBO",
-      "width": 1200,
-      "height": 675,
+      "alt": "Developers and technology exhibitors demonstrating laptop projects at an African deep-tech event.",
+      "credit": "Techpoint",
+      "width": 1040,
+      "height": 520,
       "type": "image/webp"
     },
     "tagSlugs": [
@@ -1343,10 +1343,10 @@ const editorialRecords: EditorialRecord[] = [
     "readTime": "10 min read",
     "image": {
       "src": "/articles/africa-mrna-vaccine-manufacturing.webp",
-      "alt": "African scientists building an end-to-end mRNA vaccine research and manufacturing ecosystem.",
-      "credit": "AI-generated illustration by tecMAMBO",
-      "width": 1200,
-      "height": 675,
+      "alt": "Scientists working with laboratory equipment at an African mRNA research facility.",
+      "credit": "Healthbeat",
+      "width": 1040,
+      "height": 520,
       "type": "image/webp"
     },
     "tagSlugs": [
