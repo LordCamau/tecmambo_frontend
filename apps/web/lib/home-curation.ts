@@ -107,9 +107,9 @@ function pickHeroStories(articles: Article[]) {
 // Editorially pinned hero slider order. These run first, in this exact sequence;
 // any that are missing fall back to the automatic category picks below.
 const pinnedHeroSlugs = [
-  "iphone-18-pro-variable-aperture-rumors",
-  "uber-glovo-delivery-hero-african-antitrust-reviews",
-  "kenya-home-fibre-speed-wars-starlink"
+  "christopher-nolan-the-odyssey-imax-film-camera-breakthrough",
+  "qualcomm-chip-price-hikes-buy-phone-now-or-wait",
+  "pixel-11-glow-hilight-notification-led-leaks"
 ];
 
 function orderHeroStories(articles: Article[]) {

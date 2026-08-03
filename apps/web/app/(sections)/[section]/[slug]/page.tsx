@@ -29,6 +29,7 @@ import { WhyItMatters } from "@/components/signature/WhyItMatters";
 import { NewsletterCard } from "@/components/cards/NewsletterCard";
 import { StoryCard } from "@/components/cards/StoryCard";
 import { AdSlot } from "@/components/ads/AdSlot";
+import { YouTubeEmbed } from "@/components/media/YouTubeEmbed";
 import { JsonLd } from "@/components/seo/JsonLd";
 import styles from "./page.module.css";
 
@@ -88,6 +89,7 @@ function isPhoneReview(article: Article) {
 function ArticleBodyBlock({
   paragraph,
   inlineImages,
+  mediaSlots,
   glossaryTerms,
   glossaryState,
   highlightPrices,
@@ -95,11 +97,37 @@ function ArticleBodyBlock({
 }: {
   paragraph: string;
   inlineImages?: Article["inlineImages"];
+  mediaSlots?: Article["mediaSlots"];
   glossaryTerms: GlossaryTerm[];
   glossaryState: GlossaryLinkState;
   highlightPrices: boolean;
   blockKey: string;
 }) {
+  const mediaSlotId = paragraph.match(/^\[\[media:([a-z0-9-]+)\]\]$/)?.[1];
+  const mediaSlot = mediaSlotId ? mediaSlots?.find((slot) => slot.id === mediaSlotId) : undefined;
+  if (mediaSlotId) {
+    if (!mediaSlot || mediaSlot.status !== "ready") return null;
+    if (mediaSlot.type === "youtube" && mediaSlot.url && mediaSlot.title) {
+      return <YouTubeEmbed caption={mediaSlot.caption} title={mediaSlot.title} url={mediaSlot.url} />;
+    }
+    if ((mediaSlot.type === "image" || mediaSlot.type === "infographic") && mediaSlot.src && mediaSlot.alt) {
+      return (
+        <figure className={styles.inlineImage}>
+          <Image
+            src={mediaSlot.src}
+            alt={mediaSlot.alt}
+            width={mediaSlot.width ?? 1200}
+            height={mediaSlot.height ?? 675}
+            sizes="(min-width: 920px) 720px, calc(100vw - 32px)"
+          />
+          <figcaption>
+            {mediaSlot.caption}{mediaSlot.credit ? ` Credit: ${mediaSlot.credit}.` : ""}
+          </figcaption>
+        </figure>
+      );
+    }
+    return null;
+  }
   const inlineImageId = paragraph.match(/^\[\[image:([a-z0-9-]+)\]\]$/)?.[1];
   const inlineImage = inlineImageId ? inlineImages?.find((image) => image.id === inlineImageId) : undefined;
   if (inlineImage) {
@@ -136,12 +164,14 @@ function listItem(paragraph: string) {
 function ArticleBodyBlocks({
   body,
   inlineImages,
+  mediaSlots,
   glossaryTerms,
   glossaryState,
   highlightPrices
 }: {
   body: string[];
   inlineImages?: Article["inlineImages"];
+  mediaSlots?: Article["mediaSlots"];
   glossaryTerms: GlossaryTerm[];
   glossaryState: GlossaryLinkState;
   highlightPrices: boolean;
@@ -155,6 +185,7 @@ function ArticleBodyBlocks({
         <ArticleBodyBlock
           paragraph={body[index]}
           inlineImages={inlineImages}
+          mediaSlots={mediaSlots}
           glossaryTerms={glossaryTerms}
           glossaryState={glossaryState}
           highlightPrices={highlightPrices}
@@ -391,6 +422,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
         <ArticleBodyBlocks
           body={safeBody}
           inlineImages={article.inlineImages}
+          mediaSlots={article.mediaSlots}
           glossaryTerms={glossaryTerms}
           glossaryState={glossaryState}
           highlightPrices={highlightReviewPrices}

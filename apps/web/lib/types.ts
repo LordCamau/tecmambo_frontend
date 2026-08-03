@@ -53,6 +53,23 @@ export type Deal = {
   verified: boolean;
 };
 
+export type ArticleMediaSlot = {
+  id: string;
+  type: "image" | "infographic" | "youtube";
+  status: "ready" | "placeholder";
+  placement: string;
+  caption: string;
+  title?: string;
+  alt?: string;
+  credit?: string;
+  licensingNote?: string;
+  aspectRatio?: string;
+  src?: string;
+  url?: string;
+  width?: number;
+  height?: number;
+};
+
 export type Article = {
   id: string;
   slug: string;
@@ -99,6 +116,7 @@ export type Article = {
     height?: number;
     type?: string;
   }>;
+  mediaSlots?: ArticleMediaSlot[];
   tags: Tag[];
   regions?: RegionTerm[];
   faq?: Array<{ question: string; answer: string }>;

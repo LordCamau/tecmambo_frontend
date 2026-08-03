@@ -10,6 +10,7 @@ import { buildComputingLaptopNewsArticles } from "@/lib/computing-laptop-news-20
 import { buildEditorialBundleArticles } from "@/lib/editorial-bundle-july-2026";
 import { buildEditorialJuly13Articles } from "@/lib/editorial-bundle-july-13-2026";
 import { buildEditorialJuly30Articles } from "@/lib/editorial-bundle-july-30-2026";
+import { buildEditorialAugust1Articles } from "@/lib/editorial-bundle-august-1-2026";
 import { buildEditorialJuly7Articles } from "@/lib/editorial-bundle-july-7-2026";
 import { buildEvMobilityNewsArticles } from "@/lib/ev-mobility-news-2026";
 import { buildGlobalOpinionArticles } from "@/lib/global-opinion-essays-2026";
@@ -17,6 +18,7 @@ import { buildHardwareGadgetsNewsArticles } from "@/lib/hardware-gadgets-news-20
 import { buildKenyaJuly9NewsArticles } from "@/lib/kenya-tech-news-july-9-2026";
 import { buildKenyaJuly17NewsArticles } from "@/lib/kenya-tech-news-july-17-2026";
 import { buildKenyaTechNewsArticles } from "@/lib/kenya-tech-news-july-2026";
+import { buildOdysseyImaxArticle } from "@/lib/odyssey-imax-feature-2026";
 import { buildPrimeValeArticle } from "@/lib/primevale-launch-article";
 import { buildSamsungUnpackedJuly2026Article } from "@/lib/samsung-unpacked-july-2026-article";
 import { buildVlcFreeSoftwareArticle } from "@/lib/vlc-free-software-story";
@@ -54,6 +56,15 @@ export const topics: Tag[] = [
   { name: "Computing", slug: "computing", kind: "topic" },
   { name: "Social Media", slug: "social-media", kind: "topic" },
   { name: "Entertainment", slug: "entertainment", kind: "topic" },
+  { name: "Christopher Nolan", slug: "christopher-nolan", kind: "topic" },
+  { name: "The Odyssey", slug: "the-odyssey", kind: "topic" },
+  { name: "Hoyte van Hoytema", slug: "hoyte-van-hoytema", kind: "topic" },
+  { name: "Film Cameras", slug: "film-cameras", kind: "topic" },
+  { name: "70mm Film", slug: "70mm-film", kind: "topic" },
+  { name: "Cinema Technology", slug: "cinema-technology", kind: "topic" },
+  { name: "Film Technology", slug: "film-technology", kind: "topic" },
+  { name: "Cameras", slug: "cameras", kind: "topic" },
+  { name: "Cinema", slug: "cinema", kind: "topic" },
   { name: "TVs", slug: "tvs", kind: "topic" },
   { name: "Home Entertainment", slug: "home-entertainment", kind: "topic" },
   { name: "Digital Ownership", slug: "digital-ownership", kind: "topic" },
@@ -83,6 +94,23 @@ export const topics: Tag[] = [
   { name: "Home Internet", slug: "home-internet", kind: "topic" },
   { name: "Networking", slug: "networking", kind: "topic" },
   { name: "Power & batteries", slug: "power-batteries", kind: "topic" },
+  { name: "Smartphone Design", slug: "smartphone-design", kind: "topic" },
+  { name: "Notifications", slug: "notifications", kind: "topic" },
+  { name: "Google Pixel 11", slug: "google-pixel-11", kind: "topic" },
+  { name: "Pixel Glow", slug: "pixel-glow", kind: "topic" },
+  { name: "HiLight", slug: "hilight", kind: "topic" },
+  { name: "Concept Phone", slug: "concept-phone", kind: "topic" },
+  { name: "IFA 2026", slug: "ifa-2026", kind: "topic" },
+  { name: "Display Technology", slug: "display-technology", kind: "topic" },
+  { name: "Chipsets", slug: "chipsets", kind: "topic" },
+  { name: "Smartphone Prices", slug: "smartphone-prices", kind: "topic" },
+  { name: "Buying Advice", slug: "buying-advice", kind: "topic" },
+  { name: "Midrange Phones", slug: "midrange-phones", kind: "topic" },
+  { name: "Smartphone Batteries", slug: "smartphone-batteries", kind: "topic" },
+  { name: "Silicon-Carbon", slug: "silicon-carbon", kind: "topic" },
+  { name: "OnePlus N6x", slug: "oneplus-n6x", kind: "topic" },
+  { name: "Battery Life", slug: "battery-life", kind: "topic" },
+  { name: "Charging", slug: "charging", kind: "topic" },
   { name: "Accessories", slug: "accessories", kind: "topic" },
   { name: "Headphones", slug: "headphones", kind: "topic" },
   { name: "Smart Watches", slug: "smart-watches", kind: "topic" },
@@ -139,6 +167,13 @@ export const brands: Tag[] = [
   { name: "Vodacom", slug: "vodacom", kind: "brand" },
   { name: "M-Pesa", slug: "m-pesa", kind: "brand" },
   { name: "TECNO", slug: "tecno", kind: "brand" },
+  { name: "IMAX", slug: "imax", kind: "brand" },
+  { name: "Technicolor", slug: "technicolor", kind: "brand" },
+  { name: "Qualcomm", slug: "qualcomm", kind: "brand" },
+  { name: "Snapdragon", slug: "snapdragon", kind: "brand" },
+  { name: "TSMC", slug: "tsmc", kind: "brand" },
+  { name: "OnePlus", slug: "oneplus", kind: "brand" },
+  { name: "Motorola", slug: "motorola", kind: "brand" },
   { name: "Spiro", slug: "spiro", kind: "brand" },
   { name: "Shuttlers", slug: "shuttlers", kind: "brand" },
   { name: "Aions Ventures", slug: "aions-ventures", kind: "brand" },
@@ -813,6 +848,8 @@ const editorialJuly30Articles = buildEditorialJuly30Articles({
     southAfrica: southAfricaRegion
   }
 });
+const editorialAugust1Articles = buildEditorialAugust1Articles({ authors, topics, brands });
+const odysseyImaxArticle = buildOdysseyImaxArticle({ authors, topics, brands });
 const editorialJuly7Articles = buildEditorialJuly7Articles({
   authors,
   topics,
@@ -912,10 +949,12 @@ function attachRegions(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  odysseyImaxArticle,
   primeValeArticle,
   vlcFreeSoftwareArticle,
   ...globalOpinionArticles,
   ...appleOpenAiLawsuitNewsArticles,
+  ...editorialAugust1Articles,
   ...editorialJuly30Articles,
   ...editorialJuly13Articles,
   ...appleEcosystemArticles,

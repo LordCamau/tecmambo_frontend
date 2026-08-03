@@ -1,0 +1,78 @@
+.video {
+  display: grid;
+  gap: 8px;
+  margin: 8px 0 4px;
+}
+
+.frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #0d0c11;
+  box-shadow: var(--shadow-soft);
+}
+
+.frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.facade {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 14px;
+  padding: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+.facade strong {
+  max-width: 34rem;
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: clamp(20px, 3vw, 28px);
+  line-height: 1.2;
+}
+
+.facade p {
+  max-width: 34rem;
+  margin: 0;
+  color: #cbc8d4;
+}
+
+.facade button,
+.facade a {
+  border: 1px solid color-mix(in srgb, var(--purple) 72%, white);
+  border-radius: var(--radius-sm);
+  background: var(--button-primary-bg);
+  color: var(--button-primary-fg);
+  padding: 10px 14px;
+  font: inherit;
+  font-weight: 700;
+}
+
+.facade button {
+  cursor: pointer;
+}
+
+.facade button:focus-visible,
+.facade a:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
+}
+
+.video figcaption {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.video figcaption a {
+  color: var(--purple-dark);
+  font-weight: 700;
+}

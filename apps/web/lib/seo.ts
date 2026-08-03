@@ -210,7 +210,7 @@ export function articleJsonLd(article: Article): WithContext<SchemaArticle | Rev
     article.subhead,
     article.excerpt,
     article.whyItMatters,
-    ...article.body,
+    ...article.body.filter((block) => !/^\[\[media:[a-z0-9-]+\]\]$/.test(block)),
     article.closingLine ?? ""
   ]
     .join(" ")

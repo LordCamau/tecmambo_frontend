@@ -52,9 +52,9 @@ describe("content generators", () => {
 
     expect(heroStories).toHaveLength(3);
     expect(heroStories.map((article) => article.slug)).toEqual([
-      "iphone-18-pro-variable-aperture-rumors",
-      "uber-glovo-delivery-hero-african-antitrust-reviews",
-      "kenya-home-fibre-speed-wars-starlink"
+      "christopher-nolan-the-odyssey-imax-film-camera-breakthrough",
+      "qualcomm-chip-price-hikes-buy-phone-now-or-wait",
+      "pixel-11-glow-hilight-notification-led-leaks"
     ]);
     expect(curation.supportingStories).toHaveLength(2);
     expect(curation.latestRail).toHaveLength(5);

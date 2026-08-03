@@ -134,7 +134,17 @@ export async function imageSitemapXml() {
   const urls = articles
     .map((article) => {
       const pageUrl = `${siteUrl}${articlePath(article.format, article.slug)}`;
-      const images = [article.image, ...(article.inlineImages ?? [])];
+      const mediaImages = (article.mediaSlots ?? [])
+        .filter((slot) => slot.status === "ready" && slot.type !== "youtube" && slot.src && slot.alt)
+        .map((slot) => ({
+          src: slot.src!,
+          alt: slot.alt!,
+          credit: slot.credit ?? "tecMAMBO",
+          width: slot.width,
+          height: slot.height
+        }));
+      const images = [article.image, ...(article.inlineImages ?? []), ...mediaImages]
+        .filter((image, index, all) => all.findIndex((candidate) => candidate.src === image.src) === index);
       const imageEntries = images
         .map(
           (image) =>

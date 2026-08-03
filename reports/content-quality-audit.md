@@ -1,10 +1,10 @@
 # tecMAMBO content quality audit
 
-Generated: 2026-07-30T17:53:01.471Z
+Generated: 2026-08-03T10:34:39.793Z
 
-Items audited: 387
+Items audited: 425
 
-Publicly eligible articles: 131
+Publicly eligible articles: 136
 
 Articles retained outside discovery: 39
 
@@ -12,9 +12,9 @@ Indexable glossary terms: 0
 
 ## Editorial action groups
 
-- Keep and index: 176
+- Keep and index: 182
 - Keep but improve: 98
-- Noindex temporarily: 211
+- Noindex temporarily: 243
 - Unpublish immediately: 0
 - Requires editorial verification: 39
 - Requires original testing evidence: 3
@@ -23,6 +23,11 @@ Indexable glossary terms: 0
 
 | Type | Title | URL | Robots | Recommended action | Reason |
 | --- | --- | --- | --- | --- | --- |
+| article | The Mechanical Myth: How Christopher Nolan's The Odyssey Tamed the IMAX Beast | /opinion/christopher-nolan-the-odyssey-imax-film-camera-breakthrough | index, follow | keep | No blocking quality issue detected. |
+| article | 7,000mAh phone batteries are becoming normal, but capacity is not the whole story | /explainers/7000mah-phone-batteries-silicon-carbon-explained | index, follow | keep | No blocking quality issue detected. |
+| article | Qualcomm chip prices are rising. Should you buy a phone now or wait? | /wallet-watch/qualcomm-chip-price-hikes-buy-phone-now-or-wait | index, follow | keep | No blocking quality issue detected. |
+| article | TECNO's 0mm-bezel concept looks stunning. Your palm may disagree | /opinion/tecno-0mm-bezel-concept-phone-engineering-problems | index, follow | keep | No blocking quality issue detected. |
+| article | Pixel 11's glowing camera bar could revive the notification LED, if Google makes it useful | /opinion/pixel-11-glow-hilight-notification-led-leaks | index, follow | keep | No blocking quality issue detected. |
 | article | Kenya's emerging technology sandbox deadline is here. What happens next? | /explainers/kenya-ca-emerging-technologies-sandbox-deadline-2026 | index, follow | keep | No blocking quality issue detected. |
 | article | Kenya wants Oracle's cloud and AI expertise. It should negotiate like the data matters | /opinion/kenya-ict-authority-oracle-ai-cloud-vendor-lock-in | index, follow | keep | No blocking quality issue detected. |
 | article | Kenya won big at Huawei's ICT Competition. Medals are only the beginning | /news/kenya-huawei-ict-competition-2026-winners-digital-talent | index, follow | keep | No blocking quality issue detected. |
@@ -316,7 +321,16 @@ Indexable glossary terms: 0
 | archive | Privacy | /topics/privacy | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Computing | /topics/computing | index, follow | keep | Archive has at least three eligible stories. |
 | archive | Social Media | /topics/social-media | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Entertainment | /topics/entertainment | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Entertainment | /topics/entertainment | index, follow | keep | Archive has at least three eligible stories. |
+| archive | Christopher Nolan | /topics/christopher-nolan | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | The Odyssey | /topics/the-odyssey | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Hoyte van Hoytema | /topics/hoyte-van-hoytema | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Film Cameras | /topics/film-cameras | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | 70mm Film | /topics/70mm-film | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Cinema Technology | /topics/cinema-technology | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Film Technology | /topics/film-technology | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Cameras | /topics/cameras | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Cinema | /topics/cinema | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | TVs | /topics/tvs | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Home Entertainment | /topics/home-entertainment | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Digital Ownership | /topics/digital-ownership | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
@@ -346,6 +360,23 @@ Indexable glossary terms: 0
 | archive | Home Internet | /topics/home-internet | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Networking | /topics/networking | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Power & batteries | /topics/power-batteries | index, follow | keep | Archive has at least three eligible stories. |
+| archive | Smartphone Design | /topics/smartphone-design | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Notifications | /topics/notifications | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Google Pixel 11 | /topics/google-pixel-11 | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Pixel Glow | /topics/pixel-glow | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | HiLight | /topics/hilight | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Concept Phone | /topics/concept-phone | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | IFA 2026 | /topics/ifa-2026 | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Display Technology | /topics/display-technology | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Chipsets | /topics/chipsets | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Smartphone Prices | /topics/smartphone-prices | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Buying Advice | /topics/buying-advice | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Midrange Phones | /topics/midrange-phones | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Smartphone Batteries | /topics/smartphone-batteries | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Silicon-Carbon | /topics/silicon-carbon | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | OnePlus N6x | /topics/oneplus-n6x | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Battery Life | /topics/battery-life | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Charging | /topics/charging | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Accessories | /topics/accessories | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Headphones | /topics/headphones | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Smart Watches | /topics/smart-watches | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
@@ -399,6 +430,13 @@ Indexable glossary terms: 0
 | archive | Vodacom | /brands/vodacom | index, follow | keep | Archive has at least three eligible stories. |
 | archive | M-Pesa | /brands/m-pesa | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | TECNO | /brands/tecno | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | IMAX | /brands/imax | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Technicolor | /brands/technicolor | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Qualcomm | /brands/qualcomm | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Snapdragon | /brands/snapdragon | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | TSMC | /brands/tsmc | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | OnePlus | /brands/oneplus | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Motorola | /brands/motorola | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Spiro | /brands/spiro | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Shuttlers | /brands/shuttlers | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Aions Ventures | /brands/aions-ventures | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
