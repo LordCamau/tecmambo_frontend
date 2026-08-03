@@ -8,7 +8,7 @@
   background: var(--badge-bg);
   color: var(--badge-fg);
   padding: 6px 10px;
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 11px;
   line-height: 1;
   letter-spacing: 0;

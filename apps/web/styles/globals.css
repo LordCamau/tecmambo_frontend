@@ -70,8 +70,8 @@ select {
   background: var(--button-primary-bg);
   color: var(--button-primary-fg);
   padding: 10px 14px;
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-weight: 600;
 }
 
 .skip-link:focus {
@@ -88,8 +88,12 @@ select {
   margin-inline: auto;
 }
 
-.mono {
-  font-family: var(--font-mono), ui-monospace, monospace;
+.font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
 }
 
 .visually-hidden {

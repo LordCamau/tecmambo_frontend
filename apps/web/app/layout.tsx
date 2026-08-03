@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { Inter, Space_Grotesk, Space_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Inter } from "next/font/google";
 import Script from "next/script";
 import "@/styles/globals.css";
 import { AdSenseScript } from "@/components/ads/AdSenseScript";
@@ -15,23 +15,16 @@ import { consentModeDenied } from "@/lib/cookie-consent";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import { siteDescription, sitePreviewImage, siteTitle } from "@/lib/site-metadata";
 
-const spaceGrotesk = Space_Grotesk({
+const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
-  variable: "--font-display",
-  weight: ["500"],
-  display: "swap"
-});
-
-const spaceMono = Space_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  weight: ["400"],
+  variable: "--font-bricolage",
+  weight: ["500", "600", "700"],
   display: "swap"
 });
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-body",
+  variable: "--font-inter",
   weight: ["400", "500", "600"],
   display: "swap"
 });
@@ -115,7 +108,12 @@ const auroraIntroScript = `
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="js-intro" data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${bricolage.variable} ${inter.variable} js-intro`}
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
       <head>
         <meta name="google-adsense-account" content="ca-pub-6410608625427921" />
         <style>{`
@@ -128,7 +126,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         `}</style>
         <Script id="tecmambo-aurora-intro-boot" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: auroraIntroScript }} />
       </head>
-      <body className={`${spaceGrotesk.variable} ${spaceMono.variable} ${inter.variable}`}>
+      <body>
         <AuroraIntro />
         <ThemeProvider>
           <AdSenseScript />

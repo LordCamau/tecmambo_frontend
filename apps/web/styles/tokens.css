@@ -1,5 +1,7 @@
 :root {
   color-scheme: light;
+  --font-display: var(--font-bricolage);
+  --font-body: var(--font-inter);
   --brand-purple: #4C1FC4;
   --brand-purple-mid: #3F18A8;
   --brand-purple-dark: #2E1568;

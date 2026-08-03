@@ -274,8 +274,9 @@
   margin: 0;
   font-family: var(--font-display), system-ui, sans-serif;
   font-size: clamp(32px, 3.1vw, 46px);
-  font-weight: 500;
-  line-height: 1.04;
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
 }
 
 .subhead {
@@ -377,8 +378,8 @@
   margin: 0;
   font-family: var(--font-display), system-ui, sans-serif;
   font-size: clamp(18px, 1.48vw, 21px);
-  font-weight: 500;
-  line-height: 1.12;
+  font-weight: 600;
+  line-height: 1.16;
 }
 
 .supportBody .heroMeta {
@@ -415,7 +416,7 @@
 .laneHead p {
   margin: 0 0 7px;
   color: var(--purple-dark);
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 12px;
 }
 
@@ -427,16 +428,17 @@
   color: var(--purple);
   font-family: var(--font-display), system-ui, sans-serif;
   font-size: clamp(31px, 2.75vw, 40px);
-  font-weight: 500;
-  line-height: 1;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
 }
 
 .railHead a,
 .laneHead a,
 .doubleLink a {
   color: var(--purple-dark);
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-weight: 600;
 }
 
 .railHead a {
@@ -479,7 +481,7 @@
 
 .railItem small {
   color: var(--purple);
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 11px;
 }
 
@@ -507,8 +509,9 @@
   margin: 0;
   font-family: var(--font-display), system-ui, sans-serif;
   font-size: 31px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.12;
+  letter-spacing: -0.015em;
 }
 
 .featureLane {
@@ -633,12 +636,13 @@
 .featureCopy h3 {
   margin: 0;
   font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
-  line-height: 1.1;
+  font-weight: 600;
+  line-height: 1.14;
 }
 
 .featureLead h3 {
   font-size: clamp(28px, 3.35vw, 42px);
+  letter-spacing: -0.02em;
 }
 
 .featureSecond h3 {
@@ -676,7 +680,7 @@
 .formatGrid strong {
   font-family: var(--font-display), system-ui, sans-serif;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .formatGrid a > span:not([class]) {
@@ -704,7 +708,7 @@
 .glossarySpotlight strong {
   font-family: var(--font-display), system-ui, sans-serif;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .glossarySpotlight span {

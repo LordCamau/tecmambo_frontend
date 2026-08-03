@@ -13,7 +13,7 @@
 
 .kicker {
   margin: 0 0 4px;
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 12px;
 }
 
@@ -21,7 +21,7 @@
   margin: 0;
   font-family: var(--font-display), system-ui, sans-serif;
   font-size: 26px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.15;
 }
 
@@ -54,8 +54,8 @@
   cursor: pointer;
   background: var(--button-accent-bg);
   color: var(--button-accent-fg);
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-weight: 600;
 }
 
 @media (max-width: 640px) {

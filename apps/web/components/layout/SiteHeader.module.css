@@ -21,7 +21,7 @@
   display: flex;
   justify-content: center;
   gap: 16px;
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -144,7 +144,7 @@
 .drawerPanel > p {
   margin: 0;
   color: var(--purple-dark);
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 12px;
 }
 
@@ -180,8 +180,13 @@
 .featureCard strong,
 .moreLinks a,
 .socialLinks a {
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-weight: 500;
+}
+
+.featureCard strong {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 600;
 }
 
 .megaLinkGroup small {
@@ -205,14 +210,14 @@
   background: var(--pill-bg);
   color: var(--pill-fg);
   padding: 4px 8px;
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 11px;
 }
 
 .seeAll {
   width: fit-content;
   color: var(--purple-dark);
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-weight: 500;
 }
 
@@ -241,7 +246,7 @@
 
 .featureCard small {
   color: var(--purple-dark);
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 11px;
 }
 
@@ -289,7 +294,7 @@
   place-items: center;
   width: 18px;
   height: 18px;
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 16px;
   line-height: 1;
 }
@@ -353,7 +358,8 @@
   align-content: start;
   gap: 8px;
   overflow-y: auto;
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-weight: 500;
 }
 
 .drawerNav > a,

@@ -11,7 +11,7 @@
 .controls p {
   margin: 0 0 6px;
   color: var(--why-heading);
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 12px;
 }
 
@@ -20,7 +20,7 @@
   color: var(--text);
   font-family: var(--font-display), system-ui, sans-serif;
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.12;
 }
 

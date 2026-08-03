@@ -14,7 +14,7 @@
   background: var(--pill-bg);
   color: var(--pill-fg);
   padding: 5px 9px;
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 11px;
 }
 

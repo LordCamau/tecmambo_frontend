@@ -51,8 +51,8 @@
   margin: 0;
   font-family: var(--font-display), system-ui, sans-serif;
   font-size: 21px;
-  font-weight: 500;
-  line-height: 1.18;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 .body p {
@@ -73,7 +73,7 @@
   background: var(--price-bg);
   color: var(--price-fg);
   padding: 5px 9px;
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 12px;
 }
 

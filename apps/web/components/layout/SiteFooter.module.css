@@ -48,7 +48,7 @@
 
 .tagline {
   color: var(--white);
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 19px;
   font-weight: 500;
 }
@@ -108,7 +108,7 @@
 .eyebrow {
   margin: 0;
   color: var(--footer-accent);
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0;
@@ -126,7 +126,7 @@
 .privacyNote a,
 .utilityLinks a {
   color: var(--footer-link);
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-weight: 500;
 }
 
@@ -147,7 +147,7 @@
 .newsletter h2 {
   margin: 0;
   color: var(--white);
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 24px;
   font-weight: 500;
   line-height: 1.14;
@@ -185,7 +185,7 @@
   color: var(--button-accent-fg);
   padding: 0 13px;
   cursor: pointer;
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-weight: 700;
 }
 

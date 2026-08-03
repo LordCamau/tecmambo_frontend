@@ -13,7 +13,7 @@
   background: color-mix(in srgb, var(--purple) 12%, var(--surface));
   color: var(--purple-dark);
   padding: 5px 10px;
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 12px;
   font-weight: 700;
   line-height: 1.2;

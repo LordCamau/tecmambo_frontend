@@ -12,7 +12,7 @@
 .eyebrow {
   margin: 0 0 8px;
   color: var(--purple-dark);
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 12px;
 }
 
@@ -20,7 +20,7 @@
   margin: 0;
   font-family: var(--font-display), system-ui, sans-serif;
   font-size: clamp(36px, 5vw, 54px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.04;
 }
 
@@ -64,8 +64,8 @@
   gap: 8px;
   align-items: center;
   color: var(--purple-dark);
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-weight: 600;
 }
 
 .picker input {
@@ -163,7 +163,7 @@
 .priorityHead h3 {
   margin: 0;
   font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .controls h2 {
@@ -185,7 +185,7 @@
   background: var(--pill-bg);
   color: var(--pill-fg);
   padding: 6px 10px;
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 12px;
 }
 
@@ -221,7 +221,7 @@
 
 .sliders strong {
   color: var(--text);
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
 }
 
 .summary {
@@ -287,7 +287,7 @@
 .summaryCards span,
 .phoneCard span {
   color: var(--purple-dark);
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 11px;
 }
 
@@ -366,7 +366,7 @@
   border-radius: 50%;
   background: var(--button-primary-bg);
   color: var(--button-primary-fg);
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 22px;
 }
 
@@ -382,7 +382,7 @@
 
 .phoneCard dt {
   color: var(--text-muted);
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 11px;
 }
 
@@ -404,7 +404,7 @@
   color: var(--purple-dark);
   font-family: var(--font-display), system-ui, sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .scoreBar {
@@ -434,7 +434,7 @@
 }
 
 .scoreBar strong {
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
 }
 
 .tableWrap {
@@ -454,7 +454,7 @@
   color: var(--purple-dark);
   font-family: var(--font-display), system-ui, sans-serif;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .specTable th,
@@ -467,8 +467,8 @@
 
 .specTable th {
   color: var(--text);
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-weight: 600;
 }
 
 .specTable tbody th {

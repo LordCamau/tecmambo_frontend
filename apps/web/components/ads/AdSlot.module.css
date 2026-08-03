@@ -9,6 +9,6 @@
 }
 
 .slot span {
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 11px;
 }

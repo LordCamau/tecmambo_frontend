@@ -16,16 +16,17 @@
 
 .kickerRow a {
   color: var(--purple-dark);
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-weight: 600;
 }
 
 .header h1 {
   margin: 0;
   font-family: var(--font-display), system-ui, sans-serif;
   font-size: clamp(36px, 6vw, 58px);
-  font-weight: 500;
-  line-height: 1.02;
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
 }
 
 .subhead {
@@ -109,8 +110,8 @@
 .body h3 {
   margin: 18px 0 0;
   font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
-  line-height: 1.12;
+  font-weight: 600;
+  line-height: 1.16;
 }
 
 .body h2 {
@@ -197,14 +198,14 @@
 .dealBox p {
   margin: 0 0 6px;
   color: var(--price-fg);
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 11px;
 }
 
 .dealBox h2 {
   margin: 0 0 8px;
   font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .dealBox span {
@@ -213,7 +214,7 @@
   background: var(--price-bg);
   color: var(--price-fg);
   padding: 6px 10px;
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 13px;
 }
 
@@ -229,8 +230,8 @@
   background: var(--button-primary-bg);
   color: var(--button-primary-fg);
   padding: 10px 14px;
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-weight: 600;
 }
 
 .verdict {
@@ -252,7 +253,7 @@
   border-radius: 50%;
   background: var(--button-primary-bg);
   color: var(--button-primary-fg);
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 24px;
 }
 
@@ -261,7 +262,7 @@
 .related h2 {
   margin: 0;
   font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .verdict p {
@@ -303,8 +304,8 @@
 .faq summary {
   cursor: pointer;
   color: var(--text);
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-weight: 600;
 }
 
 .faq p {
@@ -325,7 +326,7 @@
   margin: 0;
   font-family: var(--font-display), system-ui, sans-serif;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .sources ul {
@@ -353,8 +354,8 @@
   background: var(--button-primary-bg);
   color: var(--button-primary-fg);
   padding: 10px 14px;
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-weight: 600;
 }
 
 .related,
@@ -381,7 +382,7 @@
 .topicHeader p {
   margin: 0 0 8px;
   color: var(--purple-dark);
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 12px;
 }
 
@@ -389,8 +390,9 @@
   margin: 0;
   font-family: var(--font-display), system-ui, sans-serif;
   font-size: 46px;
-  font-weight: 500;
-  line-height: 1.05;
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
 }
 
 .topicHeader span {
@@ -412,7 +414,7 @@
   background: var(--surface);
   color: var(--text-secondary);
   padding: 8px 12px;
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 12px;
 }
 

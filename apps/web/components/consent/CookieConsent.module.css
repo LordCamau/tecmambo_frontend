@@ -22,7 +22,7 @@
 .dialogHeader h2,
 .category h3 {
   margin: 0;
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-weight: 500;
   line-height: 1.12;
 }
@@ -45,7 +45,7 @@
 .links a,
 .footerLine a {
   color: var(--purple-dark);
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-weight: 500;
 }
 
@@ -66,7 +66,7 @@
   color: var(--button-primary-fg);
   cursor: pointer;
   padding: 0 13px;
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -110,7 +110,7 @@
 .dialogHeader p {
   margin: 0 0 5px;
   color: var(--purple-dark);
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 12px;
 }
 
@@ -198,7 +198,7 @@
   background: var(--pill-bg);
   color: var(--pill-fg);
   padding: 5px 9px;
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 11px;
 }
 

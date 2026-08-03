@@ -18,7 +18,7 @@
 .placeholderBox p {
   margin: 0;
   color: var(--purple-dark);
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 12px;
 }
 
@@ -26,7 +26,7 @@
   margin: 0;
   font-family: var(--font-display), system-ui, sans-serif;
   font-size: clamp(44px, 7vw, 72px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.02;
 }
 
@@ -48,7 +48,7 @@
 .placeholderBox h2 {
   color: var(--why-heading);
   font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .summary p:last-child,
@@ -64,7 +64,7 @@
 .section a,
 .placeholderBox a {
   color: var(--purple-dark);
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-weight: 500;
 }
 
@@ -154,7 +154,7 @@
   background: var(--pill-bg);
   color: var(--pill-fg);
   padding: 5px 9px;
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 11px;
   line-height: 1.35;
 }
@@ -169,7 +169,7 @@
   margin: 0;
   font-family: var(--font-display), system-ui, sans-serif;
   font-size: clamp(26px, 3vw, 34px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.12;
 }
 
@@ -204,10 +204,10 @@
     padding: 12px 14px;
   }
 
-  .mobileToc summary {
+.mobileToc summary {
     cursor: pointer;
     color: var(--purple-dark);
-    font-family: var(--font-display), system-ui, sans-serif;
+    font-family: var(--font-body), Inter, system-ui, sans-serif;
     font-weight: 500;
   }
 

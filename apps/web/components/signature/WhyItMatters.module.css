@@ -22,8 +22,8 @@
 .label {
   margin: 0 0 4px;
   color: var(--why-heading);
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-weight: 600;
   line-height: 1.2;
 }
 

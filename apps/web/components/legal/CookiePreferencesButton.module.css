@@ -12,7 +12,7 @@
   background: var(--button-primary-bg);
   color: var(--button-primary-fg);
   cursor: pointer;
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-weight: 500;
 }
 

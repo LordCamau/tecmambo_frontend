@@ -13,7 +13,7 @@
 .founderCard > div > p {
   margin: 0;
   color: var(--purple-dark);
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 12px;
 }
 
@@ -25,7 +25,7 @@
 .cta h2 {
   margin: 0;
   font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.05;
 }
 
@@ -120,8 +120,8 @@
 .personCard a,
 .growingCard a {
   color: var(--purple-dark);
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-weight: 600;
 }
 
 .valueGrid {
@@ -176,7 +176,7 @@
   background: var(--surface);
   color: var(--text-secondary);
   padding: 8px 12px;
-  font-family: var(--font-mono), ui-monospace, monospace;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 12px;
 }
 
@@ -265,8 +265,8 @@
   background: var(--white);
   color: var(--brand-purple-dark);
   padding: 10px 13px;
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-weight: 600;
 }
 
 @media (max-width: 900px) {
