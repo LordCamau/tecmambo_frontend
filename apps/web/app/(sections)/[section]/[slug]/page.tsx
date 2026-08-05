@@ -355,7 +355,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
 
       <figure className={styles.leadImage}>
         <Image src={article.image.src} alt={article.image.alt} fill priority sizes="(min-width: 920px) 90vw, 100vw" />
-        <figcaption>{article.image.credit}</figcaption>
+        {article.image.credit ? <figcaption>{article.image.credit}</figcaption> : null}
       </figure>
 
       <div className={`readable ${styles.body}`}>

@@ -67,7 +67,7 @@ export function articleQualityIssues(article: Article): QualityIssue[] {
   if (!article.subhead.trim() || !article.excerpt.trim()) add("missing-summary", "The article is missing its subhead or excerpt.");
   if (!article.whyItMatters.trim()) add("missing-value", "The article has no why it matters explanation.");
   if (!article.author?.name?.trim()) add("missing-author", "The article has no named author.");
-  if (!article.image?.src?.trim() || !article.image?.alt?.trim() || !article.image?.credit?.trim()) add("missing-image-metadata", "The lead image is missing a source, alt text, or credit.");
+  if (!article.image?.src?.trim() || !article.image?.alt?.trim() || (!article.image?.credit?.trim() && !article.image?.creditOmitted)) add("missing-image-metadata", "The lead image is missing a source, alt text, or credit decision.");
   if (article.body.length < 3 || articleWordCount(article) < 300) add("thin-article", "The article has less than 300 words or fewer than three body sections.", "medium");
   if (article.format === "wallet-watch" && article.contentFormat === "buying_guide" && (!article.sources?.length || article.deal?.verified === false)) {
     add("unverified-buying-guide", "The buying guide lacks sufficient verification evidence.");

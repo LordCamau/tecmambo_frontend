@@ -243,9 +243,11 @@ const editorialRecords: EditorialRecord[] = [
       "That does not mean the device has no frame, seals, display driver, structural support or internal clearance. Those elements still need to exist somewhere.",
       "The claim means the active display visually reaches the edge when viewed from the front.",
       "This is a design and packaging achievement, not the disappearance of physics.",
+      "[[media:tecno-zero-bezel-front-comparison]]",
       "## Why phone makers keep chasing an all-screen front",
       "The benefits are easy to understand.",
       "A borderless screen can provide a larger display inside the same body size, a more immersive video experience, cleaner industrial design, more visual impact in stores, better gaming immersion and smaller dimensions for a given screen diagonal.",
+      "[[media:tecno-zero-bezel-landscape-display]]",
       "Smartphone hardware has matured. Most rectangular phones look increasingly similar.",
       "Bezels remain one of the few measurements that a buyer can see immediately without opening a settings menu.",
       "That makes them valuable marketing territory.",
@@ -261,6 +263,7 @@ const editorialRecords: EditorialRecord[] = [
       "## The palm-rejection problem",
       "People do not hold phones by levitation.",
       "Fingers and palms wrap around the sides. If active touch pixels reach every edge, normal grip can resemble intentional input.",
+      "[[media:tecno-zero-bezel-handheld-portrait]]",
       "Modern curved-screen phones already struggle with accidental touches. Software attempts to identify the difference between a supporting palm and a deliberate tap.",
       "A 0mm bezel increases the importance of that system.",
       "TECNO will need to consider grip position, left-handed and right-handed use, gaming controls, keyboard edges, one-handed scrolling, landscape video, accessibility gestures, cases, wet hands, gloves and different hand sizes.",
@@ -322,7 +325,7 @@ const editorialRecords: EditorialRecord[] = [
       "The company earns the breakthrough only when the screen survives pockets, palms, cases, children and concrete."
     ],
     "publishedAt": "2026-08-03T11:21:00+03:00",
-    "updatedAt": "2026-08-03T11:21:00+03:00",
+    "updatedAt": "2026-08-04T21:38:00+03:00",
     "readTime": "10 min read",
     "image": {
       "src": "/articles/tecno-0mm-bezeless-display-tecmambo.jpg",
@@ -332,6 +335,50 @@ const editorialRecords: EditorialRecord[] = [
       "height": 520,
       "type": "image/jpeg"
     },
+    "mediaSlots": [
+      {
+        "id": "tecno-zero-bezel-front-comparison",
+        "type": "image",
+        "status": "ready",
+        "placement": "after-zero-bezel-explanation",
+        "caption": "The concept render compares two nearly all-screen fronts, one with a pill-shaped cut-out and one with a small hole-punch camera.",
+        "alt": "Two near-borderless concept phones displayed side by side with different front camera cut-outs.",
+        "credit": "X / UniverseIce",
+        "licensingNote": "Supplied for publication with attribution to X / UniverseIce.",
+        "aspectRatio": "2:1",
+        "src": "/articles/tecno-0mm-bezel-front-comparison.jpg",
+        "width": 1040,
+        "height": 520
+      },
+      {
+        "id": "tecno-zero-bezel-landscape-display",
+        "type": "image",
+        "status": "ready",
+        "placement": "after-all-screen-benefits",
+        "caption": "The landscape render shows why edge-to-edge pixels look immersive, while also exposing the grip and touch-rejection challenge.",
+        "alt": "TECNO 0mm-bezel concept phone held in landscape orientation with a coastal image filling the display.",
+        "credit": "X / UniverseIce",
+        "licensingNote": "Supplied for publication with attribution to X / UniverseIce.",
+        "aspectRatio": "2:1",
+        "src": "/articles/tecno-0mm-bezel-landscape-display.jpg",
+        "width": 1040,
+        "height": 520
+      },
+      {
+        "id": "tecno-zero-bezel-handheld-portrait",
+        "type": "image",
+        "status": "ready",
+        "placement": "after-palm-rejection-introduction",
+        "caption": "A phone held normally puts fingers close to its active edges, making reliable palm rejection essential.",
+        "alt": "TECNO 0mm-bezel concept phone held upright in one hand with its display reaching the frame.",
+        "credit": "X / UniverseIce",
+        "licensingNote": "Supplied for publication with attribution to X / UniverseIce.",
+        "aspectRatio": "2:1",
+        "src": "/articles/tecno-0mm-bezel-handheld-portrait.jpg",
+        "width": 1040,
+        "height": 520
+      }
+    ],
     "tagSlugs": [
       "tecno",
       "concept-phone",

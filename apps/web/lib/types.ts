@@ -103,6 +103,7 @@ export type Article = {
     src: string;
     alt: string;
     credit: string;
+    creditOmitted?: boolean;
     width?: number;
     height?: number;
     type?: string;

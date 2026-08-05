@@ -11,6 +11,7 @@ import { buildEditorialBundleArticles } from "@/lib/editorial-bundle-july-2026";
 import { buildEditorialJuly13Articles } from "@/lib/editorial-bundle-july-13-2026";
 import { buildEditorialJuly30Articles } from "@/lib/editorial-bundle-july-30-2026";
 import { buildEditorialAugust1Articles } from "@/lib/editorial-bundle-august-1-2026";
+import { buildEditorialAugust4Articles } from "@/lib/editorial-bundle-august-4-2026";
 import { buildEditorialJuly7Articles } from "@/lib/editorial-bundle-july-7-2026";
 import { buildEvMobilityNewsArticles } from "@/lib/ev-mobility-news-2026";
 import { buildGlobalOpinionArticles } from "@/lib/global-opinion-essays-2026";
@@ -115,6 +116,46 @@ export const topics: Tag[] = [
   { name: "Headphones", slug: "headphones", kind: "topic" },
   { name: "Smart Watches", slug: "smart-watches", kind: "topic" },
   { name: "VR & AR", slug: "vr-ar", kind: "topic" },
+  { name: "G9L", slug: "g9l", kind: "topic" },
+  { name: "Luxury EV", slug: "luxury-ev", kind: "topic" },
+  { name: "China", slug: "china", kind: "topic" },
+  { name: "Automotive Technology", slug: "automotive-technology", kind: "topic" },
+  { name: "Battery Swap", slug: "battery-swap", kind: "topic" },
+  { name: "EV Infrastructure", slug: "ev-infrastructure", kind: "topic" },
+  { name: "Battery as a Service", slug: "battery-as-a-service", kind: "topic" },
+  { name: "TLIP", slug: "tlip", kind: "topic" },
+  { name: "Blockchain", slug: "blockchain", kind: "topic" },
+  { name: "Customs", slug: "customs", kind: "topic" },
+  { name: "Logistics", slug: "logistics", kind: "topic" },
+  { name: "Mombasa Port", slug: "mombasa-port", kind: "topic" },
+  { name: "Anne Kinuthia-Otieno", slug: "anne-kinuthia-otieno", kind: "topic" },
+  { name: "Mobile Money", slug: "mobile-money", kind: "topic" },
+  { name: "East Africa", slug: "east-africa", kind: "topic" },
+  { name: "Payments", slug: "payments", kind: "topic" },
+  { name: "Dividend", slug: "dividend", kind: "topic" },
+  { name: "Ethiopia", slug: "ethiopia", kind: "topic" },
+  { name: "Investing", slug: "investing", kind: "topic" },
+  { name: "Telecoms", slug: "telecoms", kind: "topic" },
+  { name: "iPhone 18", slug: "iphone-18", kind: "topic" },
+  { name: "Foldable iPhone", slug: "foldable-iphone", kind: "topic" },
+  { name: "Prepaid Card", slug: "prepaid-card", kind: "topic" },
+  { name: "Grocery", slug: "grocery", kind: "topic" },
+  { name: "Remittances", slug: "remittances", kind: "topic" },
+  { name: "Corporate Governance", slug: "corporate-governance", kind: "topic" },
+  { name: "iPhone", slug: "iphone", kind: "topic" },
+  { name: "European Union", slug: "european-union", kind: "topic" },
+  { name: "Interoperability", slug: "interoperability", kind: "topic" },
+  { name: "Apple Glasses", slug: "apple-glasses", kind: "topic" },
+  { name: "Materials Science", slug: "materials-science", kind: "topic" },
+  { name: "Manufacturing", slug: "manufacturing", kind: "topic" },
+  { name: "Hardware Durability", slug: "hardware-durability", kind: "topic" },
+  { name: "Pixel 11", slug: "pixel-11", kind: "topic" },
+  { name: "RAM", slug: "ram", kind: "topic" },
+  { name: "Made by Google", slug: "made-by-google", kind: "topic" },
+  { name: "Google Play Services", slug: "google-play-services", kind: "topic" },
+  { name: "Google Wallet", slug: "google-wallet", kind: "topic" },
+  { name: "Play Store", slug: "play-store", kind: "topic" },
+  { name: "System Updates", slug: "system-updates", kind: "topic" },
 ];
 
 export const brands: Tag[] = [
@@ -184,7 +225,14 @@ export const brands: Tag[] = [
   { name: "Flutterwave", slug: "flutterwave", kind: "brand" },
   { name: "Moniepoint", slug: "moniepoint", kind: "brand" },
   { name: "Paystack", slug: "paystack", kind: "brand" },
-  { name: "PrimeVale", slug: "primevale", kind: "brand" }
+  { name: "PrimeVale", slug: "primevale", kind: "brand" },
+  { name: "Xpeng", slug: "xpeng", kind: "brand" },
+  { name: "Firefly", slug: "firefly", kind: "brand" },
+  { name: "KRA", slug: "kra", kind: "brand" },
+  { name: "Carrefour", slug: "carrefour", kind: "brand" },
+  { name: "KCB", slug: "kcb", kind: "brand" },
+  { name: "AirPods", slug: "airpods", kind: "brand" },
+  { name: "PlasmaSolve", slug: "plasmasolve", kind: "brand" }
 ];
 
 const startupTopic = topics.find((topic) => topic.slug === "startups")!;
@@ -203,6 +251,7 @@ const nigeriaRegion = getRegion("nigeria")!;
 const southAfricaRegion = getRegion("south-africa")!;
 const rwandaRegion = getRegion("rwanda")!;
 const tanzaniaRegion = getRegion("tanzania")!;
+const ethiopiaRegion = getRegion("ethiopia")!;
 
 const appNewsArticles: Article[] = [
   {
@@ -849,6 +898,12 @@ const editorialJuly30Articles = buildEditorialJuly30Articles({
   }
 });
 const editorialAugust1Articles = buildEditorialAugust1Articles({ authors, topics, brands });
+const editorialAugust4Articles = buildEditorialAugust4Articles({
+  authors,
+  topics,
+  brands,
+  regions: [kenyaRegion, rwandaRegion, tanzaniaRegion, ethiopiaRegion]
+});
 const odysseyImaxArticle = buildOdysseyImaxArticle({ authors, topics, brands });
 const editorialJuly7Articles = buildEditorialJuly7Articles({
   authors,
@@ -949,6 +1004,7 @@ function attachRegions(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  ...editorialAugust4Articles,
   odysseyImaxArticle,
   primeValeArticle,
   vlcFreeSoftwareArticle,

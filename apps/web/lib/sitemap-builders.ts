@@ -146,10 +146,10 @@ export async function imageSitemapXml() {
       const images = [article.image, ...(article.inlineImages ?? []), ...mediaImages]
         .filter((image, index, all) => all.findIndex((candidate) => candidate.src === image.src) === index);
       const imageEntries = images
-        .map(
-          (image) =>
-            `<image:image><image:loc>${escapeXml(new URL(image.src, siteUrl).toString())}</image:loc><image:caption>${escapeXml(image.credit)}</image:caption><image:title>${escapeXml(image.alt)}</image:title></image:image>`
-        )
+        .map((image) => {
+          const caption = image.credit.trim() ? `<image:caption>${escapeXml(image.credit)}</image:caption>` : "";
+          return `<image:image><image:loc>${escapeXml(new URL(image.src, siteUrl).toString())}</image:loc>${caption}<image:title>${escapeXml(image.alt)}</image:title></image:image>`;
+        })
         .join("");
       return `<url><loc>${escapeXml(pageUrl)}</loc>${imageEntries}</url>`;
     })

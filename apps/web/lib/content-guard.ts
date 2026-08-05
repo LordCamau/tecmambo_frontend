@@ -92,7 +92,8 @@ export function assertArticleImageMetadata(articles: Article[]) {
       const issues: string[] = [];
       if (!image.src.trim()) issues.push("missing src");
       if (!image.alt.trim()) issues.push("missing alt");
-      if (!image.credit.trim()) issues.push("missing credit");
+      const creditOmitted = "creditOmitted" in image && image.creditOmitted === true;
+      if (!image.credit.trim() && !creditOmitted) issues.push("missing credit");
       return issues.map((issue) => `${label}: ${issue}`);
     });
   });
