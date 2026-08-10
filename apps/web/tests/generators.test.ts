@@ -40,27 +40,23 @@ describe("content generators", () => {
     expect(moreLinks.map((link) => link.label)).not.toEqual(expect.arrayContaining(["Africa", "Compare Phones"]));
   });
 
-  it("curates the homepage in the requested order without repeating highlighted articles", () => {
+  it("curates the homepage in the requested order with fresh stories in every section", () => {
     const curation = curateHomeContent(articles, glossaryTerms);
-    const heroStories = curation.heroStories;
-    const homepageArticleIds = [
+    const aboveFoldArticleIds = [
       curation.hero.id,
       ...curation.supportingStories.map((article) => article.id),
-      ...curation.latestRail.map((article) => article.id),
-      ...curation.lanes.flatMap((lane) => lane.articles.map((article) => article.id))
+      ...curation.latestRail.map((article) => article.id)
     ];
 
-    expect(heroStories).toHaveLength(3);
-    expect(heroStories.map((article) => article.slug)).toEqual([
-      "christopher-nolan-the-odyssey-imax-film-camera-breakthrough",
-      "qualcomm-chip-price-hikes-buy-phone-now-or-wait",
-      "pixel-11-glow-hilight-notification-led-leaks"
-    ]);
+    const newestEligibleArticle = articles
+      .filter((article) => article.excludeFromDiscovery !== true)
+      .sort((first, second) => new Date(second.publishedAt).getTime() - new Date(first.publishedAt).getTime())[0];
+    expect(curation.hero.publishedAt).toBe(newestEligibleArticle?.publishedAt);
     expect(curation.supportingStories).toHaveLength(2);
     expect(curation.latestRail).toHaveLength(5);
     expect(curation.lanes.map((lane) => lane.key)).toEqual([
-      "news",
       "smartphones",
+      "news",
       "reviews",
       "mobility",
       "explains",
@@ -72,8 +68,8 @@ describe("content generators", () => {
       "evergreen"
     ]);
     expect(curation.lanes.map((lane) => `${lane.eyebrow}: ${lane.title}`)).toEqual([
-      "Should you care?: News that changes what you do next",
       "Smartphones: Phones in plain English",
+      "Should you care?: News that changes what you do next",
       "Reviews: Verdicts first, specs second",
       "EVs & Mobility: How transport tech moves in real life",
       "MAMBO Explains + Glossary: Start with the words, then the idea",
@@ -84,7 +80,12 @@ describe("content generators", () => {
       "AI: Useful AI, without the stage smoke",
       "In case you missed it: More from tecMAMBO"
     ]);
-    expect(new Set(homepageArticleIds).size).toBe(homepageArticleIds.length);
+    for (const lane of curation.lanes) {
+      const publishedTimes = lane.articles.map((article) => new Date(article.publishedAt).getTime());
+      expect(publishedTimes).toEqual([...publishedTimes].sort((first, second) => second - first));
+      expect(new Set(lane.articles.map((article) => article.id)).size).toBe(lane.articles.length);
+    }
+    expect(new Set(aboveFoldArticleIds).size).toBe(aboveFoldArticleIds.length);
   });
 
   it("builds RSS with canonical article links", () => {

@@ -12,7 +12,6 @@ import { StoryCard } from "@/components/cards/StoryCard";
 import { NewsletterCard } from "@/components/cards/NewsletterCard";
 import { PartnerCard } from "@/components/cards/PartnerCard";
 import { RegionPreferencePanel } from "@/components/regions/RegionPreferencePanel";
-import { HeroSlider } from "./HeroSlider";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -113,6 +112,38 @@ function FeatureLane({ lane }: { lane: HomeLane }) {
   );
 }
 
+function HeroArticle({ article }: { article: HomeLane["articles"][number] }) {
+  const href = articlePath(article.format, article.slug);
+
+  return (
+    <article aria-label="Featured story" className={styles.heroCard}>
+      <Link aria-label={article.title} className={styles.heroImage} href={href}>
+        <Image
+          alt={article.image.alt}
+          fill
+          priority
+          sizes="(min-width: 1180px) 610px, (min-width: 780px) 54vw, calc(100vw - 32px)"
+          src={article.image.src}
+        />
+      </Link>
+      <div className={styles.heroBody}>
+        <div className={styles.badgeRow}>
+          <FormatBadge format={article.format} reviewMethod={article.reviewMethod} />
+          {article.sponsored ? <SponsoredBadge /> : null}
+        </div>
+        <h1>
+          <Link href={href}>{article.title}</Link>
+        </h1>
+        <p className={styles.subhead}>{article.subhead}</p>
+        <div className={styles.heroMeta}>
+          <span>{article.author.name}</span>
+          <span>{article.readTime}</span>
+        </div>
+      </div>
+    </article>
+  );
+}
+
 export default async function HomePage() {
   const curation = await getHomeCuration();
   const supportingStories = curation.supportingStories;
@@ -128,7 +159,7 @@ export default async function HomePage() {
       <section className={styles.heroStage}>
         <div className={`container ${styles.hero}`}>
           <div className={styles.storyStack}>
-            <HeroSlider slides={curation.heroStories} />
+            <HeroArticle article={curation.hero} />
 
             <div className={styles.supportGrid}>
               {supportingStories.map((article) => (
@@ -201,8 +232,8 @@ export default async function HomePage() {
       </section>
 
       <Suspense>
-        {renderLane("news")}
         {renderLane("smartphones")}
+        {renderLane("news")}
         {renderLane("reviews")}
         {renderLane("mobility")}
       </Suspense>

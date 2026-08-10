@@ -30,7 +30,7 @@ describe("public content eligibility", () => {
     expect(drafts.every((article) => !isContentPubliclyEligible(article) && !isArticleIndexable(article))).toBe(true);
     const home = curateHomeContent(articles, glossaryTerms);
     const discovered = [
-      ...home.heroStories,
+      home.hero,
       ...home.supportingStories,
       ...home.latestRail,
       ...home.lanes.flatMap((lane) => lane.articles)
