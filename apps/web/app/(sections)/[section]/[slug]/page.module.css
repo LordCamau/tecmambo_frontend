@@ -51,7 +51,6 @@
 .leadImage {
   position: relative;
   width: min(100% - 32px, 1040px);
-  min-height: 520px;
   margin: 34px auto 36px;
   overflow: clip;
   border-radius: var(--radius-md);
@@ -60,7 +59,9 @@
 }
 
 .leadImage img {
-  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .leadImage figcaption {
@@ -425,10 +426,6 @@
 }
 
 @media (max-width: 760px) {
-  .leadImage {
-    min-height: 340px;
-  }
-
   .verdict,
   .proCon,
   .dealBox,

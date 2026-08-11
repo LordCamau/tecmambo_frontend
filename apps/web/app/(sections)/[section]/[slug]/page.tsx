@@ -354,7 +354,14 @@ export default async function ArticlePage({ params }: { params: Params }) {
       </header>
 
       <figure className={styles.leadImage}>
-        <Image src={article.image.src} alt={article.image.alt} fill priority sizes="(min-width: 920px) 90vw, 100vw" />
+        <Image
+          src={article.image.src}
+          alt={article.image.alt}
+          width={article.image.width ?? 1040}
+          height={article.image.height ?? 520}
+          priority
+          sizes="(min-width: 1080px) 1040px, calc(100vw - 32px)"
+        />
         {article.image.credit ? <figcaption>{article.image.credit}</figcaption> : null}
       </figure>
 
