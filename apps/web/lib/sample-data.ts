@@ -12,6 +12,7 @@ import { buildEditorialJuly13Articles } from "@/lib/editorial-bundle-july-13-202
 import { buildEditorialJuly30Articles } from "@/lib/editorial-bundle-july-30-2026";
 import { buildEditorialAugust1Articles } from "@/lib/editorial-bundle-august-1-2026";
 import { buildEditorialAugust4Articles } from "@/lib/editorial-bundle-august-4-2026";
+import { buildEditorialAugust10Articles } from "@/lib/editorial-bundle-august-10-2026";
 import { buildEditorialJuly7Articles } from "@/lib/editorial-bundle-july-7-2026";
 import { buildEvMobilityNewsArticles } from "@/lib/ev-mobility-news-2026";
 import { buildGlobalOpinionArticles } from "@/lib/global-opinion-essays-2026";
@@ -252,6 +253,7 @@ const southAfricaRegion = getRegion("south-africa")!;
 const rwandaRegion = getRegion("rwanda")!;
 const tanzaniaRegion = getRegion("tanzania")!;
 const ethiopiaRegion = getRegion("ethiopia")!;
+const ugandaRegion = getRegion("uganda")!;
 
 const appNewsArticles: Article[] = [
   {
@@ -904,6 +906,10 @@ const editorialAugust4Articles = buildEditorialAugust4Articles({
   brands,
   regions: [kenyaRegion, rwandaRegion, tanzaniaRegion, ethiopiaRegion]
 });
+const editorialAugust10Articles = buildEditorialAugust10Articles({
+  authors,
+  regions: [kenyaRegion, rwandaRegion, ugandaRegion]
+});
 const odysseyImaxArticle = buildOdysseyImaxArticle({ authors, topics, brands });
 const editorialJuly7Articles = buildEditorialJuly7Articles({
   authors,
@@ -1004,6 +1010,7 @@ function attachRegions(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  ...editorialAugust10Articles,
   ...editorialAugust4Articles,
   odysseyImaxArticle,
   primeValeArticle,

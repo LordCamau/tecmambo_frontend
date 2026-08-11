@@ -1,10 +1,10 @@
 # tecMAMBO content quality audit
 
-Generated: 2026-08-05T16:08:51.486Z
+Generated: 2026-08-11T10:18:18.476Z
 
-Items audited: 485
+Items audited: 505
 
-Publicly eligible articles: 149
+Publicly eligible articles: 169
 
 Articles retained outside discovery: 39
 
@@ -12,9 +12,9 @@ Indexable glossary terms: 0
 
 ## Editorial action groups
 
-- Keep and index: 199
+- Keep and index: 223
 - Keep but improve: 98
-- Noindex temporarily: 286
+- Noindex temporarily: 282
 - Unpublish immediately: 0
 - Requires editorial verification: 39
 - Requires original testing evidence: 3
@@ -23,6 +23,26 @@ Indexable glossary terms: 0
 
 | Type | Title | URL | Robots | Recommended action | Reason |
 | --- | --- | --- | --- | --- | --- |
+| article | Airtel's Bizna Wallet has turned Kenya's small-business payments into a price war | /opinion/airtel-bizna-wallet-pochi-la-biashara-price-war-kenya | index, follow | keep | No blocking quality issue detected. |
+| article | Apple owns 65 percent of the premium phone market, but the number hides a changing battlefield | /opinion/apple-65-percent-premium-smartphone-market-h1-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | DJI is launching the Osmo 360 II on August 13, but the best specs are still leaks | /news/dji-osmo-360-ii-august-13-launch-what-is-confirmed | index, follow | keep | No blocking quality issue detected. |
+| article | Google Assistant starts disappearing on September 4. Gemini is no longer optional | /explainers/google-assistant-shutdown-september-4-gemini | index, follow | keep | No blocking quality issue detected. |
+| article | BYD, Geely and Chery are now global top-10 automakers. China is no longer the challenger | /opinion/byd-geely-chery-global-top-10-h1-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | Why the KSh 363 million bank CEO case is really about suspicious-transaction reporting | /explainers/kcb-ncba-coop-bank-ceos-ksh363m-case-explained | index, follow | keep | No blocking quality issue detected. |
+| article | Pixel 11's leaked Proactive Assistance wants to understand your screen before you ask | /news/pixel-11-proactive-assistance-gemini-context-leak | index, follow | keep | No blocking quality issue detected. |
+| article | India wants to lock in electronics manufacturing until 2041, and Apple is a major reason why | /opinion/india-electronics-manufacturing-tax-breaks-2041-apple-suppliers | index, follow | keep | No blocking quality issue detected. |
+| article | A Zeekr 7X caught fire near a charger. The earlier crash may matter more than the charger | /explainers/zeekr-7x-ningbo-fire-previous-collision-investigation | index, follow | keep | No blocking quality issue detected. |
+| article | Apple just raised Mac trade-in values. That does not mean you should trade yours in | /wallet-watch/apple-mac-trade-in-values-rise-2026-worth-it | index, follow | keep | No blocking quality issue detected. |
+| article | Insta360 just turned the GO Ultra into a wearable Gemini assistant | /opinion/insta360-go-ultra-gemini-ai-voice-assistant-kira | index, follow | keep | No blocking quality issue detected. |
+| article | Smart #2 is returning to the tiny-car idea that made Smart interesting | /news/smart-2-micro-ev-miit-filing-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | The August Pixel update fixes the kind of bugs no flagship should ship with | /news/pixel-august-2026-update-touch-gpu-fixes | index, follow | keep | No blocking quality issue detected. |
+| article | Europe is turning interoperability from a nice idea into a product requirement | /opinion/eu-dma-interoperability-smartphones-apple-google-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | China's BYD battery blogger dispute is becoming a test of who gets to challenge product claims | /opinion/cac-byd-blade-battery-blogger-cai-shen-dao-dispute | index, follow | keep | No blocking quality issue detected. |
+| article | Windows on Arm has reached the enterprise. Compatibility now matters more than battery claims | /explainers/snapdragon-x2-enterprise-windows-arm-business-pcs | index, follow | keep | No blocking quality issue detected. |
+| article | CATL and BYD want solid-state battery trials in 2027. Your next EV probably will not have one | /explainers/catl-byd-solid-state-battery-2027-trial-production | index, follow | keep | No blocking quality issue detected. |
+| article | Apple removed Telegram for a day. That is enough to show how much power an app store holds | /opinion/apple-telegram-app-store-removal-moderation-power | index, follow | keep | No blocking quality issue detected. |
+| article | East Africa's electric-mobility race is moving from vehicles to infrastructure | /opinion/east-africa-electric-mobility-charging-battery-swap-infrastructure | index, follow | keep | No blocking quality issue detected. |
+| article | No, iPhone-to-Windows clipboard sync has not launched yet. Here is what actually changed | /explainers/iphone-windows-clipboard-sync-not-launched-eu-timeline | index, follow | keep | No blocking quality issue detected. |
 | article | Android's August system update shows how Google changes your phone without an OS upgrade | /explainers/august-2026-google-system-updates-explained | index, follow | keep | No blocking quality issue detected. |
 | article | Google says Pixel 11 prices are going up. The exact damage arrives on August 12 | /news/pixel-11-price-increase-memory-crisis | index, follow | keep | No blocking quality issue detected. |
 | article | Apple's PlasmaSolve acquisition is about the invisible engineering that makes hardware last | /explainers/apple-plasmasolve-acquisition-coatings-durability | index, follow | keep | No blocking quality issue detected. |
@@ -357,7 +377,7 @@ Indexable glossary terms: 0
 | archive | Startups | /topics/startups | index, follow | keep | Archive has at least three eligible stories. |
 | archive | Business | /topics/business | index, follow | keep | Archive has at least three eligible stories. |
 | archive | Fintech | /topics/fintech | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Banking | /topics/banking | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Banking | /topics/banking | index, follow | keep | Archive has at least three eligible stories. |
 | archive | Credit Cards | /topics/credit-cards | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Policy | /topics/policy | index, follow | keep | Archive has at least three eligible stories. |
 | archive | Climate Policy | /topics/climate-policy | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
@@ -396,7 +416,7 @@ Indexable glossary terms: 0
 | archive | VR & AR | /topics/vr-ar | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | G9L | /topics/g9l | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Luxury EV | /topics/luxury-ev | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | China | /topics/china | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | China | /topics/china | index, follow | keep | Archive has at least three eligible stories. |
 | archive | Automotive Technology | /topics/automotive-technology | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Battery Swap | /topics/battery-swap | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | EV Infrastructure | /topics/ev-infrastructure | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
@@ -420,9 +440,9 @@ Indexable glossary terms: 0
 | archive | Grocery | /topics/grocery | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Remittances | /topics/remittances | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Corporate Governance | /topics/corporate-governance | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | iPhone | /topics/iphone | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | iPhone | /topics/iphone | index, follow | keep | Archive has at least three eligible stories. |
 | archive | European Union | /topics/european-union | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Interoperability | /topics/interoperability | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| archive | Interoperability | /topics/interoperability | index, follow | keep | Archive has at least three eligible stories. |
 | archive | Apple Glasses | /topics/apple-glasses | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Materials Science | /topics/materials-science | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Manufacturing | /topics/manufacturing | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |

@@ -4,7 +4,7 @@ import { allSectionTopicPaths, wearableFilters, wearableFilterPath } from "@/lib
 import type { Article, GlossaryTerm } from "@/lib/types";
 
 export function buildLlmsTxt(articles: Article[], terms: GlossaryTerm[]) {
-  const latest = articles.slice(0, 120).map((article) => `- [${article.title}](${siteUrl}${articlePath(article.format, article.slug)})`);
+  const latest = articles.slice(0, 160).map((article) => `- [${article.title}](${siteUrl}${articlePath(article.format, article.slug)})`);
   const sections = Object.values(formats).map((format) => `- [${format.section}](${siteUrl}${format.path}) - ${format.description}`);
   const navArchives = ["/latest", ...allSectionTopicPaths(), ...wearableFilters.map((filter) => wearableFilterPath(filter.slug))]
     .filter((path, index, all) => all.indexOf(path) === index)
