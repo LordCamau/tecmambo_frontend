@@ -1,6 +1,6 @@
 import { existsSync } from "node:fs";
 import { join } from "node:path";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { buildGoogleNewsSitemap, buildRssFeed } from "../content/feeds";
 import { articleToMarkdown } from "../content/markdown";
 import { articleWordCount } from "../lib/article-quality";
@@ -66,8 +66,11 @@ describe("August 10 verified editorial bundle", () => {
 
   it("resolves every hero asset and emits production JSON-LD URLs", () => {
     bundle.forEach((article) => {
-      expect(article.image.width).toBe(1200);
-      expect(article.image.height).toBe(675);
+      const expectedDimensions = article.slug === "byd-geely-chery-global-top-10-h1-2026"
+        ? { width: 1040, height: 520 }
+        : { width: 1200, height: 675 };
+      expect(article.image.width).toBe(expectedDimensions.width);
+      expect(article.image.height).toBe(expectedDimensions.height);
       expect(article.image.type).toBe("image/webp");
       expect(existsSync(join(process.cwd(), "public", article.image.src))).toBe(true);
 
@@ -85,6 +88,7 @@ describe("August 10 verified editorial bundle", () => {
       "apple-65-percent-premium-smartphone-market-h1-2026": "",
       "dji-osmo-360-ii-august-13-launch-what-is-confirmed": "DJI",
       "google-assistant-shutdown-september-4-gemini": "Innovation Village",
+      "byd-geely-chery-global-top-10-h1-2026": "",
       "kcb-ncba-coop-bank-ceos-ksh363m-case-explained": "",
       "pixel-11-proactive-assistance-gemini-context-leak": "CNET",
       "zeekr-7x-ningbo-fire-previous-collision-investigation": "Shuma IT Jun",
@@ -123,7 +127,10 @@ describe("August 10 verified editorial bundle", () => {
 
   it("includes the bundle in RSS and the fresh-news sitemap", () => {
     const rss = buildRssFeed(articles);
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2026-08-11T10:00:00+03:00"));
     const newsSitemap = buildGoogleNewsSitemap(articles);
+    vi.useRealTimers();
     bundle.forEach((article) => {
       const path = articlePath(article.format, article.slug);
       expect(rss).toContain(`https://tecmambo.com${path}`);

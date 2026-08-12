@@ -723,10 +723,11 @@ const editorialRecords: EditorialRecord[] = [
     "readTime": "5 min read",
     "image": {
       "src": "/articles/august10-byd-geely-chery-global-top-10-h1-2026.webp",
-      "alt": "BYD, Geely and Chery vehicles entering a global top-ten automaker ranking.",
-      "credit": "AI-generated illustration by tecMAMBO",
-      "width": 1200,
-      "height": 675,
+      "alt": "BYD, Chery and Geely vehicles displayed together inside a dealership.",
+      "credit": "",
+      "creditOmitted": true,
+      "width": 1040,
+      "height": 520,
       "type": "image/webp"
     },
     "tags": [
