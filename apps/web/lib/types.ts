@@ -70,6 +70,16 @@ export type ArticleMediaSlot = {
   height?: number;
 };
 
+export type ArticleComparisonTable = {
+  id: string;
+  caption: string;
+  columns: string[];
+  rows: Array<{
+    label: string;
+    values: string[];
+  }>;
+};
+
 export type Article = {
   id: string;
   slug: string;
@@ -118,6 +128,7 @@ export type Article = {
     type?: string;
   }>;
   mediaSlots?: ArticleMediaSlot[];
+  comparisonTables?: ArticleComparisonTable[];
   tags: Tag[];
   regions?: RegionTerm[];
   faq?: Array<{ question: string; answer: string }>;

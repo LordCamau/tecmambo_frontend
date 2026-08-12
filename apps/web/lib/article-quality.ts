@@ -8,7 +8,8 @@ export function articleWordCount(article: Article) {
     article.subhead,
     article.excerpt,
     article.whyItMatters,
-    ...article.body.filter((block) => !/^\[\[media:[a-z0-9-]+\]\]$/.test(block)),
+    ...article.body.filter((block) => !/^\[\[(?:media|table):[a-z0-9-]+\]\]$/.test(block)),
+    ...(article.comparisonTables?.flatMap((table) => [table.caption, ...table.columns, ...table.rows.flatMap((row) => [row.label, ...row.values])]) ?? []),
     article.closingLine ?? "",
     ...(article.faq?.flatMap((item) => [item.question, item.answer]) ?? [])
   ]

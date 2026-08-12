@@ -2,6 +2,26 @@ import type { Article, GlossaryTerm } from "@/lib/types";
 import { articlePath } from "@/lib/formats";
 
 function articleBodyBlockToMarkdown(article: Article, block: string) {
+  const mediaSlotId = block.match(/^\[\[media:([a-z0-9-]+)\]\]$/)?.[1];
+  const mediaSlot = mediaSlotId ? article.mediaSlots?.find((slot) => slot.id === mediaSlotId) : undefined;
+  if (mediaSlotId) {
+    if (!mediaSlot || mediaSlot.status !== "ready" || !mediaSlot.src || !mediaSlot.alt) return "";
+    return [`![${mediaSlot.alt}](${mediaSlot.src})`, "", mediaSlot.caption, mediaSlot.credit ? `Image credit: ${mediaSlot.credit}` : ""]
+      .filter(Boolean)
+      .join("\n");
+  }
+  const comparisonTableId = block.match(/^\[\[table:([a-z0-9-]+)\]\]$/)?.[1];
+  const comparisonTable = comparisonTableId ? article.comparisonTables?.find((table) => table.id === comparisonTableId) : undefined;
+  if (comparisonTable) {
+    const header = ["Feature", ...comparisonTable.columns];
+    return [
+      `_${comparisonTable.caption}_`,
+      "",
+      `| ${header.join(" | ")} |`,
+      `| ${header.map(() => "---").join(" | ")} |`,
+      ...comparisonTable.rows.map((row) => `| ${[row.label, ...row.values].join(" | ")} |`)
+    ].join("\n");
+  }
   const inlineImageId = block.match(/^\[\[image:([a-z0-9-]+)\]\]$/)?.[1];
   const inlineImage = inlineImageId ? article.inlineImages?.find((image) => image.id === inlineImageId) : undefined;
   if (!inlineImage) return block;

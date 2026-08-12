@@ -22,6 +22,7 @@ export function renderedArticleFields(article: Article) {
     article.excerpt,
     article.whyItMatters,
     ...article.body,
+    ...(article.comparisonTables?.flatMap((table) => [table.caption, ...table.columns, ...table.rows.flatMap((row) => [row.label, ...row.values])]) ?? []),
     article.closingLine ?? "",
     article.goDeeper?.intro ?? "",
     ...(article.goDeeper?.specs.flatMap((spec) => [spec.label, spec.value]) ?? []),
@@ -33,6 +34,7 @@ export function renderedArticleFields(article: Article) {
     ...(article.itemList ?? []),
     article.image.alt,
     ...(article.inlineImages?.flatMap((image) => [image.alt, image.credit]) ?? []),
+    ...(article.mediaSlots?.flatMap((slot) => [slot.caption, slot.alt ?? "", slot.credit ?? "", slot.licensingNote ?? ""]) ?? []),
     ...(article.sources?.flatMap((source) => [source.label, source.url]) ?? []),
     ...(article.regions?.flatMap((region) => [region.name, region.description]) ?? [])
   ];

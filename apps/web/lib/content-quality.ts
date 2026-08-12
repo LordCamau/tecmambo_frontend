@@ -28,13 +28,15 @@ export function articlePublicText(article: Article) {
     article.excerpt,
     article.whyItMatters,
     ...article.body,
+    ...(article.comparisonTables?.flatMap((table) => [table.caption, ...table.columns, ...table.rows.flatMap((row) => [row.label, ...row.values])]) ?? []),
     article.closingLine ?? "",
     article.goDeeper?.intro ?? "",
     ...(article.goDeeper?.specs.flatMap((row) => [row.label, row.value]) ?? []),
     article.verdict?.summary ?? "",
     ...(article.verdict?.pros ?? []),
     ...(article.verdict?.cons ?? []),
-    ...(article.faq?.flatMap((item) => [item.question, item.answer]) ?? [])
+    ...(article.faq?.flatMap((item) => [item.question, item.answer]) ?? []),
+    ...(article.mediaSlots?.flatMap((slot) => [slot.caption, slot.alt ?? "", slot.credit ?? ""]) ?? [])
   ].join("\n");
 }
 

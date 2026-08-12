@@ -13,6 +13,7 @@ import { buildEditorialJuly30Articles } from "@/lib/editorial-bundle-july-30-202
 import { buildEditorialAugust1Articles } from "@/lib/editorial-bundle-august-1-2026";
 import { buildEditorialAugust4Articles } from "@/lib/editorial-bundle-august-4-2026";
 import { buildEditorialAugust10Articles } from "@/lib/editorial-bundle-august-10-2026";
+import { buildPixel11LaunchArticle } from "@/lib/pixel-11-launch-2026";
 import { buildEditorialJuly7Articles } from "@/lib/editorial-bundle-july-7-2026";
 import { buildEvMobilityNewsArticles } from "@/lib/ev-mobility-news-2026";
 import { buildGlobalOpinionArticles } from "@/lib/global-opinion-essays-2026";
@@ -42,6 +43,14 @@ export const authors: Author[] = [
     bio: "Lulu Kiritu is a Senior Writer and Editor at tecMAMBO, covering artificial intelligence. She is happiest turning a dense research paper into something you can actually use over lunch, and she writes about how AI shows up in real life, not just on stage at a launch. Based in Nairobi.",
     avatar: "/authors/lulu-kiritu.jpg",
     expertise: ["Artificial intelligence"]
+  },
+  {
+    name: "tecMAMBO Team",
+    slug: "tecmambo-team",
+    role: "tecMAMBO editorial desk",
+    bio: "The tecMAMBO Team reports and explains technology launches, products, policy and digital life in plain English, with sourcing and practical context for African readers.",
+    avatar: "/brand/tecMAMBO-favicon.jpg",
+    expertise: ["Technology news", "Smartphones", "Artificial intelligence", "Product launches"]
   }
 ];
 
@@ -910,6 +919,7 @@ const editorialAugust10Articles = buildEditorialAugust10Articles({
   authors,
   regions: [kenyaRegion, rwandaRegion, ugandaRegion]
 });
+const pixel11LaunchArticle = buildPixel11LaunchArticle({ authors, topics, brands });
 const odysseyImaxArticle = buildOdysseyImaxArticle({ authors, topics, brands });
 const editorialJuly7Articles = buildEditorialJuly7Articles({
   authors,
@@ -1010,6 +1020,7 @@ function attachRegions(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  pixel11LaunchArticle,
   ...editorialAugust10Articles,
   ...editorialAugust4Articles,
   odysseyImaxArticle,

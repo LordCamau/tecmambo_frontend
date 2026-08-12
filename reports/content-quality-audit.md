@@ -1,10 +1,10 @@
 # tecMAMBO content quality audit
 
-Generated: 2026-08-11T10:18:18.476Z
+Generated: 2026-08-12T18:28:06.748Z
 
-Items audited: 505
+Items audited: 507
 
-Publicly eligible articles: 169
+Publicly eligible articles: 170
 
 Articles retained outside discovery: 39
 
@@ -12,9 +12,9 @@ Indexable glossary terms: 0
 
 ## Editorial action groups
 
-- Keep and index: 223
+- Keep and index: 224
 - Keep but improve: 98
-- Noindex temporarily: 282
+- Noindex temporarily: 283
 - Unpublish immediately: 0
 - Requires editorial verification: 39
 - Requires original testing evidence: 3
@@ -23,6 +23,7 @@ Indexable glossary terms: 0
 
 | Type | Title | URL | Robots | Recommended action | Reason |
 | --- | --- | --- | --- | --- | --- |
+| article | Google Pixel 11 Series Arrives with Tensor G6, HiLight, Better Cameras and Higher Starting Prices | /news/google-pixel-11-series-tensor-g6-hilight-price-2026 | index, follow | keep | No blocking quality issue detected. |
 | article | Airtel's Bizna Wallet has turned Kenya's small-business payments into a price war | /opinion/airtel-bizna-wallet-pochi-la-biashara-price-war-kenya | index, follow | keep | No blocking quality issue detected. |
 | article | Apple owns 65 percent of the premium phone market, but the number hides a changing battlefield | /opinion/apple-65-percent-premium-smartphone-market-h1-2026 | index, follow | keep | No blocking quality issue detected. |
 | article | DJI is launching the Osmo 360 II on August 13, but the best specs are still leaks | /news/dji-osmo-360-ii-august-13-launch-what-is-confirmed | index, follow | keep | No blocking quality issue detected. |
@@ -343,6 +344,7 @@ Indexable glossary terms: 0
 | page | newsletter | /newsletter | index, follow | keep | Core utility, trust, or discovery page. |
 | archive | Tim Humphreys | /authors/tim-humphreys | index, follow | keep | Archive has at least three eligible stories. |
 | archive | Lulu Kiritu | /authors/lulu-kiritu | index, follow | keep | Archive has at least three eligible stories. |
+| archive | tecMAMBO Team | /authors/tecmambo-team | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | AI | /topics/ai | index, follow | keep | Archive has at least three eligible stories. |
 | archive | AI Shopping | /topics/ai-shopping | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
 | archive | Agentic AI | /topics/agentic-ai | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |

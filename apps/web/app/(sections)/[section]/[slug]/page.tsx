@@ -90,6 +90,7 @@ function ArticleBodyBlock({
   paragraph,
   inlineImages,
   mediaSlots,
+  comparisonTables,
   glossaryTerms,
   glossaryState,
   highlightPrices,
@@ -98,6 +99,7 @@ function ArticleBodyBlock({
   paragraph: string;
   inlineImages?: Article["inlineImages"];
   mediaSlots?: Article["mediaSlots"];
+  comparisonTables?: Article["comparisonTables"];
   glossaryTerms: GlossaryTerm[];
   glossaryState: GlossaryLinkState;
   highlightPrices: boolean;
@@ -127,6 +129,34 @@ function ArticleBodyBlock({
       );
     }
     return null;
+  }
+  const comparisonTableId = paragraph.match(/^\[\[table:([a-z0-9-]+)\]\]$/)?.[1];
+  const comparisonTable = comparisonTableId
+    ? comparisonTables?.find((table) => table.id === comparisonTableId)
+    : undefined;
+  if (comparisonTableId) {
+    if (!comparisonTable) return null;
+    return (
+      <div className={styles.comparisonTable} role="region" aria-label={comparisonTable.caption} tabIndex={0}>
+        <table>
+          <caption>{comparisonTable.caption}</caption>
+          <thead>
+            <tr>
+              <th scope="col">Feature</th>
+              {comparisonTable.columns.map((column) => <th scope="col" key={column}>{column}</th>)}
+            </tr>
+          </thead>
+          <tbody>
+            {comparisonTable.rows.map((row) => (
+              <tr key={row.label}>
+                <th scope="row">{row.label}</th>
+                {row.values.map((value, index) => <td key={`${row.label}-${comparisonTable.columns[index]}`}>{value}</td>)}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
   }
   const inlineImageId = paragraph.match(/^\[\[image:([a-z0-9-]+)\]\]$/)?.[1];
   const inlineImage = inlineImageId ? inlineImages?.find((image) => image.id === inlineImageId) : undefined;
@@ -165,6 +195,7 @@ function ArticleBodyBlocks({
   body,
   inlineImages,
   mediaSlots,
+  comparisonTables,
   glossaryTerms,
   glossaryState,
   highlightPrices
@@ -172,6 +203,7 @@ function ArticleBodyBlocks({
   body: string[];
   inlineImages?: Article["inlineImages"];
   mediaSlots?: Article["mediaSlots"];
+  comparisonTables?: Article["comparisonTables"];
   glossaryTerms: GlossaryTerm[];
   glossaryState: GlossaryLinkState;
   highlightPrices: boolean;
@@ -186,6 +218,7 @@ function ArticleBodyBlocks({
           paragraph={body[index]}
           inlineImages={inlineImages}
           mediaSlots={mediaSlots}
+          comparisonTables={comparisonTables}
           glossaryTerms={glossaryTerms}
           glossaryState={glossaryState}
           highlightPrices={highlightPrices}
@@ -430,6 +463,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
           body={safeBody}
           inlineImages={article.inlineImages}
           mediaSlots={article.mediaSlots}
+          comparisonTables={article.comparisonTables}
           glossaryTerms={glossaryTerms}
           glossaryState={glossaryState}
           highlightPrices={highlightReviewPrices}
