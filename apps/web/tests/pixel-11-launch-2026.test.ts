@@ -18,7 +18,8 @@ if (!article) throw new Error(`Missing Pixel 11 launch article: ${slug}`);
 describe("Pixel 11 launch deep dive", () => {
   it("publishes a substantial, indexable news article with the required identity", () => {
     expect(article.format).toBe("news");
-    expect(article.author.name).toBe("tecMAMBO Team");
+    expect(article.author.name).toBe("Tim Humphreys");
+    expect(article.author.slug).toBe("tim-humphreys");
     expect(article.publishedAt).toBe("2026-08-12T18:35:00+03:00");
     expect(article.seo?.title).toBe("Google Pixel 11 Series: Specs, HiLight, Prices and Release Date");
     expect(articleWordCount(article)).toBeGreaterThanOrEqual(1500);

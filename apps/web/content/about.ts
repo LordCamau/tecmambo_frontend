@@ -11,7 +11,7 @@ export function aboutToMarkdown(articles: Article[], terms: GlossaryTerm[]) {
     "",
     "The team writes for everyone the other tech sites forgot to write for, without boring the people who already love this stuff.",
     "",
-    "From Tim Humphreys and Lulu Kiritu to every contributor who joins the newsroom, tecMAMBO works as a translation layer: plain English first, with deeper technical detail when readers need it.",
+    "From Tim Humphreys and Lulu Camau to every contributor who joins the newsroom, tecMAMBO works as a translation layer: plain English first, with deeper technical detail when readers need it.",
     "",
     "## Why tecMAMBO?",
     "",

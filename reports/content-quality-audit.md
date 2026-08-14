@@ -1,6 +1,6 @@
 # tecMAMBO content quality audit
 
-Generated: 2026-08-14T12:45:42.022Z
+Generated: 2026-08-14T17:53:33.686Z
 
 Items audited: 522
 
@@ -358,7 +358,7 @@ Indexable glossary terms: 0
 | page | cookies | /cookies | index, follow | keep | Core utility, trust, or discovery page. |
 | page | compare phones | /compare-phones | index, follow | keep | Core utility, trust, or discovery page. |
 | archive | Tim Humphreys | /authors/tim-humphreys | index, follow | keep | Archive has at least five eligible stories. |
-| archive | Lulu Kiritu | /authors/lulu-kiritu | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Lulu Camau | /authors/lulu-camau | index, follow | keep | Archive has at least five eligible stories. |
 | archive | tecMAMBO Team | /authors/tecmambo-team | index, follow | keep | Archive has at least five eligible stories. |
 | archive | AI | /topics/ai | index, follow | keep | Archive has at least five eligible stories. |
 | archive | AI Shopping | /topics/ai-shopping | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |

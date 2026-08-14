@@ -24,7 +24,7 @@ const imageMeta = {
 
 export function buildComputingLaptopNewsArticles({ authors, topics, brands }: BuildComputingLaptopNewsArticlesArgs): Article[] {
   const tim = authors.find((author) => author.slug === "tim-humphreys") ?? authors[0]!;
-  const lulu = authors.find((author) => author.slug === "lulu-kiritu") ?? tim;
+  const lulu = authors.find((author) => author.slug === "lulu-camau") ?? tim;
   const computing = getTag(topics, "computing");
   const cybersecurity = getTag(topics, "cybersecurity");
   const ai = getTag(topics, "ai");

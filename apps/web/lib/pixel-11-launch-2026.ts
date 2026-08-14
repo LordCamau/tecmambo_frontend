@@ -13,7 +13,7 @@ function bySlug<T extends { slug: string }>(items: T[], slug: string) {
 }
 
 export function buildPixel11LaunchArticle({ authors, topics, brands }: BuildPixel11LaunchArticleArgs): Article {
-  const tecMamboTeam = bySlug(authors, "tecmambo-team");
+  const timHumphreys = bySlug(authors, "tim-humphreys");
   const tags = [
     bySlug(brands, "google"),
     bySlug(topics, "google-pixel-11"),
@@ -306,7 +306,7 @@ export function buildPixel11LaunchArticle({ authors, topics, brands }: BuildPixe
         height: 900
       }
     ],
-    author: tecMamboTeam,
+    author: timHumphreys,
     publishedAt: "2026-08-12T18:35:00+03:00",
     updatedAt: "2026-08-12T18:35:00+03:00",
     readTime: "16 min read",

@@ -86,6 +86,11 @@ const nextConfig: NextConfig = {
         source: "/reviews/samsung-galaxy-a37-5g-review",
         destination: "/explainers/samsung-galaxy-a37-5g-review",
         permanent: true
+      },
+      {
+        source: "/authors/lulu-kiritu",
+        destination: "/authors/lulu-camau",
+        permanent: true
       }
     ];
   },

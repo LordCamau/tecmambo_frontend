@@ -18,7 +18,7 @@ function published(hour: number) {
 
 export function buildAppleEcosystemArticles({ authors, topics, brands }: BuildAppleEcosystemArgs): Article[] {
   const tim = bySlug(authors, "tim-humphreys");
-  const lulu = bySlug(authors, "lulu-kiritu");
+  const lulu = bySlug(authors, "lulu-camau");
 
   const ai = bySlug(topics, "ai");
   const apps = bySlug(topics, "apps");

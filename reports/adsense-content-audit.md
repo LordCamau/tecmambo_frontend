@@ -1,12 +1,12 @@
 # tecMAMBO AdSense content audit
 
-Generated: 2026-08-14T07:48:12.022Z
+Generated: 2026-08-14T17:53:34.157Z
 
 ## Summary
 
-- URL records: 577
-- Articles: 225
-- Publicly eligible articles: 158
+- URL records: 578
+- Articles: 226
+- Publicly eligible articles: 159
 - Quarantined articles: 67
 - Noindex glossary details: 98
 - AdSense enabled: false
@@ -242,7 +242,6 @@ Generated: 2026-08-14T07:48:12.022Z
 - https://tecmambo.com/brands/optasia
 - https://tecmambo.com/brands/whatsapp
 - https://tecmambo.com/brands/meta
-- https://tecmambo.com/brands/vodacom
 - https://tecmambo.com/brands/tecno
 - https://tecmambo.com/brands/imax
 - https://tecmambo.com/brands/technicolor

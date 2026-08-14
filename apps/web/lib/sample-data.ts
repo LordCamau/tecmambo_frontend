@@ -39,11 +39,11 @@ export const authors: Author[] = [
     expertise: ["Phones", "Power & batteries", "Connectivity", "Reviews"]
   },
   {
-    name: "Lulu Kiritu",
-    slug: "lulu-kiritu",
+    name: "Lulu Camau",
+    slug: "lulu-camau",
     role: "Senior Writer and Editor",
-    bio: "Lulu Kiritu is a Senior Writer and Editor at tecMAMBO, covering artificial intelligence. She is happiest turning a dense research paper into something you can actually use over lunch, and she writes about how AI shows up in real life, not just on stage at a launch. Based in Nairobi.",
-    avatar: "/authors/lulu-kiritu.jpg",
+    bio: "Lulu Camau is a Senior Writer and Editor at tecMAMBO, covering artificial intelligence. She is happiest turning a dense research paper into something you can actually use over lunch, and she writes about how AI shows up in real life, not just on stage at a launch. Based in Nairobi.",
+    avatar: "/authors/lulu-camau.jpg",
     expertise: ["Artificial intelligence"]
   },
   {

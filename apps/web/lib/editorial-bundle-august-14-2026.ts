@@ -2936,10 +2936,27 @@ function bySlug<T extends { slug: string }>(items: T[], slug: string) {
 }
 
 export function buildEditorialAugust14Articles({ authors, regions }: { authors: Author[]; regions: RegionTerm[] }): Article[] {
-  const author = bySlug(authors, "tecmambo-team");
+  const tecMamboTeam = bySlug(authors, "tecmambo-team");
+  const timHumphreys = bySlug(authors, "tim-humphreys");
+  const luluCamau = bySlug(authors, "lulu-camau");
+  const timArticleSlugs = new Set([
+    "microsoft-openai-24-1-billion-revenue-concentration",
+    "disney-tiktok-verts-fan-videos-disney-plus",
+    "mpesa-ethiopia-bank-of-abyssinia-cardless-atm",
+    "spotify-ai-persona-badge-synthetic-artists",
+    "kenya-crypto-vasp-capital-rules-november-2026"
+  ]);
+  const luluArticleSlugs = new Set([
+    "agentic-ai-financial-fraud-kenya-bcg",
+    "anthropic-claude-invisible-text-watermarks-explained"
+  ]);
   return editorialAugust14Records.map(({ regionSlugs, ...article }) => ({
     ...article,
-    author,
+    author: timArticleSlugs.has(article.slug)
+      ? timHumphreys
+      : luluArticleSlugs.has(article.slug)
+        ? luluCamau
+        : tecMamboTeam,
     regions: regionSlugs.map((slug) => bySlug(regions, slug))
   }));
 }

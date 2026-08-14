@@ -21,7 +21,7 @@ const jpegImageType = "image/jpeg" as const;
 
 export function buildKenyaJuly17NewsArticles({ authors, topics, brands, kenya }: BuildKenyaJuly17NewsArgs): Article[] {
   const tim = bySlug(authors, "tim-humphreys");
-  const lulu = bySlug(authors, "lulu-kiritu");
+  const lulu = bySlug(authors, "lulu-camau");
   const ai = bySlug(topics, "ai");
   const apps = bySlug(topics, "apps");
   const business = bySlug(topics, "business");

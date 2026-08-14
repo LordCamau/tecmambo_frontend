@@ -1,11 +1,11 @@
 {
   "summary": {
-    "generatedAt": "2026-08-14T07:48:12.022Z",
+    "generatedAt": "2026-08-14T17:53:34.157Z",
     "adsenseEnabled": false,
     "totals": {
-      "urls": 577,
-      "articles": 225,
-      "publicArticles": 158,
+      "urls": 578,
+      "articles": 226,
+      "publicArticles": 159,
       "quarantinedArticles": 67,
       "indexableGlossaryDetails": 0,
       "noindexGlossaryDetails": 98,
@@ -13,6 +13,26 @@
     }
   },
   "rows": [
+    {
+      "url": "https://tecmambo.com/business/safaricom-board-reshuffle-vodacom-mariam-cassim-matimba-mbungela",
+      "type": "article",
+      "title": "Safaricom's new board appointments show what Vodacom's 55% control looks like in practice",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": true,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/business/safaricom-board-reshuffle-vodacom-mariam-cassim-matimba-mbungela",
+      "robotsDecision": "index, follow",
+      "wordCount": 2523,
+      "originalValueType": "original_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
     {
       "url": "https://tecmambo.com/opinion/tiktok-songs-of-live-professional-inbox-creator-tools",
       "type": "article",
@@ -7702,7 +7722,7 @@
       "canonical": "https://tecmambo.com/business",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 29 eligible articles. The minimum is 5."
+        "Archive has 30 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -8395,7 +8415,7 @@
       "canonical": "https://tecmambo.com/topics/business",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 41 eligible articles. The minimum is 5."
+        "Archive has 42 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -8416,7 +8436,7 @@
       "canonical": "https://tecmambo.com/topics/fintech",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 18 eligible articles. The minimum is 5."
+        "Archive has 19 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -9613,7 +9633,7 @@
       "canonical": "https://tecmambo.com/topics/telecoms",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 2 eligible articles. The minimum is 5."
+        "Archive has 3 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -9739,7 +9759,7 @@
       "canonical": "https://tecmambo.com/topics/corporate-governance",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 1 eligible articles. The minimum is 5."
+        "Archive has 2 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -10987,20 +11007,16 @@
       "title": "Vodacom",
       "publicationStatus": "published",
       "editorialStatus": "generated",
-      "indexingStatus": "noindex",
+      "indexingStatus": "index",
       "publiclyDiscoverable": true,
-      "sitemapIncluded": false,
+      "sitemapIncluded": true,
       "rssIncluded": false,
       "newsSitemapIncluded": false,
       "adEligible": false,
       "canonical": "https://tecmambo.com/brands/vodacom",
-      "robotsDecision": "noindex, follow",
-      "warnings": [
-        "Archive has 4 eligible articles. The minimum is 5."
-      ],
-      "recommendedActions": [
-        "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
-      ]
+      "robotsDecision": "index, follow",
+      "warnings": [],
+      "recommendedActions": []
     },
     {
       "url": "https://tecmambo.com/brands/m-pesa",
@@ -11583,9 +11599,9 @@
       "recommendedActions": []
     },
     {
-      "url": "https://tecmambo.com/authors/lulu-kiritu",
+      "url": "https://tecmambo.com/authors/lulu-camau",
       "type": "archive",
-      "title": "Lulu Kiritu",
+      "title": "Lulu Camau",
       "publicationStatus": "published",
       "editorialStatus": "generated",
       "indexingStatus": "index",
@@ -11594,7 +11610,7 @@
       "rssIncluded": false,
       "newsSitemapIncluded": false,
       "adEligible": false,
-      "canonical": "https://tecmambo.com/authors/lulu-kiritu",
+      "canonical": "https://tecmambo.com/authors/lulu-camau",
       "robotsDecision": "index, follow",
       "warnings": [],
       "recommendedActions": []
@@ -12203,7 +12219,7 @@
       "canonical": "https://tecmambo.com/business/fintech",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 13 eligible articles. The minimum is 5."
+        "Archive has 14 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."

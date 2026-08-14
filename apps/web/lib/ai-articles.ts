@@ -111,7 +111,7 @@ const images = {
 
 export function buildAiArticles({ authors, topics, brands }: ArticleFactoryInput): Article[] {
   const tim = bySlug(authors, "tim-humphreys");
-  const lulu = bySlug(authors, "lulu-kiritu");
+  const lulu = bySlug(authors, "lulu-camau");
   const ai = bySlug(topics, "ai");
   const anthropic = bySlug(brands, "anthropic");
   const amazon = bySlug(brands, "amazon");

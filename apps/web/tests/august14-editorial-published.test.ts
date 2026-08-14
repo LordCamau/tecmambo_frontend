@@ -6,7 +6,7 @@ import { articleWordCount } from "../lib/article-quality";
 import { isArticleIndexable, isContentPubliclyEligible } from "../lib/content-quality";
 import { editorialAugust14Records } from "../lib/editorial-bundle-august-14-2026";
 import { articlePath } from "../lib/formats";
-import { articles } from "../lib/sample-data";
+import { articles, authors } from "../lib/sample-data";
 import { articleJsonLd } from "../lib/seo";
 
 const slugs = [
@@ -84,6 +84,24 @@ describe("August 14 published editorial bundle", () => {
       expect(articleJsonLd(article)).toMatchObject({ mainEntityOfPage: canonical });
       if (["news", "business"].includes(article.format)) expect(newsSitemap).toContain(canonical);
     }
+  });
+
+  it("uses the requested Tim Humphreys and Lulu Camau bylines", () => {
+    const expectedAuthors: Record<string, string> = {
+      "microsoft-openai-24-1-billion-revenue-concentration": "tim-humphreys",
+      "disney-tiktok-verts-fan-videos-disney-plus": "tim-humphreys",
+      "mpesa-ethiopia-bank-of-abyssinia-cardless-atm": "tim-humphreys",
+      "spotify-ai-persona-badge-synthetic-artists": "tim-humphreys",
+      "kenya-crypto-vasp-capital-rules-november-2026": "tim-humphreys",
+      "agentic-ai-financial-fraud-kenya-bcg": "lulu-camau",
+      "anthropic-claude-invisible-text-watermarks-explained": "lulu-camau"
+    };
+
+    for (const [slug, authorSlug] of Object.entries(expectedAuthors)) {
+      expect(articles.find((article) => article.slug === slug)?.author.slug).toBe(authorSlug);
+    }
+    expect(authors.find((author) => author.slug === "lulu-camau")?.name).toBe("Lulu Camau");
+    expect(authors.some((author) => author.slug === "lulu-kiritu")).toBe(false);
   });
 
   it("records completed source checks and preserves the Songs of LIVE sourcing caveat", () => {

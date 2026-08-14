@@ -722,7 +722,7 @@ describe("content generators", () => {
 
     expect(aiPackage).toHaveLength(13);
     expect(aiPackage.filter((article) => article.author.slug === "tim-humphreys")).toHaveLength(5);
-    expect(aiPackage.filter((article) => article.author.slug === "lulu-kiritu")).toHaveLength(8);
+    expect(aiPackage.filter((article) => article.author.slug === "lulu-camau")).toHaveLength(8);
     expect(aiPackage.every((article) => article.tags.some((tag) => tag.slug === "ai"))).toBe(true);
     expect(uniqueImages.size).toBe(aiPackage.length);
     expect(brands.find((brand) => brand.slug === "amazon")).toBeTruthy();

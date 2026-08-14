@@ -25,7 +25,7 @@ function unsplash(id: string) {
 
 export function buildAfricanTechNewsJuly24Articles({ authors, topics, brands, regions }: BuildAfricanTechNewsJuly24Args): Article[] {
   const tim = bySlug(authors, "tim-humphreys");
-  const lulu = bySlug(authors, "lulu-kiritu");
+  const lulu = bySlug(authors, "lulu-camau");
   const ai = bySlug(topics, "ai");
   const business = bySlug(topics, "business");
   const policy = bySlug(topics, "policy");
