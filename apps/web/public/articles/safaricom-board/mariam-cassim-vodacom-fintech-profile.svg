@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Mariam Cassim executive profile</title>
+  <desc id="desc">Text profile card summarising Mariam Cassim's verified Vodacom role and Safaricom board appointment.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071b13"/><stop offset="1" stop-color="#087343"/></linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect x="72" y="72" width="1056" height="756" rx="40" fill="#fff" fill-opacity="0.07" stroke="#78e9ae" stroke-opacity="0.48"/>
+  <circle cx="970" cy="175" r="160" fill="#4ee198" opacity="0.12"/>
+  <text x="130" y="170" fill="#81edb5" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" letter-spacing="4">EXECUTIVE PROFILE</text>
+  <text x="130" y="294" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="800">Mariam Cassim</text>
+  <text x="130" y="365" fill="#d8f4e5" font-family="Arial, Helvetica, sans-serif" font-size="32">Chief Executive Officer:</text>
+  <text x="130" y="410" fill="#d8f4e5" font-family="Arial, Helvetica, sans-serif" font-size="32">Vodacom Fintech Group &amp; Group Partnerships</text>
+  <rect x="130" y="470" width="940" height="2" fill="#7ce9b1" opacity="0.45"/>
+  <text x="130" y="545" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="29">Vodacom Group Executive Committee member</text>
+  <text x="130" y="602" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="29">Chartered Accountant</text>
+  <text x="130" y="659" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="29">MBA, cum laude, UCT Graduate School of Business</text>
+  <text x="130" y="748" fill="#9decc3" font-family="Arial, Helvetica, sans-serif" font-size="24">Safaricom non-executive director, subject to regulatory approvals</text>
+</svg>

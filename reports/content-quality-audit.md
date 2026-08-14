@@ -1,10 +1,10 @@
 # tecMAMBO content quality audit
 
-Generated: 2026-08-14T11:09:31.989Z
+Generated: 2026-08-14T12:45:42.022Z
 
-Items audited: 521
+Items audited: 522
 
-Publicly eligible articles: 158
+Publicly eligible articles: 159
 
 Articles retained outside discovery: 67
 
@@ -12,9 +12,9 @@ Indexable glossary terms: 0
 
 ## Editorial action groups
 
-- Keep and index: 197
+- Keep and index: 199
 - Keep but improve: 98
-- Noindex temporarily: 324
+- Noindex temporarily: 323
 - Unpublish immediately: 18
 - Requires editorial verification: 67
 - Requires original testing evidence: 1
@@ -23,6 +23,7 @@ Indexable glossary terms: 0
 
 | Type | Title | URL | Robots | Recommended action | Reason |
 | --- | --- | --- | --- | --- | --- |
+| article | Safaricom's new board appointments show what Vodacom's 55% control looks like in practice | /business/safaricom-board-reshuffle-vodacom-mariam-cassim-matimba-mbungela | index, follow | keep | No blocking quality issue detected. |
 | article | TikTok is quietly turning Live music and DMs into creator business infrastructure | /opinion/tiktok-songs-of-live-professional-inbox-creator-tools | index, follow | keep | No blocking quality issue detected. |
 | article | Agentic AI could cut the cost of running scams by 90 percent. Kenyan banks should treat that as an automation problem | /explainers/agentic-ai-financial-fraud-kenya-bcg | index, follow | keep | No blocking quality issue detected. |
 | article | Microsoft booked $24.1 billion from its OpenAI commercial relationship. That is growth and concentration at once | /opinion/microsoft-openai-24-1-billion-revenue-concentration | index, follow | keep | No blocking quality issue detected. |
@@ -516,7 +517,7 @@ Indexable glossary terms: 0
 | archive | WhatsApp | /brands/whatsapp | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Meta | /brands/meta | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Safaricom | /brands/safaricom | index, follow | keep | Archive has at least five eligible stories. |
-| archive | Vodacom | /brands/vodacom | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Vodacom | /brands/vodacom | index, follow | keep | Archive has at least five eligible stories. |
 | archive | M-Pesa | /brands/m-pesa | index, follow | keep | Archive has at least five eligible stories. |
 | archive | TECNO | /brands/tecno | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | IMAX | /brands/imax | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |

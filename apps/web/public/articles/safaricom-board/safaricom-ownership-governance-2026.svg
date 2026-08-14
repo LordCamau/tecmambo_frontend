@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Safaricom ownership and governance in 2026</title>
+  <desc id="desc">Infographic showing approximately 55 percent Vodacom, 20 percent Government of Kenya and 25 percent public investors, with board and CEO nomination rules.</desc>
+  <rect width="1600" height="900" fill="#07140e"/>
+  <text x="110" y="115" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="55" font-weight="800">Safaricom ownership and governance</text>
+  <text x="110" y="164" fill="#a8bdb1" font-family="Arial, Helvetica, sans-serif" font-size="27">Post-transaction structure reported in August 2026</text>
+  <g transform="translate(110 230)">
+    <rect width="1380" height="140" rx="26" fill="#fff" opacity="0.08"/>
+    <rect width="759" height="140" rx="26" fill="#25c978"/>
+    <rect x="759" width="276" height="140" fill="#d33b4f"/>
+    <rect x="1035" width="345" height="140" rx="26" fill="#68756e"/>
+    <text x="36" y="62" fill="#032717" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700">VODACOM</text>
+    <text x="36" y="111" fill="#032717" font-family="Arial, Helvetica, sans-serif" font-size="45" font-weight="900">approximately 55%</text>
+    <text x="791" y="62" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700">GOVERNMENT</text>
+    <text x="791" y="111" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="900">20%</text>
+    <text x="1070" y="62" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700">PUBLIC INVESTORS</text>
+    <text x="1070" y="111" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="900">25%</text>
+  </g>
+  <g transform="translate(110 430)">
+    <rect width="660" height="330" rx="30" fill="#0d271b" stroke="#3de08d" stroke-opacity="0.5"/>
+    <text x="42" y="65" fill="#79ebb0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">BOARD NOMINATION FORMULA</text>
+    <text x="42" y="125" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="31">Vodafone Kenya</text>
+    <text x="42" y="173" fill="#d7e7de" font-family="Arial, Helvetica, sans-serif" font-size="25">1 director per complete 10% held</text>
+    <text x="42" y="235" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="31">Government of Kenya</text>
+    <text x="42" y="283" fill="#d7e7de" font-family="Arial, Helvetica, sans-serif" font-size="25">Equivalent formula at its 20% holding</text>
+  </g>
+  <g transform="translate(830 430)">
+    <rect width="660" height="330" rx="30" fill="#251015" stroke="#ff6079" stroke-opacity="0.55"/>
+    <text x="42" y="65" fill="#ff9dac" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">CEO NOMINATION FRAMEWORK</text>
+    <text x="42" y="135" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="30">While Vodafone Kenya holds</text>
+    <text x="42" y="181" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="30">more than 50%:</text>
+    <text x="42" y="242" fill="#f7dfe3" font-family="Arial, Helvetica, sans-serif" font-size="25">Safaricom's board appoints the CEO</text>
+    <text x="42" y="284" fill="#f7dfe3" font-family="Arial, Helvetica, sans-serif" font-size="25">from Vodafone Kenya nominees</text>
+  </g>
+  <text x="110" y="832" fill="#91a79a" font-family="Arial, Helvetica, sans-serif" font-size="23">Sources: Vodacom statement, Safaricom AGM materials and post-vote reporting</text>
+</svg>

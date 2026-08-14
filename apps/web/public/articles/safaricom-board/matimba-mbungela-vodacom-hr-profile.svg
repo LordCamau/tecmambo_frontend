@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Matimba Mbungela executive profile</title>
+  <desc id="desc">Text profile card summarising Matimba Mbungela's verified Vodacom role and Safaricom board appointment.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#25050b"/><stop offset="1" stop-color="#b10f25"/></linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect x="72" y="72" width="1056" height="756" rx="40" fill="#fff" fill-opacity="0.07" stroke="#ff93a3" stroke-opacity="0.52"/>
+  <circle cx="970" cy="175" r="160" fill="#ff6079" opacity="0.14"/>
+  <text x="130" y="170" fill="#ffabb8" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" letter-spacing="4">EXECUTIVE PROFILE</text>
+  <text x="130" y="294" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="800">Matimba Mbungela</text>
+  <text x="130" y="370" fill="#ffe0e5" font-family="Arial, Helvetica, sans-serif" font-size="34">Chief Officer: Human Resources</text>
+  <rect x="130" y="438" width="940" height="2" fill="#ff9bad" opacity="0.5"/>
+  <text x="130" y="520" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="29">Vodacom and Vodafone roles since 2003</text>
+  <text x="130" y="577" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="29">Talent, organisational effectiveness and change</text>
+  <text x="130" y="634" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="29">Board roles across Vodacom African operations</text>
+  <text x="130" y="748" fill="#ffc1ca" font-family="Arial, Helvetica, sans-serif" font-size="24">Safaricom non-executive director, subject to regulatory approvals</text>
+</svg>

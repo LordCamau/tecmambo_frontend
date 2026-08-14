@@ -15,6 +15,7 @@ import { buildEditorialAugust4Articles } from "@/lib/editorial-bundle-august-4-2
 import { buildEditorialAugust10Articles } from "@/lib/editorial-bundle-august-10-2026";
 import { buildEditorialAugust14Articles } from "@/lib/editorial-bundle-august-14-2026";
 import { buildPixel11LaunchArticle } from "@/lib/pixel-11-launch-2026";
+import { buildSafaricomBoardReshuffleArticle } from "@/lib/safaricom-board-reshuffle-2026";
 import { buildEditorialJuly7Articles } from "@/lib/editorial-bundle-july-7-2026";
 import { buildEvMobilityNewsArticles } from "@/lib/ev-mobility-news-2026";
 import { buildGlobalOpinionArticles } from "@/lib/global-opinion-essays-2026";
@@ -925,6 +926,12 @@ const editorialAugust14Articles = buildEditorialAugust14Articles({
   regions: [kenyaRegion, ethiopiaRegion]
 });
 const pixel11LaunchArticle = buildPixel11LaunchArticle({ authors, topics, brands });
+const safaricomBoardReshuffleArticle = buildSafaricomBoardReshuffleArticle({
+  authors,
+  topics,
+  brands,
+  regions: [kenyaRegion]
+});
 const odysseyImaxArticle = buildOdysseyImaxArticle({ authors, topics, brands });
 const editorialJuly7Articles = buildEditorialJuly7Articles({
   authors,
@@ -1047,6 +1054,7 @@ function migrateLegacyLifecycle(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  safaricomBoardReshuffleArticle,
   ...editorialAugust14Articles,
   pixel11LaunchArticle,
   ...editorialAugust10Articles,
