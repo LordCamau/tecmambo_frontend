@@ -1,10 +1,10 @@
 # tecMAMBO content quality audit
 
-Generated: 2026-08-14T05:14:42.538Z
+Generated: 2026-08-14T11:09:31.989Z
 
-Items audited: 505
+Items audited: 521
 
-Publicly eligible articles: 142
+Publicly eligible articles: 158
 
 Articles retained outside discovery: 67
 
@@ -12,9 +12,9 @@ Indexable glossary terms: 0
 
 ## Editorial action groups
 
-- Keep and index: 178
+- Keep and index: 197
 - Keep but improve: 98
-- Noindex temporarily: 327
+- Noindex temporarily: 324
 - Unpublish immediately: 18
 - Requires editorial verification: 67
 - Requires original testing evidence: 1
@@ -23,6 +23,22 @@ Indexable glossary terms: 0
 
 | Type | Title | URL | Robots | Recommended action | Reason |
 | --- | --- | --- | --- | --- | --- |
+| article | TikTok is quietly turning Live music and DMs into creator business infrastructure | /opinion/tiktok-songs-of-live-professional-inbox-creator-tools | index, follow | keep | No blocking quality issue detected. |
+| article | Agentic AI could cut the cost of running scams by 90 percent. Kenyan banks should treat that as an automation problem | /explainers/agentic-ai-financial-fraud-kenya-bcg | index, follow | keep | No blocking quality issue detected. |
+| article | Microsoft booked $24.1 billion from its OpenAI commercial relationship. That is growth and concentration at once | /opinion/microsoft-openai-24-1-billion-revenue-concentration | index, follow | keep | No blocking quality issue detected. |
+| article | Disney is putting TikTok fan videos inside Disney+, turning fandom into streaming inventory | /opinion/disney-tiktok-verts-fan-videos-disney-plus | index, follow | keep | No blocking quality issue detected. |
+| article | A KSh 2.5 million Kenyan privacy judgment shows intimate images are personal data, not gossip | /explainers/kenya-intimate-image-privacy-ruling-2-5-million | index, follow | keep | No blocking quality issue detected. |
+| article | Claude is adding invisible watermarks to AI text, but a watermark is not a lie detector | /explainers/anthropic-claude-invisible-text-watermarks-explained | index, follow | keep | No blocking quality issue detected. |
+| article | M-Pesa Ethiopia users can now turn wallet balance into cash at Bank of Abyssinia ATMs | /opinion/mpesa-ethiopia-bank-of-abyssinia-cardless-atm | index, follow | keep | No blocking quality issue detected. |
+| article | Android's new Tap to Share brings back the best idea from Android Beam | /news/google-quick-share-tap-to-share-pixel-nfc | index, follow | keep | No blocking quality issue detected. |
+| article | Spotify will label AI Personas and keep them out of recommendations by default | /explainers/spotify-ai-persona-badge-synthetic-artists | index, follow | keep | No blocking quality issue detected. |
+| article | Jumia raised $50 million from IFC, Axian and others. Now it has to prove the profitability story | /opinion/jumia-50-million-ifc-axian-profitability | index, follow | keep | No blocking quality issue detected. |
+| article | Kenya's cyber cafe rules do not require browsing history, but the logging debate is not over | /explainers/kenya-cyber-cafe-rules-ca-clarification-privacy | index, follow | keep | No blocking quality issue detected. |
+| article | Spotify wants fans to remix copyrighted songs legally, and Kobalt just joined the experiment | /opinion/spotify-kobalt-licensed-ai-covers-remixes | index, follow | keep | No blocking quality issue detected. |
+| article | Kenya's first locally domiciled ETF lets investors buy 11 bank stocks through one NSE trade | /explainers/wsa-banking-index-etf-nse-kenya-explained | index, follow | keep | No blocking quality issue detected. |
+| article | Instagram changed its wordmark after 10 years, and legibility may be the price of personality | /opinion/instagram-new-wordmark-2026-design-refresh | index, follow | keep | No blocking quality issue detected. |
+| article | Kenya's new crypto capital rules could protect customers and price startups out at the same time | /explainers/kenya-crypto-vasp-capital-rules-november-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | WhatsApp's Scam Alert checks suspicious messages without sending them to Meta | /explainers/whatsapp-scam-alert-on-device-ai-explained | index, follow | keep | No blocking quality issue detected. |
 | article | Google Pixel 11 Series Arrives with Tensor G6, HiLight, Better Cameras and Higher Starting Prices | /news/google-pixel-11-series-tensor-g6-hilight-price-2026 | index, follow | keep | No blocking quality issue detected. |
 | article | Airtel's Bizna Wallet has turned Kenya's small-business payments into a price war | /opinion/airtel-bizna-wallet-pochi-la-biashara-price-war-kenya | index, follow | keep | No blocking quality issue detected. |
 | article | Apple owns 65 percent of the premium phone market, but the number hides a changing battlefield | /opinion/apple-65-percent-premium-smartphone-market-h1-2026 | index, follow | keep | No blocking quality issue detected. |
@@ -342,7 +358,7 @@ Indexable glossary terms: 0
 | page | compare phones | /compare-phones | index, follow | keep | Core utility, trust, or discovery page. |
 | archive | Tim Humphreys | /authors/tim-humphreys | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Lulu Kiritu | /authors/lulu-kiritu | index, follow | keep | Archive has at least five eligible stories. |
-| archive | tecMAMBO Team | /authors/tecmambo-team | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | tecMAMBO Team | /authors/tecmambo-team | index, follow | keep | Archive has at least five eligible stories. |
 | archive | AI | /topics/ai | index, follow | keep | Archive has at least five eligible stories. |
 | archive | AI Shopping | /topics/ai-shopping | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Agentic AI | /topics/agentic-ai | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
@@ -351,7 +367,7 @@ Indexable glossary terms: 0
 | archive | Smartphones | /topics/smartphones | index, follow | keep | Archive has at least five eligible stories. |
 | archive | E-Commerce | /topics/e-commerce | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Quick Commerce | /topics/quick-commerce | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
-| archive | Privacy | /topics/privacy | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Privacy | /topics/privacy | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Computing | /topics/computing | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Social Media | /topics/social-media | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Entertainment | /topics/entertainment | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
@@ -377,7 +393,7 @@ Indexable glossary terms: 0
 | archive | Startups | /topics/startups | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Business | /topics/business | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Fintech | /topics/fintech | index, follow | keep | Archive has at least five eligible stories. |
-| archive | Banking | /topics/banking | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Banking | /topics/banking | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Credit Cards | /topics/credit-cards | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Policy | /topics/policy | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Climate Policy | /topics/climate-policy | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |

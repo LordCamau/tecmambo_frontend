@@ -1,12 +1,12 @@
 # tecMAMBO AdSense content audit
 
-Generated: 2026-08-14T05:14:41.903Z
+Generated: 2026-08-14T07:48:12.022Z
 
 ## Summary
 
-- URL records: 561
-- Articles: 209
-- Publicly eligible articles: 142
+- URL records: 577
+- Articles: 225
+- Publicly eligible articles: 158
 - Quarantined articles: 67
 - Noindex glossary details: 98
 - AdSense enabled: false
@@ -269,7 +269,6 @@ Generated: 2026-08-14T05:14:41.903Z
 - https://tecmambo.com/brands/kcb
 - https://tecmambo.com/brands/airpods
 - https://tecmambo.com/brands/plasmasolve
-- https://tecmambo.com/authors/tecmambo-team
 - https://tecmambo.com/africa/ghana
 - https://tecmambo.com/africa/egypt
 - https://tecmambo.com/africa/ethiopia

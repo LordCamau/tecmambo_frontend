@@ -135,6 +135,7 @@ export type Article = {
   sources?: Array<{ label: string; url: string }>;
   itemList?: string[];
   sponsored?: boolean;
+  googleAdsEligible?: boolean;
   deal?: Deal;
   publicationStatus?: "publish" | "draft" | "in_review" | "private" | "scheduled" | "archived";
   editorialStatus?: "draft" | "editorial_review" | "fact_check" | "ready" | "published" | "needs_revision" | "archived";

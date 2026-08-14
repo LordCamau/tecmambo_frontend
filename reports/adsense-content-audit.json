@@ -1,11 +1,11 @@
 {
   "summary": {
-    "generatedAt": "2026-08-14T05:14:41.903Z",
+    "generatedAt": "2026-08-14T07:48:12.022Z",
     "adsenseEnabled": false,
     "totals": {
-      "urls": 561,
-      "articles": 209,
-      "publicArticles": 142,
+      "urls": 577,
+      "articles": 225,
+      "publicArticles": 158,
       "quarantinedArticles": 67,
       "indexableGlossaryDetails": 0,
       "noindexGlossaryDetails": 98,
@@ -13,6 +13,326 @@
     }
   },
   "rows": [
+    {
+      "url": "https://tecmambo.com/opinion/tiktok-songs-of-live-professional-inbox-creator-tools",
+      "type": "article",
+      "title": "TikTok is quietly turning Live music and DMs into creator business infrastructure",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/opinion/tiktok-songs-of-live-professional-inbox-creator-tools",
+      "robotsDecision": "index, follow",
+      "wordCount": 1009,
+      "originalValueType": "original_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/explainers/agentic-ai-financial-fraud-kenya-bcg",
+      "type": "article",
+      "title": "Agentic AI could cut the cost of running scams by 90 percent. Kenyan banks should treat that as an automation problem",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/explainers/agentic-ai-financial-fraud-kenya-bcg",
+      "robotsDecision": "index, follow",
+      "wordCount": 965,
+      "originalValueType": "curated_context",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/opinion/microsoft-openai-24-1-billion-revenue-concentration",
+      "type": "article",
+      "title": "Microsoft booked $24.1 billion from its OpenAI commercial relationship. That is growth and concentration at once",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/opinion/microsoft-openai-24-1-billion-revenue-concentration",
+      "robotsDecision": "index, follow",
+      "wordCount": 982,
+      "originalValueType": "original_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/opinion/disney-tiktok-verts-fan-videos-disney-plus",
+      "type": "article",
+      "title": "Disney is putting TikTok fan videos inside Disney+, turning fandom into streaming inventory",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/opinion/disney-tiktok-verts-fan-videos-disney-plus",
+      "robotsDecision": "index, follow",
+      "wordCount": 996,
+      "originalValueType": "original_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/explainers/kenya-intimate-image-privacy-ruling-2-5-million",
+      "type": "article",
+      "title": "A KSh 2.5 million Kenyan privacy judgment shows intimate images are personal data, not gossip",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/explainers/kenya-intimate-image-privacy-ruling-2-5-million",
+      "robotsDecision": "index, follow",
+      "wordCount": 904,
+      "originalValueType": "curated_context",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/explainers/anthropic-claude-invisible-text-watermarks-explained",
+      "type": "article",
+      "title": "Claude is adding invisible watermarks to AI text, but a watermark is not a lie detector",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/explainers/anthropic-claude-invisible-text-watermarks-explained",
+      "robotsDecision": "index, follow",
+      "wordCount": 970,
+      "originalValueType": "curated_context",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/opinion/mpesa-ethiopia-bank-of-abyssinia-cardless-atm",
+      "type": "article",
+      "title": "M-Pesa Ethiopia users can now turn wallet balance into cash at Bank of Abyssinia ATMs",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/opinion/mpesa-ethiopia-bank-of-abyssinia-cardless-atm",
+      "robotsDecision": "index, follow",
+      "wordCount": 941,
+      "originalValueType": "original_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/news/google-quick-share-tap-to-share-pixel-nfc",
+      "type": "article",
+      "title": "Android's new Tap to Share brings back the best idea from Android Beam",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": true,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/news/google-quick-share-tap-to-share-pixel-nfc",
+      "robotsDecision": "index, follow",
+      "wordCount": 987,
+      "originalValueType": "curated_context",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/explainers/spotify-ai-persona-badge-synthetic-artists",
+      "type": "article",
+      "title": "Spotify will label AI Personas and keep them out of recommendations by default",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/explainers/spotify-ai-persona-badge-synthetic-artists",
+      "robotsDecision": "index, follow",
+      "wordCount": 953,
+      "originalValueType": "curated_context",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/opinion/jumia-50-million-ifc-axian-profitability",
+      "type": "article",
+      "title": "Jumia raised $50 million from IFC, Axian and others. Now it has to prove the profitability story",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/opinion/jumia-50-million-ifc-axian-profitability",
+      "robotsDecision": "index, follow",
+      "wordCount": 963,
+      "originalValueType": "original_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/explainers/kenya-cyber-cafe-rules-ca-clarification-privacy",
+      "type": "article",
+      "title": "Kenya's cyber cafe rules do not require browsing history, but the logging debate is not over",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/explainers/kenya-cyber-cafe-rules-ca-clarification-privacy",
+      "robotsDecision": "index, follow",
+      "wordCount": 977,
+      "originalValueType": "curated_context",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/opinion/spotify-kobalt-licensed-ai-covers-remixes",
+      "type": "article",
+      "title": "Spotify wants fans to remix copyrighted songs legally, and Kobalt just joined the experiment",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/opinion/spotify-kobalt-licensed-ai-covers-remixes",
+      "robotsDecision": "index, follow",
+      "wordCount": 984,
+      "originalValueType": "original_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/explainers/wsa-banking-index-etf-nse-kenya-explained",
+      "type": "article",
+      "title": "Kenya's first locally domiciled ETF lets investors buy 11 bank stocks through one NSE trade",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/explainers/wsa-banking-index-etf-nse-kenya-explained",
+      "robotsDecision": "index, follow",
+      "wordCount": 1002,
+      "originalValueType": "curated_context",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/opinion/instagram-new-wordmark-2026-design-refresh",
+      "type": "article",
+      "title": "Instagram changed its wordmark after 10 years, and legibility may be the price of personality",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/opinion/instagram-new-wordmark-2026-design-refresh",
+      "robotsDecision": "index, follow",
+      "wordCount": 978,
+      "originalValueType": "original_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/explainers/kenya-crypto-vasp-capital-rules-november-2026",
+      "type": "article",
+      "title": "Kenya's new crypto capital rules could protect customers and price startups out at the same time",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/explainers/kenya-crypto-vasp-capital-rules-november-2026",
+      "robotsDecision": "index, follow",
+      "wordCount": 1075,
+      "originalValueType": "curated_context",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/explainers/whatsapp-scam-alert-on-device-ai-explained",
+      "type": "article",
+      "title": "WhatsApp's Scam Alert checks suspicious messages without sending them to Meta",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/explainers/whatsapp-scam-alert-on-device-ai-explained",
+      "robotsDecision": "index, follow",
+      "wordCount": 1183,
+      "originalValueType": "curated_context",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
     {
       "url": "https://tecmambo.com/news/google-pixel-11-series-tensor-g6-hilight-price-2026",
       "type": "article",
@@ -7256,7 +7576,7 @@
       "canonical": "https://tecmambo.com/explainers",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 35 eligible articles. The minimum is 5."
+        "Archive has 43 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -7340,7 +7660,7 @@
       "canonical": "https://tecmambo.com/news",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 41 eligible articles. The minimum is 5."
+        "Archive has 42 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -7361,7 +7681,7 @@
       "canonical": "https://tecmambo.com/opinion",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 35 eligible articles. The minimum is 5."
+        "Archive has 42 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -7445,7 +7765,7 @@
       "canonical": "https://tecmambo.com/topics/agentic-ai",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 1 eligible articles. The minimum is 5."
+        "Archive has 2 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -7466,7 +7786,7 @@
       "canonical": "https://tecmambo.com/topics/android",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 12 eligible articles. The minimum is 5."
+        "Archive has 13 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -7529,7 +7849,7 @@
       "canonical": "https://tecmambo.com/topics/e-commerce",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 2 eligible articles. The minimum is 5."
+        "Archive has 3 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -7571,7 +7891,7 @@
       "canonical": "https://tecmambo.com/topics/privacy",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 2 eligible articles. The minimum is 5."
+        "Archive has 5 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -8096,7 +8416,7 @@
       "canonical": "https://tecmambo.com/topics/fintech",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 16 eligible articles. The minimum is 5."
+        "Archive has 18 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -8117,7 +8437,7 @@
       "canonical": "https://tecmambo.com/topics/banking",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 3 eligible articles. The minimum is 5."
+        "Archive has 5 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -8285,7 +8605,7 @@
       "canonical": "https://tecmambo.com/topics/cybersecurity",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 11 eligible articles. The minimum is 5."
+        "Archive has 14 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -9167,7 +9487,7 @@
       "canonical": "https://tecmambo.com/topics/mobile-money",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 1 eligible articles. The minimum is 5."
+        "Archive has 2 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -9251,7 +9571,7 @@
       "canonical": "https://tecmambo.com/topics/ethiopia",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 1 eligible articles. The minimum is 5."
+        "Archive has 2 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -9272,7 +9592,7 @@
       "canonical": "https://tecmambo.com/topics/investing",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 1 eligible articles. The minimum is 5."
+        "Archive has 2 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -10617,7 +10937,7 @@
       "canonical": "https://tecmambo.com/brands/whatsapp",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 2 eligible articles. The minimum is 5."
+        "Archive has 3 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -10638,7 +10958,7 @@
       "canonical": "https://tecmambo.com/brands/meta",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 2 eligible articles. The minimum is 5."
+        "Archive has 3 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -11285,20 +11605,16 @@
       "title": "tecMAMBO Team",
       "publicationStatus": "published",
       "editorialStatus": "generated",
-      "indexingStatus": "noindex",
+      "indexingStatus": "index",
       "publiclyDiscoverable": true,
-      "sitemapIncluded": false,
+      "sitemapIncluded": true,
       "rssIncluded": false,
       "newsSitemapIncluded": false,
       "adEligible": false,
       "canonical": "https://tecmambo.com/authors/tecmambo-team",
-      "robotsDecision": "noindex, follow",
-      "warnings": [
-        "Archive has 1 eligible articles. The minimum is 5."
-      ],
-      "recommendedActions": [
-        "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
-      ]
+      "robotsDecision": "index, follow",
+      "warnings": [],
+      "recommendedActions": []
     },
     {
       "url": "https://tecmambo.com/africa/kenya",
@@ -11425,7 +11741,7 @@
       "canonical": "https://tecmambo.com/africa/ethiopia",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 1 eligible articles. The minimum is 5."
+        "Archive has 2 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."

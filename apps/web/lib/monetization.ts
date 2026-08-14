@@ -5,7 +5,7 @@ import type { Article } from "@/lib/types";
 export const adsenseEnabled = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";
 
 export function isArticleMonetizationEligible(article: Article, preview = false) {
-  if (!adsenseEnabled || preview || article.sponsored) return false;
+  if (!adsenseEnabled || preview || article.sponsored || article.googleAdsEligible === false) return false;
   if (!isContentPubliclyEligible(article) || !isArticleIndexable(article)) return false;
   if (articleWordCount(article) < 600) return false;
   return articleQualityIssues(article).length === 0;
