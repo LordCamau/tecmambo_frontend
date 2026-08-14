@@ -125,7 +125,7 @@ describe("August 10 verified editorial bundle", () => {
     expect(articleText("iphone-windows-clipboard-sync-not-launched-eu-timeline")).toMatch(/has not already rolled out[\s\S]*2027/i);
   });
 
-  it("includes the bundle in RSS and the fresh-news sitemap", () => {
+  it("includes the bundle in RSS but excludes legacy records from the verified News sitemap", () => {
     const rss = buildRssFeed(articles);
     vi.useFakeTimers();
     vi.setSystemTime(new Date("2026-08-11T10:00:00+03:00"));
@@ -134,7 +134,7 @@ describe("August 10 verified editorial bundle", () => {
     bundle.forEach((article) => {
       const path = articlePath(article.format, article.slug);
       expect(rss).toContain(`https://tecmambo.com${path}`);
-      expect(newsSitemap).toContain(`https://tecmambo.com${path}`);
+      expect(newsSitemap).not.toContain(`https://tecmambo.com${path}`);
     });
   });
 });

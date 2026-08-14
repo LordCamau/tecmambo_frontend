@@ -29,9 +29,11 @@ import { WhyItMatters } from "@/components/signature/WhyItMatters";
 import { NewsletterCard } from "@/components/cards/NewsletterCard";
 import { StoryCard } from "@/components/cards/StoryCard";
 import { AdSlot } from "@/components/ads/AdSlot";
+import { AdSenseScript } from "@/components/ads/AdSenseScript";
 import { YouTubeEmbed } from "@/components/media/YouTubeEmbed";
 import { JsonLd } from "@/components/seo/JsonLd";
 import styles from "./page.module.css";
+import { isArticleMonetizationEligible } from "@/lib/monetization";
 
 type Params = Promise<{ section: string; slug: string }>;
 
@@ -318,6 +320,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
       (await getArticles()).filter((article) => article.format === formatKey),
       topic.canonicalTopic
     );
+    const archiveIndexable = isArchiveIndexable(articles.length, topic.description);
     return (
       <>
         <section className={`container ${styles.topicArchive}`}>
@@ -340,7 +343,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
             {articles.length ? articles.map((item) => <StoryCard article={item} key={item.id} />) : <p>No stories in this lane yet.</p>}
           </div>
         </section>
-        <JsonLd data={collectionPageJsonLd({ name: topic.label, description: topic.description, path: `/${section}/${slug}`, articles })} />
+        {archiveIndexable ? <JsonLd data={collectionPageJsonLd({ name: topic.label, description: topic.description, path: `/${section}/${slug}`, articles })} /> : null}
         <JsonLd
           data={breadcrumbJsonLd([
             { name: "Home", path: "/" },
@@ -360,6 +363,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
   const glossaryState: GlossaryLinkState = { seen: new Set(), count: 0, max: 12 };
   const highlightReviewPrices = isPhoneReview(article);
   const eligible = isContentPubliclyEligible(article);
+  const monetizable = isArticleMonetizationEligible(article, previewEnabled);
   const showScore = reviewCanShowScore(article);
   const safeSubhead = findPlaceholderIssues(article.subhead).length ? "" : article.subhead;
   const safeWhyItMatters = findPlaceholderIssues(article.whyItMatters).length ? "" : article.whyItMatters;
@@ -507,7 +511,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
           <p>Have a plain-English question about this topic? Send it in and we may answer it in a future guide.</p>
           <Link href="/contact">Ask a question</Link>
         </section>
-        {eligible ? <AdSlot /> : null}
+        {monetizable ? <AdSlot /> : null}
       </div>
 
       <section className={`container ${styles.related}`} aria-labelledby="related-title">
@@ -523,6 +527,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
         <NewsletterCard />
       </div>
 
+      {monetizable ? <AdSenseScript /> : null}
       {eligible ? <JsonLd data={articleJsonLd(article)} /> : null}
       {eligible && dealProductJsonLd(article) ? <JsonLd data={dealProductJsonLd(article)!} /> : null}
       {eligible && article.faq?.length ? <JsonLd data={faqJsonLd(article.faq)} /> : null}

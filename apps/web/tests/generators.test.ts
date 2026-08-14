@@ -23,13 +23,13 @@ import { africaHubToMarkdown, countryHubToMarkdown } from "../content/region-mar
 import { articleJsonLd, articleSocialImage } from "../lib/seo";
 import { megaNavItems, moreLinks } from "../lib/nav";
 import { curateHomeContent } from "../lib/home-curation";
+import { isContentPubliclyEligible } from "../lib/content-quality";
 
 describe("content generators", () => {
   it("keeps Africa and Compare Phones as first-level navigation items", () => {
     expect(megaNavItems.map((item) => item.label)).toEqual([
       "Latest",
       "News",
-      "Reviews",
       "Wallet Watch",
       "Africa",
       "Business",
@@ -120,9 +120,10 @@ describe("content generators", () => {
     const markdown = articleToMarkdown(story!);
 
     expect(story).toBeTruthy();
-    expect(story?.title).toBe("iPhone Air review: the iPhone that asks what you're willing to give up");
+    expect(story?.title).toBe("iPhone Air analysis: the iPhone that asks what you are willing to give up");
     expect(story?.author.name).toBe("Tim Humphreys");
-    expect(story?.format).toBe("review");
+    expect(story?.format).toBe("explainer");
+    expect(isContentPubliclyEligible(story!)).toBe(false);
     expect(story?.seo?.description).toBe(
       "The iPhone Air is Apple's thinnest, most beautiful iPhone. After the hype, a research-based assessment of the camera, battery, and whether it is worth the price."
     );
@@ -193,12 +194,12 @@ describe("content generators", () => {
     const markdown = articleToMarkdown(story!);
 
     expect(story).toBeTruthy();
-    expect(story?.title).toBe("Samsung Galaxy A37 5G review: a dependable mid-ranger that plays it safe");
+    expect(story?.title).toBe("Samsung Galaxy A37 5G analysis: a dependable mid-ranger that plays it safe");
     expect(story?.author.name).toBe("Tim Humphreys");
-    expect(story?.format).toBe("review");
+    expect(story?.format).toBe("explainer");
     expect(story?.tags.map((tag) => tag.slug)).toEqual(expect.arrayContaining(["smartphones", "samsung", "android", "power-batteries"]));
     expect(story?.seo).toEqual({
-      title: "Samsung Galaxy A37 5G review: solid, safe, and best on a deal",
+      title: "Samsung Galaxy A37 5G analysis: solid, safe, and best on a deal",
       description:
         "The Galaxy A37 5G nails the basics, a great screen, all-day battery, and six years of updates, but plays it safe and cost too much at launch. Our verdict."
     });
@@ -289,16 +290,9 @@ describe("content generators", () => {
     expect(schema.citation).toEqual(expect.arrayContaining(["https://www.gsmarena.com/samsung_galaxy_a37-14378.php"]));
   });
 
-  it("keeps review pricing useful for Kenyan readers", () => {
-    const reviewArticles = articles.filter((article) => article.format === "review");
-
-    expect(reviewArticles.length).toBeGreaterThanOrEqual(3);
-    reviewArticles.forEach((article) => {
-      const reviewText = [article.body.join(" "), article.goDeeper?.specs.map((spec) => spec.value).join(" ") ?? ""].join(" ");
-
-      expect(reviewText).toMatch(/\bUS dollars\b|\bdollars\b/i);
-      expect(reviewText).toMatch(/\bKSh[\d,]+/);
-    });
+  it("keeps research-only assessments out of the public Reviews section", () => {
+    const publicReviews = articles.filter((article) => article.format === "review" && isContentPubliclyEligible(article));
+    expect(publicReviews).toHaveLength(0);
   });
 
   it("builds JSON Feed items", () => {
@@ -407,6 +401,14 @@ describe("content generators", () => {
     const sitemap = buildGoogleNewsSitemap([
       {
         ...articles[0]!,
+        format: "news",
+        workflowVersion: "gated",
+        publicationStatus: "publish",
+        editorialStatus: "published",
+        sourceChecked: true,
+        humanEditorApproved: true,
+        editor: "Test Editor",
+        reviewedAt: new Date().toISOString(),
         publishedAt: new Date().toISOString()
       }
     ]);

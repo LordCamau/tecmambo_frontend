@@ -205,7 +205,7 @@ export default async function HomePage() {
 
       <section className={`container ${styles.siteIntro}`} aria-label="About tecMAMBO">
         <p>
-          tecMAMBO is a technology publication in Nairobi, Kenya covering tech news, reviews, and plain-English
+          tecMAMBO is a technology publication in Nairobi, Kenya covering tech news, analysis, and plain-English
           explainers for Kenya, Africa, and readers everywhere.
         </p>
       </section>
@@ -234,7 +234,6 @@ export default async function HomePage() {
       <Suspense>
         {renderLane("smartphones")}
         {renderLane("news")}
-        {renderLane("reviews")}
         {renderLane("mobility")}
       </Suspense>
 

@@ -3,7 +3,6 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Bricolage_Grotesque, Inter } from "next/font/google";
 import Script from "next/script";
 import "@/styles/globals.css";
-import { AdSenseScript } from "@/components/ads/AdSenseScript";
 import { AuroraIntro } from "@/components/brand/AuroraIntro";
 import { CookieConsent } from "@/components/consent/CookieConsent";
 import { SiteFooter } from "@/components/layout/SiteFooter";
@@ -115,7 +114,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
     >
       <head>
-        <meta name="google-adsense-account" content="ca-pub-6410608625427921" />
         <style>{`
           html.js-intro,
           html.js-intro body {
@@ -129,7 +127,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <AuroraIntro />
         <ThemeProvider>
-          <AdSenseScript />
           <Script
             id="tecmambo-consent-defaults"
             strategy="beforeInteractive"

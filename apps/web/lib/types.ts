@@ -136,7 +136,7 @@ export type Article = {
   itemList?: string[];
   sponsored?: boolean;
   deal?: Deal;
-  publicationStatus?: "publish" | "draft" | "private" | "scheduled" | "archived";
+  publicationStatus?: "publish" | "draft" | "in_review" | "private" | "scheduled" | "archived";
   editorialStatus?: "draft" | "editorial_review" | "fact_check" | "ready" | "published" | "needs_revision" | "archived";
   indexingStatus?: "index" | "noindex" | "inherit";
   contentFormat?: "news" | "analysis" | "explainer" | "buying_guide" | "hands_on_review" | "research_based_review" | "opinion" | "glossary" | "interview" | "field_test";
@@ -148,6 +148,17 @@ export type Article = {
   testingPeriod?: string;
   sourceDisclosure?: string;
   excludeFromDiscovery?: boolean;
+  workflowVersion?: "legacy" | "gated";
+  sourceChecked?: boolean;
+  humanEditorApproved?: boolean;
+  editor?: string;
+  reviewedAt?: string;
+  originalValueType?: "original_reporting" | "original_analysis" | "first_hand_testing" | "data_analysis" | "practical_guide" | "curated_context";
+  testEvidence?: string[];
+  testStartedAt?: string;
+  testCompletedAt?: string;
+  pricingCheckedAt?: string;
+  legalReviewedAt?: string;
 };
 
 export type GlossaryTerm = {

@@ -1,7 +1,7 @@
 import type { Article, GlossaryTerm } from "@/lib/types";
 
 export function aboutToMarkdown(articles: Article[], terms: GlossaryTerm[]) {
-  const explainerReviewCount = articles.filter((article) => article.format === "explainer" || article.format === "review").length;
+  const explainerAnalysisCount = articles.filter((article) => article.format === "explainer" || article.format === "opinion").length;
   return [
     "# About tecMAMBO",
     "",
@@ -30,7 +30,7 @@ export function aboutToMarkdown(articles: Article[], terms: GlossaryTerm[]) {
     "",
     "- Founded 2016",
     "- Based in Nairobi, Kenya",
-    `- ${explainerReviewCount} explainers & reviews`,
+    `- ${explainerAnalysisCount} explainers and analyses`,
     `- ${terms.length} plain-English glossary terms`,
     "- Free to read",
     "",

@@ -1,23 +1,23 @@
 # tecMAMBO content quality audit
 
-Generated: 2026-08-12T18:28:06.748Z
+Generated: 2026-08-14T05:14:42.538Z
 
-Items audited: 507
+Items audited: 505
 
-Publicly eligible articles: 170
+Publicly eligible articles: 142
 
-Articles retained outside discovery: 39
+Articles retained outside discovery: 67
 
 Indexable glossary terms: 0
 
 ## Editorial action groups
 
-- Keep and index: 224
+- Keep and index: 178
 - Keep but improve: 98
-- Noindex temporarily: 283
-- Unpublish immediately: 0
-- Requires editorial verification: 39
-- Requires original testing evidence: 3
+- Noindex temporarily: 327
+- Unpublish immediately: 18
+- Requires editorial verification: 67
+- Requires original testing evidence: 1
 - Requires broken-link repair: see `reports/link-audit.md`
 - Requires CMS changes: see `docs/cms-editorial-controls.md`
 
@@ -33,7 +33,7 @@ Indexable glossary terms: 0
 | article | Pixel 11's leaked Proactive Assistance wants to understand your screen before you ask | /news/pixel-11-proactive-assistance-gemini-context-leak | index, follow | keep | No blocking quality issue detected. |
 | article | India wants to lock in electronics manufacturing until 2041, and Apple is a major reason why | /opinion/india-electronics-manufacturing-tax-breaks-2041-apple-suppliers | index, follow | keep | No blocking quality issue detected. |
 | article | A Zeekr 7X caught fire near a charger. The earlier crash may matter more than the charger | /explainers/zeekr-7x-ningbo-fire-previous-collision-investigation | index, follow | keep | No blocking quality issue detected. |
-| article | Apple just raised Mac trade-in values. That does not mean you should trade yours in | /wallet-watch/apple-mac-trade-in-values-rise-2026-worth-it | index, follow | keep | No blocking quality issue detected. |
+| article | Apple just raised Mac trade-in values. That does not mean you should trade yours in | /wallet-watch/apple-mac-trade-in-values-rise-2026-worth-it | noindex, follow | retain and revise outside discovery | unverified-buying-guide: The buying guide lacks sufficient verification evidence. |
 | article | Insta360 just turned the GO Ultra into a wearable Gemini assistant | /opinion/insta360-go-ultra-gemini-ai-voice-assistant-kira | index, follow | keep | No blocking quality issue detected. |
 | article | Smart #2 is returning to the tiny-car idea that made Smart interesting | /news/smart-2-micro-ev-miit-filing-2026 | index, follow | keep | No blocking quality issue detected. |
 | article | The August Pixel update fixes the kind of bugs no flagship should ship with | /news/pixel-august-2026-update-touch-gpu-fixes | index, follow | keep | No blocking quality issue detected. |
@@ -41,7 +41,7 @@ Indexable glossary terms: 0
 | article | China's BYD battery blogger dispute is becoming a test of who gets to challenge product claims | /opinion/cac-byd-blade-battery-blogger-cai-shen-dao-dispute | index, follow | keep | No blocking quality issue detected. |
 | article | Windows on Arm has reached the enterprise. Compatibility now matters more than battery claims | /explainers/snapdragon-x2-enterprise-windows-arm-business-pcs | index, follow | keep | No blocking quality issue detected. |
 | article | CATL and BYD want solid-state battery trials in 2027. Your next EV probably will not have one | /explainers/catl-byd-solid-state-battery-2027-trial-production | index, follow | keep | No blocking quality issue detected. |
-| article | Apple removed Telegram for a day. That is enough to show how much power an app store holds | /opinion/apple-telegram-app-store-removal-moderation-power | index, follow | keep | No blocking quality issue detected. |
+| article | Apple removed Telegram for a day. That is enough to show how much power an app store holds | /opinion/apple-telegram-app-store-removal-moderation-power | noindex, follow | retain and revise outside discovery | unsupported-first-hand-claim: The title or summary makes a first-hand claim without the required evidence record. |
 | article | East Africa's electric-mobility race is moving from vehicles to infrastructure | /opinion/east-africa-electric-mobility-charging-battery-swap-infrastructure | index, follow | keep | No blocking quality issue detected. |
 | article | No, iPhone-to-Windows clipboard sync has not launched yet. Here is what actually changed | /explainers/iphone-windows-clipboard-sync-not-launched-eu-timeline | index, follow | keep | No blocking quality issue detected. |
 | article | Android's August system update shows how Google changes your phone without an OS upgrade | /explainers/august-2026-google-system-updates-explained | index, follow | keep | No blocking quality issue detected. |
@@ -59,7 +59,7 @@ Indexable glossary terms: 0
 | article | Xpeng's G9L turns the electric SUV into a private lounge on wheels | /opinion/xpeng-g9l-interior-luxury-ev-living-room | index, follow | keep | No blocking quality issue detected. |
 | article | The Mechanical Myth: How Christopher Nolan's The Odyssey Tamed the IMAX Beast | /opinion/christopher-nolan-the-odyssey-imax-film-camera-breakthrough | index, follow | keep | No blocking quality issue detected. |
 | article | 7,000mAh phone batteries are becoming normal, but capacity is not the whole story | /explainers/7000mah-phone-batteries-silicon-carbon-explained | index, follow | keep | No blocking quality issue detected. |
-| article | Qualcomm chip prices are rising. Should you buy a phone now or wait? | /wallet-watch/qualcomm-chip-price-hikes-buy-phone-now-or-wait | index, follow | keep | No blocking quality issue detected. |
+| article | Qualcomm chip prices are rising. Should you buy a phone now or wait? | /wallet-watch/qualcomm-chip-price-hikes-buy-phone-now-or-wait | noindex, follow | retain and revise outside discovery | unverified-buying-guide: The buying guide lacks sufficient verification evidence. |
 | article | TECNO's 0mm-bezel concept looks stunning. Your palm may disagree | /opinion/tecno-0mm-bezel-concept-phone-engineering-problems | index, follow | keep | No blocking quality issue detected. |
 | article | Pixel 11's glowing camera bar could revive the notification LED, if Google makes it useful | /opinion/pixel-11-glow-hilight-notification-led-leaks | index, follow | keep | No blocking quality issue detected. |
 | article | Kenya's emerging technology sandbox deadline is here. What happens next? | /explainers/kenya-ca-emerging-technologies-sandbox-deadline-2026 | index, follow | keep | No blocking quality issue detected. |
@@ -81,12 +81,12 @@ Indexable glossary terms: 0
 | article | Samsung goes Ultra: everything announced at the London Unpacked, from a 4.1mm Fold to Gemini glasses | /news/samsung-galaxy-unpacked-july-2026-everything-announced | index, follow | keep | No blocking quality issue detected. |
 | article | The iPhone 18 Pro's variable aperture, explained: why this camera rumor is the real deal | /news/iphone-18-pro-variable-aperture-rumors | index, follow | keep | No blocking quality issue detected. |
 | article | The VLC story: how the traffic cone said no to tens of millions, and why almost nobody else did | /explainers/vlc-free-software-story-money-is-jail | index, follow | keep | No blocking quality issue detected. |
-| article | Kenya's digital learning push now faces the classroom test | /news/kenya-digital-learning-junior-schools | index, follow | keep | No blocking quality issue detected. |
-| article | Stablecoins are becoming Kenya's quiet freelance rail | /business/kenya-stablecoin-economy-freelancers | index, follow | keep | No blocking quality issue detected. |
-| article | Kenya's home internet fight is moving past speed | /news/kenya-home-fibre-speed-wars-starlink | index, follow | keep | No blocking quality issue detected. |
-| article | BasiGo's electric bus growth now meets the grid question | /business/basigo-electric-bus-expansion-grid-question | index, follow | keep | No blocking quality issue detected. |
-| article | Airtel Money's Rudishiwa turns cashback into a habit | /news/airtel-money-rudishiwa-cashback-bonus-wallet | index, follow | keep | No blocking quality issue detected. |
-| article | Moniepoint names Rose Muturi CEO for Kenya | /business/moniepoint-rose-muturi-kenya-ceo | index, follow | keep | No blocking quality issue detected. |
+| article | Kenya's digital learning push now faces the classroom test | /news/kenya-digital-learning-junior-schools | noindex, follow | retain and revise outside discovery | missing-sources: Reported news or business analysis has no source list. |
+| article | Stablecoins are becoming Kenya's quiet freelance rail | /business/kenya-stablecoin-economy-freelancers | noindex, follow | retain and revise outside discovery | missing-sources: Reported news or business analysis has no source list. |
+| article | Kenya's home internet fight is moving past speed | /news/kenya-home-fibre-speed-wars-starlink | noindex, follow | retain and revise outside discovery | missing-sources: Reported news or business analysis has no source list. |
+| article | BasiGo's electric bus growth now meets the grid question | /business/basigo-electric-bus-expansion-grid-question | noindex, follow | retain and revise outside discovery | missing-sources: Reported news or business analysis has no source list. |
+| article | Airtel Money's Rudishiwa turns cashback into a habit | /news/airtel-money-rudishiwa-cashback-bonus-wallet | noindex, follow | retain and revise outside discovery | missing-sources: Reported news or business analysis has no source list. |
+| article | Moniepoint names Rose Muturi CEO for Kenya | /business/moniepoint-rose-muturi-kenya-ceo | noindex, follow | retain and revise outside discovery | missing-sources: Reported news or business analysis has no source list. |
 | article | Apple sues OpenAI, and the age of polite AI partnerships is over | /news/apple-sues-openai-trade-secrets | index, follow | keep | No blocking quality issue detected. |
 | article | Uber is buying Glovo's owner. What it means for Kenya | /business/uber-buys-delivery-hero-glovo-kenya | index, follow | keep | No blocking quality issue detected. |
 | article | Is the M5 MacBook Air the best value laptop right now? | /news/m5-macbook-air-value-ultraportable | index, follow | keep | No blocking quality issue detected. |
@@ -110,7 +110,7 @@ Indexable glossary terms: 0
 | article | Inside Kenya's controversial internet metering bill | /news/kenya-internet-metering-bill-explained | index, follow | keep | No blocking quality issue detected. |
 | article | Kenya's new tax rules put software payments under pressure | /business/finance-act-2026-software-cloud-costs-kenya | index, follow | keep | No blocking quality issue detected. |
 | article | KOKO's empire goes on sale, and carbon is the lesson | /business/koko-networks-collapse-assets-sale-carbon-credits | index, follow | keep | No blocking quality issue detected. |
-| article | Kenya's proposed rules let families seek betting bans | /news/kenya-betting-rules-family-exclusion-grak | index, follow | keep | No blocking quality issue detected. |
+| article | Kenya's proposed rules let families seek betting bans | /news/kenya-betting-rules-family-exclusion-grak | noindex, follow | retain and revise outside discovery | unfinished-draft: Public copy contains unfinished draft. |
 | article | You probably do not need the newest AI model | /opinion/stop-chasing-newest-ai-model-good-enough | index, follow | keep | No blocking quality issue detected. |
 | article | Smart glasses are finally useful, but most pairs do not do what buyers imagine | /explainers/smart-glasses-buying-guide-audio-camera-ar | index, follow | keep | No blocking quality issue detected. |
 | article | How to fix a full Google Drive without paying for more storage | /explainers/fix-full-google-drive-storage-without-paying | index, follow | keep | No blocking quality issue detected. |
@@ -156,7 +156,7 @@ Indexable glossary terms: 0
 | article | Google Play launches a Sh129m indie games fund for Africa | /business/google-play-indie-games-fund-kenya | index, follow | keep | No blocking quality issue detected. |
 | article | Kenya backs a Cybersecurity Agency as AI fraud rises | /news/kenya-national-cybersecurity-agency-ai-threats | index, follow | keep | No blocking quality issue detected. |
 | article | New leaders at the NSE and Airtel Kenya | /business/nse-airtel-kenya-leadership-changes | index, follow | keep | No blocking quality issue detected. |
-| article | Samsung Galaxy A37 5G review: a dependable mid-ranger that plays it safe | /reviews/samsung-galaxy-a37-5g-review | index, follow | keep | No blocking quality issue detected. |
+| article | Samsung Galaxy A37 5G analysis: a dependable mid-ranger that plays it safe | /explainers/samsung-galaxy-a37-5g-review | index, follow | keep | No blocking quality issue detected. |
 | article | South Africa sets six pillars for its digital economy | /business/south-africa-digital-economy-pillars-strategy | index, follow | keep | No blocking quality issue detected. |
 | article | Claude's most powerful model is back, and the saga says a lot about who controls AI | /news/anthropic-redeploys-fable-5 | index, follow | keep | No blocking quality issue detected. |
 | article | South Africa's Debut 4 fund backs AI in the creative economy | /business/south-africa-debut-4-ai-creative-fund | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
@@ -185,53 +185,53 @@ Indexable glossary terms: 0
 | article | Southern Africa gets its first dedicated climate-tech fund | /business/holocene-southern-africa-climate-tech-fund | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
 | article | Microsoft expands cloud and AI capacity in South Africa | /news/microsoft-south-africa-cloud-ai-investment | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
 | article | South African agritech Livestock Wealth goes into liquidation | /business/livestock-wealth-liquidation | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
-| article | The quiet change ending all-you-can-eat AI | /news/end-of-all-you-can-eat-ai-subscriptions | index, follow | keep | No blocking quality issue detected. |
-| article | Google's Gemini gets an agent, a video maker, and a brief | /news/google-gemini-agent-video-daily-brief | index, follow | keep | No blocking quality issue detected. |
-| article | You can now tag an AI in Slack like a colleague | /news/claude-tag-slack-ai-colleague | index, follow | keep | No blocking quality issue detected. |
+| article | The quiet change ending all-you-can-eat AI | /news/end-of-all-you-can-eat-ai-subscriptions | noindex, follow | retain and revise outside discovery | missing-sources: Reported news or business analysis has no source list. |
+| article | Google's Gemini gets an agent, a video maker, and a brief | /news/google-gemini-agent-video-daily-brief | noindex, follow | retain and revise outside discovery | missing-sources: Reported news or business analysis has no source list. |
+| article | You can now tag an AI in Slack like a colleague | /news/claude-tag-slack-ai-colleague | noindex, follow | retain and revise outside discovery | missing-sources: Reported news or business analysis has no source list. |
 | article | Anthropic's top AI models pulled over a US export order | /news/anthropic-mythos-models-export-control | index, follow | keep | No blocking quality issue detected. |
 | article | Spiro adds $55m as its electric-bike push grows | /business/spiro-electric-mobility-funding-round | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
 | article | Shuttlers joins Google Maps in Nigeria | /news/shuttlers-google-maps-nigeria | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
 | article | Nigeria's startup scene grows up, and gets stricter | /business/nigeria-startup-market-maturing-2026 | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
 | article | Tokens and context windows, why AI forgets | /explainers/tokens-context-windows-why-ai-forgets | index, follow | keep | No blocking quality issue detected. |
 | article | Why AI hallucinates, and how to catch it | /explainers/why-ai-hallucinates-and-how-to-catch-it | index, follow | keep | No blocking quality issue detected. |
-| article | Kenya's AI rules mean more than paperwork | /business/kenya-ai-rules-mean-more-than-paperwork | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
+| article | Kenya's AI rules mean more than paperwork | /business/kenya-ai-rules-mean-more-than-paperwork | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. missing-sources: Reported news or business analysis has no source list. |
 | article | What is an AI agent, really? | /explainers/what-is-an-ai-agent-really | index, follow | keep | No blocking quality issue detected. |
-| article | Why your phone gets hot when you charge and use it at the same time | /explainers/why-your-phone-gets-hot-when-you-charge-and-use-it-at-the-same-time | index, follow | keep | No blocking quality issue detected. |
+| article | Why your phone gets hot when you charge and use it at the same time | /explainers/why-your-phone-gets-hot-when-you-charge-and-use-it-at-the-same-time | noindex, follow | retain and revise outside discovery | not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. |
 | article | AI is starting to cut African tech jobs | /business/ai-driven-layoffs-african-tech-nigeria | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
 | article | Rwanda advances 12 young agritech startups | /news/ayute-rwanda-agritech-challenge-2026 | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
 | article | Kigali Innovation City moves from blueprint to build | /business/kigali-innovation-city-progress-2026 | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
 | article | Rwanda's development bank backs early-stage tech | /business/rwanda-brd-early-stage-tech-debt-fund | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
 | article | Best AI subscription for your money in 2026 | /wallet-watch/best-ai-subscription-value-2026 | index, follow | keep | No blocking quality issue detected. |
-| article | Gemini Spark review: promising, not quite ready | /reviews/gemini-spark-review | noindex, follow | retain and revise outside discovery | not-editorially-ready: Editorial status is needs_revision. excluded-from-discovery: The article is explicitly excluded from discovery. |
-| article | We ran 3 AI assistants through a Nairobi week | /real-life/three-ai-assistants-real-nairobi-week | index, follow | keep | No blocking quality issue detected. |
+| article | Gemini Spark review: promising, not quite ready | /reviews/gemini-spark-review | noindex, follow | retain and revise outside discovery | not-editorially-ready: Editorial status is needs_revision. excluded-from-discovery: The article is explicitly excluded from discovery. review-without-hands-on-evidence: Reviews are reserved for documented hands-on testing. unsupported-first-hand-claim: The title or summary makes a first-hand claim without the required evidence record. |
+| article | We ran 3 AI assistants through a Nairobi week | /real-life/three-ai-assistants-real-nairobi-week | noindex, follow | retain and revise outside discovery | not-published: Publication status is in_review. not-editorially-ready: Editorial status is needs_revision. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. unsupported-first-hand-claim: The title or summary makes a first-hand claim without the required evidence record. field-test-evidence-missing: The field test lacks evidence, methodology, or a named approving editor. |
 | article | Why electric motorbikes matter more than flashy EV launches | /real-life/why-electric-motorbikes-matter-more-than-flashy-ev-launches | index, follow | keep | No blocking quality issue detected. |
 | article | The free AI era is ending. That is okay. | /opinion/end-of-free-ai-not-a-disaster | index, follow | keep | No blocking quality issue detected. |
 | article | Kenya is writing AI rules early. That is an edge. | /opinion/kenya-ai-rules-quiet-advantage | index, follow | keep | No blocking quality issue detected. |
-| article | What "5G" actually means for the data bundle you're buying | /explainers/what-5g-actually-means-for-the-data-bundle-you-re-buying | index, follow | keep | No blocking quality issue detected. |
-| article | Why Nigerian fintech keeps spreading into everyday life | /business/why-nigerian-fintech-keeps-spreading-into-everyday-life | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
-| article | Why two phones with the "same" camera megapixels take different photos | /explainers/why-two-phones-with-the-same-camera-megapixels-take-different-photos | index, follow | keep | No blocking quality issue detected. |
+| article | What "5G" actually means for the data bundle you're buying | /explainers/what-5g-actually-means-for-the-data-bundle-you-re-buying | noindex, follow | retain and revise outside discovery | not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. |
+| article | Why Nigerian fintech keeps spreading into everyday life | /business/why-nigerian-fintech-keeps-spreading-into-everyday-life | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. missing-sources: Reported news or business analysis has no source list. |
+| article | Why two phones with the "same" camera megapixels take different photos | /explainers/why-two-phones-with-the-same-camera-megapixels-take-different-photos | noindex, follow | retain and revise outside discovery | not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. |
 | article | South Africa's power apps show what useful tech looks like | /real-life/south-africas-power-apps-show-what-useful-tech-looks-like | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
-| article | What a VPN actually hides, and what it doesn't | /explainers/what-a-vpn-actually-hides-and-what-it-doesn-t | index, follow | keep | No blocking quality issue detected. |
-| article | Why local AI startups are selling workflows, not magic | /business/why-local-ai-startups-are-selling-workflows-not-magic | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
+| article | What a VPN actually hides, and what it doesn't | /explainers/what-a-vpn-actually-hides-and-what-it-doesn-t | noindex, follow | retain and revise outside discovery | not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. |
+| article | Why local AI startups are selling workflows, not magic | /business/why-local-ai-startups-are-selling-workflows-not-magic | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. missing-sources: Reported news or business analysis has no source list. |
 | article | Rwanda's digital services lesson is about boring reliability | /explainers/rwandas-digital-services-lesson-is-about-boring-reliability | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
-| article | The quiet business behind pay-later gadget shops | /business/the-quiet-business-behind-pay-later-gadget-shops | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
-| article | iPhone Air review: the iPhone that asks what you're willing to give up | /reviews/iphone-air-review-the-iphone-that-asks-what-you-re-willing-to-give-up | index, follow | keep | No blocking quality issue detected. |
+| article | The quiet business behind pay-later gadget shops | /business/the-quiet-business-behind-pay-later-gadget-shops | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. missing-sources: Reported news or business analysis has no source list. |
+| article | iPhone Air analysis: the iPhone that asks what you are willing to give up | /explainers/iphone-air-review-the-iphone-that-asks-what-you-re-willing-to-give-up | noindex, follow | retain and revise outside discovery | not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. |
 | article | The real test for EV charging isn't speed. It's location. | /explainers/the-real-test-for-ev-charging-isnt-speed-its-location | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
-| article | Why repair networks may be the next phone battleground | /business/why-repair-networks-may-be-the-next-phone-battleground | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
-| article | Best smartphones under KSh 15,000 right now | /wallet-watch/best-smartphones-under-ksh-15-000-right-now | noindex, follow | retain and revise outside discovery | pre-publication-note: Public copy contains pre publication note. publication-instruction: Public copy contains publication instruction. not-editorially-ready: Editorial status is needs_revision. excluded-from-discovery: The article is explicitly excluded from discovery. unverified-buying-guide: The buying guide lacks sufficient verification evidence. |
-| article | What ride-hailing apps changed after the hype faded | /business/what-ride-hailing-apps-changed-after-the-hype-faded | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
-| article | Five power banks that actually last a full day, ranked by price | /wallet-watch/five-power-banks-that-actually-last-a-full-day-ranked-by-price | noindex, follow | retain and revise outside discovery | unfinished-draft: Public copy contains unfinished draft. not-editorially-ready: Editorial status is needs_revision. excluded-from-discovery: The article is explicitly excluded from discovery. unverified-buying-guide: The buying guide lacks sufficient verification evidence. |
-| article | Is a refurbished phone ever worth it? We checked three sellers | /wallet-watch/is-a-refurbished-phone-ever-worth-it-we-checked-three-sellers | noindex, follow | retain and revise outside discovery | unfinished-draft: Public copy contains unfinished draft. not-editorially-ready: Editorial status is needs_revision. excluded-from-discovery: The article is explicitly excluded from discovery. unverified-buying-guide: The buying guide lacks sufficient verification evidence. |
+| article | Why repair networks may be the next phone battleground | /business/why-repair-networks-may-be-the-next-phone-battleground | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. missing-sources: Reported news or business analysis has no source list. |
+| article | Best smartphones under KSh 15,000 right now | /wallet-watch/best-smartphones-under-ksh-15-000-right-now | noindex, follow | retain and revise outside discovery | pre-publication-note: Public copy contains pre publication note. publication-instruction: Public copy contains publication instruction. not-published: Publication status is in_review. not-editorially-ready: Editorial status is needs_revision. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. pricing-verification-missing: Current buying guidance needs sources and a recorded price-check time. unverified-buying-guide: The buying guide lacks sufficient verification evidence. |
+| article | What ride-hailing apps changed after the hype faded | /business/what-ride-hailing-apps-changed-after-the-hype-faded | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. missing-sources: Reported news or business analysis has no source list. |
+| article | Five power banks that actually last a full day, ranked by price | /wallet-watch/five-power-banks-that-actually-last-a-full-day-ranked-by-price | noindex, follow | retain and revise outside discovery | pre-publication-note: Public copy contains pre publication note. unfinished-draft: Public copy contains unfinished draft. not-published: Publication status is in_review. not-editorially-ready: Editorial status is needs_revision. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. pricing-verification-missing: Current buying guidance needs sources and a recorded price-check time. unverified-buying-guide: The buying guide lacks sufficient verification evidence. |
+| article | Is a refurbished phone ever worth it? We checked three sellers | /wallet-watch/is-a-refurbished-phone-ever-worth-it-we-checked-three-sellers | noindex, follow | retain and revise outside discovery | unfinished-draft: Public copy contains unfinished draft. not-published: Publication status is in_review. not-editorially-ready: Editorial status is needs_revision. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. unsupported-first-hand-claim: The title or summary makes a first-hand claim without the required evidence record. pricing-verification-missing: Current buying guidance needs sources and a recorded price-check time. unverified-buying-guide: The buying guide lacks sufficient verification evidence. |
 | article | Why cheap e-bikes are harder to buy than they look | /wallet-watch/why-cheap-e-bikes-are-harder-to-buy-than-they-look | noindex, follow | retain and revise outside discovery | thin-article: The article has less than 300 words or fewer than three body sections. |
-| article | The cheapest laptop that won't frustrate a university student | /wallet-watch/the-cheapest-laptop-that-won-t-frustrate-a-university-student | index, follow | keep | No blocking quality issue detected. |
-| article | We tested three power banks on a real boda rider's full shift | /real-life/we-tested-three-power-banks-on-a-real-boda-rider-s-full-shift | index, follow | keep | No blocking quality issue detected. |
-| article | Can a budget phone survive a year of matatu commutes? We asked five people | /real-life/can-a-budget-phone-survive-a-year-of-matatu-commutes-we-asked-five-people | index, follow | keep | No blocking quality issue detected. |
-| article | Fast charging claims vs reality: we timed every "30-minute charge" promise | /real-life/fast-charging-claims-vs-reality-we-timed-every-30-minute-charge-promise | index, follow | keep | No blocking quality issue detected. |
-| article | Samsung's new foldable, translated into what it means for you | /news/samsung-s-new-foldable-translated-into-what-it-means-for-you | index, follow | keep | No blocking quality issue detected. |
-| article | Kenya's new SIM registration rules, explained without the legal jargon | /news/kenya-s-new-sim-registration-rules-explained-without-the-legal-jargon | index, follow | keep | No blocking quality issue detected. |
-| article | Apple just changed how repairs work: here's who that actually affects | /news/apple-just-changed-how-repairs-work-here-s-who-that-actually-affects | index, follow | keep | No blocking quality issue detected. |
-| article | WhatsApp's new feature everyone's talking about, explained in 60 seconds | /news/whatsapp-s-new-feature-everyone-s-talking-about-explained-in-60-seconds | index, follow | keep | No blocking quality issue detected. |
-| article | Why "flagship" phones stopped feeling exciting, and what would fix it | /opinion/why-flagship-phones-stopped-feeling-exciting-and-what-would-fix-it | index, follow | keep | No blocking quality issue detected. |
+| article | The cheapest laptop that won't frustrate a university student | /wallet-watch/the-cheapest-laptop-that-won-t-frustrate-a-university-student | noindex, follow | retain and revise outside discovery | pre-publication-note: Public copy contains pre publication note. not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. pricing-verification-missing: Current buying guidance needs sources and a recorded price-check time. |
+| article | We tested three power banks on a real boda rider's full shift | /real-life/we-tested-three-power-banks-on-a-real-boda-rider-s-full-shift | noindex, follow | retain and revise outside discovery | pre-publication-note: Public copy contains pre publication note. not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. unsupported-first-hand-claim: The title or summary makes a first-hand claim without the required evidence record. |
+| article | Can a budget phone survive a year of matatu commutes? We asked five people | /real-life/can-a-budget-phone-survive-a-year-of-matatu-commutes-we-asked-five-people | noindex, follow | retain and revise outside discovery | not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. unsupported-first-hand-claim: The title or summary makes a first-hand claim without the required evidence record. |
+| article | Fast charging claims vs reality: we timed every "30-minute charge" promise | /real-life/fast-charging-claims-vs-reality-we-timed-every-30-minute-charge-promise | noindex, follow | retain and revise outside discovery | pre-publication-note: Public copy contains pre publication note. not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. unsupported-first-hand-claim: The title or summary makes a first-hand claim without the required evidence record. |
+| article | Samsung's new foldable, translated into what it means for you | /news/samsung-s-new-foldable-translated-into-what-it-means-for-you | noindex, follow | retain and revise outside discovery | not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. missing-sources: Reported news or business analysis has no source list. |
+| article | Kenya's new SIM registration rules, explained without the legal jargon | /news/kenya-s-new-sim-registration-rules-explained-without-the-legal-jargon | noindex, follow | retain and revise outside discovery | pre-publication-note: Public copy contains pre publication note. not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. missing-sources: Reported news or business analysis has no source list. legal-verification-missing: Current legal or regulatory coverage needs sources and a recorded legal fact-check time. |
+| article | Apple just changed how repairs work: here's who that actually affects | /news/apple-just-changed-how-repairs-work-here-s-who-that-actually-affects | noindex, follow | retain and revise outside discovery | not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. missing-sources: Reported news or business analysis has no source list. |
+| article | WhatsApp's new feature everyone's talking about, explained in 60 seconds | /news/whatsapp-s-new-feature-everyone-s-talking-about-explained-in-60-seconds | noindex, follow | retain and revise outside discovery | not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. missing-sources: Reported news or business analysis has no source list. |
+| article | Why "flagship" phones stopped feeling exciting, and what would fix it | /opinion/why-flagship-phones-stopped-feeling-exciting-and-what-would-fix-it | noindex, follow | retain and revise outside discovery | not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. |
 | glossary | 1080p | /glossary/1080p | noindex, follow | expand with sourced explanation, reader value, and FAQs | Does not yet meet the configurable multi-signal glossary threshold. |
 | glossary | 4G LTE | /glossary/4g-lte | noindex, follow | expand with sourced explanation, reader value, and FAQs | Does not yet meet the configurable multi-signal glossary threshold. |
 | glossary | 4K | /glossary/4k | noindex, follow | expand with sourced explanation, reader value, and FAQs | Does not yet meet the configurable multi-signal glossary threshold. |
@@ -335,198 +335,196 @@ Indexable glossary terms: 0
 | page | glossary | /glossary | index, follow | keep | Core utility, trust, or discovery page. |
 | page | africa | /africa | index, follow | keep | Core utility, trust, or discovery page. |
 | page | about | /about | index, follow | keep | Core utility, trust, or discovery page. |
-| page | contact | /contact | index, follow | keep | Core utility, trust, or discovery page. |
 | page | editorial standards | /editorial-standards | index, follow | keep | Core utility, trust, or discovery page. |
 | page | privacy | /privacy | index, follow | keep | Core utility, trust, or discovery page. |
 | page | terms | /terms | index, follow | keep | Core utility, trust, or discovery page. |
 | page | cookies | /cookies | index, follow | keep | Core utility, trust, or discovery page. |
-| page | advertise | /advertise | index, follow | keep | Core utility, trust, or discovery page. |
-| page | newsletter | /newsletter | index, follow | keep | Core utility, trust, or discovery page. |
-| archive | Tim Humphreys | /authors/tim-humphreys | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Lulu Kiritu | /authors/lulu-kiritu | index, follow | keep | Archive has at least three eligible stories. |
-| archive | tecMAMBO Team | /authors/tecmambo-team | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | AI | /topics/ai | index, follow | keep | Archive has at least three eligible stories. |
-| archive | AI Shopping | /topics/ai-shopping | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Agentic AI | /topics/agentic-ai | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Android | /topics/android | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Apps | /topics/apps | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Smartphones | /topics/smartphones | index, follow | keep | Archive has at least three eligible stories. |
-| archive | E-Commerce | /topics/e-commerce | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Quick Commerce | /topics/quick-commerce | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Privacy | /topics/privacy | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Computing | /topics/computing | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Social Media | /topics/social-media | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Entertainment | /topics/entertainment | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Christopher Nolan | /topics/christopher-nolan | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | The Odyssey | /topics/the-odyssey | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Hoyte van Hoytema | /topics/hoyte-van-hoytema | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Film Cameras | /topics/film-cameras | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | 70mm Film | /topics/70mm-film | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Cinema Technology | /topics/cinema-technology | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Film Technology | /topics/film-technology | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Cameras | /topics/cameras | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Cinema | /topics/cinema | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | TVs | /topics/tvs | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Home Entertainment | /topics/home-entertainment | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Digital Ownership | /topics/digital-ownership | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Game Preservation | /topics/game-preservation | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | EVs & Mobility | /topics/evs-mobility | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Autonomous Vehicles | /topics/autonomous-vehicles | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Gaming | /topics/gaming | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Wearables | /topics/wearables | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Health Tech | /topics/health-tech | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Smart Homes | /topics/smart-homes | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Startups | /topics/startups | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Business | /topics/business | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Fintech | /topics/fintech | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Banking | /topics/banking | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Credit Cards | /topics/credit-cards | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Policy | /topics/policy | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Climate Policy | /topics/climate-policy | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Climate Tech | /topics/climate-tech | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Clean Cooking | /topics/clean-cooking | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Energy | /topics/energy | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Emerging Markets | /topics/emerging-markets | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Cybersecurity | /topics/cybersecurity | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Security Updates | /topics/security-updates | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Audio | /topics/audio | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Connectivity | /topics/connectivity | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Routers | /topics/routers | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Home Internet | /topics/home-internet | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Networking | /topics/networking | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Power & batteries | /topics/power-batteries | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Smartphone Design | /topics/smartphone-design | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Notifications | /topics/notifications | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Google Pixel 11 | /topics/google-pixel-11 | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Pixel Glow | /topics/pixel-glow | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | HiLight | /topics/hilight | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Concept Phone | /topics/concept-phone | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | IFA 2026 | /topics/ifa-2026 | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Display Technology | /topics/display-technology | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Chipsets | /topics/chipsets | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Smartphone Prices | /topics/smartphone-prices | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Buying Advice | /topics/buying-advice | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Midrange Phones | /topics/midrange-phones | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Smartphone Batteries | /topics/smartphone-batteries | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Silicon-Carbon | /topics/silicon-carbon | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | OnePlus N6x | /topics/oneplus-n6x | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Battery Life | /topics/battery-life | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Charging | /topics/charging | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Accessories | /topics/accessories | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Headphones | /topics/headphones | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Smart Watches | /topics/smart-watches | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | VR & AR | /topics/vr-ar | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | G9L | /topics/g9l | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Luxury EV | /topics/luxury-ev | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | China | /topics/china | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Automotive Technology | /topics/automotive-technology | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Battery Swap | /topics/battery-swap | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | EV Infrastructure | /topics/ev-infrastructure | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Battery as a Service | /topics/battery-as-a-service | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | TLIP | /topics/tlip | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Blockchain | /topics/blockchain | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Customs | /topics/customs | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Logistics | /topics/logistics | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Mombasa Port | /topics/mombasa-port | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Anne Kinuthia-Otieno | /topics/anne-kinuthia-otieno | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Mobile Money | /topics/mobile-money | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | East Africa | /topics/east-africa | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Payments | /topics/payments | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Dividend | /topics/dividend | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Ethiopia | /topics/ethiopia | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Investing | /topics/investing | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Telecoms | /topics/telecoms | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | iPhone 18 | /topics/iphone-18 | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Foldable iPhone | /topics/foldable-iphone | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Prepaid Card | /topics/prepaid-card | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Grocery | /topics/grocery | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Remittances | /topics/remittances | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Corporate Governance | /topics/corporate-governance | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | iPhone | /topics/iphone | index, follow | keep | Archive has at least three eligible stories. |
-| archive | European Union | /topics/european-union | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Interoperability | /topics/interoperability | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Apple Glasses | /topics/apple-glasses | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Materials Science | /topics/materials-science | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Manufacturing | /topics/manufacturing | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Hardware Durability | /topics/hardware-durability | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Pixel 11 | /topics/pixel-11 | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | RAM | /topics/ram | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Made by Google | /topics/made-by-google | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Google Play Services | /topics/google-play-services | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Google Wallet | /topics/google-wallet | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Play Store | /topics/play-store | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | System Updates | /topics/system-updates | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | VLC | /brands/vlc | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Sony | /brands/sony | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | PlayStation | /brands/playstation | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Samsung | /brands/samsung | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Glovo | /brands/glovo | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Uber | /brands/uber | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | I&M Bank | /brands/im-bank | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Mastercard | /brands/mastercard | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | KOKO Networks | /brands/koko-networks | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Oraimo | /brands/oraimo | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Apple | /brands/apple | index, follow | keep | Archive has at least three eligible stories. |
-| archive | OPPO | /brands/oppo | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Xiaomi | /brands/xiaomi | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Nothing | /brands/nothing | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Vivo | /brands/vivo | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Anthropic | /brands/anthropic | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Amazon | /brands/amazon | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Starlink | /brands/starlink | index, follow | keep | Archive has at least three eligible stories. |
-| archive | SpaceX | /brands/spacex | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | OpenAI | /brands/openai | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Google | /brands/google | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Huawei | /brands/huawei | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Visa | /brands/visa | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Onafriq | /brands/onafriq | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Microsoft | /brands/microsoft | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Windows | /brands/windows | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Dell | /brands/dell | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Intel | /brands/intel | index, follow | keep | Archive has at least three eligible stories. |
-| archive | AMD | /brands/amd | index, follow | keep | Archive has at least three eligible stories. |
-| archive | NVIDIA | /brands/nvidia | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Lenovo | /brands/lenovo | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Volkswagen | /brands/volkswagen | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Toyota | /brands/toyota | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | BYD | /brands/byd | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Tesla | /brands/tesla | index, follow | keep | Archive has at least three eligible stories. |
-| archive | BasiGo | /brands/basigo | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Waymo | /brands/waymo | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | NIO | /brands/nio | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Oura | /brands/oura | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Wi-Fi Alliance | /brands/wi-fi-alliance | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | MTN | /brands/mtn | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Airtel | /brands/airtel | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Optasia | /brands/optasia | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | WhatsApp | /brands/whatsapp | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Meta | /brands/meta | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Safaricom | /brands/safaricom | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Vodacom | /brands/vodacom | index, follow | keep | Archive has at least three eligible stories. |
-| archive | M-Pesa | /brands/m-pesa | index, follow | keep | Archive has at least three eligible stories. |
-| archive | TECNO | /brands/tecno | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | IMAX | /brands/imax | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Technicolor | /brands/technicolor | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Qualcomm | /brands/qualcomm | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Snapdragon | /brands/snapdragon | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | TSMC | /brands/tsmc | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | OnePlus | /brands/oneplus | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Motorola | /brands/motorola | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Spiro | /brands/spiro | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Shuttlers | /brands/shuttlers | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Aions Ventures | /brands/aions-ventures | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Holocene | /brands/holocene | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Livestock Wealth | /brands/livestock-wealth | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Heifer International | /brands/heifer-international | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Development Bank of Rwanda | /brands/development-bank-of-rwanda | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Flutterwave | /brands/flutterwave | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Moniepoint | /brands/moniepoint | index, follow | keep | Archive has at least three eligible stories. |
-| archive | Paystack | /brands/paystack | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | PrimeVale | /brands/primevale | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Xpeng | /brands/xpeng | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Firefly | /brands/firefly | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | KRA | /brands/kra | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | Carrefour | /brands/carrefour | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | KCB | /brands/kcb | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | AirPods | /brands/airpods | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
-| archive | PlasmaSolve | /brands/plasmasolve | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than three eligible stories. |
+| page | compare phones | /compare-phones | index, follow | keep | Core utility, trust, or discovery page. |
+| archive | Tim Humphreys | /authors/tim-humphreys | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Lulu Kiritu | /authors/lulu-kiritu | index, follow | keep | Archive has at least five eligible stories. |
+| archive | tecMAMBO Team | /authors/tecmambo-team | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | AI | /topics/ai | index, follow | keep | Archive has at least five eligible stories. |
+| archive | AI Shopping | /topics/ai-shopping | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Agentic AI | /topics/agentic-ai | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Android | /topics/android | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Apps | /topics/apps | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Smartphones | /topics/smartphones | index, follow | keep | Archive has at least five eligible stories. |
+| archive | E-Commerce | /topics/e-commerce | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Quick Commerce | /topics/quick-commerce | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Privacy | /topics/privacy | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Computing | /topics/computing | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Social Media | /topics/social-media | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Entertainment | /topics/entertainment | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Christopher Nolan | /topics/christopher-nolan | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | The Odyssey | /topics/the-odyssey | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Hoyte van Hoytema | /topics/hoyte-van-hoytema | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Film Cameras | /topics/film-cameras | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | 70mm Film | /topics/70mm-film | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Cinema Technology | /topics/cinema-technology | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Film Technology | /topics/film-technology | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Cameras | /topics/cameras | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Cinema | /topics/cinema | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | TVs | /topics/tvs | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Home Entertainment | /topics/home-entertainment | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Digital Ownership | /topics/digital-ownership | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Game Preservation | /topics/game-preservation | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | EVs & Mobility | /topics/evs-mobility | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Autonomous Vehicles | /topics/autonomous-vehicles | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Gaming | /topics/gaming | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Wearables | /topics/wearables | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Health Tech | /topics/health-tech | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Smart Homes | /topics/smart-homes | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Startups | /topics/startups | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Business | /topics/business | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Fintech | /topics/fintech | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Banking | /topics/banking | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Credit Cards | /topics/credit-cards | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Policy | /topics/policy | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Climate Policy | /topics/climate-policy | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Climate Tech | /topics/climate-tech | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Clean Cooking | /topics/clean-cooking | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Energy | /topics/energy | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Emerging Markets | /topics/emerging-markets | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Cybersecurity | /topics/cybersecurity | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Security Updates | /topics/security-updates | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Audio | /topics/audio | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Connectivity | /topics/connectivity | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Routers | /topics/routers | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Home Internet | /topics/home-internet | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Networking | /topics/networking | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Power & batteries | /topics/power-batteries | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Smartphone Design | /topics/smartphone-design | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Notifications | /topics/notifications | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Google Pixel 11 | /topics/google-pixel-11 | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Pixel Glow | /topics/pixel-glow | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | HiLight | /topics/hilight | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Concept Phone | /topics/concept-phone | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | IFA 2026 | /topics/ifa-2026 | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Display Technology | /topics/display-technology | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Chipsets | /topics/chipsets | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Smartphone Prices | /topics/smartphone-prices | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Buying Advice | /topics/buying-advice | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Midrange Phones | /topics/midrange-phones | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Smartphone Batteries | /topics/smartphone-batteries | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Silicon-Carbon | /topics/silicon-carbon | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | OnePlus N6x | /topics/oneplus-n6x | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Battery Life | /topics/battery-life | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Charging | /topics/charging | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Accessories | /topics/accessories | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Headphones | /topics/headphones | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Smart Watches | /topics/smart-watches | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | VR & AR | /topics/vr-ar | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | G9L | /topics/g9l | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Luxury EV | /topics/luxury-ev | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | China | /topics/china | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Automotive Technology | /topics/automotive-technology | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Battery Swap | /topics/battery-swap | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | EV Infrastructure | /topics/ev-infrastructure | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Battery as a Service | /topics/battery-as-a-service | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | TLIP | /topics/tlip | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Blockchain | /topics/blockchain | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Customs | /topics/customs | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Logistics | /topics/logistics | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Mombasa Port | /topics/mombasa-port | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Anne Kinuthia-Otieno | /topics/anne-kinuthia-otieno | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Mobile Money | /topics/mobile-money | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | East Africa | /topics/east-africa | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Payments | /topics/payments | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Dividend | /topics/dividend | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Ethiopia | /topics/ethiopia | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Investing | /topics/investing | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Telecoms | /topics/telecoms | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | iPhone 18 | /topics/iphone-18 | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Foldable iPhone | /topics/foldable-iphone | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Prepaid Card | /topics/prepaid-card | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Grocery | /topics/grocery | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Remittances | /topics/remittances | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Corporate Governance | /topics/corporate-governance | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | iPhone | /topics/iphone | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | European Union | /topics/european-union | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Interoperability | /topics/interoperability | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Apple Glasses | /topics/apple-glasses | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Materials Science | /topics/materials-science | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Manufacturing | /topics/manufacturing | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Hardware Durability | /topics/hardware-durability | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Pixel 11 | /topics/pixel-11 | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | RAM | /topics/ram | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Made by Google | /topics/made-by-google | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Google Play Services | /topics/google-play-services | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Google Wallet | /topics/google-wallet | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Play Store | /topics/play-store | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | System Updates | /topics/system-updates | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | VLC | /brands/vlc | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Sony | /brands/sony | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | PlayStation | /brands/playstation | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Samsung | /brands/samsung | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Glovo | /brands/glovo | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Uber | /brands/uber | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | I&M Bank | /brands/im-bank | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Mastercard | /brands/mastercard | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | KOKO Networks | /brands/koko-networks | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Oraimo | /brands/oraimo | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Apple | /brands/apple | index, follow | keep | Archive has at least five eligible stories. |
+| archive | OPPO | /brands/oppo | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Xiaomi | /brands/xiaomi | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Nothing | /brands/nothing | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Vivo | /brands/vivo | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Anthropic | /brands/anthropic | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Amazon | /brands/amazon | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Starlink | /brands/starlink | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | SpaceX | /brands/spacex | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | OpenAI | /brands/openai | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Google | /brands/google | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Huawei | /brands/huawei | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Visa | /brands/visa | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Onafriq | /brands/onafriq | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Microsoft | /brands/microsoft | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Windows | /brands/windows | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Dell | /brands/dell | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Intel | /brands/intel | index, follow | keep | Archive has at least five eligible stories. |
+| archive | AMD | /brands/amd | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | NVIDIA | /brands/nvidia | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Lenovo | /brands/lenovo | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Volkswagen | /brands/volkswagen | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Toyota | /brands/toyota | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | BYD | /brands/byd | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Tesla | /brands/tesla | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | BasiGo | /brands/basigo | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Waymo | /brands/waymo | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | NIO | /brands/nio | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Oura | /brands/oura | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Wi-Fi Alliance | /brands/wi-fi-alliance | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | MTN | /brands/mtn | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Airtel | /brands/airtel | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Optasia | /brands/optasia | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | WhatsApp | /brands/whatsapp | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Meta | /brands/meta | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Safaricom | /brands/safaricom | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Vodacom | /brands/vodacom | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | M-Pesa | /brands/m-pesa | index, follow | keep | Archive has at least five eligible stories. |
+| archive | TECNO | /brands/tecno | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | IMAX | /brands/imax | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Technicolor | /brands/technicolor | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Qualcomm | /brands/qualcomm | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Snapdragon | /brands/snapdragon | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | TSMC | /brands/tsmc | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | OnePlus | /brands/oneplus | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Motorola | /brands/motorola | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Spiro | /brands/spiro | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Shuttlers | /brands/shuttlers | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Aions Ventures | /brands/aions-ventures | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Holocene | /brands/holocene | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Livestock Wealth | /brands/livestock-wealth | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Heifer International | /brands/heifer-international | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Development Bank of Rwanda | /brands/development-bank-of-rwanda | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Flutterwave | /brands/flutterwave | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Moniepoint | /brands/moniepoint | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Paystack | /brands/paystack | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | PrimeVale | /brands/primevale | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Xpeng | /brands/xpeng | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Firefly | /brands/firefly | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | KRA | /brands/kra | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Carrefour | /brands/carrefour | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | KCB | /brands/kcb | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | AirPods | /brands/airpods | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | PlasmaSolve | /brands/plasmasolve | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |

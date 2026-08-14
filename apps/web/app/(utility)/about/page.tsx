@@ -32,9 +32,8 @@ export const metadata: Metadata = {
 
 const formats: Array<{ key: Format; description: string }> = [
   { key: "explainer", description: "Jargon-busting, how-it-works pieces." },
-  { key: "review", description: "The verdict first; the full spec sheet a tap away." },
   { key: "wallet-watch", description: "Honest budget picks and best under price guides." },
-  { key: "real-life", description: "We test the claims against an actual Nairobi commute." },
+  { key: "real-life", description: "Technology in everyday use, with methods and evidence shown when we conduct a field test." },
   { key: "news", description: "The news, translated into what it changes for you." },
   { key: "opinion", description: "Clear, accountable opinion." }
 ];
@@ -53,7 +52,7 @@ const values = [
   "Plain English first. Depth is optional, never required.",
   "Clear, not dumbed down. We respect your intelligence and your time.",
   "Independent and honest. We'll tell you when something isn't worth your money.",
-  "Show the workings. Real testing, named sources, visible corrections.",
+  "Show the workings. Named sources, documented methods, visible corrections.",
   "Warmth over jargon. The friend who explains, not the expert who flexes.",
   "Rooted here, useful everywhere. Built in Kenya, written for real life."
 ];
@@ -61,7 +60,7 @@ const values = [
 export default async function AboutPage() {
   const [articles, terms, authors] = await Promise.all([getArticles(), getGlossaryTerms(), getAuthors()]);
   const founder = authors.find((author) => author.slug === "tim-humphreys") ?? authors[0]!;
-  const explainerReviewCount = articles.filter((article) => article.format === "explainer" || article.format === "review").length;
+  const explainerAnalysisCount = articles.filter((article) => article.format === "explainer" || article.format === "opinion").length;
   const otherAuthors = authors.filter((author) => author.slug !== founder.slug);
 
   return (
@@ -162,7 +161,7 @@ export default async function AboutPage() {
         <p>
           tecMAMBO is funded by advertising, affiliate links, and clearly-labelled partner content. Three rules keep that clean: we{" "}
           <strong>label anything sponsored, plainly</strong>; <strong>affiliate links never change a verdict</strong>; and{" "}
-          <strong>reviews are written before, and independently of, any commercial conversation.</strong> If we recommend it, it earned the
+          <strong>reviews are reserved for documented hands-on testing and remain independent of commercial conversations.</strong> If we recommend it, it earned the
           spot.
         </p>
         <Link href="/editorial-standards">Read our full editorial standards →</Link>
@@ -171,7 +170,7 @@ export default async function AboutPage() {
       <section className={`container ${styles.factStrip}`} aria-label="tecMAMBO in brief">
         <span>Founded 2016</span>
         <span>Based in Nairobi, Kenya</span>
-        <span>{explainerReviewCount} explainers & reviews</span>
+        <span>{explainerAnalysisCount} explainers and analyses</span>
         <span>{terms.length} plain-English glossary terms</span>
         <span>Free to read</span>
       </section>
@@ -188,7 +187,7 @@ export default async function AboutPage() {
               <h3>Tim Humphreys</h3>
               <span>
                 Tim founded tecMAMBO in 2016 on a stubborn belief that clarity is a feature, not a compromise. He still edits, still writes,
-                and still tests phones on matatus.
+                and still works to make difficult technology understandable.
               </span>
               <Link href="/authors/tim-humphreys">Read Tim's work →</Link>
             </div>

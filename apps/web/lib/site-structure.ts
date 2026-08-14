@@ -90,7 +90,6 @@ export const wearableFilters: TopicArchive[] = [
 export const navItems: NavItem[] = [
   { label: "Latest", path: "/latest" },
   { label: "News", path: "/news", section: "news", children: topicArchives.news },
-  { label: "Reviews", path: "/reviews", section: "reviews", children: topicArchives.reviews },
   { label: "Wallet Watch", path: "/wallet-watch", section: "wallet-watch", children: topicArchives["wallet-watch"] },
   { label: "Business", path: "/business", section: "business", children: topicArchives.business },
   { label: "Glossary", path: "/glossary" },

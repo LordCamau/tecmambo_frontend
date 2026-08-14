@@ -344,13 +344,13 @@ const reviewArticles: Article[] = [
   {
     id: "review-samsung-galaxy-a37-5g",
     slug: "samsung-galaxy-a37-5g-review",
-    format: "review",
-    contentFormat: "research_based_review",
+    format: "explainer",
+    contentFormat: "analysis",
     reviewMethod: "research_based",
     hasOriginalTesting: false,
-    title: "Samsung Galaxy A37 5G review: a dependable mid-ranger that plays it safe",
+    title: "Samsung Galaxy A37 5G analysis: a dependable mid-ranger that plays it safe",
     seo: {
-      title: "Samsung Galaxy A37 5G review: solid, safe, and best on a deal",
+      title: "Samsung Galaxy A37 5G analysis: solid, safe, and best on a deal",
       description:
         "The Galaxy A37 5G nails the basics, a great screen, all-day battery, and six years of updates, but plays it safe and cost too much at launch. Our verdict."
     },
@@ -1019,6 +1019,28 @@ function attachRegions(article: Article): Article {
   return assigned?.length ? { ...article, regions: assigned } : article;
 }
 
+function originalValueFor(article: Article): NonNullable<Article["originalValueType"]> {
+  if (article.contentFormat === "field_test" || article.reviewMethod === "hands_on") return "first_hand_testing";
+  if (article.format === "explainer" || article.format === "wallet-watch") return "practical_guide";
+  if (article.format === "opinion") return "original_analysis";
+  if (article.format === "news" || article.format === "business") return "curated_context";
+  return "original_analysis";
+}
+
+function migrateLegacyLifecycle(article: Article): Article {
+  if (article.workflowVersion === "gated") return article;
+  const legacyCutoff = Date.parse("2026-08-12T23:59:59.999Z");
+  if (new Date(article.publishedAt).getTime() > legacyCutoff) return article;
+  return {
+    ...article,
+    workflowVersion: "legacy",
+    publicationStatus: article.publicationStatus ?? "publish",
+    editorialStatus: article.editorialStatus ?? "published",
+    indexingStatus: article.indexingStatus ?? "inherit",
+    originalValueType: article.originalValueType ?? originalValueFor(article)
+  };
+}
+
 export const articles: Article[] = [
   pixel11LaunchArticle,
   ...editorialAugust10Articles,
@@ -1051,7 +1073,7 @@ export const articles: Article[] = [
   ...businessArticles,
   ...aiArticles,
   ...loadDraftArticles({ authors, topics, brands })
-].map(attachRegions).sort(
+].map(attachRegions).map(migrateLegacyLifecycle).sort(
   (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
 );
 

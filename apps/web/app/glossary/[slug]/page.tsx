@@ -42,6 +42,7 @@ export default async function GlossaryTermPage({ params }: { params: Params }) {
   const index = terms.findIndex((item) => item.slug === term.slug);
   const previous = terms[(index - 1 + terms.length) % terms.length]!;
   const next = terms[(index + 1) % terms.length]!;
+  const indexable = isGlossaryTermIndexable(term);
 
   return (
     <article className={`readable ${styles.termPage}`}>
@@ -167,8 +168,8 @@ export default async function GlossaryTermPage({ params }: { params: Params }) {
 
       <p className={styles.metaLine}>Updated {new Intl.DateTimeFormat("en", { dateStyle: "medium" }).format(new Date(term.updatedAt))}</p>
 
-      <JsonLd data={definedTermJsonLd(term)} />
-      {term.faqs?.length ? <JsonLd data={faqJsonLd(term.faqs)} /> : null}
+      {indexable ? <JsonLd data={definedTermJsonLd(term)} /> : null}
+      {indexable && term.faqs?.length ? <JsonLd data={faqJsonLd(term.faqs)} /> : null}
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", path: "/" },

@@ -80,6 +80,15 @@ const nextConfig: NextConfig = {
       }
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/reviews/samsung-galaxy-a37-5g-review",
+        destination: "/explainers/samsung-galaxy-a37-5g-review",
+        permanent: true
+      }
+    ];
+  },
   async rewrites() {
     return {
       beforeFiles: [

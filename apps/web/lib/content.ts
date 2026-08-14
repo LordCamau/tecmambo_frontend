@@ -42,8 +42,10 @@ export async function getIndexableArticles() {
 }
 
 export async function getArticleBySlug(slug: string) {
-  if (shouldUseWordPress()) return withCmsFallback("getArticleBySlug", () => getCmsArticleBySlug(slug), () => articles.find((article) => article.slug === slug) ?? null);
-  return articles.find((article) => article.slug === slug) ?? null;
+  const found = shouldUseWordPress()
+    ? await withCmsFallback("getArticleBySlug", () => getCmsArticleBySlug(slug), () => articles.find((article) => article.slug === slug) ?? null)
+    : articles.find((article) => article.slug === slug) ?? null;
+  return found && isContentPubliclyEligible(found) ? found : null;
 }
 
 export async function getArticlesByFormat(format: Format) {

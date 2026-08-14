@@ -158,11 +158,13 @@ const articleOverrides: Record<string, Partial<Article>> = {
     }
   },
   "iphone-air-review-the-iphone-that-asks-what-you-re-willing-to-give-up": {
-    contentFormat: "research_based_review",
+    format: "explainer",
+    contentFormat: "analysis",
     reviewMethod: "research_based",
     hasOriginalTesting: false,
+    title: "iPhone Air analysis: the iPhone that asks what you are willing to give up",
     seo: {
-      title: "iPhone Air review: the iPhone that asks what you're willing to give up",
+      title: "iPhone Air analysis: the trade-offs explained",
       description:
         "The iPhone Air is Apple's thinnest, most beautiful iPhone. After the hype, a research-based assessment of the camera, battery, and whether it is worth the price."
     },
@@ -368,26 +370,10 @@ function conciseWhyItMatters(value: string, subhead: string) {
 }
 
 function dealForArticle(title: string, slug: string, format: Format): Article["deal"] {
-  if (format !== "wallet-watch") return undefined;
-  const productName = title.includes("power bank")
-    ? "Reliable 20,000mAh power bank"
-    : title.includes("laptop")
-      ? "Student laptop shortlist"
-      : title.includes("refurbished")
-        ? "Verified refurbished phone"
-        : "Budget smartphone pick";
-  const threshold = title.match(/KSh\s?([0-9,]+)/)?.[1]?.replace(/,/g, "");
-  return {
-    productName,
-    retailer: "Editor-verified retailer",
-    priceCurrent: threshold ? Number(threshold) : 4999 + stableIndex(slug, 8) * 1500,
-    priceWas: threshold ? Number(threshold) + 2500 : undefined,
-    currency: "KSh",
-    affiliateUrl: "/advertise",
-    expiry: "Check retailer before checkout",
-    bestUnderThreshold: threshold ? Number(threshold) : undefined,
-    verified: true
-  };
+  void title;
+  void slug;
+  void format;
+  return undefined;
 }
 
 function parseWhy(block: string) {
@@ -488,9 +474,22 @@ export function loadDraftArticles({
         readTime: readTimeFor(block),
         image: imageForArticle(slug, tags),
         tags,
-        deal: dealForArticle(title, slug, format)
+        deal: dealForArticle(title, slug, format),
+        workflowVersion: "gated",
+        publicationStatus: "in_review",
+        editorialStatus: "editorial_review",
+        indexingStatus: "noindex",
+        excludeFromDiscovery: true,
+        originalValueType: "curated_context"
       };
-      return articleOverride ? { ...article, ...articleOverride } : article;
+      const merged = articleOverride ? { ...article, ...articleOverride } : article;
+      return {
+        ...merged,
+        workflowVersion: "gated" as const,
+        publicationStatus: "in_review" as const,
+        indexingStatus: "noindex" as const,
+        excludeFromDiscovery: true
+      };
     })
     .filter((article) => !excludedDraftSlugs.has(article.slug));
 }

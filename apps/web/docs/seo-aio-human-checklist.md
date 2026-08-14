@@ -5,7 +5,7 @@ Use this checklist after each major deploy, after large article imports, and bef
 ## Search Console
 
 - Submit `https://tecmambo.com/sitemap-index.xml`.
-- Confirm `https://tecmambo.com/pages-sitemap.xml`, `https://tecmambo.com/hubs-sitemap.xml`, `https://tecmambo.com/articles-sitemap.xml`, `https://tecmambo.com/news-sitemap.xml`, `https://tecmambo.com/image-sitemap.xml`, and `https://tecmambo.com/glossary/sitemap.xml` are discovered.
+- Confirm `https://tecmambo.com/pages-sitemap.xml`, `https://tecmambo.com/hubs-sitemap.xml`, `https://tecmambo.com/articles-sitemap.xml`, `https://tecmambo.com/news-sitemap.xml`, and `https://tecmambo.com/image-sitemap.xml` are discovered.
 - Inspect the homepage, latest page, About page, one hub page, one glossary page, and five recent articles.
 - Check that canonical URLs point to the live tecMAMBO URL.
 - Review indexing exclusions and fix accidental `noindex` entries for substantial articles.
@@ -48,7 +48,9 @@ Use this checklist after each major deploy, after large article imports, and bef
 ## AdSense Readiness
 
 - Confirm `https://tecmambo.com/ads.txt` contains the active AdSense publisher line.
-- Confirm the AdSense script and `google-adsense-account` meta tag are in the document head.
+- Confirm `NEXT_PUBLIC_ADSENSE_ENABLED` remains false until the site is intentionally ready to serve ads.
+- When ads are enabled, confirm the AdSense script appears only on a substantive, indexable, human-approved article that passes the central monetization gate.
+- Confirm the AdSense script is absent from legal, utility, search, error, glossary, preview, and thin archive pages.
 - Confirm privacy, cookie policy, terms, editorial standards, about, contact, and advertise pages are reachable from the footer.
 - Confirm no misleading ad placements, auto-download prompts, copied filler pages, or empty archive pages are visible.
 - Recheck article depth before requesting review. AdSense reviewers may classify young sites or shallow archives as low value even when the design is polished.

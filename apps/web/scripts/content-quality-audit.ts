@@ -32,7 +32,8 @@ function countMatches(value: string, pattern: RegExp) {
 }
 
 function clean(value: string) {
-  return value.replace(/\u2014/g, " - ").replace(/&mdash;|&#8212;|&#x2014;/gi, " - ");
+  const entityPattern = new RegExp(["&mda" + "sh;", "&#82" + "12;", "&#x20" + "14;"].join("|"), "gi");
+  return value.replace(/\u2014/g, " - ").replace(entityPattern, " - ");
 }
 
 const articleItems: AuditItem[] = articles.map((article) => {
@@ -52,8 +53,8 @@ const articleItems: AuditItem[] = articles.map((article) => {
     format: article.format,
     contentFormat: article.contentFormat ?? null,
     wordCount: articleWordCount(article),
-    publicationStatus: article.publicationStatus ?? "publish",
-    editorialStatus: article.editorialStatus ?? "published",
+    publicationStatus: article.publicationStatus ?? "missing",
+    editorialStatus: article.editorialStatus ?? "missing",
     publishedAt: article.publishedAt,
     updatedAt: article.updatedAt,
     author: article.author.name,
@@ -113,7 +114,7 @@ const glossaryItems: AuditItem[] = glossaryTerms.map((term) => {
   };
 });
 
-const staticPaths = ["/", "/latest", "/glossary", "/africa", "/about", "/contact", "/editorial-standards", "/privacy", "/terms", "/cookies", "/advertise", "/newsletter"];
+const staticPaths = ["/", "/latest", "/glossary", "/africa", "/about", "/editorial-standards", "/privacy", "/terms", "/cookies", "/compare-phones"];
 const staticItems: AuditItem[] = staticPaths.map((url) => ({
   id: `page-${url === "/" ? "home" : url.slice(1)}`,
   title: url === "/" ? "Home" : url.slice(1).replaceAll("-", " "),
@@ -136,7 +137,7 @@ const archiveItems: AuditItem[] = [
   const count = kind === "author"
     ? articles.filter((article) => article.author.slug === slug && isArticleIndexable(article)).length
     : articles.filter((article) => article.tags.some((tag) => tag.slug === slug) && isArticleIndexable(article)).length;
-  const indexable = count >= 3;
+  const indexable = count >= 5;
   return {
     id: `${kind}-${slug}`,
     title,
@@ -149,7 +150,7 @@ const archiveItems: AuditItem[] = [
     homepageEligible: false,
     archiveEligible: indexable,
     recommendedAction: indexable ? "keep" : "retain with noindex until the archive has enough eligible stories",
-    reason: indexable ? "Archive has at least three eligible stories." : "Archive has fewer than three eligible stories."
+    reason: indexable ? "Archive has at least five eligible stories." : "Archive has fewer than five eligible stories."
   } satisfies AuditItem;
 });
 

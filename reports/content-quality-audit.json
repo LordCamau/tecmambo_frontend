@@ -1,12 +1,12 @@
 {
   "summary": {
-    "generatedAt": "2026-08-12T18:28:06.748Z",
+    "generatedAt": "2026-08-14T05:14:42.538Z",
     "source": "repository content model",
     "totals": {
-      "items": 507,
+      "items": 505,
       "articles": 209,
-      "publiclyEligibleArticles": 170,
-      "excludedArticles": 39,
+      "publiclyEligibleArticles": 142,
+      "excludedArticles": 67,
       "indexableGlossaryTerms": 0,
       "noindexGlossaryTerms": 98
     }
@@ -509,13 +509,19 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "unverified-buying-guide: The buying guide lacks sufficient verification evidence.",
+      "issues": [
+        {
+          "code": "unverified-buying-guide",
+          "message": "The buying guide lacks sufficient verification evidence.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "editorial-august10-insta360-go-ultra-gemini-ai-voice-assistant-kira",
@@ -872,13 +878,19 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "unsupported-first-hand-claim: The title or summary makes a first-hand claim without the required evidence record.",
+      "issues": [
+        {
+          "code": "unsupported-first-hand-claim",
+          "message": "The title or summary makes a first-hand claim without the required evidence record.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "editorial-august10-east-africa-electric-mobility-charging-battery-swap-infrastructure",
@@ -1719,13 +1731,19 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "unverified-buying-guide: The buying guide lacks sufficient verification evidence.",
+      "issues": [
+        {
+          "code": "unverified-buying-guide",
+          "message": "The buying guide lacks sufficient verification evidence.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "editorial-august1-tecno-zero-bezel",
@@ -2593,7 +2611,7 @@
       "leadImageCredit": "Apple Magazine",
       "inlineImageCount": 0,
       "externalLinkCount": 5,
-      "internalLinkCount": 4,
+      "internalLinkCount": 3,
       "originalMedia": false,
       "reviewScore": null,
       "reviewMethod": null,
@@ -2687,13 +2705,19 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "missing-sources: Reported news or business analysis has no source list.",
+      "issues": [
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "kenya-news-stablecoin-economy-freelancers",
@@ -2728,13 +2752,19 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "missing-sources: Reported news or business analysis has no source list.",
+      "issues": [
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "kenya-news-home-fibre-speed-wars-starlink",
@@ -2771,13 +2801,19 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "missing-sources: Reported news or business analysis has no source list.",
+      "issues": [
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "kenya-news-basigo-expansion-grid",
@@ -2814,13 +2850,19 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "missing-sources: Reported news or business analysis has no source list.",
+      "issues": [
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "kenya-news-airtel-money-rudishiwa",
@@ -2856,13 +2898,19 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "missing-sources: Reported news or business analysis has no source list.",
+      "issues": [
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "kenya-news-moniepoint-rose-muturi-ceo",
@@ -2900,13 +2948,19 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "missing-sources: Reported news or business analysis has no source list.",
+      "issues": [
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "apple-openai-lawsuit-trade-secrets",
@@ -3959,14 +4013,26 @@
       "originalTesting": false,
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
-      "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "placeholderIssues": [
+        {
+          "code": "unfinished-draft",
+          "message": "Public copy contains unfinished draft.",
+          "confidence": "high"
+        }
+      ],
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "unfinished-draft: Public copy contains unfinished draft.",
+      "issues": [
+        {
+          "code": "unfinished-draft",
+          "message": "Public copy contains unfinished draft.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "editorial-2026-07-07-stop-chasing-newest-ai-model-good-enough",
@@ -5922,12 +5988,12 @@
     },
     {
       "id": "review-samsung-galaxy-a37-5g",
-      "title": "Samsung Galaxy A37 5G review: a dependable mid-ranger that plays it safe",
+      "title": "Samsung Galaxy A37 5G analysis: a dependable mid-ranger that plays it safe",
       "slug": "samsung-galaxy-a37-5g-review",
-      "url": "/reviews/samsung-galaxy-a37-5g-review",
+      "url": "/explainers/samsung-galaxy-a37-5g-review",
       "type": "article",
-      "format": "review",
-      "contentFormat": "research_based_review",
+      "format": "explainer",
+      "contentFormat": "analysis",
       "wordCount": 1121,
       "publicationStatus": "publish",
       "editorialStatus": "published",
@@ -5935,7 +6001,7 @@
       "updatedAt": "2026-07-02T07:00:00.000Z",
       "author": "Tim Humphreys",
       "categories": [
-        "review"
+        "explainer"
       ],
       "tags": [
         "Smartphones",
@@ -7290,13 +7356,19 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "missing-sources: Reported news or business analysis has no source list.",
+      "issues": [
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "ai-3",
@@ -7332,13 +7404,19 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "missing-sources: Reported news or business analysis has no source list.",
+      "issues": [
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "ai-2",
@@ -7374,13 +7452,19 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "missing-sources: Reported news or business analysis has no source list.",
+      "issues": [
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "ai-1",
@@ -7690,12 +7774,17 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain and revise outside discovery",
-      "reason": "thin-article: The article has less than 300 words or fewer than three body sections.",
+      "reason": "thin-article: The article has less than 300 words or fewer than three body sections. missing-sources: Reported news or business analysis has no source list.",
       "issues": [
         {
           "code": "thin-article",
           "message": "The article has less than 300 words or fewer than three body sections.",
           "confidence": "medium"
+        },
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
         }
       ]
     },
@@ -7751,8 +7840,8 @@
       "format": "explainer",
       "contentFormat": null,
       "wordCount": 746,
-      "publicationStatus": "publish",
-      "editorialStatus": "published",
+      "publicationStatus": "in_review",
+      "editorialStatus": "editorial_review",
       "publishedAt": "2026-06-26T06:00:00.000Z",
       "updatedAt": "2026-06-26T06:00:00.000Z",
       "author": "Tim Humphreys",
@@ -7776,13 +7865,49 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery.",
+      "issues": [
+        {
+          "code": "not-published",
+          "message": "Publication status is in_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-editorially-ready",
+          "message": "Editorial status is editorial_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-source-checked",
+          "message": "The gated workflow is missing sourceChecked.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-human-editor-approved",
+          "message": "The gated workflow is missing humanEditorApproved.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-editor",
+          "message": "The gated workflow is missing editor.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-reviewed-at",
+          "message": "The gated workflow is missing reviewedAt.",
+          "confidence": "high"
+        },
+        {
+          "code": "excluded-from-discovery",
+          "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "africa-news-ai-layoffs-nigeria",
@@ -8059,7 +8184,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain and revise outside discovery",
-      "reason": "not-editorially-ready: Editorial status is needs_revision. excluded-from-discovery: The article is explicitly excluded from discovery.",
+      "reason": "not-editorially-ready: Editorial status is needs_revision. excluded-from-discovery: The article is explicitly excluded from discovery. review-without-hands-on-evidence: Reviews are reserved for documented hands-on testing. unsupported-first-hand-claim: The title or summary makes a first-hand claim without the required evidence record.",
       "issues": [
         {
           "code": "not-editorially-ready",
@@ -8069,6 +8194,16 @@
         {
           "code": "excluded-from-discovery",
           "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        },
+        {
+          "code": "review-without-hands-on-evidence",
+          "message": "Reviews are reserved for documented hands-on testing.",
+          "confidence": "high"
+        },
+        {
+          "code": "unsupported-first-hand-claim",
+          "message": "The title or summary makes a first-hand claim without the required evidence record.",
           "confidence": "high"
         }
       ]
@@ -8080,10 +8215,10 @@
       "url": "/real-life/three-ai-assistants-real-nairobi-week",
       "type": "article",
       "format": "real-life",
-      "contentFormat": null,
+      "contentFormat": "field_test",
       "wordCount": 2144,
-      "publicationStatus": "publish",
-      "editorialStatus": "published",
+      "publicationStatus": "in_review",
+      "editorialStatus": "needs_revision",
       "publishedAt": "2026-06-25T08:00:00.000Z",
       "updatedAt": "2026-06-25T08:00:00.000Z",
       "author": "Lulu Kiritu",
@@ -8109,13 +8244,59 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 9,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "not-published: Publication status is in_review. not-editorially-ready: Editorial status is needs_revision. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. unsupported-first-hand-claim: The title or summary makes a first-hand claim without the required evidence record. field-test-evidence-missing: The field test lacks evidence, methodology, or a named approving editor.",
+      "issues": [
+        {
+          "code": "not-published",
+          "message": "Publication status is in_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-editorially-ready",
+          "message": "Editorial status is needs_revision.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-source-checked",
+          "message": "The gated workflow is missing sourceChecked.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-human-editor-approved",
+          "message": "The gated workflow is missing humanEditorApproved.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-editor",
+          "message": "The gated workflow is missing editor.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-reviewed-at",
+          "message": "The gated workflow is missing reviewedAt.",
+          "confidence": "high"
+        },
+        {
+          "code": "excluded-from-discovery",
+          "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        },
+        {
+          "code": "unsupported-first-hand-claim",
+          "message": "The title or summary makes a first-hand claim without the required evidence record.",
+          "confidence": "high"
+        },
+        {
+          "code": "field-test-evidence-missing",
+          "message": "The field test lacks evidence, methodology, or a named approving editor.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "mobility-1",
@@ -8253,8 +8434,8 @@
       "format": "explainer",
       "contentFormat": null,
       "wordCount": 685,
-      "publicationStatus": "publish",
-      "editorialStatus": "published",
+      "publicationStatus": "in_review",
+      "editorialStatus": "editorial_review",
       "publishedAt": "2026-06-25T06:00:00.000Z",
       "updatedAt": "2026-06-25T06:00:00.000Z",
       "author": "Tim Humphreys",
@@ -8277,13 +8458,49 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery.",
+      "issues": [
+        {
+          "code": "not-published",
+          "message": "Publication status is in_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-editorially-ready",
+          "message": "Editorial status is editorial_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-source-checked",
+          "message": "The gated workflow is missing sourceChecked.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-human-editor-approved",
+          "message": "The gated workflow is missing humanEditorApproved.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-editor",
+          "message": "The gated workflow is missing editor.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-reviewed-at",
+          "message": "The gated workflow is missing reviewedAt.",
+          "confidence": "high"
+        },
+        {
+          "code": "excluded-from-discovery",
+          "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "africa-nigeria-fintech",
@@ -8324,12 +8541,17 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain and revise outside discovery",
-      "reason": "thin-article: The article has less than 300 words or fewer than three body sections.",
+      "reason": "thin-article: The article has less than 300 words or fewer than three body sections. missing-sources: Reported news or business analysis has no source list.",
       "issues": [
         {
           "code": "thin-article",
           "message": "The article has less than 300 words or fewer than three body sections.",
           "confidence": "medium"
+        },
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
         }
       ]
     },
@@ -8342,8 +8564,8 @@
       "format": "explainer",
       "contentFormat": null,
       "wordCount": 628,
-      "publicationStatus": "publish",
-      "editorialStatus": "published",
+      "publicationStatus": "in_review",
+      "editorialStatus": "editorial_review",
       "publishedAt": "2026-06-24T06:00:00.000Z",
       "updatedAt": "2026-06-24T06:00:00.000Z",
       "author": "Tim Humphreys",
@@ -8366,13 +8588,49 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery.",
+      "issues": [
+        {
+          "code": "not-published",
+          "message": "Publication status is in_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-editorially-ready",
+          "message": "Editorial status is editorial_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-source-checked",
+          "message": "The gated workflow is missing sourceChecked.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-human-editor-approved",
+          "message": "The gated workflow is missing humanEditorApproved.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-editor",
+          "message": "The gated workflow is missing editor.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-reviewed-at",
+          "message": "The gated workflow is missing reviewedAt.",
+          "confidence": "high"
+        },
+        {
+          "code": "excluded-from-discovery",
+          "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "africa-south-africa-power-apps",
@@ -8431,8 +8689,8 @@
       "format": "explainer",
       "contentFormat": null,
       "wordCount": 584,
-      "publicationStatus": "publish",
-      "editorialStatus": "published",
+      "publicationStatus": "in_review",
+      "editorialStatus": "editorial_review",
       "publishedAt": "2026-06-23T06:00:00.000Z",
       "updatedAt": "2026-06-23T06:00:00.000Z",
       "author": "Tim Humphreys",
@@ -8456,13 +8714,49 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery.",
+      "issues": [
+        {
+          "code": "not-published",
+          "message": "Publication status is in_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-editorially-ready",
+          "message": "Editorial status is editorial_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-source-checked",
+          "message": "The gated workflow is missing sourceChecked.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-human-editor-approved",
+          "message": "The gated workflow is missing humanEditorApproved.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-editor",
+          "message": "The gated workflow is missing editor.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-reviewed-at",
+          "message": "The gated workflow is missing reviewedAt.",
+          "confidence": "high"
+        },
+        {
+          "code": "excluded-from-discovery",
+          "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "business-1",
@@ -8503,12 +8797,17 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain and revise outside discovery",
-      "reason": "thin-article: The article has less than 300 words or fewer than three body sections.",
+      "reason": "thin-article: The article has less than 300 words or fewer than three body sections. missing-sources: Reported news or business analysis has no source list.",
       "issues": [
         {
           "code": "thin-article",
           "message": "The article has less than 300 words or fewer than three body sections.",
           "confidence": "medium"
+        },
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
         }
       ]
     },
@@ -8599,31 +8898,36 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain and revise outside discovery",
-      "reason": "thin-article: The article has less than 300 words or fewer than three body sections.",
+      "reason": "thin-article: The article has less than 300 words or fewer than three body sections. missing-sources: Reported news or business analysis has no source list.",
       "issues": [
         {
           "code": "thin-article",
           "message": "The article has less than 300 words or fewer than three body sections.",
           "confidence": "medium"
+        },
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
         }
       ]
     },
     {
       "id": "207",
-      "title": "iPhone Air review: the iPhone that asks what you're willing to give up",
+      "title": "iPhone Air analysis: the iPhone that asks what you are willing to give up",
       "slug": "iphone-air-review-the-iphone-that-asks-what-you-re-willing-to-give-up",
-      "url": "/reviews/iphone-air-review-the-iphone-that-asks-what-you-re-willing-to-give-up",
+      "url": "/explainers/iphone-air-review-the-iphone-that-asks-what-you-re-willing-to-give-up",
       "type": "article",
-      "format": "review",
-      "contentFormat": "research_based_review",
-      "wordCount": 1230,
-      "publicationStatus": "publish",
-      "editorialStatus": "published",
+      "format": "explainer",
+      "contentFormat": "analysis",
+      "wordCount": 1231,
+      "publicationStatus": "in_review",
+      "editorialStatus": "editorial_review",
       "publishedAt": "2026-06-20T06:00:00.000Z",
       "updatedAt": "2026-07-02T06:00:00.000Z",
       "author": "Tim Humphreys",
       "categories": [
-        "review"
+        "explainer"
       ],
       "tags": [
         "Smartphones",
@@ -8643,13 +8947,49 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 10,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery.",
+      "issues": [
+        {
+          "code": "not-published",
+          "message": "Publication status is in_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-editorially-ready",
+          "message": "Editorial status is editorial_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-source-checked",
+          "message": "The gated workflow is missing sourceChecked.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-human-editor-approved",
+          "message": "The gated workflow is missing humanEditorApproved.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-editor",
+          "message": "The gated workflow is missing editor.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-reviewed-at",
+          "message": "The gated workflow is missing reviewedAt.",
+          "confidence": "high"
+        },
+        {
+          "code": "excluded-from-discovery",
+          "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "mobility-2",
@@ -8738,12 +9078,17 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain and revise outside discovery",
-      "reason": "thin-article: The article has less than 300 words or fewer than three body sections.",
+      "reason": "thin-article: The article has less than 300 words or fewer than three body sections. missing-sources: Reported news or business analysis has no source list.",
       "issues": [
         {
           "code": "thin-article",
           "message": "The article has less than 300 words or fewer than three body sections.",
           "confidence": "medium"
+        },
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
         }
       ]
     },
@@ -8756,7 +9101,7 @@
       "format": "wallet-watch",
       "contentFormat": "buying_guide",
       "wordCount": 624,
-      "publicationStatus": "publish",
+      "publicationStatus": "in_review",
       "editorialStatus": "needs_revision",
       "publishedAt": "2026-06-18T06:00:00.000Z",
       "updatedAt": "2026-06-18T06:00:00.000Z",
@@ -8791,7 +9136,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain and revise outside discovery",
-      "reason": "pre-publication-note: Public copy contains pre publication note. publication-instruction: Public copy contains publication instruction. not-editorially-ready: Editorial status is needs_revision. excluded-from-discovery: The article is explicitly excluded from discovery. unverified-buying-guide: The buying guide lacks sufficient verification evidence.",
+      "reason": "pre-publication-note: Public copy contains pre publication note. publication-instruction: Public copy contains publication instruction. not-published: Publication status is in_review. not-editorially-ready: Editorial status is needs_revision. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. pricing-verification-missing: Current buying guidance needs sources and a recorded price-check time. unverified-buying-guide: The buying guide lacks sufficient verification evidence.",
       "issues": [
         {
           "code": "pre-publication-note",
@@ -8804,13 +9149,43 @@
           "confidence": "high"
         },
         {
+          "code": "not-published",
+          "message": "Publication status is in_review.",
+          "confidence": "high"
+        },
+        {
           "code": "not-editorially-ready",
           "message": "Editorial status is needs_revision.",
           "confidence": "high"
         },
         {
+          "code": "missing-source-checked",
+          "message": "The gated workflow is missing sourceChecked.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-human-editor-approved",
+          "message": "The gated workflow is missing humanEditorApproved.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-editor",
+          "message": "The gated workflow is missing editor.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-reviewed-at",
+          "message": "The gated workflow is missing reviewedAt.",
+          "confidence": "high"
+        },
+        {
           "code": "excluded-from-discovery",
           "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        },
+        {
+          "code": "pricing-verification-missing",
+          "message": "Current buying guidance needs sources and a recorded price-check time.",
           "confidence": "high"
         },
         {
@@ -8859,12 +9234,17 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain and revise outside discovery",
-      "reason": "thin-article: The article has less than 300 words or fewer than three body sections.",
+      "reason": "thin-article: The article has less than 300 words or fewer than three body sections. missing-sources: Reported news or business analysis has no source list.",
       "issues": [
         {
           "code": "thin-article",
           "message": "The article has less than 300 words or fewer than three body sections.",
           "confidence": "medium"
+        },
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
         }
       ]
     },
@@ -8877,7 +9257,7 @@
       "format": "wallet-watch",
       "contentFormat": "buying_guide",
       "wordCount": 533,
-      "publicationStatus": "publish",
+      "publicationStatus": "in_review",
       "editorialStatus": "needs_revision",
       "publishedAt": "2026-06-17T06:00:00.000Z",
       "updatedAt": "2026-06-17T06:00:00.000Z",
@@ -8912,11 +9292,21 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain and revise outside discovery",
-      "reason": "unfinished-draft: Public copy contains unfinished draft. not-editorially-ready: Editorial status is needs_revision. excluded-from-discovery: The article is explicitly excluded from discovery. unverified-buying-guide: The buying guide lacks sufficient verification evidence.",
+      "reason": "pre-publication-note: Public copy contains pre publication note. unfinished-draft: Public copy contains unfinished draft. not-published: Publication status is in_review. not-editorially-ready: Editorial status is needs_revision. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. pricing-verification-missing: Current buying guidance needs sources and a recorded price-check time. unverified-buying-guide: The buying guide lacks sufficient verification evidence.",
       "issues": [
+        {
+          "code": "pre-publication-note",
+          "message": "Public copy contains pre publication note.",
+          "confidence": "high"
+        },
         {
           "code": "unfinished-draft",
           "message": "Public copy contains unfinished draft.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-published",
+          "message": "Publication status is in_review.",
           "confidence": "high"
         },
         {
@@ -8925,8 +9315,33 @@
           "confidence": "high"
         },
         {
+          "code": "missing-source-checked",
+          "message": "The gated workflow is missing sourceChecked.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-human-editor-approved",
+          "message": "The gated workflow is missing humanEditorApproved.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-editor",
+          "message": "The gated workflow is missing editor.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-reviewed-at",
+          "message": "The gated workflow is missing reviewedAt.",
+          "confidence": "high"
+        },
+        {
           "code": "excluded-from-discovery",
           "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        },
+        {
+          "code": "pricing-verification-missing",
+          "message": "Current buying guidance needs sources and a recorded price-check time.",
           "confidence": "high"
         },
         {
@@ -8945,7 +9360,7 @@
       "format": "wallet-watch",
       "contentFormat": "buying_guide",
       "wordCount": 637,
-      "publicationStatus": "publish",
+      "publicationStatus": "in_review",
       "editorialStatus": "needs_revision",
       "publishedAt": "2026-06-16T06:00:00.000Z",
       "updatedAt": "2026-06-16T06:00:00.000Z",
@@ -8980,11 +9395,16 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain and revise outside discovery",
-      "reason": "unfinished-draft: Public copy contains unfinished draft. not-editorially-ready: Editorial status is needs_revision. excluded-from-discovery: The article is explicitly excluded from discovery. unverified-buying-guide: The buying guide lacks sufficient verification evidence.",
+      "reason": "unfinished-draft: Public copy contains unfinished draft. not-published: Publication status is in_review. not-editorially-ready: Editorial status is needs_revision. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. unsupported-first-hand-claim: The title or summary makes a first-hand claim without the required evidence record. pricing-verification-missing: Current buying guidance needs sources and a recorded price-check time. unverified-buying-guide: The buying guide lacks sufficient verification evidence.",
       "issues": [
         {
           "code": "unfinished-draft",
           "message": "Public copy contains unfinished draft.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-published",
+          "message": "Publication status is in_review.",
           "confidence": "high"
         },
         {
@@ -8993,8 +9413,38 @@
           "confidence": "high"
         },
         {
+          "code": "missing-source-checked",
+          "message": "The gated workflow is missing sourceChecked.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-human-editor-approved",
+          "message": "The gated workflow is missing humanEditorApproved.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-editor",
+          "message": "The gated workflow is missing editor.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-reviewed-at",
+          "message": "The gated workflow is missing reviewedAt.",
+          "confidence": "high"
+        },
+        {
           "code": "excluded-from-discovery",
           "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        },
+        {
+          "code": "unsupported-first-hand-claim",
+          "message": "The title or summary makes a first-hand claim without the required evidence record.",
+          "confidence": "high"
+        },
+        {
+          "code": "pricing-verification-missing",
+          "message": "Current buying guidance needs sources and a recorded price-check time.",
           "confidence": "high"
         },
         {
@@ -9061,8 +9511,8 @@
       "format": "wallet-watch",
       "contentFormat": null,
       "wordCount": 681,
-      "publicationStatus": "publish",
-      "editorialStatus": "published",
+      "publicationStatus": "in_review",
+      "editorialStatus": "editorial_review",
       "publishedAt": "2026-06-15T06:00:00.000Z",
       "updatedAt": "2026-06-15T06:00:00.000Z",
       "author": "Tim Humphreys",
@@ -9085,13 +9535,59 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "pre-publication-note: Public copy contains pre publication note. not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. pricing-verification-missing: Current buying guidance needs sources and a recorded price-check time.",
+      "issues": [
+        {
+          "code": "pre-publication-note",
+          "message": "Public copy contains pre publication note.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-published",
+          "message": "Publication status is in_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-editorially-ready",
+          "message": "Editorial status is editorial_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-source-checked",
+          "message": "The gated workflow is missing sourceChecked.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-human-editor-approved",
+          "message": "The gated workflow is missing humanEditorApproved.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-editor",
+          "message": "The gated workflow is missing editor.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-reviewed-at",
+          "message": "The gated workflow is missing reviewedAt.",
+          "confidence": "high"
+        },
+        {
+          "code": "excluded-from-discovery",
+          "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        },
+        {
+          "code": "pricing-verification-missing",
+          "message": "Current buying guidance needs sources and a recorded price-check time.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "213",
@@ -9102,8 +9598,8 @@
       "format": "real-life",
       "contentFormat": null,
       "wordCount": 580,
-      "publicationStatus": "publish",
-      "editorialStatus": "published",
+      "publicationStatus": "in_review",
+      "editorialStatus": "editorial_review",
       "publishedAt": "2026-06-14T06:00:00.000Z",
       "updatedAt": "2026-06-14T06:00:00.000Z",
       "author": "Tim Humphreys",
@@ -9126,13 +9622,59 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "pre-publication-note: Public copy contains pre publication note. not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. unsupported-first-hand-claim: The title or summary makes a first-hand claim without the required evidence record.",
+      "issues": [
+        {
+          "code": "pre-publication-note",
+          "message": "Public copy contains pre publication note.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-published",
+          "message": "Publication status is in_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-editorially-ready",
+          "message": "Editorial status is editorial_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-source-checked",
+          "message": "The gated workflow is missing sourceChecked.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-human-editor-approved",
+          "message": "The gated workflow is missing humanEditorApproved.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-editor",
+          "message": "The gated workflow is missing editor.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-reviewed-at",
+          "message": "The gated workflow is missing reviewedAt.",
+          "confidence": "high"
+        },
+        {
+          "code": "excluded-from-discovery",
+          "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        },
+        {
+          "code": "unsupported-first-hand-claim",
+          "message": "The title or summary makes a first-hand claim without the required evidence record.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "214",
@@ -9143,8 +9685,8 @@
       "format": "real-life",
       "contentFormat": null,
       "wordCount": 577,
-      "publicationStatus": "publish",
-      "editorialStatus": "published",
+      "publicationStatus": "in_review",
+      "editorialStatus": "editorial_review",
       "publishedAt": "2026-06-13T06:00:00.000Z",
       "updatedAt": "2026-06-13T06:00:00.000Z",
       "author": "Tim Humphreys",
@@ -9167,13 +9709,54 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. unsupported-first-hand-claim: The title or summary makes a first-hand claim without the required evidence record.",
+      "issues": [
+        {
+          "code": "not-published",
+          "message": "Publication status is in_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-editorially-ready",
+          "message": "Editorial status is editorial_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-source-checked",
+          "message": "The gated workflow is missing sourceChecked.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-human-editor-approved",
+          "message": "The gated workflow is missing humanEditorApproved.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-editor",
+          "message": "The gated workflow is missing editor.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-reviewed-at",
+          "message": "The gated workflow is missing reviewedAt.",
+          "confidence": "high"
+        },
+        {
+          "code": "excluded-from-discovery",
+          "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        },
+        {
+          "code": "unsupported-first-hand-claim",
+          "message": "The title or summary makes a first-hand claim without the required evidence record.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "215",
@@ -9184,8 +9767,8 @@
       "format": "real-life",
       "contentFormat": null,
       "wordCount": 600,
-      "publicationStatus": "publish",
-      "editorialStatus": "published",
+      "publicationStatus": "in_review",
+      "editorialStatus": "editorial_review",
       "publishedAt": "2026-06-12T06:00:00.000Z",
       "updatedAt": "2026-06-12T06:00:00.000Z",
       "author": "Tim Humphreys",
@@ -9208,13 +9791,59 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "pre-publication-note: Public copy contains pre publication note. not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. unsupported-first-hand-claim: The title or summary makes a first-hand claim without the required evidence record.",
+      "issues": [
+        {
+          "code": "pre-publication-note",
+          "message": "Public copy contains pre publication note.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-published",
+          "message": "Publication status is in_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-editorially-ready",
+          "message": "Editorial status is editorial_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-source-checked",
+          "message": "The gated workflow is missing sourceChecked.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-human-editor-approved",
+          "message": "The gated workflow is missing humanEditorApproved.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-editor",
+          "message": "The gated workflow is missing editor.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-reviewed-at",
+          "message": "The gated workflow is missing reviewedAt.",
+          "confidence": "high"
+        },
+        {
+          "code": "excluded-from-discovery",
+          "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        },
+        {
+          "code": "unsupported-first-hand-claim",
+          "message": "The title or summary makes a first-hand claim without the required evidence record.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "216",
@@ -9225,8 +9854,8 @@
       "format": "news",
       "contentFormat": null,
       "wordCount": 534,
-      "publicationStatus": "publish",
-      "editorialStatus": "published",
+      "publicationStatus": "in_review",
+      "editorialStatus": "editorial_review",
       "publishedAt": "2026-06-11T06:00:00.000Z",
       "updatedAt": "2026-06-11T06:00:00.000Z",
       "author": "Tim Humphreys",
@@ -9250,13 +9879,54 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. missing-sources: Reported news or business analysis has no source list.",
+      "issues": [
+        {
+          "code": "not-published",
+          "message": "Publication status is in_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-editorially-ready",
+          "message": "Editorial status is editorial_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-source-checked",
+          "message": "The gated workflow is missing sourceChecked.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-human-editor-approved",
+          "message": "The gated workflow is missing humanEditorApproved.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-editor",
+          "message": "The gated workflow is missing editor.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-reviewed-at",
+          "message": "The gated workflow is missing reviewedAt.",
+          "confidence": "high"
+        },
+        {
+          "code": "excluded-from-discovery",
+          "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "217",
@@ -9267,8 +9937,8 @@
       "format": "news",
       "contentFormat": null,
       "wordCount": 537,
-      "publicationStatus": "publish",
-      "editorialStatus": "published",
+      "publicationStatus": "in_review",
+      "editorialStatus": "editorial_review",
       "publishedAt": "2026-06-10T06:00:00.000Z",
       "updatedAt": "2026-06-10T06:00:00.000Z",
       "author": "Tim Humphreys",
@@ -9291,13 +9961,64 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "pre-publication-note: Public copy contains pre publication note. not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. missing-sources: Reported news or business analysis has no source list. legal-verification-missing: Current legal or regulatory coverage needs sources and a recorded legal fact-check time.",
+      "issues": [
+        {
+          "code": "pre-publication-note",
+          "message": "Public copy contains pre publication note.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-published",
+          "message": "Publication status is in_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-editorially-ready",
+          "message": "Editorial status is editorial_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-source-checked",
+          "message": "The gated workflow is missing sourceChecked.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-human-editor-approved",
+          "message": "The gated workflow is missing humanEditorApproved.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-editor",
+          "message": "The gated workflow is missing editor.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-reviewed-at",
+          "message": "The gated workflow is missing reviewedAt.",
+          "confidence": "high"
+        },
+        {
+          "code": "excluded-from-discovery",
+          "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
+        },
+        {
+          "code": "legal-verification-missing",
+          "message": "Current legal or regulatory coverage needs sources and a recorded legal fact-check time.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "218",
@@ -9308,8 +10029,8 @@
       "format": "news",
       "contentFormat": null,
       "wordCount": 530,
-      "publicationStatus": "publish",
-      "editorialStatus": "published",
+      "publicationStatus": "in_review",
+      "editorialStatus": "editorial_review",
       "publishedAt": "2026-06-09T06:00:00.000Z",
       "updatedAt": "2026-06-09T06:00:00.000Z",
       "author": "Tim Humphreys",
@@ -9333,13 +10054,54 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. missing-sources: Reported news or business analysis has no source list.",
+      "issues": [
+        {
+          "code": "not-published",
+          "message": "Publication status is in_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-editorially-ready",
+          "message": "Editorial status is editorial_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-source-checked",
+          "message": "The gated workflow is missing sourceChecked.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-human-editor-approved",
+          "message": "The gated workflow is missing humanEditorApproved.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-editor",
+          "message": "The gated workflow is missing editor.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-reviewed-at",
+          "message": "The gated workflow is missing reviewedAt.",
+          "confidence": "high"
+        },
+        {
+          "code": "excluded-from-discovery",
+          "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "219",
@@ -9350,8 +10112,8 @@
       "format": "news",
       "contentFormat": null,
       "wordCount": 561,
-      "publicationStatus": "publish",
-      "editorialStatus": "published",
+      "publicationStatus": "in_review",
+      "editorialStatus": "editorial_review",
       "publishedAt": "2026-06-08T06:00:00.000Z",
       "updatedAt": "2026-06-08T06:00:00.000Z",
       "author": "Tim Humphreys",
@@ -9374,13 +10136,54 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery. missing-sources: Reported news or business analysis has no source list.",
+      "issues": [
+        {
+          "code": "not-published",
+          "message": "Publication status is in_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-editorially-ready",
+          "message": "Editorial status is editorial_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-source-checked",
+          "message": "The gated workflow is missing sourceChecked.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-human-editor-approved",
+          "message": "The gated workflow is missing humanEditorApproved.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-editor",
+          "message": "The gated workflow is missing editor.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-reviewed-at",
+          "message": "The gated workflow is missing reviewedAt.",
+          "confidence": "high"
+        },
+        {
+          "code": "excluded-from-discovery",
+          "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-sources",
+          "message": "Reported news or business analysis has no source list.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "220",
@@ -9391,8 +10194,8 @@
       "format": "opinion",
       "contentFormat": null,
       "wordCount": 615,
-      "publicationStatus": "publish",
-      "editorialStatus": "published",
+      "publicationStatus": "in_review",
+      "editorialStatus": "editorial_review",
       "publishedAt": "2026-06-07T06:00:00.000Z",
       "updatedAt": "2026-06-07T06:00:00.000Z",
       "author": "Tim Humphreys",
@@ -9415,13 +10218,49 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": true,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "No blocking quality issue detected.",
-      "issues": []
+      "robots": "noindex, follow",
+      "sitemap": false,
+      "homepageEligible": false,
+      "archiveEligible": false,
+      "recommendedAction": "retain and revise outside discovery",
+      "reason": "not-published: Publication status is in_review. not-editorially-ready: Editorial status is editorial_review. missing-source-checked: The gated workflow is missing sourceChecked. missing-human-editor-approved: The gated workflow is missing humanEditorApproved. missing-editor: The gated workflow is missing editor. missing-reviewed-at: The gated workflow is missing reviewedAt. excluded-from-discovery: The article is explicitly excluded from discovery.",
+      "issues": [
+        {
+          "code": "not-published",
+          "message": "Publication status is in_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "not-editorially-ready",
+          "message": "Editorial status is editorial_review.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-source-checked",
+          "message": "The gated workflow is missing sourceChecked.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-human-editor-approved",
+          "message": "The gated workflow is missing humanEditorApproved.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-editor",
+          "message": "The gated workflow is missing editor.",
+          "confidence": "high"
+        },
+        {
+          "code": "missing-reviewed-at",
+          "message": "The gated workflow is missing reviewedAt.",
+          "confidence": "high"
+        },
+        {
+          "code": "excluded-from-discovery",
+          "message": "The article is explicitly excluded from discovery.",
+          "confidence": "high"
+        }
+      ]
     },
     {
       "id": "glossary-1080p",
@@ -12646,19 +13485,6 @@
       "reason": "Core utility, trust, or discovery page."
     },
     {
-      "id": "page-contact",
-      "title": "contact",
-      "slug": "contact",
-      "url": "/contact",
-      "type": "page",
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": false,
-      "archiveEligible": false,
-      "recommendedAction": "keep",
-      "reason": "Core utility, trust, or discovery page."
-    },
-    {
       "id": "page-editorial-standards",
       "title": "editorial standards",
       "slug": "editorial-standards",
@@ -12711,23 +13537,10 @@
       "reason": "Core utility, trust, or discovery page."
     },
     {
-      "id": "page-advertise",
-      "title": "advertise",
-      "slug": "advertise",
-      "url": "/advertise",
-      "type": "page",
-      "robots": "index, follow",
-      "sitemap": true,
-      "homepageEligible": false,
-      "archiveEligible": false,
-      "recommendedAction": "keep",
-      "reason": "Core utility, trust, or discovery page."
-    },
-    {
-      "id": "page-newsletter",
-      "title": "newsletter",
-      "slug": "newsletter",
-      "url": "/newsletter",
+      "id": "page-compare-phones",
+      "title": "compare phones",
+      "slug": "compare-phones",
+      "url": "/compare-phones",
       "type": "page",
       "robots": "index, follow",
       "sitemap": true,
@@ -12742,13 +13555,13 @@
       "slug": "tim-humphreys",
       "url": "/authors/tim-humphreys",
       "type": "archive",
-      "eligibleArticleCount": 157,
+      "eligibleArticleCount": 131,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "author-lulu-kiritu",
@@ -12756,13 +13569,13 @@
       "slug": "lulu-kiritu",
       "url": "/authors/lulu-kiritu",
       "type": "archive",
-      "eligibleArticleCount": 12,
+      "eligibleArticleCount": 10,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "author-tecmambo-team",
@@ -12776,7 +13589,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-ai",
@@ -12784,13 +13597,13 @@
       "slug": "ai",
       "url": "/topics/ai",
       "type": "archive",
-      "eligibleArticleCount": 47,
+      "eligibleArticleCount": 42,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "topic-ai-shopping",
@@ -12804,7 +13617,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-agentic-ai",
@@ -12818,7 +13631,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-android",
@@ -12832,7 +13645,7 @@
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "topic-apps",
@@ -12840,13 +13653,13 @@
       "slug": "apps",
       "url": "/topics/apps",
       "type": "archive",
-      "eligibleArticleCount": 16,
+      "eligibleArticleCount": 11,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "topic-smartphones",
@@ -12854,13 +13667,13 @@
       "slug": "smartphones",
       "url": "/topics/smartphones",
       "type": "archive",
-      "eligibleArticleCount": 32,
+      "eligibleArticleCount": 25,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "topic-e-commerce",
@@ -12874,7 +13687,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-quick-commerce",
@@ -12888,7 +13701,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-privacy",
@@ -12902,7 +13715,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-computing",
@@ -12910,13 +13723,13 @@
       "slug": "computing",
       "url": "/topics/computing",
       "type": "archive",
-      "eligibleArticleCount": 18,
+      "eligibleArticleCount": 17,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "topic-social-media",
@@ -12930,7 +13743,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-entertainment",
@@ -12939,12 +13752,12 @@
       "url": "/topics/entertainment",
       "type": "archive",
       "eligibleArticleCount": 3,
-      "robots": "index, follow",
-      "sitemap": true,
+      "robots": "noindex, follow",
+      "sitemap": false,
       "homepageEligible": false,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "archiveEligible": false,
+      "recommendedAction": "retain with noindex until the archive has enough eligible stories",
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-christopher-nolan",
@@ -12958,7 +13771,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-the-odyssey",
@@ -12972,7 +13785,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-hoyte-van-hoytema",
@@ -12986,7 +13799,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-film-cameras",
@@ -13000,7 +13813,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-70mm-film",
@@ -13014,7 +13827,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-cinema-technology",
@@ -13028,7 +13841,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-film-technology",
@@ -13042,7 +13855,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-cameras",
@@ -13056,7 +13869,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-cinema",
@@ -13070,7 +13883,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-tvs",
@@ -13084,7 +13897,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-home-entertainment",
@@ -13098,7 +13911,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-digital-ownership",
@@ -13112,7 +13925,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-game-preservation",
@@ -13126,7 +13939,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-evs-mobility",
@@ -13134,13 +13947,13 @@
       "slug": "evs-mobility",
       "url": "/topics/evs-mobility",
       "type": "archive",
-      "eligibleArticleCount": 15,
+      "eligibleArticleCount": 14,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "topic-autonomous-vehicles",
@@ -13154,7 +13967,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-gaming",
@@ -13168,7 +13981,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-wearables",
@@ -13182,7 +13995,7 @@
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "topic-health-tech",
@@ -13191,12 +14004,12 @@
       "url": "/topics/health-tech",
       "type": "archive",
       "eligibleArticleCount": 3,
-      "robots": "index, follow",
-      "sitemap": true,
+      "robots": "noindex, follow",
+      "sitemap": false,
       "homepageEligible": false,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "archiveEligible": false,
+      "recommendedAction": "retain with noindex until the archive has enough eligible stories",
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-smart-homes",
@@ -13210,7 +14023,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-startups",
@@ -13218,13 +14031,13 @@
       "slug": "startups",
       "url": "/topics/startups",
       "type": "archive",
-      "eligibleArticleCount": 13,
+      "eligibleArticleCount": 12,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "topic-business",
@@ -13232,13 +14045,13 @@
       "slug": "business",
       "url": "/topics/business",
       "type": "archive",
-      "eligibleArticleCount": 44,
+      "eligibleArticleCount": 41,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "topic-fintech",
@@ -13246,13 +14059,13 @@
       "slug": "fintech",
       "url": "/topics/fintech",
       "type": "archive",
-      "eligibleArticleCount": 19,
+      "eligibleArticleCount": 16,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "topic-banking",
@@ -13261,12 +14074,12 @@
       "url": "/topics/banking",
       "type": "archive",
       "eligibleArticleCount": 3,
-      "robots": "index, follow",
-      "sitemap": true,
+      "robots": "noindex, follow",
+      "sitemap": false,
       "homepageEligible": false,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "archiveEligible": false,
+      "recommendedAction": "retain with noindex until the archive has enough eligible stories",
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-credit-cards",
@@ -13280,7 +14093,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-policy",
@@ -13288,13 +14101,13 @@
       "slug": "policy",
       "url": "/topics/policy",
       "type": "archive",
-      "eligibleArticleCount": 10,
+      "eligibleArticleCount": 9,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "topic-climate-policy",
@@ -13308,7 +14121,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-climate-tech",
@@ -13322,7 +14135,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-clean-cooking",
@@ -13336,7 +14149,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-energy",
@@ -13350,7 +14163,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-emerging-markets",
@@ -13364,7 +14177,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-cybersecurity",
@@ -13378,7 +14191,7 @@
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "topic-security-updates",
@@ -13392,7 +14205,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-audio",
@@ -13406,7 +14219,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-connectivity",
@@ -13414,13 +14227,13 @@
       "slug": "connectivity",
       "url": "/topics/connectivity",
       "type": "archive",
-      "eligibleArticleCount": 18,
+      "eligibleArticleCount": 14,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "topic-routers",
@@ -13434,7 +14247,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-home-internet",
@@ -13448,7 +14261,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-networking",
@@ -13462,7 +14275,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-power-batteries",
@@ -13470,13 +14283,13 @@
       "slug": "power-batteries",
       "url": "/topics/power-batteries",
       "type": "archive",
-      "eligibleArticleCount": 8,
-      "robots": "index, follow",
-      "sitemap": true,
+      "eligibleArticleCount": 4,
+      "robots": "noindex, follow",
+      "sitemap": false,
       "homepageEligible": false,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "archiveEligible": false,
+      "recommendedAction": "retain with noindex until the archive has enough eligible stories",
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-smartphone-design",
@@ -13490,7 +14303,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-notifications",
@@ -13504,7 +14317,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-google-pixel-11",
@@ -13518,7 +14331,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-pixel-glow",
@@ -13532,7 +14345,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-hilight",
@@ -13546,7 +14359,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-concept-phone",
@@ -13560,7 +14373,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-ifa-2026",
@@ -13574,7 +14387,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-display-technology",
@@ -13588,7 +14401,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-chipsets",
@@ -13596,13 +14409,13 @@
       "slug": "chipsets",
       "url": "/topics/chipsets",
       "type": "archive",
-      "eligibleArticleCount": 2,
+      "eligibleArticleCount": 1,
       "robots": "noindex, follow",
       "sitemap": false,
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-smartphone-prices",
@@ -13610,13 +14423,13 @@
       "slug": "smartphone-prices",
       "url": "/topics/smartphone-prices",
       "type": "archive",
-      "eligibleArticleCount": 4,
-      "robots": "index, follow",
-      "sitemap": true,
+      "eligibleArticleCount": 3,
+      "robots": "noindex, follow",
+      "sitemap": false,
       "homepageEligible": false,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "archiveEligible": false,
+      "recommendedAction": "retain with noindex until the archive has enough eligible stories",
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-buying-advice",
@@ -13624,13 +14437,13 @@
       "slug": "buying-advice",
       "url": "/topics/buying-advice",
       "type": "archive",
-      "eligibleArticleCount": 2,
+      "eligibleArticleCount": 0,
       "robots": "noindex, follow",
       "sitemap": false,
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-midrange-phones",
@@ -13638,13 +14451,13 @@
       "slug": "midrange-phones",
       "url": "/topics/midrange-phones",
       "type": "archive",
-      "eligibleArticleCount": 1,
+      "eligibleArticleCount": 0,
       "robots": "noindex, follow",
       "sitemap": false,
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-smartphone-batteries",
@@ -13658,7 +14471,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-silicon-carbon",
@@ -13672,7 +14485,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-oneplus-n6x",
@@ -13686,7 +14499,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-battery-life",
@@ -13700,7 +14513,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-charging",
@@ -13714,7 +14527,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-accessories",
@@ -13728,7 +14541,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-headphones",
@@ -13742,7 +14555,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-smart-watches",
@@ -13756,7 +14569,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-vr-ar",
@@ -13770,7 +14583,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-g9l",
@@ -13784,7 +14597,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-luxury-ev",
@@ -13798,7 +14611,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-china",
@@ -13812,7 +14625,7 @@
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "topic-automotive-technology",
@@ -13826,7 +14639,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-battery-swap",
@@ -13840,7 +14653,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-ev-infrastructure",
@@ -13854,7 +14667,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-battery-as-a-service",
@@ -13868,7 +14681,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-tlip",
@@ -13882,7 +14695,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-blockchain",
@@ -13896,7 +14709,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-customs",
@@ -13910,7 +14723,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-logistics",
@@ -13924,7 +14737,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-mombasa-port",
@@ -13938,7 +14751,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-anne-kinuthia-otieno",
@@ -13952,7 +14765,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-mobile-money",
@@ -13966,7 +14779,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-east-africa",
@@ -13980,7 +14793,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-payments",
@@ -13994,7 +14807,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-dividend",
@@ -14008,7 +14821,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-ethiopia",
@@ -14022,7 +14835,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-investing",
@@ -14036,7 +14849,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-telecoms",
@@ -14050,7 +14863,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-iphone-18",
@@ -14064,7 +14877,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-foldable-iphone",
@@ -14078,7 +14891,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-prepaid-card",
@@ -14092,7 +14905,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-grocery",
@@ -14106,7 +14919,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-remittances",
@@ -14120,7 +14933,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-corporate-governance",
@@ -14134,7 +14947,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-iphone",
@@ -14143,12 +14956,12 @@
       "url": "/topics/iphone",
       "type": "archive",
       "eligibleArticleCount": 4,
-      "robots": "index, follow",
-      "sitemap": true,
+      "robots": "noindex, follow",
+      "sitemap": false,
       "homepageEligible": false,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "archiveEligible": false,
+      "recommendedAction": "retain with noindex until the archive has enough eligible stories",
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-european-union",
@@ -14162,7 +14975,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-interoperability",
@@ -14171,12 +14984,12 @@
       "url": "/topics/interoperability",
       "type": "archive",
       "eligibleArticleCount": 3,
-      "robots": "index, follow",
-      "sitemap": true,
+      "robots": "noindex, follow",
+      "sitemap": false,
       "homepageEligible": false,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "archiveEligible": false,
+      "recommendedAction": "retain with noindex until the archive has enough eligible stories",
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-apple-glasses",
@@ -14190,7 +15003,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-materials-science",
@@ -14204,7 +15017,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-manufacturing",
@@ -14218,7 +15031,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-hardware-durability",
@@ -14232,7 +15045,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-pixel-11",
@@ -14246,7 +15059,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-ram",
@@ -14260,7 +15073,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-made-by-google",
@@ -14274,7 +15087,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-google-play-services",
@@ -14288,7 +15101,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-google-wallet",
@@ -14302,7 +15115,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-play-store",
@@ -14316,7 +15129,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "topic-system-updates",
@@ -14330,7 +15143,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-vlc",
@@ -14344,7 +15157,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-sony",
@@ -14358,7 +15171,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-playstation",
@@ -14372,7 +15185,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-samsung",
@@ -14380,13 +15193,13 @@
       "slug": "samsung",
       "url": "/brands/samsung",
       "type": "archive",
-      "eligibleArticleCount": 9,
+      "eligibleArticleCount": 8,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "brand-glovo",
@@ -14395,12 +15208,12 @@
       "url": "/brands/glovo",
       "type": "archive",
       "eligibleArticleCount": 3,
-      "robots": "index, follow",
-      "sitemap": true,
+      "robots": "noindex, follow",
+      "sitemap": false,
       "homepageEligible": false,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "archiveEligible": false,
+      "recommendedAction": "retain with noindex until the archive has enough eligible stories",
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-uber",
@@ -14414,7 +15227,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-im-bank",
@@ -14428,7 +15241,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-mastercard",
@@ -14442,7 +15255,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-koko-networks",
@@ -14456,7 +15269,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-oraimo",
@@ -14470,7 +15283,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-apple",
@@ -14478,13 +15291,13 @@
       "slug": "apple",
       "url": "/brands/apple",
       "type": "archive",
-      "eligibleArticleCount": 27,
+      "eligibleArticleCount": 23,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "brand-oppo",
@@ -14498,7 +15311,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-xiaomi",
@@ -14512,7 +15325,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-nothing",
@@ -14526,7 +15339,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-vivo",
@@ -14540,7 +15353,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-anthropic",
@@ -14548,13 +15361,13 @@
       "slug": "anthropic",
       "url": "/brands/anthropic",
       "type": "archive",
-      "eligibleArticleCount": 11,
+      "eligibleArticleCount": 8,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "brand-amazon",
@@ -14568,7 +15381,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-starlink",
@@ -14576,13 +15389,13 @@
       "slug": "starlink",
       "url": "/brands/starlink",
       "type": "archive",
-      "eligibleArticleCount": 3,
-      "robots": "index, follow",
-      "sitemap": true,
+      "eligibleArticleCount": 2,
+      "robots": "noindex, follow",
+      "sitemap": false,
       "homepageEligible": false,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "archiveEligible": false,
+      "recommendedAction": "retain with noindex until the archive has enough eligible stories",
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-spacex",
@@ -14596,7 +15409,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-openai",
@@ -14604,13 +15417,13 @@
       "slug": "openai",
       "url": "/brands/openai",
       "type": "archive",
-      "eligibleArticleCount": 8,
+      "eligibleArticleCount": 6,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "brand-google",
@@ -14618,13 +15431,13 @@
       "slug": "google",
       "url": "/brands/google",
       "type": "archive",
-      "eligibleArticleCount": 23,
+      "eligibleArticleCount": 21,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "brand-huawei",
@@ -14633,12 +15446,12 @@
       "url": "/brands/huawei",
       "type": "archive",
       "eligibleArticleCount": 3,
-      "robots": "index, follow",
-      "sitemap": true,
+      "robots": "noindex, follow",
+      "sitemap": false,
       "homepageEligible": false,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "archiveEligible": false,
+      "recommendedAction": "retain with noindex until the archive has enough eligible stories",
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-visa",
@@ -14652,7 +15465,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-onafriq",
@@ -14666,7 +15479,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-microsoft",
@@ -14680,7 +15493,7 @@
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "brand-windows",
@@ -14689,12 +15502,12 @@
       "url": "/brands/windows",
       "type": "archive",
       "eligibleArticleCount": 4,
-      "robots": "index, follow",
-      "sitemap": true,
+      "robots": "noindex, follow",
+      "sitemap": false,
       "homepageEligible": false,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "archiveEligible": false,
+      "recommendedAction": "retain with noindex until the archive has enough eligible stories",
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-dell",
@@ -14708,7 +15521,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-intel",
@@ -14722,7 +15535,7 @@
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "brand-amd",
@@ -14731,12 +15544,12 @@
       "url": "/brands/amd",
       "type": "archive",
       "eligibleArticleCount": 3,
-      "robots": "index, follow",
-      "sitemap": true,
+      "robots": "noindex, follow",
+      "sitemap": false,
       "homepageEligible": false,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "archiveEligible": false,
+      "recommendedAction": "retain with noindex until the archive has enough eligible stories",
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-nvidia",
@@ -14750,7 +15563,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-lenovo",
@@ -14764,7 +15577,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-volkswagen",
@@ -14778,7 +15591,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-toyota",
@@ -14792,7 +15605,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-byd",
@@ -14806,7 +15619,7 @@
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "brand-tesla",
@@ -14815,12 +15628,12 @@
       "url": "/brands/tesla",
       "type": "archive",
       "eligibleArticleCount": 4,
-      "robots": "index, follow",
-      "sitemap": true,
+      "robots": "noindex, follow",
+      "sitemap": false,
       "homepageEligible": false,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "archiveEligible": false,
+      "recommendedAction": "retain with noindex until the archive has enough eligible stories",
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-basigo",
@@ -14828,13 +15641,13 @@
       "slug": "basigo",
       "url": "/brands/basigo",
       "type": "archive",
-      "eligibleArticleCount": 1,
+      "eligibleArticleCount": 0,
       "robots": "noindex, follow",
       "sitemap": false,
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-waymo",
@@ -14848,7 +15661,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-nio",
@@ -14862,7 +15675,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-oura",
@@ -14876,7 +15689,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-wi-fi-alliance",
@@ -14890,7 +15703,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-mtn",
@@ -14904,7 +15717,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-airtel",
@@ -14912,13 +15725,13 @@
       "slug": "airtel",
       "url": "/brands/airtel",
       "type": "archive",
-      "eligibleArticleCount": 4,
-      "robots": "index, follow",
-      "sitemap": true,
+      "eligibleArticleCount": 3,
+      "robots": "noindex, follow",
+      "sitemap": false,
       "homepageEligible": false,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "archiveEligible": false,
+      "recommendedAction": "retain with noindex until the archive has enough eligible stories",
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-optasia",
@@ -14932,7 +15745,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-whatsapp",
@@ -14946,7 +15759,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-meta",
@@ -14960,7 +15773,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-safaricom",
@@ -14968,13 +15781,13 @@
       "slug": "safaricom",
       "url": "/brands/safaricom",
       "type": "archive",
-      "eligibleArticleCount": 8,
+      "eligibleArticleCount": 7,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "brand-vodacom",
@@ -14983,12 +15796,12 @@
       "url": "/brands/vodacom",
       "type": "archive",
       "eligibleArticleCount": 4,
-      "robots": "index, follow",
-      "sitemap": true,
+      "robots": "noindex, follow",
+      "sitemap": false,
       "homepageEligible": false,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "archiveEligible": false,
+      "recommendedAction": "retain with noindex until the archive has enough eligible stories",
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-m-pesa",
@@ -15002,7 +15815,7 @@
       "homepageEligible": false,
       "archiveEligible": true,
       "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "reason": "Archive has at least five eligible stories."
     },
     {
       "id": "brand-tecno",
@@ -15016,7 +15829,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-imax",
@@ -15030,7 +15843,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-technicolor",
@@ -15044,7 +15857,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-qualcomm",
@@ -15052,13 +15865,13 @@
       "slug": "qualcomm",
       "url": "/brands/qualcomm",
       "type": "archive",
-      "eligibleArticleCount": 2,
+      "eligibleArticleCount": 1,
       "robots": "noindex, follow",
       "sitemap": false,
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-snapdragon",
@@ -15066,13 +15879,13 @@
       "slug": "snapdragon",
       "url": "/brands/snapdragon",
       "type": "archive",
-      "eligibleArticleCount": 1,
+      "eligibleArticleCount": 0,
       "robots": "noindex, follow",
       "sitemap": false,
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-tsmc",
@@ -15080,13 +15893,13 @@
       "slug": "tsmc",
       "url": "/brands/tsmc",
       "type": "archive",
-      "eligibleArticleCount": 1,
+      "eligibleArticleCount": 0,
       "robots": "noindex, follow",
       "sitemap": false,
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-oneplus",
@@ -15100,7 +15913,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-motorola",
@@ -15114,7 +15927,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-spiro",
@@ -15128,7 +15941,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-shuttlers",
@@ -15142,7 +15955,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-aions-ventures",
@@ -15156,7 +15969,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-holocene",
@@ -15170,7 +15983,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-livestock-wealth",
@@ -15184,7 +15997,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-heifer-international",
@@ -15198,7 +16011,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-development-bank-of-rwanda",
@@ -15212,7 +16025,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-flutterwave",
@@ -15226,7 +16039,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-moniepoint",
@@ -15234,13 +16047,13 @@
       "slug": "moniepoint",
       "url": "/brands/moniepoint",
       "type": "archive",
-      "eligibleArticleCount": 3,
-      "robots": "index, follow",
-      "sitemap": true,
+      "eligibleArticleCount": 2,
+      "robots": "noindex, follow",
+      "sitemap": false,
       "homepageEligible": false,
-      "archiveEligible": true,
-      "recommendedAction": "keep",
-      "reason": "Archive has at least three eligible stories."
+      "archiveEligible": false,
+      "recommendedAction": "retain with noindex until the archive has enough eligible stories",
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-paystack",
@@ -15254,7 +16067,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-primevale",
@@ -15268,7 +16081,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-xpeng",
@@ -15282,7 +16095,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-firefly",
@@ -15296,7 +16109,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-kra",
@@ -15310,7 +16123,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-carrefour",
@@ -15324,7 +16137,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-kcb",
@@ -15338,7 +16151,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-airpods",
@@ -15352,7 +16165,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     },
     {
       "id": "brand-plasmasolve",
@@ -15366,7 +16179,7 @@
       "homepageEligible": false,
       "archiveEligible": false,
       "recommendedAction": "retain with noindex until the archive has enough eligible stories",
-      "reason": "Archive has fewer than three eligible stories."
+      "reason": "Archive has fewer than five eligible stories."
     }
   ]
 }

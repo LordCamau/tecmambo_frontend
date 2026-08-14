@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
-import { getGlossaryTerms } from "@/lib/content";
+import { getIndexableGlossaryTerms } from "@/lib/content";
 import { siteUrl } from "@/lib/formats";
 import { noIndexHeaders } from "@/lib/noindex-response";
 
 export async function GET() {
-  const terms = (await getGlossaryTerms()).sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()).slice(0, 40);
+  const terms = (await getIndexableGlossaryTerms()).sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()).slice(0, 40);
   return NextResponse.json(
     {
       version: "https://jsonfeed.org/version/1.1",

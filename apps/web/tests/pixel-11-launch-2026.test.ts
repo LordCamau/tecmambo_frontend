@@ -73,7 +73,7 @@ describe("Pixel 11 launch deep dive", () => {
 
     vi.useFakeTimers();
     vi.setSystemTime(new Date("2026-08-12T20:00:00+03:00"));
-    expect(buildGoogleNewsSitemap(articles)).toContain(`https://tecmambo.com${path}`);
+    expect(buildGoogleNewsSitemap([{ ...article, workflowVersion: "gated", publicationStatus: "publish", editorialStatus: "published", sourceChecked: true, humanEditorApproved: true, editor: "Test Editor", reviewedAt: article.updatedAt }])).toContain(`https://tecmambo.com${path}`);
     vi.useRealTimers();
 
     const home = curateHomeContent(articles, glossaryTerms);

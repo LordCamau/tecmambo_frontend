@@ -40,6 +40,7 @@ export default async function SectionPage({ params }: { params: Params }) {
   if (!formatKey) notFound();
   const format = formats[formatKey];
   const articles = await getArticlesByFormat(formatKey);
+  const archiveIndexable = isArchiveIndexable(articles.length, format.description);
   return (
     <>
       <section className={`container ${styles.archive}`}>
@@ -63,7 +64,7 @@ export default async function SectionPage({ params }: { params: Params }) {
           ))}
         </div>
       </section>
-      <JsonLd data={collectionPageJsonLd({ name: format.section, description: format.description, path: format.path, articles })} />
+      {archiveIndexable ? <JsonLd data={collectionPageJsonLd({ name: format.section, description: format.description, path: format.path, articles })} /> : null}
       <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: format.section, path: format.path }])} />
     </>
   );

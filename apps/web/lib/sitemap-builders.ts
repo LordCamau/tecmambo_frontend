@@ -76,9 +76,6 @@ export async function pageSitemapEntries(): Promise<UrlSitemapEntry[]> {
     "/africa",
     "/about",
     "/terms",
-    "/advertise",
-    "/newsletter",
-    "/contact",
     "/editorial-standards",
     "/privacy",
     "/cookies",
@@ -103,8 +100,11 @@ export async function hubSitemapEntries(): Promise<UrlSitemapEntry[]> {
   const qualifiedTopics = topics.filter((topic) => isArchiveIndexable(articles.filter((article) => article.tags.some((tag) => tag.slug === topic.slug)).length, `Stories, glossary entries, and explainers connected to ${topic.name.toLowerCase()}.`));
   const qualifiedBrands = brands.filter((brand) => isArchiveIndexable(articles.filter((article) => article.tags.some((tag) => tag.slug === brand.slug)).length, `Independent coverage, buying context, and practical explainers involving ${brand.name}.`));
   const qualifiedRegions = africanRegions.filter((region) => isArchiveIndexable(articles.filter((article) => article.regions?.some((item) => item.slug === region.slug)).length, region.description));
+  const qualifiedFormats = Object.entries(formats).filter(([key, format]) =>
+    isArchiveIndexable(articles.filter((article) => article.format === key).length, format.description)
+  ).map(([, format]) => format);
   const paths = [
-    ...Object.values(formats).map((format) => format.path),
+    ...qualifiedFormats.map((format) => format.path),
     ...glossaryTopicPaths(articles),
     ...qualifiedRegions.map((region) => regionPath(region)),
     ...qualifiedAuthors.map((author) => `/authors/${author.slug}`),

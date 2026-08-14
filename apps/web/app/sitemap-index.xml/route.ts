@@ -10,8 +10,7 @@ export function GET() {
       "/hubs-sitemap.xml",
       "/articles-sitemap.xml",
       "/image-sitemap.xml",
-      "/news-sitemap.xml",
-      "/glossary/sitemap.xml"
+      "/news-sitemap.xml"
     ])
   );
 }

@@ -7,6 +7,9 @@ const adsenseScriptId = "google-adsense";
 
 export function AdSenseScript() {
   useEffect(() => {
+    if (process.env.NEXT_PUBLIC_ADSENSE_ENABLED !== "true") {
+      return;
+    }
     if (document.getElementById(adsenseScriptId)) {
       return;
     }

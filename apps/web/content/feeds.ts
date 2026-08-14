@@ -60,7 +60,16 @@ export function buildJsonFeed(articles: Article[]) {
 }
 
 export function buildGoogleNewsSitemap(articles: Article[]) {
-  const recent = articles.filter((article) => Date.now() - new Date(article.publishedAt).getTime() < 48 * 60 * 60 * 1000);
+  const recent = articles.filter(
+    (article) =>
+      ["news", "business"].includes(article.format)
+      && article.workflowVersion === "gated"
+      && article.sourceChecked === true
+      && article.humanEditorApproved === true
+      && Boolean(article.editor)
+      && Boolean(article.reviewedAt)
+      && Date.now() - new Date(article.publishedAt).getTime() < 48 * 60 * 60 * 1000
+  );
   const urls = recent
     .map(
       (article) => `<url>

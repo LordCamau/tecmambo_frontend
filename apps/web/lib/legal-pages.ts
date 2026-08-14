@@ -26,6 +26,7 @@ const aboutPage = { text: "About page", href: "/about" };
 const contactPage = { text: "contact details", href: "/contact" };
 const consentTool = { text: "consent tool", href: "/cookies#manage-cookie-preferences" };
 const consentManagementTool = { text: "consent management tool", href: "/cookies#manage-cookie-preferences" };
+const googlePartnerSites = { text: "How Google uses information from sites or apps that use its services", href: "https://policies.google.com/technologies/partner-sites" };
 
 export const termsPage: LegalPage = {
   slug: "terms",
@@ -297,7 +298,7 @@ export const termsPage: LegalPage = {
 export const privacyPage: LegalPage = {
   slug: "privacy",
   title: "Privacy Policy",
-  lastUpdated: "April 15, 2026",
+  lastUpdated: "August 14, 2026",
   summaryLabel: "The short version (a plain summary, not a replacement for the full policy below).",
   summary: [
     "Your privacy matters to us. This policy explains, in plain English, what personal information tecMAMBO collects, why we collect it, and what you can do about it. In short: if you sign up for a newsletter or message us, we use the details you give us for those purposes; when you browse, we and our partners use cookies and similar tools to keep the site working, understand what is read, and show advertising, and you can control much of this through your cookie choices; we do not sell your personal information for money; and you have rights over your data, including the right to access it, correct it, or ask us to delete it. The full policy follows, and it is the one that legally applies."
@@ -356,6 +357,11 @@ export const privacyPage: LegalPage = {
           consentTool,
           " and your browser settings. For full details of the cookies we use and how to control them, please see our ",
           cookiePolicy,
+          "."
+        ],
+        [
+          "If and when Google advertising is enabled on an eligible article, Google and its advertising partners may use or read cookies, web beacons, IP addresses, advertising identifiers, and related information to serve, limit, and measure ads. Personalised advertising is used only where you have consented through our consent tool. You can reject or withdraw that consent at any time. For more information, see ",
+          googlePartnerSites,
           "."
         ]
       ]
@@ -534,7 +540,7 @@ export const privacyPage: LegalPage = {
 export const cookiePage: LegalPage = {
   slug: "cookies",
   title: "Cookie Policy",
-  lastUpdated: "April 15, 2026",
+  lastUpdated: "August 14, 2026",
   summaryLabel: "The short version (a plain summary, not a replacement for the full policy below).",
   summary: [
     'When you visit tecMAMBO, we and our partners use cookies and similar technologies. Some are essential to make the site work, and others help us understand what is read, remember your preferences such as light or dark mode, and show and measure advertising. You are in control of the ones that are not essential. You can accept or reject them when you first visit, and you can change your mind at any time using the "Manage cookie preferences" control on this page or in our footer. The full policy below explains what we use, why, and how to manage it.'
@@ -671,10 +677,10 @@ export const editorialStandardsPage: LegalPage = {
   slug: "editorial-standards",
   title: "Editorial standards",
   eyebrow: "Trust",
-  lastUpdated: "April 15, 2026",
+  lastUpdated: "August 14, 2026",
   summaryLabel: "The short version (a plain summary, not a replacement for the full standards below).",
   summary: [
-    "tecMAMBO exists to make technology genuinely understandable, and that promise only works if you can trust us. So here is how we work: our journalism is independent, and no advertiser, sponsor, or affiliate partner gets to decide what we say. We test products ourselves and write honest verdicts. We label anything sponsored, plainly. People, not machines, write and check our work, and we tell you when we use AI tools. When we get something wrong, we fix it openly. The full standards below explain all of this in detail."
+    "tecMAMBO exists to make technology genuinely understandable, and that promise only works if you can trust us. Our journalism is independent, and no advertiser, sponsor, or affiliate partner gets to decide what we say. Reviews are reserved for documented hands-on testing, while research-only assessments are labelled as analysis or explainers. We may use AI tools to assist editorial work, but a named human editor remains responsible for verification and publication approval under our current workflow. We label sponsored work, disclose important methods, and correct errors openly."
   ],
   placeholders: [],
   sections: [
@@ -748,7 +754,7 @@ export const editorialStandardsPage: LegalPage = {
       title: "8. How we test and review products",
       paragraphs: [
         [
-          "Our reviews are based on genuine, hands-on experience with the product, not on press releases or spec sheets alone. We test in real conditions, including the everyday conditions our readers actually use technology in. Our verdicts and any scores reflect the independent judgement of the reviewer and our editorial team. We do not accept payment in exchange for a review or a particular verdict. Where a manufacturer lends us a product to review, it is a loan, we disclose it where relevant, and we are not obliged to review it favourably or at all. We say clearly when a review is based on limited time with a product, on pre-release hardware or software, or on a unit provided by the maker."
+          "We reserve the Reviews section, review label, and numerical scores for work supported by documented hands-on use. A published review must identify the test method, test period, source of the unit, relevant limitations, supporting evidence, reviewer, and approving editor. Research based product assessments are published as analysis, explainers, first looks, or buying guidance, and must not imply that tecMAMBO handled or tested the product. We do not accept payment for a verdict. If a manufacturer supplies or lends a unit, we disclose that relationship and it does not buy a favourable conclusion."
         ]
       ]
     },
@@ -766,7 +772,7 @@ export const editorialStandardsPage: LegalPage = {
       title: "10. How we use artificial intelligence",
       paragraphs: [
         [
-          "We are a publication about technology, and we use technology thoughtfully, including artificial intelligence, but always under human control. People research, write, edit, and stand behind our journalism. We may use AI tools to assist with tasks such as research, transcription, summarising our own notes, suggesting headlines, or checking spelling and grammar, but a human is responsible for everything we publish, and our reviews and testing are carried out by people. We do not publish AI-generated articles passed off as human work, and we do not let AI invent facts, sources, or quotes. Where we publish an image that was generated or substantially altered by AI, we label it. We treat AI as a tool that serves our standards, never as a substitute for them."
+          "We may use artificial intelligence to assist with organisation, outlining, transcription, drafting, headline options, language cleanup, and structured data work. AI output is never accepted as evidence and may not invent facts, sources, quotes, prices, interviews, or testing. Under our current publication workflow, a named human editor must review the article, check its sources and factual claims, edit the copy, and explicitly approve publication. Reviews and field tests require separate human evidence records. Images generated or substantially altered with AI are labelled. Legacy articles published before this workflow are being audited and may be removed from discovery until they meet the current standard."
         ]
       ]
     },

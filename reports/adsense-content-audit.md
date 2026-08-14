@@ -1,0 +1,315 @@
+# tecMAMBO AdSense content audit
+
+Generated: 2026-08-14T05:14:41.903Z
+
+## Summary
+
+- URL records: 561
+- Articles: 209
+- Publicly eligible articles: 142
+- Quarantined articles: 67
+- Noindex glossary details: 98
+- AdSense enabled: false
+- Ad-eligible URLs in this environment: 0
+
+## Quarantined articles
+
+- Apple just raised Mac trade-in values. That does not mean you should trade yours in: unverified-buying-guide
+- Apple removed Telegram for a day. That is enough to show how much power an app store holds: unsupported-first-hand-claim
+- Qualcomm chip prices are rising. Should you buy a phone now or wait?: unverified-buying-guide
+- Kenya's digital learning push now faces the classroom test: missing-sources
+- Stablecoins are becoming Kenya's quiet freelance rail: missing-sources
+- Kenya's home internet fight is moving past speed: missing-sources
+- BasiGo's electric bus growth now meets the grid question: missing-sources
+- Airtel Money's Rudishiwa turns cashback into a habit: missing-sources
+- Moniepoint names Rose Muturi CEO for Kenya: missing-sources
+- Kenya's proposed rules let families seek betting bans: unfinished-draft
+- South Africa's Debut 4 fund backs AI in the creative economy: thin-article
+- Rwanda and Egypt move to build an African AI alliance: thin-article
+- Rwanda launches a Digital Public Infrastructure strategy: thin-article
+- Smart Africa pushes to harmonise cross-border AI data rules: thin-article
+- Tinubu signs NIMC Act 2026, reshaping digital identity: thin-article
+- Nigeria pushes to build smartphones at home: thin-article
+- Africa Technology Expo 2026 draws thousands to Lagos: thin-article
+- Nigeria's NSIA opens its NPI 4.0 startup prize: thin-article
+- Ruto and Altman tease an OpenAI Academy for Nairobi: thin-article
+- Kenya's microfinance banks face a capital squeeze: thin-article
+- Kenya moves to finalise a national AI policy: thin-article
+- Samsung's Galaxy A27 5G is starting to show up in Kenya: thin-article
+- TECNO's EllaClaw AI agent can act inside your apps: thin-article
+- Nairobi hosts a major space and data summit: thin-article
+- A new R100m seed fund targets South Africa's startup gap: thin-article
+- Southern Africa gets its first dedicated climate-tech fund: thin-article
+- Microsoft expands cloud and AI capacity in South Africa: thin-article
+- South African agritech Livestock Wealth goes into liquidation: thin-article
+- The quiet change ending all-you-can-eat AI: missing-sources
+- Google's Gemini gets an agent, a video maker, and a brief: missing-sources
+- You can now tag an AI in Slack like a colleague: missing-sources
+- Spiro adds $55m as its electric-bike push grows: thin-article
+- Shuttlers joins Google Maps in Nigeria: thin-article
+- Nigeria's startup scene grows up, and gets stricter: thin-article
+- Kenya's AI rules mean more than paperwork: thin-article, missing-sources
+- Why your phone gets hot when you charge and use it at the same time: not-published, not-editorially-ready, missing-source-checked, missing-human-editor-approved, missing-editor, missing-reviewed-at, excluded-from-discovery
+- AI is starting to cut African tech jobs: thin-article
+- Rwanda advances 12 young agritech startups: thin-article
+- Kigali Innovation City moves from blueprint to build: thin-article
+- Rwanda's development bank backs early-stage tech: thin-article
+- Gemini Spark review: promising, not quite ready: not-editorially-ready, excluded-from-discovery, review-without-hands-on-evidence, unsupported-first-hand-claim
+- We ran 3 AI assistants through a Nairobi week: not-published, not-editorially-ready, missing-source-checked, missing-human-editor-approved, missing-editor, missing-reviewed-at, excluded-from-discovery, unsupported-first-hand-claim, field-test-evidence-missing
+- What "5G" actually means for the data bundle you're buying: not-published, not-editorially-ready, missing-source-checked, missing-human-editor-approved, missing-editor, missing-reviewed-at, excluded-from-discovery
+- Why Nigerian fintech keeps spreading into everyday life: thin-article, missing-sources
+- Why two phones with the "same" camera megapixels take different photos: not-published, not-editorially-ready, missing-source-checked, missing-human-editor-approved, missing-editor, missing-reviewed-at, excluded-from-discovery
+- South Africa's power apps show what useful tech looks like: thin-article
+- What a VPN actually hides, and what it doesn't: not-published, not-editorially-ready, missing-source-checked, missing-human-editor-approved, missing-editor, missing-reviewed-at, excluded-from-discovery
+- Why local AI startups are selling workflows, not magic: thin-article, missing-sources
+- Rwanda's digital services lesson is about boring reliability: thin-article
+- The quiet business behind pay-later gadget shops: thin-article, missing-sources
+- iPhone Air analysis: the iPhone that asks what you are willing to give up: not-published, not-editorially-ready, missing-source-checked, missing-human-editor-approved, missing-editor, missing-reviewed-at, excluded-from-discovery
+- The real test for EV charging isn't speed. It's location.: thin-article
+- Why repair networks may be the next phone battleground: thin-article, missing-sources
+- Best smartphones under KSh 15,000 right now: pre-publication-note, publication-instruction, not-published, not-editorially-ready, missing-source-checked, missing-human-editor-approved, missing-editor, missing-reviewed-at, excluded-from-discovery, pricing-verification-missing, unverified-buying-guide
+- What ride-hailing apps changed after the hype faded: thin-article, missing-sources
+- Five power banks that actually last a full day, ranked by price: pre-publication-note, unfinished-draft, not-published, not-editorially-ready, missing-source-checked, missing-human-editor-approved, missing-editor, missing-reviewed-at, excluded-from-discovery, pricing-verification-missing, unverified-buying-guide
+- Is a refurbished phone ever worth it? We checked three sellers: unfinished-draft, not-published, not-editorially-ready, missing-source-checked, missing-human-editor-approved, missing-editor, missing-reviewed-at, excluded-from-discovery, unsupported-first-hand-claim, pricing-verification-missing, unverified-buying-guide
+- Why cheap e-bikes are harder to buy than they look: thin-article
+- The cheapest laptop that won't frustrate a university student: pre-publication-note, not-published, not-editorially-ready, missing-source-checked, missing-human-editor-approved, missing-editor, missing-reviewed-at, excluded-from-discovery, pricing-verification-missing
+- We tested three power banks on a real boda rider's full shift: pre-publication-note, not-published, not-editorially-ready, missing-source-checked, missing-human-editor-approved, missing-editor, missing-reviewed-at, excluded-from-discovery, unsupported-first-hand-claim
+- Can a budget phone survive a year of matatu commutes? We asked five people: not-published, not-editorially-ready, missing-source-checked, missing-human-editor-approved, missing-editor, missing-reviewed-at, excluded-from-discovery, unsupported-first-hand-claim
+- Fast charging claims vs reality: we timed every "30-minute charge" promise: pre-publication-note, not-published, not-editorially-ready, missing-source-checked, missing-human-editor-approved, missing-editor, missing-reviewed-at, excluded-from-discovery, unsupported-first-hand-claim
+- Samsung's new foldable, translated into what it means for you: not-published, not-editorially-ready, missing-source-checked, missing-human-editor-approved, missing-editor, missing-reviewed-at, excluded-from-discovery, missing-sources
+- Kenya's new SIM registration rules, explained without the legal jargon: pre-publication-note, not-published, not-editorially-ready, missing-source-checked, missing-human-editor-approved, missing-editor, missing-reviewed-at, excluded-from-discovery, missing-sources, legal-verification-missing
+- Apple just changed how repairs work: here's who that actually affects: not-published, not-editorially-ready, missing-source-checked, missing-human-editor-approved, missing-editor, missing-reviewed-at, excluded-from-discovery, missing-sources
+- WhatsApp's new feature everyone's talking about, explained in 60 seconds: not-published, not-editorially-ready, missing-source-checked, missing-human-editor-approved, missing-editor, missing-reviewed-at, excluded-from-discovery, missing-sources
+- Why "flagship" phones stopped feeling exciting, and what would fix it: not-published, not-editorially-ready, missing-source-checked, missing-human-editor-approved, missing-editor, missing-reviewed-at, excluded-from-discovery
+
+## Noindex archives
+
+- https://tecmambo.com/explainers
+- https://tecmambo.com/reviews
+- https://tecmambo.com/wallet-watch
+- https://tecmambo.com/real-life
+- https://tecmambo.com/news
+- https://tecmambo.com/opinion
+- https://tecmambo.com/business
+- https://tecmambo.com/topics/ai
+- https://tecmambo.com/topics/ai-shopping
+- https://tecmambo.com/topics/agentic-ai
+- https://tecmambo.com/topics/android
+- https://tecmambo.com/topics/apps
+- https://tecmambo.com/topics/smartphones
+- https://tecmambo.com/topics/e-commerce
+- https://tecmambo.com/topics/quick-commerce
+- https://tecmambo.com/topics/privacy
+- https://tecmambo.com/topics/computing
+- https://tecmambo.com/topics/social-media
+- https://tecmambo.com/topics/entertainment
+- https://tecmambo.com/topics/christopher-nolan
+- https://tecmambo.com/topics/the-odyssey
+- https://tecmambo.com/topics/hoyte-van-hoytema
+- https://tecmambo.com/topics/film-cameras
+- https://tecmambo.com/topics/70mm-film
+- https://tecmambo.com/topics/cinema-technology
+- https://tecmambo.com/topics/film-technology
+- https://tecmambo.com/topics/cameras
+- https://tecmambo.com/topics/cinema
+- https://tecmambo.com/topics/tvs
+- https://tecmambo.com/topics/home-entertainment
+- https://tecmambo.com/topics/digital-ownership
+- https://tecmambo.com/topics/game-preservation
+- https://tecmambo.com/topics/evs-mobility
+- https://tecmambo.com/topics/autonomous-vehicles
+- https://tecmambo.com/topics/gaming
+- https://tecmambo.com/topics/wearables
+- https://tecmambo.com/topics/health-tech
+- https://tecmambo.com/topics/smart-homes
+- https://tecmambo.com/topics/startups
+- https://tecmambo.com/topics/business
+- https://tecmambo.com/topics/fintech
+- https://tecmambo.com/topics/banking
+- https://tecmambo.com/topics/credit-cards
+- https://tecmambo.com/topics/policy
+- https://tecmambo.com/topics/climate-policy
+- https://tecmambo.com/topics/climate-tech
+- https://tecmambo.com/topics/clean-cooking
+- https://tecmambo.com/topics/energy
+- https://tecmambo.com/topics/emerging-markets
+- https://tecmambo.com/topics/cybersecurity
+- https://tecmambo.com/topics/security-updates
+- https://tecmambo.com/topics/audio
+- https://tecmambo.com/topics/connectivity
+- https://tecmambo.com/topics/routers
+- https://tecmambo.com/topics/home-internet
+- https://tecmambo.com/topics/networking
+- https://tecmambo.com/topics/power-batteries
+- https://tecmambo.com/topics/smartphone-design
+- https://tecmambo.com/topics/notifications
+- https://tecmambo.com/topics/google-pixel-11
+- https://tecmambo.com/topics/pixel-glow
+- https://tecmambo.com/topics/hilight
+- https://tecmambo.com/topics/concept-phone
+- https://tecmambo.com/topics/ifa-2026
+- https://tecmambo.com/topics/display-technology
+- https://tecmambo.com/topics/chipsets
+- https://tecmambo.com/topics/smartphone-prices
+- https://tecmambo.com/topics/buying-advice
+- https://tecmambo.com/topics/midrange-phones
+- https://tecmambo.com/topics/smartphone-batteries
+- https://tecmambo.com/topics/silicon-carbon
+- https://tecmambo.com/topics/oneplus-n6x
+- https://tecmambo.com/topics/battery-life
+- https://tecmambo.com/topics/charging
+- https://tecmambo.com/topics/accessories
+- https://tecmambo.com/topics/headphones
+- https://tecmambo.com/topics/smart-watches
+- https://tecmambo.com/topics/vr-ar
+- https://tecmambo.com/topics/g9l
+- https://tecmambo.com/topics/luxury-ev
+- https://tecmambo.com/topics/china
+- https://tecmambo.com/topics/automotive-technology
+- https://tecmambo.com/topics/battery-swap
+- https://tecmambo.com/topics/ev-infrastructure
+- https://tecmambo.com/topics/battery-as-a-service
+- https://tecmambo.com/topics/tlip
+- https://tecmambo.com/topics/blockchain
+- https://tecmambo.com/topics/customs
+- https://tecmambo.com/topics/logistics
+- https://tecmambo.com/topics/mombasa-port
+- https://tecmambo.com/topics/anne-kinuthia-otieno
+- https://tecmambo.com/topics/mobile-money
+- https://tecmambo.com/topics/east-africa
+- https://tecmambo.com/topics/payments
+- https://tecmambo.com/topics/dividend
+- https://tecmambo.com/topics/ethiopia
+- https://tecmambo.com/topics/investing
+- https://tecmambo.com/topics/telecoms
+- https://tecmambo.com/topics/iphone-18
+- https://tecmambo.com/topics/foldable-iphone
+- https://tecmambo.com/topics/prepaid-card
+- https://tecmambo.com/topics/grocery
+- https://tecmambo.com/topics/remittances
+- https://tecmambo.com/topics/corporate-governance
+- https://tecmambo.com/topics/iphone
+- https://tecmambo.com/topics/european-union
+- https://tecmambo.com/topics/interoperability
+- https://tecmambo.com/topics/apple-glasses
+- https://tecmambo.com/topics/materials-science
+- https://tecmambo.com/topics/manufacturing
+- https://tecmambo.com/topics/hardware-durability
+- https://tecmambo.com/topics/pixel-11
+- https://tecmambo.com/topics/ram
+- https://tecmambo.com/topics/made-by-google
+- https://tecmambo.com/topics/google-play-services
+- https://tecmambo.com/topics/google-wallet
+- https://tecmambo.com/topics/play-store
+- https://tecmambo.com/topics/system-updates
+- https://tecmambo.com/brands/vlc
+- https://tecmambo.com/brands/sony
+- https://tecmambo.com/brands/playstation
+- https://tecmambo.com/brands/glovo
+- https://tecmambo.com/brands/uber
+- https://tecmambo.com/brands/im-bank
+- https://tecmambo.com/brands/mastercard
+- https://tecmambo.com/brands/koko-networks
+- https://tecmambo.com/brands/oraimo
+- https://tecmambo.com/brands/apple
+- https://tecmambo.com/brands/oppo
+- https://tecmambo.com/brands/xiaomi
+- https://tecmambo.com/brands/nothing
+- https://tecmambo.com/brands/vivo
+- https://tecmambo.com/brands/amazon
+- https://tecmambo.com/brands/starlink
+- https://tecmambo.com/brands/spacex
+- https://tecmambo.com/brands/huawei
+- https://tecmambo.com/brands/visa
+- https://tecmambo.com/brands/onafriq
+- https://tecmambo.com/brands/windows
+- https://tecmambo.com/brands/dell
+- https://tecmambo.com/brands/intel
+- https://tecmambo.com/brands/amd
+- https://tecmambo.com/brands/nvidia
+- https://tecmambo.com/brands/lenovo
+- https://tecmambo.com/brands/volkswagen
+- https://tecmambo.com/brands/toyota
+- https://tecmambo.com/brands/byd
+- https://tecmambo.com/brands/tesla
+- https://tecmambo.com/brands/basigo
+- https://tecmambo.com/brands/waymo
+- https://tecmambo.com/brands/nio
+- https://tecmambo.com/brands/oura
+- https://tecmambo.com/brands/wi-fi-alliance
+- https://tecmambo.com/brands/mtn
+- https://tecmambo.com/brands/airtel
+- https://tecmambo.com/brands/optasia
+- https://tecmambo.com/brands/whatsapp
+- https://tecmambo.com/brands/meta
+- https://tecmambo.com/brands/vodacom
+- https://tecmambo.com/brands/tecno
+- https://tecmambo.com/brands/imax
+- https://tecmambo.com/brands/technicolor
+- https://tecmambo.com/brands/qualcomm
+- https://tecmambo.com/brands/snapdragon
+- https://tecmambo.com/brands/tsmc
+- https://tecmambo.com/brands/oneplus
+- https://tecmambo.com/brands/motorola
+- https://tecmambo.com/brands/spiro
+- https://tecmambo.com/brands/shuttlers
+- https://tecmambo.com/brands/aions-ventures
+- https://tecmambo.com/brands/holocene
+- https://tecmambo.com/brands/livestock-wealth
+- https://tecmambo.com/brands/heifer-international
+- https://tecmambo.com/brands/development-bank-of-rwanda
+- https://tecmambo.com/brands/flutterwave
+- https://tecmambo.com/brands/moniepoint
+- https://tecmambo.com/brands/paystack
+- https://tecmambo.com/brands/primevale
+- https://tecmambo.com/brands/xpeng
+- https://tecmambo.com/brands/firefly
+- https://tecmambo.com/brands/kra
+- https://tecmambo.com/brands/carrefour
+- https://tecmambo.com/brands/kcb
+- https://tecmambo.com/brands/airpods
+- https://tecmambo.com/brands/plasmasolve
+- https://tecmambo.com/authors/tecmambo-team
+- https://tecmambo.com/africa/ghana
+- https://tecmambo.com/africa/egypt
+- https://tecmambo.com/africa/ethiopia
+- https://tecmambo.com/africa/tanzania
+- https://tecmambo.com/africa/uganda
+- https://tecmambo.com/news/ai
+- https://tecmambo.com/news/apps
+- https://tecmambo.com/news/smartphones
+- https://tecmambo.com/news/computing
+- https://tecmambo.com/news/social-media
+- https://tecmambo.com/news/entertainment
+- https://tecmambo.com/news/evs-mobility
+- https://tecmambo.com/news/wearables
+- https://tecmambo.com/news/audio
+- https://tecmambo.com/news/cybersecurity
+- https://tecmambo.com/reviews/smartphones
+- https://tecmambo.com/reviews/laptops-pcs
+- https://tecmambo.com/reviews/gaming
+- https://tecmambo.com/reviews/wearables
+- https://tecmambo.com/wallet-watch/smartphones
+- https://tecmambo.com/wallet-watch/laptops-pcs
+- https://tecmambo.com/wallet-watch/smart-homes
+- https://tecmambo.com/wallet-watch/wearables
+- https://tecmambo.com/business/startups
+- https://tecmambo.com/business/fintech
+- https://tecmambo.com/business/ai
+- https://tecmambo.com/business/evs-mobility
+- https://tecmambo.com/business/connectivity
+- https://tecmambo.com/glossary/topic/entertainment
+- https://tecmambo.com/glossary/topic/computing
+- https://tecmambo.com/glossary/topic/connectivity
+- https://tecmambo.com/glossary/topic/smartphones
+- https://tecmambo.com/glossary/topic/power-and-batteries
+- https://tecmambo.com/glossary/topic/ai
+- https://tecmambo.com/glossary/topic/apps
+- https://tecmambo.com/glossary/topic/wearables
+- https://tecmambo.com/glossary/topic/audio
+- https://tecmambo.com/glossary/topic/gaming
+- https://tecmambo.com/glossary/topic/security
+- https://tecmambo.com/glossary/topic/wallet-watch
+- https://tecmambo.com/glossary/topic/smart-homes
+
+The JSON report contains the complete URL-level record, including canonical, robots, sitemap, RSS, News sitemap, monetization, workflow, warnings, and recommended actions.

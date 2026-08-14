@@ -10,7 +10,6 @@ export type TopNavItem =
 export const megaNavItems: TopNavItem[] = [
   { kind: "link", label: "Latest", path: "/latest" },
   { kind: "mega", label: "News", path: "/news", key: "news", children: topicArchives.news },
-  { kind: "mega", label: "Reviews", path: "/reviews", key: "reviews", children: topicArchives.reviews },
   { kind: "mega", label: "Wallet Watch", path: "/wallet-watch", key: "wallet-watch", children: topicArchives["wallet-watch"] },
   { kind: "link", label: "Africa", path: "/africa" },
   { kind: "mega", label: "Business", path: "/business", key: "business", children: topicArchives.business },

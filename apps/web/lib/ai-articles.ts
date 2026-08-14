@@ -495,6 +495,13 @@ export function buildAiArticles({ authors, topics, brands }: ArticleFactoryInput
       id: "ai-10",
       slug: "three-ai-assistants-real-nairobi-week",
       format: "real-life",
+      workflowVersion: "gated",
+      publicationStatus: "in_review",
+      editorialStatus: "needs_revision",
+      indexingStatus: "noindex",
+      excludeFromDiscovery: true,
+      contentFormat: "field_test",
+      originalValueType: "first_hand_testing",
       title: "We ran 3 AI assistants through a Nairobi week",
       seo: {
         title: "We ran 3 AI assistants through a Nairobi week",
