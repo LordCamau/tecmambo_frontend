@@ -37,10 +37,11 @@ describe("Safaricom board reshuffle publication", () => {
     expect(publicCopy).toContain("Chief Officer for Human Resources");
     expect(publicCopy).toContain("James Ludlow");
     expect(publicCopy).toContain("Dr. John Kipngetich Mosonik");
-    expect(publicCopy).toContain("approximately **55%**");
+    expect(publicCopy).toContain("approximately 55%");
     expect(publicCopy).toContain("A 15% Safaricom stake acquired from the Government of Kenya.");
     expect(publicCopy).toContain("A further effective 5% interest acquired from Vodafone Group.");
     expect(publicCopy).toContain("A non-executive director does not run M-Pesa day to day.");
+    expect(publicCopy).not.toContain("**");
   });
 
   it("ships the four supplied media assets with reserved dimensions", () => {

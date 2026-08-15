@@ -67,6 +67,14 @@ insertAfter(
   "Those investors are also weighing capital returns against reinvestment after [Safaricom's KSh 80.13 billion dividend](/opinion/safaricom-80-billion-dividend-what-it-means)."
 );
 
+for (let index = 0; index < body.length; index += 1) {
+  body[index] = body[index].replace(/\*\*([^*]+)\*\*/g, "$1");
+}
+
+if (body.some((block) => block.includes("**"))) {
+  throw new Error("The generated article body contains unresolved emphasis markers.");
+}
+
 const reviewedAt = "2026-08-14T15:41:39+03:00";
 const articleData = {
   id: "safaricom-board-reshuffle-vodacom-2026",

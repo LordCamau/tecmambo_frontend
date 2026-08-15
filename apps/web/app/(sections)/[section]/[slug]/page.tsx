@@ -34,6 +34,7 @@ import { YouTubeEmbed } from "@/components/media/YouTubeEmbed";
 import { JsonLd } from "@/components/seo/JsonLd";
 import styles from "./page.module.css";
 import { isArticleMonetizationEligible } from "@/lib/monetization";
+import { parseArticleInlineMarkup } from "@/lib/inline-article-markup";
 
 type Params = Promise<{ section: string; slug: string }>;
 
@@ -72,16 +73,30 @@ function highlightPriceNodes(nodes: ReactNode[], enabled: boolean, keyPrefix: st
 
 function renderArticleText(text: string, terms: GlossaryTerm[], state: GlossaryLinkState, keyPrefix: string): ReactNode[] {
   const nodes: ReactNode[] = [];
-  const pattern = /\[([^\]]+)\]\((\/[a-z0-9_/?#=&.-]+)\)/gi;
-  let cursor = 0;
-  for (const match of text.matchAll(pattern)) {
-    const start = match.index ?? 0;
-    if (start > cursor) nodes.push(...renderGlossaryText(text.slice(cursor, start), terms, state));
-    nodes.push(<Link href={match[2]} key={`${keyPrefix}-link-${start}`}>{match[1]}</Link>);
-    cursor = start + match[0].length;
+  for (const token of parseArticleInlineMarkup(text)) {
+    if (token.type === "link") {
+      nodes.push(<Link href={token.href} key={`${keyPrefix}-link-${token.start}`}>{token.value}</Link>);
+      continue;
+    }
+    if (token.type === "strong") {
+      nodes.push(
+        <strong key={`${keyPrefix}-strong-${token.start}`}>
+          {renderGlossaryText(token.value, terms, state)}
+        </strong>
+      );
+      continue;
+    }
+    if (token.type === "emphasis") {
+      nodes.push(
+        <em key={`${keyPrefix}-emphasis-${token.start}`}>
+          {renderGlossaryText(token.value, terms, state)}
+        </em>
+      );
+      continue;
+    }
+    nodes.push(...renderGlossaryText(token.value, terms, state));
   }
-  if (cursor < text.length) nodes.push(...renderGlossaryText(text.slice(cursor), terms, state));
-  return nodes.length ? nodes : renderGlossaryText(text, terms, state);
+  return nodes;
 }
 
 function isPhoneReview(article: Article) {
@@ -177,10 +192,10 @@ function ArticleBodyBlock({
     );
   }
   if (paragraph.startsWith("## ")) {
-    return <h2>{paragraph.slice(3)}</h2>;
+    return <h2>{renderArticleText(paragraph.slice(3), glossaryTerms, glossaryState, `${blockKey}-heading`)}</h2>;
   }
   if (paragraph.startsWith("### ")) {
-    return <h3>{paragraph.slice(4)}</h3>;
+    return <h3>{renderArticleText(paragraph.slice(4), glossaryTerms, glossaryState, `${blockKey}-heading`)}</h3>;
   }
   return <p>{highlightPriceNodes(renderArticleText(paragraph, glossaryTerms, glossaryState, blockKey), highlightPrices, blockKey)}</p>;
 }
