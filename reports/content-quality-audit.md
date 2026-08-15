@@ -1,10 +1,10 @@
 # tecMAMBO content quality audit
 
-Generated: 2026-08-14T17:53:33.686Z
+Generated: 2026-08-15T18:21:52.029Z
 
-Items audited: 522
+Items audited: 523
 
-Publicly eligible articles: 159
+Publicly eligible articles: 160
 
 Articles retained outside discovery: 67
 
@@ -12,7 +12,7 @@ Indexable glossary terms: 0
 
 ## Editorial action groups
 
-- Keep and index: 199
+- Keep and index: 200
 - Keep but improve: 98
 - Noindex temporarily: 323
 - Unpublish immediately: 18
@@ -23,6 +23,7 @@ Indexable glossary terms: 0
 
 | Type | Title | URL | Robots | Recommended action | Reason |
 | --- | --- | --- | --- | --- | --- |
+| article | WhatsApp Plus is official: what KSh 119 gets Kenyan users and what stays free | /explainers/whatsapp-plus-kenya-ksh-119-features-worth-it | index, follow | keep | No blocking quality issue detected. |
 | article | Safaricom's new board appointments show what Vodacom's 55% control looks like in practice | /business/safaricom-board-reshuffle-vodacom-mariam-cassim-matimba-mbungela | index, follow | keep | No blocking quality issue detected. |
 | article | TikTok is quietly turning Live music and DMs into creator business infrastructure | /opinion/tiktok-songs-of-live-professional-inbox-creator-tools | index, follow | keep | No blocking quality issue detected. |
 | article | Agentic AI could cut the cost of running scams by 90 percent. Kenyan banks should treat that as an automation problem | /explainers/agentic-ai-financial-fraud-kenya-bcg | index, follow | keep | No blocking quality issue detected. |

@@ -1,11 +1,11 @@
 {
   "summary": {
-    "generatedAt": "2026-08-14T17:53:34.157Z",
+    "generatedAt": "2026-08-15T18:21:51.932Z",
     "adsenseEnabled": false,
     "totals": {
-      "urls": 578,
-      "articles": 226,
-      "publicArticles": 159,
+      "urls": 579,
+      "articles": 227,
+      "publicArticles": 160,
       "quarantinedArticles": 67,
       "indexableGlossaryDetails": 0,
       "noindexGlossaryDetails": 98,
@@ -13,6 +13,26 @@
     }
   },
   "rows": [
+    {
+      "url": "https://tecmambo.com/explainers/whatsapp-plus-kenya-ksh-119-features-worth-it",
+      "type": "article",
+      "title": "WhatsApp Plus is official: what KSh 119 gets Kenyan users and what stays free",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/explainers/whatsapp-plus-kenya-ksh-119-features-worth-it",
+      "robotsDecision": "index, follow",
+      "wordCount": 3660,
+      "originalValueType": "original_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
     {
       "url": "https://tecmambo.com/business/safaricom-board-reshuffle-vodacom-mariam-cassim-matimba-mbungela",
       "type": "article",
@@ -7596,7 +7616,7 @@
       "canonical": "https://tecmambo.com/explainers",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 43 eligible articles. The minimum is 5."
+        "Archive has 44 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -7827,7 +7847,7 @@
       "canonical": "https://tecmambo.com/topics/apps",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 11 eligible articles. The minimum is 5."
+        "Archive has 12 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -7911,7 +7931,7 @@
       "canonical": "https://tecmambo.com/topics/privacy",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 5 eligible articles. The minimum is 5."
+        "Archive has 6 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -7953,7 +7973,7 @@
       "canonical": "https://tecmambo.com/topics/social-media",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 1 eligible articles. The minimum is 5."
+        "Archive has 2 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -10957,7 +10977,7 @@
       "canonical": "https://tecmambo.com/brands/whatsapp",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 3 eligible articles. The minimum is 5."
+        "Archive has 4 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -10978,7 +10998,7 @@
       "canonical": "https://tecmambo.com/brands/meta",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 3 eligible articles. The minimum is 5."
+        "Archive has 4 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."

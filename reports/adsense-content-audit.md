@@ -1,12 +1,12 @@
 # tecMAMBO AdSense content audit
 
-Generated: 2026-08-14T17:53:34.157Z
+Generated: 2026-08-15T18:21:51.932Z
 
 ## Summary
 
-- URL records: 578
-- Articles: 226
-- Publicly eligible articles: 159
+- URL records: 579
+- Articles: 227
+- Publicly eligible articles: 160
 - Quarantined articles: 67
 - Noindex glossary details: 98
 - AdSense enabled: false

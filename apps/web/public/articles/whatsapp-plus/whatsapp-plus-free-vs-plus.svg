@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Free WhatsApp compared with WhatsApp Plus</title>
+  <desc id="desc">A tecMAMBO comparison of core free communication and optional Plus organization and personalization features.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071d17"/>
+      <stop offset="1" stop-color="#12131b"/>
+    </linearGradient>
+    <linearGradient id="plus" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1fce82"/>
+      <stop offset="1" stop-color="#6c5ce7"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1440" cy="70" r="290" fill="#20d483" opacity=".08"/>
+  <circle cx="120" cy="850" r="340" fill="#745cff" opacity=".08"/>
+  <text x="90" y="94" fill="#78e6b5" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="4">TECMAMBO ORIGINAL</text>
+  <text x="90" y="166" fill="#ffffff" font-family="Arial, sans-serif" font-size="62" font-weight="800">Free WhatsApp vs WhatsApp Plus</text>
+  <text x="90" y="215" fill="#b9c7c1" font-family="Arial, sans-serif" font-size="28">Core communication stays free. Plus adds organization and personalization.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="275" width="680" height="520" rx="36" fill="#f5f7f6"/>
+    <rect x="830" y="275" width="680" height="520" rx="36" fill="#f5f7f6"/>
+  </g>
+
+  <circle cx="160" cy="355" r="36" fill="#1c9d65"/>
+  <path d="M145 355l10 10 22-25" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="215" y="367" fill="#132019" font-family="Arial, sans-serif" font-size="44" font-weight="800">Free</text>
+  <text x="160" y="443" fill="#132019" font-family="Arial, sans-serif" font-size="30" font-weight="700">Messages and media</text>
+  <text x="160" y="496" fill="#132019" font-family="Arial, sans-serif" font-size="30" font-weight="700">Voice and video calls</text>
+  <text x="160" y="549" fill="#132019" font-family="Arial, sans-serif" font-size="30" font-weight="700">End-to-end encryption</text>
+  <text x="160" y="602" fill="#132019" font-family="Arial, sans-serif" font-size="30" font-weight="700">Up to 3 pinned chats</text>
+  <text x="160" y="655" fill="#132019" font-family="Arial, sans-serif" font-size="30" font-weight="700">Standard appearance</text>
+  <rect x="160" y="704" width="308" height="52" rx="26" fill="#dff4e9"/>
+  <text x="188" y="740" fill="#127346" font-family="Arial, sans-serif" font-size="24" font-weight="800">NO SUBSCRIPTION</text>
+
+  <circle cx="900" cy="355" r="36" fill="url(#plus)"/>
+  <path d="M900 331l8 17 19 3-14 14 4 20-17-9-17 9 4-20-14-14 19-3z" fill="#fff"/>
+  <text x="955" y="367" fill="#132019" font-family="Arial, sans-serif" font-size="44" font-weight="800">Plus</text>
+  <text x="900" y="443" fill="#132019" font-family="Arial, sans-serif" font-size="30" font-weight="700">Everything in Free</text>
+  <text x="900" y="496" fill="#132019" font-family="Arial, sans-serif" font-size="30" font-weight="700">Up to 20 pinned chats</text>
+  <text x="900" y="549" fill="#132019" font-family="Arial, sans-serif" font-size="30" font-weight="700">Premium themes and icons</text>
+  <text x="900" y="602" fill="#132019" font-family="Arial, sans-serif" font-size="30" font-weight="700">Ringtones and sticker effects</text>
+  <text x="900" y="655" fill="#132019" font-family="Arial, sans-serif" font-size="30" font-weight="700">Custom chat list controls</text>
+  <rect x="900" y="704" width="360" height="52" rx="26" fill="#e9e5ff"/>
+  <text x="930" y="740" fill="#5942c8" font-family="Arial, sans-serif" font-size="24" font-weight="800">OPTIONAL MONTHLY TIER</text>
+
+  <text x="800" y="850" text-anchor="middle" fill="#a8b5af" font-family="Arial, sans-serif" font-size="23">Plus does not move messaging, calls or encryption behind a paywall.</text>
+</svg>
