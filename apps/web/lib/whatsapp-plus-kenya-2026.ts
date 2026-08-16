@@ -271,7 +271,7 @@ const articleData: Omit<Article, "author" | "tags" | "regions"> = {
   "image": {
     "src": "/articles/whatsapp-plus/whatsapp-plus-kenya-hero.webp",
     "alt": "Original concept showing a premium messaging interface with pinned chats, themes, app icons, ringtones and sticker effects.",
-    "credit": "tecMAMBO original illustration created with AI assistance",
+    "credit": "WhatsApp",
     "width": 1672,
     "height": 941,
     "type": "image/webp"
