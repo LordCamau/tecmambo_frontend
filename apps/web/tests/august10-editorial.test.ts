@@ -51,7 +51,8 @@ describe("August 10 verified editorial bundle", () => {
     expect(new Set(bundle.map((article) => article.seo?.description)).size).toBe(20);
     expect(bundle.every((article) => articleWordCount(article) >= 700)).toBe(true);
     expect(bundle.every((article) => article.author.slug === "tim-humphreys")).toBe(true);
-    expect(bundle.every((article) => article.publishedAt === article.updatedAt)).toBe(true);
+    expect(bundle.filter((article) => article.slug !== "eu-dma-interoperability-smartphones-apple-google-2026").every((article) => article.publishedAt === article.updatedAt)).toBe(true);
+    expect(bundle.find((article) => article.slug === "eu-dma-interoperability-smartphones-apple-google-2026")?.updatedAt).toBe("2026-08-21T13:20:00+03:00");
     expect(bundle.every((article) => article.publishedAt.endsWith("+03:00"))).toBe(true);
     expect(bundle.every((article) => article.publicationStatus === "publish")).toBe(true);
     expect(bundle.every((article) => article.editorialStatus === "published")).toBe(true);
@@ -68,10 +69,12 @@ describe("August 10 verified editorial bundle", () => {
     bundle.forEach((article) => {
       const expectedDimensions = article.slug === "byd-geely-chery-global-top-10-h1-2026"
         ? { width: 1040, height: 520 }
-        : { width: 1200, height: 675 };
+        : article.slug === "eu-dma-interoperability-smartphones-apple-google-2026"
+          ? { width: 1600, height: 900 }
+          : { width: 1200, height: 675 };
       expect(article.image.width).toBe(expectedDimensions.width);
       expect(article.image.height).toBe(expectedDimensions.height);
-      expect(article.image.type).toBe("image/webp");
+      expect(article.image.type).toBe(article.slug === "eu-dma-interoperability-smartphones-apple-google-2026" ? "image/svg+xml" : "image/webp");
       expect(existsSync(join(process.cwd(), "public", article.image.src))).toBe(true);
 
       const schema = articleJsonLd(article) as unknown as Record<string, unknown>;
@@ -96,7 +99,7 @@ describe("August 10 verified editorial bundle", () => {
       "insta360-go-ultra-gemini-ai-voice-assistant-kira": "Insta360",
       "smart-2-micro-ev-miit-filing-2026": "Instagram | sugardesign_1",
       "pixel-august-2026-update-touch-gpu-fixes": "9TO5Google",
-      "eu-dma-interoperability-smartphones-apple-google-2026": "European Commission",
+      "eu-dma-interoperability-smartphones-apple-google-2026": "tecMAMBO original illustration",
       "cac-byd-blade-battery-blogger-cai-shen-dao-dispute": "BYD",
       "snapdragon-x2-enterprise-windows-arm-business-pcs": "Windows Central",
       "catl-byd-solid-state-battery-2027-trial-production": "Latam Mobility",

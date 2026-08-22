@@ -14,6 +14,7 @@ import { buildEditorialAugust1Articles } from "@/lib/editorial-bundle-august-1-2
 import { buildEditorialAugust4Articles } from "@/lib/editorial-bundle-august-4-2026";
 import { buildEditorialAugust10Articles } from "@/lib/editorial-bundle-august-10-2026";
 import { buildEditorialAugust14Articles } from "@/lib/editorial-bundle-august-14-2026";
+import { buildEditorialAugust21Articles } from "@/lib/editorial-bundle-august-21-2026";
 import { buildPixel11LaunchArticle } from "@/lib/pixel-11-launch-2026";
 import { buildSafaricomBoardReshuffleArticle } from "@/lib/safaricom-board-reshuffle-2026";
 import { buildWhatsAppPlusKenyaArticle } from "@/lib/whatsapp-plus-kenya-2026";
@@ -918,9 +919,21 @@ const editorialAugust4Articles = buildEditorialAugust4Articles({
   brands,
   regions: [kenyaRegion, rwandaRegion, tanzaniaRegion, ethiopiaRegion]
 });
-const editorialAugust10Articles = buildEditorialAugust10Articles({
+const editorialAugust10ArticlesBeforeAugust21Refresh = buildEditorialAugust10Articles({
   authors,
   regions: [kenyaRegion, rwandaRegion, ugandaRegion]
+});
+const existingEuDmaArticle = editorialAugust10ArticlesBeforeAugust21Refresh.find(
+  (article) => article.slug === "eu-dma-interoperability-smartphones-apple-google-2026"
+);
+if (!existingEuDmaArticle) throw new Error("Missing existing EU DMA article for the August 21 canonical refresh.");
+const editorialAugust10Articles = editorialAugust10ArticlesBeforeAugust21Refresh.filter(
+  (article) => article.slug !== existingEuDmaArticle.slug
+);
+const editorialAugust21Articles = buildEditorialAugust21Articles({
+  authors,
+  regions: [kenyaRegion, nigeriaRegion, southAfricaRegion],
+  existingEuDmaArticle
 });
 const editorialAugust14Articles = buildEditorialAugust14Articles({
   authors,
@@ -1061,6 +1074,7 @@ function migrateLegacyLifecycle(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  ...editorialAugust21Articles,
   whatsappPlusKenyaArticle,
   safaricomBoardReshuffleArticle,
   ...editorialAugust14Articles,

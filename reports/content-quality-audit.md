@@ -1,10 +1,10 @@
 # tecMAMBO content quality audit
 
-Generated: 2026-08-15T18:21:52.029Z
+Generated: 2026-08-21T10:26:10.581Z
 
-Items audited: 523
+Items audited: 536
 
-Publicly eligible articles: 160
+Publicly eligible articles: 173
 
 Articles retained outside discovery: 67
 
@@ -12,7 +12,7 @@ Indexable glossary terms: 0
 
 ## Editorial action groups
 
-- Keep and index: 200
+- Keep and index: 213
 - Keep but improve: 98
 - Noindex temporarily: 323
 - Unpublish immediately: 18
@@ -23,6 +23,19 @@ Indexable glossary terms: 0
 
 | Type | Title | URL | Robots | Recommended action | Reason |
 | --- | --- | --- | --- | --- | --- |
+| article | Phishing is learning to look legitimate because attackers are using trusted cloud platforms as infrastructure | /explainers/trusted-saas-cloud-platforms-malware-phishing-europe-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | China's car exports jumped 88% in July, and the next export battle is software, regulation and local production | /opinion/china-car-exports-smart-driving-europe-global-pressure-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | Standard Bank and UnionPay just widened Africa's online payment rails across nine markets | /explainers/standard-bank-unionpay-ecommerce-nine-african-markets | index, follow | keep | No blocking quality issue detected. |
+| article | Bolt Send is adding motorbikes in Mombasa, turning ride-hailing infrastructure into a small-business delivery network | /opinion/bolt-send-motorbikes-mombasa-last-mile-logistics | index, follow | keep | No blocking quality issue detected. |
+| article | Kenya has a new startup intelligence map, and its hardest job will be keeping the data trustworthy | /explainers/kenya-innovation-ecosystem-intelligence-platform-startups-investors-policy | index, follow | keep | No blocking quality issue detected. |
+| article | Anker is using Kenya as its East Africa launchpad, and the bigger play is the ecosystem around the charger | /opinion/anker-kenya-expansion-east-africa-smart-home-ecosystem | index, follow | keep | No blocking quality issue detected. |
+| article | Yellow's new Series C is a bet that the next billion-dollar African credit product may be an asset, not cash | /business/yellow-series-c-smartphone-solar-financing-africa | index, follow | keep | No blocking quality issue detected. |
+| article | Equity surged while Absa slipped in H1 2026, showing digital banking does not make every bank grow the same way | /business/equity-absa-h1-2026-results-digital-banking-kenya | index, follow | keep | No blocking quality issue detected. |
+| article | Transsion is pushing ahead with a Hong Kong listing, putting Africa's smartphone demand in front of global investors | /business/transsion-hong-kong-listing-africa-smartphone-growth | index, follow | keep | No blocking quality issue detected. |
+| article | Agentic AI is moving onto the device, and chipmakers want the phone or PC to become the execution layer | /explainers/on-device-agentic-ai-qualcomm-mediatek-hardware-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | Africa's biggest fintech IPO candidates are looking offshore, and local exchanges should ask why | /business/africa-fintech-ipos-opay-palmpay-airtel-money-offshore | index, follow | keep | No blocking quality issue detected. |
+| article | NCBA finally joins Kenya's KSh 20 PesaLink push, and the pressure now moves to the remaining holdouts | /explainers/ncba-pesalink-ksh20-flat-fee-kenya | index, follow | keep | No blocking quality issue detected. |
+| article | Apple's camera-equipped AirPods just leaked, and the privacy question is bigger than the hardware | /opinion/apple-airpods-cameras-visual-intelligence-leak-2026 | index, follow | keep | No blocking quality issue detected. |
 | article | WhatsApp Plus is official: what KSh 119 gets Kenyan users and what stays free | /explainers/whatsapp-plus-kenya-ksh-119-features-worth-it | index, follow | keep | No blocking quality issue detected. |
 | article | Safaricom's new board appointments show what Vodacom's 55% control looks like in practice | /business/safaricom-board-reshuffle-vodacom-mariam-cassim-matimba-mbungela | index, follow | keep | No blocking quality issue detected. |
 | article | TikTok is quietly turning Live music and DMs into creator business infrastructure | /opinion/tiktok-songs-of-live-professional-inbox-creator-tools | index, follow | keep | No blocking quality issue detected. |
@@ -55,7 +68,7 @@ Indexable glossary terms: 0
 | article | Insta360 just turned the GO Ultra into a wearable Gemini assistant | /opinion/insta360-go-ultra-gemini-ai-voice-assistant-kira | index, follow | keep | No blocking quality issue detected. |
 | article | Smart #2 is returning to the tiny-car idea that made Smart interesting | /news/smart-2-micro-ev-miit-filing-2026 | index, follow | keep | No blocking quality issue detected. |
 | article | The August Pixel update fixes the kind of bugs no flagship should ship with | /news/pixel-august-2026-update-touch-gpu-fixes | index, follow | keep | No blocking quality issue detected. |
-| article | Europe is turning interoperability from a nice idea into a product requirement | /opinion/eu-dma-interoperability-smartphones-apple-google-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | Europe is turning interoperability from a principle into an engineering requirement | /explainers/eu-dma-interoperability-smartphones-apple-google-2026 | index, follow | keep | No blocking quality issue detected. |
 | article | China's BYD battery blogger dispute is becoming a test of who gets to challenge product claims | /opinion/cac-byd-blade-battery-blogger-cai-shen-dao-dispute | index, follow | keep | No blocking quality issue detected. |
 | article | Windows on Arm has reached the enterprise. Compatibility now matters more than battery claims | /explainers/snapdragon-x2-enterprise-windows-arm-business-pcs | index, follow | keep | No blocking quality issue detected. |
 | article | CATL and BYD want solid-state battery trials in 2027. Your next EV probably will not have one | /explainers/catl-byd-solid-state-battery-2027-trial-production | index, follow | keep | No blocking quality issue detected. |

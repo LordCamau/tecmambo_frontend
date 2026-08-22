@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { buildGoogleNewsSitemap, buildRssFeed } from "../content/feeds";
 import { articleWordCount } from "../lib/article-quality";
 import { isArticleIndexable, isContentPubliclyEligible } from "../lib/content-quality";
@@ -74,7 +74,10 @@ describe("August 14 published editorial bundle", () => {
       return article;
     });
     const rss = buildRssFeed(bundle);
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2026-08-15T10:00:00+03:00"));
     const newsSitemap = buildGoogleNewsSitemap(bundle);
+    vi.useRealTimers();
 
     for (const article of bundle) {
       const path = articlePath(article.format, article.slug);

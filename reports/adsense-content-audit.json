@@ -1,11 +1,11 @@
 {
   "summary": {
-    "generatedAt": "2026-08-15T18:21:51.932Z",
+    "generatedAt": "2026-08-21T10:30:17.351Z",
     "adsenseEnabled": false,
     "totals": {
-      "urls": 579,
-      "articles": 227,
-      "publicArticles": 160,
+      "urls": 592,
+      "articles": 240,
+      "publicArticles": 173,
       "quarantinedArticles": 67,
       "indexableGlossaryDetails": 0,
       "noindexGlossaryDetails": 98,
@@ -13,6 +13,266 @@
     }
   },
   "rows": [
+    {
+      "url": "https://tecmambo.com/explainers/trusted-saas-cloud-platforms-malware-phishing-europe-2026",
+      "type": "article",
+      "title": "Phishing is learning to look legitimate because attackers are using trusted cloud platforms as infrastructure",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/explainers/trusted-saas-cloud-platforms-malware-phishing-europe-2026",
+      "robotsDecision": "index, follow",
+      "wordCount": 849,
+      "originalValueType": "practical_guide",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/opinion/china-car-exports-smart-driving-europe-global-pressure-2026",
+      "type": "article",
+      "title": "China's car exports jumped 88% in July, and the next export battle is software, regulation and local production",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/opinion/china-car-exports-smart-driving-europe-global-pressure-2026",
+      "robotsDecision": "index, follow",
+      "wordCount": 903,
+      "originalValueType": "data_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/explainers/standard-bank-unionpay-ecommerce-nine-african-markets",
+      "type": "article",
+      "title": "Standard Bank and UnionPay just widened Africa's online payment rails across nine markets",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/explainers/standard-bank-unionpay-ecommerce-nine-african-markets",
+      "robotsDecision": "index, follow",
+      "wordCount": 913,
+      "originalValueType": "practical_guide",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/opinion/bolt-send-motorbikes-mombasa-last-mile-logistics",
+      "type": "article",
+      "title": "Bolt Send is adding motorbikes in Mombasa, turning ride-hailing infrastructure into a small-business delivery network",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/opinion/bolt-send-motorbikes-mombasa-last-mile-logistics",
+      "robotsDecision": "index, follow",
+      "wordCount": 952,
+      "originalValueType": "original_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/explainers/kenya-innovation-ecosystem-intelligence-platform-startups-investors-policy",
+      "type": "article",
+      "title": "Kenya has a new startup intelligence map, and its hardest job will be keeping the data trustworthy",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/explainers/kenya-innovation-ecosystem-intelligence-platform-startups-investors-policy",
+      "robotsDecision": "index, follow",
+      "wordCount": 866,
+      "originalValueType": "original_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/opinion/anker-kenya-expansion-east-africa-smart-home-ecosystem",
+      "type": "article",
+      "title": "Anker is using Kenya as its East Africa launchpad, and the bigger play is the ecosystem around the charger",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/opinion/anker-kenya-expansion-east-africa-smart-home-ecosystem",
+      "robotsDecision": "index, follow",
+      "wordCount": 954,
+      "originalValueType": "original_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/business/yellow-series-c-smartphone-solar-financing-africa",
+      "type": "article",
+      "title": "Yellow's new Series C is a bet that the next billion-dollar African credit product may be an asset, not cash",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": true,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/business/yellow-series-c-smartphone-solar-financing-africa",
+      "robotsDecision": "index, follow",
+      "wordCount": 882,
+      "originalValueType": "original_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/business/equity-absa-h1-2026-results-digital-banking-kenya",
+      "type": "article",
+      "title": "Equity surged while Absa slipped in H1 2026, showing digital banking does not make every bank grow the same way",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": true,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/business/equity-absa-h1-2026-results-digital-banking-kenya",
+      "robotsDecision": "index, follow",
+      "wordCount": 902,
+      "originalValueType": "data_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/business/transsion-hong-kong-listing-africa-smartphone-growth",
+      "type": "article",
+      "title": "Transsion is pushing ahead with a Hong Kong listing, putting Africa's smartphone demand in front of global investors",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": true,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/business/transsion-hong-kong-listing-africa-smartphone-growth",
+      "robotsDecision": "index, follow",
+      "wordCount": 903,
+      "originalValueType": "original_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/explainers/on-device-agentic-ai-qualcomm-mediatek-hardware-2026",
+      "type": "article",
+      "title": "Agentic AI is moving onto the device, and chipmakers want the phone or PC to become the execution layer",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/explainers/on-device-agentic-ai-qualcomm-mediatek-hardware-2026",
+      "robotsDecision": "index, follow",
+      "wordCount": 868,
+      "originalValueType": "original_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/business/africa-fintech-ipos-opay-palmpay-airtel-money-offshore",
+      "type": "article",
+      "title": "Africa's biggest fintech IPO candidates are looking offshore, and local exchanges should ask why",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": true,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/business/africa-fintech-ipos-opay-palmpay-airtel-money-offshore",
+      "robotsDecision": "index, follow",
+      "wordCount": 908,
+      "originalValueType": "original_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/explainers/ncba-pesalink-ksh20-flat-fee-kenya",
+      "type": "article",
+      "title": "NCBA finally joins Kenya's KSh 20 PesaLink push, and the pressure now moves to the remaining holdouts",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/explainers/ncba-pesalink-ksh20-flat-fee-kenya",
+      "robotsDecision": "index, follow",
+      "wordCount": 944,
+      "originalValueType": "practical_guide",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
+    {
+      "url": "https://tecmambo.com/opinion/apple-airpods-cameras-visual-intelligence-leak-2026",
+      "type": "article",
+      "title": "Apple's camera-equipped AirPods just leaked, and the privacy question is bigger than the hardware",
+      "publicationStatus": "publish",
+      "editorialStatus": "published",
+      "indexingStatus": "index",
+      "publiclyDiscoverable": true,
+      "sitemapIncluded": true,
+      "rssIncluded": true,
+      "newsSitemapIncluded": false,
+      "adEligible": false,
+      "canonical": "https://tecmambo.com/opinion/apple-airpods-cameras-visual-intelligence-leak-2026",
+      "robotsDecision": "index, follow",
+      "wordCount": 976,
+      "originalValueType": "original_analysis",
+      "reviewMethod": "not_applicable",
+      "warnings": [],
+      "recommendedActions": []
+    },
     {
       "url": "https://tecmambo.com/explainers/whatsapp-plus-kenya-ksh-119-features-worth-it",
       "type": "article",
@@ -27,7 +287,7 @@
       "adEligible": false,
       "canonical": "https://tecmambo.com/explainers/whatsapp-plus-kenya-ksh-119-features-worth-it",
       "robotsDecision": "index, follow",
-      "wordCount": 3660,
+      "wordCount": 3654,
       "originalValueType": "original_analysis",
       "reviewMethod": "not_applicable",
       "warnings": [],
@@ -43,7 +303,7 @@
       "publiclyDiscoverable": true,
       "sitemapIncluded": true,
       "rssIncluded": true,
-      "newsSitemapIncluded": true,
+      "newsSitemapIncluded": false,
       "adEligible": false,
       "canonical": "https://tecmambo.com/business/safaricom-board-reshuffle-vodacom-mariam-cassim-matimba-mbungela",
       "robotsDecision": "index, follow",
@@ -203,7 +463,7 @@
       "publiclyDiscoverable": true,
       "sitemapIncluded": true,
       "rssIncluded": true,
-      "newsSitemapIncluded": true,
+      "newsSitemapIncluded": false,
       "adEligible": false,
       "canonical": "https://tecmambo.com/news/google-quick-share-tap-to-share-pixel-nfc",
       "robotsDecision": "index, follow",
@@ -684,9 +944,9 @@
       ]
     },
     {
-      "url": "https://tecmambo.com/opinion/eu-dma-interoperability-smartphones-apple-google-2026",
+      "url": "https://tecmambo.com/explainers/eu-dma-interoperability-smartphones-apple-google-2026",
       "type": "article",
-      "title": "Europe is turning interoperability from a nice idea into a product requirement",
+      "title": "Europe is turning interoperability from a principle into an engineering requirement",
       "publicationStatus": "publish",
       "editorialStatus": "published",
       "indexingStatus": "index",
@@ -695,15 +955,13 @@
       "rssIncluded": true,
       "newsSitemapIncluded": false,
       "adEligible": false,
-      "canonical": "https://tecmambo.com/opinion/eu-dma-interoperability-smartphones-apple-google-2026",
+      "canonical": "https://tecmambo.com/explainers/eu-dma-interoperability-smartphones-apple-google-2026",
       "robotsDecision": "index, follow",
-      "wordCount": 857,
-      "originalValueType": "original_analysis",
+      "wordCount": 945,
+      "originalValueType": "practical_guide",
       "reviewMethod": "not_applicable",
       "warnings": [],
-      "recommendedActions": [
-        "Backfill the gated human approval record during routine editorial review."
-      ]
+      "recommendedActions": []
     },
     {
       "url": "https://tecmambo.com/opinion/cac-byd-blade-battery-blogger-cai-shen-dao-dispute",
@@ -7616,7 +7874,7 @@
       "canonical": "https://tecmambo.com/explainers",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 44 eligible articles. The minimum is 5."
+        "Archive has 50 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -7721,7 +7979,7 @@
       "canonical": "https://tecmambo.com/opinion",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 42 eligible articles. The minimum is 5."
+        "Archive has 45 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -7742,7 +8000,7 @@
       "canonical": "https://tecmambo.com/business",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 30 eligible articles. The minimum is 5."
+        "Archive has 34 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -7763,7 +8021,7 @@
       "canonical": "https://tecmambo.com/topics/ai",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 42 eligible articles. The minimum is 5."
+        "Archive has 44 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -7826,7 +8084,7 @@
       "canonical": "https://tecmambo.com/topics/android",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 13 eligible articles. The minimum is 5."
+        "Archive has 14 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -7868,7 +8126,7 @@
       "canonical": "https://tecmambo.com/topics/smartphones",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 25 eligible articles. The minimum is 5."
+        "Archive has 27 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -7889,7 +8147,7 @@
       "canonical": "https://tecmambo.com/topics/e-commerce",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 3 eligible articles. The minimum is 5."
+        "Archive has 4 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -7931,7 +8189,7 @@
       "canonical": "https://tecmambo.com/topics/privacy",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 6 eligible articles. The minimum is 5."
+        "Archive has 7 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -8351,7 +8609,7 @@
       "canonical": "https://tecmambo.com/topics/wearables",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 6 eligible articles. The minimum is 5."
+        "Archive has 7 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -8414,7 +8672,7 @@
       "canonical": "https://tecmambo.com/topics/startups",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 12 eligible articles. The minimum is 5."
+        "Archive has 13 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -8435,7 +8693,7 @@
       "canonical": "https://tecmambo.com/topics/business",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 42 eligible articles. The minimum is 5."
+        "Archive has 44 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -8456,7 +8714,7 @@
       "canonical": "https://tecmambo.com/topics/fintech",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 19 eligible articles. The minimum is 5."
+        "Archive has 23 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -8477,7 +8735,7 @@
       "canonical": "https://tecmambo.com/topics/banking",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 5 eligible articles. The minimum is 5."
+        "Archive has 7 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -8519,7 +8777,7 @@
       "canonical": "https://tecmambo.com/topics/policy",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 9 eligible articles. The minimum is 5."
+        "Archive has 11 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -9170,7 +9428,7 @@
       "canonical": "https://tecmambo.com/topics/accessories",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 1 eligible articles. The minimum is 5."
+        "Archive has 2 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -9296,7 +9554,7 @@
       "canonical": "https://tecmambo.com/topics/china",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 8 eligible articles. The minimum is 5."
+        "Archive has 11 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -9464,7 +9722,7 @@
       "canonical": "https://tecmambo.com/topics/logistics",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 1 eligible articles. The minimum is 5."
+        "Archive has 2 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -9569,7 +9827,7 @@
       "canonical": "https://tecmambo.com/topics/payments",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 1 eligible articles. The minimum is 5."
+        "Archive has 3 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -9821,7 +10079,7 @@
       "canonical": "https://tecmambo.com/topics/european-union",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 2 eligible articles. The minimum is 5."
+        "Archive has 1 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -9842,7 +10100,7 @@
       "canonical": "https://tecmambo.com/topics/interoperability",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 3 eligible articles. The minimum is 5."
+        "Archive has 2 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -10300,7 +10558,7 @@
       "canonical": "https://tecmambo.com/brands/apple",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 23 eligible articles. The minimum is 5."
+        "Archive has 24 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -11070,7 +11328,7 @@
       "canonical": "https://tecmambo.com/brands/tecno",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 2 eligible articles. The minimum is 5."
+        "Archive has 3 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."
@@ -12239,7 +12497,7 @@
       "canonical": "https://tecmambo.com/business/fintech",
       "robotsDecision": "noindex, follow",
       "warnings": [
-        "Archive has 14 eligible articles. The minimum is 5."
+        "Archive has 16 eligible articles. The minimum is 5."
       ],
       "recommendedActions": [
         "Keep ad-free and noindex until the archive has at least five substantive articles and a useful unique introduction."

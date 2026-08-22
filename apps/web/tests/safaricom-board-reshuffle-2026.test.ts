@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { buildGoogleNewsSitemap, buildRssFeed } from "../content/feeds";
 import { articles, authors, brands, topics } from "../lib/sample-data";
 import { articleWordCount } from "../lib/article-quality";
@@ -78,7 +78,10 @@ describe("Safaricom board reshuffle publication", () => {
     expect(articlePath(article.format, article.slug)).toBe(canonicalPath);
     expect(articles.some((item) => item.slug === article.slug)).toBe(true);
     expect(buildRssFeed([article])).toContain(`https://tecmambo.com${canonicalPath}`);
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2026-08-15T10:00:00+03:00"));
     expect(buildGoogleNewsSitemap([article])).toContain(`https://tecmambo.com${canonicalPath}`);
+    vi.useRealTimers();
     const jsonLd = articleJsonLd(article) as unknown as Record<string, unknown>;
     expect(jsonLd["@type"]).toBe("NewsArticle");
     expect(jsonLd.url).toBe(`https://tecmambo.com${canonicalPath}`);

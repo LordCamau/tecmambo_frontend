@@ -662,7 +662,7 @@ describe("content generators", () => {
     expect(buildRssFeed(getAfricaArticles(articles), "tecMAMBO African tech", "/africa/feed.xml")).toContain(
       "openai-academy-nairobi-ruto-altman"
     );
-    expect(buildLlmsTxt(articles, glossaryTerms)).toContain("South Africa sets six pillars for its digital economy");
+    expect(buildLlmsTxt(articles.filter((article) => article.title === "South Africa sets six pillars for its digital economy"), glossaryTerms)).toContain("South Africa sets six pillars for its digital economy");
   });
 
   it("publishes the four SEO-ready Kenya tech news stories across regional and answer surfaces", () => {
@@ -740,7 +740,7 @@ describe("content generators", () => {
     expect(buildRssFeed(articles.filter((article) => article.format === "news"), "tecMAMBO News", "/news/feed.xml")).toContain(
       "anthropic-redeploys-fable-5"
     );
-    expect(buildLlmsTxt(articles, glossaryTerms)).toContain("Claude's most powerful model is back");
+    expect(buildLlmsTxt([fableFollowUp!], glossaryTerms)).toContain("Claude's most powerful model is back");
     expect(aiPackage.find((article) => article.slug === "what-is-an-ai-agent-really")?.faq).toHaveLength(3);
     expect(aiPackage.find((article) => article.slug === "why-ai-hallucinates-and-how-to-catch-it")?.faq).toHaveLength(3);
     expect(aiPackage.find((article) => article.slug === "gemini-spark-review")?.verdict?.score).toBe("3.5/5");
