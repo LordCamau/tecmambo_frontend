@@ -1,9 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { Bricolage_Grotesque, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import Script from "next/script";
 import "@/styles/globals.css";
-import { AuroraIntro } from "@/components/brand/AuroraIntro";
 import { CookieConsent } from "@/components/consent/CookieConsent";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
@@ -13,13 +12,6 @@ import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { consentModeDenied } from "@/lib/cookie-consent";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import { siteDescription, sitePreviewImage, siteTitle } from "@/lib/site-metadata";
-
-const bricolage = Bricolage_Grotesque({
-  subsets: ["latin"],
-  variable: "--font-bricolage",
-  weight: ["500", "600", "700"],
-  display: "swap"
-});
 
 const inter = Inter({
   subsets: ["latin"],
@@ -89,43 +81,16 @@ export const viewport: Viewport = {
 };
 
 const cookiebotId = process.env.NEXT_PUBLIC_COOKIEBOT_ID;
-const auroraIntroScript = `
-  (function () {
-    var root = document.documentElement;
-    try {
-      var key = "tm_loader_seen";
-      var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (reduceMotion || window.sessionStorage.getItem(key) === "1") {
-        root.classList.remove("js-intro");
-        return;
-      }
-    } catch (error) {
-      return;
-    }
-  })();
-`;
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
-      className={`${bricolage.variable} ${inter.variable} js-intro`}
+      className={inter.variable}
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
-      <head>
-        <style>{`
-          html.js-intro,
-          html.js-intro body {
-            background: #07060d;
-            overflow: hidden;
-            scrollbar-gutter: stable;
-          }
-        `}</style>
-        <Script id="tecmambo-aurora-intro-boot" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: auroraIntroScript }} />
-      </head>
+      <head />
       <body>
-        <AuroraIntro />
         <ThemeProvider>
           <Script
             id="tecmambo-consent-defaults"

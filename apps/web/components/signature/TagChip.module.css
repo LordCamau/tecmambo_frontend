@@ -6,17 +6,17 @@
 
 .chip {
   display: inline-flex;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface);
+  border: 0;
+  background: transparent;
   color: var(--text-secondary);
-  padding: 5px 10px;
+  padding: 0;
   font-size: 13px;
   line-height: 1.2;
 }
 
 .chip:hover {
-  border-color: var(--pill-border);
-  background: var(--pill-bg);
+  background: transparent;
   color: var(--pill-fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }

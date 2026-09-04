@@ -8,11 +8,10 @@
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  border: 1px solid color-mix(in srgb, var(--purple) 46%, var(--line));
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--purple) 12%, var(--surface));
+  border: 0;
+  background: transparent;
   color: var(--purple-dark);
-  padding: 5px 10px;
+  padding: 0;
   font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 12px;
   font-weight: 700;
@@ -20,18 +19,17 @@
 }
 
 .chip:hover {
-  border-color: var(--purple);
-  background: var(--purple);
-  color: var(--white);
+  color: var(--link-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 :global(.dark) .chip {
-  border-color: color-mix(in srgb, var(--purple) 65%, var(--line));
-  background: color-mix(in srgb, var(--purple) 24%, var(--surface));
+  background: transparent;
   color: var(--purple-strong);
 }
 
 :global(.dark) .chip:hover {
-  background: var(--purple);
-  color: var(--white);
+  background: transparent;
+  color: var(--link-hover);
 }

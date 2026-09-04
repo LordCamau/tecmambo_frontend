@@ -205,11 +205,10 @@
 }
 
 .subLinks a {
-  border-radius: 999px;
-  border: 1px solid var(--pill-border);
-  background: var(--pill-bg);
+  border: 0;
+  background: transparent;
   color: var(--pill-fg);
-  padding: 4px 8px;
+  padding: 2px 0;
   font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 11px;
 }
@@ -234,7 +233,7 @@
 .featureImage {
   position: relative;
   display: block;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 2 / 1;
   overflow: hidden;
   border-radius: var(--radius-sm);
   background: var(--surface-raised);

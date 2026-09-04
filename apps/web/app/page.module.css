@@ -79,14 +79,12 @@
 .heroImage {
   position: relative;
   display: block;
-  aspect-ratio: 16 / 8.15;
+  aspect-ratio: 2 / 1;
   min-height: 0;
   margin: 10px 10px 0;
   overflow: hidden;
   border-radius: var(--radius-sm);
-  background:
-    radial-gradient(circle at 18% 16%, rgb(124 60 255 / 22%), transparent 42%),
-    #050507;
+  background: #050507;
 }
 
 .heroImage img,
@@ -193,7 +191,7 @@
 .supportImage {
   position: relative;
   display: block;
-  aspect-ratio: 16 / 8;
+  aspect-ratio: 2 / 1;
   min-height: 0;
   overflow: hidden;
   background: var(--surface-raised);
@@ -424,13 +422,13 @@
 }
 
 .featureLead .featureImage {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 2 / 1;
 }
 
 .featureSecond .featureImage,
 .featureSmall .featureImage {
-  aspect-ratio: auto;
-  min-height: 100%;
+  aspect-ratio: 2 / 1;
+  min-height: 0;
 }
 
 .featureImage img {
@@ -581,7 +579,7 @@
   }
 
   .heroImage {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 2 / 1;
     margin: 12px 12px 0;
   }
 
@@ -648,7 +646,7 @@
   }
 
   .heroImage {
-    aspect-ratio: 16 / 7.9;
+    aspect-ratio: 2 / 1;
     margin: 8px 8px 0;
   }
 
@@ -675,7 +673,7 @@
   }
 
   .supportImage {
-    aspect-ratio: 16 / 7.2;
+    aspect-ratio: 2 / 1;
   }
 
   .railHead {
@@ -720,7 +718,7 @@
   }
 
   .supportImage {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 2 / 1;
     min-height: 0;
   }
 
@@ -730,7 +728,7 @@
 
   .featureLead .featureImage,
   .featureSecond .featureImage {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 2 / 1;
     min-height: 0;
   }
 

@@ -37,11 +37,10 @@
 }
 
 .filters a {
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface);
-  color: var(--text-secondary);
-  padding: 8px 12px;
+  border: 0;
+  background: transparent;
+  color: var(--purple-dark);
+  padding: 2px 0;
   font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 12px;
 }

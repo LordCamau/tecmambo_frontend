@@ -11,7 +11,6 @@
 .accent {
   height: 3px;
   background-color: var(--gradient-fallback);
-  background-image: var(--gradient-brand);
 }
 
 .inner {

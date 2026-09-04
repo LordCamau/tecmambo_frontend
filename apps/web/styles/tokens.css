@@ -1,7 +1,7 @@
 :root {
   color-scheme: light;
-  --font-display: var(--font-bricolage);
-  --font-body: var(--font-inter);
+  --font-display: "App Sans", var(--font-inter), Arial, sans-serif;
+  --font-body: "App Sans", var(--font-inter), Arial, sans-serif;
   --brand-purple: #4C1FC4;
   --brand-purple-mid: #3F18A8;
   --brand-purple-dark: #2E1568;
@@ -9,10 +9,10 @@
   --accent: #FF6FAE;
   --accent-strong: #F0529A;
   --brand-ink: #1A1A1F;
-  --gradient-brand: linear-gradient(135deg, #4C1FC4 0%, #6E2BFF 45%, #2BD4E6 100%);
-  --gradient-deep: linear-gradient(135deg, #4C1FC4 0%, #6E2BFF 100%);
-  --gradient-aurora: linear-gradient(135deg, #4C1FC4 0%, #6E2BFF 45%, #2BD4E6 100%);
-  --gradient-spectrum: linear-gradient(135deg, #4C1FC4 0%, #B23CE6 55%, #FF6FAE 100%);
+  --gradient-brand: #4C1FC4;
+  --gradient-deep: #2E1568;
+  --gradient-aurora: #4C1FC4;
+  --gradient-spectrum: #4C1FC4;
   --gradient-fallback: #4C1FC4;
   --on-brand-purple: #FFFFFF;
   --on-brand-purple-dark: #FFFFFF;
@@ -115,10 +115,10 @@
   --spark: #8A5BFF;
   --accent: #FF6FAE;
   --accent-strong: #F0529A;
-  --gradient-brand: linear-gradient(135deg, #4C1FC4 0%, #6E2BFF 45%, #2BD4E6 100%);
-  --gradient-deep: linear-gradient(135deg, #4C1FC4 0%, #6E2BFF 100%);
-  --gradient-aurora: linear-gradient(135deg, #4C1FC4 0%, #6E2BFF 45%, #2BD4E6 100%);
-  --gradient-spectrum: linear-gradient(135deg, #4C1FC4 0%, #B23CE6 55%, #FF6FAE 100%);
+  --gradient-brand: #6E2BFF;
+  --gradient-deep: #2E1568;
+  --gradient-aurora: #6E2BFF;
+  --gradient-spectrum: #6E2BFF;
   --gradient-fallback: #4C1FC4;
   --badge-take-fg: #B6A2FF;
   --badge-take-border: #8A5BFF;

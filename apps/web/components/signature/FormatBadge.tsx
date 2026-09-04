@@ -8,7 +8,6 @@ export function FormatBadge({ format, reviewMethod }: { format: Format; reviewMe
   const label = format === "review" && reviewMethod !== "hands_on" ? "Research-based analysis" : entry.label;
   return (
     <span className={clsx(styles.badge, styles[entry.badge])}>
-      <span className={styles.mark} aria-hidden="true" />
       {label}
     </span>
   );

@@ -18,6 +18,7 @@ import { buildEditorialAugust21Articles } from "@/lib/editorial-bundle-august-21
 import { buildPixel11LaunchArticle } from "@/lib/pixel-11-launch-2026";
 import { buildSafaricomBoardReshuffleArticle } from "@/lib/safaricom-board-reshuffle-2026";
 import { buildWhatsAppPlusKenyaArticle } from "@/lib/whatsapp-plus-kenya-2026";
+import { buildRoamGen3BatteryArticle } from "@/lib/roam-gen-3-battery-2026";
 import { buildEditorialJuly7Articles } from "@/lib/editorial-bundle-july-7-2026";
 import { buildEvMobilityNewsArticles } from "@/lib/ev-mobility-news-2026";
 import { buildGlobalOpinionArticles } from "@/lib/global-opinion-essays-2026";
@@ -173,6 +174,7 @@ export const topics: Tag[] = [
 ];
 
 export const brands: Tag[] = [
+  { name: "Roam", slug: "roam", kind: "brand" },
   { name: "VLC", slug: "vlc", kind: "brand" },
   { name: "Sony", slug: "sony", kind: "brand" },
   { name: "PlayStation", slug: "playstation", kind: "brand" },
@@ -952,6 +954,12 @@ const whatsappPlusKenyaArticle = buildWhatsAppPlusKenyaArticle({
   brands,
   regions: [kenyaRegion]
 });
+const roamGen3BatteryArticle = buildRoamGen3BatteryArticle({
+  authors,
+  topics,
+  brands,
+  regions: [kenyaRegion]
+});
 const odysseyImaxArticle = buildOdysseyImaxArticle({ authors, topics, brands });
 const editorialJuly7Articles = buildEditorialJuly7Articles({
   authors,
@@ -1074,6 +1082,7 @@ function migrateLegacyLifecycle(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  roamGen3BatteryArticle,
   ...editorialAugust21Articles,
   whatsappPlusKenyaArticle,
   safaricomBoardReshuffleArticle,

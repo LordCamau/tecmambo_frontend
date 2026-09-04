@@ -51,7 +51,7 @@ async function checkTheme(theme) {
       </head>
       <body>
         <main id="badge-row" class="format-grid">
-          ${variants.map(([name, label]) => `<span class="badge ${name}" data-variant="${name}"><span class="mark"></span>${label}</span>`).join("")}
+          ${variants.map(([name, label]) => `<span class="badge ${name}" data-variant="${name}">${label}</span>`).join("")}
         </main>
       </body>
     </html>
@@ -91,19 +91,13 @@ async function checkTheme(theme) {
 
     return nodes.flatMap((node) => {
       const style = globalThis.getComputedStyle(node);
-      const mark = node.querySelector(".mark");
       const fg = parseColor(style.color);
       const bg = solidBackground(node);
       const ratio = contrast(fg, bg);
-      const markColor = globalThis.getComputedStyle(mark).borderBottomColor;
       const errors = [];
 
       if (ratio < 4.5) {
         errors.push(`${node.dataset.variant} has ${ratio.toFixed(2)}:1 contrast`);
-      }
-
-      if (markColor !== style.color) {
-        errors.push(`${node.dataset.variant} mark does not inherit currentColor`);
       }
 
       return errors;

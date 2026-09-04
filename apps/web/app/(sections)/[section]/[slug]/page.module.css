@@ -455,19 +455,19 @@
 }
 
 .wearableTabs a {
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface);
-  color: var(--text-secondary);
-  padding: 8px 12px;
+  border: 0;
+  background: transparent;
+  color: var(--purple-dark);
+  padding: 2px 0;
   font-family: var(--font-body), Inter, system-ui, sans-serif;
   font-size: 12px;
 }
 
 .wearableTabs a[aria-current="page"] {
-  border-color: var(--pill-border);
-  background: var(--pill-bg);
+  background: transparent;
   color: var(--pill-fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 @media (max-width: 760px) {
