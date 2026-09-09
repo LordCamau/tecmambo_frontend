@@ -16,6 +16,7 @@ import { buildEditorialAugust10Articles } from "@/lib/editorial-bundle-august-10
 import { buildEditorialAugust14Articles } from "@/lib/editorial-bundle-august-14-2026";
 import { buildEditorialAugust21Articles } from "@/lib/editorial-bundle-august-21-2026";
 import { buildEditorialSeptember9Articles } from "@/lib/editorial-bundle-september-9-2026";
+import { buildIphoneDuoArticle } from "@/lib/iphone-duo-2026";
 import { buildPixel11LaunchArticle } from "@/lib/pixel-11-launch-2026";
 import { buildSafaricomBoardReshuffleArticle } from "@/lib/safaricom-board-reshuffle-2026";
 import { buildWhatsAppPlusKenyaArticle } from "@/lib/whatsapp-plus-kenya-2026";
@@ -954,6 +955,12 @@ const editorialSeptember9Articles = buildEditorialSeptember9Articles({
   brands,
   regions: [kenyaRegion, nigeriaRegion, ethiopiaRegion, ugandaRegion, rwandaRegion]
 });
+const iphoneDuoArticle = buildIphoneDuoArticle({
+  authors,
+  topics,
+  brands,
+  regions: [kenyaRegion]
+});
 const editorialAugust14Articles = buildEditorialAugust14Articles({
   authors,
   regions: [kenyaRegion, ethiopiaRegion]
@@ -1099,6 +1106,7 @@ function migrateLegacyLifecycle(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  iphoneDuoArticle,
   ...editorialSeptember9Articles,
   roamGen3BatteryArticle,
   ...editorialAugust21Articles,

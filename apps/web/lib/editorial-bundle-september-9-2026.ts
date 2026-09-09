@@ -203,6 +203,19 @@ const sourcesBySlug: Record<string, Article["sources"]> = {
   ]
 };
 
+const publishedAtBySlug: Record<string, string> = {
+  "apple-eu-dma-october-2026-developer-terms": "2026-09-09T07:10:00+03:00",
+  "paratus-g2m-fibre-route-east-africa-2026": "2026-09-09T07:55:00+03:00",
+  "nomba-3-million-debt-facility-africa-asia-payments": "2026-09-09T08:40:00+03:00",
+  "ca-kenya-standalone-data-centre-licence-consultation": "2026-09-09T09:25:00+03:00",
+  "snapdragon-8-elite-gen-5-dimensity-9500-agentic-ai": "2026-09-09T10:15:00+03:00",
+  "bolt-kenya-10-years-ksh19-billion-investment": "2026-09-09T11:05:00+03:00",
+  "safaricom-ethiopia-15-million-subscribers-mpesa": "2026-09-09T12:00:00+03:00",
+  "digital-realty-nbo2-nairobi-data-centre-icolo": "2026-09-09T13:00:00+03:00",
+  "lagos-blockchain-week-nigeria-fintech-week-september-2026": "2026-09-09T14:10:00+03:00",
+  "apple-surprise-and-shine-event-2026-preview": "2026-09-09T15:20:00+03:00"
+};
+
 function specValue(specBlock: string, label: string) {
   const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const match = specBlock.match(new RegExp(`^\\*\\*${escaped}:\\*\\*\\s*(.+)$`, "m"));
@@ -267,6 +280,10 @@ function articleRegions(articleNumber: number, categories: string[], regions: Re
 function addCrossLinks(articleNumber: number, body: string[]) {
   const copy = [...body];
   const links: Record<number, [string, string]> = {
+    1: [
+      "iPhone Duo",
+      "/explainers/iphone-duo-official-price-specs-kenya"
+    ],
     2: [
       "Communications Authority of Kenya has opened public consultations on a proposed standalone licensing category specifically for data centre operators",
       "/explainers/ca-kenya-standalone-data-centre-licence-consultation"
@@ -301,8 +318,10 @@ export function buildEditorialSeptember9Articles({ authors, topics, brands, regi
     const categories = [spec.primaryCategory, ...spec.secondaryCategories];
     const format = formatMap[spec.format];
     const image = heroBySlug[spec.slug];
+    const publishedAt = publishedAtBySlug[spec.slug];
     if (!format) throw new Error(`Unsupported September 9 format: ${spec.format}`);
     if (!image) throw new Error(`Missing supplied September 9 hero image for ${spec.slug}.`);
+    if (!publishedAt) throw new Error(`Missing September 9 publication timestamp for ${spec.slug}.`);
 
     const tags = categories
       .filter((category) => !regionCategories[category])
@@ -322,8 +341,8 @@ export function buildEditorialSeptember9Articles({ authors, topics, brands, regi
       whyItMatters: spec.originalValue,
       body: addCrossLinks(articleNumber, body),
       author: authors.find((author) => author.name === spec.byline) ?? requireBySlug(authors, spec.byline.toLowerCase().replace(/\s+/g, "-"), "author"),
-      publishedAt: "2026-09-09T12:00:00+03:00",
-      updatedAt: "2026-09-09T12:00:00+03:00",
+      publishedAt,
+      updatedAt: publishedAt,
       readTime: `${Math.max(3, Math.ceil(words / 200))} min read`,
       image,
       tags,
