@@ -1,40 +1,52 @@
 # tecMAMBO content quality audit
 
-Generated: 2026-08-21T10:26:10.581Z
+Generated: 2026-09-09T19:14:55.913Z
 
-Items audited: 536
+Items audited: 559
 
-Publicly eligible articles: 173
+Publicly eligible articles: 179
 
-Articles retained outside discovery: 67
+Articles retained outside discovery: 73
 
 Indexable glossary terms: 0
 
 ## Editorial action groups
 
-- Keep and index: 213
+- Keep and index: 220
 - Keep but improve: 98
-- Noindex temporarily: 323
+- Noindex temporarily: 339
 - Unpublish immediately: 18
-- Requires editorial verification: 67
+- Requires editorial verification: 73
 - Requires original testing evidence: 1
 - Requires broken-link repair: see `reports/link-audit.md`
 - Requires CMS changes: see `docs/cms-editorial-controls.md`
 
 | Type | Title | URL | Robots | Recommended action | Reason |
 | --- | --- | --- | --- | --- | --- |
+| article | Apple's foldable is official: the iPhone Duo starts at $1,999, and here's what it actually costs to own in Kenya | /explainers/iphone-duo-official-price-specs-kenya | index, follow | keep | No blocking quality issue detected. |
+| article | Apple's foldable finally arrives, and it's not even the biggest change at the company today | /news/apple-surprise-and-shine-event-2026-preview | index, follow | keep | No blocking quality issue detected. |
+| article | Lagos just became Africa's busiest tech city for a month, and the calendar isn't even done | /news/lagos-blockchain-week-nigeria-fintech-week-september-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | Nairobi just got 6.4 more megawatts of data centre capacity, and iColo's name is disappearing | /explainers/digital-realty-nbo2-nairobi-data-centre-icolo | index, follow | keep | No blocking quality issue detected. |
+| article | Safaricom Ethiopia has 15 million subscribers now, but only a third of them use M-Pesa | /explainers/safaricom-ethiopia-15-million-subscribers-mpesa | index, follow | keep | No blocking quality issue detected. |
+| article | Bolt has spent a decade and KSh 19 billion building Kenya's ride-hailing habit | /opinion/bolt-kenya-10-years-ksh19-billion-investment | index, follow | keep | No blocking quality issue detected. |
+| article | Your next Android flagship's chip can already act on its own. Here's what that actually means | /explainers/snapdragon-8-elite-gen-5-dimensity-9500-agentic-ai | index, follow | keep | No blocking quality issue detected. |
+| article | Kenya wants a licence built specifically for data centres, and operators have 30 days to weigh in | /explainers/ca-kenya-standalone-data-centre-licence-consultation | index, follow | keep | No blocking quality issue detected. |
+| article | Nomba just raised $3 million to turn the DRC into an Africa-Asia payments hub | /explainers/nomba-3-million-debt-facility-africa-asia-payments | index, follow | keep | No blocking quality issue detected. |
+| article | A 2,000km fibre route now connects Mombasa to the DRC, and Paratus wants East Africa to notice | /explainers/paratus-g2m-fibre-route-east-africa-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | Apple lost its fight against EU app store rules. Now the deadline for compliance has a date | /explainers/apple-eu-dma-october-2026-developer-terms | index, follow | keep | No blocking quality issue detected. |
+| article | Beyond Range: How Roam Engineered Its Gen-3 Battery Around the Working Boda-Boda Rider | /real-life/roam-gen-3-battery-working-boda-boda-riders | index, follow | keep | No blocking quality issue detected. |
 | article | Phishing is learning to look legitimate because attackers are using trusted cloud platforms as infrastructure | /explainers/trusted-saas-cloud-platforms-malware-phishing-europe-2026 | index, follow | keep | No blocking quality issue detected. |
 | article | China's car exports jumped 88% in July, and the next export battle is software, regulation and local production | /opinion/china-car-exports-smart-driving-europe-global-pressure-2026 | index, follow | keep | No blocking quality issue detected. |
-| article | Standard Bank and UnionPay just widened Africa's online payment rails across nine markets | /explainers/standard-bank-unionpay-ecommerce-nine-african-markets | index, follow | keep | No blocking quality issue detected. |
-| article | Bolt Send is adding motorbikes in Mombasa, turning ride-hailing infrastructure into a small-business delivery network | /opinion/bolt-send-motorbikes-mombasa-last-mile-logistics | index, follow | keep | No blocking quality issue detected. |
+| article | Standard Bank and UnionPay just widened Africa's online payment rails across nine markets | /explainers/standard-bank-unionpay-ecommerce-nine-african-markets | noindex, follow | retain and revise outside discovery | missing-image-metadata: The lead image is missing a source, alt text, or credit decision. |
+| article | Bolt Send is adding motorbikes in Mombasa, turning ride-hailing infrastructure into a small-business delivery network | /opinion/bolt-send-motorbikes-mombasa-last-mile-logistics | noindex, follow | retain and revise outside discovery | missing-image-metadata: The lead image is missing a source, alt text, or credit decision. |
 | article | Kenya has a new startup intelligence map, and its hardest job will be keeping the data trustworthy | /explainers/kenya-innovation-ecosystem-intelligence-platform-startups-investors-policy | index, follow | keep | No blocking quality issue detected. |
-| article | Anker is using Kenya as its East Africa launchpad, and the bigger play is the ecosystem around the charger | /opinion/anker-kenya-expansion-east-africa-smart-home-ecosystem | index, follow | keep | No blocking quality issue detected. |
+| article | Anker is using Kenya as its East Africa launchpad, and the bigger play is the ecosystem around the charger | /opinion/anker-kenya-expansion-east-africa-smart-home-ecosystem | noindex, follow | retain and revise outside discovery | missing-image-metadata: The lead image is missing a source, alt text, or credit decision. |
 | article | Yellow's new Series C is a bet that the next billion-dollar African credit product may be an asset, not cash | /business/yellow-series-c-smartphone-solar-financing-africa | index, follow | keep | No blocking quality issue detected. |
-| article | Equity surged while Absa slipped in H1 2026, showing digital banking does not make every bank grow the same way | /business/equity-absa-h1-2026-results-digital-banking-kenya | index, follow | keep | No blocking quality issue detected. |
-| article | Transsion is pushing ahead with a Hong Kong listing, putting Africa's smartphone demand in front of global investors | /business/transsion-hong-kong-listing-africa-smartphone-growth | index, follow | keep | No blocking quality issue detected. |
+| article | Equity surged while Absa slipped in H1 2026, showing digital banking does not make every bank grow the same way | /business/equity-absa-h1-2026-results-digital-banking-kenya | noindex, follow | retain and revise outside discovery | missing-image-metadata: The lead image is missing a source, alt text, or credit decision. |
+| article | Transsion is pushing ahead with a Hong Kong listing, putting Africa's smartphone demand in front of global investors | /business/transsion-hong-kong-listing-africa-smartphone-growth | noindex, follow | retain and revise outside discovery | missing-image-metadata: The lead image is missing a source, alt text, or credit decision. |
 | article | Agentic AI is moving onto the device, and chipmakers want the phone or PC to become the execution layer | /explainers/on-device-agentic-ai-qualcomm-mediatek-hardware-2026 | index, follow | keep | No blocking quality issue detected. |
 | article | Africa's biggest fintech IPO candidates are looking offshore, and local exchanges should ask why | /business/africa-fintech-ipos-opay-palmpay-airtel-money-offshore | index, follow | keep | No blocking quality issue detected. |
-| article | NCBA finally joins Kenya's KSh 20 PesaLink push, and the pressure now moves to the remaining holdouts | /explainers/ncba-pesalink-ksh20-flat-fee-kenya | index, follow | keep | No blocking quality issue detected. |
+| article | NCBA finally joins Kenya's KSh 20 PesaLink push, and the pressure now moves to the remaining holdouts | /explainers/ncba-pesalink-ksh20-flat-fee-kenya | noindex, follow | retain and revise outside discovery | missing-image-metadata: The lead image is missing a source, alt text, or credit decision. |
 | article | Apple's camera-equipped AirPods just leaked, and the privacy question is bigger than the hardware | /opinion/apple-airpods-cameras-visual-intelligence-leak-2026 | index, follow | keep | No blocking quality issue detected. |
 | article | WhatsApp Plus is official: what KSh 119 gets Kenyan users and what stays free | /explainers/whatsapp-plus-kenya-ksh-119-features-worth-it | index, follow | keep | No blocking quality issue detected. |
 | article | Safaricom's new board appointments show what Vodacom's 55% control looks like in practice | /business/safaricom-board-reshuffle-vodacom-mariam-cassim-matimba-mbungela | index, follow | keep | No blocking quality issue detected. |
@@ -68,7 +80,7 @@ Indexable glossary terms: 0
 | article | Insta360 just turned the GO Ultra into a wearable Gemini assistant | /opinion/insta360-go-ultra-gemini-ai-voice-assistant-kira | index, follow | keep | No blocking quality issue detected. |
 | article | Smart #2 is returning to the tiny-car idea that made Smart interesting | /news/smart-2-micro-ev-miit-filing-2026 | index, follow | keep | No blocking quality issue detected. |
 | article | The August Pixel update fixes the kind of bugs no flagship should ship with | /news/pixel-august-2026-update-touch-gpu-fixes | index, follow | keep | No blocking quality issue detected. |
-| article | Europe is turning interoperability from a principle into an engineering requirement | /explainers/eu-dma-interoperability-smartphones-apple-google-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | Europe is turning interoperability from a principle into an engineering requirement | /opinion/eu-dma-interoperability-smartphones-apple-google-2026 | index, follow | keep | No blocking quality issue detected. |
 | article | China's BYD battery blogger dispute is becoming a test of who gets to challenge product claims | /opinion/cac-byd-blade-battery-blogger-cai-shen-dao-dispute | index, follow | keep | No blocking quality issue detected. |
 | article | Windows on Arm has reached the enterprise. Compatibility now matters more than battery claims | /explainers/snapdragon-x2-enterprise-windows-arm-business-pcs | index, follow | keep | No blocking quality issue detected. |
 | article | CATL and BYD want solid-state battery trials in 2027. Your next EV probably will not have one | /explainers/catl-byd-solid-state-battery-2027-trial-production | index, follow | keep | No blocking quality issue detected. |
@@ -423,7 +435,7 @@ Indexable glossary terms: 0
 | archive | Routers | /topics/routers | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Home Internet | /topics/home-internet | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Networking | /topics/networking | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
-| archive | Power & batteries | /topics/power-batteries | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Power & batteries | /topics/power-batteries | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Smartphone Design | /topics/smartphone-design | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Notifications | /topics/notifications | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Google Pixel 11 | /topics/google-pixel-11 | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
@@ -485,6 +497,17 @@ Indexable glossary terms: 0
 | archive | Google Wallet | /topics/google-wallet | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Play Store | /topics/play-store | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | System Updates | /topics/system-updates | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Infrastructure | /topics/infrastructure | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Cloud | /topics/cloud | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Regulation | /topics/regulation | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Gig Economy | /topics/gig-economy | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Cross-Border Payments | /topics/cross-border-payments | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | DRC | /topics/drc | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Semiconductors | /topics/semiconductors | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Global | /topics/global | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Big Tech | /topics/big-tech | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Web3 | /topics/web3 | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Roam | /brands/roam | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | VLC | /brands/vlc | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Sony | /brands/sony | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | PlayStation | /brands/playstation | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
