@@ -112,6 +112,7 @@ export type Article = {
   image: {
     src: string;
     alt: string;
+    caption?: string;
     credit: string;
     creditOmitted?: boolean;
     width?: number;
@@ -138,7 +139,7 @@ export type Article = {
   googleAdsEligible?: boolean;
   deal?: Deal;
   publicationStatus?: "publish" | "draft" | "in_review" | "private" | "scheduled" | "archived";
-  editorialStatus?: "draft" | "editorial_review" | "fact_check" | "ready" | "published" | "needs_revision" | "archived";
+  editorialStatus?: "draft" | "draft_quarantine" | "editorial_review" | "fact_check" | "ready" | "published" | "needs_revision" | "archived";
   indexingStatus?: "index" | "noindex" | "inherit";
   contentFormat?: "news" | "analysis" | "explainer" | "buying_guide" | "hands_on_review" | "research_based_review" | "opinion" | "glossary" | "interview" | "field_test";
   reviewMethod?: "hands_on" | "research_based" | "unknown";

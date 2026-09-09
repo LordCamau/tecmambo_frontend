@@ -414,7 +414,12 @@ export default async function ArticlePage({ params }: { params: Params }) {
           priority
           sizes="(min-width: 1080px) 1040px, calc(100vw - 32px)"
         />
-        {article.image.credit ? <figcaption>{article.image.credit}</figcaption> : null}
+        {article.image.caption || article.image.credit ? (
+          <figcaption>
+            {article.image.caption ?? article.image.credit}
+            {article.image.caption && article.image.credit ? ` Image Credit: ${article.image.credit}` : null}
+          </figcaption>
+        ) : null}
       </figure>
 
       <div className={`readable ${styles.body}`}>

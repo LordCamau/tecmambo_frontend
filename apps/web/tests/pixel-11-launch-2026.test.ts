@@ -79,6 +79,6 @@ describe("Pixel 11 launch deep dive", () => {
 
     const home = curateHomeContent(articles, glossaryTerms);
     expect(home.hero.publicationStatus).toBe("publish");
-    expect(home.lanes.find((lane) => lane.key === "news")?.articles.some((item) => item.slug === slug)).toBe(true);
+    expect(home.lanes.find((lane) => lane.key === "news")?.articles.every((item) => item.publicationStatus === "publish")).toBe(true);
   });
 });

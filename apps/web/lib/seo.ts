@@ -160,7 +160,7 @@ function imageJsonLd(image: Article["image"], representativeOfPage = false): Ima
   return {
     "@type": "ImageObject",
     url: absoluteUrl(image.src),
-    caption: image.credit,
+    caption: image.caption ?? image.alt,
     creditText: image.credit,
     width: image.width ?? 1200,
     height: image.height ?? 630,

@@ -147,7 +147,8 @@ export async function imageSitemapXml() {
         .filter((image, index, all) => all.findIndex((candidate) => candidate.src === image.src) === index);
       const imageEntries = images
         .map((image) => {
-          const caption = image.credit.trim() ? `<image:caption>${escapeXml(image.credit)}</image:caption>` : "";
+          const captionText = "caption" in image && image.caption?.trim() ? image.caption : image.credit;
+          const caption = captionText.trim() ? `<image:caption>${escapeXml(captionText)}</image:caption>` : "";
           return `<image:image><image:loc>${escapeXml(new URL(image.src, siteUrl).toString())}</image:loc>${caption}<image:title>${escapeXml(image.alt)}</image:title></image:image>`;
         })
         .join("");

@@ -15,6 +15,7 @@ import { buildEditorialAugust4Articles } from "@/lib/editorial-bundle-august-4-2
 import { buildEditorialAugust10Articles } from "@/lib/editorial-bundle-august-10-2026";
 import { buildEditorialAugust14Articles } from "@/lib/editorial-bundle-august-14-2026";
 import { buildEditorialAugust21Articles } from "@/lib/editorial-bundle-august-21-2026";
+import { buildEditorialSeptember9Articles } from "@/lib/editorial-bundle-september-9-2026";
 import { buildPixel11LaunchArticle } from "@/lib/pixel-11-launch-2026";
 import { buildSafaricomBoardReshuffleArticle } from "@/lib/safaricom-board-reshuffle-2026";
 import { buildWhatsAppPlusKenyaArticle } from "@/lib/whatsapp-plus-kenya-2026";
@@ -171,6 +172,16 @@ export const topics: Tag[] = [
   { name: "Google Wallet", slug: "google-wallet", kind: "topic" },
   { name: "Play Store", slug: "play-store", kind: "topic" },
   { name: "System Updates", slug: "system-updates", kind: "topic" },
+  { name: "Infrastructure", slug: "infrastructure", kind: "topic" },
+  { name: "Cloud", slug: "cloud", kind: "topic" },
+  { name: "Regulation", slug: "regulation", kind: "topic" },
+  { name: "Gig Economy", slug: "gig-economy", kind: "topic" },
+  { name: "Cross-Border Payments", slug: "cross-border-payments", kind: "topic" },
+  { name: "DRC", slug: "drc", kind: "topic" },
+  { name: "Semiconductors", slug: "semiconductors", kind: "topic" },
+  { name: "Global", slug: "global", kind: "topic" },
+  { name: "Big Tech", slug: "big-tech", kind: "topic" },
+  { name: "Web3", slug: "web3", kind: "topic" },
 ];
 
 export const brands: Tag[] = [
@@ -937,6 +948,12 @@ const editorialAugust21Articles = buildEditorialAugust21Articles({
   regions: [kenyaRegion, nigeriaRegion, southAfricaRegion],
   existingEuDmaArticle
 });
+const editorialSeptember9Articles = buildEditorialSeptember9Articles({
+  authors,
+  topics,
+  brands,
+  regions: [kenyaRegion, nigeriaRegion, ethiopiaRegion, ugandaRegion, rwandaRegion]
+});
 const editorialAugust14Articles = buildEditorialAugust14Articles({
   authors,
   regions: [kenyaRegion, ethiopiaRegion]
@@ -1082,6 +1099,7 @@ function migrateLegacyLifecycle(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  ...editorialSeptember9Articles,
   roamGen3BatteryArticle,
   ...editorialAugust21Articles,
   whatsappPlusKenyaArticle,
