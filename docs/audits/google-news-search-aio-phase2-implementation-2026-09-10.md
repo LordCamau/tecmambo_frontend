@@ -6,7 +6,7 @@
 
 **Scope:** Approved Phase 2 engineering, full-archive audit, technical SEO, Google News, structured data, crawl controls, image delivery and answer-engine accessibility
 
-**Implementation state:** Code complete and verified; the approved byline assignment list was not available and was not inferred
+**Implementation state:** Published to `main` and verified on production; the approved byline assignment list was not available and was not inferred
 
 ## Executive result
 
@@ -51,7 +51,7 @@ Eligibility works as follows:
 - Editorial gating, source review, human approval and the 48-hour publication window still apply.
 - Future-dated stories are excluded rather than accidentally passing the age calculation.
 
-The current local News sitemap contains 10 eligible September 9 stories, including approved timely explainers.
+The current production News sitemap contains 10 eligible September 9 stories, including approved timely explainers.
 
 ### A3. Schema migration — Pass
 
@@ -225,11 +225,13 @@ Editorial can now use these components for suitable explainers without making th
 | Production build | **Pass: 560 static pages** |
 | Content quality CI | **Pass: 559 public records, 0 high-confidence discovery leaks** |
 | Link audit CI | **Pass: 252 articles, 0 issues** |
-| Local production HSTS | **Pass** |
-| Local production `www` canonical redirect | **Pass: one-hop 308, path/query preserved** |
-| Local nonexistent URL | **Pass: HTTP 404** |
-| Local News sitemap | **Pass: 10 eligible current entries** |
-| Local sitemap index synthetic dates | **Pass: no `<lastmod>`** |
+| Production deployment | **Pass: core implementation commit `47baacb` published** |
+| Production HSTS | **Pass** |
+| Production `www` canonical redirect | **Pass: one-hop 308, path/query preserved** |
+| Production nonexistent URL | **Pass: HTTP 404** |
+| Production News sitemap | **Pass: 10 eligible current entries** |
+| Production sitemap index synthetic dates | **Pass: no `<lastmod>`** |
+| Production WebP asset delivery | **Pass: HTTP 200** |
 
 ## 5. Final human checklist
 
@@ -239,8 +241,7 @@ Editorial can now use these components for suitable explainers without making th
 4. **Editorial/SEO owner:** review the 43 long titles and 38 long descriptions for clarity and search presentation. Change only where a shorter version is genuinely better.
 5. **Editorial owner:** triage the 46 sub-600-word stories individually. Expand only where additional reporting adds value; otherwise retain, consolidate, noindex or retire by editorial decision.
 6. **Author/editorial owner:** provide explicitly authorized professional profile URLs for author `sameAs`, or confirm that the fields should remain empty.
-7. **Deployment owner:** after production rollout, confirm `https://www.tecmambo.com/...` redirects in one hop to the equivalent `https://tecmambo.com/...` URL and that HSTS remains present at the edge.
-8. **Publisher owner, optional:** ordinary Google News publication pages are now generated automatically and no longer rely on submitted Publisher Center feeds/locations. Use [Publisher Center](https://publishercenter.google.com/) only for still-supported products and settings such as Reader Revenue Manager or News Showcase. See [Google's transition notice](https://support.google.com/news/publisher-center/answer/15898024).
+7. **Publisher owner, optional:** ordinary Google News publication pages are now generated automatically and no longer rely on submitted Publisher Center feeds/locations. Use [Publisher Center](https://publishercenter.google.com/) only for still-supported products and settings such as Reader Revenue Manager or News Showcase. See [Google's transition notice](https://support.google.com/news/publisher-center/answer/15898024).
 
 ## Final verdict
 
