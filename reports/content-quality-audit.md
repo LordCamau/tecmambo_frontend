@@ -1,22 +1,22 @@
 # tecMAMBO content quality audit
 
-Generated: 2026-09-09T19:14:55.913Z
+Generated: 2026-09-10T19:06:48.863Z
 
 Items audited: 559
 
-Publicly eligible articles: 179
+Publicly eligible articles: 185
 
-Articles retained outside discovery: 73
+Articles retained outside discovery: 67
 
 Indexable glossary terms: 0
 
 ## Editorial action groups
 
-- Keep and index: 220
+- Keep and index: 226
 - Keep but improve: 98
-- Noindex temporarily: 339
+- Noindex temporarily: 333
 - Unpublish immediately: 18
-- Requires editorial verification: 73
+- Requires editorial verification: 67
 - Requires original testing evidence: 1
 - Requires broken-link repair: see `reports/link-audit.md`
 - Requires CMS changes: see `docs/cms-editorial-controls.md`
@@ -37,16 +37,16 @@ Indexable glossary terms: 0
 | article | Beyond Range: How Roam Engineered Its Gen-3 Battery Around the Working Boda-Boda Rider | /real-life/roam-gen-3-battery-working-boda-boda-riders | index, follow | keep | No blocking quality issue detected. |
 | article | Phishing is learning to look legitimate because attackers are using trusted cloud platforms as infrastructure | /explainers/trusted-saas-cloud-platforms-malware-phishing-europe-2026 | index, follow | keep | No blocking quality issue detected. |
 | article | China's car exports jumped 88% in July, and the next export battle is software, regulation and local production | /opinion/china-car-exports-smart-driving-europe-global-pressure-2026 | index, follow | keep | No blocking quality issue detected. |
-| article | Standard Bank and UnionPay just widened Africa's online payment rails across nine markets | /explainers/standard-bank-unionpay-ecommerce-nine-african-markets | noindex, follow | retain and revise outside discovery | missing-image-metadata: The lead image is missing a source, alt text, or credit decision. |
-| article | Bolt Send is adding motorbikes in Mombasa, turning ride-hailing infrastructure into a small-business delivery network | /opinion/bolt-send-motorbikes-mombasa-last-mile-logistics | noindex, follow | retain and revise outside discovery | missing-image-metadata: The lead image is missing a source, alt text, or credit decision. |
+| article | Standard Bank and UnionPay just widened Africa's online payment rails across nine markets | /explainers/standard-bank-unionpay-ecommerce-nine-african-markets | index, follow | keep | No blocking quality issue detected. |
+| article | Bolt Send is adding motorbikes in Mombasa, turning ride-hailing infrastructure into a small-business delivery network | /opinion/bolt-send-motorbikes-mombasa-last-mile-logistics | index, follow | keep | No blocking quality issue detected. |
 | article | Kenya has a new startup intelligence map, and its hardest job will be keeping the data trustworthy | /explainers/kenya-innovation-ecosystem-intelligence-platform-startups-investors-policy | index, follow | keep | No blocking quality issue detected. |
-| article | Anker is using Kenya as its East Africa launchpad, and the bigger play is the ecosystem around the charger | /opinion/anker-kenya-expansion-east-africa-smart-home-ecosystem | noindex, follow | retain and revise outside discovery | missing-image-metadata: The lead image is missing a source, alt text, or credit decision. |
+| article | Anker is using Kenya as its East Africa launchpad, and the bigger play is the ecosystem around the charger | /opinion/anker-kenya-expansion-east-africa-smart-home-ecosystem | index, follow | keep | No blocking quality issue detected. |
 | article | Yellow's new Series C is a bet that the next billion-dollar African credit product may be an asset, not cash | /business/yellow-series-c-smartphone-solar-financing-africa | index, follow | keep | No blocking quality issue detected. |
-| article | Equity surged while Absa slipped in H1 2026, showing digital banking does not make every bank grow the same way | /business/equity-absa-h1-2026-results-digital-banking-kenya | noindex, follow | retain and revise outside discovery | missing-image-metadata: The lead image is missing a source, alt text, or credit decision. |
-| article | Transsion is pushing ahead with a Hong Kong listing, putting Africa's smartphone demand in front of global investors | /business/transsion-hong-kong-listing-africa-smartphone-growth | noindex, follow | retain and revise outside discovery | missing-image-metadata: The lead image is missing a source, alt text, or credit decision. |
+| article | Equity surged while Absa slipped in H1 2026, showing digital banking does not make every bank grow the same way | /business/equity-absa-h1-2026-results-digital-banking-kenya | index, follow | keep | No blocking quality issue detected. |
+| article | Transsion is pushing ahead with a Hong Kong listing, putting Africa's smartphone demand in front of global investors | /business/transsion-hong-kong-listing-africa-smartphone-growth | index, follow | keep | No blocking quality issue detected. |
 | article | Agentic AI is moving onto the device, and chipmakers want the phone or PC to become the execution layer | /explainers/on-device-agentic-ai-qualcomm-mediatek-hardware-2026 | index, follow | keep | No blocking quality issue detected. |
 | article | Africa's biggest fintech IPO candidates are looking offshore, and local exchanges should ask why | /business/africa-fintech-ipos-opay-palmpay-airtel-money-offshore | index, follow | keep | No blocking quality issue detected. |
-| article | NCBA finally joins Kenya's KSh 20 PesaLink push, and the pressure now moves to the remaining holdouts | /explainers/ncba-pesalink-ksh20-flat-fee-kenya | noindex, follow | retain and revise outside discovery | missing-image-metadata: The lead image is missing a source, alt text, or credit decision. |
+| article | NCBA finally joins Kenya's KSh 20 PesaLink push, and the pressure now moves to the remaining holdouts | /explainers/ncba-pesalink-ksh20-flat-fee-kenya | index, follow | keep | No blocking quality issue detected. |
 | article | Apple's camera-equipped AirPods just leaked, and the privacy question is bigger than the hardware | /opinion/apple-airpods-cameras-visual-intelligence-leak-2026 | index, follow | keep | No blocking quality issue detected. |
 | article | WhatsApp Plus is official: what KSh 119 gets Kenyan users and what stays free | /explainers/whatsapp-plus-kenya-ksh-119-features-worth-it | index, follow | keep | No blocking quality issue detected. |
 | article | Safaricom's new board appointments show what Vodacom's 55% control looks like in practice | /business/safaricom-board-reshuffle-vodacom-mariam-cassim-matimba-mbungela | index, follow | keep | No blocking quality issue detected. |

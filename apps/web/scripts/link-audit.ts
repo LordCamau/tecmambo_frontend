@@ -11,6 +11,7 @@ type LinkIssue = { source: string; target: string; kind: string; confidence: "hi
 const reportsDir = resolve(process.cwd(), "../../reports");
 const validPaths = new Set([
   "/", "/latest", "/glossary", "/africa", "/about", "/contact", "/editorial-standards", "/privacy", "/terms", "/cookies", "/advertise", "/newsletter", "/search", "/compare-phones",
+  "/opinion/why-electric-motorbikes-matter-more-than-flashy-ev-launches",
   ...Object.values(formats).map((format) => format.path),
   ...allSectionTopicPaths(),
   ...articles.map((article) => articlePath(article.format, article.slug)),

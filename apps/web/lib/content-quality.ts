@@ -30,6 +30,7 @@ export function articlePublicText(article: Article) {
     article.subhead,
     article.excerpt,
     article.whyItMatters,
+    article.quickAnswer ?? "",
     ...article.body,
     ...(article.comparisonTables?.flatMap((table) => [table.caption, ...table.columns, ...table.rows.flatMap((row) => [row.label, ...row.values])]) ?? []),
     article.closingLine ?? "",
@@ -39,6 +40,7 @@ export function articlePublicText(article: Article) {
     ...(article.verdict?.pros ?? []),
     ...(article.verdict?.cons ?? []),
     ...(article.faq?.flatMap((item) => [item.question, item.answer]) ?? []),
+    ...(article.corrections?.flatMap((item) => [item.date, item.description]) ?? []),
     ...(article.mediaSlots?.flatMap((slot) => [slot.caption, slot.alt ?? "", slot.credit ?? ""]) ?? [])
   ].join("\n");
 }
@@ -84,6 +86,10 @@ export function articleQualityIssues(article: Article): QualityIssue[] {
   if (!article.title.trim()) add("missing-title", "The article has no title.");
   if (!article.subhead.trim() || !article.excerpt.trim()) add("missing-summary", "The article is missing its subhead or excerpt.");
   if (!article.whyItMatters.trim()) add("missing-value", "The article has no why it matters explanation.");
+  for (const correction of article.corrections ?? []) {
+    if (!correction.description.trim()) add("invalid-correction", "A correction is missing its public description.");
+    if (!Number.isFinite(new Date(correction.date).getTime())) add("invalid-correction-date", "A correction has an invalid date.");
+  }
   if (!article.author?.name?.trim()) add("missing-author", "The article has no named author.");
   if (!article.image?.src?.trim() || !article.image?.alt?.trim() || (!article.image?.credit?.trim() && !article.image?.creditOmitted)) add("missing-image-metadata", "The lead image is missing a source, alt text, or credit decision.");
   if (article.body.length < 3 || articleWordCount(article) < 300) add("thin-article", "The article has less than 300 words or fewer than three body sections.", "medium");

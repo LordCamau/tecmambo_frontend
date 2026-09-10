@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { getSubstantialArticles, getAuthor, getAuthors } from "@/lib/content";
 import { StoryCard } from "@/components/cards/StoryCard";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { collectionPageJsonLd, personJsonLd } from "@/lib/seo";
+import { breadcrumbJsonLd, collectionPageJsonLd, personJsonLd } from "@/lib/seo";
 import styles from "./page.module.css";
 import { isAuthorIndexable } from "@/lib/content-quality";
 
@@ -72,6 +72,7 @@ export default async function AuthorPage({ params }: { params: Params }) {
       </section>
       <JsonLd data={personJsonLd(author)} />
       <JsonLd data={collectionPageJsonLd({ name: author.name, description: author.bio, path: `/authors/${author.slug}`, articles })} />
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: author.name, path: `/authors/${author.slug}` }])} />
     </>
   );
 }

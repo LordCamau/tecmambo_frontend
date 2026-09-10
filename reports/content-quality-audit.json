@@ -1,12 +1,12 @@
 {
   "summary": {
-    "generatedAt": "2026-09-09T19:14:55.913Z",
+    "generatedAt": "2026-09-10T19:06:48.863Z",
     "source": "repository content model",
     "totals": {
       "items": 559,
       "articles": 252,
-      "publiclyEligibleArticles": 179,
-      "excludedArticles": 73,
+      "publiclyEligibleArticles": 185,
+      "excludedArticles": 67,
       "indexableGlossaryTerms": 0,
       "noindexGlossaryTerms": 98
     }
@@ -556,7 +556,7 @@
         "Cloud",
         "Phishing"
       ],
-      "leadImage": "/articles/august21/trusted-saas-cloud-platforms-malware-phishing-europe-2026.svg",
+      "leadImage": "/articles/august21/trusted-saas-cloud-platforms-malware-phishing-europe-2026.webp",
       "leadImageAlt": "trusted cloud abuse shown as an original tecMAMBO analysis graphic linking familiar platform with security gateway.",
       "leadImageCredit": "Kaspersky Lab",
       "inlineImageCount": 0,
@@ -601,7 +601,7 @@
         "Europe",
         "Autonomous Driving"
       ],
-      "leadImage": "/articles/august21/china-car-exports-smart-driving-europe-global-pressure-2026.svg",
+      "leadImage": "/articles/august21/china-car-exports-smart-driving-europe-global-pressure-2026.webp",
       "leadImageAlt": "china auto exports shown as an original tecMAMBO analysis graphic linking +88.2% with 923,000 vehicles.",
       "leadImageCredit": "The Beep",
       "inlineImageCount": 0,
@@ -646,7 +646,7 @@
         "China",
         "E-commerce"
       ],
-      "leadImage": "/articles/august21/standard-bank-unionpay-ecommerce-nine-african-markets.svg",
+      "leadImage": "/articles/august21/standard-bank-unionpay-ecommerce-nine-african-markets.webp",
       "leadImageAlt": "cross-border e-commerce shown as an original tecMAMBO analysis graphic linking 9 markets with about 900 merchants.",
       "leadImageCredit": " ",
       "inlineImageCount": 0,
@@ -659,19 +659,13 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "noindex, follow",
-      "sitemap": false,
-      "homepageEligible": false,
-      "archiveEligible": false,
-      "recommendedAction": "retain and revise outside discovery",
-      "reason": "missing-image-metadata: The lead image is missing a source, alt text, or credit decision.",
-      "issues": [
-        {
-          "code": "missing-image-metadata",
-          "message": "The lead image is missing a source, alt text, or credit decision.",
-          "confidence": "high"
-        }
-      ]
+      "robots": "index, follow",
+      "sitemap": true,
+      "homepageEligible": true,
+      "archiveEligible": true,
+      "recommendedAction": "keep",
+      "reason": "No blocking quality issue detected.",
+      "issues": []
     },
     {
       "id": "editorial-august21-bolt-send-motorbikes-mombasa-last-mile-logistics",
@@ -697,7 +691,7 @@
         "Logistics",
         "Bolt"
       ],
-      "leadImage": "/articles/august21/bolt-send-motorbikes-mombasa-last-mile-logistics.svg",
+      "leadImage": "/articles/august21/bolt-send-motorbikes-mombasa-last-mile-logistics.webp",
       "leadImageAlt": "bolt send mombasa shown as an original tecMAMBO analysis graphic linking small parcel with motorbike.",
       "leadImageCredit": " ",
       "inlineImageCount": 0,
@@ -710,19 +704,13 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "noindex, follow",
-      "sitemap": false,
-      "homepageEligible": false,
-      "archiveEligible": false,
-      "recommendedAction": "retain and revise outside discovery",
-      "reason": "missing-image-metadata: The lead image is missing a source, alt text, or credit decision.",
-      "issues": [
-        {
-          "code": "missing-image-metadata",
-          "message": "The lead image is missing a source, alt text, or credit decision.",
-          "confidence": "high"
-        }
-      ]
+      "robots": "index, follow",
+      "sitemap": true,
+      "homepageEligible": true,
+      "archiveEligible": true,
+      "recommendedAction": "keep",
+      "reason": "No blocking quality issue detected.",
+      "issues": []
     },
     {
       "id": "editorial-august21-kenya-innovation-ecosystem-intelligence-platform-startups-investors-policy",
@@ -748,7 +736,7 @@
         "Policy",
         "Data"
       ],
-      "leadImage": "/articles/august21/kenya-innovation-ecosystem-intelligence-platform-startups-investors-policy.svg",
+      "leadImage": "/articles/august21/kenya-innovation-ecosystem-intelligence-platform-startups-investors-policy.webp",
       "leadImageAlt": "kenya startup intelligence shown as an original tecMAMBO analysis graphic linking fragmented data with verified map.",
       "leadImageCredit": "KAYAK",
       "inlineImageCount": 0,
@@ -793,7 +781,7 @@
         "Smart Home",
         "Accessories"
       ],
-      "leadImage": "/articles/august21/anker-kenya-expansion-east-africa-smart-home-ecosystem.svg",
+      "leadImage": "/articles/august21/anker-kenya-expansion-east-africa-smart-home-ecosystem.webp",
       "leadImageAlt": "anker kenya shown as an original tecMAMBO analysis graphic linking power + audio with service + warranty.",
       "leadImageCredit": " ",
       "inlineImageCount": 0,
@@ -806,19 +794,13 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "noindex, follow",
-      "sitemap": false,
-      "homepageEligible": false,
-      "archiveEligible": false,
-      "recommendedAction": "retain and revise outside discovery",
-      "reason": "missing-image-metadata: The lead image is missing a source, alt text, or credit decision.",
-      "issues": [
-        {
-          "code": "missing-image-metadata",
-          "message": "The lead image is missing a source, alt text, or credit decision.",
-          "confidence": "high"
-        }
-      ]
+      "robots": "index, follow",
+      "sitemap": true,
+      "homepageEligible": true,
+      "archiveEligible": true,
+      "recommendedAction": "keep",
+      "reason": "No blocking quality issue detected.",
+      "issues": []
     },
     {
       "id": "editorial-august21-yellow-series-c-smartphone-solar-financing-africa",
@@ -844,7 +826,7 @@
         "Solar",
         "Smartphones"
       ],
-      "leadImage": "/articles/august21/yellow-series-c-smartphone-solar-financing-africa.svg",
+      "leadImage": "/articles/august21/yellow-series-c-smartphone-solar-financing-africa.webp",
       "leadImageAlt": "asset finance shown as an original tecMAMBO analysis graphic linking smartphone with solar.",
       "leadImageCredit": "Yellow",
       "inlineImageCount": 0,
@@ -888,7 +870,7 @@
         "Kenya",
         "Digital Banking"
       ],
-      "leadImage": "/articles/august21/equity-absa-h1-2026-results-digital-banking-kenya.svg",
+      "leadImage": "/articles/august21/equity-absa-h1-2026-results-digital-banking-kenya.webp",
       "leadImageAlt": "kenya banks h1 2026 shown as an original tecMAMBO analysis graphic linking equity +32% with absa -10%.",
       "leadImageCredit": " ",
       "inlineImageCount": 0,
@@ -901,19 +883,13 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "noindex, follow",
-      "sitemap": false,
-      "homepageEligible": false,
-      "archiveEligible": false,
-      "recommendedAction": "retain and revise outside discovery",
-      "reason": "missing-image-metadata: The lead image is missing a source, alt text, or credit decision.",
-      "issues": [
-        {
-          "code": "missing-image-metadata",
-          "message": "The lead image is missing a source, alt text, or credit decision.",
-          "confidence": "high"
-        }
-      ]
+      "robots": "index, follow",
+      "sitemap": true,
+      "homepageEligible": true,
+      "archiveEligible": true,
+      "recommendedAction": "keep",
+      "reason": "No blocking quality issue detected.",
+      "issues": []
     },
     {
       "id": "editorial-august21-transsion-hong-kong-listing-africa-smartphone-growth",
@@ -940,7 +916,7 @@
         "China",
         "Africa"
       ],
-      "leadImage": "/articles/august21/transsion-hong-kong-listing-africa-smartphone-growth.svg",
+      "leadImage": "/articles/august21/transsion-hong-kong-listing-africa-smartphone-growth.webp",
       "leadImageAlt": "transsion h-share process shown as an original tecMAMBO analysis graphic linking africa demand with hong kong.",
       "leadImageCredit": " ",
       "inlineImageCount": 0,
@@ -953,19 +929,13 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "noindex, follow",
-      "sitemap": false,
-      "homepageEligible": false,
-      "archiveEligible": false,
-      "recommendedAction": "retain and revise outside discovery",
-      "reason": "missing-image-metadata: The lead image is missing a source, alt text, or credit decision.",
-      "issues": [
-        {
-          "code": "missing-image-metadata",
-          "message": "The lead image is missing a source, alt text, or credit decision.",
-          "confidence": "high"
-        }
-      ]
+      "robots": "index, follow",
+      "sitemap": true,
+      "homepageEligible": true,
+      "archiveEligible": true,
+      "recommendedAction": "keep",
+      "reason": "No blocking quality issue detected.",
+      "issues": []
     },
     {
       "id": "editorial-august21-on-device-agentic-ai-qualcomm-mediatek-hardware-2026",
@@ -990,7 +960,7 @@
         "Smartphones",
         "PCs"
       ],
-      "leadImage": "/articles/august21/on-device-agentic-ai-qualcomm-mediatek-hardware-2026.svg",
+      "leadImage": "/articles/august21/on-device-agentic-ai-qualcomm-mediatek-hardware-2026.webp",
       "leadImageAlt": "on-device agentic ai shown as an original tecMAMBO analysis graphic linking local npu with selective cloud.",
       "leadImageCredit": "Pocketnow",
       "inlineImageCount": 0,
@@ -1034,7 +1004,7 @@
         "IPO",
         "Capital Markets"
       ],
-      "leadImage": "/articles/august21/africa-fintech-ipos-opay-palmpay-airtel-money-offshore.svg",
+      "leadImage": "/articles/august21/africa-fintech-ipos-opay-palmpay-airtel-money-offshore.webp",
       "leadImageAlt": "african fintech capital shown as an original tecMAMBO analysis graphic linking africa with global exchanges.",
       "leadImageCredit": "Center for Inclusive Development",
       "inlineImageCount": 0,
@@ -1078,7 +1048,7 @@
         "Banking",
         "Payments"
       ],
-      "leadImage": "/articles/august21/ncba-pesalink-ksh20-flat-fee-kenya.svg",
+      "leadImage": "/articles/august21/ncba-pesalink-ksh20-flat-fee-kenya.webp",
       "leadImageAlt": "kenya bank transfers shown as an original tecMAMBO analysis graphic linking ksh 0 with ksh 20.",
       "leadImageCredit": " ",
       "inlineImageCount": 0,
@@ -1091,19 +1061,13 @@
       "handsOnEvidenceComplete": false,
       "specificationRows": 0,
       "placeholderIssues": [],
-      "robots": "noindex, follow",
-      "sitemap": false,
-      "homepageEligible": false,
-      "archiveEligible": false,
-      "recommendedAction": "retain and revise outside discovery",
-      "reason": "missing-image-metadata: The lead image is missing a source, alt text, or credit decision.",
-      "issues": [
-        {
-          "code": "missing-image-metadata",
-          "message": "The lead image is missing a source, alt text, or credit decision.",
-          "confidence": "high"
-        }
-      ]
+      "robots": "index, follow",
+      "sitemap": true,
+      "homepageEligible": true,
+      "archiveEligible": true,
+      "recommendedAction": "keep",
+      "reason": "No blocking quality issue detected.",
+      "issues": []
     },
     {
       "id": "editorial-august21-apple-airpods-cameras-visual-intelligence-leak-2026",
@@ -1128,7 +1092,7 @@
         "Wearables",
         "Privacy"
       ],
-      "leadImage": "/articles/august21/apple-airpods-cameras-visual-intelligence-leak-2026.svg",
+      "leadImage": "/articles/august21/apple-airpods-cameras-visual-intelligence-leak-2026.webp",
       "leadImageAlt": "Concept illustration of camera-equipped AirPods sending visual context to Siri, based on leaked software evidence and not official product photography.",
       "leadImageCredit": "Apple",
       "inlineImageCount": 0,
@@ -15507,7 +15471,7 @@
       "slug": "tim-humphreys",
       "url": "/authors/tim-humphreys",
       "type": "archive",
-      "eligibleArticleCount": 153,
+      "eligibleArticleCount": 159,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
@@ -15633,7 +15597,7 @@
       "slug": "e-commerce",
       "url": "/topics/e-commerce",
       "type": "archive",
-      "eligibleArticleCount": 3,
+      "eligibleArticleCount": 4,
       "robots": "noindex, follow",
       "sitemap": false,
       "homepageEligible": false,
@@ -15997,7 +15961,7 @@
       "slug": "business",
       "url": "/topics/business",
       "type": "archive",
-      "eligibleArticleCount": 42,
+      "eligibleArticleCount": 44,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
@@ -16011,7 +15975,7 @@
       "slug": "fintech",
       "url": "/topics/fintech",
       "type": "archive",
-      "eligibleArticleCount": 24,
+      "eligibleArticleCount": 26,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
@@ -16025,7 +15989,7 @@
       "slug": "banking",
       "url": "/topics/banking",
       "type": "archive",
-      "eligibleArticleCount": 5,
+      "eligibleArticleCount": 7,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
@@ -16487,7 +16451,7 @@
       "slug": "accessories",
       "url": "/topics/accessories",
       "type": "archive",
-      "eligibleArticleCount": 1,
+      "eligibleArticleCount": 2,
       "robots": "noindex, follow",
       "sitemap": false,
       "homepageEligible": false,
@@ -16571,7 +16535,7 @@
       "slug": "china",
       "url": "/topics/china",
       "type": "archive",
-      "eligibleArticleCount": 9,
+      "eligibleArticleCount": 11,
       "robots": "index, follow",
       "sitemap": true,
       "homepageEligible": false,
@@ -16683,7 +16647,7 @@
       "slug": "logistics",
       "url": "/topics/logistics",
       "type": "archive",
-      "eligibleArticleCount": 1,
+      "eligibleArticleCount": 2,
       "robots": "noindex, follow",
       "sitemap": false,
       "homepageEligible": false,
@@ -16753,7 +16717,7 @@
       "slug": "payments",
       "url": "/topics/payments",
       "type": "archive",
-      "eligibleArticleCount": 1,
+      "eligibleArticleCount": 3,
       "robots": "noindex, follow",
       "sitemap": false,
       "homepageEligible": false,
@@ -17929,7 +17893,7 @@
       "slug": "tecno",
       "url": "/brands/tecno",
       "type": "archive",
-      "eligibleArticleCount": 2,
+      "eligibleArticleCount": 3,
       "robots": "noindex, follow",
       "sitemap": false,
       "homepageEligible": false,

@@ -66,6 +66,12 @@ function articleFragment(includeEditorialControls = false) {
       subhead
       cardHeadline
       whyItMatters
+      quickAnswer
+      isNewsworthy
+      corrections {
+        date
+        description
+      }
       imageCredit
       sponsored
       readTime

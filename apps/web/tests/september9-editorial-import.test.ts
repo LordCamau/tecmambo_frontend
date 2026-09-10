@@ -85,13 +85,14 @@ describe("September 9 editorial bundle import", () => {
     }
   });
 
-  it("includes every article in RSS, with news stories in Google News", () => {
+  it("includes every article in RSS, with explicitly newsworthy stories in Google News", () => {
     const published = imported.map((article) => article!);
     const rss = buildRssFeed(published);
     const news = buildGoogleNewsSitemap(published);
     for (const article of published) {
       expect(rss).toContain(article.slug);
-      if (article.format === "news") expect(news).toContain(article.slug);
+      if (article.format === "news" || article.format === "business" || article.isNewsworthy) expect(news).toContain(article.slug);
+      else expect(news).not.toContain(article.slug);
     }
   });
 });

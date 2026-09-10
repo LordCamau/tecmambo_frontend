@@ -11,6 +11,9 @@ Add the fields below to the existing `articleFields` GraphQL group for the `post
 | `editorialStatus` | Select | `draft`, `editorial_review`, `fact_check`, `ready`, `published`, `needs_revision`, `archived` | Yes | Public value for published posts and authenticated preview | Missing values are assessed through publication status, completeness, and placeholder checks |
 | `indexingStatus` | Select | `index`, `noindex`, `inherit` | Yes | Public | Defaults to `inherit` |
 | `contentFormat` | Select | `news`, `analysis`, `explainer`, `buying_guide`, `hands_on_review`, `research_based_review`, `opinion`, `glossary`, `interview`, `field_test` | Yes | Public | Existing format taxonomy is used conservatively |
+| `isNewsworthy` | True or false | `true`, `false` | Yes | Public | News and Business default to eligible; other formats require an explicit `true` |
+| `quickAnswer` | Text area | Editor-written plain text | No | Public | Omitted when absent; never generated automatically |
+| `corrections` | Repeater | ISO date and public description | No | Public | Omitted when absent; each entry renders visibly |
 | `reviewMethod` | Select | `hands_on`, `research_based`, `unknown` | Required for reviews | Public | Reviews default to `unknown` and are presented as research-based analysis |
 | `hasOriginalTesting` | True or false | `true`, `false` | Required for hands-on reviews | Public | Defaults to `false` |
 | `hasOriginalPhotography` | True or false | `true`, `false` | No | Public | Defaults to `false` |
@@ -54,6 +57,8 @@ Use `unknown` during migration or when evidence cannot be confirmed. It receives
 7. Test the new GraphQL fields in a non-production environment.
 8. Set `WORDPRESS_EDITORIAL_CONTROLS_AVAILABLE=true` only after the deployed schema returns all fields without an error.
 9. Run `npm run audit:content:ci`, `npm run audit:links:ci`, and the production build before deployment.
+
+When adding a correction, record the date and reader-facing description, then save the post so WordPress updates `modified`. Use `isNewsworthy=true` only for timely reporting or analysis; it never substitutes for the publication gates or the two-day Google News window.
 
 ## Known records requiring editorial action
 

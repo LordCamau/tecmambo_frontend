@@ -28,6 +28,32 @@
         "instructions": "One or two plain-English sentences explaining what changes for the reader."
       },
       {
+        "key": "field_quick_answer",
+        "label": "Quick answer",
+        "name": "quick_answer",
+        "type": "textarea",
+        "instructions": "Optional editor-written answer shown near the top of the article. Do not auto-generate or backfill this field."
+      },
+      {
+        "key": "field_is_newsworthy",
+        "label": "Include in Google News",
+        "name": "is_newsworthy",
+        "type": "true_false",
+        "instructions": "Use only for genuinely timely reporting or analysis. The 48-hour publication window and editorial gates still apply.",
+        "default_value": 0
+      },
+      {
+        "key": "field_corrections",
+        "label": "Corrections",
+        "name": "corrections",
+        "type": "repeater",
+        "instructions": "Add a dated, reader-visible description for each material correction. Saving a correction must also update the post modified date.",
+        "sub_fields": [
+          { "key": "field_correction_date", "label": "Correction date", "name": "date", "type": "date_picker", "return_format": "Y-m-d" },
+          { "key": "field_correction_description", "label": "Description", "name": "description", "type": "textarea", "required": 1 }
+        ]
+      },
+      {
         "key": "field_image_credit",
         "label": "Image credit",
         "name": "image_credit",

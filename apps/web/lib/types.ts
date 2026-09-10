@@ -34,6 +34,12 @@ export type Author = {
   bio: string;
   avatar: string;
   expertise: string[];
+  sameAs?: string[];
+};
+
+export type ArticleCorrection = {
+  date: string;
+  description: string;
 };
 
 export type SpecRow = {
@@ -93,6 +99,7 @@ export type Article = {
   subhead: string;
   excerpt: string;
   whyItMatters: string;
+  quickAnswer?: string;
   body: string[];
   goDeeper?: {
     intro: string;
@@ -134,6 +141,7 @@ export type Article = {
   tags: Tag[];
   regions?: RegionTerm[];
   faq?: Array<{ question: string; answer: string }>;
+  corrections?: ArticleCorrection[];
   sources?: Array<{ label: string; url: string }>;
   itemList?: string[];
   sponsored?: boolean;
@@ -143,6 +151,7 @@ export type Article = {
   editorialStatus?: "draft" | "draft_quarantine" | "editorial_review" | "fact_check" | "ready" | "published" | "needs_revision" | "archived";
   indexingStatus?: "index" | "noindex" | "inherit";
   contentFormat?: "news" | "analysis" | "explainer" | "buying_guide" | "hands_on_review" | "research_based_review" | "opinion" | "glossary" | "interview" | "field_test";
+  isNewsworthy?: boolean;
   reviewMethod?: "hands_on" | "research_based" | "unknown";
   hasOriginalTesting?: boolean;
   hasOriginalPhotography?: boolean;

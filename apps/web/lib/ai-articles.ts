@@ -59,7 +59,10 @@ const images = {
   aiHallucination: {
     src: "/articles/why-ai-hallucinates-and-how-to-catch-it.jpg",
     alt: "AI hallucination graphic attributed to mongmong_Studio on shutterstock.com.",
-    credit: "mongmong_Studio - shutterstock.com"
+    credit: "mongmong_Studio - shutterstock.com",
+    width: 1040,
+    height: 520,
+    type: "image/jpeg"
   },
   textTiles: {
     src: "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1800&auto=format&fit=crop",

@@ -108,12 +108,12 @@ export const editorialAugust21Records: EditorialRecord[] = [
     "updatedAt": "2026-08-21T13:20:00+03:00",
     "readTime": "5 min read",
     "image": {
-      "src": "/articles/august21/apple-airpods-cameras-visual-intelligence-leak-2026.svg",
+      "src": "/articles/august21/apple-airpods-cameras-visual-intelligence-leak-2026.webp",
       "alt": "Concept illustration of camera-equipped AirPods sending visual context to Siri, based on leaked software evidence and not official product photography.",
       "credit": "Apple",
-      "width": 1600,
-      "height": 900,
-      "type": "image/svg+xml"
+      "width": 1040,
+      "height": 520,
+      "type": "image/webp"
     },
     "tags": [
       {
@@ -262,12 +262,13 @@ export const editorialAugust21Records: EditorialRecord[] = [
     "updatedAt": "2026-08-21T13:20:00+03:00",
     "readTime": "5 min read",
     "image": {
-      "src": "/articles/august21/ncba-pesalink-ksh20-flat-fee-kenya.svg",
+      "src": "/articles/august21/ncba-pesalink-ksh20-flat-fee-kenya.webp",
       "alt": "kenya bank transfers shown as an original tecMAMBO analysis graphic linking ksh 0 with ksh 20.",
       "credit": " ",
-      "width": 1600,
-      "height": 900,
-      "type": "image/svg+xml"
+      "creditOmitted": true,
+      "width": 1040,
+      "height": 520,
+      "type": "image/webp"
     },
     "tags": [
       {
@@ -421,12 +422,12 @@ export const editorialAugust21Records: EditorialRecord[] = [
     "updatedAt": "2026-08-21T13:20:00+03:00",
     "readTime": "5 min read",
     "image": {
-      "src": "/articles/august21/africa-fintech-ipos-opay-palmpay-airtel-money-offshore.svg",
+      "src": "/articles/august21/africa-fintech-ipos-opay-palmpay-airtel-money-offshore.webp",
       "alt": "african fintech capital shown as an original tecMAMBO analysis graphic linking africa with global exchanges.",
       "credit": "Center for Inclusive Development",
-      "width": 1600,
-      "height": 900,
-      "type": "image/svg+xml"
+      "width": 1040,
+      "height": 520,
+      "type": "image/webp"
     },
     "tags": [
       {
@@ -588,12 +589,12 @@ export const editorialAugust21Records: EditorialRecord[] = [
     "updatedAt": "2026-08-21T13:20:00+03:00",
     "readTime": "5 min read",
     "image": {
-      "src": "/articles/august21/on-device-agentic-ai-qualcomm-mediatek-hardware-2026.svg",
+      "src": "/articles/august21/on-device-agentic-ai-qualcomm-mediatek-hardware-2026.webp",
       "alt": "on-device agentic ai shown as an original tecMAMBO analysis graphic linking local npu with selective cloud.",
       "credit": "Pocketnow",
-      "width": 1600,
-      "height": 900,
-      "type": "image/svg+xml"
+      "width": 1040,
+      "height": 520,
+      "type": "image/webp"
     },
     "tags": [
       {
@@ -743,12 +744,13 @@ export const editorialAugust21Records: EditorialRecord[] = [
     "updatedAt": "2026-08-21T13:20:00+03:00",
     "readTime": "5 min read",
     "image": {
-      "src": "/articles/august21/transsion-hong-kong-listing-africa-smartphone-growth.svg",
+      "src": "/articles/august21/transsion-hong-kong-listing-africa-smartphone-growth.webp",
       "alt": "transsion h-share process shown as an original tecMAMBO analysis graphic linking africa demand with hong kong.",
       "credit": " ",
-      "width": 1600,
-      "height": 900,
-      "type": "image/svg+xml"
+      "creditOmitted": true,
+      "width": 1040,
+      "height": 520,
+      "type": "image/webp"
     },
     "tags": [
       {
@@ -925,12 +927,13 @@ export const editorialAugust21Records: EditorialRecord[] = [
     "updatedAt": "2026-08-21T13:20:00+03:00",
     "readTime": "5 min read",
     "image": {
-      "src": "/articles/august21/equity-absa-h1-2026-results-digital-banking-kenya.svg",
+      "src": "/articles/august21/equity-absa-h1-2026-results-digital-banking-kenya.webp",
       "alt": "kenya banks h1 2026 shown as an original tecMAMBO analysis graphic linking equity +32% with absa -10%.",
       "credit": " ",
-      "width": 1600,
-      "height": 900,
-      "type": "image/svg+xml"
+      "creditOmitted": true,
+      "width": 1040,
+      "height": 520,
+      "type": "image/webp"
     },
     "tags": [
       {
@@ -1087,12 +1090,12 @@ export const editorialAugust21Records: EditorialRecord[] = [
     "updatedAt": "2026-08-21T13:20:00+03:00",
     "readTime": "5 min read",
     "image": {
-      "src": "/articles/august21/yellow-series-c-smartphone-solar-financing-africa.svg",
+      "src": "/articles/august21/yellow-series-c-smartphone-solar-financing-africa.webp",
       "alt": "asset finance shown as an original tecMAMBO analysis graphic linking smartphone with solar.",
       "credit": "Yellow",
-      "width": 1600,
-      "height": 900,
-      "type": "image/svg+xml"
+      "width": 1040,
+      "height": 520,
+      "type": "image/webp"
     },
     "tags": [
       {
@@ -1434,12 +1437,13 @@ export const editorialAugust21Records: EditorialRecord[] = [
     "updatedAt": "2026-08-21T13:20:00+03:00",
     "readTime": "5 min read",
     "image": {
-      "src": "/articles/august21/anker-kenya-expansion-east-africa-smart-home-ecosystem.svg",
+      "src": "/articles/august21/anker-kenya-expansion-east-africa-smart-home-ecosystem.webp",
       "alt": "anker kenya shown as an original tecMAMBO analysis graphic linking power + audio with service + warranty.",
       "credit": " ",
-      "width": 1600,
-      "height": 900,
-      "type": "image/svg+xml"
+      "creditOmitted": true,
+      "width": 1040,
+      "height": 520,
+      "type": "image/webp"
     },
     "tags": [
       {
@@ -1616,12 +1620,12 @@ export const editorialAugust21Records: EditorialRecord[] = [
     "updatedAt": "2026-08-21T13:20:00+03:00",
     "readTime": "5 min read",
     "image": {
-      "src": "/articles/august21/kenya-innovation-ecosystem-intelligence-platform-startups-investors-policy.svg",
+      "src": "/articles/august21/kenya-innovation-ecosystem-intelligence-platform-startups-investors-policy.webp",
       "alt": "kenya startup intelligence shown as an original tecMAMBO analysis graphic linking fragmented data with verified map.",
       "credit": "KAYAK",
-      "width": 1600,
-      "height": 900,
-      "type": "image/svg+xml"
+      "width": 1040,
+      "height": 520,
+      "type": "image/webp"
     },
     "tags": [
       {
@@ -1799,12 +1803,13 @@ export const editorialAugust21Records: EditorialRecord[] = [
     "updatedAt": "2026-08-21T13:20:00+03:00",
     "readTime": "5 min read",
     "image": {
-      "src": "/articles/august21/bolt-send-motorbikes-mombasa-last-mile-logistics.svg",
+      "src": "/articles/august21/bolt-send-motorbikes-mombasa-last-mile-logistics.webp",
       "alt": "bolt send mombasa shown as an original tecMAMBO analysis graphic linking small parcel with motorbike.",
       "credit": " ",
-      "width": 1600,
-      "height": 900,
-      "type": "image/svg+xml"
+      "creditOmitted": true,
+      "width": 1040,
+      "height": 520,
+      "type": "image/webp"
     },
     "tags": [
       {
@@ -1977,12 +1982,13 @@ export const editorialAugust21Records: EditorialRecord[] = [
     "updatedAt": "2026-08-21T13:20:00+03:00",
     "readTime": "5 min read",
     "image": {
-      "src": "/articles/august21/standard-bank-unionpay-ecommerce-nine-african-markets.svg",
+      "src": "/articles/august21/standard-bank-unionpay-ecommerce-nine-african-markets.webp",
       "alt": "cross-border e-commerce shown as an original tecMAMBO analysis graphic linking 9 markets with about 900 merchants.",
       "credit": " ",
-      "width": 1600,
-      "height": 900,
-      "type": "image/svg+xml"
+      "creditOmitted": true,
+      "width": 1040,
+      "height": 520,
+      "type": "image/webp"
     },
     "tags": [
       {
@@ -2135,12 +2141,12 @@ export const editorialAugust21Records: EditorialRecord[] = [
     "updatedAt": "2026-08-21T13:20:00+03:00",
     "readTime": "5 min read",
     "image": {
-      "src": "/articles/august21/china-car-exports-smart-driving-europe-global-pressure-2026.svg",
+      "src": "/articles/august21/china-car-exports-smart-driving-europe-global-pressure-2026.webp",
       "alt": "china auto exports shown as an original tecMAMBO analysis graphic linking +88.2% with 923,000 vehicles.",
       "credit": "The Beep",
-      "width": 1600,
-      "height": 900,
-      "type": "image/svg+xml"
+      "width": 1040,
+      "height": 520,
+      "type": "image/webp"
     },
     "tags": [
       {
@@ -2307,12 +2313,12 @@ export const editorialAugust21Records: EditorialRecord[] = [
     "updatedAt": "2026-08-21T13:20:00+03:00",
     "readTime": "5 min read",
     "image": {
-      "src": "/articles/august21/trusted-saas-cloud-platforms-malware-phishing-europe-2026.svg",
+      "src": "/articles/august21/trusted-saas-cloud-platforms-malware-phishing-europe-2026.webp",
       "alt": "trusted cloud abuse shown as an original tecMAMBO analysis graphic linking familiar platform with security gateway.",
       "credit": "Kaspersky Lab",
-      "width": 1600,
-      "height": 900,
-      "type": "image/svg+xml"
+      "width": 1040,
+      "height": 520,
+      "type": "image/webp"
     },
     "tags": [
       {

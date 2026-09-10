@@ -50,6 +50,9 @@ type WpArticle = {
     subhead?: string | null;
     cardHeadline?: string | null;
     whyItMatters?: string | null;
+    quickAnswer?: string | null;
+    isNewsworthy?: boolean | null;
+    corrections?: Array<{ date?: string | null; description?: string | null }> | null;
     imageCredit?: string | null;
     sponsored?: boolean | null;
     readTime?: string | null;
@@ -229,6 +232,7 @@ export function wpArticleToArticle(node: WpArticle): Article | null {
     subhead: text(fields?.subhead, excerpt),
     excerpt,
     whyItMatters: text(fields?.whyItMatters),
+    quickAnswer: text(fields?.quickAnswer) || undefined,
     body,
     goDeeper: fields?.goDeeper
       ? {
@@ -260,12 +264,16 @@ export function wpArticleToArticle(node: WpArticle): Article | null {
     tags,
     regions: regions.length ? regions : undefined,
     faq: fields?.faqs?.map((item) => ({ question: text(item.question), answer: text(item.answer) })).filter((item) => item.question && item.answer),
+    corrections: fields?.corrections
+      ?.map((item) => ({ date: item.date ?? "", description: text(item.description) }))
+      .filter((item) => item.date && item.description),
     sponsored: Boolean(fields?.sponsored),
     deal: dealFromWp(fields?.deal),
     publicationStatus: node.status?.toLowerCase() === "publish" ? "publish" : node.status?.toLowerCase() as Article["publicationStatus"] | undefined,
     editorialStatus: fields?.editorialStatus ?? undefined,
     indexingStatus: fields?.indexingStatus ?? undefined,
     contentFormat: fields?.contentFormat ?? undefined,
+    isNewsworthy: fields?.isNewsworthy ?? undefined,
     reviewMethod: fields?.reviewMethod ?? (format === "review" ? "unknown" : undefined),
     hasOriginalTesting: fields?.hasOriginalTesting ?? undefined,
     hasOriginalPhotography: fields?.hasOriginalPhotography ?? undefined,

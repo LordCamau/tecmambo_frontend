@@ -1,8 +1,9 @@
-import { getAuthors, getIndexableArticles, getTags } from "@/lib/content";
+import { getAuthors, getIndexableArticles, getIndexableGlossaryTerms, getTags } from "@/lib/content";
 import { articlePath, formats, siteUrl } from "@/lib/formats";
 import { africanRegions, regionPath } from "@/lib/regions";
-import type { Article } from "@/lib/types";
 import { isArchiveIndexable, isAuthorIndexable } from "@/lib/content-quality";
+export { buildSitemapIndex } from "@/lib/sitemap-freshness";
+import { latestArticleUpdatedAt } from "@/lib/sitemap-freshness";
 
 export type UrlSitemapEntry = {
   loc: string;
@@ -20,22 +21,8 @@ function escapeXml(value: string) {
     .replace(/'/g, "&apos;");
 }
 
-function isoDate(value?: string | Date) {
-  return (value ? new Date(value) : new Date()).toISOString();
-}
-
-function uniquePaths(paths: string[]) {
-  return paths.filter((path, index, all) => all.indexOf(path) === index);
-}
-
-function glossaryTopicPaths(articles: Article[]) {
-  return uniquePaths(
-    articles.flatMap((article) =>
-      article.tags
-        .filter((tag) => tag.kind === "topic")
-        .map((tag) => `/topics/${tag.slug}`)
-    )
-  );
+function isoDate(value: string | Date) {
+  return new Date(value).toISOString();
 }
 
 export function xmlResponse(xml: string) {
@@ -45,15 +32,6 @@ export function xmlResponse(xml: string) {
       "Cache-Control": "public, max-age=0, s-maxage=3600"
     }
   });
-}
-
-export function buildSitemapIndex(paths: string[]) {
-  const urls = paths
-    .map(
-      (path) => `<sitemap><loc>${escapeXml(`${siteUrl}${path}`)}</loc><lastmod>${isoDate()}</lastmod></sitemap>`
-    )
-    .join("");
-  return `<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</sitemapindex>`;
 }
 
 export function buildUrlSitemap(entries: UrlSitemapEntry[]) {
@@ -69,24 +47,21 @@ export function buildUrlSitemap(entries: UrlSitemapEntry[]) {
 }
 
 export async function pageSitemapEntries(): Promise<UrlSitemapEntry[]> {
-  const paths = [
-    "/",
-    "/latest",
-    "/glossary",
-    "/africa",
-    "/about",
-    "/terms",
-    "/editorial-standards",
-    "/privacy",
-    "/cookies",
-    "/compare-phones"
+  const [articles, terms] = await Promise.all([getIndexableArticles(), getIndexableGlossaryTerms()]);
+  const latestArticle = latestArticleUpdatedAt(articles);
+  const latestAfricaArticle = latestArticleUpdatedAt(articles.filter((article) => article.regions?.some((region) => region.group === "Africa")));
+  const latestTerm = terms.reduce((value, term) => Math.max(value, new Date(term.updatedAt).getTime()), 0);
+  return [
+    { loc: `${siteUrl}/`, lastmod: latestArticle, changefreq: "daily", priority: 1 },
+    { loc: `${siteUrl}/latest`, lastmod: latestArticle, changefreq: "daily", priority: 0.7 },
+    { loc: `${siteUrl}/glossary`, lastmod: latestTerm ? new Date(latestTerm).toISOString() : undefined, changefreq: "monthly", priority: 0.7 },
+    { loc: `${siteUrl}/africa`, lastmod: latestAfricaArticle, changefreq: "monthly", priority: 0.7 },
+    ...["/about", "/terms", "/editorial-standards", "/privacy", "/cookies", "/compare-phones"].map((path) => ({
+      loc: `${siteUrl}${path}`,
+      changefreq: "monthly" as const,
+      priority: 0.7
+    }))
   ];
-  return paths.map((path) => ({
-    loc: `${siteUrl}${path}`,
-    lastmod: isoDate(),
-    changefreq: path === "/" || path === "/latest" ? "daily" : "monthly",
-    priority: path === "/" ? 1 : 0.7
-  }));
 }
 
 export async function hubSitemapEntries(): Promise<UrlSitemapEntry[]> {
@@ -102,18 +77,17 @@ export async function hubSitemapEntries(): Promise<UrlSitemapEntry[]> {
   const qualifiedRegions = africanRegions.filter((region) => isArchiveIndexable(articles.filter((article) => article.regions?.some((item) => item.slug === region.slug)).length, region.description));
   const qualifiedFormats = Object.entries(formats).filter(([key, format]) =>
     isArchiveIndexable(articles.filter((article) => article.format === key).length, format.description)
-  ).map(([, format]) => format);
-  const paths = [
-    ...qualifiedFormats.map((format) => format.path),
-    ...glossaryTopicPaths(articles),
-    ...qualifiedRegions.map((region) => regionPath(region)),
-    ...qualifiedAuthors.map((author) => `/authors/${author.slug}`),
-    ...qualifiedTopics.map((topic) => `/topics/${topic.slug}`),
-    ...qualifiedBrands.map((brand) => `/brands/${brand.slug}`)
+  ).map(([key, format]) => ({ key, format }));
+  const entries = [
+    ...qualifiedFormats.map(({ key, format }) => ({ path: format.path, articles: articles.filter((article) => article.format === key) })),
+    ...qualifiedRegions.map((region) => ({ path: regionPath(region), articles: articles.filter((article) => article.regions?.some((item) => item.slug === region.slug)) })),
+    ...qualifiedAuthors.map((author) => ({ path: `/authors/${author.slug}`, articles: articles.filter((article) => article.author.slug === author.slug) })),
+    ...qualifiedTopics.map((topic) => ({ path: `/topics/${topic.slug}`, articles: articles.filter((article) => article.tags.some((tag) => tag.slug === topic.slug)) })),
+    ...qualifiedBrands.map((brand) => ({ path: `/brands/${brand.slug}`, articles: articles.filter((article) => article.tags.some((tag) => tag.slug === brand.slug)) }))
   ];
-  return uniquePaths(paths).map((path) => ({
+  return entries.filter((entry, index, all) => all.findIndex((candidate) => candidate.path === entry.path) === index).map(({ path, articles: hubArticles }) => ({
     loc: `${siteUrl}${path}`,
-    lastmod: isoDate(),
+    lastmod: latestArticleUpdatedAt(hubArticles),
     changefreq: "weekly",
     priority: 0.6
   }));

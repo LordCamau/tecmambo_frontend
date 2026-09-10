@@ -1,5 +1,6 @@
 import { articlePath, formats, siteUrl } from "@/lib/formats";
 import type { Article } from "@/lib/types";
+import { isNewsworthyArticle, isWithinGoogleNewsWindow } from "@/lib/newsworthiness";
 
 function escapeXml(value: string) {
   return value
@@ -62,13 +63,13 @@ export function buildJsonFeed(articles: Article[]) {
 export function buildGoogleNewsSitemap(articles: Article[]) {
   const recent = articles.filter(
     (article) =>
-      ["news", "business"].includes(article.format)
+      isNewsworthyArticle(article)
       && article.workflowVersion === "gated"
       && article.sourceChecked === true
       && article.humanEditorApproved === true
       && Boolean(article.editor)
       && Boolean(article.reviewedAt)
-      && Date.now() - new Date(article.publishedAt).getTime() < 48 * 60 * 60 * 1000
+      && isWithinGoogleNewsWindow(article)
   );
   const urls = recent
     .map(

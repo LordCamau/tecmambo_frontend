@@ -1,8 +1,8 @@
 # tecMAMBO internal link audit
 
-Generated: 2026-08-21T10:31:22.553Z
+Generated: 2026-09-10T19:06:48.481Z
 
-Articles checked: 240
+Articles checked: 252
 
 Issues: 0
 

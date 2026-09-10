@@ -1,10 +1,19 @@
-import { NextResponse, type NextRequest } from "next/server";
+import type { NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 
 export function proxy(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-  if (pathname.includes(".") && !pathname.endsWith(".md")) {
-    return NextResponse.next();
+  const forwardedHost = request.headers.get("x-forwarded-host") ?? request.headers.get("host") ?? request.nextUrl.hostname;
+  const hostname = forwardedHost.split(":")[0]!.toLowerCase();
+  if (hostname === "www.tecmambo.com") {
+    const canonicalUrl = request.nextUrl.clone();
+    canonicalUrl.protocol = "https:";
+    canonicalUrl.hostname = "tecmambo.com";
+    canonicalUrl.port = "";
+    return NextResponse.redirect(canonicalUrl, 308);
   }
+
+  const { pathname } = request.nextUrl;
+  if (pathname.includes(".") && !pathname.endsWith(".md")) return NextResponse.next();
   if (pathname !== pathname.toLowerCase()) {
     const url = request.nextUrl.clone();
     url.pathname = pathname.toLowerCase();

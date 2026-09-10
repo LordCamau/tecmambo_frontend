@@ -309,6 +309,16 @@ function addCrossLinks(articleNumber: number, body: string[]) {
 
 const parsedBundle = parseBundle();
 
+const explicitlyNewsworthyExplainers = new Set([
+  "digital-realty-nbo2-nairobi-data-centre-icolo",
+  "ca-kenya-standalone-data-centre-licence-consultation",
+  "paratus-g2m-fibre-route-east-africa-2026",
+  "nomba-3-million-debt-facility-africa-asia-payments",
+  "safaricom-ethiopia-15-million-subscribers-mpesa",
+  "snapdragon-8-elite-gen-5-dimensity-9500-agentic-ai",
+  "apple-eu-dma-october-2026-developer-terms"
+]);
+
 export const editorialSeptember9ImportReport = parsedBundle.map(({ articleNumber, spec }) => ({
   articleNumber,
   slug: spec.slug,
@@ -339,6 +349,7 @@ export function buildEditorialSeptember9Articles({ authors, topics, brands, regi
       slug: spec.slug,
       format,
       contentFormat: format === "news" ? "news" : format === "opinion" ? "opinion" : "explainer",
+      isNewsworthy: explicitlyNewsworthyExplainers.has(spec.slug),
       title: spec.h1,
       cardHeadline: cardHeadlineBySlug[spec.slug],
       seo: { title: spec.seoTitle, description: spec.metaDescription },

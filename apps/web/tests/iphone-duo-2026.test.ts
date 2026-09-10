@@ -38,11 +38,11 @@ describe("iPhone Duo September 9 publication", () => {
     expect(article?.comparisonTables?.[0]?.rows).toContainEqual({ label: "Colors", values: ["Star White and Night Sky"] });
   });
 
-  it("emits Article and FAQPage structured data and enters RSS", () => {
+  it("emits NewsArticle and FAQPage structured data and enters RSS", () => {
     expect(article?.faq).toHaveLength(6);
     expect(faqJsonLd(article?.faq ?? [])).toMatchObject({ "@type": "FAQPage" });
     expect(articleJsonLd(article!)).toMatchObject({
-      "@type": "Article",
+      "@type": "NewsArticle",
       headline: article?.title,
       author: { name: "Tim Humphreys" }
     });

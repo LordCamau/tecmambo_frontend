@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { buildGoogleNewsSitemap, buildRssFeed } from "../content/feeds";
 import { articleWordCount } from "../lib/article-quality";
 import { isArticleIndexable, isContentPubliclyEligible } from "../lib/content-quality";
@@ -83,23 +83,30 @@ describe("August 21 verified editorial bundle", () => {
     expect(text[canonicalSlugs[13]]).toMatch(/does not mean GitHub or OneDrive are unsafe products/i);
   });
 
-  it("uses 14 unique 16:9 original hero assets with complete metadata", () => {
+  it("uses 14 unique hero assets with complete metadata", () => {
     expect(new Set(bundle.map((article) => article.image.src)).size).toBe(14);
     for (const article of bundle) {
-      expect(article.image.src).toMatch(/^\/articles\/august21\/.+\.svg$/);
-      expect(article.image.width).toBe(1600);
-      expect(article.image.height).toBe(900);
-      expect(article.image.type).toBe("image/svg+xml");
+      const isVector = article.slug === "eu-dma-interoperability-smartphones-apple-google-2026";
+      expect(article.image.src).toMatch(isVector ? /^\/articles\/august21\/.+\.svg$/ : /^\/articles\/august21\/.+\.webp$/);
+      expect(article.image.width).toBe(isVector ? 1600 : 1040);
+      expect(article.image.height).toBe(isVector ? 900 : 520);
+      expect(article.image.type).toBe(isVector ? "image/svg+xml" : "image/webp");
       expect(article.image.alt.length).toBeGreaterThan(40);
-      expect(article.image.credit).toBe("tecMAMBO original illustration");
+      expect(Boolean(article.image.credit.trim()) || article.image.creditOmitted).toBe(true);
       expect(existsSync(join(process.cwd(), "public", article.image.src))).toBe(true);
-      expect(articleSocialImage(article)).toMatchObject({ width: 1600, height: 900, type: "image/svg+xml" });
+      expect(articleSocialImage(article)).toMatchObject({
+        width: isVector ? 1600 : 1040,
+        height: isVector ? 900 : 520,
+        type: isVector ? "image/svg+xml" : "image/webp"
+      });
     }
     expect(bundle[0].image.alt).toMatch(/concept illustration/i);
     expect(bundle[0].image.alt).toMatch(/not official product photography/i);
   });
 
   it("publishes RSS, structured data and eligible News sitemap entries", () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2026-08-21T14:00:00+03:00"));
     const rss = buildRssFeed(bundle);
     const news = buildGoogleNewsSitemap(bundle);
     for (const article of bundle) {
@@ -109,6 +116,7 @@ describe("August 21 verified editorial bundle", () => {
       if (article.format === "business") expect(news).toContain(canonical);
       else expect(news).not.toContain(canonical);
     }
+    vi.useRealTimers();
   });
 
   it("contains no public editorial markers or forbidden dash characters", () => {

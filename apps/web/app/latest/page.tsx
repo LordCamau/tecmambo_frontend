@@ -5,6 +5,8 @@ import { formats } from "@/lib/formats";
 import { StoryCard } from "@/components/cards/StoryCard";
 import styles from "./latest.module.css";
 import { isArchiveIndexable } from "@/lib/content-quality";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbJsonLd, collectionPageJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Latest",
@@ -14,7 +16,9 @@ export const metadata: Metadata = {
 
 export default async function LatestPage() {
   const articles = await getSubstantialArticles();
+  const description = "The newest tecMAMBO stories, with filters for every editorial format.";
   return (
+    <>
     <section className={`container ${styles.page}`}>
       <header className={styles.header}>
         <p>Latest</p>
@@ -36,5 +40,8 @@ export default async function LatestPage() {
         ))}
       </div>
     </section>
+    <JsonLd data={collectionPageJsonLd({ name: "Latest", description, path: "/latest", articles })} />
+    <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Latest", path: "/latest" }])} />
+    </>
   );
 }

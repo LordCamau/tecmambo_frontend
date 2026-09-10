@@ -230,6 +230,31 @@
   font-size: 14px;
 }
 
+.quickAnswer,
+.corrections {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  padding: 18px;
+}
+
+.quickAnswer h2,
+.corrections h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.quickAnswer p,
+.corrections ol {
+  margin: 0;
+}
+
+.corrections ol {
+  display: grid;
+  gap: 10px;
+  padding-left: 22px;
+}
+
 .dealBox {
   display: flex;
   align-items: center;

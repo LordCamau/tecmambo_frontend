@@ -83,6 +83,7 @@ export function buildIphoneDuoArticle({ authors, topics, brands, regions }: Buil
     slug: iphoneDuoImportReport.slug,
     format: "explainer",
     contentFormat: "explainer",
+    isNewsworthy: true,
     title: parsed.h1,
     cardHeadline: "iPhone Duo is official, with a $1,999 starting price",
     seo: {

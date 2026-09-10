@@ -18,6 +18,7 @@ import { articlePath, formats, siteUrl } from "@/lib/formats";
 import { siteSettings } from "@/lib/nav";
 import type { Article, Author, GlossaryTerm } from "@/lib/types";
 import { isHandsOnReview } from "@/lib/content-quality";
+import { isNewsworthyArticle } from "@/lib/newsworthiness";
 
 const organizationId = `${siteUrl}/#organization`;
 const organizationLogoId = `${siteUrl}/#logo`;
@@ -113,6 +114,7 @@ export function personJsonLd(author?: Author): WithContext<Person> {
     url: absoluteUrl(`/authors/${person.slug}`),
     image: absoluteUrl(person.avatar),
     knowsAbout: person.expertise,
+    ...(person.sameAs?.length ? { sameAs: person.sameAs } : {}),
     worksFor: {
       "@type": "NewsMediaOrganization",
       "@id": organizationId,
@@ -235,7 +237,7 @@ export function articleJsonLd(article: Article): WithContext<SchemaArticle | Rev
     },
     speakable: {
       "@type": "SpeakableSpecification",
-      cssSelector: ["article h1", "article .readable p"]
+      cssSelector: ["article h1", "article .quick-answer p", "article .readable p"]
     },
     wordCount,
     author: personJsonLd(article.author),
@@ -281,7 +283,7 @@ export function articleJsonLd(article: Article): WithContext<SchemaArticle | Rev
   }
   return {
     "@context": "https://schema.org",
-    "@type": article.format === "news" || article.format === "business" ? "NewsArticle" : article.format === "opinion" ? "OpinionNewsArticle" : "Article",
+    "@type": article.format === "opinion" ? "OpinionNewsArticle" : isNewsworthyArticle(article) ? "NewsArticle" : "Article",
     name: article.seo?.title ?? article.title,
     headline: article.title,
     description,

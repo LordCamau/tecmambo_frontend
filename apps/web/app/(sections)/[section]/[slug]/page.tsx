@@ -103,6 +103,11 @@ function isPhoneReview(article: Article) {
   return article.format === "review" && article.tags.some((tag) => tag.kind === "topic" && ["phones", "smartphones"].includes(tag.slug));
 }
 
+function formatCorrectionDate(value: string) {
+  const date = new Date(value);
+  return Number.isFinite(date.getTime()) ? new Intl.DateTimeFormat("en", { dateStyle: "long" }).format(date) : value;
+}
+
 function ArticleBodyBlock({
   paragraph,
   inlineImages,
@@ -437,6 +442,12 @@ export default async function ArticlePage({ params }: { params: Params }) {
           </section>
         ) : null}
         {article.sponsored ? <p className={styles.disclosure}>Sponsored article. tecMAMBO labels paid partner content plainly.</p> : null}
+        {article.quickAnswer && findPlaceholderIssues(article.quickAnswer).length === 0 ? (
+          <section className={`quick-answer ${styles.quickAnswer}`} aria-labelledby="quick-answer-title">
+            <h2 id="quick-answer-title">Quick answer</h2>
+            <p>{article.quickAnswer}</p>
+          </section>
+        ) : null}
         {article.format === "wallet-watch" ? (
           <p className={styles.affiliateDisclosure}>
             Wallet Watch may include affiliate links. Prices are manually checked by editors and can change before checkout.
@@ -522,6 +533,21 @@ export default async function ArticlePage({ params }: { params: Params }) {
                 </li>
               ))}
             </ul>
+          </section>
+        ) : null}
+        {article.corrections?.length ? (
+          <section className={styles.corrections} aria-labelledby="article-corrections-title">
+            <h2 id="article-corrections-title">Corrections</h2>
+            <ol>
+              {article.corrections.map((correction) => (
+                <li key={`${correction.date}-${correction.description}`}>
+                  <strong>
+                    Correction of <time dateTime={correction.date}>{formatCorrectionDate(correction.date)}</time>:
+                  </strong>{" "}
+                  {correction.description}
+                </li>
+              ))}
+            </ol>
           </section>
         ) : null}
         {article.closingLine ? <p className={styles.closingLine}>{article.closingLine}</p> : null}
