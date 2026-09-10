@@ -65,8 +65,8 @@ export default async function AuthorPage({ params }: { params: Params }) {
           ))}
         </div>
         <div className={styles.grid}>
-          {articles.map((article) => (
-            <StoryCard article={article} key={article.id} />
+          {articles.map((article, index) => (
+            <StoryCard article={article} key={article.id} priority={index === 0} />
           ))}
         </div>
       </section>

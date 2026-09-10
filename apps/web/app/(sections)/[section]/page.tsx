@@ -59,8 +59,8 @@ export default async function SectionPage({ params }: { params: Params }) {
           </nav>
         ) : null}
         <div className={styles.grid}>
-          {articles.map((article) => (
-            <StoryCard article={article} key={article.id} />
+          {articles.map((article, index) => (
+            <StoryCard article={article} key={article.id} priority={index === 0} />
           ))}
         </div>
       </section>
