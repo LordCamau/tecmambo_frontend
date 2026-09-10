@@ -84,6 +84,7 @@ export function buildIphoneDuoArticle({ authors, topics, brands, regions }: Buil
     format: "explainer",
     contentFormat: "explainer",
     title: parsed.h1,
+    cardHeadline: "iPhone Duo is official, with a $1,999 starting price",
     seo: {
       title: publishingValue(parsed.source, "SEO title"),
       description: publishingValue(parsed.source, "Meta description")

@@ -2383,6 +2383,9 @@ export function buildEditorialAugust21Articles({ authors, regions, existingEuDma
     const article = articleNumber === 8
       ? { ...record, id: existingEuDmaArticle.id, slug: existingEuDmaArticle.slug, format: existingEuDmaArticle.format, publishedAt: existingEuDmaArticle.publishedAt, faq: record.faq ?? existingEuDmaArticle.faq }
       : record;
-    return { ...article, author: bySlug(authors, authorSlug), regions: regionSlugs.map((slug) => bySlug(regions, slug)) };
+    const cardHeadline = article.slug === "yellow-series-c-smartphone-solar-financing-africa"
+      ? "Yellow's Series C bets on asset-backed credit across Africa"
+      : undefined;
+    return { ...article, cardHeadline, author: bySlug(authors, authorSlug), regions: regionSlugs.map((slug) => bySlug(regions, slug)) };
   });
 }

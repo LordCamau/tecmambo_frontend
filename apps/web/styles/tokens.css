@@ -58,7 +58,7 @@
   --badge-reallife-fg: var(--on-brand-purple-dark);
   --badge-news-bg: var(--brand-ink);
   --badge-news-fg: var(--on-brand-ink);
-  --badge-take-bg: transparent;
+  --badge-take-bg: var(--lavender);
   --badge-take-fg: var(--brand-purple-dark);
   --badge-take-border: var(--brand-purple);
   --badge-review-bg: var(--lavender);
@@ -120,6 +120,7 @@
   --gradient-aurora: #6E2BFF;
   --gradient-spectrum: #6E2BFF;
   --gradient-fallback: #4C1FC4;
+  --badge-take-bg: #211B3A;
   --badge-take-fg: #B6A2FF;
   --badge-take-border: #8A5BFF;
   --badge-review-bg: #211B3A;

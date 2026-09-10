@@ -28,6 +28,10 @@ Lane rows should expose:
 
 Every article must have a unique featured image with alt text and credit. The local draft loader uses deterministic topic-matched Unsplash placeholders until real CMS images exist.
 
+## Card headlines
+
+Articles may define an optional `cardHeadline` (`card_headline` in ACF) for homepage and section-card display. It should be an editorially meaningful 8 to 10 word variant that preserves the article's meaning without changing its H1, SEO title, URL, or social metadata. Card components must fall back to the full article title and apply a three-line clamp only when this field is empty.
+
 ## Deals
 
 Wallet Watch articles may carry a `deal` object with product, retailer, price, affiliate URL, expiry, threshold, and verification fields. Product/Offer schema only renders when `verified` is true.

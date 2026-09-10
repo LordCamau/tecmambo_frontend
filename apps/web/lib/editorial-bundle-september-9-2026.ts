@@ -138,6 +138,11 @@ const formatMap: Record<string, Format> = {
   "MAMBO Roundup": "news"
 };
 
+const cardHeadlineBySlug: Record<string, string> = {
+  "apple-surprise-and-shine-event-2026-preview": "Apple's first foldable arrives alongside a major leadership change",
+  "snapdragon-8-elite-gen-5-dimensity-9500-agentic-ai": "Your next Android flagship can act on its own"
+};
+
 const categoryAliases: Record<string, string> = {
   EVs: "evs-mobility",
   Mobility: "evs-mobility",
@@ -335,6 +340,7 @@ export function buildEditorialSeptember9Articles({ authors, topics, brands, regi
       format,
       contentFormat: format === "news" ? "news" : format === "opinion" ? "opinion" : "explainer",
       title: spec.h1,
+      cardHeadline: cardHeadlineBySlug[spec.slug],
       seo: { title: spec.seoTitle, description: spec.metaDescription },
       subhead: spec.metaDescription,
       excerpt: spec.metaDescription,

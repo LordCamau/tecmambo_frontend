@@ -31,4 +31,8 @@
 - Headlines use sentence case.
 - Mono type is reserved for labels, tags, specs, and compact metadata.
 - Homepage grid lanes are capped at three cards except the hero and latest rail. Feature lanes use a balanced four-story structure.
+- Four-story feature lanes use one bordered lead card beside three identical bordered horizontal secondary cards. Secondary cards always use a 4:3 thumbnail, one shared label position, a card headline, and byline/read-time metadata. Do not introduce separate "second" and "small" card templates.
+- The feature lead headline must remain at least one clear type step larger than secondary headlines, with a target ratio of roughly 1.5:1. Its wider container, summary, larger format badge, and more generous spacing reinforce the same hierarchy.
+- `FormatBadge` is the only presentation component for format labels. All formats use solid token-backed chips; color may identify the format, but geometry, typography, and spacing stay shared sitewide.
+- Card bylines and reading times use the shared metadata component. Blank reading times are calculated from article copy, and a blank author falls back to the publication name.
 - Segment pages to aid navigation, not to fill space.

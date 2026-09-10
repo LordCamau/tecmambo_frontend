@@ -6,9 +6,10 @@ import { articlePath, formats } from "@/lib/formats";
 import { getHomeCuration, type HomeLane } from "@/lib/home-curation";
 import { siteDescription, sitePreviewImage, siteTitle } from "@/lib/site-metadata";
 import { FormatBadge } from "@/components/signature/FormatBadge";
-import { RegionList } from "@/components/signature/RegionChip";
 import { SponsoredBadge } from "@/components/signature/SponsoredBadge";
 import { StoryCard } from "@/components/cards/StoryCard";
+import { ArticleCardMeta } from "@/components/cards/ArticleCardMeta";
+import { FeatureHeroCard, FeatureSecondaryCard } from "@/components/cards/FeatureStoryCards";
 import { NewsletterCard } from "@/components/cards/NewsletterCard";
 import { PartnerCard } from "@/components/cards/PartnerCard";
 import { RegionPreferencePanel } from "@/components/regions/RegionPreferencePanel";
@@ -56,34 +57,8 @@ function Lane({ lane }: { lane: HomeLane }) {
   );
 }
 
-function FeaturedArticleCard({ article, level }: { article: HomeLane["articles"][number]; level: "lead" | "second" | "small" }) {
-  const href = articlePath(article.format, article.slug);
-  return (
-    <article className={level === "lead" ? styles.featureLead : level === "second" ? styles.featureSecond : styles.featureSmall}>
-      <Link className={styles.featureImage} href={href} aria-label={article.title}>
-        <Image src={article.image.src} alt={article.image.alt} fill sizes={level === "lead" ? "(min-width: 980px) 46vw, 100vw" : "(min-width: 980px) 24vw, 100vw"} />
-        <span className={styles.featureBadge}>
-          <FormatBadge format={article.format} reviewMethod={article.reviewMethod} />
-          {article.sponsored ? <SponsoredBadge /> : null}
-        </span>
-      </Link>
-      <div className={styles.featureCopy}>
-        <RegionList regions={article.regions?.slice(0, 2)} />
-        <h3>
-          <Link href={href}>{article.title}</Link>
-        </h3>
-        {level !== "small" ? <p>{article.excerpt}</p> : null}
-        <div className={styles.heroMeta}>
-          <span>{article.author.name}</span>
-          <span>{article.readTime}</span>
-        </div>
-      </div>
-    </article>
-  );
-}
-
 function FeatureLane({ lane }: { lane: HomeLane }) {
-  const [lead, second, ...rest] = lane.articles;
+  const [lead, ...secondaryArticles] = lane.articles;
   if (!lead) return null;
   return (
     <section className={`container ${styles.lane} ${styles.featureLane}`}>
@@ -96,16 +71,11 @@ function FeatureLane({ lane }: { lane: HomeLane }) {
       </div>
       {lane.key === "africa" ? <RegionPreferencePanel /> : null}
       <div className={styles.featureGrid}>
-        <FeaturedArticleCard article={lead} level="lead" />
-        <div className={styles.featureStack}>
-          {second ? <FeaturedArticleCard article={second} level="second" /> : null}
-          {rest.length ? (
-            <div className={styles.featureMiniGrid}>
-              {rest.map((article) => (
-                <FeaturedArticleCard article={article} key={article.id} level="small" />
-              ))}
-            </div>
-          ) : null}
+        <FeatureHeroCard article={lead} />
+        <div className={styles.featureRail}>
+          {secondaryArticles.map((article) => (
+            <FeatureSecondaryCard article={article} key={article.id} />
+          ))}
         </div>
       </div>
     </section>
@@ -135,10 +105,7 @@ function HeroArticle({ article }: { article: HomeLane["articles"][number] }) {
           <Link href={href}>{article.title}</Link>
         </h1>
         <p className={styles.subhead}>{article.subhead}</p>
-        <div className={styles.heroMeta}>
-          <span>{article.author.name}</span>
-          <span>{article.readTime}</span>
-        </div>
+        <ArticleCardMeta article={article} className={styles.heroMeta} />
       </div>
     </article>
   );
@@ -175,10 +142,7 @@ export default async function HomePage() {
                     <h2>
                       <Link href={articlePath(article.format, article.slug)}>{article.title}</Link>
                     </h2>
-                    <div className={styles.heroMeta}>
-                      <span>{article.author.name}</span>
-                      <span>{article.readTime}</span>
-                    </div>
+                    <ArticleCardMeta article={article} className={styles.heroMeta} />
                   </div>
                 </article>
               ))}

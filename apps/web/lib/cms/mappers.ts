@@ -48,6 +48,7 @@ type WpArticle = {
   } | null;
   articleFields?: {
     subhead?: string | null;
+    cardHeadline?: string | null;
     whyItMatters?: string | null;
     imageCredit?: string | null;
     sponsored?: boolean | null;
@@ -223,6 +224,7 @@ export function wpArticleToArticle(node: WpArticle): Article | null {
     slug: node.slug,
     format,
     title: text(node.title),
+    cardHeadline: text(fields?.cardHeadline) || undefined,
     seo: node.seo?.title || node.seo?.metaDesc ? { title: node.seo.title ?? text(node.title), description: node.seo.metaDesc ?? excerpt } : undefined,
     subhead: text(fields?.subhead, excerpt),
     excerpt,

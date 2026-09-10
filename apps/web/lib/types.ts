@@ -85,6 +85,7 @@ export type Article = {
   slug: string;
   format: Format;
   title: string;
+  cardHeadline?: string;
   seo?: {
     title: string;
     description: string;

@@ -12,6 +12,14 @@
         "type": "text"
       },
       {
+        "key": "field_card_headline",
+        "label": "Card headline",
+        "name": "card_headline",
+        "type": "text",
+        "maxlength": 90,
+        "instructions": "Optional 8 to 10 word display headline for homepage and section cards. This does not replace the article H1."
+      },
+      {
         "key": "field_why_it_matters",
         "label": "Why it matters",
         "name": "why_it_matters",

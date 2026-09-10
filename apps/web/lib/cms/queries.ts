@@ -64,6 +64,7 @@ function articleFragment(includeEditorialControls = false) {
     }
     articleFields {
       subhead
+      cardHeadline
       whyItMatters
       imageCredit
       sponsored

@@ -5,6 +5,7 @@ import type { Article } from "@/lib/types";
 import { FormatBadge } from "@/components/signature/FormatBadge";
 import { RegionList } from "@/components/signature/RegionChip";
 import { SponsoredBadge } from "@/components/signature/SponsoredBadge";
+import { ArticleCardMeta } from "./ArticleCardMeta";
 import styles from "./StoryCard.module.css";
 
 export function StoryCard({ article, priority = false }: { article: Article; priority?: boolean }) {
@@ -35,10 +36,7 @@ export function StoryCard({ article, priority = false }: { article: Article; pri
             {article.deal.priceWas ? <del>{article.deal.currency} {article.deal.priceWas.toLocaleString("en-KE")}</del> : null}
           </div>
         ) : null}
-        <div className={styles.meta}>
-          <span>{article.author.name}</span>
-          <span>{article.readTime}</span>
-        </div>
+        <ArticleCardMeta article={article} />
       </div>
     </article>
   );

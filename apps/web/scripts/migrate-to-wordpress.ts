@@ -109,6 +109,7 @@ async function main() {
         region: regionIds,
         acf: {
           subhead: article.subhead,
+          card_headline: article.cardHeadline ?? "",
           why_it_matters: article.whyItMatters,
           image_credit: article.image.credit,
           sponsored: article.sponsored ?? false,
