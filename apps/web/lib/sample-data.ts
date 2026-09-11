@@ -16,6 +16,7 @@ import { buildEditorialAugust10Articles } from "@/lib/editorial-bundle-august-10
 import { buildEditorialAugust14Articles } from "@/lib/editorial-bundle-august-14-2026";
 import { buildEditorialAugust21Articles } from "@/lib/editorial-bundle-august-21-2026";
 import { buildEditorialSeptember9Articles } from "@/lib/editorial-bundle-september-9-2026";
+import { buildEditorialSeptember11Articles } from "@/lib/editorial-bundle-september-11-2026";
 import { buildIphoneDuoArticle } from "@/lib/iphone-duo-2026";
 import { buildPixel11LaunchArticle } from "@/lib/pixel-11-launch-2026";
 import { buildSafaricomBoardReshuffleArticle } from "@/lib/safaricom-board-reshuffle-2026";
@@ -961,6 +962,8 @@ const iphoneDuoArticle = buildIphoneDuoArticle({
   brands,
   regions: [kenyaRegion]
 });
+export const quarantinedTopics: Tag[] = [{ name: "AI & Ethics", slug: "ai-ethics", kind: "topic" }];
+export const quarantinedArticles = buildEditorialSeptember11Articles({ authors, topics: [...topics, ...quarantinedTopics], brands });
 const editorialAugust14Articles = buildEditorialAugust14Articles({
   authors,
   regions: [kenyaRegion, ethiopiaRegion]
@@ -1107,6 +1110,7 @@ function migrateLegacyLifecycle(article: Article): Article {
 
 export const articles: Article[] = [
   iphoneDuoArticle,
+  ...quarantinedArticles,
   ...editorialSeptember9Articles,
   roamGen3BatteryArticle,
   ...editorialAugust21Articles,

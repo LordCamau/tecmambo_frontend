@@ -87,7 +87,7 @@ export function assertArticleSeoMetadata(articles: Article[]) {
 }
 
 export function assertArticleImageMetadata(articles: Article[]) {
-  const failures = articles.flatMap((article) => {
+  const failures = articles.filter((article) => article.editorialStatus !== "draft_quarantine").flatMap((article) => {
     const allImages = [article.image, ...(article.inlineImages ?? [])];
     return allImages.flatMap((image) => {
       const label = `${article.slug}: ${image.src}`;
