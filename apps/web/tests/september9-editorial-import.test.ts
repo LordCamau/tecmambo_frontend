@@ -5,6 +5,7 @@ import { editorialSeptember9ImportReport } from "@/lib/editorial-bundle-septembe
 import { isArticleIndexable, isContentPubliclyEligible } from "@/lib/content-quality";
 import { buildGoogleNewsSitemap, buildRssFeed } from "@/content/feeds";
 import { articles } from "@/lib/sample-data";
+import { isWithinGoogleNewsWindow } from "@/lib/newsworthiness";
 
 const slugs = editorialSeptember9ImportReport.map((entry) => entry.slug);
 const imported = slugs.map((slug) => articles.find((article) => article.slug === slug));
@@ -91,7 +92,7 @@ describe("September 9 editorial bundle import", () => {
     const news = buildGoogleNewsSitemap(published);
     for (const article of published) {
       expect(rss).toContain(article.slug);
-      if (article.format === "news" || article.format === "business" || article.isNewsworthy) expect(news).toContain(article.slug);
+      if ((article.format === "news" || article.format === "business" || article.isNewsworthy) && isWithinGoogleNewsWindow(article)) expect(news).toContain(article.slug);
       else expect(news).not.toContain(article.slug);
     }
   });
