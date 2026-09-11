@@ -72,11 +72,9 @@ function FeatureLane({ lane }: { lane: HomeLane }) {
       {lane.key === "africa" ? <RegionPreferencePanel /> : null}
       <div className={styles.featureGrid}>
         <FeatureHeroCard article={lead} />
-        <div className={styles.featureRail}>
-          {secondaryArticles.map((article) => (
-            <FeatureSecondaryCard article={article} key={article.id} />
-          ))}
-        </div>
+        {secondaryArticles.map((article) => (
+          <FeatureSecondaryCard article={article} key={article.id} />
+        ))}
       </div>
     </section>
   );

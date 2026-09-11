@@ -12,8 +12,17 @@ describe("homepage feature-card contract", () => {
     expect(homepage).toContain("supportingStories.map");
     expect(homepage).toContain("<FeatureSecondaryCard article={article}");
     expect(homepage).not.toContain("styles.supportCard");
+    expect(homepage).not.toContain("styles.featureRail");
     expect(homepage).not.toContain('level: "lead" | "second" | "small"');
     expect(homepage).not.toContain("featureMiniGrid");
+  });
+
+  it("uses one three-column, two-row grid with a spanning hero", () => {
+    const css = source("app/page.module.css");
+    expect(css).toContain("grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr))");
+    expect(css).toContain("grid-template-rows: repeat(2, minmax(0, 1fr))");
+    expect(css).toContain("grid-row: 1 / span 2");
+    expect(css).not.toContain(".featureRail");
   });
 
   it("keeps the vertical thumbnail, chip, dek, fallback clamp, and metadata in the shared component", () => {

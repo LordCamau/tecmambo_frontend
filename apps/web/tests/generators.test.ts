@@ -84,6 +84,7 @@ describe("content generators", () => {
       const publishedTimes = lane.articles.map((article) => new Date(article.publishedAt).getTime());
       expect(publishedTimes).toEqual([...publishedTimes].sort((first, second) => second - first));
       expect(new Set(lane.articles.map((article) => article.id)).size).toBe(lane.articles.length);
+      if (lane.layout === "feature") expect(lane.articles).toHaveLength(5);
     }
     expect(new Set(aboveFoldArticleIds).size).toBe(aboveFoldArticleIds.length);
   });

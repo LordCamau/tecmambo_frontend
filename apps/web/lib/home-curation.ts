@@ -90,7 +90,7 @@ function lane(
   articles: Article[],
   linkLabel?: string,
   layout: HomeLane["layout"] = "grid",
-  limit = layout === "feature" ? 4 : 3
+  limit = layout === "feature" ? 5 : 3
 ) {
   const availableArticles = uniqueByImage(hottestFirst(articles));
   const capped = computingCappedLaneKeys.has(key)

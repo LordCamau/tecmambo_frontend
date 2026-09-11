@@ -17,15 +17,19 @@ async function inspect(viewport, name) {
   await page.goto(baseUrl, { waitUntil: "domcontentloaded" });
   await page.getByRole("heading", { name: "Phones in plain English" }).waitFor();
   const rejectCookies = page.getByRole("button", { name: "Reject all" });
-  if (await rejectCookies.isVisible()) await rejectCookies.click();
-  await page.addStyleTag({ content: ".skip-link, header { display: none !important; }" });
+  await rejectCookies.waitFor({ state: "visible", timeout: 2500 }).then(() => rejectCookies.click()).catch(() => undefined);
+  await page.addStyleTag({ content: ".skip-link, header { display: none !important; } article { transform: none !important; transition: none !important; }" });
 
   const homepageGroup = page
     .getByRole("article", { name: "Featured story" })
     .locator("xpath=..");
-  const featureSection = page
-    .getByRole("heading", { name: "Phones in plain English" })
-    .locator("xpath=ancestor::section[1]");
+  const featuredSections = [
+    ["phones", "Phones in plain English"],
+    ["mobility", "How transport tech moves in real life"],
+    ["africa", "Tech across Africa"],
+    ["business", "Startups and the industry behind the screen"],
+    ["ai", "Useful AI, without the stage smoke"]
+  ];
 
   async function inspectGroup(group, expectedCount, groupName) {
     await group.scrollIntoViewIfNeeded();
@@ -58,6 +62,17 @@ async function inspect(viewport, name) {
 
       return {
         cardCount: cards.length,
+        cardBoxes: cards.map((card) => {
+          const box = card.getBoundingClientRect();
+          return {
+            left: Math.round(box.left),
+            top: Math.round(box.top),
+            right: Math.round(box.right),
+            bottom: Math.round(box.bottom),
+            width: Math.round(box.width),
+            height: Math.round(box.height)
+          };
+        }),
         hierarchyRatio: headlineSize(cards[0]) / headlineSize(cards[1]),
         secondaryWidths: secondaryBoxes.map((box) => Math.round(box.width)),
         secondaryHeights: secondaryBoxes.map((box) => Math.round(box.height)),
@@ -95,15 +110,40 @@ async function inspect(viewport, name) {
       throw new Error(`${name}/${groupName}: secondary card heights differ`);
     }
 
+    if (groupName.startsWith("feature/")) {
+      const [hero, ...secondary] = result.cardBoxes;
+      const secondaryColumns = new Set(secondary.map((box) => box.left)).size;
+      const secondaryRows = new Set(secondary.map((box) => box.top)).size;
+
+      if (name === "desktop") {
+        if (secondaryColumns !== 2 || secondaryRows !== 2) throw new Error(`${name}/${groupName}: expected a 2x2 secondary grid, got ${secondaryColumns} columns and ${secondaryRows} rows (${JSON.stringify(secondary)})`);
+        if (hero.width < secondary[0].width * 1.9) throw new Error(`${name}/${groupName}: hero column is not approximately twice as wide`);
+        if (Math.abs(hero.top - Math.min(...secondary.map((box) => box.top))) > 2) throw new Error(`${name}/${groupName}: hero and secondary rows do not start together`);
+        if (Math.abs(hero.bottom - Math.max(...secondary.map((box) => box.bottom))) > 2) throw new Error(`${name}/${groupName}: hero does not span both secondary rows`);
+      } else if (name === "tablet") {
+        if (secondaryColumns !== 2 || secondaryRows !== 2) throw new Error(`${name}/${groupName}: expected the tablet 2x2 secondary grid`);
+        if (hero.width < secondary[0].width * 1.9) throw new Error(`${name}/${groupName}: tablet hero does not span both columns`);
+        if (Math.min(...secondary.map((box) => box.top)) <= hero.bottom) throw new Error(`${name}/${groupName}: tablet secondary grid is not below the hero`);
+      } else {
+        if (secondaryColumns !== 1 || secondaryRows !== 4) throw new Error(`${name}/${groupName}: expected a single ordered mobile stack`);
+        if (secondary[0].top <= hero.bottom) throw new Error(`${name}/${groupName}: mobile secondary stack is not below the hero`);
+      }
+    }
+
     return result;
   }
 
   const homepage = await inspectGroup(homepageGroup, 3, "homepage");
-  const feature = await inspectGroup(featureSection, 4, "phones");
+  const features = {};
+  for (const [key, heading] of featuredSections) {
+    const section = page.getByRole("heading", { name: heading }).locator("xpath=ancestor::section[1]");
+    features[key] = await inspectGroup(section, 5, `feature/${key}`);
+  }
+  const phonesSection = page.getByRole("heading", { name: "Phones in plain English" }).locator("xpath=ancestor::section[1]");
   await homepageGroup.screenshot({ path: join(outputDir, `home-supporting-${name}.png`) });
-  await featureSection.screenshot({ path: join(outputDir, `home-feature-${name}.png`) });
+  await phonesSection.screenshot({ path: join(outputDir, `home-feature-${name}.png`) });
   await browser.close();
-  return { homepage, feature };
+  return { homepage, features };
 }
 
 const desktop = await inspect({ width: 1440, height: 1000 }, "desktop");
