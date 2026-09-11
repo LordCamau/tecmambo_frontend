@@ -19,12 +19,12 @@ export function StoryCard({ article, priority = false }: { article: Article; pri
           sizes="(min-width: 960px) 33vw, 100vw"
           priority={priority}
         />
-        <span className={styles.badge}>
-          <FormatBadge format={article.format} reviewMethod={article.reviewMethod} />
-          {article.sponsored ? <SponsoredBadge /> : null}
-        </span>
       </Link>
       <div className={styles.body}>
+        <div className={styles.badge}>
+          <FormatBadge format={article.format} reviewMethod={article.reviewMethod} />
+          {article.sponsored ? <SponsoredBadge /> : null}
+        </div>
         <RegionList regions={article.regions?.slice(0, 2)} />
         <h3>
           <Link href={articlePath(article.format, article.slug)}>{article.title}</Link>

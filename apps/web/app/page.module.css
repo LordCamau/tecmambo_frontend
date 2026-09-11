@@ -87,14 +87,12 @@
   background: #050507;
 }
 
-.heroImage img,
-.supportImage img {
+.heroImage img {
   object-fit: cover;
   transition: transform 240ms ease;
 }
 
-.heroCard:hover .heroImage img,
-.supportCard:hover .supportImage img {
+.heroCard:hover .heroImage img {
   transform: scale(1.035);
 }
 
@@ -152,77 +150,6 @@
   align-self: stretch;
   height: 100%;
   min-height: 0;
-}
-
-.supportCard {
-  overflow: clip;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
-  align-content: start;
-  min-height: 0;
-  height: 100%;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  background: var(--surface);
-  color: var(--text);
-  box-shadow: var(--shadow-soft);
-  transition:
-    transform 180ms ease,
-    box-shadow 180ms ease;
-}
-
-.supportCard:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-hover);
-}
-
-:global(.dark) .supportCard {
-  border-color: transparent;
-  background: #18181b;
-  color: var(--white);
-  box-shadow: none;
-}
-
-:global(.dark) .supportCard:hover {
-  box-shadow: var(--shadow-hover);
-}
-
-.supportImage {
-  position: relative;
-  display: block;
-  aspect-ratio: 2 / 1;
-  min-height: 0;
-  overflow: hidden;
-  background: var(--surface-raised);
-}
-
-:global(.dark) .supportImage {
-  background: #24242a;
-}
-
-.supportBody {
-  display: grid;
-  align-content: start;
-  gap: 9px;
-  padding: 12px 14px 14px;
-  min-height: 0;
-}
-
-.supportBody h2 {
-  margin: 0;
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-size: clamp(18px, 1.48vw, 21px);
-  font-weight: 600;
-  line-height: 1.16;
-}
-
-.supportBody .heroMeta {
-  color: var(--text-muted);
-}
-
-:global(.dark) .supportBody .heroMeta {
-  color: rgba(255, 255, 255, 0.68);
 }
 
 .latestRail {
@@ -365,7 +292,12 @@
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(340px, 1fr);
   gap: 22px;
-  align-items: stretch;
+  align-items: start;
+}
+
+.featureGrid > article {
+  align-self: start;
+  height: auto;
 }
 
 .featureRail {
@@ -469,10 +401,6 @@
     height: auto;
   }
 
-  .supportCard {
-    height: auto;
-  }
-
   .cardGrid,
   .formatGrid,
   .teachingGrid,
@@ -529,23 +457,6 @@
     font-size: 13px;
   }
 
-  .supportBody .heroMeta {
-    display: none;
-  }
-
-  .supportBody {
-    gap: 8px;
-    padding: 10px 12px 12px;
-  }
-
-  .supportBody h2 {
-    font-size: clamp(16px, 1.28vw, 18px);
-  }
-
-  .supportImage {
-    aspect-ratio: 2 / 1;
-  }
-
   .railHead {
     margin-bottom: 6px;
   }
@@ -580,14 +491,8 @@
   }
 
   .heroCard,
-  .supportCard,
   .supportGrid {
     grid-template-columns: 1fr;
-  }
-
-  .supportImage {
-    aspect-ratio: 2 / 1;
-    min-height: 0;
   }
 
   .heroImage {

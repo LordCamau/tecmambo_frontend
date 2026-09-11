@@ -9,18 +9,30 @@ describe("homepage feature-card contract", () => {
   it("uses one shared component for every secondary feature story", () => {
     const homepage = source("app/page.tsx");
     expect(homepage).toContain("secondaryArticles.map");
+    expect(homepage).toContain("supportingStories.map");
     expect(homepage).toContain("<FeatureSecondaryCard article={article}");
+    expect(homepage).not.toContain("styles.supportCard");
     expect(homepage).not.toContain('level: "lead" | "second" | "small"');
     expect(homepage).not.toContain("featureMiniGrid");
   });
 
-  it("keeps the secondary thumbnail, fallback clamp, and metadata in the shared component", () => {
+  it("keeps the vertical thumbnail, chip, dek, fallback clamp, and metadata in the shared component", () => {
     const component = source("components/cards/FeatureStoryCards.tsx");
     const css = source("components/cards/FeatureStoryCards.module.css");
     expect(component).toContain("export function FeatureSecondaryCard");
+    expect(component).toContain('<p className={styles.secondaryDek}>{article.excerpt}</p>');
     expect(component).toContain("<ArticleCardMeta article={article}");
-    expect(css).toContain("aspect-ratio: 4 / 3");
+    expect(css).toContain("grid-template-rows: auto 1fr");
+    expect(css).toContain("aspect-ratio: 2 / 1");
     expect(css).toContain("-webkit-line-clamp: 3");
+    expect(css).not.toContain("grid-template-columns: 128px");
+  });
+
+  it("keeps format badges below card images sitewide", () => {
+    const storyCard = source("components/cards/StoryCard.tsx");
+    const storyCardCss = source("components/cards/StoryCard.module.css");
+    expect(storyCard.indexOf('className={styles.body}')).toBeLessThan(storyCard.indexOf('className={styles.badge}'));
+    expect(storyCardCss.match(/\.badge\s*\{[^}]*position:\s*absolute/s)).toBeNull();
   });
 
   it("provides editorial card headlines for the current smartphone feature lane", () => {

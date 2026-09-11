@@ -50,16 +50,19 @@ export function FeatureSecondaryCard({ article }: { article: Article }) {
   return (
     <article className={styles.secondary}>
       <Link className={styles.secondaryImage} href={href} aria-label={article.title}>
-        <Image src={article.image.src} alt={article.image.alt} fill sizes="(min-width: 981px) 132px, (min-width: 641px) 160px, 104px" />
+        <Image
+          src={article.image.src}
+          alt={article.image.alt}
+          fill
+          sizes="(min-width: 1180px) 400px, (min-width: 981px) 32vw, (min-width: 641px) 50vw, calc(100vw - 32px)"
+        />
       </Link>
       <div className={styles.secondaryCopy}>
         <CardLabels article={article} />
-        <div className={styles.secondaryText}>
-          <RegionList regions={article.regions?.slice(0, 2)} />
-          <h3 className={clsx(!hasCardHeadline && styles.fallbackHeadline)}>
-            <Link href={href} title={hasCardHeadline ? undefined : article.title}>{cardHeadline(article)}</Link>
-          </h3>
-        </div>
+        <h3 className={clsx(!hasCardHeadline && styles.fallbackHeadline)}>
+          <Link href={href} title={hasCardHeadline ? undefined : article.title}>{cardHeadline(article)}</Link>
+        </h3>
+        <p className={styles.secondaryDek}>{article.excerpt}</p>
         <ArticleCardMeta article={article} />
       </div>
     </article>

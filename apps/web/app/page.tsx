@@ -130,21 +130,7 @@ export default async function HomePage() {
 
             <div className={styles.supportGrid}>
               {supportingStories.map((article) => (
-                <article className={styles.supportCard} key={article.id}>
-                  <Link className={styles.supportImage} href={articlePath(article.format, article.slug)}>
-                    <Image src={article.image.src} alt={article.image.alt} fill sizes="(min-width: 1180px) 360px, (min-width: 780px) 42vw, 100vw" />
-                  </Link>
-                  <div className={styles.supportBody}>
-                    <div className={styles.badgeRow}>
-                      <FormatBadge format={article.format} reviewMethod={article.reviewMethod} />
-                      {article.sponsored ? <SponsoredBadge /> : null}
-                    </div>
-                    <h2>
-                      <Link href={articlePath(article.format, article.slug)}>{article.title}</Link>
-                    </h2>
-                    <ArticleCardMeta article={article} className={styles.heroMeta} />
-                  </div>
-                </article>
+                <FeatureSecondaryCard article={article} key={article.id} />
               ))}
             </div>
           </div>
