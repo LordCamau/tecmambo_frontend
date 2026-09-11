@@ -14,7 +14,8 @@ await mkdir(outputDir, { recursive: true });
 async function inspect(viewport, name) {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({ viewport });
-  await page.goto(baseUrl, { waitUntil: "networkidle" });
+  await page.goto(baseUrl, { waitUntil: "domcontentloaded" });
+  await page.getByRole("heading", { name: "Phones in plain English" }).waitFor();
   const rejectCookies = page.getByRole("button", { name: "Reject all" });
   if (await rejectCookies.isVisible()) await rejectCookies.click();
   await page.addStyleTag({ content: ".skip-link, header { display: none !important; }" });
