@@ -18,7 +18,7 @@
 | Corrections | **Pass** | The model, CMS mapping, validation and visible correction log are implemented. |
 | Regression protection | **Pass** | News age/future exclusion, schema fields, FAQ parity and sitemap freshness are tested. |
 | Eleven approved bylines | **Needs Human Action** | The referenced approval file containing the exact 9/2 title mapping was absent. No byline was guessed. |
-| Core Web Vitals | **Fail / Needs Human Action** | CLS and lab responsiveness are good; representative live Lighthouse runs found LCP failures on several templates. Field INP requires CrUX/Search Console or RUM. |
+| Core Web Vitals | **Pass / Monitor Field Data** | A follow-up found concurrent-run network contention in the original desktop samples and fixed lazy loading of the Author/Hub LCP card. Eight serial post-fix samples pass. Field INP still requires CrUX/Search Console or RUM. |
 | HTTPS and HSTS | **Pass** | HSTS is set in application headers and `www` now redirects to the HTTPS apex in one hop. |
 | Structured data coverage | **Pass / Needs Human Action** | Article, organization, website, breadcrumb, collection, person, FAQ and glossary term schema are implemented. Author `sameAs` awaits approved profile URLs. |
 | Internal linking | **Pass** | No orphan article or broken internal article link was found; hubs and relevant related-story modules are populated. |
@@ -95,7 +95,7 @@ The instruction also prohibits judgment calls and byline changes outside the exa
 
 ## 2. Part B findings and fixes
 
-### B1. Core Web Vitals and page experience — Fail / Needs Human Action
+### B1. Core Web Vitals and page experience — Pass / Monitor Field Data
 
 Representative live Lighthouse runs were recorded before deployment of this implementation. INP is not produced by a load-only Lighthouse run, so TBT is reported as its laboratory diagnostic proxy. Google recommends real-user field data for INP and explicitly notes that Lighthouse uses TBT instead.
 
@@ -126,7 +126,9 @@ Implemented in this pass:
 - HSTS is now emitted as `max-age=63072000; includeSubDomains; preload`.
 - Requests to `www.tecmambo.com` now redirect directly to the equivalent HTTPS apex URL with the path and query preserved.
 
-Remaining human/data action: inspect the Core Web Vitals report in Search Console or PageSpeed Insights after deployment, particularly field INP and LCP at the 75th percentile. The lab results identify an LCP problem but cannot establish real-user INP.
+Follow-up diagnosis established that the four original desktop runs were launched concurrently and measured approximately 495–503 ms network RTT despite a 40 ms configured desktop preset. Serial post-fix runs now pass on all templates: desktop LCP ranges from 716–1,237 ms and mobile LCP from 2,349–2,489 ms. A genuine Author/Hub issue was also fixed: their first visible StoryCard image was the LCP element but was marked `loading="lazy"`; it is now High priority and preloaded. See the [full trace-based LCP investigation](desktop-lcp-root-cause-investigation-2026-09-11.md).
+
+Remaining human/data action: inspect the Core Web Vitals report in Search Console or PageSpeed Insights after deployment, particularly field INP and LCP at the 75th percentile. Lighthouse cannot establish real-user INP.
 
 Reference: [Google Web Vitals measurement guidance](https://web.dev/articles/vitals).
 
@@ -237,7 +239,7 @@ Editorial can now use these components for suitable explainers without making th
 
 1. **Editorial owner:** provide `phase2-approval-and-decisions-2026-09-10.md`, or a replacement list mapping each of the eleven named articles to Tim Humphreys or Lulu Camau. Do not send only “9 Tim / 2 Lulu”; the exact title mapping is required.
 2. **Search Console owner:** open [Google Search Console](https://search.google.com/search-console), confirm the `tecmambo.com` Domain property, submit/reconfirm `https://tecmambo.com/sitemap-index.xml`, and review sitemap errors, News discovery, indexing, manual actions and crawl statistics.
-3. **Performance owner:** after deployment, review Search Console Core Web Vitals and [PageSpeed Insights](https://pagespeed.web.dev/) for field LCP/INP. Prioritize the hub and author templates and the desktop LCP failures shown above.
+3. **Performance owner:** review Search Console Core Web Vitals and [PageSpeed Insights](https://pagespeed.web.dev/) for field LCP/INP after enough post-fix traffic accumulates. All controlled lab samples now pass, but the mobile Hub sample is close to the threshold.
 4. **Editorial/SEO owner:** review the 43 long titles and 38 long descriptions for clarity and search presentation. Change only where a shorter version is genuinely better.
 5. **Editorial owner:** triage the 46 sub-600-word stories individually. Expand only where additional reporting adds value; otherwise retain, consolidate, noindex or retire by editorial decision.
 6. **Author/editorial owner:** provide explicitly authorized professional profile URLs for author `sameAs`, or confirm that the fields should remain empty.
