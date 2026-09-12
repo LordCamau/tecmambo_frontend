@@ -16,6 +16,8 @@ type ParsedArticle = {
   title: string;
   seoTitle: string;
   metaDescription: string;
+  focusKeyphrase: string;
+  secondaryKeywords: string[];
   originalValue: string;
   byline: string;
   quickAnswer: string;
@@ -41,6 +43,10 @@ const scheduleBySlug: Record<string, string> = {
   "iphone-duo-vs-galaxy-z-fold8-comparison": "2026-09-11T07:49:00+03:00",
   "apple-watch-series-12-audio-intelligence-siri-recap": "2026-09-11T07:13:00+03:00",
   "xiaomi-18-fold-iphone-duo-design-comparison": "2026-09-11T06:37:00+03:00"
+};
+
+const updatedAtBySlug: Record<string, string> = {
+  "iphone-duo-vs-galaxy-z-fold8-comparison": "2026-09-12T12:01:47+03:00"
 };
 
 const taxonomyBySlug: Record<string, { topics: string[]; brands: string[] }> = {
@@ -72,13 +78,13 @@ const taxonomyBySlug: Record<string, { topics: string[]; brands: string[] }> = {
 
 const heroBySlug: Record<string, Article["image"]> = {
   "anthropic-researcher-jacob-coxon-resignation-ai-safety": {
-    src: "/articles/september11/anthropic-ai-safety.webp",
-    alt: "Abstract editorial illustration representing a public warning about AI safety.",
-    caption: "A public resignation has reopened the debate over how AI labs communicate safety risks.",
-    credit: "tecMAMBO",
+    src: "/articles/september11/Jacob_Coxon_AI_Whistleblower.jpg",
+    alt: "Jacob Coxon, former Anthropic and OpenAI Researcher now turned AI-whistleblower",
+    caption: "Jacob Coxon, former Anthropic and OpenAI Researcher now turned AI-whistleblower",
+    credit: "Financial Times",
     width: 1040,
     height: 520,
-    type: "image/webp"
+    type: "image/jpeg"
   },
   "xiaomi-18-fold-iphone-duo-design-comparison": {
     src: "/articles/september11/duo-vs-xiaomi-closed.webp",
@@ -90,10 +96,10 @@ const heroBySlug: Record<string, Article["image"]> = {
     type: "image/webp"
   },
   "iphone-duo-vs-galaxy-z-fold8-comparison": {
-    src: "/articles/september11/iphone-duo-foldables.webp",
-    alt: "Apple iPhone Duo shown in its two finishes.",
-    caption: "Apple's first foldable arrives after eight years of Samsung-led category development.",
-    credit: "Apple",
+    src: "/articles/september11/iphone-duo-vs-samsung-galaxy-z-fold8.webp",
+    alt: "iPhone Duo and Samsung Galaxy Z Fold8 shown unfolded side by side.",
+    caption: "Apple's iPhone Duo and Samsung's Galaxy Z Fold8 shown together for a direct foldable comparison.",
+    credit: "Apple and Samsung",
     width: 1040,
     height: 520,
     type: "image/webp"
@@ -132,6 +138,12 @@ const mediaAssetById: Record<string, Pick<ArticleMediaSlot, "src" | "credit" | "
   "special-issue-2-image-2": { src: "/articles/september11/duo-vs-xiaomi-open.webp", credit: "Apple and Xiaomi", width: 1040, height: 520 },
   "special-issue-2-image-3": { src: "/articles/september11/duo-vs-xiaomi-hinge.webp", credit: "Apple and Xiaomi", width: 1040, height: 520 },
   "special-issue-2-image-4": { src: "/articles/september11/duo-vs-xiaomi-camera.webp", credit: "Apple and Xiaomi", width: 1040, height: 520 },
+  "special-issue-3-image-1": {
+    src: "/articles/september11/samsung-galaxy-z-fold8-unfolded.webp",
+    credit: "Samsung",
+    width: 1040,
+    height: 520
+  },
   "special-issue-6-image-1": {
     src: "/articles/september11/apple-surprise-and-shine.webp",
     alt: "Apple's official key art for the September 9, 2026 Surprise and Shine keynote.",
@@ -290,7 +302,7 @@ function parseArticleBlock(block: string, number: number): ParsedArticle {
   const mediaSlots: ArticleMediaSlot[] = [];
   const comparisonTables: ArticleComparisonTable[] = [];
   const structuredBody = bodyBlocks.map((item) => {
-    if (/^\[IMAGE(?: COMPARISON)?\s+\d+/i.test(item)) {
+    if (/^\[IMAGE(?::|(?: COMPARISON)?\s+\d+)/i.test(item)) {
       const slot = parseMediaMarker(item, number, mediaSlots.length + 1);
       mediaSlots.push(slot);
       return `[[media:${slot.id}]]`;
@@ -311,6 +323,8 @@ function parseArticleBlock(block: string, number: number): ParsedArticle {
     title,
     seoTitle: publishingValue(block, "SEO title"),
     metaDescription: publishingValue(block, "Meta description"),
+    focusKeyphrase: publishingValue(block, "Focus keyphrase"),
+    secondaryKeywords: publishingValue(block, "Secondary keywords").split(",").map((keyword) => keyword.trim()).filter(Boolean),
     originalValue: publishingValue(block, "Original value"),
     byline: publishingValue(block, "Byline"),
     quickAnswer,
@@ -376,7 +390,9 @@ export function buildEditorialSeptember11Articles({ authors, topics, brands }: B
         status: "ready" as const,
         licensingNote: slot.id.startsWith("special-issue-2-")
           ? "Official Apple Newsroom and Xiaomi product press assets; editorial usage confirmed by the publisher."
-          : "Official Apple Newsroom press asset; editorial usage confirmed by the publisher."
+          : slot.id.startsWith("special-issue-3-")
+            ? "Official Samsung Newsroom press asset; editorial usage confirmed by the publisher."
+            : "Official Apple Newsroom press asset; editorial usage confirmed by the publisher."
       };
     });
 
@@ -387,7 +403,12 @@ export function buildEditorialSeptember11Articles({ authors, topics, brands }: B
       contentFormat: parsed.format === "opinion" ? "analysis" : "news",
       isNewsworthy: true,
       title: parsed.title,
-      seo: { title: parsed.seoTitle, description: parsed.metaDescription },
+      seo: {
+        title: parsed.seoTitle,
+        description: parsed.metaDescription,
+        focusKeyphrase: parsed.focusKeyphrase,
+        secondaryKeywords: parsed.secondaryKeywords
+      },
       subhead: parsed.metaDescription,
       excerpt: firstSentence(parsed.quickAnswer),
       whyItMatters: parsed.originalValue,
@@ -396,7 +417,7 @@ export function buildEditorialSeptember11Articles({ authors, topics, brands }: B
       faq: parsed.faq,
       author: requiredBySlug(authors, authorSlug, "author"),
       publishedAt,
-      updatedAt: publishedAt,
+      updatedAt: updatedAtBySlug[parsed.slug] ?? publishedAt,
       readTime: `${Math.max(1, Math.ceil(words / 220))} min read`,
       image: hero,
       mediaSlots,

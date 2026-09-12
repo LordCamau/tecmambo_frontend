@@ -226,7 +226,12 @@ export function articleJsonLd(article: Article): WithContext<SchemaArticle | Rev
     inLanguage: "en",
     isAccessibleForFree: true,
     articleSection: formats[article.format].section,
-    keywords: [...article.tags.map((tag) => tag.name), ...(article.regions?.map((region) => region.name) ?? [])].join(", "),
+    keywords: [
+      article.seo?.focusKeyphrase,
+      ...(article.seo?.secondaryKeywords ?? []),
+      ...article.tags.map((tag) => tag.name),
+      ...(article.regions?.map((region) => region.name) ?? [])
+    ].filter(Boolean).join(", "),
     abstract: article.whyItMatters,
     image: articleImages,
     thumbnailUrl: image.url,

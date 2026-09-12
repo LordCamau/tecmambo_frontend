@@ -95,6 +95,8 @@ export type Article = {
   seo?: {
     title: string;
     description: string;
+    focusKeyphrase?: string;
+    secondaryKeywords?: string[];
   };
   subhead: string;
   excerpt: string;

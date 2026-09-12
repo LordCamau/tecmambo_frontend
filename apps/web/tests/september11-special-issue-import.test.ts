@@ -69,7 +69,7 @@ describe("September 11 special issue publication", () => {
       const faqIndex = sourceBlocks.indexOf("## Frequently asked questions");
       expect(faqIndex).toBeGreaterThan(-1);
       const sourceProse = sourceBlocks.slice(0, faqIndex)
-        .filter((block) => !/^\[IMAGE(?: COMPARISON)?\s+\d+/i.test(block) && !block.startsWith("|"))
+        .filter((block) => !/^\[IMAGE(?::|(?: COMPARISON)?\s+\d+)/i.test(block) && !block.startsWith("|"))
         .join("\n\n");
       const importedProse = imported[index]!.body
         .filter((block) => !/^\[\[(?:media|table):/.test(block))
@@ -90,15 +90,16 @@ describe("September 11 special issue publication", () => {
 
   it("places every required official press-kit image with complete credit metadata", () => {
     expect(imported[1]?.mediaSlots).toHaveLength(4);
+    expect(imported[2]?.mediaSlots).toHaveLength(1);
     expect(imported[5]?.mediaSlots).toHaveLength(5);
     expect(imported[5]?.comparisonTables).toHaveLength(4);
-    for (const article of [imported[1], imported[5]]) {
+    for (const article of [imported[1], imported[2], imported[5]]) {
       for (const slot of article?.mediaSlots ?? []) {
         expect(slot.status).toBe("ready");
         expect(slot.src).toMatch(/^\/articles\/september11\/.+\.webp$/);
         expect(slot.alt).toBeTruthy();
         expect(slot.caption).toBeTruthy();
-        expect(slot.credit).toMatch(/Apple/);
+        expect(slot.credit).toMatch(/Apple|Samsung/);
         expect(slot.licensingNote).toContain("confirmed by the publisher");
         expect(slot.width).toBe(1040);
         expect(slot.height).toBe(520);
@@ -108,8 +109,28 @@ describe("September 11 special issue publication", () => {
     expect(comparisonTemplateRecommendation).toContain("MAMBO Explains");
     expect(comparisonTemplateRecommendation).toContain("MAMBO Take");
     expect(() => assertArticleImageMetadata(imported.map((article) => article!))).not.toThrow();
-    expect(imported.filter((article) => article?.image.credit === "Apple")).toHaveLength(4);
+    expect(imported.filter((article) => article?.image.credit === "Apple")).toHaveLength(3);
     expect(imported[1]?.image.credit).toBe("Apple and Xiaomi");
+    expect(imported[2]?.image.credit).toBe("Apple and Samsung");
+    expect(imported[2]?.image.alt).toContain("iPhone Duo and Samsung Galaxy Z Fold8");
+    expect(imported[0]?.image).toMatchObject({
+      src: "/articles/september11/Jacob_Coxon_AI_Whistleblower.jpg",
+      credit: "Financial Times"
+    });
+  });
+
+  it("updates only the indexed comparison article's editorial metadata and modified time", () => {
+    const article = imported[2]!;
+    expect(article.slug).toBe("iphone-duo-vs-galaxy-z-fold8-comparison");
+    expect(article.title).toBe("iPhone Duo vs Samsung Galaxy Z Fold8: What Apple Actually Got Right, and What It Didn't");
+    expect(article.seo).toEqual({
+      title: "iPhone Duo vs Samsung Galaxy Z Fold8: Honest Comparison",
+      description: "Apple's iPhone Duo goes up against the Samsung Galaxy Z Fold8 on display quality, software maturity, and price. Neither wins cleanly.",
+      focusKeyphrase: "iPhone Duo vs Samsung Galaxy Z Fold8",
+      secondaryKeywords: ["best foldable phone 2026", "iPhone Duo crease", "Samsung Galaxy Z Fold8 comparison"]
+    });
+    expect(article.publishedAt).toBe("2026-09-11T07:49:00+03:00");
+    expect(article.updatedAt).toBe("2026-09-12T12:01:47+03:00");
   });
 
   it("applies the cross-links and hub-and-spoke links without changing visible wording", () => {

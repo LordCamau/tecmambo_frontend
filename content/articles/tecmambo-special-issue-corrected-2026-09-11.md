@@ -170,16 +170,16 @@ Not currently. It has launched in China only, running a China specific build of 
 **Secondary categories:** Apple, Samsung
 **Suggested slug:** `iphone-duo-vs-galaxy-z-fold8-comparison`
 **Byline:** Tim Humphreys
-**H1:** Apple showed up eight years late to foldables. Here's what it actually got right, and what it didn't
-**SEO title:** iPhone Duo vs Galaxy Z Fold8: Honest Comparison
-**Meta description:** Apple's iPhone Duo goes up against Samsung's Galaxy Z Fold8 on display quality, software maturity, and price. Neither wins cleanly.
-**Focus keyphrase:** iPhone Duo vs Galaxy Z Fold8
-**Secondary keywords:** best foldable phone 2026, iPhone Duo crease, Galaxy Z Fold8 comparison
+**H1:** iPhone Duo vs Samsung Galaxy Z Fold8: What Apple Actually Got Right, and What It Didn't
+**SEO title:** iPhone Duo vs Samsung Galaxy Z Fold8: Honest Comparison
+**Meta description:** Apple's iPhone Duo goes up against the Samsung Galaxy Z Fold8 on display quality, software maturity, and price. Neither wins cleanly.
+**Focus keyphrase:** iPhone Duo vs Samsung Galaxy Z Fold8
+**Secondary keywords:** best foldable phone 2026, iPhone Duo crease, Samsung Galaxy Z Fold8 comparison
 **Word count target:** 1,100 to 1,300 words.
 **Original value:** Corrects an overstated "zero crease" claim and replaces one sided marketing framing with an actual weighed comparison, labeled clearly as analysis rather than neutral reporting.
 **Ad eligibility:** Standard consumer tech monetisation.
 
-# Apple showed up eight years late to foldables. Here's what it actually got right, and what it didn't
+# iPhone Duo vs Samsung Galaxy Z Fold8: What Apple Actually Got Right, and What It Didn't
 
 **Quick answer:** This is analysis, not neutral reporting. Apple's iPhone Duo arrives eight years after Samsung's original Galaxy Fold, and it improves meaningfully on crease visibility and software continuity compared to older foldables, but it does not eliminate the crease entirely, and Samsung's Z Fold8 has had years of iteration to refine its own software and hinge. Whether the Duo is actually better depends heavily on what you value, not on a clean technical win for either side.
 
@@ -194,6 +194,8 @@ It is worth being precise about the claim, though: Apple's own materials describ
 On software, Apple built iOS specifically for the dual screen form factor rather than adapting its existing phone interface, with apps reshaping automatically across the fold and a navigation layout redesigned around the wider aspect ratio. That is a genuine advantage over the early years of Android foldable software, which leaned on developers manually optimizing for unusual aspect ratios with inconsistent results.
 
 ## Where Samsung still has the edge
+
+[IMAGE: Samsung Galaxy Z Fold8 shown open in an official product image. Source: Samsung Newsroom press kit. Suggested alt text: "Samsung Galaxy Z Fold8 shown unfolded in an official product image." Caption: "Samsung's Galaxy Z Fold8 benefits from years of hardware and software iteration."]
 
 Samsung's Z Fold8 has years of real world iteration behind its hinge and software that the Duo, as a first generation device, has not had the chance to accumulate. Multi window multitasking on Android's foldable interface has matured across several hardware generations, and Samsung's One UI has had time to work out rough edges that Apple's dual screen iOS has not yet been tested against at scale.
 

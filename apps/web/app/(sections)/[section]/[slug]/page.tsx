@@ -303,9 +303,11 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const description = article.seo?.description ?? article.subhead;
   const previewImage = articleSocialImage(article);
   const indexable = isArticleIndexable(article);
+  const keywords = [article.seo?.focusKeyphrase, ...(article.seo?.secondaryKeywords ?? [])].filter((keyword): keyword is string => Boolean(keyword));
   return {
     title,
     description,
+    keywords: keywords.length ? keywords : undefined,
     robots: previewEnabled ? { index: false, follow: false } : indexable ? undefined : { index: false, follow: true },
     alternates: { canonical: path },
     openGraph: {
@@ -422,7 +424,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
         {article.image.caption || article.image.credit ? (
           <figcaption>
             {article.image.caption ?? article.image.credit}
-            {article.image.caption && article.image.credit ? ` Image Credit: ${article.image.credit}` : null}
+            {article.image.caption && article.image.credit ? ` Credit: ${article.image.credit}.` : null}
           </figcaption>
         ) : null}
       </figure>
