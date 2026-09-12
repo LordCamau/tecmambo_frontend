@@ -127,12 +127,19 @@ const heroBySlug: Record<string, Article["image"]> = {
   }
 };
 
-const mediaAssetById: Record<string, Pick<ArticleMediaSlot, "src" | "credit" | "width" | "height">> = {
+const mediaAssetById: Record<string, Pick<ArticleMediaSlot, "src" | "credit" | "width" | "height"> & Partial<Pick<ArticleMediaSlot, "alt" | "caption">>> = {
   "special-issue-2-image-1": { src: "/articles/september11/duo-vs-xiaomi-closed.webp", credit: "Apple and Xiaomi", width: 1040, height: 520 },
   "special-issue-2-image-2": { src: "/articles/september11/duo-vs-xiaomi-open.webp", credit: "Apple and Xiaomi", width: 1040, height: 520 },
   "special-issue-2-image-3": { src: "/articles/september11/duo-vs-xiaomi-hinge.webp", credit: "Apple and Xiaomi", width: 1040, height: 520 },
   "special-issue-2-image-4": { src: "/articles/september11/duo-vs-xiaomi-camera.webp", credit: "Apple and Xiaomi", width: 1040, height: 520 },
-  "special-issue-6-image-1": { src: "/articles/september11/apple-surprise-and-shine.webp", credit: "Apple", width: 1040, height: 520 },
+  "special-issue-6-image-1": {
+    src: "/articles/september11/apple-surprise-and-shine.webp",
+    alt: "Apple's official key art for the September 9, 2026 Surprise and Shine keynote.",
+    caption: "Apple's first keynote under new CEO John Ternus covered five new products across phones and watches.",
+    credit: "Apple",
+    width: 1040,
+    height: 520
+  },
   "special-issue-6-image-2": { src: "/articles/september11/apple-event-iphone-duo.webp", credit: "Apple", width: 1040, height: 520 },
   "special-issue-6-image-3": { src: "/articles/september11/apple-event-iphone-18-pro-max.webp", credit: "Apple", width: 1040, height: 520 },
   "special-issue-6-image-4": { src: "/articles/september11/apple-event-watch-series-12.webp", credit: "Apple", width: 1040, height: 520 },
