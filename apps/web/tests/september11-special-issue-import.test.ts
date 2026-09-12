@@ -119,7 +119,7 @@ describe("September 11 special issue publication", () => {
     });
   });
 
-  it("updates only the indexed comparison article's editorial metadata and modified time", () => {
+  it("updates the indexed comparison article's editorial metadata and modified time", () => {
     const article = imported[2]!;
     expect(article.slug).toBe("iphone-duo-vs-galaxy-z-fold8-comparison");
     expect(article.title).toBe("iPhone Duo vs Samsung Galaxy Z Fold8: What Apple Actually Got Right, and What It Didn't");
@@ -131,6 +131,22 @@ describe("September 11 special issue publication", () => {
     });
     expect(article.publishedAt).toBe("2026-09-11T07:49:00+03:00");
     expect(article.updatedAt).toBe("2026-09-12T12:01:47+03:00");
+  });
+
+  it("uses Apple's John Ternus event photo after the recap lead without changing publication time", () => {
+    const article = imported[5]!;
+    expect(article.slug).toBe("apple-surprise-and-shine-keynote-full-recap");
+    expect(article.publishedAt).toBe("2026-09-11T09:41:00+03:00");
+    expect(article.updatedAt).toBe("2026-09-12T17:05:29+03:00");
+    expect(article.mediaSlots?.[0]).toMatchObject({
+      id: "special-issue-6-image-1",
+      src: "/articles/september11/john-ternus-apple-october-2018.webp",
+      alt: "John Ternus presenting the redesigned iPad Pro at Apple's October 2018 keynote.",
+      caption: "John Ternus presents the redesigned iPad Pro at Apple's October 2018 keynote; he delivered his first keynote as Apple CEO on September 9, 2026.",
+      credit: "Apple",
+      width: 1040,
+      height: 520
+    });
   });
 
   it("applies the cross-links and hub-and-spoke links without changing visible wording", () => {

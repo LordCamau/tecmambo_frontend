@@ -46,7 +46,8 @@ const scheduleBySlug: Record<string, string> = {
 };
 
 const updatedAtBySlug: Record<string, string> = {
-  "iphone-duo-vs-galaxy-z-fold8-comparison": "2026-09-12T12:01:47+03:00"
+  "iphone-duo-vs-galaxy-z-fold8-comparison": "2026-09-12T12:01:47+03:00",
+  "apple-surprise-and-shine-keynote-full-recap": "2026-09-12T17:05:29+03:00"
 };
 
 const taxonomyBySlug: Record<string, { topics: string[]; brands: string[] }> = {
@@ -145,9 +146,9 @@ const mediaAssetById: Record<string, Pick<ArticleMediaSlot, "src" | "credit" | "
     height: 520
   },
   "special-issue-6-image-1": {
-    src: "/articles/september11/apple-surprise-and-shine.webp",
-    alt: "Apple's official key art for the September 9, 2026 Surprise and Shine keynote.",
-    caption: "Apple's first keynote under new CEO John Ternus covered five new products across phones and watches.",
+    src: "/articles/september11/john-ternus-apple-october-2018.webp",
+    alt: "John Ternus presenting the redesigned iPad Pro at Apple's October 2018 keynote.",
+    caption: "John Ternus presents the redesigned iPad Pro at Apple's October 2018 keynote; he delivered his first keynote as Apple CEO on September 9, 2026.",
     credit: "Apple",
     width: 1040,
     height: 520

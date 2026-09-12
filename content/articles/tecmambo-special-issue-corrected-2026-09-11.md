@@ -387,7 +387,7 @@ It starts at $399, with availability beginning September 18, 2026.
 
 Apple held its September hardware keynote at Apple Park, the first led by John Ternus, who became CEO on September 1 after Tim Cook moved into the role of executive chairman. Five products across three categories were announced. Below is the complete breakdown, including full specifications, since a headline alone doesn't tell you what you're actually paying for.
 
-[IMAGE 1 (HERO): Wide shot of Apple Park's Steve Jobs Theater at the September 9 keynote, or Apple's official event key art for "Surprise and Shine" if a venue shot isn't available in the press kit. Source: Apple Newsroom press kit. Suggested alt text: "Apple's September 9, 2026 Surprise and Shine keynote at Apple Park." Caption: "Apple's first keynote under new CEO John Ternus covered five new products across phones and watches."]
+[IMAGE 1 (HERO): John Ternus presenting the redesigned iPad Pro at Apple's October 2018 keynote. Source: Apple Newsroom press kit. Suggested alt text: "John Ternus presenting the redesigned iPad Pro at Apple's October 2018 keynote." Caption: "John Ternus presents the redesigned iPad Pro at Apple's October 2018 keynote; he delivered his first keynote as Apple CEO on September 9, 2026."]
 
 ## The iPhone Duo
 
