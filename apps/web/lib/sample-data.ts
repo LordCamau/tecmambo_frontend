@@ -64,6 +64,7 @@ export const authors: Author[] = [
 
 export const topics: Tag[] = [
   { name: "AI", slug: "ai", kind: "topic" },
+  { name: "AI & Ethics", slug: "ai-ethics", kind: "topic" },
   { name: "AI Shopping", slug: "ai-shopping", kind: "topic" },
   { name: "Agentic AI", slug: "agentic-ai", kind: "topic" },
   { name: "Android", slug: "android", kind: "topic" },
@@ -962,8 +963,8 @@ const iphoneDuoArticle = buildIphoneDuoArticle({
   brands,
   regions: [kenyaRegion]
 });
-export const quarantinedTopics: Tag[] = [{ name: "AI & Ethics", slug: "ai-ethics", kind: "topic" }];
-export const quarantinedArticles = buildEditorialSeptember11Articles({ authors, topics: [...topics, ...quarantinedTopics], brands });
+export const quarantinedTopics: Tag[] = [];
+export const quarantinedArticles = buildEditorialSeptember11Articles({ authors, topics, brands });
 const editorialAugust14Articles = buildEditorialAugust14Articles({
   authors,
   regions: [kenyaRegion, ethiopiaRegion]

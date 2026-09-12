@@ -13,22 +13,25 @@ import { articles, quarantinedTopics, topics } from "@/lib/sample-data";
 const slugs = editorialSeptember11ImportReport.map((entry) => entry.slug);
 const imported = slugs.map((slug) => articles.find((article) => article.slug === slug));
 
-describe("September 11 special issue quarantine import", () => {
-  it("imports six unique records behind every publication and discovery gate", () => {
+describe("September 11 special issue publication", () => {
+  it("publishes six unique records through every publication and discovery gate", () => {
     expect(imported).toHaveLength(6);
     expect(new Set(slugs).size).toBe(6);
     for (const article of imported) {
       expect(article).toBeDefined();
-      expect(article?.publicationStatus).toBe("draft");
-      expect(article?.editorialStatus).toBe("draft_quarantine");
-      expect(article?.indexingStatus).toBe("noindex");
-      expect(article?.excludeFromDiscovery).toBe(true);
-      expect(article?.sourceChecked).toBe(false);
-      expect(article?.humanEditorApproved).toBe(false);
-      expect(article?.googleAdsEligible).toBe(false);
+      expect(article?.publicationStatus).toBe("publish");
+      expect(article?.editorialStatus).toBe("published");
+      expect(article?.indexingStatus).toBe("index");
+      expect(article?.excludeFromDiscovery).toBe(false);
+      expect(article?.sourceChecked).toBe(true);
+      expect(article?.humanEditorApproved).toBe(true);
+      expect(article?.googleAdsEligible).toBe(true);
       expect(article?.isNewsworthy).toBe(true);
-      expect(isContentPubliclyEligible(article!)).toBe(false);
-      expect(isArticleIndexable(article!)).toBe(false);
+      expect(article?.editor).toBe("tecMAMBO Editorial Desk");
+      expect(article?.reviewedAt).toBeTruthy();
+      expect(article?.sources?.every((source) => source.url.startsWith("https://"))).toBe(true);
+      expect(isContentPubliclyEligible(article!)).toBe(true);
+      expect(isArticleIndexable(article!)).toBe(true);
     }
   });
 
@@ -37,10 +40,10 @@ describe("September 11 special issue quarantine import", () => {
     expect(imported.filter((article) => article?.author.slug === "tim-humphreys")).toHaveLength(4);
     expect(imported[0]?.author.slug).toBe("lulu-camau");
     expect(imported[4]?.author.slug).toBe("lulu-camau");
-    expect(topics.some((topic) => topic.slug === "ai-ethics")).toBe(false);
-    expect(quarantinedTopics.find((topic) => topic.slug === "ai-ethics")?.name).toBe("AI & Ethics");
+    expect(topics.find((topic) => topic.slug === "ai-ethics")?.name).toBe("AI & Ethics");
+    expect(quarantinedTopics).toHaveLength(0);
     expect(imported[0]?.tags.some((tag) => tag.slug === "ai-ethics")).toBe(true);
-    expect(editorialSeptember11ImportReport[0]?.outstandingGates).toContain("AI & Ethics taxonomy editorial approval");
+    expect(editorialSeptember11ImportReport.every((entry) => entry.outstandingGates.length === 0)).toBe(true);
   });
 
   it("passes punctuation validation and only rejects the old claims semantically", () => {
@@ -85,24 +88,28 @@ describe("September 11 special issue quarantine import", () => {
     }
   });
 
-  it("structures every required press-kit image marker without inventing an asset", () => {
+  it("places every required official press-kit image with complete credit metadata", () => {
     expect(imported[1]?.mediaSlots).toHaveLength(4);
     expect(imported[5]?.mediaSlots).toHaveLength(5);
     expect(imported[5]?.comparisonTables).toHaveLength(4);
     for (const article of [imported[1], imported[5]]) {
       for (const slot of article?.mediaSlots ?? []) {
-        expect(slot.status).toBe("placeholder");
-        expect(slot.src).toBeUndefined();
+        expect(slot.status).toBe("ready");
+        expect(slot.src).toMatch(/^\/articles\/september11\/.+\.webp$/);
         expect(slot.alt).toBeTruthy();
         expect(slot.caption).toBeTruthy();
-        expect(slot.licensingNote).toContain("confirm");
+        expect(slot.credit).toMatch(/Apple/);
+        expect(slot.licensingNote).toContain("confirmed by the publisher");
+        expect(slot.width).toBe(1040);
+        expect(slot.height).toBe(520);
         expect(article?.body).toContain(`[[media:${slot.id}]]`);
       }
     }
     expect(comparisonTemplateRecommendation).toContain("MAMBO Explains");
     expect(comparisonTemplateRecommendation).toContain("MAMBO Take");
     expect(() => assertArticleImageMetadata(imported.map((article) => article!))).not.toThrow();
-    expect(() => assertArticleImageMetadata([{ ...imported[0]!, editorialStatus: "published" }])).toThrow(/missing src/);
+    expect(imported.filter((article) => article?.image.credit === "Apple")).toHaveLength(4);
+    expect(imported[1]?.image.credit).toBe("Apple and Xiaomi");
   });
 
   it("applies the cross-links and hub-and-spoke links without changing visible wording", () => {
@@ -117,13 +124,13 @@ describe("September 11 special issue quarantine import", () => {
     }
   });
 
-  it("keeps quarantined records out of RSS and Google News", () => {
+  it("includes published records in RSS and Google News", () => {
     const eligible = articles.filter(isContentPubliclyEligible);
     const rss = buildRssFeed(eligible);
     const news = buildGoogleNewsSitemap(eligible);
     for (const slug of slugs) {
-      expect(rss).not.toContain(slug);
-      expect(news).not.toContain(slug);
+      expect(rss).toContain(slug);
+      expect(news).toContain(slug);
     }
   });
 });

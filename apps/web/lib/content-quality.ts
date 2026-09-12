@@ -14,7 +14,7 @@ const placeholderPatterns: Array<{ code: string; pattern: RegExp }> = [
   { code: "publication-instruction", pattern: /recommended table fields for publication|for the editor|editor should|publish only after/i },
   { code: "future-update", pattern: /\b(?:to be updated|update later|coming soon)\b/i },
   { code: "missing-input", pattern: /\b(?:insert|add|supply|replace)\s+(?:the\s+)?(?:source|image|link|quote|price|citation|data|evidence)\b/i },
-  { code: "verification-needed", pattern: /\b(?:price check needed|needs testing|needs review|needs verification|verify (?:this|claim|price|source)|fact[- ]check)\b/i },
+  { code: "verification-needed", pattern: /\b(?:price check needed|needs testing|needs review|needs verification|verify (?:this|claim|price|source)|fact[- ]check (?:needed|required|pending))\b/i },
   { code: "dummy-copy", pattern: /\blorem ipsum\b/i },
   { code: "standalone-marker", pattern: /(?:^|\s)(?:TBD|TK|TODO|FIXME)(?:\s|$|[.:;,])/ }
 ];
