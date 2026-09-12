@@ -31,6 +31,7 @@ import { StoryCard } from "@/components/cards/StoryCard";
 import { AdSlot } from "@/components/ads/AdSlot";
 import { AdSenseScript } from "@/components/ads/AdSenseScript";
 import { YouTubeEmbed } from "@/components/media/YouTubeEmbed";
+import { ImageCaption } from "@/components/media/ImageCaption";
 import { JsonLd } from "@/components/seo/JsonLd";
 import styles from "./page.module.css";
 import { isArticleMonetizationEligible } from "@/lib/monetization";
@@ -144,9 +145,7 @@ function ArticleBodyBlock({
             height={mediaSlot.height ?? 675}
             sizes="(min-width: 920px) 720px, calc(100vw - 32px)"
           />
-          <figcaption>
-            {mediaSlot.caption}{mediaSlot.credit ? ` Credit: ${mediaSlot.credit}.` : ""}
-          </figcaption>
+          <ImageCaption caption={mediaSlot.caption} credit={mediaSlot.credit} />
         </figure>
       );
     }
@@ -192,7 +191,7 @@ function ArticleBodyBlock({
           height={inlineImage.height ?? 675}
           sizes="(min-width: 920px) 720px, calc(100vw - 32px)"
         />
-        <figcaption>{inlineImage.credit}</figcaption>
+        <ImageCaption credit={inlineImage.credit} />
       </figure>
     );
   }
@@ -421,12 +420,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
           priority
           sizes="(min-width: 1080px) 1040px, calc(100vw - 32px)"
         />
-        {article.image.caption || article.image.credit ? (
-          <figcaption>
-            {article.image.caption ?? article.image.credit}
-            {article.image.caption && article.image.credit ? ` Credit: ${article.image.credit}.` : null}
-          </figcaption>
-        ) : null}
+        <ImageCaption caption={article.image.caption} credit={article.image.credit} />
       </figure>
 
       <div className={`readable ${styles.body}`}>

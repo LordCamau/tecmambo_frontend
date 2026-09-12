@@ -1,12 +1,13 @@
 import type { Article, GlossaryTerm } from "@/lib/types";
 import { articlePath } from "@/lib/formats";
+import { formatImageCaption } from "@/lib/image-caption";
 
 function articleBodyBlockToMarkdown(article: Article, block: string) {
   const mediaSlotId = block.match(/^\[\[media:([a-z0-9-]+)\]\]$/)?.[1];
   const mediaSlot = mediaSlotId ? article.mediaSlots?.find((slot) => slot.id === mediaSlotId) : undefined;
   if (mediaSlotId) {
     if (!mediaSlot || mediaSlot.status !== "ready" || !mediaSlot.src || !mediaSlot.alt) return "";
-    return [`![${mediaSlot.alt}](${mediaSlot.src})`, "", mediaSlot.caption, mediaSlot.credit ? `Image credit: ${mediaSlot.credit}` : ""]
+    return [`![${mediaSlot.alt}](${mediaSlot.src})`, "", formatImageCaption(mediaSlot.caption, mediaSlot.credit)]
       .filter(Boolean)
       .join("\n");
   }
@@ -25,7 +26,7 @@ function articleBodyBlockToMarkdown(article: Article, block: string) {
   const inlineImageId = block.match(/^\[\[image:([a-z0-9-]+)\]\]$/)?.[1];
   const inlineImage = inlineImageId ? article.inlineImages?.find((image) => image.id === inlineImageId) : undefined;
   if (!inlineImage) return block;
-  return [`![${inlineImage.alt}](${inlineImage.src})`, "", `Image credit: ${inlineImage.credit}`].join("\n");
+  return [`![${inlineImage.alt}](${inlineImage.src})`, "", formatImageCaption(undefined, inlineImage.credit)].join("\n");
 }
 
 export function articleToMarkdown(article: Article) {

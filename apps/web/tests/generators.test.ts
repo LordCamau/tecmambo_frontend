@@ -175,7 +175,7 @@ describe("content generators", () => {
     expect(story?.body).toEqual(expect.arrayContaining(["## Design and thinness", "## Camera", "## Battery life", "## The verdict"]));
     expect(story?.body.join(" ")).not.toMatch(/must be treated as a draft|first thing to test|second question|third question/i);
     expect(markdown).toContain("![An iPhone Air standing upright to show its display and thin profile. Credit: Sam Rutherford.]");
-    expect(markdown).toContain("Image credit: Sam Rutherford");
+    expect(markdown).toContain("Credit: Sam Rutherford.");
     expect(markdown).not.toContain("[[image:");
     expect(articleSocialImage(story!)).toEqual({
       url: "https://tecmambo.com/articles/iphone-air-review.jpg",
@@ -274,7 +274,7 @@ describe("content generators", () => {
     );
     expect(markdown).toContain("![Samsung Galaxy A37 5G colour options laid out on a table. Credit: Daniel Schmidt.]");
     expect(markdown).toContain("![Samsung Galaxy A37 5G display viewed from the front. Credit: Daniel Schmidt.]");
-    expect(markdown).toContain("Image credit: Daniel Schmidt");
+    expect(markdown).toContain("Credit: Daniel Schmidt.");
     expect(markdown).toContain("KSh39,999");
     expect(markdown).toContain("## FAQ");
     expect(markdown).toContain("## Sources");
