@@ -133,16 +133,16 @@ describe("September 11 special issue publication", () => {
     expect(article.updatedAt).toBe("2026-09-12T12:01:47+03:00");
   });
 
-  it("uses Apple's John Ternus event photo after the recap lead without changing publication time", () => {
+  it("uses the supplied John Ternus iPhone Duo photo after the recap lead without changing publication time", () => {
     const article = imported[5]!;
     expect(article.slug).toBe("apple-surprise-and-shine-keynote-full-recap");
     expect(article.publishedAt).toBe("2026-09-11T09:41:00+03:00");
-    expect(article.updatedAt).toBe("2026-09-12T17:05:29+03:00");
+    expect(article.updatedAt).toBe("2026-09-12T17:17:43+03:00");
     expect(article.mediaSlots?.[0]).toMatchObject({
       id: "special-issue-6-image-1",
-      src: "/articles/september11/john-ternus-apple-october-2018.webp",
-      alt: "John Ternus presenting the redesigned iPad Pro at Apple's October 2018 keynote.",
-      caption: "John Ternus presents the redesigned iPad Pro at Apple's October 2018 keynote; he delivered his first keynote as Apple CEO on September 9, 2026.",
+      src: "/articles/september11/john-ternus-holding-iphone-duo-apple-launch-event.webp",
+      alt: "John Ternus holding the iPhone Duo during Apple's September 2026 launch event.",
+      caption: "John Ternus holds the iPhone Duo during Apple's September 2026 launch event.",
       credit: "Apple",
       width: 1040,
       height: 520

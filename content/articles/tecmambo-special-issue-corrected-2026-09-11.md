@@ -387,7 +387,7 @@ It starts at $399, with availability beginning September 18, 2026.
 
 Apple held its September hardware keynote at Apple Park, the first led by John Ternus, who became CEO on September 1 after Tim Cook moved into the role of executive chairman. Five products across three categories were announced. Below is the complete breakdown, including full specifications, since a headline alone doesn't tell you what you're actually paying for.
 
-[IMAGE 1 (HERO): John Ternus presenting the redesigned iPad Pro at Apple's October 2018 keynote. Source: Apple Newsroom press kit. Suggested alt text: "John Ternus presenting the redesigned iPad Pro at Apple's October 2018 keynote." Caption: "John Ternus presents the redesigned iPad Pro at Apple's October 2018 keynote; he delivered his first keynote as Apple CEO on September 9, 2026."]
+[IMAGE 1 (HERO): John Ternus holding the iPhone Duo during Apple's September 2026 launch event. Source: User-provided editorial image. Suggested alt text: "John Ternus holding the iPhone Duo during Apple's September 2026 launch event." Caption: "John Ternus holds the iPhone Duo during Apple's September 2026 launch event."]
 
 ## The iPhone Duo
 
