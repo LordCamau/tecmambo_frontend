@@ -17,6 +17,7 @@ import { buildEditorialAugust14Articles } from "@/lib/editorial-bundle-august-14
 import { buildEditorialAugust21Articles } from "@/lib/editorial-bundle-august-21-2026";
 import { buildEditorialSeptember9Articles } from "@/lib/editorial-bundle-september-9-2026";
 import { buildEditorialSeptember11Articles } from "@/lib/editorial-bundle-september-11-2026";
+import { buildEditorialSeptember13Articles } from "@/lib/editorial-bundle-september-13-2026";
 import { buildIphoneDuoArticle } from "@/lib/iphone-duo-2026";
 import { buildPixel11LaunchArticle } from "@/lib/pixel-11-launch-2026";
 import { buildSafaricomBoardReshuffleArticle } from "@/lib/safaricom-board-reshuffle-2026";
@@ -63,6 +64,13 @@ export const authors: Author[] = [
 ];
 
 export const topics: Tag[] = [
+  { name: "Kenya", slug: "kenya", kind: "topic" },
+  { name: "Politics", slug: "politics", kind: "topic" },
+  { name: "Education", slug: "education", kind: "topic" },
+  { name: "Software", slug: "software", kind: "topic" },
+  { name: "Robotics", slug: "robotics", kind: "topic" },
+  { name: "Research", slug: "research", kind: "topic" },
+  { name: "Security", slug: "security", kind: "topic" },
   { name: "AI", slug: "ai", kind: "topic" },
   { name: "AI & Ethics", slug: "ai-ethics", kind: "topic" },
   { name: "AI Shopping", slug: "ai-shopping", kind: "topic" },
@@ -188,6 +196,16 @@ export const topics: Tag[] = [
 ];
 
 export const brands: Tag[] = [
+  { name: "Absa Bank Kenya", slug: "absa-bank-kenya", kind: "brand" },
+  { name: "Fortinet", slug: "fortinet", kind: "brand" },
+  { name: "Nubia", slug: "nubia", kind: "brand" },
+  { name: "ByteDance", slug: "bytedance", kind: "brand" },
+  { name: "ZTE", slug: "zte", kind: "brand" },
+  { name: "Unitree", slug: "unitree", kind: "brand" },
+  { name: "FIDO Alliance", slug: "fido-alliance", kind: "brand" },
+  { name: "1Password", slug: "1password", kind: "brand" },
+  { name: "Bitwarden", slug: "bitwarden", kind: "brand" },
+  { name: "Dashlane", slug: "dashlane", kind: "brand" },
   { name: "Roam", slug: "roam", kind: "brand" },
   { name: "VLC", slug: "vlc", kind: "brand" },
   { name: "Sony", slug: "sony", kind: "brand" },
@@ -957,6 +975,12 @@ const editorialSeptember9Articles = buildEditorialSeptember9Articles({
   brands,
   regions: [kenyaRegion, nigeriaRegion, ethiopiaRegion, ugandaRegion, rwandaRegion]
 });
+const editorialSeptember13Articles = buildEditorialSeptember13Articles({
+  authors,
+  topics,
+  brands,
+  regions: [kenyaRegion]
+});
 const iphoneDuoArticle = buildIphoneDuoArticle({
   authors,
   topics,
@@ -1110,6 +1134,7 @@ function migrateLegacyLifecycle(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  ...editorialSeptember13Articles,
   iphoneDuoArticle,
   ...quarantinedArticles,
   ...editorialSeptember9Articles,
