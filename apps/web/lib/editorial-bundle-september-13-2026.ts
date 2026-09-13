@@ -51,7 +51,7 @@ const heroBySlug: Record<string, Article["image"]> = {
   "kenya-fortinet-ai-cybersecurity-talks": { src: "/articles/september13/Kenya_ICT_Ministry_Cybersecurity_Talks_With_Fortinet.jpg", alt: "Fortinet Technologies Canada office on Oct. 15, 2023, in Nepean, Ontario", caption: "Fortinet Technologies Canada office on Oct. 15, 2023, in Nepean, Ontario.", credit: "iStock Editorial", width: 1040, height: 520, type: "image/jpeg" },
   "kenya-digital-learning-junior-schools-status": { src: "/articles/september13/Kenya_Smartboard_Rollout_ICT.jpg", alt: "Former ICT PS Julius Bitok flags off the distribution of smartboards and laptops under the World Bank-backed KDEAP programme aimed at expanding digital learning in public junior schools.", caption: "Former ICT PS Julius Bitok flags off the distribution of smartboards and laptops under the World Bank-backed KDEAP programme aimed at expanding digital learning in public junior schools.", credit: "", creditOmitted: true, width: 1040, height: 520, type: "image/jpeg" },
   "google-gemini-desktop-app-windows-10-11": { src: "/articles/september13/Google_Gemini_Now_Available_Windows.jpg", alt: "Gemini desktop application running on a Windows laptop.", caption: "Google's Gemini desktop application is now available on Windows 10 and Windows 11.", credit: "WinCentral", width: 1040, height: 520, type: "image/jpeg" },
-  "nubia-navix-ultra-doubao-ai-agent-phone": { src: "/articles/september13/China_Mass_Market_AI_Agent_Phone_WeChat.jpg", alt: "A smartphone displaying WeChat against a green background.", caption: "An earlier phone running ByteDance's Doubao assistant encountered access restrictions in WeChat and some banking apps.", credit: "Shutterstock Images", width: 1040, height: 520, type: "image/jpeg" },
+  "nubia-navix-ultra-doubao-ai-agent-phone": { src: "/articles/september13/Nubia_NaviX_Ultra_ByteDance_Doubao_AI_Assistant.jpg", alt: "Nubia NaviX Ultra shown from the front and rear with the ByteDance Doubao AI assistant.", caption: "Nubia's NaviX Ultra puts ByteDance's Doubao AI assistant at the centre of the phone experience.", credit: "Nubia", width: 1040, height: 520, type: "image/jpeg" },
   "beyondmimic-humanoid-robot-sprint-spin-kick": { src: "/articles/september13/UC_Berkeley_Stanford_Humanoid_BeyondMimic.jpg", alt: "Humanoid robot balancing on one leg", caption: "Humanoid robot balancing on one leg.", credit: "Hybrid Robotics / YouTube", width: 1040, height: 520, type: "image/jpeg" },
   "hierascaffold-4d-lidar-autonomous-vehicles": { src: "/articles/september13/Singapore_University_AI_Framework_Training_Self_Driving_Cars.jpg", alt: "A Waymo self-driving test vehicle equipped with roof-mounted sensors.", caption: "A Waymo self-driving test vehicle equipped with roof-mounted sensors.", credit: "David Paul Morris/Bloomberg/Getty Images", width: 1040, height: 520, type: "image/jpeg" },
   "android-password-manager-interoperability-transfer": { src: "/articles/september13/Android_Switching_Password_Managers.jpg", alt: "Android mascot holding a key beside a phone showing a completed password and passkey import.", caption: "Android now supports direct credential transfers between participating password managers without an export file.", credit: "Google", width: 1040, height: 520, type: "image/jpeg" }
@@ -303,7 +303,9 @@ export function buildEditorialSeptember13Articles({ authors, topics, brands, reg
       faq: parsed.faq,
       author: required(authors, parsed.byline === "Lulu Camau" ? "lulu-camau" : "tim-humphreys", "author"),
       publishedAt,
-      updatedAt: "2026-09-13T20:18:00+03:00",
+      updatedAt: parsed.slug === "nubia-navix-ultra-doubao-ai-agent-phone"
+        ? "2026-09-13T20:46:00+03:00"
+        : "2026-09-13T20:18:00+03:00",
       readTime: `${Math.max(1, Math.ceil(words / 220))} min read`,
       image,
       mediaSlots: mediaSlots.length ? mediaSlots : undefined,

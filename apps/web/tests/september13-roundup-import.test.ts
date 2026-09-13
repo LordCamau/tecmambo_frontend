@@ -98,7 +98,7 @@ describe("September 13 corrected roundup publication", () => {
       "kenya-fortinet-ai-cybersecurity-talks": ["Kenya_ICT_Ministry_Cybersecurity_Talks_With_Fortinet.jpg", "iStock Editorial"],
       "kenya-digital-learning-junior-schools-status": ["Kenya_Smartboard_Rollout_ICT.jpg", ""],
       "google-gemini-desktop-app-windows-10-11": ["Google_Gemini_Now_Available_Windows.jpg", "WinCentral"],
-      "nubia-navix-ultra-doubao-ai-agent-phone": ["China_Mass_Market_AI_Agent_Phone_WeChat.jpg", "Shutterstock Images"],
+      "nubia-navix-ultra-doubao-ai-agent-phone": ["Nubia_NaviX_Ultra_ByteDance_Doubao_AI_Assistant.jpg", "Nubia"],
       "beyondmimic-humanoid-robot-sprint-spin-kick": ["UC_Berkeley_Stanford_Humanoid_BeyondMimic.jpg", "Hybrid Robotics / YouTube"],
       "hierascaffold-4d-lidar-autonomous-vehicles": ["Singapore_University_AI_Framework_Training_Self_Driving_Cars.jpg", "David Paul Morris/Bloomberg/Getty Images"],
       "android-password-manager-interoperability-transfer": ["Android_Switching_Password_Managers.jpg", "Google"]
