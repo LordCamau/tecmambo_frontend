@@ -9,6 +9,7 @@ import { isArticleIndexable, isContentPubliclyEligible } from "@/lib/content-qua
 import { assertArticleImageMetadata } from "@/lib/content-guard";
 import { buildGoogleNewsSitemap, buildRssFeed } from "@/content/feeds";
 import { articles, quarantinedTopics, topics } from "@/lib/sample-data";
+import { isWithinGoogleNewsWindow } from "@/lib/newsworthiness";
 
 const slugs = editorialSeptember11ImportReport.map((entry) => entry.slug);
 const imported = slugs.map((slug) => articles.find((article) => article.slug === slug));
@@ -167,7 +168,9 @@ describe("September 11 special issue publication", () => {
     const news = buildGoogleNewsSitemap(eligible);
     for (const slug of slugs) {
       expect(rss).toContain(slug);
-      expect(news).toContain(slug);
+      const article = articles.find((entry) => entry.slug === slug)!;
+      if (isWithinGoogleNewsWindow(article)) expect(news).toContain(slug);
+      else expect(news).not.toContain(slug);
     }
   });
 });

@@ -46,15 +46,32 @@ const taxonomyBySlug: Record<string, { topics: string[]; brands: string[]; regio
 };
 
 const heroBySlug: Record<string, Article["image"]> = {
-  "anthropic-kenya-ai-influence-operation-2027-election": { src: "/articles/september13/anthropic-kenya-ai-influence-operation.webp", alt: "Editorial illustration about AI-generated political posts in Kenya, showing connected accounts without depicting a real person.", caption: "Anthropic identified a single operator using Claude to create batches of political posts aimed at Kenyan audiences.", credit: "tecMAMBO", width: 1040, height: 520, type: "image/webp" },
-  "absa-bank-kenya-yusuf-omari-ceo-appointment": { src: "/articles/september13/absa-bank-kenya-yusuf-omari.webp", alt: "Editorial illustration representing the leadership transition at Absa Bank Kenya.", caption: "Absa Bank Kenya confirmed Yusuf Omari as Managing Director and CEO after a period as interim chief.", credit: "tecMAMBO", width: 1040, height: 520, type: "image/webp" },
-  "kenya-fortinet-ai-cybersecurity-talks": { src: "/articles/september13/kenya-fortinet-cybersecurity.webp", alt: "Editorial illustration of a digital shield representing Kenya's cybersecurity talks with Fortinet.", caption: "Kenya's talks with Fortinet form part of a broader year of cybersecurity diplomacy and institution building.", credit: "tecMAMBO", width: 1040, height: 520, type: "image/webp" },
-  "kenya-digital-learning-junior-schools-status": { src: "/articles/september13/kenya-digital-learning-smartboards.webp", alt: "Editorial illustration of a classroom smartboard for Kenya's digital learning rollout.", caption: "The government programme covers 10,382 public junior schools and is being delivered in phases.", credit: "tecMAMBO", width: 1040, height: 520, type: "image/webp" },
-  "google-gemini-desktop-app-windows-10-11": { src: "/articles/september13/gemini-desktop-windows.webp", alt: "Editorial illustration of the Gemini desktop app on a four-pane Windows interface.", caption: "Google's native Gemini app supports Windows 10 and Windows 11.", credit: "tecMAMBO", width: 1040, height: 520, type: "image/webp" },
-  "nubia-navix-ultra-doubao-ai-agent-phone": { src: "/articles/september13/nubia-navix-ultra-doubao.webp", alt: "Editorial illustration of a phone with an AI agent interface and an access control symbol.", caption: "Nubia's NaviX Ultra will put ByteDance's Doubao assistant at the centre of the phone experience.", credit: "tecMAMBO", width: 1040, height: 520, type: "image/webp" },
-  "beyondmimic-humanoid-robot-sprint-spin-kick": { src: "/articles/september13/beyondmimic-humanoid-robot.webp", alt: "Editorial illustration of a humanoid robot performing an agile movement.", caption: "BeyondMimic combines motion-specific control policies with a diffusion model that composes learned skills.", credit: "tecMAMBO", width: 1040, height: 520, type: "image/webp" },
-  "hierascaffold-4d-lidar-autonomous-vehicles": { src: "/articles/september13/hierascaffold-4d-lidar.webp", alt: "Editorial illustration of LiDAR rings scanning a changing urban environment.", caption: "HieraScaffold generates synthetic LiDAR scenes by separating static structures from moving objects.", credit: "tecMAMBO", width: 1040, height: 520, type: "image/webp" },
-  "android-password-manager-interoperability-transfer": { src: "/articles/september13/android-password-manager-transfer.webp", alt: "Editorial illustration of a key representing direct password manager transfers on Android.", caption: "Android now supports direct credential transfers between participating password managers without an export file.", credit: "tecMAMBO", width: 1040, height: 520, type: "image/webp" }
+  "anthropic-kenya-ai-influence-operation-2027-election": { src: "/articles/september13/Anthropic_Claude_Opiyo_Wandai.jpg", alt: "Energy Cabinet Secretary Opiyo Wandayi pictured beside an illustrated Claude AI logo.", caption: "The AI-generated posts praised Energy CS Opiyo Wandayi, but Anthropic found no evidence that he commissioned the operation.", credit: "Facebook / Opiyo Wandayi", width: 1040, height: 520, type: "image/jpeg" },
+  "absa-bank-kenya-yusuf-omari-ceo-appointment": { src: "/articles/september13/Absa_Bank_Kenya_New_CEO_Yusuf_Omari.jpg", alt: "Yusuf Omari, CEO - Absa Bank Kenya", caption: "Yusuf Omari, CEO - Absa Bank Kenya.", credit: "Nation Media Group", width: 1040, height: 520, type: "image/jpeg" },
+  "kenya-fortinet-ai-cybersecurity-talks": { src: "/articles/september13/Kenya_ICT_Ministry_Cybersecurity_Talks_With_Fortinet.jpg", alt: "Fortinet Technologies Canada office on Oct. 15, 2023, in Nepean, Ontario", caption: "Fortinet Technologies Canada office on Oct. 15, 2023, in Nepean, Ontario.", credit: "iStock Editorial", width: 1040, height: 520, type: "image/jpeg" },
+  "kenya-digital-learning-junior-schools-status": { src: "/articles/september13/Kenya_Smartboard_Rollout_ICT.jpg", alt: "Former ICT PS Julius Bitok flags off the distribution of smartboards and laptops under the World Bank-backed KDEAP programme aimed at expanding digital learning in public junior schools.", caption: "Former ICT PS Julius Bitok flags off the distribution of smartboards and laptops under the World Bank-backed KDEAP programme aimed at expanding digital learning in public junior schools.", credit: "", creditOmitted: true, width: 1040, height: 520, type: "image/jpeg" },
+  "google-gemini-desktop-app-windows-10-11": { src: "/articles/september13/Google_Gemini_Now_Available_Windows.jpg", alt: "Gemini desktop application running on a Windows laptop.", caption: "Google's Gemini desktop application is now available on Windows 10 and Windows 11.", credit: "WinCentral", width: 1040, height: 520, type: "image/jpeg" },
+  "nubia-navix-ultra-doubao-ai-agent-phone": { src: "/articles/september13/China_Mass_Market_AI_Agent_Phone_WeChat.jpg", alt: "A smartphone displaying WeChat against a green background.", caption: "An earlier phone running ByteDance's Doubao assistant encountered access restrictions in WeChat and some banking apps.", credit: "Shutterstock Images", width: 1040, height: 520, type: "image/jpeg" },
+  "beyondmimic-humanoid-robot-sprint-spin-kick": { src: "/articles/september13/UC_Berkeley_Stanford_Humanoid_BeyondMimic.jpg", alt: "Humanoid robot balancing on one leg", caption: "Humanoid robot balancing on one leg.", credit: "Hybrid Robotics / YouTube", width: 1040, height: 520, type: "image/jpeg" },
+  "hierascaffold-4d-lidar-autonomous-vehicles": { src: "/articles/september13/Singapore_University_AI_Framework_Training_Self_Driving_Cars.jpg", alt: "A Waymo self-driving test vehicle equipped with roof-mounted sensors.", caption: "A Waymo self-driving test vehicle equipped with roof-mounted sensors.", credit: "David Paul Morris/Bloomberg/Getty Images", width: 1040, height: 520, type: "image/jpeg" },
+  "android-password-manager-interoperability-transfer": { src: "/articles/september13/Android_Switching_Password_Managers.jpg", alt: "Android mascot holding a key beside a phone showing a completed password and passkey import.", caption: "Android now supports direct credential transfers between participating password managers without an export file.", credit: "Google", width: 1040, height: 520, type: "image/jpeg" }
+};
+
+const mediaBySlug: Partial<Record<string, NonNullable<Article["mediaSlots"]>>> = {
+  "android-password-manager-interoperability-transfer": [{
+    id: "september13-android-transfer-process",
+    type: "image",
+    status: "ready",
+    placement: "Immediately below How the transfer actually works",
+    src: "/articles/september13/Android_Switching_Password_Managers_Process_By_Google.jpg",
+    alt: "Four Android screens showing the direct process for importing passwords and passkeys into Google Password Manager.",
+    caption: "Import your passwords to Google Password Manager with just a few clicks. Exporting your data is just as easy.",
+    credit: "Google",
+    licensingNote: "Publisher-supplied Google product illustration.",
+    aspectRatio: "2:1",
+    width: 1040,
+    height: 520
+  }]
 };
 
 const sourcesBySlug: Record<string, Article["sources"]> = {
@@ -263,6 +280,13 @@ export function buildEditorialSeptember13Articles({ authors, topics, brands, reg
     const sources = sourcesBySlug[parsed.slug];
     if (!taxonomy || !publishedAt || !image || !sources?.length) throw new Error(`Incomplete September 13 article mapping: ${parsed.slug}`);
     const words = [parsed.title, parsed.quickAnswer, ...parsed.body, ...parsed.faq.flatMap((item) => [item.question, item.answer])].join(" ").split(/\s+/).filter(Boolean).length;
+    const mediaSlots = mediaBySlug[parsed.slug] ?? [];
+    const body = [...parsed.body];
+    if (mediaSlots.length) {
+      const headingIndex = body.indexOf("## How the transfer actually works");
+      if (headingIndex < 0) throw new Error("Could not place the Android password transfer illustration.");
+      body.splice(headingIndex + 1, 0, `[[media:${mediaSlots[0]!.id}]]`);
+    }
     return {
       id: `editorial-september13-${parsed.number}`,
       slug: parsed.slug,
@@ -275,13 +299,14 @@ export function buildEditorialSeptember13Articles({ authors, topics, brands, reg
       excerpt: firstSentence(parsed.quickAnswer),
       whyItMatters: parsed.originalValue,
       quickAnswer: parsed.quickAnswer,
-      body: parsed.body,
+      body,
       faq: parsed.faq,
       author: required(authors, parsed.byline === "Lulu Camau" ? "lulu-camau" : "tim-humphreys", "author"),
       publishedAt,
-      updatedAt: publishedAt,
+      updatedAt: "2026-09-13T20:18:00+03:00",
       readTime: `${Math.max(1, Math.ceil(words / 220))} min read`,
       image,
+      mediaSlots: mediaSlots.length ? mediaSlots : undefined,
       tags: [...taxonomy.topics.map((slug) => required(topics, slug, "topic")), ...taxonomy.brands.map((slug) => required(brands, slug, "brand"))],
       regions: taxonomy.regions?.map((slug) => required(regions, slug, "region")),
       sources,

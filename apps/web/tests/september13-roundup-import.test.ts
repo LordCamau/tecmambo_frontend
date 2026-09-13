@@ -73,7 +73,7 @@ describe("September 13 corrected roundup publication", () => {
     expect(anthropic).toContain("no evidence Wandayi personally commissioned it");
     expect(anthropic).not.toMatch(/bot network|Cabinet Secretaries/);
 
-    const education = articleText(imported[3]!);
+    const education = [imported[3]!.title, imported[3]!.quickAnswer, ...imported[3]!.body].join(" ");
     expect(education).toContain("June 9, 2026");
     expect(education).toContain("Stephen Isaboke");
     expect(education).not.toContain("Julius Bitok");
@@ -91,17 +91,45 @@ describe("September 13 corrected roundup publication", () => {
     expect(nubia).toContain("not an independently verifiable product category");
   });
 
-  it("uses original, lightweight, fully described hero images", () => {
+  it("uses every supplied, fully described hero image with the requested credit", () => {
+    const expected = {
+      "anthropic-kenya-ai-influence-operation-2027-election": ["Anthropic_Claude_Opiyo_Wandai.jpg", "Facebook / Opiyo Wandayi"],
+      "absa-bank-kenya-yusuf-omari-ceo-appointment": ["Absa_Bank_Kenya_New_CEO_Yusuf_Omari.jpg", "Nation Media Group"],
+      "kenya-fortinet-ai-cybersecurity-talks": ["Kenya_ICT_Ministry_Cybersecurity_Talks_With_Fortinet.jpg", "iStock Editorial"],
+      "kenya-digital-learning-junior-schools-status": ["Kenya_Smartboard_Rollout_ICT.jpg", ""],
+      "google-gemini-desktop-app-windows-10-11": ["Google_Gemini_Now_Available_Windows.jpg", "WinCentral"],
+      "nubia-navix-ultra-doubao-ai-agent-phone": ["China_Mass_Market_AI_Agent_Phone_WeChat.jpg", "Shutterstock Images"],
+      "beyondmimic-humanoid-robot-sprint-spin-kick": ["UC_Berkeley_Stanford_Humanoid_BeyondMimic.jpg", "Hybrid Robotics / YouTube"],
+      "hierascaffold-4d-lidar-autonomous-vehicles": ["Singapore_University_AI_Framework_Training_Self_Driving_Cars.jpg", "David Paul Morris/Bloomberg/Getty Images"],
+      "android-password-manager-interoperability-transfer": ["Android_Switching_Password_Managers.jpg", "Google"]
+    } as const;
     for (const article of imported) {
-      expect(article?.image.src).toMatch(/^\/articles\/september13\/.+\.webp$/);
-      expect(article?.image.credit).toBe("tecMAMBO");
+      const [filename, credit] = expected[article!.slug as keyof typeof expected];
+      expect(article?.image.src).toBe(`/articles/september13/${filename}`);
+      expect(article?.image.credit).toBe(credit);
       expect(article?.image.alt).toBeTruthy();
       expect(article?.image.caption).toBeTruthy();
       expect(article?.image.width).toBe(1040);
       expect(article?.image.height).toBe(520);
       expect(existsSync(resolve(process.cwd(), "public", article!.image.src.slice(1)))).toBe(true);
     }
-    expect(imported[0]?.image.alt).toContain("without depicting a real person");
+    expect(imported[0]?.image.caption).toContain("no evidence that he commissioned");
+    expect(imported[3]?.image.creditOmitted).toBe(true);
+    expect(imported[1]?.image.alt).toBe("Yusuf Omari, CEO - Absa Bank Kenya");
+  });
+
+  it("places Google's transfer walkthrough below the requested Android section", () => {
+    const android = imported[8]!;
+    expect(android.mediaSlots).toHaveLength(1);
+    expect(android.mediaSlots?.[0]).toMatchObject({
+      id: "september13-android-transfer-process",
+      src: "/articles/september13/Android_Switching_Password_Managers_Process_By_Google.jpg",
+      caption: "Import your passwords to Google Password Manager with just a few clicks. Exporting your data is just as easy.",
+      credit: "Google",
+      status: "ready"
+    });
+    const headingIndex = android.body.indexOf("## How the transfer actually works");
+    expect(android.body[headingIndex + 1]).toBe("[[media:september13-android-transfer-process]]");
   });
 
   it("applies the relevant internal link and adds all nine records to RSS and Google News", () => {
