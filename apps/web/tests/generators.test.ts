@@ -22,7 +22,7 @@ import { africaLeadRegionSlugs, africanRegions, getAfricaArticles } from "../lib
 import { africaHubToMarkdown, countryHubToMarkdown } from "../content/region-markdown";
 import { articleJsonLd, articleSocialImage } from "../lib/seo";
 import { megaNavItems, moreLinks } from "../lib/nav";
-import { curateHomeContent } from "../lib/home-curation";
+import { curateHomeContent, preferredHomeLaneKey } from "../lib/home-curation";
 import { isContentPubliclyEligible } from "../lib/content-quality";
 
 describe("content generators", () => {
@@ -87,6 +87,36 @@ describe("content generators", () => {
       if (lane.layout === "feature") expect(lane.articles).toHaveLength(5);
     }
     expect(new Set(aboveFoldArticleIds).size).toBe(aboveFoldArticleIds.length);
+  });
+
+  it("limits every homepage story to one placement, except the hero in its preferred lane", () => {
+    const curation = curateHomeContent(articles, glossaryTerms);
+    const placements = new Map<string, string[]>();
+    const record = (slug: string, placement: string) => {
+      placements.set(slug, [...(placements.get(slug) ?? []), placement]);
+    };
+
+    record(curation.hero.slug, "hero");
+    curation.supportingStories.forEach((article) => record(article.slug, "supporting"));
+    curation.latestRail.forEach((article) => record(article.slug, "top-stories"));
+    curation.lanes.forEach((lane) => lane.articles.forEach((article) => record(article.slug, `lane:${lane.key}`)));
+
+    for (const [slug, storyPlacements] of placements) {
+      if (slug === curation.hero.slug) {
+        expect(storyPlacements.length).toBeLessThanOrEqual(2);
+        if (storyPlacements.length === 2) {
+          expect(storyPlacements).toEqual(["hero", `lane:${preferredHomeLaneKey(curation.hero)}`]);
+        }
+      } else {
+        expect(storyPlacements).toHaveLength(1);
+      }
+    }
+
+    if (curation.hero.slug === "anthropic-kenya-ai-influence-operation-2027-election") {
+      expect(placements.get(curation.hero.slug)).toEqual(["hero", "lane:africa"]);
+      expect(curation.lanes.find((lane) => lane.key === "explains")?.articles).not.toContainEqual(curation.hero);
+      expect(curation.lanes.find((lane) => lane.key === "evergreen")?.articles).not.toContainEqual(curation.hero);
+    }
   });
 
   it("builds RSS with canonical article links", () => {
