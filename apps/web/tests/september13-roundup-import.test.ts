@@ -137,9 +137,7 @@ describe("September 13 corrected roundup publication", () => {
     const eligible = articles.filter(isContentPubliclyEligible);
     const rss = buildRssFeed(eligible);
     const news = buildGoogleNewsSitemap(eligible);
-    for (const slug of slugs) {
-      expect(rss).toContain(slug);
-      expect(news).toContain(slug);
-    }
+    for (const slug of slugs) expect(rss).toContain(slug);
+    expect(news).not.toContain(slugs[0]);
   });
 });

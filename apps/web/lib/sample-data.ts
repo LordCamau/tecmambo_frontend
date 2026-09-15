@@ -18,6 +18,7 @@ import { buildEditorialAugust21Articles } from "@/lib/editorial-bundle-august-21
 import { buildEditorialSeptember9Articles } from "@/lib/editorial-bundle-september-9-2026";
 import { buildEditorialSeptember11Articles } from "@/lib/editorial-bundle-september-11-2026";
 import { buildEditorialSeptember13Articles } from "@/lib/editorial-bundle-september-13-2026";
+import { buildEditorialSeptember15Articles } from "@/lib/editorial-bundle-september-15-2026";
 import { buildIphoneDuoArticle } from "@/lib/iphone-duo-2026";
 import { buildPixel11LaunchArticle } from "@/lib/pixel-11-launch-2026";
 import { buildSafaricomBoardReshuffleArticle } from "@/lib/safaricom-board-reshuffle-2026";
@@ -191,6 +192,8 @@ export const topics: Tag[] = [
   { name: "DRC", slug: "drc", kind: "topic" },
   { name: "Semiconductors", slug: "semiconductors", kind: "topic" },
   { name: "Global", slug: "global", kind: "topic" },
+  { name: "Markets", slug: "markets", kind: "topic" },
+  { name: "Consumer Tech", slug: "consumer-tech", kind: "topic" },
   { name: "Big Tech", slug: "big-tech", kind: "topic" },
   { name: "Web3", slug: "web3", kind: "topic" },
 ];
@@ -207,6 +210,10 @@ export const brands: Tag[] = [
   { name: "Bitwarden", slug: "bitwarden", kind: "brand" },
   { name: "Dashlane", slug: "dashlane", kind: "brand" },
   { name: "Roam", slug: "roam", kind: "brand" },
+  { name: "Valve", slug: "valve", kind: "brand" },
+  { name: "Twiga Foods", slug: "twiga-foods", kind: "brand" },
+  { name: "xAI", slug: "xai", kind: "brand" },
+  { name: "Kenya Power", slug: "kenya-power", kind: "brand" },
   { name: "VLC", slug: "vlc", kind: "brand" },
   { name: "Sony", slug: "sony", kind: "brand" },
   { name: "PlayStation", slug: "playstation", kind: "brand" },
@@ -981,6 +988,12 @@ const editorialSeptember13Articles = buildEditorialSeptember13Articles({
   brands,
   regions: [kenyaRegion]
 });
+const editorialSeptember15Articles = buildEditorialSeptember15Articles({
+  authors,
+  topics,
+  brands,
+  regions: [kenyaRegion]
+});
 const iphoneDuoArticle = buildIphoneDuoArticle({
   authors,
   topics,
@@ -1134,6 +1147,7 @@ function migrateLegacyLifecycle(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  ...editorialSeptember15Articles,
   ...editorialSeptember13Articles,
   iphoneDuoArticle,
   ...quarantinedArticles,
