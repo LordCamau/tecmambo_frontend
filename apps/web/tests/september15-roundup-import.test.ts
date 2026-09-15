@@ -56,8 +56,8 @@ describe("September 15 final roundup publication", () => {
   });
 
   it("uses the fixed bylines, taxonomy and shuffled publication times", () => {
-    expect(imported.filter((article) => article?.author.slug === "lulu-camau")).toHaveLength(3);
-    expect(imported.filter((article) => article?.author.slug === "tim-humphreys")).toHaveLength(4);
+    expect(imported.filter((article) => article?.author.slug === "lulu-camau")).toHaveLength(2);
+    expect(imported.filter((article) => article?.author.slug === "tim-humphreys")).toHaveLength(5);
     const sourceOrderTimes = imported.map((article) => article!.publishedAt);
     expect(sourceOrderTimes).not.toEqual([...sourceOrderTimes].sort());
     expect(new Set(sourceOrderTimes).size).toBe(7);

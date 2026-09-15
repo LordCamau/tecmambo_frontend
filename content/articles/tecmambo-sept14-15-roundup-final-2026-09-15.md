@@ -79,7 +79,7 @@ Apple hasn't explained it directly, but it likely relates to a multi-year supply
 **Primary category:** AI
 **Secondary categories:** Apps, Apple, Global
 **Suggested slug:** `ios-27-release-siri-ai-overhaul-explained`
-**Byline:** Lulu Camau
+**Byline:** Tim Humphreys
 **H1:** iOS 27 is here, and the headline feature isn't the update, it's the AI assistant Apple rebuilt with Google's help
 **SEO title:** iOS 27 Release: Siri AI Overhaul Explained
 **Meta description:** iOS 27 rolled out September 14 with a rebuilt Siri AI co-developed using Google Gemini models. Here's what changed, who gets it, and who's shut out at launch.
