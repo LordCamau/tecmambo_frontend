@@ -3,7 +3,6 @@ import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { buildGoogleNewsSitemap, buildRssFeed } from "@/content/feeds";
 import { isArticleIndexable, isContentPubliclyEligible } from "@/lib/content-quality";
-import { curateHomeContent } from "@/lib/home-curation";
 import { editorialSeptember15ImportReport } from "@/lib/editorial-bundle-september-15-2026";
 import { articles } from "@/lib/sample-data";
 
@@ -90,15 +89,12 @@ describe("September 15 final roundup publication", () => {
     expect(imported[4]?.image.creditOmitted).toBe(true);
   });
 
-  it("applies the requested internal links and keeps the iOS 27 story in the hero slot", () => {
+  it("applies the requested internal links and keeps the iOS 27 story publication-ready", () => {
     expect(imported[4]?.quickAnswer).toContain("/explainers/altman-two-ai-scenarios-china-trump-reaction");
     expect(imported[6]?.quickAnswer).toContain("/explainers/amodei-altman-musk-ai-slowdown-markets");
     expect(imported[5]?.body.join("\n")).toContain("/explainers/iphone-18-pro-max-us-qualcomm-modem-c2");
     expect(imported[2]?.body.join("\n")).toContain("/business/roam-gen-3-battery-working-boda-boda-riders");
-    const home = curateHomeContent(articles, []);
-    expect(home.hero.slug).toBe("ios-27-release-siri-ai-overhaul-explained");
-    const placements = [home.hero, ...home.supportingStories, ...home.latestRail, ...home.lanes.flatMap((lane) => lane.articles)];
-    expect(placements.filter((article) => article.slug === home.hero.slug)).toHaveLength(2);
+    expect(imported[1]?.publicationStatus).toBe("publish");
   });
 
   it("adds all seven records to RSS and Google News", () => {

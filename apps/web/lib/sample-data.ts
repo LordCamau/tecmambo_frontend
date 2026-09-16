@@ -19,6 +19,7 @@ import { buildEditorialSeptember9Articles } from "@/lib/editorial-bundle-septemb
 import { buildEditorialSeptember11Articles } from "@/lib/editorial-bundle-september-11-2026";
 import { buildEditorialSeptember13Articles } from "@/lib/editorial-bundle-september-13-2026";
 import { buildEditorialSeptember15Articles } from "@/lib/editorial-bundle-september-15-2026";
+import { buildEditorialSeptember16Articles } from "@/lib/editorial-bundle-september-16-2026";
 import { buildIphoneDuoArticle } from "@/lib/iphone-duo-2026";
 import { buildPixel11LaunchArticle } from "@/lib/pixel-11-launch-2026";
 import { buildSafaricomBoardReshuffleArticle } from "@/lib/safaricom-board-reshuffle-2026";
@@ -85,6 +86,7 @@ export const topics: Tag[] = [
   { name: "Computing", slug: "computing", kind: "topic" },
   { name: "Social Media", slug: "social-media", kind: "topic" },
   { name: "Entertainment", slug: "entertainment", kind: "topic" },
+  { name: "Streaming", slug: "streaming", kind: "topic" },
   { name: "Christopher Nolan", slug: "christopher-nolan", kind: "topic" },
   { name: "The Odyssey", slug: "the-odyssey", kind: "topic" },
   { name: "Hoyte van Hoytema", slug: "hoyte-van-hoytema", kind: "topic" },
@@ -994,6 +996,12 @@ const editorialSeptember15Articles = buildEditorialSeptember15Articles({
   brands,
   regions: [kenyaRegion]
 });
+const editorialSeptember16Articles = buildEditorialSeptember16Articles({
+  authors,
+  topics,
+  brands,
+  regions: [kenyaRegion]
+});
 const iphoneDuoArticle = buildIphoneDuoArticle({
   authors,
   topics,
@@ -1147,6 +1155,7 @@ function migrateLegacyLifecycle(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  ...editorialSeptember16Articles,
   ...editorialSeptember15Articles,
   ...editorialSeptember13Articles,
   iphoneDuoArticle,
