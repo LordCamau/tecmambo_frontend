@@ -13,7 +13,7 @@
 .founderCard > div > p {
   margin: 0;
   color: var(--purple-dark);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
 }
 
@@ -24,7 +24,7 @@
 .team h2,
 .cta h2 {
   margin: 0;
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 600;
   line-height: 1.05;
 }
@@ -120,7 +120,7 @@
 .personCard a,
 .growingCard a {
   color: var(--purple-dark);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
 }
 
@@ -141,9 +141,9 @@
 .valueGrid strong {
   display: block;
   color: var(--why-heading);
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.12;
 }
 
@@ -171,13 +171,13 @@
 }
 
 .factStrip span {
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface);
-  color: var(--text-secondary);
-  padding: 8px 12px;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
-  font-size: 12px;
+  color: var(--purple-dark);
+  padding: 2px 0;
+  font-family: var(--font-body);
+  font-size: var(--type-label);
+  font-weight: 600;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
 }
 
 .teamGrid {
@@ -211,9 +211,9 @@
 .personCard h3,
 .growingCard h3 {
   margin: 4px 0 8px;
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
 }
 
@@ -265,7 +265,7 @@
   background: var(--white);
   color: var(--brand-purple-dark);
   padding: 10px 13px;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
 }
 

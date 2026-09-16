@@ -50,9 +50,9 @@
 
 .popover strong {
   color: var(--purple-dark);
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .popover span,
@@ -68,9 +68,9 @@
 
 .popover a {
   color: var(--purple-dark);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @media (max-width: 520px) {

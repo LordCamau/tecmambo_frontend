@@ -1,5 +1,10 @@
 # tecMAMBO brand and UI guardrails
 
+- Britti Sans is the single publication typeface. The local Light, Regular, Semibold, and Bold files map to weights 300, 400, 600, and 700, with matching italics.
+- `--font-sans`, `--font-display`, and `--font-body` all resolve to Britti Sans. Hierarchy comes from size, weight, leading, spacing, width, case, and context, never from introducing a second editorial family.
+- Shared type tokens cover display, article H1, section H2, card title, deck, body, small body, metadata, labels, navigation, and buttons. Prefer these tokens when working on shared editorial components.
+- Long-form body copy uses 18px on wider screens, 17px on narrow screens, and a 1.65 line height within the 720px reading measure.
+- Editorial format, topic, region, difficulty, and category labels are plain text. They must not receive a pill background, border, shadow, or rounded container. Functional controls may retain an appropriate control shape.
 - Primary brand violet is `#4C1FC4`, a deeper MAMBO Violet chosen to make tecMAMBO feel calmer and more premium than the earlier electric violet.
 - Brand hover and pressed violet is `#3F18A8`; the deepest brand violet is `#2E1568`.
 - The former electric violet now lives as `--spark`: `#6E2BFF` in light mode and `#8A5BFF` in dark mode. Use it sparingly for small energy moments only, not default fills or normal text.
@@ -7,21 +12,11 @@
 - The warm brand accent is `--accent`: `#FF6FAE`, with `--accent-strong`: `#F0529A` for hover and pressed states.
 - Use the accent as a fill behind dark ink on light surfaces. Do not use white text on the accent, and do not use the accent as small text, icons, borders, underlines, or keylines on light backgrounds.
 - On dark surfaces, the accent may be used for small text or icons only when the registered contrast pair passes AA.
-- Filled badge, button, score, newsletter, and price surfaces use stable `--brand-*` fills so dark mode cannot pastel-ize them. Their foregrounds come from paired `--on-*`, `--badge-*`, `--button-*`, `--price-*`, and `--pill-*` tokens.
-- Filled MAMBO Explains badges use `#4C1FC4` with white text in both themes; MAMBO vs Real Life uses `#2E1568` with white text; Wallet Watch uses `#FF6FAE` with dark ink.
+- Button, score, newsletter, and price surfaces use stable `--brand-*` fills so dark mode cannot pastel-ize them. Their foregrounds come from paired `--on-*`, `--button-*`, and `--price-*` tokens.
+- MAMBO Explains, MAMBO vs Real Life, Wallet Watch, Should You Care?, MAMBO Take, and Review labels use text-only `FormatBadge` presentation.
 - Lavender tint surfaces are now `#F3F0FB` with `#E4DEF6` hairlines to match the deeper violet family.
 - The dark Why it matters surface is `#211B3A`, its border is `#2F2752`, and its label is `#B6A2FF`.
-- Brand gradients are governed tokens, not one-off CSS:
-  - `--gradient-brand`: `linear-gradient(135deg, #4C1FC4 0%, #6E2BFF 45%, #2BD4E6 100%)`
-  - `--gradient-deep`: `linear-gradient(135deg, #4C1FC4 0%, #6E2BFF 100%)`
-  - `--gradient-aurora`: `linear-gradient(135deg, #4C1FC4 0%, #6E2BFF 45%, #2BD4E6 100%)`
-  - `--gradient-spectrum`: `linear-gradient(135deg, #4C1FC4 0%, #B23CE6 55%, #FF6FAE 100%)`
-  - `--gradient-fallback`: `#4C1FC4`
-- `--gradient-brand` is the default gradient and uses Aurora. `--gradient-deep` and `--gradient-spectrum` are optional named variants for deliberate exceptions.
-- Use gradients only as rare brand finishes: OG and social share images, the newsletter card, a thin 3px keyline, subtle loading or progress states, the gradient logo on rich backgrounds, or one chosen hero or brand accent.
-- Do not use gradients behind article body copy, as default page or section backgrounds, on standard buttons, as body text fills, or in stacked moments on the same view.
-- Text over Aurora and Spectrum needs dark placement or a scrim, because cyan and pink stops do not pass AA with white text by themselves.
-- OG share images use `--gradient-brand` with a dark scrim under the wordmark and headline. Dynamic generation is suited to Vercel or another Node or edge host; shared hosting should use a pregenerated static fallback if resource limits become a concern.
+- Do not use decorative gradients in the site interface. The legacy `--gradient-*` compatibility tokens resolve to flat brand colours and must remain flat.
 - Logo usage matrix:
   - Dark or rich backgrounds: use the white lockup. The triangular A may carry Aurora in approved brand moments where contrast remains clear.
   - Light backgrounds: use the solid ink or solid violet wordmark and A so the mark does not wash out.
@@ -29,10 +24,10 @@
   - Keep the corrected triangular A geometry in every variant so the mark reads as an A.
 - Light-mode muted grey is `#72727B` so byline and secondary metadata pass AA on the off-white page background.
 - Headlines use sentence case.
-- Mono type is reserved for labels, tags, specs, and compact metadata.
+- Labels, tags, specs, and compact metadata use Britti Sans Medium or Semibold at the shared label or metadata size.
 - Homepage grid lanes are capped at three cards except the hero and latest rail. Feature lanes use a balanced four-story structure.
-- Four-story feature lanes use one bordered lead card beside three identical bordered horizontal secondary cards. Secondary cards always use a 4:3 thumbnail, one shared label position, a card headline, and byline/read-time metadata. Do not introduce separate "second" and "small" card templates.
+- Four-story feature lanes use one bordered lead card beside three identical bordered secondary cards. Every editorial image container uses a 2:1 ratio, including secondary cards on mobile.
 - The feature lead headline must remain at least one clear type step larger than secondary headlines, with a target ratio of roughly 1.5:1. Its wider container, summary, larger format badge, and more generous spacing reinforce the same hierarchy.
-- `FormatBadge` is the only presentation component for format labels. All formats use solid token-backed chips; color may identify the format, but geometry, typography, and spacing stay shared sitewide.
+- `FormatBadge` is the only presentation component for format labels. All formats use the same text-only geometry, typography, and spacing sitewide.
 - Card bylines and reading times use the shared metadata component. Blank reading times are calculated from article copy, and a blank author falls back to the publication name.
 - Segment pages to aid navigation, not to fill space.

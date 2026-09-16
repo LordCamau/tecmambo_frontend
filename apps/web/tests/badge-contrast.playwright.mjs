@@ -35,7 +35,8 @@ async function checkTheme(theme) {
             margin: 0;
             background: var(--bg);
             color: var(--text);
-            font-family: Arial, sans-serif;
+            --font-britti-sans: Arial, sans-serif;
+            font-family: var(--font-body);
           }
           #badge-row {
             display: flex;

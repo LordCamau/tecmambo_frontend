@@ -22,7 +22,7 @@
 .label {
   margin: 0 0 4px;
   color: var(--why-heading);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
   line-height: 1.2;
 }

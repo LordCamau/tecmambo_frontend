@@ -12,7 +12,7 @@
   cursor: pointer;
   padding: 16px 18px;
   color: var(--purple-dark);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
   list-style: none;
 }
@@ -47,7 +47,7 @@
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   overflow: hidden;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 13px;
 }
 

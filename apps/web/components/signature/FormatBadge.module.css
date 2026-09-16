@@ -2,52 +2,41 @@
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  border: 1px solid var(--format-border, transparent);
-  border-radius: 999px;
-  background: var(--format-bg);
   color: var(--format-fg);
-  padding: 5px 8px;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
-  font-size: 11px;
-  font-weight: 700;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: var(--type-label);
+  font-weight: 600;
   line-height: 1.2;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
 .large.large {
-  padding: 7px 10px;
-  font-size: 12px;
+  padding: 0;
+  font-size: var(--type-label);
 }
 
 .explains {
-  --format-bg: var(--badge-explains-bg);
-  --format-fg: var(--badge-explains-fg);
+  --format-fg: var(--purple-dark);
 }
 
 .wallet {
-  --format-bg: var(--badge-wallet-bg);
-  --format-fg: var(--badge-wallet-fg);
+  --format-fg: var(--purple-dark);
 }
 
 .realLife {
-  --format-bg: var(--badge-reallife-bg);
-  --format-fg: var(--badge-reallife-fg);
+  --format-fg: var(--purple-dark);
 }
 
 .care {
-  --format-bg: var(--badge-news-bg);
-  --format-fg: var(--badge-news-fg);
+  --format-fg: var(--text);
 }
 
 .take {
-  --format-bg: var(--badge-take-bg);
   --format-fg: var(--badge-take-fg);
-  --format-border: var(--badge-take-border);
 }
 
 .review {
-  --format-bg: var(--badge-review-bg);
   --format-fg: var(--badge-review-fg);
-  --format-border: var(--badge-review-border);
 }

@@ -34,7 +34,7 @@
 
 .facade strong {
   max-width: 34rem;
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(20px, 3vw, 28px);
   line-height: 1.2;
 }

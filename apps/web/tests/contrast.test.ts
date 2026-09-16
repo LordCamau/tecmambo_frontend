@@ -14,17 +14,11 @@ describe("text-on-colour contrast tokens", () => {
     }
   });
 
-  it("keeps filled badge colours canonical in both themes", () => {
+  it("keeps text-only format labels readable in both themes", () => {
     expect(contrastPairs).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ name: "badge explains", theme: "light", fg: contrastColors.white, bg: contrastColors.brandPurple }),
-        expect.objectContaining({ name: "badge explains", theme: "dark", fg: contrastColors.white, bg: contrastColors.brandPurple }),
-        expect.objectContaining({ name: "badge real life", theme: "light", fg: contrastColors.white, bg: contrastColors.brandPurpleDark }),
-        expect.objectContaining({ name: "badge real life", theme: "dark", fg: contrastColors.white, bg: contrastColors.brandPurpleDark }),
-        expect.objectContaining({ name: "badge news", theme: "light", fg: contrastColors.white, bg: contrastColors.brandInk }),
-        expect.objectContaining({ name: "badge news", theme: "dark", fg: contrastColors.white, bg: contrastColors.brandInk }),
-        expect.objectContaining({ name: "badge wallet", theme: "light", fg: contrastColors.onAccent, bg: contrastColors.accentPink }),
-        expect.objectContaining({ name: "badge wallet", theme: "dark", fg: contrastColors.onAccent, bg: contrastColors.accentPink })
+        expect.objectContaining({ name: "format label", theme: "light", fg: contrastColors.brandPurpleDark, bg: contrastColors.lightBg }),
+        expect.objectContaining({ name: "format label", theme: "dark", fg: contrastColors.darkPurpleStrong, bg: contrastColors.darkBg })
       ])
     );
   });

@@ -21,8 +21,9 @@
   display: flex;
   justify-content: center;
   gap: 16px;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-size: var(--type-nav);
+  font-weight: 600;
   white-space: nowrap;
 }
 
@@ -144,7 +145,7 @@
 .drawerPanel > p {
   margin: 0;
   color: var(--purple-dark);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
 }
 
@@ -180,18 +181,18 @@
 .featureCard strong,
 .moreLinks a,
 .socialLinks a {
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-weight: 600;
 }
 
 .featureCard strong {
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 600;
 }
 
 .megaLinkGroup small {
   color: var(--text-secondary);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 13px;
   line-height: 1.35;
   white-space: normal;
@@ -209,15 +210,15 @@
   background: transparent;
   color: var(--pill-fg);
   padding: 2px 0;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 11px;
 }
 
 .seeAll {
   width: fit-content;
   color: var(--purple-dark);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-weight: 600;
 }
 
 .featureCard {
@@ -245,7 +246,7 @@
 
 .featureCard small {
   color: var(--purple-dark);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 11px;
 }
 
@@ -293,7 +294,7 @@
   place-items: center;
   width: 18px;
   height: 18px;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   line-height: 1;
 }
@@ -357,8 +358,8 @@
   align-content: start;
   gap: 8px;
   overflow-y: auto;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-weight: 600;
 }
 
 .drawerNav > a,

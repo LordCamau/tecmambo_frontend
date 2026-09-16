@@ -37,7 +37,7 @@
 .storyCard span {
   margin: 0;
   color: var(--purple-dark);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0;
@@ -48,7 +48,7 @@
   max-width: 780px;
   margin: 0;
   color: var(--text);
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(42px, 6vw, 76px);
   font-weight: 600;
   line-height: 0.98;
@@ -71,7 +71,7 @@
 
 .search label {
   color: var(--text);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
 }
 
@@ -101,7 +101,7 @@
   background: var(--button-primary-bg);
   color: var(--button-primary-fg);
   padding: 0 18px;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 700;
   cursor: pointer;
 }
@@ -118,7 +118,7 @@
   background: color-mix(in srgb, var(--purple-dark) 11%, var(--surface));
   color: var(--text);
   padding: 10px 14px;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 700;
 }
 
@@ -183,7 +183,7 @@
 .termLine h2 {
   margin: 0;
   color: var(--text);
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 44px;
   font-weight: 600;
   line-height: 1;
@@ -191,7 +191,7 @@
 
 .termLine span {
   color: var(--text-secondary);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 13px;
 }
 
@@ -203,7 +203,7 @@
 
 .glossaryCard a {
   color: var(--purple-dark);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
 }
 
@@ -224,7 +224,7 @@
 .latestHeader h2 {
   margin: 0;
   color: var(--text);
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(30px, 4vw, 46px);
   font-weight: 600;
   line-height: 1;
@@ -260,7 +260,7 @@
   display: block;
   margin-bottom: 18px;
   color: var(--text);
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 22px;
   font-weight: 600;
   line-height: 1.12;

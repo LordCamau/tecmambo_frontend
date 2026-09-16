@@ -12,7 +12,7 @@
   background: transparent;
   color: var(--purple-dark);
   padding: 0;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 700;
   line-height: 1.2;

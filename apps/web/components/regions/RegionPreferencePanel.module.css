@@ -32,7 +32,7 @@
   background: var(--surface);
   color: var(--text-secondary);
   padding: 7px 10px;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   line-height: 1.1;
 }

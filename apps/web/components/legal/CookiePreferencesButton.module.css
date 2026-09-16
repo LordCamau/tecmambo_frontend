@@ -12,8 +12,8 @@
   background: var(--button-primary-bg);
   color: var(--button-primary-fg);
   cursor: pointer;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-weight: 600;
 }
 
 .button {

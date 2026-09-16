@@ -47,14 +47,8 @@ export const contrastColors = {
 const c = contrastColors;
 
 export const contrastPairs: ContrastPair[] = [
-  { name: "badge explains", theme: "light", fg: c.white, bg: c.brandPurple, size: "normal" },
-  { name: "badge explains", theme: "dark", fg: c.white, bg: c.brandPurple, size: "normal" },
-  { name: "badge real life", theme: "light", fg: c.white, bg: c.brandPurpleDark, size: "normal" },
-  { name: "badge real life", theme: "dark", fg: c.white, bg: c.brandPurpleDark, size: "normal" },
-  { name: "badge news", theme: "light", fg: c.white, bg: c.brandInk, size: "normal" },
-  { name: "badge news", theme: "dark", fg: c.white, bg: c.brandInk, size: "normal" },
-  { name: "badge wallet", theme: "light", fg: c.onAccent, bg: c.accentPink, size: "normal" },
-  { name: "badge wallet", theme: "dark", fg: c.onAccent, bg: c.accentPink, size: "normal" },
+  { name: "format label", theme: "light", fg: c.brandPurpleDark, bg: c.lightBg, size: "normal" },
+  { name: "format label", theme: "dark", fg: c.darkPurpleStrong, bg: c.darkBg, size: "normal" },
   { name: "badge take", theme: "light", fg: c.brandPurpleDark, bg: c.lightBg, size: "normal" },
   { name: "badge take", theme: "dark", fg: c.darkPurpleStrong, bg: c.darkBg, size: "normal" },
   { name: "badge review", theme: "light", fg: c.brandPurpleDark, bg: c.lavender, size: "normal" },
@@ -68,8 +62,8 @@ export const contrastPairs: ContrastPair[] = [
   { name: "pink accent on dark surface", theme: "dark", fg: c.accentPink, bg: c.darkSurface, size: "normal" },
   { name: "primary button", theme: "light", fg: c.white, bg: c.brandPurple, size: "normal" },
   { name: "primary button", theme: "dark", fg: c.white, bg: c.brandPurple, size: "normal" },
-  { name: "glossary and tag pill", theme: "light", fg: c.brandPurpleDark, bg: c.lavender, size: "normal" },
-  { name: "glossary and tag pill", theme: "dark", fg: c.darkPurpleStrong, bg: c.darkPill, size: "normal" },
+  { name: "glossary and tag label", theme: "light", fg: c.brandPurpleDark, bg: c.lightBg, size: "normal" },
+  { name: "glossary and tag label", theme: "dark", fg: c.darkPurpleStrong, bg: c.darkBg, size: "normal" },
   { name: "newsletter card", theme: "light", fg: c.white, bg: c.brandPurple, size: "normal" },
   { name: "newsletter card", theme: "dark", fg: c.white, bg: c.brandPurple, size: "normal" },
   { name: "newsletter aurora scrim worst stop", theme: "light", fg: c.white, bg: c.ogScrimOverAuroraCyan, size: "normal" },

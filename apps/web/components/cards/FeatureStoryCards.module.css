@@ -59,14 +59,14 @@
 .heroCopy h3,
 .secondaryCopy h3 {
   margin: 0;
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 600;
 }
 
 .heroCopy h3 {
   max-width: 17ch;
-  font-size: clamp(32px, 3.45vw, 46px);
-  line-height: 1.06;
+  font-size: var(--type-display);
+  line-height: var(--leading-display);
   letter-spacing: -0.025em;
 }
 
@@ -111,8 +111,8 @@
 }
 
 .secondaryCopy h3 {
-  font-size: clamp(18px, 1.55vw, 21px);
-  line-height: 1.16;
+  font-size: var(--type-card-title);
+  line-height: var(--leading-heading);
 }
 
 .secondaryDek {
@@ -153,7 +153,7 @@
   }
 
   .secondaryImage {
-    aspect-ratio: 5 / 2;
+    aspect-ratio: 2 / 1;
   }
 
   .secondaryCopy {

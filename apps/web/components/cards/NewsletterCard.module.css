@@ -12,13 +12,13 @@
 
 .kicker {
   margin: 0 0 4px;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
 }
 
 .card h2 {
   margin: 0;
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 26px;
   font-weight: 600;
   line-height: 1.15;
@@ -53,7 +53,7 @@
   cursor: pointer;
   background: var(--button-accent-bg);
   color: var(--button-accent-fg);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
 }
 

@@ -16,24 +16,24 @@
 
 .kickerRow a {
   color: var(--purple-dark);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
 }
 
 .header h1 {
   margin: 0;
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-size: clamp(36px, 6vw, 58px);
-  font-weight: 600;
-  line-height: 1.06;
+  font-family: var(--font-display);
+  font-size: var(--type-article-h1);
+  font-weight: 700;
+  line-height: var(--leading-display);
   letter-spacing: -0.025em;
 }
 
 .subhead {
   margin: 0;
   color: var(--text-secondary);
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: var(--type-deck);
+  line-height: 1.55;
 }
 
 .byline {
@@ -41,7 +41,8 @@
   flex-wrap: wrap;
   gap: 12px;
   color: var(--text-muted);
-  font-size: 14px;
+  font-size: var(--type-meta);
+  font-weight: 400;
 }
 
 .byline a {
@@ -58,9 +59,10 @@
 .leadImage img {
   display: block;
   width: 100%;
-  height: auto;
+  aspect-ratio: 2 / 1;
   border-radius: var(--radius-md);
   background: var(--surface-raised);
+  object-fit: cover;
   box-shadow: var(--shadow-soft);
 }
 
@@ -71,7 +73,8 @@
 
 .body > p {
   margin: 0;
-  font-size: 18px;
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
 }
 
 .body > ul,
@@ -99,17 +102,17 @@
 .body h2,
 .body h3 {
   margin: 18px 0 0;
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 600;
   line-height: 1.16;
 }
 
 .body h2 {
-  font-size: clamp(26px, 4vw, 34px);
+  font-size: var(--type-section-h2);
 }
 
 .body h3 {
-  font-size: 22px;
+  font-size: 1.5rem;
 }
 
 .inlineImage {
@@ -120,7 +123,7 @@
 
 .inlineImage img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 2 / 1;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: var(--surface-raised);
@@ -183,7 +186,7 @@
   border-left: 4px solid var(--purple);
   padding-left: 16px;
   color: var(--text-secondary);
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
 }
 
 .body > .disclosure {
@@ -196,7 +199,7 @@
   background: color-mix(in srgb, var(--purple) 14%, var(--surface));
   color: var(--text);
   padding: 14px 16px;
-  font-family: var(--font-body), system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
   font-weight: 600;
   line-height: 1.45;
@@ -252,13 +255,13 @@
 .dealBox p {
   margin: 0 0 6px;
   color: var(--price-fg);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 11px;
 }
 
 .dealBox h2 {
   margin: 0 0 8px;
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 600;
 }
 
@@ -268,7 +271,7 @@
   background: var(--price-bg);
   color: var(--price-fg);
   padding: 6px 10px;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 13px;
 }
 
@@ -284,7 +287,7 @@
   background: var(--button-primary-bg);
   color: var(--button-primary-fg);
   padding: 10px 14px;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
 }
 
@@ -307,7 +310,7 @@
   border-radius: 50%;
   background: var(--button-primary-bg);
   color: var(--button-primary-fg);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 24px;
 }
 
@@ -315,7 +318,7 @@
 .ask h2,
 .related h2 {
   margin: 0;
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 600;
 }
 
@@ -358,7 +361,7 @@
 .faq summary {
   cursor: pointer;
   color: var(--text);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
 }
 
@@ -378,7 +381,7 @@
 
 .sources h2 {
   margin: 0;
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 20px;
   font-weight: 600;
 }
@@ -408,7 +411,7 @@
   background: var(--button-primary-bg);
   color: var(--button-primary-fg);
   padding: 10px 14px;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
 }
 
@@ -436,14 +439,14 @@
 .topicHeader p {
   margin: 0 0 8px;
   color: var(--purple-dark);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
 }
 
 .topicHeader h1 {
   margin: 0;
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-size: 46px;
+  font-family: var(--font-display);
+  font-size: var(--type-display);
   font-weight: 600;
   line-height: 1.08;
   letter-spacing: -0.02em;
@@ -467,7 +470,7 @@
   background: transparent;
   color: var(--purple-dark);
   padding: 2px 0;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
 }
 
@@ -479,6 +482,10 @@
 }
 
 @media (max-width: 760px) {
+  .body > p {
+    font-size: var(--type-body-mobile);
+  }
+
   .verdict,
   .proCon,
   .dealBox,

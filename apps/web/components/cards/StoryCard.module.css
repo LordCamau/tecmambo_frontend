@@ -46,10 +46,10 @@
 
 .body h3 {
   margin: 0;
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-size: 21px;
+  font-family: var(--font-display);
+  font-size: var(--type-card-title);
   font-weight: 600;
-  line-height: 1.2;
+  line-height: var(--leading-heading);
 }
 
 .body p {
@@ -70,7 +70,7 @@
   background: var(--price-bg);
   color: var(--price-fg);
   padding: 5px 9px;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
 }
 

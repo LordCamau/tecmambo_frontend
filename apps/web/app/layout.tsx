@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import Script from "next/script";
 import "@/styles/globals.css";
 import { CookieConsent } from "@/components/consent/CookieConsent";
@@ -13,10 +13,18 @@ import { consentModeDenied } from "@/lib/cookie-consent";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import { siteDescription, sitePreviewImage, siteTitle } from "@/lib/site-metadata";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  weight: ["400", "500", "600"],
+const brittiSans = localFont({
+  src: [
+    { path: "./fonts/BrittiSans-Light.otf", weight: "300", style: "normal" },
+    { path: "./fonts/BrittiSans-LightItalic.otf", weight: "300", style: "italic" },
+    { path: "./fonts/BrittiSans-Regular.otf", weight: "400", style: "normal" },
+    { path: "./fonts/BrittiSans-RegularItalic.otf", weight: "400", style: "italic" },
+    { path: "./fonts/BrittiSans-Semibold.otf", weight: "600", style: "normal" },
+    { path: "./fonts/BrittiSans-SemiboldItalic.otf", weight: "600", style: "italic" },
+    { path: "./fonts/BrittiSans-Bold.otf", weight: "700", style: "normal" },
+    { path: "./fonts/BrittiSans-BoldItalic.otf", weight: "700", style: "italic" }
+  ],
+  variable: "--font-britti-sans",
   display: "swap"
 });
 
@@ -85,7 +93,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={inter.variable}
+      className={brittiSans.variable}
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >

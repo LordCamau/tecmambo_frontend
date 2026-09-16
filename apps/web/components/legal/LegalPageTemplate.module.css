@@ -18,13 +18,13 @@
 .placeholderBox p {
   margin: 0;
   color: var(--purple-dark);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
 }
 
 .hero h1 {
   margin: 0;
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(44px, 7vw, 72px);
   font-weight: 600;
   line-height: 1.02;
@@ -47,7 +47,7 @@
 .summary > p:first-child,
 .placeholderBox h2 {
   color: var(--why-heading);
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-weight: 600;
 }
 
@@ -64,8 +64,8 @@
 .section a,
 .placeholderBox a {
   color: var(--purple-dark);
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-weight: 600;
 }
 
 .layout {
@@ -149,14 +149,14 @@
 
 .placeholderBox li {
   width: fit-content;
-  border: 1px solid var(--pill-border);
-  border-radius: 999px;
-  background: var(--pill-bg);
   color: var(--pill-fg);
-  padding: 5px 9px;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
-  font-size: 11px;
+  padding: 2px 0;
+  font-family: var(--font-body);
+  font-size: var(--type-label);
+  font-weight: 600;
   line-height: 1.35;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
 }
 
 .section {
@@ -167,7 +167,7 @@
 
 .section h2 {
   margin: 0;
-  font-family: var(--font-display), system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(26px, 3vw, 34px);
   font-weight: 600;
   line-height: 1.12;
@@ -207,8 +207,8 @@
 .mobileToc summary {
     cursor: pointer;
     color: var(--purple-dark);
-    font-family: var(--font-body), Inter, system-ui, sans-serif;
-    font-weight: 500;
+    font-family: var(--font-body);
+    font-weight: 600;
   }
 
   .mobileToc nav {

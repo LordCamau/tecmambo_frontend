@@ -44,9 +44,16 @@ async function inspect(viewport, name) {
       const cards = [...element.querySelectorAll("article")];
       const headlineSize = (card) => Number.parseFloat(getComputedStyle(card.querySelector("h1, h3")).fontSize);
       const secondaryBoxes = cards.slice(1).map((card) => card.getBoundingClientRect());
-      const badgeBackgrounds = cards.map((card) => {
+      const labelStyles = cards.map((card) => {
         const label = [...card.querySelectorAll("span")].find((node) => /MAMBO|Should you care|Wallet Watch|Review|Business/i.test(node.textContent ?? ""));
-        return label ? getComputedStyle(label).backgroundColor : "missing";
+        if (!label) return null;
+        const style = getComputedStyle(label);
+        return {
+          background: style.backgroundColor,
+          border: style.borderStyle,
+          radius: style.borderRadius,
+          padding: style.padding
+        };
       });
       const secondaryBadgeOffsets = cards.slice(1).map((card) => {
         const label = [...card.querySelectorAll("span")].find((node) => /MAMBO|Should you care|Wallet Watch|Review|Business/i.test(node.textContent ?? ""));
@@ -76,7 +83,7 @@ async function inspect(viewport, name) {
         hierarchyRatio: headlineSize(cards[0]) / headlineSize(cards[1]),
         secondaryWidths: secondaryBoxes.map((box) => Math.round(box.width)),
         secondaryHeights: secondaryBoxes.map((box) => Math.round(box.height)),
-        badgeBackgrounds,
+        labelStyles,
         secondaryBadgeOffsets,
         secondaryIsHorizontal: secondaryImageBoxes.some((image, index) => {
           const copy = secondaryCopyBoxes[index];
@@ -94,8 +101,8 @@ async function inspect(viewport, name) {
 
     if (result.cardCount !== expectedCount) throw new Error(`${name}/${groupName}: expected ${expectedCount} cards, found ${result.cardCount}`);
     if (result.hierarchyRatio < 1.35) throw new Error(`${name}/${groupName}: headline hierarchy ratio is ${result.hierarchyRatio.toFixed(2)}`);
-    if (result.badgeBackgrounds.some((background) => background === "missing" || background === "rgba(0, 0, 0, 0)")) {
-      throw new Error(`${name}/${groupName}: a format badge does not have a solid background`);
+    if (result.labelStyles.some((style) => !style || style.background !== "rgba(0, 0, 0, 0)" || style.border !== "none" || style.radius !== "0px" || style.padding !== "0px")) {
+      throw new Error(`${name}/${groupName}: a format label is not plain text (${JSON.stringify(result.labelStyles)})`);
     }
     if (result.secondaryIsHorizontal) throw new Error(`${name}/${groupName}: a secondary card is still horizontal`);
     if (!result.secondaryImageAboveCopy) throw new Error(`${name}/${groupName}: a secondary image is not above its copy`);

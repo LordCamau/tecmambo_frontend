@@ -1,7 +1,23 @@
 :root {
   color-scheme: light;
-  --font-display: "App Sans", var(--font-inter), Arial, sans-serif;
-  --font-body: "App Sans", var(--font-inter), Arial, sans-serif;
+  --font-sans: var(--font-britti-sans), Arial, sans-serif;
+  --font-display: var(--font-sans);
+  --font-body: var(--font-sans);
+  --type-display: clamp(2.125rem, 3.1vw, 3rem);
+  --type-article-h1: clamp(2.25rem, 6vw, 3.625rem);
+  --type-section-h2: clamp(1.75rem, 3vw, 2.25rem);
+  --type-card-title: clamp(1.125rem, 1.55vw, 1.375rem);
+  --type-deck: clamp(1.125rem, 2vw, 1.25rem);
+  --type-body: 1.125rem;
+  --type-body-mobile: 1.0625rem;
+  --type-body-small: 0.9375rem;
+  --type-meta: 0.8125rem;
+  --type-label: 0.75rem;
+  --type-nav: 0.9375rem;
+  --type-button: 0.9375rem;
+  --leading-display: 1.06;
+  --leading-heading: 1.14;
+  --leading-body: 1.65;
   --brand-purple: #4C1FC4;
   --brand-purple-mid: #3F18A8;
   --brand-purple-dark: #2E1568;
