@@ -12,6 +12,7 @@ import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { consentModeDenied } from "@/lib/cookie-consent";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import { siteDescription, sitePreviewImage, siteTitle } from "@/lib/site-metadata";
+import { googleReaderEngagementConfig, preferredSourceScriptUrl } from "@/lib/google-reader-engagement";
 
 const brittiSans = localFont({
   src: [
@@ -89,6 +90,7 @@ export const viewport: Viewport = {
 };
 
 const cookiebotId = process.env.NEXT_PUBLIC_COOKIEBOT_ID;
+const { preferredSourceEnabled } = googleReaderEngagementConfig();
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
@@ -119,6 +121,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               data-blockingmode="auto"
               type="text/javascript"
               strategy="beforeInteractive"
+            />
+          ) : null}
+          {preferredSourceEnabled ? (
+            <Script
+              id="google-preferred-source-queue"
+              strategy="beforeInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  self.PREFERRED_SOURCE = self.PREFERRED_SOURCE || [];
+                  self.PREFERRED_SOURCE.push(function(preferredSource) {
+                    self.__tecmamboPreferredSourceClient = preferredSource;
+                  });
+                `
+              }}
+            />
+          ) : null}
+          {preferredSourceEnabled ? (
+            <Script
+              id="google-preferred-sources"
+              src={preferredSourceScriptUrl}
+              strategy="afterInteractive"
+              preferred-sources-control="manual"
             />
           ) : null}
           <GoogleAnalytics gaId="G-6S7F1VKH5M" />

@@ -1,0 +1,114 @@
+.share {
+  display: grid;
+  gap: 18px;
+  margin-top: 12px;
+  border-block: 1px solid var(--line);
+  padding: 22px 0;
+}
+
+.share header {
+  display: grid;
+  gap: 6px;
+}
+
+.share h2 {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: var(--leading-heading);
+}
+
+.share p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--type-body-small);
+  line-height: 1.5;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+  min-height: 46px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: filter 160ms ease, transform 160ms ease;
+}
+
+.action:hover {
+  filter: brightness(0.9);
+}
+
+.action:active {
+  transform: translateY(1px);
+}
+
+.action:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.facebook {
+  background: #0b5fcc;
+  color: #fff;
+}
+
+.linkedin {
+  background: #0a66c2;
+  color: #fff;
+}
+
+.x {
+  background: #17171a;
+  color: #fff;
+}
+
+.whatsapp {
+  background: #087d6d;
+  color: #fff;
+}
+
+.copy {
+  border-color: var(--purple);
+  background: var(--surface);
+  color: var(--purple-dark);
+}
+
+.brandIcon,
+.action > svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 700px) {
+  .actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .copy:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .action {
+    transition: none;
+  }
+}

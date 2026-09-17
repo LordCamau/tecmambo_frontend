@@ -9,6 +9,7 @@ import { formats, articlePath } from "@/lib/formats";
 import { getArticleBySlug, getArticles, getGlossaryTerms, getRelatedArticles } from "@/lib/content";
 import { getCmsArticleBySlug } from "@/lib/cms/source";
 import {
+  absoluteUrl,
   articleJsonLd,
   articleSocialImage,
   breadcrumbJsonLd,
@@ -33,9 +34,12 @@ import { AdSenseScript } from "@/components/ads/AdSenseScript";
 import { YouTubeEmbed } from "@/components/media/YouTubeEmbed";
 import { ImageCaption } from "@/components/media/ImageCaption";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { ArticleShare } from "@/components/engagement/ArticleShare";
+import { GoogleSourcePrompt } from "@/components/engagement/GoogleSourcePrompt";
 import styles from "./page.module.css";
 import { isArticleMonetizationEligible } from "@/lib/monetization";
 import { parseArticleInlineMarkup } from "@/lib/inline-article-markup";
+import { googleReaderEngagementConfig } from "@/lib/google-reader-engagement";
 
 type Params = Promise<{ section: string; slug: string }>;
 
@@ -389,6 +393,8 @@ export default async function ArticlePage({ params }: { params: Params }) {
   const safeSubhead = findPlaceholderIssues(article.subhead).length ? "" : article.subhead;
   const safeWhyItMatters = findPlaceholderIssues(article.whyItMatters).length ? "" : article.whyItMatters;
   const safeBody = article.body.filter((block) => findPlaceholderIssues(block).length === 0);
+  const canonicalUrl = absoluteUrl(articlePath(article.format, article.slug));
+  const googleEngagement = googleReaderEngagementConfig();
 
   return (
     <article className={styles.article}>
@@ -422,6 +428,11 @@ export default async function ArticlePage({ params }: { params: Params }) {
         />
         <ImageCaption caption={article.image.caption} credit={article.image.credit} />
       </figure>
+
+      <GoogleSourcePrompt
+        preferredSourceEnabled={googleEngagement.preferredSourceEnabled}
+        discoverUrl={googleEngagement.discoverUrl}
+      />
 
       <div className={`readable ${styles.body}`}>
         {previewEnabled ? <p className={styles.disclosure}>Editorial preview. This page is not available for indexing.</p> : null}
@@ -547,6 +558,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
           </section>
         ) : null}
         {article.closingLine ? <p className={styles.closingLine}>{article.closingLine}</p> : null}
+        <ArticleShare canonicalUrl={canonicalUrl} title={article.title} />
         <TagList tags={article.tags} />
         <section className={styles.ask}>
           <h2>Ask MAMBO</h2>

@@ -1,0 +1,84 @@
+.prompt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: min(100% - 32px, var(--read));
+  margin: -10px auto 36px;
+  border-block: 1px solid var(--line);
+  padding: 16px 0;
+}
+
+.prompt h2 {
+  flex: 0 0 auto;
+  margin: 0;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  padding: 9px 13px;
+  font-family: var(--font-body);
+  font-size: var(--type-button);
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.action:hover:not(:disabled) {
+  border-color: var(--purple);
+  background: var(--why-bg);
+  color: var(--purple-dark);
+}
+
+.action:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.action:disabled {
+  cursor: wait;
+  opacity: 0.58;
+}
+
+.googleMark {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 680px) {
+  .prompt {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .action {
+    width: 100%;
+  }
+}
