@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { buildGoogleNewsSitemap } from "@/content/feeds";
 import { articleJsonLd, faqJsonLd } from "@/lib/seo";
+import { defaultSiteUrl, normalizeSiteUrl } from "@/lib/formats";
 import { articles } from "@/lib/sample-data";
 import { buildSitemapIndex, latestArticleUpdatedAt } from "@/lib/sitemap-freshness";
 import type { Article } from "@/lib/types";
@@ -28,6 +29,20 @@ function gatedArticle(overrides: Partial<Article> = {}): Article {
 }
 
 afterEach(() => vi.useRealTimers());
+
+describe("site URL normalization", () => {
+  it.each([undefined, "", "   "])("uses the production URL when SITE_URL is blank (%s)", (value) => {
+    expect(normalizeSiteUrl(value)).toBe(defaultSiteUrl);
+  });
+
+  it("normalizes configured site URLs to an origin", () => {
+    expect(normalizeSiteUrl(" https://preview.tecmambo.com/path/ ")).toBe("https://preview.tecmambo.com");
+  });
+
+  it("rejects non-HTTP site URL schemes", () => {
+    expect(() => normalizeSiteUrl("mailto:editor@tecmambo.com")).toThrow("SITE_URL must use http or https");
+  });
+});
 
 describe("Google News eligibility", () => {
   it("includes timely flagged explainers and excludes old, future, and unflagged explainers", () => {

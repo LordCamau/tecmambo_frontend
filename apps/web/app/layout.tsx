@@ -13,6 +13,7 @@ import { consentModeDenied } from "@/lib/cookie-consent";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import { siteDescription, sitePreviewImage, siteTitle } from "@/lib/site-metadata";
 import { googleReaderEngagementConfig, preferredSourceScriptUrl } from "@/lib/google-reader-engagement";
+import { siteUrl } from "@/lib/formats";
 
 const brittiSans = localFont({
   src: [
@@ -32,7 +33,7 @@ const brittiSans = localFont({
 const deploymentAllowsIndexing = process.env.NO_INDEX !== "true" && !["preview", "development"].includes(process.env.VERCEL_ENV ?? "");
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_URL ?? "https://tecmambo.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: siteTitle,
     template: "%s | tecMAMBO"

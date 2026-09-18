@@ -1,6 +1,17 @@
 import type { Format } from "@/lib/types";
 
-export const siteUrl = process.env.SITE_URL ?? "https://tecmambo.com";
+export const defaultSiteUrl = "https://tecmambo.com";
+
+export function normalizeSiteUrl(value: string | undefined) {
+  const configuredUrl = value?.trim();
+  const url = new URL(configuredUrl || defaultSiteUrl);
+  if (url.protocol !== "https:" && url.protocol !== "http:") {
+    throw new Error(`SITE_URL must use http or https, received ${url.protocol}`);
+  }
+  return url.origin;
+}
+
+export const siteUrl = normalizeSiteUrl(process.env.SITE_URL);
 
 export const formats: Record<
   Format,
