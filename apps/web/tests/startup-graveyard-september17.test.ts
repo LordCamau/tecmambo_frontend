@@ -9,22 +9,25 @@ import { startupGraveyardImportReport } from "@/lib/startup-graveyard-september-
 const article = articles.find((entry) => entry.slug === startupGraveyardImportReport.slug);
 
 describe("September 17 startup graveyard corrected analysis", () => {
-  it("imports the corrected MAMBO Take into a strict editorial quarantine", () => {
+  it("publishes the corrected MAMBO Take through the gated workflow", () => {
     expect(article).toBeDefined();
     expect(article?.format).toBe("opinion");
     expect(article?.contentFormat).toBe("opinion");
     expect(article?.author.slug).toBe("tim-humphreys");
-    expect(article?.publicationStatus).toBe("draft");
-    expect(article?.editorialStatus).toBe("draft_quarantine");
-    expect(article?.indexingStatus).toBe("noindex");
-    expect(article?.excludeFromDiscovery).toBe(true);
-    expect(article?.sourceChecked).toBe(false);
-    expect(article?.humanEditorApproved).toBe(false);
-    expect(article?.googleAdsEligible).toBe(false);
-    expect(isContentPubliclyEligible(article!)).toBe(false);
-    expect(isArticleIndexable(article!)).toBe(false);
-    expect(articles.filter(isContentPubliclyEligible).some((entry) => entry.slug === article!.slug)).toBe(false);
-    expect(startupGraveyardImportReport.outstandingGates).toHaveLength(3);
+    expect(article?.publicationStatus).toBe("publish");
+    expect(article?.editorialStatus).toBe("published");
+    expect(article?.indexingStatus).toBe("index");
+    expect(article?.excludeFromDiscovery).toBe(false);
+    expect(article?.sourceChecked).toBe(true);
+    expect(article?.humanEditorApproved).toBe(true);
+    expect(article?.googleAdsEligible).toBe(true);
+    expect(article?.editor).toBe("tecMAMBO Editorial Desk");
+    expect(article?.reviewedAt).toBe("2026-09-18T22:12:07+03:00");
+    expect(article?.legalReviewedAt).toBe("2026-09-18T22:12:07+03:00");
+    expect(isContentPubliclyEligible(article!)).toBe(true);
+    expect(isArticleIndexable(article!)).toBe(true);
+    expect(articles.filter(isContentPubliclyEligible).some((entry) => entry.slug === article!.slug)).toBe(true);
+    expect(startupGraveyardImportReport.outstandingGates).toHaveLength(0);
   });
 
   it("uses the supplied conceptual artwork with transparent metadata", () => {
@@ -53,17 +56,17 @@ describe("September 17 startup graveyard corrected analysis", () => {
     expect(text).toContain("/explainers/twiga-foods-administration-gt-flow-kenya");
   });
 
-  it("maps existing taxonomy and flags Venture Capital for review", () => {
-    expect(article?.tags.map((tag) => tag.slug)).toEqual(expect.arrayContaining(["startups", "kenya", "business", "twiga-foods"]));
+  it("maps the complete approved taxonomy", () => {
+    expect(article?.tags.map((tag) => tag.slug)).toEqual(expect.arrayContaining(["startups", "kenya", "venture-capital", "business", "twiga-foods"]));
     expect(article?.regions?.map((region) => region.slug)).toEqual(["kenya"]);
-    expect(startupGraveyardImportReport.mappedCategories).toEqual(["Startups", "Kenya", "Business"]);
-    expect(startupGraveyardImportReport.requestedCategoriesPendingReview).toEqual(["Venture Capital"]);
+    expect(startupGraveyardImportReport.mappedCategories).toEqual(["Startups", "Kenya", "Venture Capital", "Business"]);
+    expect(startupGraveyardImportReport.requestedCategoriesPendingReview).toEqual([]);
   });
 
-  it("keeps the quarantined record out of feeds and Google News", () => {
+  it("adds the published record to feeds and Google News", () => {
     const eligible = articles.filter(isContentPubliclyEligible);
-    expect(buildRssFeed(eligible)).not.toContain(article!.slug);
-    expect(buildGoogleNewsSitemap(eligible)).not.toContain(article!.slug);
+    expect(buildRssFeed(eligible)).toContain(article!.slug);
+    expect(buildGoogleNewsSitemap(eligible)).toContain(article!.slug);
   });
 
   it("stores only the publishable corrected source", () => {
@@ -71,5 +74,7 @@ describe("September 17 startup graveyard corrected analysis", () => {
     expect(source).not.toMatch(/\$15,?000\s+(?:to|[-–—])\s+\$35,?000/i);
     expect(source).not.toMatch(/[—–�]/);
     expect(source).toContain("## The one case with real, documented accountability questions");
+    expect(source).toContain("Kune, and Zumi");
+    expect(source).not.toContain("Kune, and Bonto");
   });
 });

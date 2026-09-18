@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { buildGoogleNewsSitemap, buildRssFeed } from "@/content/feeds";
 import { isArticleIndexable, isContentPubliclyEligible } from "@/lib/content-quality";
 import { editorialSeptember16ImportReport } from "@/lib/editorial-bundle-september-16-2026";
@@ -9,6 +9,8 @@ import { articles } from "@/lib/sample-data";
 
 const slugs = editorialSeptember16ImportReport.map((entry) => entry.slug);
 const imported = slugs.map((slug) => articles.find((article) => article.slug === slug));
+
+afterEach(() => vi.useRealTimers());
 
 function articleText(article: NonNullable<(typeof imported)[number]>) {
   return [
@@ -106,7 +108,7 @@ describe("September 16 corrected special edition", () => {
     expect(existsSync(resolve(process.cwd(), "public/articles/september16/Apple_iCloud_Plus_expansion_hero.jpg"))).toBe(true);
   });
 
-  it("applies internal links, taxonomy and the requested homepage lead", () => {
+  it("applies internal links, taxonomy and the current homepage lead contract", () => {
     const apple = imported[0]!;
     const court = imported[1]!;
     expect(apple.tags.map((tag) => tag.slug)).toEqual(expect.arrayContaining(["business", "kenya", "streaming", "apple"]));
@@ -114,12 +116,15 @@ describe("September 16 corrected special edition", () => {
     expect(apple.body.join("\n")).toContain("/news/apple-surprise-and-shine-keynote-full-recap");
     expect(court.body.join("\n")).toContain("/business/safaricom-board-reshuffle-vodacom-mariam-cassim-matimba-mbungela");
     const home = curateHomeContent(articles, []);
-    expect(home.hero.slug).toBe("apple-icloud-plus-apple-tv-arcade-kenya-bundle");
+    const latestPublishedAt = Math.max(...articles.filter(isContentPubliclyEligible).map((article) => new Date(article.publishedAt).getTime()));
+    expect(new Date(home.hero.publishedAt).getTime()).toBe(latestPublishedAt);
     const placements = [home.hero, ...home.supportingStories, ...home.latestRail, ...home.lanes.flatMap((lane) => lane.articles)];
     expect(placements.filter((article) => article.slug === home.hero.slug)).toHaveLength(2);
   });
 
   it("adds both records to RSS and Google News", () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2026-09-17T12:00:00+03:00"));
     const eligible = articles.filter(isContentPubliclyEligible);
     const rss = buildRssFeed(eligible);
     const news = buildGoogleNewsSitemap(eligible);

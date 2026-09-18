@@ -108,6 +108,7 @@ export const topics: Tag[] = [
   { name: "Health Tech", slug: "health-tech", kind: "topic" },
   { name: "Smart Homes", slug: "smart-homes", kind: "topic" },
   { name: "Startups", slug: "startups", kind: "topic" },
+  { name: "Venture Capital", slug: "venture-capital", kind: "topic" },
   { name: "Business", slug: "business", kind: "topic" },
   { name: "Fintech", slug: "fintech", kind: "topic" },
   { name: "Banking", slug: "banking", kind: "topic" },

@@ -24,7 +24,7 @@ When GT Flow Limited, Twiga Foods' operating entity, entered statutory administr
 
 Twiga's collapse puts it alongside 12 other once-prominent Kenyan startups that have shut down, entered administration, or gone through liquidation over the past five years, after collectively raising in excess of KES 93 billion. That figure and that company count come from Business Daily Africa's own reporting on Twiga's administration, and it's corroborated across multiple independent outlets covering the same story this week.
 
-The full list, as reported: Twiga Foods, Copia Global, Gro Intelligence, MarketForce, Sendy, iProcure, Koko Networks, Lipa Later, Mobius Motors, Wefarm, Notify Logistics, Kune, and Bonto. Individual funding figures, where independently confirmed:
+The full list, as reported: Twiga Foods, Copia Global, Gro Intelligence, MarketForce, Sendy, iProcure, Koko Networks, Lipa Later, Mobius Motors, Wefarm, Notify Logistics, Kune, and Zumi. Individual funding figures, where independently confirmed:
 
 | Startup | Sector | Funding Raised | Outcome |
 | :--- | :--- | :--- | :--- |
@@ -36,7 +36,7 @@ The full list, as reported: Twiga Foods, Copia Global, Gro Intelligence, MarketF
 | Lipa Later | Buy-now-pay-later fintech | Over $16 million | Administration, March 2025 |
 | iProcure | Agri-input distribution | $17.1 million | Administration, April 2024 |
 
-Mobius Motors, Wefarm, Notify Logistics, Kune, Koko Networks, and Bonto complete the 13-company cohort; specific, independently confirmed funding figures for each weren't available at the time of this report and are not included in the table to avoid overstating precision the sourcing doesn't support. Mobius Motors' story has a distinct ending worth noting on its own: rather than fully dissolving, it was acquired out of bankruptcy in 2025 by Silver Box, a Middle Eastern investment firm, a rare case in this list where assets found a buyer rather than simply winding down.
+Mobius Motors, Wefarm, Notify Logistics, Kune, Koko Networks, and Zumi complete the 13-company cohort; specific, independently confirmed funding figures for each weren't available at the time of this report and are not included in the table to avoid overstating precision the sourcing doesn't support. Mobius Motors' story has a distinct ending worth noting on its own: rather than fully dissolving, it was acquired out of bankruptcy in 2025 by Silver Box, a Middle Eastern investment firm, a rare case in this list where assets found a buyer rather than simply winding down.
 
 ## What actually killed most of these companies
 

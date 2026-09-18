@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { buildGoogleNewsSitemap, buildRssFeed } from "@/content/feeds";
 import { isArticleIndexable, isContentPubliclyEligible } from "@/lib/content-quality";
 import { editorialSeptember15ImportReport } from "@/lib/editorial-bundle-september-15-2026";
@@ -8,6 +8,8 @@ import { articles } from "@/lib/sample-data";
 
 const slugs = editorialSeptember15ImportReport.map((entry) => entry.slug);
 const imported = slugs.map((slug) => articles.find((article) => article.slug === slug));
+
+afterEach(() => vi.useRealTimers());
 
 function articleText(article: NonNullable<(typeof imported)[number]>) {
   return [
@@ -98,6 +100,8 @@ describe("September 15 final roundup publication", () => {
   });
 
   it("adds all seven records to RSS and Google News", () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2026-09-16T12:00:00+03:00"));
     const eligible = articles.filter(isContentPubliclyEligible);
     const rss = buildRssFeed(eligible);
     const news = buildGoogleNewsSitemap(eligible);

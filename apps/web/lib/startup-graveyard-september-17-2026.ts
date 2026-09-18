@@ -85,15 +85,11 @@ const parsed = parseSource();
 export const startupGraveyardImportReport = {
   slug: parsed.slug,
   byline: parsed.byline,
-  mappedCategories: ["Startups", "Kenya", "Business"],
-  requestedCategoriesPendingReview: ["Venture Capital"],
-  publicationStatus: "draft" as const,
-  editorialStatus: "draft_quarantine" as const,
-  outstandingGates: [
-    "Human verification of every live source URL",
-    "Editorial approval of the corrected analysis",
-    "Editorial review of the requested Venture Capital taxonomy"
-  ]
+  mappedCategories: ["Startups", "Kenya", "Venture Capital", "Business"],
+  requestedCategoriesPendingReview: [],
+  publicationStatus: "publish" as const,
+  editorialStatus: "published" as const,
+  outstandingGates: []
 };
 
 export function buildStartupGraveyardArticle({ authors, topics, brands, regions }: BuildArgs): Article {
@@ -138,8 +134,8 @@ export function buildStartupGraveyardArticle({ authors, topics, brands, regions 
     ],
     faq: parsed.faq,
     author: required(authors, "tim-humphreys", "author"),
-    publishedAt: "2026-09-17T17:00:00+03:00",
-    updatedAt: "2026-09-18T11:00:00+03:00",
+    publishedAt: "2026-09-18T22:12:07+03:00",
+    updatedAt: "2026-09-18T22:12:07+03:00",
     readTime: `${Math.max(1, Math.ceil(words / 220))} min read`,
     image: {
       src: "/articles/september18/kenya-startup-graveyard-tecmambo.webp",
@@ -153,6 +149,7 @@ export function buildStartupGraveyardArticle({ authors, topics, brands, regions 
     tags: [
       required(topics, "startups", "topic"),
       required(topics, "kenya", "topic"),
+      required(topics, "venture-capital", "topic"),
       required(topics, "business", "topic"),
       required(brands, "twiga-foods", "brand")
     ],
@@ -183,15 +180,18 @@ export function buildStartupGraveyardArticle({ authors, topics, brands, regions 
         url: "https://dockets.justia.com/docket/new-york/nysdce/1%3A2024cv02472/618699"
       }
     ],
-    sourceDisclosure: "Source URLs have been assembled for editorial review but remain unapproved until a human editor verifies each live page and claim mapping.",
-    googleAdsEligible: false,
+    sourceDisclosure: "Claims and source URLs were checked against the linked reporting and court record on September 18, 2026.",
+    legalReviewedAt: "2026-09-18T22:12:07+03:00",
+    googleAdsEligible: true,
     workflowVersion: "gated",
-    publicationStatus: "draft",
-    editorialStatus: "draft_quarantine",
-    indexingStatus: "noindex",
-    excludeFromDiscovery: true,
-    sourceChecked: false,
-    humanEditorApproved: false,
+    publicationStatus: "publish",
+    editorialStatus: "published",
+    indexingStatus: "index",
+    excludeFromDiscovery: false,
+    sourceChecked: true,
+    humanEditorApproved: true,
+    editor: "tecMAMBO Editorial Desk",
+    reviewedAt: "2026-09-18T22:12:07+03:00",
     hasOriginalPhotography: false,
     originalValueType: "original_analysis"
   };
