@@ -20,6 +20,7 @@ import { buildEditorialSeptember11Articles } from "@/lib/editorial-bundle-septem
 import { buildEditorialSeptember13Articles } from "@/lib/editorial-bundle-september-13-2026";
 import { buildEditorialSeptember15Articles } from "@/lib/editorial-bundle-september-15-2026";
 import { buildEditorialSeptember16Articles } from "@/lib/editorial-bundle-september-16-2026";
+import { buildEditorialSeptember19Articles } from "@/lib/editorial-bundle-september-19-2026";
 import { buildStartupGraveyardArticle } from "@/lib/startup-graveyard-september-17-2026";
 import { buildIphoneDuoArticle } from "@/lib/iphone-duo-2026";
 import { buildPixel11LaunchArticle } from "@/lib/pixel-11-launch-2026";
@@ -84,6 +85,7 @@ export const topics: Tag[] = [
   { name: "E-Commerce", slug: "e-commerce", kind: "topic" },
   { name: "Quick Commerce", slug: "quick-commerce", kind: "topic" },
   { name: "Privacy", slug: "privacy", kind: "topic" },
+  { name: "Hardware", slug: "hardware", kind: "topic" },
   { name: "Computing", slug: "computing", kind: "topic" },
   { name: "Social Media", slug: "social-media", kind: "topic" },
   { name: "Entertainment", slug: "entertainment", kind: "topic" },
@@ -239,6 +241,7 @@ export const brands: Tag[] = [
   { name: "SpaceX", slug: "spacex", kind: "brand" },
   { name: "OpenAI", slug: "openai", kind: "brand" },
   { name: "Google", slug: "google", kind: "brand" },
+  { name: "LG", slug: "lg", kind: "brand" },
   { name: "Huawei", slug: "huawei", kind: "brand" },
   { name: "Visa", slug: "visa", kind: "brand" },
   { name: "Onafriq", slug: "onafriq", kind: "brand" },
@@ -1004,6 +1007,12 @@ const editorialSeptember16Articles = buildEditorialSeptember16Articles({
   brands,
   regions: [kenyaRegion]
 });
+const editorialSeptember19Articles = buildEditorialSeptember19Articles({
+  authors,
+  topics,
+  brands,
+  regions: [kenyaRegion]
+});
 const startupGraveyardArticle = buildStartupGraveyardArticle({
   authors,
   topics,
@@ -1164,6 +1173,7 @@ function migrateLegacyLifecycle(article: Article): Article {
 
 export const articles: Article[] = [
   startupGraveyardArticle,
+  ...editorialSeptember19Articles,
   ...editorialSeptember16Articles,
   ...editorialSeptember15Articles,
   ...editorialSeptember13Articles,

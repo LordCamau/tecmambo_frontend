@@ -168,6 +168,7 @@ export type Article = {
   editor?: string;
   reviewedAt?: string;
   originalValueType?: "original_reporting" | "original_analysis" | "first_hand_testing" | "data_analysis" | "practical_guide" | "curated_context";
+  homepageHeroPriority?: number;
   testEvidence?: string[];
   testStartedAt?: string;
   testCompletedAt?: string;

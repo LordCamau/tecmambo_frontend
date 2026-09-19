@@ -104,6 +104,7 @@ export function buildStartupGraveyardArticle({ authors, topics, brands, regions 
     format: "opinion",
     contentFormat: "opinion",
     isNewsworthy: true,
+    homepageHeroPriority: 100,
     title: parsed.title,
     seo: {
       title: parsed.seoTitle,
@@ -135,10 +136,10 @@ export function buildStartupGraveyardArticle({ authors, topics, brands, regions 
     faq: parsed.faq,
     author: required(authors, "tim-humphreys", "author"),
     publishedAt: "2026-09-18T22:12:07+03:00",
-    updatedAt: "2026-09-18T22:12:07+03:00",
+    updatedAt: "2026-09-19T10:05:00+03:00",
     readTime: `${Math.max(1, Math.ceil(words / 220))} min read`,
     image: {
-      src: "/articles/september18/kenya-startup-graveyard-tecmambo.webp",
+      src: "/articles/september19/New_Kenya_Startup_Graveyard.webp",
       alt: "AI-generated illustration of weathered startup gravestones overlooking Nairobi at sunset.",
       caption: "An AI-generated editorial illustration of Kenya's startup funding reckoning. The scene is conceptual and is not a definitive list or legal characterization of the companies shown.",
       credit: "AI Generate Illustration for tecMAMBO",

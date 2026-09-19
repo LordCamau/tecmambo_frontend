@@ -116,8 +116,8 @@ describe("September 16 corrected special edition", () => {
     expect(apple.body.join("\n")).toContain("/news/apple-surprise-and-shine-keynote-full-recap");
     expect(court.body.join("\n")).toContain("/business/safaricom-board-reshuffle-vodacom-mariam-cassim-matimba-mbungela");
     const home = curateHomeContent(articles, []);
-    const latestPublishedAt = Math.max(...articles.filter(isContentPubliclyEligible).map((article) => new Date(article.publishedAt).getTime()));
-    expect(new Date(home.hero.publishedAt).getTime()).toBe(latestPublishedAt);
+    expect(home.hero.slug).toBe("kenya-startup-graveyard-twiga-foods-failures");
+    expect(home.hero.homepageHeroPriority).toBe(100);
     const placements = [home.hero, ...home.supportingStories, ...home.latestRail, ...home.lanes.flatMap((lane) => lane.articles)];
     expect(placements.filter((article) => article.slug === home.hero.slug)).toHaveLength(2);
   });

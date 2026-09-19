@@ -76,6 +76,14 @@ function hottestFirst(articles: Article[]) {
   });
 }
 
+function homepageHeroFirst(articles: Article[]) {
+  return [...articles].sort((first, second) => {
+    const priorityDifference = (second.homepageHeroPriority ?? 0) - (first.homepageHeroPriority ?? 0);
+    if (priorityDifference) return priorityDifference;
+    return hottestFirst([first, second])[0] === first ? -1 : 1;
+  });
+}
+
 function hottestGlossaryTerms(glossaryTerms: GlossaryTerm[]) {
   return [...glossaryTerms].sort((first, second) => {
     const trendDifference = (second.trendingScore ?? 0) - (first.trendingScore ?? 0);
@@ -126,7 +134,8 @@ export function preferredHomeLaneKey(article: Article) {
 export function curateHomeContent(articles: Article[], glossaryTerms: GlossaryTerm[]) {
   articles = hottestFirst(articles.filter(isContentPubliclyEligible));
   const usedAboveFoldSlugs = new Set<string>();
-  const hero = uniqueByArticleAndImage(articles)[0] ?? articles[0]!;
+  const heroCandidates = uniqueByArticleAndImage(homepageHeroFirst(articles));
+  const hero = heroCandidates[0] ?? articles[0]!;
   usedAboveFoldSlugs.add(hero.slug);
   const supportingStories = takeWithTagCap(uniqueByArticleAndImage(articles.filter((article) => !usedAboveFoldSlugs.has(article.slug))), "computing", 1, 2);
   supportingStories.forEach((article) => usedAboveFoldSlugs.add(article.slug));

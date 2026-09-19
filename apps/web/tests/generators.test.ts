@@ -48,10 +48,8 @@ describe("content generators", () => {
       ...curation.latestRail.map((article) => article.id)
     ];
 
-    const newestEligibleArticle = articles
-      .filter((article) => article.excludeFromDiscovery !== true)
-      .sort((first, second) => new Date(second.publishedAt).getTime() - new Date(first.publishedAt).getTime())[0];
-    expect(curation.hero.publishedAt).toBe(newestEligibleArticle?.publishedAt);
+    expect(curation.hero.slug).toBe("kenya-startup-graveyard-twiga-foods-failures");
+    expect(curation.hero.homepageHeroPriority).toBe(100);
     expect(curation.supportingStories).toHaveLength(2);
     expect(curation.latestRail).toHaveLength(5);
     expect(curation.lanes.map((lane) => lane.key)).toEqual([

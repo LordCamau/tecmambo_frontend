@@ -32,7 +32,7 @@ describe("September 17 startup graveyard corrected analysis", () => {
 
   it("uses the supplied conceptual artwork with transparent metadata", () => {
     expect(article?.image).toMatchObject({
-      src: "/articles/september18/kenya-startup-graveyard-tecmambo.webp",
+      src: "/articles/september19/New_Kenya_Startup_Graveyard.webp",
       alt: "AI-generated illustration of weathered startup gravestones overlooking Nairobi at sunset.",
       caption: "An AI-generated editorial illustration of Kenya's startup funding reckoning. The scene is conceptual and is not a definitive list or legal characterization of the companies shown.",
       credit: "AI Generate Illustration for tecMAMBO",
@@ -40,6 +40,8 @@ describe("September 17 startup graveyard corrected analysis", () => {
       height: 887,
       type: "image/webp"
     });
+    expect(article?.updatedAt).toBe("2026-09-19T10:05:00+03:00");
+    expect(article?.homepageHeroPriority).toBe(100);
     const imagePath = resolve(process.cwd(), "public", article!.image.src.slice(1));
     expect(existsSync(imagePath)).toBe(true);
     expect(statSync(imagePath).size).toBeLessThan(600_000);
