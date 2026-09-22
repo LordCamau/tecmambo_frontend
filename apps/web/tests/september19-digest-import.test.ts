@@ -75,10 +75,11 @@ describe("September 19 corrected digest", () => {
     expect(kenya.body.join("\n")).toContain("/explainers/digital-realty-nbo2-nairobi-data-centre-icolo");
   });
 
-  it("keeps the startup graveyard analysis as the main homepage hero", () => {
+  it("promotes the Pixel scam-warning story as the main homepage hero", () => {
     const home = curateHomeContent(articles, []);
-    expect(home.hero.slug).toBe("kenya-startup-graveyard-twiga-foods-failures");
-    expect(home.hero.image.src).toBe("/articles/september19/New_Kenya_Startup_Graveyard.webp");
+    expect(home.hero.slug).toBe("google-pixel-september-2026-feature-drop");
+    expect(home.hero.image.src).toBe("/articles/september19/Google_Pixel_Drop.webp");
+    expect(home.hero.homepageHeroPriority).toBe(100);
     const placements = [home.hero, ...home.supportingStories, ...home.latestRail, ...home.lanes.flatMap((lane) => lane.articles)];
     expect(placements.filter((article) => article.slug === home.hero.slug)).toHaveLength(2);
   });

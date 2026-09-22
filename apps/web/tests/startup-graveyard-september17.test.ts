@@ -1,6 +1,6 @@
 import { existsSync, readFileSync, statSync } from "node:fs";
 import { resolve } from "node:path";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { buildGoogleNewsSitemap, buildRssFeed } from "@/content/feeds";
 import { articlePublicText, isArticleIndexable, isContentPubliclyEligible } from "@/lib/content-quality";
 import { articles } from "@/lib/sample-data";
@@ -41,7 +41,7 @@ describe("September 17 startup graveyard corrected analysis", () => {
       type: "image/webp"
     });
     expect(article?.updatedAt).toBe("2026-09-19T10:05:00+03:00");
-    expect(article?.homepageHeroPriority).toBe(100);
+    expect(article?.homepageHeroPriority).toBeUndefined();
     const imagePath = resolve(process.cwd(), "public", article!.image.src.slice(1));
     expect(existsSync(imagePath)).toBe(true);
     expect(statSync(imagePath).size).toBeLessThan(600_000);
@@ -66,9 +66,12 @@ describe("September 17 startup graveyard corrected analysis", () => {
   });
 
   it("adds the published record to feeds and Google News", () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2026-09-19T11:00:00+03:00"));
     const eligible = articles.filter(isContentPubliclyEligible);
     expect(buildRssFeed(eligible)).toContain(article!.slug);
     expect(buildGoogleNewsSitemap(eligible)).toContain(article!.slug);
+    vi.useRealTimers();
   });
 
   it("stores only the publishable corrected source", () => {

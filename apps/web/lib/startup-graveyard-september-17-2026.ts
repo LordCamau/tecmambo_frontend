@@ -104,7 +104,6 @@ export function buildStartupGraveyardArticle({ authors, topics, brands, regions 
     format: "opinion",
     contentFormat: "opinion",
     isNewsworthy: true,
-    homepageHeroPriority: 100,
     title: parsed.title,
     seo: {
       title: parsed.seoTitle,
