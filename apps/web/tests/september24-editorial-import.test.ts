@@ -41,13 +41,12 @@ describe("September 24 editorial package", () => {
     }
   });
 
-  it("preserves every image provision as a reusable media slot", () => {
-    expect(editorialSeptember24ImportReport.map((entry) => entry.mediaPlaceholders)).toEqual([6, 8, 6, 6, 6, 8]);
+  it("uses only the hero thumbnail on every article", () => {
+    expect(editorialSeptember24ImportReport.map((entry) => entry.mediaPlaceholders)).toEqual([0, 0, 0, 0, 0, 0]);
     expect(editorialSeptember24ImportReport.every((entry) => entry.youtubePlaceholders === 0)).toBe(true);
     for (const article of imported) {
-      expect(article.mediaSlots?.every((slot) => slot.status === "placeholder")).toBe(true);
-      expect(article.mediaSlots?.every((slot) => Boolean(slot.alt && slot.caption && slot.placement))).toBe(true);
-      expect(article.body.filter((part) => part.startsWith("[[media:")).length).toBe(article.mediaSlots?.length);
+      expect(article.mediaSlots ?? []).toHaveLength(0);
+      expect(article.body.some((part) => part.startsWith("[[media:"))).toBe(false);
       expect(article.image.alt.endsWith(".")).toBe(true);
       expect(article.image.caption?.endsWith(".")).toBe(true);
     }

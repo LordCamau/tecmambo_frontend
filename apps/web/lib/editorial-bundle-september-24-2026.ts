@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import type { Article, ArticleComparisonTable, ArticleMediaSlot, Author, RegionTerm, Tag } from "@/lib/types";
+import type { Article, ArticleComparisonTable, Author, RegionTerm, Tag } from "@/lib/types";
 
 type BuildArgs = { authors: Author[]; topics: Tag[]; brands: Tag[]; regions: RegionTerm[] };
 type ParsedArticle = {
@@ -13,7 +13,6 @@ type ParsedArticle = {
   body: string[];
   quickAnswer: string;
   reportingNote: string;
-  mediaSlots: ArticleMediaSlot[];
   comparisonTables: ArticleComparisonTable[];
 };
 
@@ -211,11 +210,6 @@ function firstSentence(text: string) {
   return text.match(/^.+?[.!?](?:\s|$)/)?.[0]?.trim() ?? text;
 }
 
-function sentenceCase(value: string) {
-  const clean = value.trim().replace(/\.$/, "");
-  return `${clean.charAt(0).toUpperCase()}${clean.slice(1)}.`;
-}
-
 function parseTable(block: string, articleNumber: number): ArticleComparisonTable {
   const lines = block.split("\n").filter(Boolean);
   const cells = lines.map((line) => line.split("|").slice(1, -1).map((cell) => cell.trim()));
@@ -256,36 +250,18 @@ function parseBundle(): ParsedArticle[] {
     const bodyMatch = block.match(/^\*\*Primary keywords:\*\*[^\n]+\n\n([\s\S]*?)\n\n\*\*(?:Reporting note|Source note):\*\*\s*([\s\S]+)$/m);
     if (!bodyMatch?.[1] || !bodyMatch[2]) throw new Error(`Malformed September 24 body: ${title}`);
 
-    const mediaSlots: ArticleMediaSlot[] = [];
     const comparisonTables: ArticleComparisonTable[] = [];
-    let currentHeading = "Lead section";
     const parts = bodyMatch[1].trim().split(/\n{2,}/).map((part) => part.trim());
     const body = parts.map((part) => {
-      if (/^#{2,3} /.test(part)) currentHeading = part.replace(/^#{2,3} /, "");
       const media = part.match(/^\[IMAGE \d+:\s*(.+)\]$/i);
-      if (media?.[1]) {
-        const description = media[1].trim();
-        const imageNumber = mediaSlots.length + 1;
-        const slot: ArticleMediaSlot = {
-          id: `september24-${index + 1}-image-${imageNumber}`,
-          type: /infographic|diagram|chart|graphic|dashboard/i.test(description) ? "infographic" : "image",
-          status: "placeholder",
-          placement: imageNumber === 1 ? "Lead section" : `After ${currentHeading}`,
-          caption: sentenceCase(description),
-          alt: description,
-          licensingNote: "Reserved for a rights-cleared asset matching this editorial brief.",
-          aspectRatio: "2:1"
-        };
-        mediaSlots.push(slot);
-        return `[[media:${slot.id}]]`;
-      }
+      if (media?.[1]) return "";
       if (part.startsWith("|")) {
         const table = parseTable(part, index + 1);
         comparisonTables.push(table);
         return `[[table:${table.id}]]`;
       }
       return part;
-    });
+    }).filter(Boolean);
     const reportingNote = bodyMatch[2].trim();
     body.push(`Reporting note: ${reportingNote}`);
     const firstParagraph = body.find((part) => !part.startsWith("#") && !part.startsWith("[["));
@@ -301,7 +277,6 @@ function parseBundle(): ParsedArticle[] {
       body: addInternalLinks(metadataValue(block, "Suggested slug"), body),
       quickAnswer: firstSentence(firstParagraph),
       reportingNote,
-      mediaSlots,
       comparisonTables
     };
   });
@@ -321,11 +296,11 @@ export const editorialSeptember24ImportReport = parsedArticles.map((article) => 
   slug: article.slug,
   byline: article.byline,
   categories: taxonomyBySlug[article.slug]?.topics ?? [],
-  mediaPlaceholders: article.mediaSlots.length,
-  youtubePlaceholders: article.mediaSlots.filter((slot) => slot.type === "youtube").length,
+  mediaPlaceholders: 0,
+  youtubePlaceholders: 0,
   internalLinks: article.body.flatMap((part) => [...part.matchAll(/\]\((\/[^)]+)\)/g)].map((match) => match[1]!)),
   publicationStatus: "published" as const,
-  outstandingGates: article.mediaSlots.map((slot) => `${slot.id}: ${slot.licensingNote}`)
+  outstandingGates: []
 }));
 
 export function buildEditorialSeptember24Articles({ authors, topics, brands, regions }: BuildArgs): Article[] {
@@ -362,7 +337,6 @@ export function buildEditorialSeptember24Articles({ authors, topics, brands, reg
       quickAnswer: parsed.quickAnswer,
       body: parsed.body,
       comparisonTables: parsed.comparisonTables.length ? parsed.comparisonTables : undefined,
-      mediaSlots: parsed.mediaSlots,
       author: required(authors, "tecmambo-team", "author"),
       publishedAt,
       updatedAt: publishedAt,

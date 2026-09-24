@@ -33,7 +33,6 @@ import { AdSlot } from "@/components/ads/AdSlot";
 import { AdSenseScript } from "@/components/ads/AdSenseScript";
 import { YouTubeEmbed } from "@/components/media/YouTubeEmbed";
 import { ImageCaption } from "@/components/media/ImageCaption";
-import { ArticleMediaPlaceholder } from "@/components/media/ArticleMediaPlaceholder";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ArticleShare } from "@/components/engagement/ArticleShare";
 import { GoogleSourcePrompt } from "@/components/engagement/GoogleSourcePrompt";
@@ -136,8 +135,7 @@ function ArticleBodyBlock({
   const mediaSlotId = paragraph.match(/^\[\[media:([a-z0-9-]+)\]\]$/)?.[1];
   const mediaSlot = mediaSlotId ? mediaSlots?.find((slot) => slot.id === mediaSlotId) : undefined;
   if (mediaSlotId) {
-    if (!mediaSlot) return null;
-    if (mediaSlot.status === "placeholder") return <ArticleMediaPlaceholder slot={mediaSlot} />;
+    if (!mediaSlot || mediaSlot.status !== "ready") return null;
     if (mediaSlot.type === "youtube" && mediaSlot.url && mediaSlot.title) {
       return <YouTubeEmbed caption={mediaSlot.caption} title={mediaSlot.title} url={mediaSlot.url} />;
     }
