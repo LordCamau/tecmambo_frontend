@@ -95,7 +95,7 @@ describe("September 15 final roundup publication", () => {
     expect(imported[4]?.quickAnswer).toContain("/explainers/altman-two-ai-scenarios-china-trump-reaction");
     expect(imported[6]?.quickAnswer).toContain("/explainers/amodei-altman-musk-ai-slowdown-markets");
     expect(imported[5]?.body.join("\n")).toContain("/explainers/iphone-18-pro-max-us-qualcomm-modem-c2");
-    expect(imported[2]?.body.join("\n")).toContain("/business/roam-gen-3-battery-working-boda-boda-riders");
+    expect(imported[2]?.body.join("\n")).toContain("/real-life/roam-gen-3-battery-working-boda-boda-riders");
     expect(imported[1]?.publicationStatus).toBe("publish");
   });
 

@@ -189,7 +189,7 @@ function addInternalLinks(parsed: Parsed) {
   if (parsed.slug === "nairobi-e-mobility-week-2026-kicc") {
     parsed.body = parsed.body.map((part) => part.replace(
       "Roam, a Kenyan electric motorcycle manufacturer whose Gen 3 battery cuts charging time to under 40 minutes",
-      "[Roam, a Kenyan electric motorcycle manufacturer whose Gen 3 battery cuts charging time to under 40 minutes](/business/roam-gen-3-battery-working-boda-boda-riders)"
+      "[Roam, a Kenyan electric motorcycle manufacturer whose Gen 3 battery cuts charging time to under 40 minutes](/real-life/roam-gen-3-battery-working-boda-boda-riders)"
     ));
   }
 }

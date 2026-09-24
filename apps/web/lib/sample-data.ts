@@ -21,6 +21,7 @@ import { buildEditorialSeptember13Articles } from "@/lib/editorial-bundle-septem
 import { buildEditorialSeptember15Articles } from "@/lib/editorial-bundle-september-15-2026";
 import { buildEditorialSeptember16Articles } from "@/lib/editorial-bundle-september-16-2026";
 import { buildEditorialSeptember19Articles } from "@/lib/editorial-bundle-september-19-2026";
+import { buildEditorialSeptember24Articles } from "@/lib/editorial-bundle-september-24-2026";
 import { buildStartupGraveyardArticle } from "@/lib/startup-graveyard-september-17-2026";
 import { buildIphoneDuoArticle } from "@/lib/iphone-duo-2026";
 import { buildPixel11LaunchArticle } from "@/lib/pixel-11-launch-2026";
@@ -88,6 +89,8 @@ export const topics: Tag[] = [
   { name: "Hardware", slug: "hardware", kind: "topic" },
   { name: "Computing", slug: "computing", kind: "topic" },
   { name: "Social Media", slug: "social-media", kind: "topic" },
+  { name: "Creator Economy", slug: "creator-economy", kind: "topic" },
+  { name: "Tax", slug: "tax", kind: "topic" },
   { name: "Entertainment", slug: "entertainment", kind: "topic" },
   { name: "Streaming", slug: "streaming", kind: "topic" },
   { name: "Christopher Nolan", slug: "christopher-nolan", kind: "topic" },
@@ -188,6 +191,8 @@ export const topics: Tag[] = [
   { name: "Made by Google", slug: "made-by-google", kind: "topic" },
   { name: "Google Play Services", slug: "google-play-services", kind: "topic" },
   { name: "Google Wallet", slug: "google-wallet", kind: "topic" },
+  { name: "Googlebook", slug: "googlebook", kind: "topic" },
+  { name: "Galaxy S27", slug: "galaxy-s27", kind: "topic" },
   { name: "Play Store", slug: "play-store", kind: "topic" },
   { name: "System Updates", slug: "system-updates", kind: "topic" },
   { name: "Infrastructure", slug: "infrastructure", kind: "topic" },
@@ -241,6 +246,7 @@ export const brands: Tag[] = [
   { name: "SpaceX", slug: "spacex", kind: "brand" },
   { name: "OpenAI", slug: "openai", kind: "brand" },
   { name: "Google", slug: "google", kind: "brand" },
+  { name: "TikTok", slug: "tiktok", kind: "brand" },
   { name: "LG", slug: "lg", kind: "brand" },
   { name: "Huawei", slug: "huawei", kind: "brand" },
   { name: "Visa", slug: "visa", kind: "brand" },
@@ -1013,6 +1019,12 @@ const editorialSeptember19Articles = buildEditorialSeptember19Articles({
   brands,
   regions: [kenyaRegion]
 });
+const editorialSeptember24Articles = buildEditorialSeptember24Articles({
+  authors,
+  topics,
+  brands,
+  regions: [kenyaRegion, ugandaRegion, rwandaRegion]
+});
 const startupGraveyardArticle = buildStartupGraveyardArticle({
   authors,
   topics,
@@ -1172,6 +1184,7 @@ function migrateLegacyLifecycle(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  ...editorialSeptember24Articles,
   startupGraveyardArticle,
   ...editorialSeptember19Articles,
   ...editorialSeptember16Articles,
