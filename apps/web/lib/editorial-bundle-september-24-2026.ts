@@ -36,6 +36,8 @@ const scheduleBySlug: Record<string, string> = {
   "africa-go-green-fund-spiro-36-million-electric-mobility": "2026-09-24T09:50:00+03:00"
 };
 
+const modifiedAt = "2026-09-24T22:00:00+03:00";
+
 const seoTitleBySlug: Record<string, string> = {
   "epra-removes-15000-kwh-ev-charging-limit-kenya": "EPRA Removes Kenya's 15,000 kWh EV Charging Limit",
   "googlebook-googlebook-os-android-gemini-laptop-launch": "Googlebook Launch: Android, Gemini and Premium Laptops",
@@ -80,21 +82,21 @@ const taxonomyBySlug: Record<string, { topics: string[]; brands: string[]; regio
 
 const imageBySlug: Record<string, Article["image"]> = {
   "epra-removes-15000-kwh-ev-charging-limit-kenya": {
-    src: "/articles/september15/Nairobi_Emobility_Week_KICC.jpg",
-    alt: "Electric vehicles and charging technology displayed during Nairobi E-Mobility Week at KICC.",
-    caption: "Kenya's electric mobility market is moving from pilot projects toward commercial charging and fleet infrastructure.",
-    credit: "Kenya Power/Facebook",
+    src: "/articles/september24/epra-ev-charging-tariffs.webp",
+    alt: "A white electric vehicle connected to a Kenya Power public charging station.",
+    caption: "A vehicle charges at a Kenya Power station as Kenya's revised e-mobility tariff removes the previous 15,000 kWh monthly ceiling.",
+    credit: "Kenya Power",
     width: 1040,
     height: 520,
-    type: "image/jpeg"
+    type: "image/webp"
   },
   "googlebook-googlebook-os-android-gemini-laptop-launch": {
-    src: "/articles/september24/googlebook-launch.webp",
-    alt: "Googlebook premium laptop hardware shown in Google's official launch imagery.",
-    caption: "Googlebook launches as a premium laptop category built with Acer, ASUS, Dell, HP and Lenovo.",
+    src: "/articles/september24/googlebook-unveiled.webp",
+    alt: "A white Googlebook laptop displaying the Googlebook OS desktop on a work desk.",
+    caption: "Googlebook pairs a desktop interface with Android integration and Gemini features in Google's new premium laptop strategy.",
     credit: "Google",
-    width: 1200,
-    height: 642,
+    width: 1040,
+    height: 520,
     type: "image/webp"
   },
   "tiktok-kenyan-creators-tax-details-withholding-2026": {
@@ -108,12 +110,12 @@ const imageBySlug: Record<string, Article["image"]> = {
     type: "image/webp"
   },
   "samsung-galaxy-s27-ram-storage-configurations-leak": {
-    src: "/articles/september24/samsung-galaxy-s27-leak-illustration.webp",
-    alt: "Samsung Galaxy S26 series phones shown for illustration while the Galaxy S27 remains unannounced.",
-    caption: "Samsung's current Galaxy S26 series is shown for illustration. The reported Galaxy S27 configurations remain unconfirmed.",
-    credit: "Samsung",
-    width: 1200,
-    height: 675,
+    src: "/articles/september24/samsung-galaxy-s27-ultra-leak.webp",
+    alt: "Concept render of two Samsung Galaxy S27 Ultra phones with Exynos and Snapdragon processor labels.",
+    caption: "A concept render illustrates the reported Galaxy S27 Ultra processor options. Samsung has not confirmed the device or its specifications.",
+    credit: "tecMAMBO concept illustration",
+    width: 1040,
+    height: 520,
     type: "image/webp"
   },
   "trump-ai-super-intelligence-name-meaning": {
@@ -126,13 +128,13 @@ const imageBySlug: Record<string, Article["image"]> = {
     type: "image/webp"
   },
   "africa-go-green-fund-spiro-36-million-electric-mobility": {
-    src: "/articles/spiro-electric-mobility.jpg",
-    alt: "A red Spiro electric motorcycle inside a workshop.",
-    caption: "Spiro combines electric motorcycles with a battery-swapping network across African markets.",
+    src: "/articles/september24/spiro-africa-go-green-financing.webp",
+    alt: "A Spiro technician working beside a red electric motorcycle on an assembly line.",
+    caption: "A Spiro technician works on an electric motorcycle as the company expands production and battery-swapping infrastructure across African markets.",
     credit: "Spiro",
     width: 1040,
     height: 520,
-    type: "image/jpeg"
+    type: "image/webp"
   }
 };
 
@@ -337,9 +339,9 @@ export function buildEditorialSeptember24Articles({ authors, topics, brands, reg
       quickAnswer: parsed.quickAnswer,
       body: parsed.body,
       comparisonTables: parsed.comparisonTables.length ? parsed.comparisonTables : undefined,
-      author: required(authors, "tecmambo-team", "author"),
+      author: required(authors, "tim-humphreys", "author"),
       publishedAt,
-      updatedAt: publishedAt,
+      updatedAt: modifiedAt,
       readTime: `${Math.max(4, Math.ceil(words / 220))} min read`,
       image,
       tags: [
@@ -359,7 +361,7 @@ export function buildEditorialSeptember24Articles({ authors, topics, brands, reg
       sourceChecked: true,
       humanEditorApproved: true,
       editor: "tecMAMBO Editorial Desk",
-      reviewedAt: "2026-09-24T10:15:00+03:00",
+      reviewedAt: modifiedAt,
       hasOriginalPhotography: false,
       originalValueType: format === "business" || format === "news" ? "curated_context" : "practical_guide"
     };

@@ -27,8 +27,9 @@ describe("September 24 editorial package", () => {
     ]);
     for (const article of imported) {
       expect(article).toBeDefined();
-      expect(article.author.slug).toBe("tecmambo-team");
+      expect(article.author.slug).toBe("tim-humphreys");
       expect(article.publishedAt.startsWith("2026-09-24T")).toBe(true);
+      expect(article.updatedAt).toBe("2026-09-24T22:00:00+03:00");
       expect(article.publicationStatus).toBe("publish");
       expect(article.editorialStatus).toBe("published");
       expect(article.indexingStatus).toBe("index");
@@ -48,6 +49,21 @@ describe("September 24 editorial package", () => {
       expect(article.mediaSlots ?? []).toHaveLength(0);
       expect(article.body.some((part) => part.startsWith("[[media:"))).toBe(false);
       expect(article.image.alt.endsWith(".")).toBe(true);
+      expect(article.image.caption?.endsWith(".")).toBe(true);
+    }
+  });
+
+  it("uses the four supplied thumbnails with appropriate captions and credits", () => {
+    const expectedImages = new Map([
+      ["epra-removes-15000-kwh-ev-charging-limit-kenya", ["/articles/september24/epra-ev-charging-tariffs.webp", "Kenya Power"]],
+      ["googlebook-googlebook-os-android-gemini-laptop-launch", ["/articles/september24/googlebook-unveiled.webp", "Google"]],
+      ["samsung-galaxy-s27-ram-storage-configurations-leak", ["/articles/september24/samsung-galaxy-s27-ultra-leak.webp", "tecMAMBO concept illustration"]],
+      ["africa-go-green-fund-spiro-36-million-electric-mobility", ["/articles/september24/spiro-africa-go-green-financing.webp", "Spiro"]]
+    ]);
+    for (const [slug, [src, credit]] of expectedImages) {
+      const article = imported.find((candidate) => candidate.slug === slug)!;
+      expect(article.image.src).toBe(src);
+      expect(article.image.credit).toBe(credit);
       expect(article.image.caption?.endsWith(".")).toBe(true);
     }
   });

@@ -19,7 +19,7 @@ Google does not publish a magic article word count that guarantees AdSense appro
 
 # EPRA Removes Kenya's 15,000 kWh Monthly EV Charging Limit, Changing the Economics of Electric Mobility
 
-**Byline:** tecMAMBO Team
+**Byline:** Tim Humphreys
 **Published:** September 24, 2026
 **Category:** Electric Mobility / Kenya / Energy
 **Suggested slug:** `epra-removes-15000-kwh-ev-charging-limit-kenya`
@@ -96,7 +96,7 @@ EPRA's removal of the 15,000 kWh monthly limit is a technical regulatory change 
 
 # Googlebook Is Google's New Premium Laptop Strategy, and It Brings Android to the Desktop
 
-**Byline:** tecMAMBO Team
+**Byline:** Tim Humphreys
 **Published:** September 24, 2026
 **Category:** Laptops / Google / Computing
 **Suggested slug:** `googlebook-googlebook-os-android-gemini-laptop-launch`
@@ -193,7 +193,7 @@ Googlebook is Google's most ambitious attempt yet to build a premium laptop ecos
 
 # TikTok Asks Kenyan Creators for Tax Details as Withholding Rules Move Into the Platform
 
-**Byline:** tecMAMBO Team
+**Byline:** Tim Humphreys
 **Published:** September 24, 2026
 **Category:** Kenya / Social Media / Creator Economy
 **Suggested slug:** `tiktok-kenyan-creators-tax-details-withholding-2026`
@@ -280,7 +280,7 @@ TikTok's request for Kenyan creators to provide tax and residency information is
 
 # Samsung Galaxy S27 RAM and Storage Leak: 12GB Could Be the New Baseline
 
-**Byline:** tecMAMBO Team
+**Byline:** Tim Humphreys
 **Published:** September 24, 2026
 **Category:** Smartphones / Samsung / Mobile
 **Suggested slug:** `samsung-galaxy-s27-ram-storage-configurations-leak`
@@ -368,7 +368,7 @@ For now, these remain leaks. The final specifications will only be known when Sa
 
 # Trump Wants AI Renamed 'Super Intelligence', But Superintelligence Already Means Something Specific
 
-**Byline:** tecMAMBO Team
+**Byline:** Tim Humphreys
 **Published:** September 24, 2026
 **Category:** Artificial Intelligence / Policy / United States
 **Suggested slug:** `trump-ai-super-intelligence-name-meaning`
@@ -457,7 +457,7 @@ For readers, the useful distinction is simple. AI is a broad technology category
 
 # Africa Go Green Fund Doubles Spiro Financing to $36 Million as Electric Motorcycles Scale
 
-**Byline:** tecMAMBO Team
+**Byline:** Tim Humphreys
 **Published:** September 24, 2026
 **Category:** Electric Mobility / Africa / Climate Tech
 **Suggested slug:** `africa-go-green-fund-spiro-36-million-electric-mobility`
