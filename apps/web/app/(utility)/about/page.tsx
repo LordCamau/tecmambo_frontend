@@ -61,7 +61,7 @@ export default async function AboutPage() {
   const [articles, terms, authors] = await Promise.all([getArticles(), getGlossaryTerms(), getAuthors()]);
   const founder = authors.find((author) => author.slug === "tim-humphreys") ?? authors[0]!;
   const explainerAnalysisCount = articles.filter((article) => article.format === "explainer" || article.format === "opinion").length;
-  const otherAuthors = authors.filter((author) => author.slug !== founder.slug);
+  const otherAuthors = authors.filter((author) => author.slug !== founder.slug && author.slug !== "tecmambo-team");
 
   return (
     <article className={styles.page}>
@@ -133,9 +133,17 @@ export default async function AboutPage() {
       <section className={`readable ${styles.section}`}>
         <h2>What we're building</h2>
         <p>
-          To become <strong>Africa's most trusted technology publication, and one of the clearest anywhere</strong>: the reference people
-          <em> and</em> the AI tools they ask both turn to first. We measure success not in pageviews, but in how many people made a
-          better, more confident decision because of something they read here.
+          We are building a useful, accountable technology publication for readers in Kenya, across Africa, and beyond. We want each
+          story to help a reader understand a change or make a more confident decision.
+        </p>
+      </section>
+
+      <section className={`readable ${styles.section}`}>
+        <h2>Who publishes tecMAMBO</h2>
+        <p>
+          tecMAMBO is published by Brainerd Media Company in Nairobi, Kenya. Readers can reach the publication through our{" "}
+          <Link href="/contact">contact page</Link>, and can review our <Link href="/editorial-policy">editorial policy</Link> and{" "}
+          <Link href="/corrections">corrections process</Link>.
         </p>
       </section>
 
@@ -224,7 +232,7 @@ export default async function AboutPage() {
 
       <JsonLd data={aboutPageJsonLd()} />
       <JsonLd data={organizationJsonLd()} />
-      <JsonLd data={personJsonLd()} />
+      <JsonLd data={personJsonLd(founder)} />
     </article>
   );
 }

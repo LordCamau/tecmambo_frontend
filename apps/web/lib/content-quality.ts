@@ -21,6 +21,13 @@ const placeholderPatterns: Array<{ code: string; pattern: RegExp }> = [
 
 const firstHandClaimPattern = /\b(?:we tested|we timed|we asked|we checked|we ran|tested for|hands[- ]on|review)\b/i;
 const gatedWorkflowFields = ["sourceChecked", "humanEditorApproved", "editor", "reviewedAt"] as const;
+export const googleNewsHeadlineLimit = 110;
+
+export function articleHeadlineWarning(article: Pick<Article, "title">) {
+  return article.title.length > googleNewsHeadlineLimit
+    ? `Headline is ${article.title.length} characters. Review it against the ${googleNewsHeadlineLimit}-character editorial target without truncating it automatically.`
+    : null;
+}
 
 export function articlePublicText(article: Article) {
   return [
@@ -84,6 +91,8 @@ export function articleQualityIssues(article: Article): QualityIssue[] {
   }
   if (article.excludeFromDiscovery) add("excluded-from-discovery", "The article is explicitly excluded from discovery.");
   if (!article.title.trim()) add("missing-title", "The article has no title.");
+  const headlineWarning = articleHeadlineWarning(article);
+  if (headlineWarning) add("headline-over-110-characters", headlineWarning, "medium");
   if (!article.subhead.trim() || !article.excerpt.trim()) add("missing-summary", "The article is missing its subhead or excerpt.");
   if (!article.whyItMatters.trim()) add("missing-value", "The article has no why it matters explanation.");
   for (const correction of article.corrections ?? []) {

@@ -24,6 +24,8 @@ const organizationId = `${siteUrl}/#organization`;
 const organizationLogoId = `${siteUrl}/#logo`;
 const websiteId = `${siteUrl}/#website`;
 const editorialStandardsUrl = absoluteUrl("/editorial-standards");
+const editorialPolicyUrl = absoluteUrl("/editorial-policy");
+const correctionsPolicyUrl = absoluteUrl("/corrections");
 const organizationDescription =
   "tecMAMBO is a technology publication in Nairobi, Kenya, founded in 2016 by Tim Humphreys. It explains consumer tech, AI, fintech, startups, reviews, and African technology in plain English.";
 
@@ -47,7 +49,7 @@ export function organizationJsonLd(): WithContext<NewsMediaOrganization> {
     "@type": "NewsMediaOrganization",
     "@id": organizationId,
     name: "tecMAMBO",
-    legalName: "tecMAMBO",
+    legalName: "Brainerd Media Company",
     description: organizationDescription,
     url: siteUrl,
     slogan: "Made to be understood.",
@@ -84,9 +86,9 @@ export function organizationJsonLd(): WithContext<NewsMediaOrganization> {
       height: 512,
       caption: "tecMAMBO logo"
     },
-    publishingPrinciples: editorialStandardsUrl,
+    publishingPrinciples: editorialPolicyUrl,
     ethicsPolicy: editorialStandardsUrl,
-    correctionsPolicy: `${editorialStandardsUrl}#corrections-updates`,
+    correctionsPolicy: correctionsPolicyUrl,
     verificationFactCheckingPolicy: `${editorialStandardsUrl}#accuracy-verification-fact-checking`,
     unnamedSourcesPolicy: `${editorialStandardsUrl}#sourcing-attribution-originality`,
     actionableFeedbackPolicy: `${editorialStandardsUrl}#feedback-complaints-right-of-reply`,
@@ -97,11 +99,12 @@ export function organizationJsonLd(): WithContext<NewsMediaOrganization> {
 
 export function personJsonLd(author?: Author): WithContext<Person> {
   const person = author ?? {
+    id: "tim-humphreys",
     name: "Tim Humphreys",
     slug: "tim-humphreys",
     role: "Founder & Editor",
     bio: "Tim Humphreys founded tecMAMBO in 2016 to make technology easier to understand.",
-    avatar: "/authors/tim-humphreys.jpg",
+    avatar: "/authors/tim-humphreys.png",
     expertise: ["Consumer technology", "African technology", "Startups", "Digital policy"]
   };
   return {
@@ -121,6 +124,25 @@ export function personJsonLd(author?: Author): WithContext<Person> {
       name: "tecMAMBO"
     }
   };
+}
+
+function articleAuthorJsonLd(author: Author): Person {
+  return {
+    "@type": "Person",
+    "@id": absoluteUrl(`/authors/${author.slug}#person`),
+    name: author.name,
+    jobTitle: author.role,
+    description: author.bio,
+    url: absoluteUrl(`/authors/${author.slug}`),
+    image: absoluteUrl(author.avatar),
+    knowsAbout: author.expertise,
+    ...(author.sameAs?.length ? { sameAs: author.sameAs } : {}),
+    worksFor: {
+      "@type": "NewsMediaOrganization",
+      "@id": organizationId,
+      name: "tecMAMBO"
+    }
+  } as Person;
 }
 
 export function aboutPageJsonLd(): WithContext<AboutPage> {
@@ -245,7 +267,7 @@ export function articleJsonLd(article: Article): WithContext<SchemaArticle | Rev
       cssSelector: ["article h1", "article .quick-answer p", "article .readable p"]
     },
     wordCount,
-    author: personJsonLd(article.author),
+    author: articleAuthorJsonLd(article.author),
     publisher: {
       "@type": "NewsMediaOrganization",
       "@id": organizationId,

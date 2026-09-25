@@ -7,15 +7,27 @@ import styles from "./latest.module.css";
 import { isArchiveIndexable } from "@/lib/content-quality";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbJsonLd, collectionPageJsonLd } from "@/lib/seo";
+import { ArchivePagination } from "@/components/navigation/ArchivePagination";
+import { notFound } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Latest",
-  description: "The newest tecMAMBO stories, with filters for every editorial format.",
-  alternates: { canonical: "/latest" }
-};
+type SearchParams = Promise<{ page?: string }>;
+const pageSize = 30;
 
-export default async function LatestPage() {
+export async function generateMetadata({ searchParams }: { searchParams: SearchParams }): Promise<Metadata> {
+  const page = Math.max(1, Number((await searchParams).page) || 1);
+  return {
+    title: page === 1 ? "Latest" : `Latest, page ${page}`,
+    description: "The newest tecMAMBO stories, with filters for every editorial format.",
+    alternates: { canonical: page === 1 ? "/latest" : `/latest?page=${page}` }
+  };
+}
+
+export default async function LatestPage({ searchParams }: { searchParams: SearchParams }) {
   const articles = await getSubstantialArticles();
+  const page = Math.max(1, Number((await searchParams).page) || 1);
+  const totalPages = Math.max(1, Math.ceil(articles.length / pageSize));
+  if (page > totalPages) notFound();
+  const pageArticles = articles.slice((page - 1) * pageSize, page * pageSize);
   const description = "The newest tecMAMBO stories, with filters for every editorial format.";
   return (
     <>
@@ -35,12 +47,13 @@ export default async function LatestPage() {
         ))}
       </nav>
       <div className={styles.grid}>
-        {articles.map((article) => (
+        {pageArticles.map((article) => (
           <StoryCard article={article} key={article.id} />
         ))}
       </div>
+      <ArchivePagination path="/latest" page={page} totalPages={totalPages} />
     </section>
-    <JsonLd data={collectionPageJsonLd({ name: "Latest", description, path: "/latest", articles })} />
+    <JsonLd data={collectionPageJsonLd({ name: "Latest", description, path: page === 1 ? "/latest" : `/latest?page=${page}`, articles: pageArticles })} />
     <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Latest", path: "/latest" }])} />
     </>
   );

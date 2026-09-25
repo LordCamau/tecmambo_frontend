@@ -8,7 +8,7 @@ import { SponsoredBadge } from "@/components/signature/SponsoredBadge";
 import { ArticleCardMeta } from "./ArticleCardMeta";
 import styles from "./StoryCard.module.css";
 
-export function StoryCard({ article, priority = false }: { article: Article; priority?: boolean }) {
+export function StoryCard({ article, priority = false, showPublicationDate = false }: { article: Article; priority?: boolean; showPublicationDate?: boolean }) {
   return (
     <article className={styles.card}>
       <Link href={articlePath(article.format, article.slug)} className={styles.media} aria-label={article.title}>
@@ -36,7 +36,7 @@ export function StoryCard({ article, priority = false }: { article: Article; pri
             {article.deal.priceWas ? <del>{article.deal.currency} {article.deal.priceWas.toLocaleString("en-KE")}</del> : null}
           </div>
         ) : null}
-        <ArticleCardMeta article={article} />
+        <ArticleCardMeta article={article} showPublicationDate={showPublicationDate} />
       </div>
     </article>
   );

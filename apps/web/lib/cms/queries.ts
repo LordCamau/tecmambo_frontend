@@ -28,6 +28,12 @@ function articleFragment(includeEditorialControls = false) {
         avatar {
           url
         }
+        authorFields {
+          role
+          expertise {
+            item
+          }
+        }
       }
     }
     formats {

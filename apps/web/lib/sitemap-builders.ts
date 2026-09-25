@@ -56,7 +56,7 @@ export async function pageSitemapEntries(): Promise<UrlSitemapEntry[]> {
     { loc: `${siteUrl}/latest`, lastmod: latestArticle, changefreq: "daily", priority: 0.7 },
     { loc: `${siteUrl}/glossary`, lastmod: latestTerm ? new Date(latestTerm).toISOString() : undefined, changefreq: "monthly", priority: 0.7 },
     { loc: `${siteUrl}/africa`, lastmod: latestAfricaArticle, changefreq: "monthly", priority: 0.7 },
-    ...["/about", "/terms", "/editorial-standards", "/privacy", "/cookies", "/compare-phones"].map((path) => ({
+    ...["/about", "/authors", "/contact", "/editorial-policy", "/editorial-standards", "/corrections", "/terms", "/privacy", "/cookies", "/compare-phones"].map((path) => ({
       loc: `${siteUrl}${path}`,
       changefreq: "monthly" as const,
       priority: 0.7

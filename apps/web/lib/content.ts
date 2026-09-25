@@ -92,12 +92,21 @@ export async function getRelatedArticles(article: Article, limit = 3) {
 
 function localRelatedArticles(article: Article, limit = 3) {
   const tagSlugs = new Set(article.tags.map((tag) => tag.slug));
+  const regionSlugs = new Set(article.regions?.map((region) => region.slug) ?? []);
+  const articleTime = new Date(article.publishedAt).getTime();
+  const score = (candidate: Article) => {
+    const sharedTags = candidate.tags.filter((tag) => tagSlugs.has(tag.slug)).length;
+    const sharedRegions = candidate.regions?.filter((region) => regionSlugs.has(region.slug)).length ?? 0;
+    const sameFormat = candidate.format === article.format ? 1 : 0;
+    const daysApart = Math.abs(new Date(candidate.publishedAt).getTime() - articleTime) / 86_400_000;
+    const recency = Math.max(0, 1 - daysApart / 365);
+    return sharedTags * 6 + sharedRegions * 3 + sameFormat * 2 + recency;
+  };
   return articles
     .filter((candidate) => candidate.id !== article.id && isContentPubliclyEligible(candidate))
     .sort((a, b) => {
-      const aScore = a.tags.filter((tag) => tagSlugs.has(tag.slug)).length;
-      const bScore = b.tags.filter((tag) => tagSlugs.has(tag.slug)).length;
-      return bScore - aScore;
+      const scoreDifference = score(b) - score(a);
+      return scoreDifference || new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
     })
     .slice(0, limit);
 }

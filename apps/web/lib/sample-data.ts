@@ -43,22 +43,38 @@ import { getRegion } from "@/lib/regions";
 
 export const authors: Author[] = [
   {
+    id: "tim-humphreys",
     name: "Tim Humphreys",
     slug: "tim-humphreys",
-    role: "tecMAMBO writer",
-    bio: "Tim writes plain-English technology stories that connect specs, prices, products, and policy to everyday decisions.",
+    role: "Lead Editor and Founder, tecMAMBO",
+    bio: "Tim Humphreys leads tecMAMBO's editorial work and writes plain-English technology stories that connect products, policy, and industry changes to everyday decisions.",
     avatar: "/authors/tim-humphreys.png",
-    expertise: ["Phones", "Power & batteries", "Connectivity", "Reviews"]
+    expertise: ["Consumer technology", "Phones", "Connectivity", "Technology policy"],
+    editorialResponsibilities: ["Editorial direction", "Story editing", "Publication approval"],
+    social: {
+      x: "https://x.com/LordCamau",
+      linkedIn: "https://linkedin.com/in/lordcamau",
+      instagram: "https://instagram.com/lordcamau"
+    },
+    sameAs: ["https://x.com/LordCamau", "https://linkedin.com/in/lordcamau", "https://instagram.com/lordcamau"]
   },
   {
+    id: "lulu-camau",
     name: "Lulu Camau",
     slug: "lulu-camau",
-    role: "Senior Writer and Editor",
-    bio: "Lulu Camau is a Senior Writer and Editor at tecMAMBO, covering artificial intelligence. She is happiest turning a dense research paper into something you can actually use over lunch, and she writes about how AI shows up in real life, not just on stage at a launch. Based in Nairobi.",
+    role: "Senior AI Writer / Contributor",
+    bio: "Lulu Camau covers artificial intelligence for tecMAMBO, explaining research, products, and the ways AI affects people and organisations.",
     avatar: "/authors/lulu-camau.jpg",
-    expertise: ["Artificial intelligence"]
+    expertise: ["Artificial intelligence"],
+    editorialResponsibilities: ["AI reporting", "AI explainers"],
+    social: {
+      x: "https://x.com/LuluKiritu",
+      linkedIn: "https://linkedin.com/in/lulu-kiritu"
+    },
+    sameAs: ["https://x.com/LuluKiritu", "https://linkedin.com/in/lulu-kiritu"]
   },
   {
+    id: "tecmambo-team",
     name: "tecMAMBO Team",
     slug: "tecmambo-team",
     role: "tecMAMBO editorial desk",

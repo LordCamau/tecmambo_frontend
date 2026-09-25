@@ -145,8 +145,8 @@ function archiveRows(): AuditRow[] {
 }
 
 function staticRows(): AuditRow[] {
-  const paths = ["/", "/latest", "/glossary", "/africa", "/about", "/terms", "/editorial-standards", "/privacy", "/cookies", "/compare-phones", "/advertise", "/newsletter", "/contact", "/search"];
-  const sitemapPaths = new Set(["/", "/latest", "/glossary", "/africa", "/about", "/terms", "/editorial-standards", "/privacy", "/cookies", "/compare-phones"]);
+  const paths = ["/", "/latest", "/glossary", "/africa", "/about", "/authors", "/contact", "/editorial-policy", "/editorial-standards", "/corrections", "/terms", "/privacy", "/cookies", "/compare-phones", "/advertise", "/newsletter", "/search"];
+  const sitemapPaths = new Set(["/", "/latest", "/glossary", "/africa", "/about", "/authors", "/contact", "/editorial-policy", "/editorial-standards", "/corrections", "/terms", "/privacy", "/cookies", "/compare-phones"]);
   return paths.map((path) => ({
     url: `${siteUrl}${path}`,
     type: "static_or_utility",

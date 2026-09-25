@@ -28,7 +28,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${siteUrl}/latest`, ...(latestArticle ? { lastModified: new Date(latestArticle) } : {}) },
     { url: `${siteUrl}/glossary`, ...(latestTerm ? { lastModified: new Date(latestTerm) } : {}) },
     { url: `${siteUrl}/africa`, ...(latestAfricaArticle ? { lastModified: new Date(latestAfricaArticle) } : {}) },
-    ...["/about", "/terms", "/editorial-standards", "/privacy", "/cookies", "/compare-phones"].map((path) => ({ url: `${siteUrl}${path}` })),
+    ...["/about", "/authors", "/contact", "/editorial-policy", "/editorial-standards", "/corrections", "/terms", "/privacy", "/cookies", "/compare-phones"].map((path) => ({ url: `${siteUrl}${path}` })),
     ...qualifiedFormats.map((format) => {
       const formatKey = Object.entries(formats).find(([, candidate]) => candidate.path === format.path)?.[0];
       const lastModified = latestArticleUpdatedAt(articles.filter((article) => article.format === formatKey));

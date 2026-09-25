@@ -28,12 +28,20 @@ export type RegionTerm = {
 };
 
 export type Author = {
+  id?: string;
   name: string;
   slug: string;
   role: string;
   bio: string;
   avatar: string;
   expertise: string[];
+  editorialResponsibilities?: string[];
+  social?: {
+    x?: string;
+    linkedIn?: string;
+    instagram?: string;
+    website?: string;
+  };
   sameAs?: string[];
 };
 
@@ -145,6 +153,11 @@ export type Article = {
   faq?: Array<{ question: string; answer: string }>;
   corrections?: ArticleCorrection[];
   sources?: Array<{ label: string; url: string }>;
+  aiAssistance?: {
+    used: boolean;
+    uses?: string[];
+    disclosure?: string;
+  };
   itemList?: string[];
   sponsored?: boolean;
   googleAdsEligible?: boolean;

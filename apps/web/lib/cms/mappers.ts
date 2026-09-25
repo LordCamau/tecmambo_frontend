@@ -9,6 +9,7 @@ type WpTerm = {
 };
 
 type WpAuthor = {
+  id?: string | null;
   name?: string | null;
   slug?: string | null;
   description?: string | null;
@@ -16,6 +17,11 @@ type WpAuthor = {
   authorFields?: {
     role?: string | null;
     expertise?: Array<{ item?: string | null }> | null;
+    editorialResponsibilities?: Array<{ item?: string | null }> | null;
+    xUrl?: string | null;
+    linkedInUrl?: string | null;
+    instagramUrl?: string | null;
+    websiteUrl?: string | null;
   } | null;
 };
 
@@ -161,13 +167,23 @@ function regionFromTerm(term: WpTerm): RegionTerm | null {
 }
 
 function wpAuthorToAuthor(author?: WpAuthor | null): Author {
+  const social = {
+    x: author?.authorFields?.xUrl ?? undefined,
+    linkedIn: author?.authorFields?.linkedInUrl ?? undefined,
+    instagram: author?.authorFields?.instagramUrl ?? undefined,
+    website: author?.authorFields?.websiteUrl ?? undefined
+  };
+  const sameAs = Object.values(social).filter((url): url is string => Boolean(url));
   return {
+    id: author?.id ?? author?.slug ?? "tim-humphreys",
     name: text(author?.name, "Tim Humphreys"),
     slug: author?.slug ?? "tim-humphreys",
     role: author?.authorFields?.role ?? "tecMAMBO writer",
     bio: text(author?.description, "Plain-English technology writing for tecMAMBO."),
     avatar: author?.avatar?.url ?? "/authors/tim-humphreys.png",
-    expertise: author?.authorFields?.expertise?.map((item) => item.item).filter((item): item is string => Boolean(item)) ?? []
+    expertise: author?.authorFields?.expertise?.map((item) => item.item).filter((item): item is string => Boolean(item)) ?? [],
+    editorialResponsibilities: author?.authorFields?.editorialResponsibilities?.map((item) => item.item).filter((item): item is string => Boolean(item)) ?? [],
+    ...(sameAs.length ? { social, sameAs } : {})
   };
 }
 

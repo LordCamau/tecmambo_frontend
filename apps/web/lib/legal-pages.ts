@@ -875,7 +875,98 @@ export const editorialStandardsPage: LegalPage = {
   ]
 };
 
-export const legalPages = [termsPage, privacyPage, cookiePage, editorialStandardsPage];
+export const editorialPolicyPage: LegalPage = {
+  slug: "editorial-policy",
+  title: "Editorial policy",
+  eyebrow: "Trust",
+  lastUpdated: "September 25, 2026",
+  summaryLabel: "The short version.",
+  summary: [
+    "tecMAMBO publishes technology reporting, analysis, explainers, opinion, and documented hands-on reviews. Named people remain responsible for what we publish. We attribute source material, label uncertainty and commercial content, distinguish reporting from opinion, and correct material errors openly."
+  ],
+  placeholders: [],
+  sections: [
+    {
+      id: "reporting-sources",
+      title: "1. Reporting and sources",
+      paragraphs: [["We prefer primary sources such as official documents, filings, product documentation, research papers, public records, and direct statements. When another publication breaks a story, we identify and link to that reporting. We do not present a press release as independent reporting, and we explain its origin when it informs a story."]]
+    },
+    {
+      id: "verification",
+      title: "2. Verification and editorial review",
+      paragraphs: [["Writers are expected to verify names, dates, figures, quotations, and central claims against the sources recorded with an article. Current gated articles require source checks and approval by a named human editor before publication. Older work is reviewed as it is updated. If a claim cannot be confirmed, we describe the uncertainty or leave it out."]]
+    },
+    {
+      id: "leaks-rumours",
+      title: "3. Leaks and rumours",
+      paragraphs: [["Leaks and rumours are labelled clearly. We identify what is confirmed, what is reported, and what remains unknown. We consider the source's track record, available evidence, independent corroboration, and the public value of publishing before treating unconfirmed information as news."]]
+    },
+    {
+      id: "products-reviews",
+      title: "4. Product reporting and reviews",
+      paragraphs: [["Product news may rely on official information and cited independent reporting. A tecMAMBO review is reserved for documented hands-on use and identifies the method, testing period, product source, limitations, reviewer, and approving editor. Research-based assessments are labelled as analysis, explainers, first looks, or buying guidance rather than hands-on reviews."]]
+    },
+    {
+      id: "opinion",
+      title: "5. Opinion and analysis",
+      paragraphs: [["Opinion is labelled as opinion and reflects the named author's judgement. Analysis uses facts and sourcing to interpret events, but it does not pretend that interpretation is a confirmed fact. News headlines and summaries are written to distinguish reporting from commentary."]]
+    },
+    {
+      id: "ai-assistance",
+      title: "6. AI assistance",
+      paragraphs: [["AI tools may assist with organisation, transcription, drafting, headline options, language cleanup, or structured data. AI output is not treated as a source. It may not invent facts, quotes, tests, or attribution. A named human editor remains accountable for verification and publication approval in the current gated workflow, and material AI-generated or substantially altered images are labelled."]]
+    },
+    {
+      id: "commercial-content",
+      title: "7. Commercial relationships",
+      paragraphs: [["Sponsored and partner content is labelled visibly. Affiliate links may earn tecMAMBO a commission, but they do not determine a verdict or recommendation. Writers and editors must disclose a relevant conflict of interest. Advertisers and partners do not receive the right to rewrite independent coverage."]]
+    },
+    {
+      id: "corrections",
+      title: "8. Corrections and reader feedback",
+      paragraphs: [["Material errors are corrected transparently. Readers can report a possible error through our ", { text: "contact page", href: "/contact" }, ". Our complete process is available in the ", { text: "corrections policy", href: "/corrections" }, "."]]
+    }
+  ]
+};
+
+export const correctionsPage: LegalPage = {
+  slug: "corrections",
+  title: "Corrections policy",
+  eyebrow: "Trust",
+  lastUpdated: "September 25, 2026",
+  summaryLabel: "The short version.",
+  summary: ["If tecMAMBO gets a material fact wrong, we review the evidence, correct the article, and add a visible note that explains the important change. Readers can report errors through our editorial email address or contact page."],
+  placeholders: [],
+  sections: [
+    {
+      id: "report-an-error",
+      title: "1. How to report an error",
+      paragraphs: [["Email ", { text: "hello@tecMAMBO.com", href: "mailto:hello@tecmambo.com" }, " or use our ", { text: "contact page", href: "/contact" }, ". Please include the article link, the passage you believe is wrong, and a reliable source or explanation that helps us assess it."]]
+    },
+    {
+      id: "review-process",
+      title: "2. How we review a report",
+      paragraphs: [["An editor reviews the article, its recorded sources, and the evidence supplied. Where needed, we consult the writer, an original source, or an appropriate primary document. A request does not guarantee a change, but every specific factual concern is considered on its evidence."]]
+    },
+    {
+      id: "what-we-correct",
+      title: "3. What we correct",
+      paragraphs: [["We correct factual errors, material omissions, misleading wording, wrong attribution, and broken context that changes a reader's understanding. Minor spelling or formatting fixes that do not change meaning may be corrected without a note."]]
+    },
+    {
+      id: "disclosure",
+      title: "4. How substantial corrections are disclosed",
+      paragraphs: [["A substantial correction receives a visible note on the article that states what was wrong and what changed. We do not quietly erase a material error. If an article cannot be repaired responsibly, we may remove it from discovery or publication and explain the decision where appropriate."]]
+    },
+    {
+      id: "dates",
+      title: "5. Publication and modification dates",
+      paragraphs: [["The original publication date remains attached to an article. The updated date changes only when the article receives a meaningful editorial update, correction, or addition. Article pages show both dates when they differ, including the time and East Africa Time designation."]]
+    }
+  ]
+};
+
+export const legalPages = [termsPage, privacyPage, cookiePage, editorialStandardsPage, editorialPolicyPage, correctionsPage];
 
 export function getLegalPage(slug: string) {
   return legalPages.find((page) => page.slug === slug);

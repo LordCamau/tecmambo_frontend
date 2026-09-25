@@ -40,6 +40,7 @@ import styles from "./page.module.css";
 import { isArticleMonetizationEligible } from "@/lib/monetization";
 import { parseArticleInlineMarkup } from "@/lib/inline-article-markup";
 import { googleReaderEngagementConfig } from "@/lib/google-reader-engagement";
+import { articleDateTime, hasMeaningfulUpdate } from "@/lib/article-dates";
 
 type Params = Promise<{ section: string; slug: string }>;
 
@@ -409,8 +410,17 @@ export default async function ArticlePage({ params }: { params: Params }) {
         <h1>{article.title}</h1>
         {safeSubhead ? <p className={styles.subhead}>{safeSubhead}</p> : null}
         <div className={styles.byline}>
-          <Link href={`/authors/${article.author.slug}`}>{article.author.name}</Link>
-          <span>Updated {new Intl.DateTimeFormat("en", { dateStyle: "medium" }).format(new Date(article.updatedAt))}</span>
+          <span>
+            By <Link href={`/authors/${article.author.slug}`}>{article.author.name}</Link>, {article.author.role}
+          </span>
+          <span>
+            Published <time dateTime={article.publishedAt}>{articleDateTime(article.publishedAt)}</time>
+          </span>
+          {hasMeaningfulUpdate(article.publishedAt, article.updatedAt) ? (
+            <span>
+              Updated <time dateTime={article.updatedAt}>{articleDateTime(article.updatedAt)}</time>
+            </span>
+          ) : null}
           <span>{article.readTime}</span>
           <Link href="/editorial-standards">How we work</Link>
         </div>

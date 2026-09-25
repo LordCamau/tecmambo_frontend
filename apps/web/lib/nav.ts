@@ -59,6 +59,8 @@ export const footerReadLinks = [
 
 export const footerCompanyLinks = [
   { label: "About tecMAMBO", path: "/about" },
+  { label: "Authors", path: "/authors" },
+  { label: "Editorial policy", path: "/editorial-policy" },
   { label: "Editorial standards", path: "/editorial-standards" },
   { label: "Advertise with us", path: "/advertise" },
   { label: "Contact", path: "/contact" },
@@ -66,6 +68,7 @@ export const footerCompanyLinks = [
 ];
 
 export const footerLegalLinks = [
+  { label: "Corrections policy", path: "/corrections" },
   { label: "Terms of Use", path: "/terms" },
   { label: "Privacy Policy", path: "/privacy" },
   { label: "Cookie Policy", path: "/cookies" }

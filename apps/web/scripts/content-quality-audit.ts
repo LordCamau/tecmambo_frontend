@@ -114,7 +114,7 @@ const glossaryItems: AuditItem[] = glossaryTerms.map((term) => {
   };
 });
 
-const staticPaths = ["/", "/latest", "/glossary", "/africa", "/about", "/editorial-standards", "/privacy", "/terms", "/cookies", "/compare-phones"];
+const staticPaths = ["/", "/latest", "/glossary", "/africa", "/about", "/authors", "/contact", "/editorial-policy", "/editorial-standards", "/corrections", "/privacy", "/terms", "/cookies", "/compare-phones"];
 const staticItems: AuditItem[] = staticPaths.map((url) => ({
   id: `page-${url === "/" ? "home" : url.slice(1)}`,
   title: url === "/" ? "Home" : url.slice(1).replaceAll("-", " "),

@@ -79,9 +79,6 @@ export function SiteFooter() {
             <section className={styles.linkColumn} aria-labelledby="footer-legal">
               <h2 id="footer-legal">LEGAL</h2>
               <ul>
-                <li>
-                  <Link href="/editorial-standards#corrections-updates">Corrections policy</Link>
-                </li>
                 {footerLegalLinks.map((link) => (
                   <li key={link.path}>
                     <Link href={link.path}>{link.label}</Link>
