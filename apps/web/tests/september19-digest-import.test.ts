@@ -75,11 +75,13 @@ describe("September 19 corrected digest", () => {
     expect(kenya.body.join("\n")).toContain("/explainers/digital-realty-nbo2-nairobi-data-centre-icolo");
   });
 
-  it("promotes the Pixel scam-warning story as the main homepage hero", () => {
+  it("allows the newer Spiro editorial promotion to replace the Pixel homepage hero", () => {
     const home = curateHomeContent(articles, []);
-    expect(home.hero.slug).toBe("google-pixel-september-2026-feature-drop");
-    expect(home.hero.image.src).toBe("/articles/september19/Google_Pixel_Drop.webp");
+    const pixel = imported.find((article) => article.slug === "google-pixel-september-2026-feature-drop")!;
+    expect(home.hero.slug).toBe("africa-go-green-fund-spiro-36-million-electric-mobility");
     expect(home.hero.homepageHeroPriority).toBe(100);
+    expect(pixel.image.src).toBe("/articles/september19/Google_Pixel_Drop.webp");
+    expect(pixel.homepageHeroPriority).toBeUndefined();
     const placements = [home.hero, ...home.supportingStories, ...home.latestRail, ...home.lanes.flatMap((lane) => lane.articles)];
     expect(placements.filter((article) => article.slug === home.hero.slug)).toHaveLength(2);
   });

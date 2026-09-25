@@ -29,7 +29,7 @@ describe("September 24 editorial package", () => {
       expect(article).toBeDefined();
       expect(article.author.slug).toBe("tim-humphreys");
       expect(article.publishedAt.startsWith("2026-09-24T")).toBe(true);
-      expect(article.updatedAt).toBe("2026-09-24T22:00:00+03:00");
+      expect(article.updatedAt).toBe("2026-09-25T06:40:00+03:00");
       expect(article.publicationStatus).toBe("publish");
       expect(article.editorialStatus).toBe("published");
       expect(article.indexingStatus).toBe("index");
@@ -75,7 +75,8 @@ describe("September 24 editorial package", () => {
     expect(text).toContain("Not confirmed");
     expect(samsung.comparisonTables).toHaveLength(1);
     expect(samsung.comparisonTables?.[0]?.rows).toHaveLength(4);
-    expect(samsung.image.caption).toContain("shown for illustration");
+    expect(samsung.image.caption).toContain("concept render");
+    expect(samsung.image.caption).toContain("not confirmed");
   });
 
   it("adds verified internal links only to routes in the article collection", () => {
@@ -112,9 +113,10 @@ describe("September 24 editorial package", () => {
     vi.useRealTimers();
   });
 
-  it("keeps the Pixel story as the homepage hero and follows the duplicate-placement rule", () => {
+  it("promotes the Spiro story as the homepage hero and follows the duplicate-placement rule", () => {
     const home = curateHomeContent(articles, []);
-    expect(home.hero.slug).toBe("google-pixel-september-2026-feature-drop");
+    expect(home.hero.slug).toBe("africa-go-green-fund-spiro-36-million-electric-mobility");
+    expect(home.hero.homepageHeroPriority).toBe(100);
     const placements = [home.hero, ...home.supportingStories, ...home.latestRail, ...home.lanes.flatMap((lane) => lane.articles)];
     const counts = new Map<string, number>();
     for (const article of placements) counts.set(article.slug, (counts.get(article.slug) ?? 0) + 1);

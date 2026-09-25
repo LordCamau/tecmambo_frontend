@@ -36,7 +36,7 @@ const scheduleBySlug: Record<string, string> = {
   "africa-go-green-fund-spiro-36-million-electric-mobility": "2026-09-24T09:50:00+03:00"
 };
 
-const modifiedAt = "2026-09-24T22:00:00+03:00";
+const modifiedAt = "2026-09-25T06:40:00+03:00";
 
 const seoTitleBySlug: Record<string, string> = {
   "epra-removes-15000-kwh-ev-charging-limit-kenya": "EPRA Removes Kenya's 15,000 kWh EV Charging Limit",
@@ -326,6 +326,7 @@ export function buildEditorialSeptember24Articles({ authors, topics, brands, reg
       format,
       contentFormat: format === "news" ? "news" : format === "business" ? "analysis" : "explainer",
       isNewsworthy: true,
+      homepageHeroPriority: parsed.slug === "africa-go-green-fund-spiro-36-million-electric-mobility" ? 100 : undefined,
       title: parsed.title,
       seo: {
         title: seoTitleBySlug[parsed.slug],

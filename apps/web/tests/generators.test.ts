@@ -48,7 +48,7 @@ describe("content generators", () => {
       ...curation.latestRail.map((article) => article.id)
     ];
 
-    expect(curation.hero.slug).toBe("google-pixel-september-2026-feature-drop");
+    expect(curation.hero.slug).toBe("africa-go-green-fund-spiro-36-million-electric-mobility");
     expect(curation.hero.homepageHeroPriority).toBe(100);
     expect(curation.supportingStories).toHaveLength(2);
     expect(curation.latestRail).toHaveLength(5);

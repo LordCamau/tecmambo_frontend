@@ -242,7 +242,6 @@ export function buildEditorialSeptember19Articles({ authors, topics, brands, reg
       format: "explainer",
       contentFormat: "explainer",
       isNewsworthy: true,
-      homepageHeroPriority: parsed.slug === "google-pixel-september-2026-feature-drop" ? 100 : undefined,
       title: parsed.title,
       seo: {
         title: parsed.seoTitle,
