@@ -115,7 +115,7 @@ describe("September 24 editorial package", () => {
 
   it("allows the newer editorial promotion to replace Spiro and follows the duplicate-placement rule", () => {
     const home = curateHomeContent(articles, []);
-    expect(home.hero.slug).toBe("india-affordable-electric-vehicles-entry-level-ev-market-2026");
+    expect(home.hero.slug).toBe("nio-geely-battery-swapping-network-china-alliance");
     expect(home.hero.homepageHeroPriority).toBe(110);
     const placements = [home.hero, ...home.supportingStories, ...home.latestRail, ...home.lanes.flatMap((lane) => lane.articles)];
     const counts = new Map<string, number>();

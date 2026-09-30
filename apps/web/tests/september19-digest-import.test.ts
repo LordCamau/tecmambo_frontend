@@ -78,7 +78,7 @@ describe("September 19 corrected digest", () => {
   it("preserves the Pixel metadata while allowing the current editorial promotion to lead", () => {
     const home = curateHomeContent(articles, []);
     const pixel = imported.find((article) => article.slug === "google-pixel-september-2026-feature-drop")!;
-    expect(home.hero.slug).toBe("india-affordable-electric-vehicles-entry-level-ev-market-2026");
+    expect(home.hero.slug).toBe("nio-geely-battery-swapping-network-china-alliance");
     expect(home.hero.homepageHeroPriority).toBe(110);
     expect(pixel.image.src).toBe("/articles/september19/Google_Pixel_Drop.webp");
     expect(pixel.homepageHeroPriority).toBeUndefined();

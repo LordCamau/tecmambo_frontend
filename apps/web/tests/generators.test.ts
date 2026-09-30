@@ -48,7 +48,7 @@ describe("content generators", () => {
       ...curation.latestRail.map((article) => article.id)
     ];
 
-    expect(curation.hero.slug).toBe("india-affordable-electric-vehicles-entry-level-ev-market-2026");
+    expect(curation.hero.slug).toBe("nio-geely-battery-swapping-network-china-alliance");
     expect(curation.hero.homepageHeroPriority).toBe(110);
     expect(curation.supportingStories).toHaveLength(2);
     expect(curation.latestRail).toHaveLength(5);

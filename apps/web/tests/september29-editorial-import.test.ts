@@ -29,8 +29,11 @@ describe("September 29 editorial bundle import", () => {
   });
 
   it("preserves the supplied bylines and maps every article to a named author", () => {
-    expect(editorialSeptember29Articles.filter((article) => article.author.slug === "lulu-camau")).toHaveLength(6);
-    expect(editorialSeptember29Articles.filter((article) => article.author.slug === "tim-humphreys")).toHaveLength(4);
+    expect(editorialSeptember29Articles.filter((article) => article.author.slug === "lulu-camau")).toHaveLength(5);
+    expect(editorialSeptember29Articles.filter((article) => article.author.slug === "tim-humphreys")).toHaveLength(5);
+    expect(editorialSeptember29Articles.find((article) => article.slug === "nio-geely-battery-swapping-network-china-alliance")?.author.slug).toBe(
+      "tim-humphreys"
+    );
     for (const article of editorialSeptember29Articles) {
       const report = editorialSeptember29ImportReport.find((entry) => entry.slug === article.slug);
       expect(article.author.name).toBe(report?.byline);
@@ -119,9 +122,9 @@ describe("September 29 editorial bundle import", () => {
     expect(buildGoogleNewsSitemap(eligible)).not.toContain(removedSamsungSlug);
   });
 
-  it("promotes the newest retained article in the hero and its mobility lane only", () => {
+  it("promotes the requested NIO and Geely article in the hero and its mobility lane only", () => {
     const home = curateHomeContent(articles, []);
-    const heroSlug = "india-affordable-electric-vehicles-entry-level-ev-market-2026";
+    const heroSlug = "nio-geely-battery-swapping-network-china-alliance";
     const placements = [home.hero, ...home.supportingStories, ...home.latestRail, ...home.lanes.flatMap((lane) => lane.articles)];
     expect(home.hero.slug).toBe(heroSlug);
     expect(home.hero.homepageHeroPriority).toBe(110);

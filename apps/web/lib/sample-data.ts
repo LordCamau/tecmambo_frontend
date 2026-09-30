@@ -23,6 +23,7 @@ import { buildEditorialSeptember16Articles } from "@/lib/editorial-bundle-septem
 import { buildEditorialSeptember19Articles } from "@/lib/editorial-bundle-september-19-2026";
 import { buildEditorialSeptember24Articles } from "@/lib/editorial-bundle-september-24-2026";
 import { buildEditorialSeptember29Articles } from "@/lib/editorial-bundle-september-29-2026";
+import { buildEditorialSeptember30Articles } from "@/lib/editorial-bundle-september-30-2026";
 import { buildStartupGraveyardArticle } from "@/lib/startup-graveyard-september-17-2026";
 import { buildIphoneDuoArticle } from "@/lib/iphone-duo-2026";
 import { buildPixel11LaunchArticle } from "@/lib/pixel-11-launch-2026";
@@ -334,6 +335,7 @@ const samsungBrand = brands.find((brand) => brand.slug === "samsung")!;
 const kenyaRegion = getRegion("kenya")!;
 const nigeriaRegion = getRegion("nigeria")!;
 const southAfricaRegion = getRegion("south-africa")!;
+const ghanaRegion = getRegion("ghana")!;
 const rwandaRegion = getRegion("rwanda")!;
 const tanzaniaRegion = getRegion("tanzania")!;
 const ethiopiaRegion = getRegion("ethiopia")!;
@@ -1048,6 +1050,12 @@ export const editorialSeptember29Articles = buildEditorialSeptember29Articles({
   brands,
   regions: [kenyaRegion]
 });
+export const editorialSeptember30Articles = buildEditorialSeptember30Articles({
+  authors,
+  topics,
+  brands,
+  regions: [kenyaRegion, nigeriaRegion, southAfricaRegion, ghanaRegion]
+});
 const startupGraveyardArticle = buildStartupGraveyardArticle({
   authors,
   topics,
@@ -1207,6 +1215,7 @@ function migrateLegacyLifecycle(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  ...editorialSeptember30Articles,
   ...editorialSeptember29Articles,
   ...editorialSeptember24Articles,
   startupGraveyardArticle,

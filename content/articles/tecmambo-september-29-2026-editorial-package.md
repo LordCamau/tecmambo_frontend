@@ -5,7 +5,7 @@
 ## ARTICLE 1: NIO and Geely join forces on battery swapping and charging in China
 
 **Slug:** `nio-geely-battery-swapping-network-china-alliance`
-**Byline:** Lulu Camau
+**Byline:** Tim Humphreys
 **Categories:** China, Electric Vehicles, Infrastructure, Automotive
 **Meta description:** NIO and Geely are combining battery-swapping and charging assets in China in a strategic partnership designed to align networks and standards.
 **Primary keywords:** NIO Geely battery swapping, NIO Power, Geely Yiyi Power, EV battery swap China

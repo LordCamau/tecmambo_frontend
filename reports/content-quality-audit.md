@@ -1,10 +1,10 @@
 # tecMAMBO content quality audit
 
-Generated: 2026-09-10T19:06:48.863Z
+Generated: 2026-09-30T23:44:17.440Z
 
-Items audited: 559
+Items audited: 651
 
-Publicly eligible articles: 185
+Publicly eligible articles: 240
 
 Articles retained outside discovery: 67
 
@@ -12,9 +12,9 @@ Indexable glossary terms: 0
 
 ## Editorial action groups
 
-- Keep and index: 226
+- Keep and index: 296
 - Keep but improve: 98
-- Noindex temporarily: 333
+- Noindex temporarily: 355
 - Unpublish immediately: 18
 - Requires editorial verification: 67
 - Requires original testing evidence: 1
@@ -23,7 +23,62 @@ Indexable glossary terms: 0
 
 | Type | Title | URL | Robots | Recommended action | Reason |
 | --- | --- | --- | --- | --- | --- |
-| article | Apple's foldable is official: the iPhone Duo starts at $1,999, and here's what it actually costs to own in Kenya | /explainers/iphone-duo-official-price-specs-kenya | index, follow | keep | No blocking quality issue detected. |
+| article | MortgageMarket Launches AI Agent to Automate South African Home Loan Applications | /business/mortgagemarket-ai-agent-south-africa-home-loans | index, follow | keep | No blocking quality issue detected. |
+| article | GSMA: 5G Rollout Speeds Up Across Ghana, Nigeria and South Africa as Operators Add Satellite Connectivity | /news/gsma-5g-ghana-nigeria-south-africa-ntn-satellite | index, follow | keep | No blocking quality issue detected. |
+| article | UK Tribunal Revives Antitrust Lawsuit Against Apple and Amazon | /business/uk-tribunal-antitrust-suit-apple-amazon-revived | index, follow | keep | No blocking quality issue detected. |
+| article | South African Enterprises Shift AI Workloads From Public Cloud to Private Infrastructure | /business/south-africa-enterprises-ai-workloads-private-infrastructure | index, follow | keep | No blocking quality issue detected. |
+| article | OpenAI Debuts "Dots" Personal AI Agents and the Cost-Optimized GPT-6.1 Sol Model | /news/openai-dots-personal-ai-agents-gpt-6-1-sol | index, follow | keep | No blocking quality issue detected. |
+| article | CBK Licenses 29 New Digital Credit Providers, Bringing the Total to 281 | /business/cbk-licenses-29-digital-credit-providers-total-281 | index, follow | keep | No blocking quality issue detected. |
+| article | Qualcomm Unveils Snapdragon Sound Elite Gen 2 for AI-Enabled Smart Headphones | /news/qualcomm-snapdragon-sound-elite-gen-2-smart-headphones | index, follow | keep | No blocking quality issue detected. |
+| article | Should M-Pesa Pay Interest? Patrick Njoroge Pushes for Yield on Mobile Money Wallet Balances | /business/njoroge-proposal-mpesa-airtel-money-interest-wallet-balances | index, follow | keep | No blocking quality issue detected. |
+| article | NuRAN Partners With Infratel and Starlink to Pilot Satellite Backhaul for Rural Nigeria | /news/nuran-infratel-starlink-rural-backhaul-nigeria | index, follow | keep | No blocking quality issue detected. |
+| article | High Court Orders Copia Kenya Into Liquidation After Two Years of Administration | /business/copia-kenya-liquidation-high-court-ecommerce | index, follow | keep | No blocking quality issue detected. |
+| article | Sony Store Japan Introduces an Activity-Verified Lottery for PS5 Pro Purchases | /news/sony-japan-ps5-pro-activity-verified-lottery | index, follow | keep | No blocking quality issue detected. |
+| article | India affordable EVs face the real mass-market test | /explainers/india-affordable-electric-vehicles-entry-level-ev-market-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | Direct Drive Tech raises about $138 million in Hong Kong robotics IPO | /business/direct-drive-tech-hong-kong-robotics-ipo-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | Sony PS5 update makes Enhanced PSSR the default on PS5 Pro | /news/ps5-update-enhanced-pssr-default-26-06-14-00-00 | index, follow | keep | No blocking quality issue detected. |
+| article | NIO and Geely join forces on battery swapping and charging in China | /news/nio-geely-battery-swapping-network-china-alliance | index, follow | keep | No blocking quality issue detected. |
+| article | Ramp launches Accounts Receivable as fintech moves toward the entire corporate cash cycle | /business/ramp-accounts-receivable-cash-cycle-fintech | index, follow | keep | No blocking quality issue detected. |
+| article | Kenya's draft AI policy sets out a framework for governing emerging technology | /explainers/kenya-draft-ai-emerging-technologies-policy-2026-explained | index, follow | keep | No blocking quality issue detected. |
+| article | Five million industrial robots now operate in factories worldwide | /news/five-million-industrial-robots-factories-worldwide-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | Dacia Spring returns to European production at €17,900 | /news/dacia-spring-e17900-slovenia-made-europe-ev | index, follow | keep | No blocking quality issue detected. |
+| article | KAM wants Kenya EV duty-free incentives linked to local assembly and jobs | /business/kam-kenya-ev-duty-free-local-assembly-jobs | index, follow | keep | No blocking quality issue detected. |
+| article | OpenAI brings real-time voice to developers with GPT-Live-1 | /news/openai-gpt-live-1-real-time-voice-api-enterprise | index, follow | keep | No blocking quality issue detected. |
+| article | Africa Go Green Fund Doubles Spiro Financing to $36 Million as Electric Motorcycles Scale | /business/africa-go-green-fund-spiro-36-million-electric-mobility | index, follow | keep | No blocking quality issue detected. |
+| article | Trump Wants AI Renamed 'Super Intelligence', But Superintelligence Already Means Something Specific | /explainers/trump-ai-super-intelligence-name-meaning | index, follow | keep | No blocking quality issue detected. |
+| article | Samsung Galaxy S27 RAM and Storage Leak: 12GB Could Be the New Baseline | /news/samsung-galaxy-s27-ram-storage-configurations-leak | index, follow | keep | No blocking quality issue detected. |
+| article | TikTok Asks Kenyan Creators for Tax Details as Withholding Rules Move Into the Platform | /news/tiktok-kenyan-creators-tax-details-withholding-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | Googlebook Is Google's New Premium Laptop Strategy, and It Brings Android to the Desktop | /explainers/googlebook-googlebook-os-android-gemini-laptop-launch | index, follow | keep | No blocking quality issue detected. |
+| article | EPRA Removes Kenya's 15,000 kWh Monthly EV Charging Limit, Changing the Economics of Electric Mobility | /explainers/epra-removes-15000-kwh-ev-charging-limit-kenya | index, follow | keep | No blocking quality issue detected. |
+| article | Kenya just opened a $390 million tender to expand its fiber backbone, here's exactly what's being bid on | /explainers/kenya-icta-nofbi-fiber-tender-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | LG smart TVs were caught recording audio in standby mode, and it happened on standard retail units, not hacked ones | /explainers/lg-smart-tv-privacy-investigation-gamers-nexus | index, follow | keep | headline-over-110-characters: Headline is 115 characters. Review it against the 110-character editorial target without truncating it automatically. |
+| article | Google's new Pixel scam warning pops up while you're typing, but only if you're in the US | /explainers/google-pixel-september-2026-feature-drop | index, follow | keep | No blocking quality issue detected. |
+| article | Inside Kenya's "Startup Graveyard": Twiga Joins a KES 93 Billion Wreckage, and One Number Complicates the Story | /opinion/kenya-startup-graveyard-twiga-foods-failures | index, follow | keep | headline-over-110-characters: Headline is 111 characters. Review it against the 110-character editorial target without truncating it automatically. |
+| article | Apple TV just came to Kenya for the first time, bundled into a $0.99 cloud storage plan | /explainers/apple-icloud-plus-apple-tv-arcade-kenya-bundle | index, follow | keep | No blocking quality issue detected. |
+| article | Kenya's High Court just unwound a $1.58 billion Safaricom sale that closed three months ago | /explainers/high-court-voids-safaricom-vodacom-share-sale | index, follow | keep | No blocking quality issue detected. |
+| article | iOS 27 is here, and the headline feature isn't the update, it's the AI assistant Apple rebuilt with Google's help | /explainers/ios-27-release-siri-ai-overhaul-explained | index, follow | keep | headline-over-110-characters: Headline is 113 characters. Review it against the 110-character editorial target without truncating it automatically. |
+| article | Twiga Foods is in administration, and the paperwork traces years of trouble most people missed | /explainers/twiga-foods-administration-gt-flow-kenya | index, follow | keep | No blocking quality issue detected. |
+| article | Nairobi E-Mobility Week opened at KICC, and Kenya's electric two-wheeler numbers explain why it matters | /explainers/nairobi-e-mobility-week-2026-kicc | index, follow | keep | No blocking quality issue detected. |
+| article | Valve's Steam Frame is here, and it costs more than anyone expected for the same reason your next phone will too | /explainers/valve-steam-frame-vr-headset-launch | index, follow | keep | headline-over-110-characters: Headline is 112 characters. Review it against the 110-character editorial target without truncating it automatically. |
+| article | Sam Altman named the two ways AI could go "very badly." Washington and Beijing responded in almost opposite directions | /explainers/altman-two-ai-scenarios-china-trump-reaction | index, follow | keep | headline-over-110-characters: Headline is 118 characters. Review it against the 110-character editorial target without truncating it automatically. |
+| article | The iPhone 18 Pro Max sold in the US is quietly different from every other one in the world | /explainers/iphone-18-pro-max-us-qualcomm-modem-c2 | index, follow | keep | No blocking quality issue detected. |
+| article | Anthropic, OpenAI and xAI's CEOs agree on almost nothing, except that AI needs to slow down | /explainers/amodei-altman-musk-ai-slowdown-markets | index, follow | keep | No blocking quality issue detected. |
+| article | Anthropic caught someone using Claude to fake grassroots support for a Kenyan Cabinet Secretary | /explainers/anthropic-kenya-ai-influence-operation-2027-election | index, follow | keep | No blocking quality issue detected. |
+| article | Absa Bank Kenya just made its interim CEO permanent, and the backstory explains why | /explainers/absa-bank-kenya-yusuf-omari-ceo-appointment | index, follow | keep | No blocking quality issue detected. |
+| article | Android can finally move your passwords between apps without a file, a year after Apple got there | /explainers/android-password-manager-interoperability-transfer | index, follow | keep | No blocking quality issue detected. |
+| article | Nubia's Doubao-powered NaviX Ultra launches next week after its predecessor ran into app blocks | /explainers/nubia-navix-ultra-doubao-ai-agent-phone | index, follow | keep | No blocking quality issue detected. |
+| article | Kenya's smartboard rollout to 10,382 schools isn't new news, but here's where it actually stands | /explainers/kenya-digital-learning-junior-schools-status | index, follow | keep | No blocking quality issue detected. |
+| article | Researchers taught a humanoid robot to sprint and spin-kick using 2.5 hours of human motion data | /explainers/beyondmimic-humanoid-robot-sprint-spin-kick | index, follow | keep | No blocking quality issue detected. |
+| article | Kenya's ICT ministry held cybersecurity talks with Fortinet, but this is one conversation in a much longer year | /explainers/kenya-fortinet-ai-cybersecurity-talks | index, follow | keep | headline-over-110-characters: Headline is 111 characters. Review it against the 110-character editorial target without truncating it automatically. |
+| article | Gemini finally has a real Windows app, and Google didn't leave Windows 10 users behind | /explainers/google-gemini-desktop-app-windows-10-11 | index, follow | keep | No blocking quality issue detected. |
+| article | A new AI framework builds realistic virtual worlds to train self-driving cars, and it splits the city into two layers to do it | /explainers/hierascaffold-4d-lidar-autonomous-vehicles | index, follow | keep | headline-over-110-characters: Headline is 126 characters. Review it against the 110-character editorial target without truncating it automatically. |
+| article | Everything Apple actually announced at its September event, and the one thing it didn't | /news/apple-surprise-and-shine-keynote-full-recap | index, follow | keep | No blocking quality issue detected. |
+| article | Apple raised iPhone prices $100, and absorbed a bigger hike itself to keep it that low | /explainers/apple-iphone-18-pro-price-increase-memory-costs-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | An Anthropic researcher just resigned in public, and the industry's reaction says more than his warning did | /explainers/anthropic-researcher-jacob-coxon-resignation-ai-safety | index, follow | keep | No blocking quality issue detected. |
+| article | iPhone Duo vs Samsung Galaxy Z Fold8: What Apple Actually Got Right, and What It Didn't | /opinion/iphone-duo-vs-galaxy-z-fold8-comparison | index, follow | keep | No blocking quality issue detected. |
+| article | Apple's new Watch feature summarizes conversations for you, and Apple went out of its way to say it doesn't record them | /explainers/apple-watch-series-12-audio-intelligence-siri-recap | index, follow | keep | headline-over-110-characters: Headline is 119 characters. Review it against the 110-character editorial target without truncating it automatically. |
+| article | iPhone Duo vs Xiaomi 18 Fold: Why the Timeline, Not the Design, Is the Real Story | /explainers/xiaomi-18-fold-iphone-duo-design-comparison | index, follow | keep | No blocking quality issue detected. |
+| article | Apple's foldable is official: the iPhone Duo starts at $1,999, and here's what it actually costs to own in Kenya | /explainers/iphone-duo-official-price-specs-kenya | index, follow | keep | headline-over-110-characters: Headline is 112 characters. Review it against the 110-character editorial target without truncating it automatically. |
 | article | Apple's foldable finally arrives, and it's not even the biggest change at the company today | /news/apple-surprise-and-shine-event-2026-preview | index, follow | keep | No blocking quality issue detected. |
 | article | Lagos just became Africa's busiest tech city for a month, and the calendar isn't even done | /news/lagos-blockchain-week-nigeria-fintech-week-september-2026 | index, follow | keep | No blocking quality issue detected. |
 | article | Nairobi just got 6.4 more megawatts of data centre capacity, and iColo's name is disappearing | /explainers/digital-realty-nbo2-nairobi-data-centre-icolo | index, follow | keep | No blocking quality issue detected. |
@@ -36,14 +91,14 @@ Indexable glossary terms: 0
 | article | Apple lost its fight against EU app store rules. Now the deadline for compliance has a date | /explainers/apple-eu-dma-october-2026-developer-terms | index, follow | keep | No blocking quality issue detected. |
 | article | Beyond Range: How Roam Engineered Its Gen-3 Battery Around the Working Boda-Boda Rider | /real-life/roam-gen-3-battery-working-boda-boda-riders | index, follow | keep | No blocking quality issue detected. |
 | article | Phishing is learning to look legitimate because attackers are using trusted cloud platforms as infrastructure | /explainers/trusted-saas-cloud-platforms-malware-phishing-europe-2026 | index, follow | keep | No blocking quality issue detected. |
-| article | China's car exports jumped 88% in July, and the next export battle is software, regulation and local production | /opinion/china-car-exports-smart-driving-europe-global-pressure-2026 | index, follow | keep | No blocking quality issue detected. |
+| article | China's car exports jumped 88% in July, and the next export battle is software, regulation and local production | /opinion/china-car-exports-smart-driving-europe-global-pressure-2026 | index, follow | keep | headline-over-110-characters: Headline is 111 characters. Review it against the 110-character editorial target without truncating it automatically. |
 | article | Standard Bank and UnionPay just widened Africa's online payment rails across nine markets | /explainers/standard-bank-unionpay-ecommerce-nine-african-markets | index, follow | keep | No blocking quality issue detected. |
-| article | Bolt Send is adding motorbikes in Mombasa, turning ride-hailing infrastructure into a small-business delivery network | /opinion/bolt-send-motorbikes-mombasa-last-mile-logistics | index, follow | keep | No blocking quality issue detected. |
+| article | Bolt Send is adding motorbikes in Mombasa, turning ride-hailing infrastructure into a small-business delivery network | /opinion/bolt-send-motorbikes-mombasa-last-mile-logistics | index, follow | keep | headline-over-110-characters: Headline is 117 characters. Review it against the 110-character editorial target without truncating it automatically. |
 | article | Kenya has a new startup intelligence map, and its hardest job will be keeping the data trustworthy | /explainers/kenya-innovation-ecosystem-intelligence-platform-startups-investors-policy | index, follow | keep | No blocking quality issue detected. |
 | article | Anker is using Kenya as its East Africa launchpad, and the bigger play is the ecosystem around the charger | /opinion/anker-kenya-expansion-east-africa-smart-home-ecosystem | index, follow | keep | No blocking quality issue detected. |
 | article | Yellow's new Series C is a bet that the next billion-dollar African credit product may be an asset, not cash | /business/yellow-series-c-smartphone-solar-financing-africa | index, follow | keep | No blocking quality issue detected. |
-| article | Equity surged while Absa slipped in H1 2026, showing digital banking does not make every bank grow the same way | /business/equity-absa-h1-2026-results-digital-banking-kenya | index, follow | keep | No blocking quality issue detected. |
-| article | Transsion is pushing ahead with a Hong Kong listing, putting Africa's smartphone demand in front of global investors | /business/transsion-hong-kong-listing-africa-smartphone-growth | index, follow | keep | No blocking quality issue detected. |
+| article | Equity surged while Absa slipped in H1 2026, showing digital banking does not make every bank grow the same way | /business/equity-absa-h1-2026-results-digital-banking-kenya | index, follow | keep | headline-over-110-characters: Headline is 111 characters. Review it against the 110-character editorial target without truncating it automatically. |
+| article | Transsion is pushing ahead with a Hong Kong listing, putting Africa's smartphone demand in front of global investors | /business/transsion-hong-kong-listing-africa-smartphone-growth | index, follow | keep | headline-over-110-characters: Headline is 116 characters. Review it against the 110-character editorial target without truncating it automatically. |
 | article | Agentic AI is moving onto the device, and chipmakers want the phone or PC to become the execution layer | /explainers/on-device-agentic-ai-qualcomm-mediatek-hardware-2026 | index, follow | keep | No blocking quality issue detected. |
 | article | Africa's biggest fintech IPO candidates are looking offshore, and local exchanges should ask why | /business/africa-fintech-ipos-opay-palmpay-airtel-money-offshore | index, follow | keep | No blocking quality issue detected. |
 | article | NCBA finally joins Kenya's KSh 20 PesaLink push, and the pressure now moves to the remaining holdouts | /explainers/ncba-pesalink-ksh20-flat-fee-kenya | index, follow | keep | No blocking quality issue detected. |
@@ -51,8 +106,8 @@ Indexable glossary terms: 0
 | article | WhatsApp Plus is official: what KSh 119 gets Kenyan users and what stays free | /explainers/whatsapp-plus-kenya-ksh-119-features-worth-it | index, follow | keep | No blocking quality issue detected. |
 | article | Safaricom's new board appointments show what Vodacom's 55% control looks like in practice | /business/safaricom-board-reshuffle-vodacom-mariam-cassim-matimba-mbungela | index, follow | keep | No blocking quality issue detected. |
 | article | TikTok is quietly turning Live music and DMs into creator business infrastructure | /opinion/tiktok-songs-of-live-professional-inbox-creator-tools | index, follow | keep | No blocking quality issue detected. |
-| article | Agentic AI could cut the cost of running scams by 90 percent. Kenyan banks should treat that as an automation problem | /explainers/agentic-ai-financial-fraud-kenya-bcg | index, follow | keep | No blocking quality issue detected. |
-| article | Microsoft booked $24.1 billion from its OpenAI commercial relationship. That is growth and concentration at once | /opinion/microsoft-openai-24-1-billion-revenue-concentration | index, follow | keep | No blocking quality issue detected. |
+| article | Agentic AI could cut the cost of running scams by 90 percent. Kenyan banks should treat that as an automation problem | /explainers/agentic-ai-financial-fraud-kenya-bcg | index, follow | keep | headline-over-110-characters: Headline is 117 characters. Review it against the 110-character editorial target without truncating it automatically. |
+| article | Microsoft booked $24.1 billion from its OpenAI commercial relationship. That is growth and concentration at once | /opinion/microsoft-openai-24-1-billion-revenue-concentration | index, follow | keep | headline-over-110-characters: Headline is 112 characters. Review it against the 110-character editorial target without truncating it automatically. |
 | article | Disney is putting TikTok fan videos inside Disney+, turning fandom into streaming inventory | /opinion/disney-tiktok-verts-fan-videos-disney-plus | index, follow | keep | No blocking quality issue detected. |
 | article | A KSh 2.5 million Kenyan privacy judgment shows intimate images are personal data, not gossip | /explainers/kenya-intimate-image-privacy-ruling-2-5-million | index, follow | keep | No blocking quality issue detected. |
 | article | Claude is adding invisible watermarks to AI text, but a watermark is not a lie detector | /explainers/anthropic-claude-invisible-text-watermarks-explained | index, follow | keep | No blocking quality issue detected. |
@@ -378,7 +433,11 @@ Indexable glossary terms: 0
 | page | glossary | /glossary | index, follow | keep | Core utility, trust, or discovery page. |
 | page | africa | /africa | index, follow | keep | Core utility, trust, or discovery page. |
 | page | about | /about | index, follow | keep | Core utility, trust, or discovery page. |
+| page | authors | /authors | index, follow | keep | Core utility, trust, or discovery page. |
+| page | contact | /contact | index, follow | keep | Core utility, trust, or discovery page. |
+| page | editorial policy | /editorial-policy | index, follow | keep | Core utility, trust, or discovery page. |
 | page | editorial standards | /editorial-standards | index, follow | keep | Core utility, trust, or discovery page. |
+| page | corrections | /corrections | index, follow | keep | Core utility, trust, or discovery page. |
 | page | privacy | /privacy | index, follow | keep | Core utility, trust, or discovery page. |
 | page | terms | /terms | index, follow | keep | Core utility, trust, or discovery page. |
 | page | cookies | /cookies | index, follow | keep | Core utility, trust, or discovery page. |
@@ -386,18 +445,30 @@ Indexable glossary terms: 0
 | archive | Tim Humphreys | /authors/tim-humphreys | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Lulu Camau | /authors/lulu-camau | index, follow | keep | Archive has at least five eligible stories. |
 | archive | tecMAMBO Team | /authors/tecmambo-team | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Kenya | /topics/kenya | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Politics | /topics/politics | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Education | /topics/education | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Software | /topics/software | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Robotics | /topics/robotics | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Research | /topics/research | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Security | /topics/security | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | AI | /topics/ai | index, follow | keep | Archive has at least five eligible stories. |
+| archive | AI & Ethics | /topics/ai-ethics | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | AI Shopping | /topics/ai-shopping | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Agentic AI | /topics/agentic-ai | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Android | /topics/android | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Apps | /topics/apps | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Smartphones | /topics/smartphones | index, follow | keep | Archive has at least five eligible stories. |
-| archive | E-Commerce | /topics/e-commerce | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | E-Commerce | /topics/e-commerce | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Quick Commerce | /topics/quick-commerce | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Privacy | /topics/privacy | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Hardware | /topics/hardware | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Computing | /topics/computing | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Social Media | /topics/social-media | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Creator Economy | /topics/creator-economy | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Tax | /topics/tax | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Entertainment | /topics/entertainment | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Streaming | /topics/streaming | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Christopher Nolan | /topics/christopher-nolan | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | The Odyssey | /topics/the-odyssey | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Hoyte van Hoytema | /topics/hoyte-van-hoytema | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
@@ -418,6 +489,7 @@ Indexable glossary terms: 0
 | archive | Health Tech | /topics/health-tech | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Smart Homes | /topics/smart-homes | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Startups | /topics/startups | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Venture Capital | /topics/venture-capital | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Business | /topics/business | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Fintech | /topics/fintech | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Banking | /topics/banking | index, follow | keep | Archive has at least five eligible stories. |
@@ -445,7 +517,7 @@ Indexable glossary terms: 0
 | archive | IFA 2026 | /topics/ifa-2026 | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Display Technology | /topics/display-technology | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Chipsets | /topics/chipsets | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
-| archive | Smartphone Prices | /topics/smartphone-prices | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Smartphone Prices | /topics/smartphone-prices | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Buying Advice | /topics/buying-advice | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Midrange Phones | /topics/midrange-phones | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Smartphone Batteries | /topics/smartphone-batteries | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
@@ -460,7 +532,7 @@ Indexable glossary terms: 0
 | archive | G9L | /topics/g9l | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Luxury EV | /topics/luxury-ev | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | China | /topics/china | index, follow | keep | Archive has at least five eligible stories. |
-| archive | Automotive Technology | /topics/automotive-technology | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Automotive Technology | /topics/automotive-technology | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Battery Swap | /topics/battery-swap | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | EV Infrastructure | /topics/ev-infrastructure | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Battery as a Service | /topics/battery-as-a-service | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
@@ -476,7 +548,7 @@ Indexable glossary terms: 0
 | archive | Dividend | /topics/dividend | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Ethiopia | /topics/ethiopia | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Investing | /topics/investing | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
-| archive | Telecoms | /topics/telecoms | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Telecoms | /topics/telecoms | index, follow | keep | Archive has at least five eligible stories. |
 | archive | iPhone 18 | /topics/iphone-18 | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Foldable iPhone | /topics/foldable-iphone | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Prepaid Card | /topics/prepaid-card | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
@@ -495,19 +567,37 @@ Indexable glossary terms: 0
 | archive | Made by Google | /topics/made-by-google | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Google Play Services | /topics/google-play-services | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Google Wallet | /topics/google-wallet | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Googlebook | /topics/googlebook | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Galaxy S27 | /topics/galaxy-s27 | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Play Store | /topics/play-store | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | System Updates | /topics/system-updates | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
-| archive | Infrastructure | /topics/infrastructure | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Infrastructure | /topics/infrastructure | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Cloud | /topics/cloud | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
-| archive | Regulation | /topics/regulation | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Regulation | /topics/regulation | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Gig Economy | /topics/gig-economy | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Cross-Border Payments | /topics/cross-border-payments | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | DRC | /topics/drc | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Semiconductors | /topics/semiconductors | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
-| archive | Global | /topics/global | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Global | /topics/global | index, follow | keep | Archive has at least five eligible stories. |
+| archive | Markets | /topics/markets | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Consumer Tech | /topics/consumer-tech | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Big Tech | /topics/big-tech | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Web3 | /topics/web3 | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Absa Bank Kenya | /brands/absa-bank-kenya | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Fortinet | /brands/fortinet | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Nubia | /brands/nubia | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | ByteDance | /brands/bytedance | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | ZTE | /brands/zte | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Unitree | /brands/unitree | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | FIDO Alliance | /brands/fido-alliance | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | 1Password | /brands/1password | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Bitwarden | /brands/bitwarden | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Dashlane | /brands/dashlane | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Roam | /brands/roam | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Valve | /brands/valve | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Twiga Foods | /brands/twiga-foods | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | xAI | /brands/xai | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Kenya Power | /brands/kenya-power | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | VLC | /brands/vlc | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Sony | /brands/sony | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | PlayStation | /brands/playstation | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
@@ -529,11 +619,13 @@ Indexable glossary terms: 0
 | archive | SpaceX | /brands/spacex | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | OpenAI | /brands/openai | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Google | /brands/google | index, follow | keep | Archive has at least five eligible stories. |
+| archive | TikTok | /brands/tiktok | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | LG | /brands/lg | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Huawei | /brands/huawei | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Visa | /brands/visa | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Onafriq | /brands/onafriq | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Microsoft | /brands/microsoft | index, follow | keep | Archive has at least five eligible stories. |
-| archive | Windows | /brands/windows | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Windows | /brands/windows | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Dell | /brands/dell | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Intel | /brands/intel | index, follow | keep | Archive has at least five eligible stories. |
 | archive | AMD | /brands/amd | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
@@ -552,7 +644,7 @@ Indexable glossary terms: 0
 | archive | Airtel | /brands/airtel | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | Optasia | /brands/optasia | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
 | archive | WhatsApp | /brands/whatsapp | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
-| archive | Meta | /brands/meta | noindex, follow | retain with noindex until the archive has enough eligible stories | Archive has fewer than five eligible stories. |
+| archive | Meta | /brands/meta | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Safaricom | /brands/safaricom | index, follow | keep | Archive has at least five eligible stories. |
 | archive | Vodacom | /brands/vodacom | index, follow | keep | Archive has at least five eligible stories. |
 | archive | M-Pesa | /brands/m-pesa | index, follow | keep | Archive has at least five eligible stories. |
