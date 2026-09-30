@@ -100,12 +100,29 @@ function lane(
   articles: Article[],
   linkLabel?: string,
   layout: HomeLane["layout"] = "grid",
-  limit = layout === "feature" ? 5 : 3
+  limit = layout === "feature" ? 5 : 3,
+  pinnedSlug?: string
 ) {
   const availableArticles = uniqueByArticleAndImage(hottestFirst(articles));
-  const capped = computingCappedLaneKeys.has(key)
+  const pinnedArticle = pinnedSlug ? availableArticles.find((article) => article.slug === pinnedSlug) : undefined;
+  let capped = computingCappedLaneKeys.has(key)
     ? takeWithTagCap(availableArticles, "computing", 1, limit)
     : availableArticles.slice(0, limit);
+  if (pinnedArticle && !capped.some((article) => article.slug === pinnedArticle.slug)) {
+    let replaceIndex = capped.length - 1;
+    if (hasTag(pinnedArticle, "computing")) {
+      for (let index = capped.length - 1; index >= 0; index -= 1) {
+        if (hasTag(capped[index]!, "computing")) {
+          replaceIndex = index;
+          break;
+        }
+      }
+    }
+    capped = hottestFirst([
+      ...capped.filter((_, index) => index !== Math.max(0, replaceIndex)),
+      pinnedArticle
+    ]);
+  }
   uniqueImagesWithinLane(key, capped);
   return { key, eyebrow, title, href, linkLabel, layout, articles: capped };
 }
@@ -197,7 +214,9 @@ export function curateHomeContent(articles: Article[], glossaryTerms: GlossaryTe
       definition.href,
       candidates,
       definition.linkLabel,
-      definition.layout
+      definition.layout,
+      undefined,
+      key === heroLaneKey ? hero.slug : undefined
     );
     curated.articles.forEach((article) => {
       placementCounts.set(article.slug, (placementCounts.get(article.slug) ?? 0) + 1);
