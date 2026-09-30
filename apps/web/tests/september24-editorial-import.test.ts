@@ -113,10 +113,10 @@ describe("September 24 editorial package", () => {
     vi.useRealTimers();
   });
 
-  it("promotes the Spiro story as the homepage hero and follows the duplicate-placement rule", () => {
+  it("allows the newer editorial promotion to replace Spiro and follows the duplicate-placement rule", () => {
     const home = curateHomeContent(articles, []);
-    expect(home.hero.slug).toBe("africa-go-green-fund-spiro-36-million-electric-mobility");
-    expect(home.hero.homepageHeroPriority).toBe(100);
+    expect(home.hero.slug).toBe("india-affordable-electric-vehicles-entry-level-ev-market-2026");
+    expect(home.hero.homepageHeroPriority).toBe(110);
     const placements = [home.hero, ...home.supportingStories, ...home.latestRail, ...home.lanes.flatMap((lane) => lane.articles)];
     const counts = new Map<string, number>();
     for (const article of placements) counts.set(article.slug, (counts.get(article.slug) ?? 0) + 1);

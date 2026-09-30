@@ -5,6 +5,7 @@ import { editorialSeptember29ImportReport } from "@/lib/editorial-bundle-septemb
 import { articlePublicText, isArticleIndexable, isContentPubliclyEligible } from "@/lib/content-quality";
 import { buildGoogleNewsSitemap, buildRssFeed } from "@/content/feeds";
 import { articles, editorialSeptember29Articles } from "@/lib/sample-data";
+import { curateHomeContent } from "@/lib/home-curation";
 
 const slugs = editorialSeptember29ImportReport.map((entry) => entry.slug);
 const removedSamsungSlug = "samsung-flex-titanium-foldable-display-durability-crease";
@@ -116,6 +117,16 @@ describe("September 29 editorial bundle import", () => {
     expect(articles.some((article) => article.slug === removedSamsungSlug)).toBe(false);
     expect(buildRssFeed(eligible)).not.toContain(removedSamsungSlug);
     expect(buildGoogleNewsSitemap(eligible)).not.toContain(removedSamsungSlug);
+  });
+
+  it("promotes the newest retained article in the hero and its mobility lane only", () => {
+    const home = curateHomeContent(articles, []);
+    const heroSlug = "india-affordable-electric-vehicles-entry-level-ev-market-2026";
+    const placements = [home.hero, ...home.supportingStories, ...home.latestRail, ...home.lanes.flatMap((lane) => lane.articles)];
+    expect(home.hero.slug).toBe(heroSlug);
+    expect(home.hero.homepageHeroPriority).toBe(110);
+    expect(placements.filter((article) => article.slug === heroSlug)).toHaveLength(2);
+    expect(home.lanes.find((lane) => lane.key === "mobility")?.articles.some((article) => article.slug === heroSlug)).toBe(true);
   });
 
   it("retains the verified factual corrections in public copy and metadata", () => {

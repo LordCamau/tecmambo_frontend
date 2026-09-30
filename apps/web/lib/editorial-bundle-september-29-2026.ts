@@ -386,6 +386,7 @@ export function buildEditorialSeptember29Articles({ authors, topics, brands, reg
       format,
       contentFormat: format === "business" ? "analysis" : format === "explainer" ? "explainer" : "news",
       isNewsworthy: true,
+      homepageHeroPriority: parsed.slug === "india-affordable-electric-vehicles-entry-level-ev-market-2026" ? 110 : undefined,
       title: parsed.title,
       seo: {
         title: seoTitle,
