@@ -15,6 +15,7 @@ const nextConfig: NextConfig = {
     root: process.cwd().replace(/\/apps\/web$/, "")
   },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
