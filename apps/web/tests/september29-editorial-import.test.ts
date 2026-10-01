@@ -6,6 +6,7 @@ import { articlePublicText, isArticleIndexable, isContentPubliclyEligible } from
 import { buildGoogleNewsSitemap, buildRssFeed } from "@/content/feeds";
 import { articles, editorialSeptember29Articles } from "@/lib/sample-data";
 import { curateHomeContent } from "@/lib/home-curation";
+import { isWithinGoogleNewsWindow } from "@/lib/newsworthiness";
 
 const slugs = editorialSeptember29ImportReport.map((entry) => entry.slug);
 const removedSamsungSlug = "samsung-flex-titanium-foldable-display-durability-crease";
@@ -72,7 +73,7 @@ describe("September 29 editorial bundle import", () => {
     }
   });
 
-  it("publishes every article into public discovery, RSS and the Google News sitemap", () => {
+  it("publishes every article into public discovery and RSS, with eligible recent stories in Google News", () => {
     const eligible = articles.filter(isContentPubliclyEligible);
     const rss = buildRssFeed(eligible);
     const news = buildGoogleNewsSitemap(eligible);
@@ -87,7 +88,8 @@ describe("September 29 editorial bundle import", () => {
       expect(isContentPubliclyEligible(article)).toBe(true);
       expect(isArticleIndexable(article)).toBe(true);
       expect(rss).toContain(article.slug);
-      expect(news).toContain(article.slug);
+      if (isWithinGoogleNewsWindow(article)) expect(news).toContain(article.slug);
+      else expect(news).not.toContain(article.slug);
     }
   });
 

@@ -24,6 +24,7 @@ import { buildEditorialSeptember19Articles } from "@/lib/editorial-bundle-septem
 import { buildEditorialSeptember24Articles } from "@/lib/editorial-bundle-september-24-2026";
 import { buildEditorialSeptember29Articles } from "@/lib/editorial-bundle-september-29-2026";
 import { buildEditorialSeptember30Articles } from "@/lib/editorial-bundle-september-30-2026";
+import { buildEditorialOctober1Articles } from "@/lib/editorial-bundle-october-1-2026";
 import { buildStartupGraveyardArticle } from "@/lib/startup-graveyard-september-17-2026";
 import { buildIphoneDuoArticle } from "@/lib/iphone-duo-2026";
 import { buildPixel11LaunchArticle } from "@/lib/pixel-11-launch-2026";
@@ -1056,6 +1057,12 @@ export const editorialSeptember30Articles = buildEditorialSeptember30Articles({
   brands,
   regions: [kenyaRegion, nigeriaRegion, southAfricaRegion, ghanaRegion]
 });
+export const editorialOctober1Articles = buildEditorialOctober1Articles({
+  authors,
+  topics,
+  brands,
+  regions: [kenyaRegion, tanzaniaRegion]
+});
 const startupGraveyardArticle = buildStartupGraveyardArticle({
   authors,
   topics,
@@ -1215,6 +1222,7 @@ function migrateLegacyLifecycle(article: Article): Article {
 }
 
 export const articles: Article[] = [
+  ...editorialOctober1Articles,
   ...editorialSeptember30Articles,
   ...editorialSeptember29Articles,
   ...editorialSeptember24Articles,
