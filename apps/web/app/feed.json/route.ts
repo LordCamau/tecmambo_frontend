@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { getSubstantialArticles } from "@/lib/content";
 import { buildJsonFeed } from "@/content/feeds";
 
+export const revalidate = 3600;
+
 export async function GET() {
   const articles = await getSubstantialArticles();
   return NextResponse.json(buildJsonFeed(articles), {

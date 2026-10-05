@@ -45,7 +45,7 @@ import { articleDateTime, hasMeaningfulUpdate } from "@/lib/article-dates";
 type Params = Promise<{ section: string; slug: string }>;
 
 export const dynamicParams = true;
-export const revalidate = 300;
+export const revalidate = 86400;
 
 const pricePattern =
   /(?:\b(?:KSh|KES|USD)\s?\d[\d,]*(?:\.\d+)?\b|\b\d[\d,.]*(?:\s+to\s+\d[\d,.]*)?\s+(?:US\s+dollars?|dollars?)\b)/g;

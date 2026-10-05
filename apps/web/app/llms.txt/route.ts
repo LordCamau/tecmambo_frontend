@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { getIndexableGlossaryTerms, getSubstantialArticles } from "@/lib/content";
 import { buildLlmsTxt } from "@/content/llms";
 
+export const revalidate = 3600;
+
 export async function GET() {
   const [articles, terms] = await Promise.all([getSubstantialArticles(), getIndexableGlossaryTerms()]);
   return new NextResponse(buildLlmsTxt(articles, terms), {
