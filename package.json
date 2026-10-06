@@ -18,5 +18,10 @@
   },
   "engines": {
     "node": "22.x"
+  },
+  "devDependencies": {
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "react-server-dom-webpack": "19.2.7"
   }
 }
